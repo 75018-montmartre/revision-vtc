@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /examen.html
+Sitemap: https://revision-vtc.fr/sitemap.xml

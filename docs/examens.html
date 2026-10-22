@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Examens blancs n° 4 et 5 · Révision VTC</title>
+<meta name="description" content="Les examens blancs n° 4 et 5 du livre Machine à Réussite · Examen VTC 2027, réservés aux lecteurs.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="css/site.css">
+<link rel="alternate" type="application/rss+xml" title="Actualité VTC · revision-vtc.fr" href="actualite/flux.xml">
+</head>
+<body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="entete">
+  <div class="page">
+    <a class="nom-site" href="index.html">Révision VTC<span>Le site du livre Machine à Réussite</span></a>
+    <nav class="nav" aria-label="Menu principal"><ul><li><a href="index.html">Accueil</a></li><li><a href="actualite/index.html">Actualité VTC</a></li><li><a href="mises-a-jour.html">Mises à jour du livre</a></li><li><a href="examens.html" aria-current="page">Examens blancs</a></li></ul></nav>
+  </div>
+</header>
+<main id="contenu" tabindex="-1">
+  <div class="page">
+    <h1>Examens blancs n° 4 et 5</h1>
+    <section id="porte" aria-labelledby="titre-porte">
+      <h2 id="titre-porte" class="visuellement-cache">Accès réservé aux lecteurs</h2>
+      <p class="chapeau">Ces deux examens complètent les trois examens imprimés dans le livre. Ils sont réservés à ses lecteurs.</p>
+      <form class="acces" id="form-acces" novalidate>
+        <label for="reponse">Quel est le dernier mot du titre de la fiche G2.6, page 160 du livre ?</label>
+        <p class="aide" id="aide-reponse">Un seul mot, sans article. Majuscules et accents indifférents.</p>
+        <input type="text" id="reponse" name="reponse" autocomplete="off" autocapitalize="none" spellcheck="false" aria-describedby="aide-reponse erreur">
+        <p class="erreur" id="erreur" role="alert"></p>
+        <button class="bouton" type="submit">Accéder aux examens</button>
+      </form>
+    </section>
+    <section id="contenu-examens" hidden aria-labelledby="titre-examens">
+      <h2 id="titre-examens" class="visuellement-cache">Les deux examens</h2>
+      <p class="chapeau">Faites-les dans les conditions de l’examen : sans livre ni notes, en respectant la durée de chaque épreuve. Chaque corrigé renvoie à la fiche du livre à revoir.</p>
+      <h2>Examen blanc n° 4</h2>
+      <div class="actions"><a class="bouton" href="examen.html?n=4">Faire l’examen n° 4 à l’écran</a><a class="bouton second" href="pdf/Examen_blanc_4.pdf">Examen n° 4 à imprimer (PDF, 490 ko)</a></div>
+      <h2>Examen blanc n° 5</h2>
+      <div class="actions"><a class="bouton" href="examen.html?n=5">Faire l’examen n° 5 à l’écran</a><a class="bouton second" href="pdf/Examen_blanc_5.pdf">Examen n° 5 à imprimer (PDF, 490 ko)</a></div>
+      <h2>Comment ça marche</h2>
+      <ul>
+        <li>Vous choisissez une épreuve. Le chronomètre démarre avec sa durée officielle ; vous pouvez le désactiver si vous préférez travailler sans limite de temps.</li>
+        <li>Les QCM sont corrigés automatiquement. Pour les QRC, vous comparez votre réponse au corrigé type et vous notez vous-même vos points, avec le barème.</li>
+        <li>À la fin, le tableau calcule votre moyenne avec les coefficients et indique si vous seriez admissible.</li>
+        <li>Vos réponses restent dans votre navigateur : rien n’est envoyé.</li>
+      </ul>
+    </section>
+  </div>
+</main>
+<footer class="pied">
+  <div class="page">
+    <span>© Benjamin Blondin, 2026</span>
+    <ul>
+      <li><a href="mentions-legales.html">Mentions légales</a></li>
+      <li><a href="accessibilite.html">Accessibilité</a></li>
+      <li><a href="actualite/flux.xml">Flux RSS</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="js/acces.js"></script>
+<script>
+(function () {
+  var porte = document.getElementById('porte'), contenu = document.getElementById('contenu-examens');
+  function ouvrir(focus) { porte.hidden = true; contenu.hidden = false; if (focus) { var t = document.querySelector('main h1'); t.setAttribute('tabindex', '-1'); t.focus(); } }
+  if (window.Acces.ouvert()) ouvrir(false);
+  document.getElementById('form-acces').addEventListener('submit', async function (ev) {
+    ev.preventDefault();
+    var err = document.getElementById('erreur'), champ = document.getElementById('reponse');
+    err.textContent = '';
+    if (await window.Acces.verifier(champ.value)) { ouvrir(true); }
+    else { err.textContent = 'Ce n’est pas le bon mot. Vérifiez le titre de la fiche G2.6, page 160.'; champ.setAttribute('aria-invalid', 'true'); champ.focus(); }
+  });
+})();
+</script>
+</body>
+</html>
