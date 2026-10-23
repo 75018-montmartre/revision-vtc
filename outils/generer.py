@@ -63,19 +63,39 @@ def accueil(nums):
     dernier = ""
     if nums:
         n = nums[0]
+        pts = "".join(f"<li>{ty(x)}</li>" for x in n["a_retenir"])
         dernier = f'''
-    <h2>Dernier numéro de l’Actualité VTC</h2>
-    <p class="meta">N° {n["numero"]} · {date_fr(n["date"])}</p>
-    <p><a href="actualite/{n["date"]}.html">{ty(n["titre"])}</a></p>'''
-    corps = f'''    <h1>Le site du livre <i>Machine à Réussite</i></h1>
-    <p class="chapeau">{ty("Machine à Réussite · Examen VTC 2027 a été vérifié en octobre 2026. Ce site prend le relais : l'actualité du métier chaque semaine, les règles qui changent, et deux examens blancs en ligne.")}</p>
-    <ul class="rubriques">
-      <li><a href="actualite/index.html">Actualité VTC</a><p>{ty("Chaque semaine : les textes officiels, l'examen, les plateformes. Ce qui change pour vous, avec ses sources.")}</p></li>
-      <li><a href="mises-a-jour.html">Mises à jour du livre</a><p>{ty("Chaque règle qui change après l'impression, avec sa date, la fiche concernée et le texte qui la fonde.")}</p></li>
-      <li><a href="examens.html">Examens blancs n° 4 et 5</a><p>{ty("Réservés aux lecteurs : à l'écran, chronométrés et corrigés, ou à imprimer.")}</p></li>
-    </ul>{dernier}'''
+    <section class="bloc doux" aria-labelledby="titre-dernier">
+      <div class="page">
+        <p class="surtitre">Actualité VTC · n° {n["numero"]} · {date_fr(n["date"])}</p>
+        <h2 id="titre-dernier" class="sans-filet"><a href="actualite/{n["date"]}.html">{ty(n["titre"])}</a></h2>
+        <ul class="points">{pts}</ul>
+        <p><a class="lien-fleche" href="actualite/index.html">Tous les numéros</a></p>
+      </div>
+    </section>'''
+    corps = f'''    <section class="une" aria-labelledby="titre-une">
+      <div class="page large une-grille">
+        <div class="une-texte">
+          <p class="surtitre">Le site du livre <i>Machine à Réussite</i></p>
+          <h1 id="titre-une">Réussir l’examen VTC avec des règles à jour</h1>
+          <p class="chapeau">{ty("Le livre a été vérifié en octobre 2026. Ici, il continue : l'actualité du métier chaque semaine, les règles qui changent, et deux examens blancs en ligne.")}</p>
+          <div class="actions"><a class="bouton clair" href="actualite/index.html">Lire l’Actualité VTC</a><a class="bouton contour" href="examens.html">Examens blancs</a></div>
+        </div>
+        <img class="une-couv" src="couverture.jpg" width="408" height="528" alt="Couverture du livre Machine à Réussite · Examen VTC 2027, de Benjamin Blondin">
+      </div>
+    </section>
+    <section class="bloc" aria-labelledby="titre-rubriques">
+      <div class="page large">
+        <h2 id="titre-rubriques" class="visuellement-cache">Les rubriques du site</h2>
+        <ul class="trois">
+          <li><p class="surtitre">Chaque semaine</p><h3><a href="actualite/index.html">Actualité VTC</a></h3><p>{ty("Textes officiels, examen, plateformes, cotisations : ce qui change pour vous, toujours avec ses sources.")}</p></li>
+          <li><p class="surtitre">Après l'impression</p><h3><a href="mises-a-jour.html">Mises à jour du livre</a></h3><p>{ty("Chaque règle qui change, avec sa date, la fiche concernée et le texte qui la fonde.")}</p></li>
+          <li><p class="surtitre">Réservé aux lecteurs</p><h3><a href="examens.html">Examens blancs n° 4 et 5</a></h3><p>{ty("À l'écran, chronométrés et corrigés, ou à imprimer.")}</p></li>
+        </ul>
+      </div>
+    </section>{dernier}'''
     ecrire("index.html", page("Révision VTC · Le site du livre Machine à Réussite", corps, "accueil", "",
-                              "Le site du livre Machine à Réussite · Examen VTC 2027 : actualité VTC chaque semaine, mises à jour du livre et examens blancs en ligne."))
+                              "Le site du livre Machine à Réussite · Examen VTC 2027 : actualité VTC chaque semaine, mises à jour du livre et examens blancs en ligne.", brut=True))
 
 
 # ------------------------------------------------------------------ actualité
@@ -104,8 +124,8 @@ def numero(n, precedent, suivant):
     corps = f'''    <p class="surtitre">Actualité VTC · n° {n["numero"]}</p>
     <h1>{ty(n["titre"])}</h1>
     <p class="meta">Publié le {date_fr(n["date"])} · période couverte : {ty(n["periode"])}</p>
-    <h2>À retenir</h2>
-    <ul>{retenir}</ul>{rub}
+    <section class="retenir" aria-labelledby="titre-retenir"><h2 id="titre-retenir">À retenir</h2>
+    <ul>{retenir}</ul></section>{rub}
     <h2>Ce que ça change pour le livre</h2>
     <div class="impact">{impact}</div>
     <p class="meta">{ty("Informations vérifiées le " + n["verifie"] + ". Chaque brève repose sur un texte officiel ou sur deux sources concordantes.")}</p>
@@ -121,7 +141,7 @@ def actualite(nums):
     for n in nums:
         pts = "".join(f"<li>{ty(x)}</li>" for x in n["a_retenir"])
         liste += f'''
-      <li><a href="{n["date"]}.html">{ty(n["titre"])}</a><span class="meta">N° {n["numero"]} · {date_fr(n["date"])}</span><ul>{pts}</ul></li>'''
+      <li><span class="numero" aria-hidden="true">{n["numero"]}</span><div><span class="meta">N° {n["numero"]} · {date_fr(n["date"])}</span><a href="{n["date"]}.html">{ty(n["titre"])}</a><ul>{pts}</ul></div></li>'''
     corps = f'''    <h1>Actualité VTC</h1>
     <p class="chapeau">{ty("Chaque semaine, ce qui bouge pour les chauffeurs VTC et les candidats à l'examen : textes officiels, examen, plateformes, cotisations.")}</p>
     <p>{ty("Chaque information repose sur un texte officiel ou sur deux sources concordantes, toujours citées. Quand une règle du livre change, elle est aussi inscrite dans les")} <a href="../mises-a-jour.html">mises à jour du livre</a>.</p>
