@@ -8,6 +8,8 @@ Site compagnon du livre *Machine à Réussite · Examen VTC 2027* (Benjamin Blon
 |---|---|
 | `contenu/actualite/AAAA-MM-JJ.json` | Un numéro de l'Actualité VTC (un fichier par semaine, nommé par sa date de publication) |
 | `contenu/mises-a-jour.json` | Les corrections du livre après impression et les points à surveiller |
+| `contenu/textes.json` | La page « Textes du métier » : les textes officiels essentiels, avec leur lien Légifrance ou EUR-Lex |
+| `contenu/livre.json` | L'adresse de la page Amazon du livre (`amazon`) ; vide, le site affiche « Bientôt disponible sur Amazon » |
 | `outils/generer.py` | Génère tout le site dans `docs/` à partir de `contenu/` |
 | `outils/gabarit.py` | En-tête, menu et pied de page communs |
 | `docs/` | Le site publié par GitHub Pages (ne pas modifier les pages HTML à la main : elles sont régénérées) |
@@ -18,6 +20,7 @@ Les fichiers fixes de `docs/` (feuille de style, polices, scripts et données de
 
 1. Créer `contenu/actualite/AAAA-MM-JJ.json` sur le modèle du numéro précédent (format ci-dessous).
 2. Si une règle du livre change : ajouter une ligne dans `contenu/mises-a-jour.json` (`corrections`).
+   Si un texte de la page « Textes du métier » est publié, modifié ou abrogé : mettre à jour `contenu/textes.json` (et sa date `verifie`).
 3. Lancer `python3 outils/generer.py` depuis la racine du dépôt : il vérifie que chaque brève a au moins une source.
 4. Proposer les changements dans une *pull request* ; l'auteur la relit et la fusionne : le site est mis à jour en quelques minutes.
 

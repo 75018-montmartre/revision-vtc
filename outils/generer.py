@@ -11,7 +11,7 @@ from email.utils import format_datetime
 
 ICI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, ICI)
-from gabarit import page
+from gabarit import page, achat
 
 RACINE = os.path.dirname(ICI)
 DOCS = os.path.join(RACINE, "docs")
@@ -79,7 +79,7 @@ def accueil(nums):
           <p class="surtitre">Le site du livre <i>Machine à Réussite</i></p>
           <h1 id="titre-une">Réussir l’examen VTC avec des règles à jour</h1>
           <p class="chapeau">{ty("Le livre a été vérifié en octobre 2026. Ici, il continue : l'actualité du métier chaque semaine, les règles qui changent, et deux examens blancs en ligne.")}</p>
-          <div class="actions"><a class="bouton clair" href="actualite/index.html">Lire l’Actualité VTC</a><a class="bouton contour" href="examens.html">Examens blancs</a></div>
+          <div class="actions">{achat("bouton clair")}<a class="bouton contour" href="actualite/index.html">Lire l’Actualité VTC</a></div>
         </div>
         <img class="une-couv" src="couverture.jpg" width="408" height="528" alt="Couverture du livre Machine à Réussite · Examen VTC 2027, de Benjamin Blondin">
       </div>
@@ -89,6 +89,7 @@ def accueil(nums):
         <h2 id="titre-rubriques" class="visuellement-cache">Les rubriques du site</h2>
         <ul class="trois">
           <li><p class="surtitre">Chaque semaine</p><h3><a href="actualite/index.html">Actualité VTC</a></h3><p>{ty("Textes officiels, examen, plateformes, cotisations : ce qui change pour vous, toujours avec ses sources.")}</p></li>
+          <li><p class="surtitre">L'essentiel du droit</p><h3><a href="textes.html">Textes du métier</a></h3><p>{ty("Les lois, décrets et arrêtés qui encadrent le VTC, avec le lien vers leur version en vigueur.")}</p></li>
           <li><p class="surtitre">Après l'impression</p><h3><a href="mises-a-jour.html">Mises à jour du livre</a></h3><p>{ty("Chaque règle qui change, avec sa date, la fiche concernée et le texte qui la fonde.")}</p></li>
           <li><p class="surtitre">Réservé aux lecteurs</p><h3><a href="examens.html">Examens blancs n° 4 et 5</a></h3><p>{ty("À l'écran, chronométrés et corrigés, ou à imprimer.")}</p></li>
         </ul>
@@ -206,6 +207,36 @@ def mises_a_jour():
                                      "Les règles du livre Machine à Réussite · Examen VTC 2027 qui ont changé depuis l'impression."))
 
 
+# ------------------------------------------------------------------ textes du métier
+def textes():
+    with open(os.path.join(CONTENU, "textes.json"), encoding="utf-8") as h:
+        d = json.load(h)
+    sommaire, groupes = [], []
+    for i, g in enumerate(d["groupes"], 1):
+        ident = f"groupe-{i}"
+        sommaire.append(f'<li><a href="#{ident}">{ty(g["titre"])}</a></li>')
+        items = "".join(
+            f'''<li class="texte">
+          <h3><a href="{html.escape(x["url"])}">{ty(x["nom"])}</a></h3>
+          <p class="texte-ref">{ty(x["ref"])}</p>
+          <p>{ty(x["objet"])}</p>
+          <p class="texte-fiches">Dans le livre : {ty(x["fiches"])}</p>
+        </li>''' for x in g["textes"])
+        intro = f'<p>{ty(g["intro"])}</p>' if g.get("intro") else ""
+        groupes.append(f'''<section aria-labelledby="{ident}">
+      <h2 id="{ident}">{ty(g["titre"])}</h2>
+      {intro}
+      <ul class="textes">{items}</ul>
+    </section>''')
+    corps = f'''    <h1>Textes du métier</h1>
+    <p class="chapeau">{ty("L'essentiel des textes qui encadrent le métier de conducteur VTC. Chaque lien mène à la version officielle, sur Légifrance ou EUR-Lex : c'est elle qui fait foi.")}</p>
+    <nav class="sommaire" aria-label="Sur cette page"><ul>{"".join(sommaire)}</ul></nav>
+    {"".join(groupes)}
+    <p class="meta">{ty("Liste vérifiée le " + d["verifie"] + ". Les changements sont annoncés dans l'Actualité VTC et, quand ils touchent une règle du livre, dans les mises à jour du livre.")}</p>'''
+    ecrire("textes.html", page("Textes du métier · Révision VTC", corps, "textes", "",
+                               "Les lois, décrets et arrêtés qui encadrent le métier de conducteur VTC, avec le lien vers leur version officielle."))
+
+
 # ------------------------------------------------------------------ examens
 def examens():
     corps = f'''    <h1>Examens blancs n° 4 et 5</h1>
@@ -312,7 +343,7 @@ def legales():
 
 
 def plan(nums):
-    urls = ["", "actualite/index.html", "mises-a-jour.html", "examens.html", "mentions-legales.html", "accessibilite.html"]
+    urls = ["", "actualite/index.html", "textes.html", "mises-a-jour.html", "examens.html", "mentions-legales.html", "accessibilite.html"]
     urls += [f'actualite/{n["date"]}.html' for n in nums]
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     xml += "".join(f"  <url><loc>{SITE}{u}</loc></url>\n" for u in urls) + "</urlset>\n"
@@ -327,6 +358,7 @@ if __name__ == "__main__":
         numero(n, nums[i + 1] if i + 1 < len(nums) else None, nums[i - 1] if i > 0 else None)
     actualite(nums)
     flux(nums)
+    textes()
     mises_a_jour()
     examens()
     legales()

@@ -167,7 +167,7 @@ main:has(.une){padding-top:0}
 .bloc.doux{background:var(--doux)}
 .bloc h2.sans-filet a{color:var(--encre);text-decoration:none}
 .bloc h2.sans-filet a:hover{text-decoration:underline}
-.trois{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(16rem,100%),1fr));gap:2rem}
+.trois{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(13.5rem,100%),1fr));gap:2rem 1.75rem}
 .trois li{margin:0;border-top:3px solid var(--encre);padding-top:1rem}
 .trois h3{margin:.25rem 0 .5rem;font-size:1.25rem}
 .trois h3 a{color:var(--encre);text-decoration:none}
@@ -197,3 +197,24 @@ main:has(.une){padding-top:0}
 .pied .copyright{width:100%;margin:0;color:#A9A398}
 .pied :focus-visible{outline-color:#9DBBFF}
 @media (prefers-color-scheme: dark){.pied{background:#0E0D0C}}
+
+/* Achat du livre */
+.bouton.petit{min-height:40px;padding:.375rem .875rem;font-size:.9375rem}
+.bouton.bientot,.bouton.bientot:hover{cursor:default;background:transparent;border-style:dashed}
+.une .bouton.bientot,.une .bouton.clair.bientot:hover{background:transparent;color:#fff;border-color:#fff}
+.pied .bouton.bientot,.pied .bouton.clair.bientot,.pied .bouton.clair.bientot:hover{color:#E7E3DB;border-color:#A9A398;background:transparent}
+.pied-achat{margin-top:.875rem !important}
+.pied .bouton.clair{color:#1A1917}
+.pied .bouton.clair:hover{color:#1A1917;background:#E7E3DB}
+
+/* Textes du métier */
+.sommaire{margin:1.75rem 0 .5rem;padding:1rem 1.25rem;background:var(--doux);border-left:3px solid var(--rouge)}
+.sommaire ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.375rem 1.5rem;font-family:var(--sans);font-size:.9375rem}
+.textes{list-style:none;margin:1rem 0 0;padding:0}
+.texte{margin:0;padding:1.125rem 0 1.25rem;border-top:1px solid var(--filet)}
+.texte h3{margin:0 0 .25rem;font-size:1.0625rem;line-height:1.4}
+.texte h3 a{color:var(--encre);text-decoration-color:var(--rouge);text-underline-offset:.2em}
+.texte h3 a:hover{color:var(--accent)}
+.texte p{margin:.25rem 0}
+.texte-ref{font-family:var(--sans);font-size:.875rem;font-weight:600;color:var(--accent)}
+.texte-fiches{font-family:var(--sans);font-size:.875rem;color:var(--gris)}

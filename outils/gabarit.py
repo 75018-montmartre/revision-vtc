@@ -1,8 +1,19 @@
 # -*- coding: utf-8 -*-
 """Gabarit commun des pages de revision-vtc.fr (en-tête, navigation, pied)."""
+import json, os
+
+with open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "contenu", "livre.json"), encoding="utf-8") as _h:
+    LIVRE = json.load(_h)
+
+
+def achat(classe="bouton", texte="Acheter le livre sur Amazon"):
+    """Lien d'achat du livre ; tant que l'adresse Amazon n'est pas renseignée, une mention « bientôt disponible »."""
+    if LIVRE.get("amazon"):
+        return f'<a class="{classe}" href="{LIVRE["amazon"]}">{texte}</a>'
+    return f'<span class="{classe} bientot">Bientôt disponible sur Amazon</span>'
 
 NAV = [("index.html", "Accueil", "accueil"), ("actualite/index.html", "Actualité VTC", "actualite"),
-       ("mises-a-jour.html", "Mises à jour du livre", "maj"), ("examens.html", "Examens blancs", "examens")]
+       ("textes.html", "Textes du métier", "textes"), ("mises-a-jour.html", "Mises à jour du livre", "maj"), ("examens.html", "Examens blancs", "examens")]
 
 
 def page(titre, corps, actif=None, racine="", description="", noindex=False, scripts_tete="", scripts_fin="", avant_main="", brut=False):
@@ -35,7 +46,10 @@ def page(titre, corps, actif=None, racine="", description="", noindex=False, scr
   <div class="page">
     <div class="pied-livre">
       <img src="{racine}couverture-petite.jpg" width="68" height="88" alt="">
-      <p><b>Machine à Réussite · Examen VTC 2027</b><br>Le cours, 1 191 questions corrigées et 5 examens blancs, à jour de la loi du 25 juin 2026.</p>
+      <div>
+        <p><b>Machine à Réussite · Examen VTC 2027</b><br>Le cours, 1 191 questions corrigées et 5 examens blancs, à jour de la loi du 25 juin 2026.</p>
+        <p class="pied-achat">{achat("bouton clair petit")}</p>
+      </div>
     </div>
     <ul>
       <li><a href="{racine}mentions-legales.html">Mentions légales</a></li>
