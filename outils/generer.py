@@ -265,6 +265,8 @@ def examens():
         <li>{ty("À la fin, le tableau calcule votre moyenne avec les coefficients et indique si vous seriez admissible.")}</li>
         <li>{ty("Vos réponses restent dans votre navigateur : rien n'est envoyé.")}</li>
       </ul>
+      <h2>De vrais sujets en plus</h2>
+      <p>{ty("CMA France publie gratuitement les annales officielles de l'examen, de 2019 à 2022, toutes épreuves comprises :")} <a href="https://www.artisanat.fr/nous-connaitre/vous-accompagner/examens-taxi-vtc-vmdtr">{ty("annales sur artisanat.fr")}</a>. {ty("Les règles qu'elles citent datent de chaque session : en cas de différence, fiez-vous au livre et aux mises à jour de ce site.")}</p>
     </section>'''
     fin = '''<script src="js/acces.js"></script>
 <script>
