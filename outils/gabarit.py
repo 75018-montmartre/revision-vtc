@@ -47,7 +47,7 @@ def page(titre, corps, actif=None, racine="", description="", noindex=False, scr
     <div class="pied-livre">
       <img src="{racine}couverture-petite.jpg" width="68" height="88" alt="">
       <div>
-        <p><b>Machine à Réussite · Examen VTC 2027</b><br>Le cours, 1 191 questions corrigées et 5 examens blancs, à jour de la loi du 25 juin 2026.</p>
+        <p><b>Machine à Réussite · Examen VTC 2027</b><br>Le cours, 1 191 questions corrigées et 3 examens blancs, plus 2 ici. À jour de la loi du 25 juin 2026.</p>
         <p class="pied-achat">{achat("bouton clair petit")}</p>
       </div>
     </div>
