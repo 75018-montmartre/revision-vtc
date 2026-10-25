@@ -1,5 +1,5 @@
 /* revision-vtc.fr — site du livre Machine à Réussite · Examen VTC 2027
-   Sobre : un fond, une encre, un seul accent ; filets fins ; aucune ombre ni dégradé. */
+   Sobre et aéré : un fond, une encre, un accent rouge, des cartes aux coins adoucis et un motif de marquage routier. */
 @font-face{font-family:"Inter";src:url("../fonts/inter-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:"Inter";src:url("../fonts/inter-latin-600-normal.woff2") format("woff2");font-weight:600;font-display:swap}
 @font-face{font-family:"Inter";src:url("../fonts/inter-latin-700-normal.woff2") format("woff2");font-weight:700;font-display:swap}
@@ -249,3 +249,152 @@ input[type=search]{font-family:var(--sans);font-size:1rem;padding:.625rem .75rem
 .questions a{display:block;font-family:var(--sans);font-weight:700;font-size:1.125rem;line-height:1.3;text-decoration:none;margin:.2rem 0 .35rem}
 .questions p{margin:0;color:var(--gris);font-size:1.0625rem}
 ul.source{padding-left:1.25rem}
+
+/* =====================================================================
+   Version 2 : plus d'air, coins adoucis, cartes, et une touche de route
+   ===================================================================== */
+:root{--rayon:14px;--rayon-p:10px;--ombre:0 1px 2px rgba(26,25,23,.05),0 6px 18px -10px rgba(26,25,23,.18);--ombre-h:0 2px 4px rgba(26,25,23,.06),0 14px 30px -14px rgba(26,25,23,.28);--jaune:#F2B705}
+@media (prefers-color-scheme: dark){:root{--ombre:0 1px 2px rgba(0,0,0,.4);--ombre-h:0 10px 26px -12px rgba(0,0,0,.7)}}
+body{line-height:1.68}
+.page{max-width:46rem;padding:0 1.5rem}
+main{padding:3.5rem 0 5rem}
+p{margin:0 0 1.15rem}
+li{margin-bottom:.5rem}
+h1{margin-bottom:1.25rem;letter-spacing:-.025em}
+.chapeau{margin-bottom:1.75rem}
+
+/* intertitres : plus de filet, un petit marquage au sol à la place */
+h2{border-top:0;padding-top:0;margin:3.25rem 0 1rem}
+main h2:not(.sans-filet):not(.visuellement-cache)::before{content:"";display:block;width:2.75rem;height:4px;margin-bottom:.9rem;border-radius:2px;
+  background:repeating-linear-gradient(90deg,var(--accent-trait) 0 .8rem,transparent .8rem 1.1rem)}
+.en-clair h2::before,.retenir h2::before,.texte-d h2::before,.wiki-livre h2::before{display:none !important}
+
+/* en-tête */
+.entete{position:relative}
+.entete .page{padding-top:1rem;padding-bottom:1rem}
+.nom-site .marque{border-radius:9px}
+.nav ul{gap:.25rem}
+.nav a{padding:.45rem .8rem;border-radius:999px;border-bottom:0;transition:background .15s}
+.nav a:hover{background:var(--doux)}
+.nav a[aria-current="page"]{background:var(--encre);color:var(--fond);font-weight:600}
+@media (max-width:52rem){
+  .entete .page{flex-direction:column;align-items:stretch;gap:.75rem;padding-left:0;padding-right:0}
+  .nom-site{padding:0 1.25rem}
+  .entete .page{width:100%;max-width:100%}
+  .nav,.nom-site{min-width:0;max-width:100%}
+  .nav{position:relative;width:100%}
+  .nav ul{max-width:100%}
+  .nav ul{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 1.25rem .15rem}
+  .nav ul::-webkit-scrollbar{display:none}
+  .nav li{flex:none;margin:0;scroll-snap-align:start}
+  .nav a{background:var(--doux);min-height:40px;display:inline-flex;align-items:center}
+  .nav::after{content:"";position:absolute;right:0;top:0;bottom:0;width:2rem;pointer-events:none;background:linear-gradient(90deg,transparent,var(--carte))}
+}
+
+/* boutons : en pilule */
+.bouton{border-radius:999px;padding:.55rem 1.35rem;transition:background .15s,color .15s,transform .15s}
+.bouton:not(.bientot):hover{transform:translateY(-1px)}
+
+/* la une : une route en bas du bandeau rouge */
+.une{position:relative;overflow:hidden}
+.une::after{content:"";position:absolute;left:0;right:0;bottom:1.1rem;height:4px;opacity:.55;
+  background:repeating-linear-gradient(90deg,#fff 0 2.25rem,transparent 2.25rem 3.75rem)}
+.une-grille{padding-top:3.75rem;padding-bottom:4.5rem}
+.une-couv{border-radius:6px;transform:rotate(2.5deg);transition:transform .3s}
+.une-couv:hover{transform:rotate(0)}
+@media (max-width:42rem){.une-couv{transform:rotate(-2deg)}.une-grille{padding-top:2.5rem;padding-bottom:3.5rem}}
+.bloc{padding:4rem 0}
+
+/* cartes de l'accueil : toute la carte est cliquable */
+.trois{gap:1.25rem}
+.trois li{position:relative;border:1px solid var(--filet);border-top:1px solid var(--filet);background:var(--carte);border-radius:var(--rayon);padding:1.5rem 1.5rem 1.6rem;box-shadow:var(--ombre);transition:box-shadow .2s,transform .2s}
+.trois li:hover{box-shadow:var(--ombre-h);transform:translateY(-3px)}
+.trois li::before{content:"";display:block;width:2.25rem;height:2.25rem;border-radius:10px;margin-bottom:1rem;background:var(--doux) center/1.3rem no-repeat}
+.trois h3 a::after{content:"";position:absolute;inset:0;border-radius:var(--rayon)}
+.trois h3 a:hover{text-decoration:none}
+.trois li:nth-child(1)::before{background-color:#FBE7E2}
+.trois li:nth-child(2)::before{background-color:#FFF3CC}
+.trois li:nth-child(3)::before{background-color:#E3EEE6}
+.trois li:nth-child(4)::before{background-color:#E4E9F7}
+.trois li::before{content:"01";font:700 .875rem/2.25rem var(--sans);text-align:center;color:var(--encre)}
+.trois li:nth-child(2)::before{content:"02"} .trois li:nth-child(3)::before{content:"03"} .trois li:nth-child(4)::before{content:"04"}
+@media (prefers-color-scheme: dark){.trois li::before{background-color:var(--doux) !important}}
+
+/* listes de liens en cartes : accueil, wiki, questions, actualité */
+.essentiel-liens,.wiki-liste,.questions,.numeros{border-top:0;display:grid;gap:.75rem}
+.essentiel-liens{grid-template-columns:repeat(auto-fill,minmax(min(19rem,100%),1fr));gap:.75rem 1rem}
+.essentiel-liens li,.wiki-liste li,.questions li,.numeros > li{position:relative;margin:0;border:1px solid var(--filet);border-radius:var(--rayon-p);background:var(--carte);transition:border-color .15s,box-shadow .2s,transform .2s}
+.essentiel-liens li,.wiki-liste li{padding:.9rem 2.75rem .9rem 1.15rem}
+.essentiel-liens li::after,.wiki-liste li::after{content:"→";position:absolute;right:1.1rem;top:50%;transform:translateY(-50%);font-family:var(--sans);color:var(--accent);transition:right .2s}
+.essentiel-liens li:hover,.wiki-liste li:hover,.questions li:hover,.numeros > li:hover{border-color:var(--accent-trait);box-shadow:var(--ombre)}
+.essentiel-liens li:hover::after,.wiki-liste li:hover::after{right:.8rem}
+.essentiel-liens a::before,.wiki-liste a::before,.questions a::before,.numeros > li > div > a::before{content:"";position:absolute;inset:0;border-radius:var(--rayon-p)}
+.essentiel-liens a:hover,.wiki-liste a:hover{text-decoration:none}
+.questions li{padding:1.25rem 1.4rem}
+.questions a:hover{text-decoration:none;color:var(--accent)}
+.numeros > li{padding:1.25rem 1.4rem}
+.numeros > li > div > a:hover{text-decoration:none;color:var(--accent)}
+.numeros ul,.numeros .meta{position:relative}
+.wiki-liste{margin-top:1rem}
+.wiki-liste .num-art{display:inline-block;min-width:5.5rem}
+
+/* wiki : un pictogramme par thème */
+.wiki-theme{margin-top:3.5rem}
+.wiki-theme h2{display:flex;align-items:center;gap:.8rem;margin:0 0 .35rem}
+.wiki-theme h2::before{content:"" !important;flex:none;width:1.6rem !important;height:1.6rem !important;margin:0 !important;border-radius:0 !important;
+  background:var(--accent) !important;-webkit-mask:center/contain no-repeat;mask:center/contain no-repeat}
+.wiki-theme h2#cadre::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%2020V9l8-5%208%205v11%22/%3E%3Cpath%20d%3D%22M9%2020v-6h6v6%22/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%2020V9l8-5%208%205v11%22/%3E%3Cpath%20d%3D%22M9%2020v-6h6v6%22/%3E%3C/svg%3E")}
+.wiki-theme h2#conducteur::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%223%22%20y%3D%225%22%20width%3D%2218%22%20height%3D%2214%22%20rx%3D%222%22/%3E%3Ccircle%20cx%3D%229%22%20cy%3D%2211%22%20r%3D%222%22/%3E%3Cpath%20d%3D%22M6%2016c.8-1.6%205.2-1.6%206%200M14%2010h4M14%2013h3%22/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%223%22%20y%3D%225%22%20width%3D%2218%22%20height%3D%2214%22%20rx%3D%222%22/%3E%3Ccircle%20cx%3D%229%22%20cy%3D%2211%22%20r%3D%222%22/%3E%3Cpath%20d%3D%22M6%2016c.8-1.6%205.2-1.6%206%200M14%2010h4M14%2013h3%22/%3E%3C/svg%3E")}
+.wiki-theme h2#exploitant::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M5%203h10l4%204v14H5z%22/%3E%3Cpath%20d%3D%22M15%203v4h4M8%2012h8M8%2016h6%22/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M5%203h10l4%204v14H5z%22/%3E%3Cpath%20d%3D%22M15%203v4h4M8%2012h8M8%2016h6%22/%3E%3C/svg%3E")}
+.wiki-theme h2#vehicule::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M3%2015l2-6h14l2%206v3H3z%22/%3E%3Ccircle%20cx%3D%227.5%22%20cy%3D%2218%22%20r%3D%221.6%22/%3E%3Ccircle%20cx%3D%2216.5%22%20cy%3D%2218%22%20r%3D%221.6%22/%3E%3Cpath%20d%3D%22M5%2012h14%22/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M3%2015l2-6h14l2%206v3H3z%22/%3E%3Ccircle%20cx%3D%227.5%22%20cy%3D%2218%22%20r%3D%221.6%22/%3E%3Ccircle%20cx%3D%2216.5%22%20cy%3D%2218%22%20r%3D%221.6%22/%3E%3Cpath%20d%3D%22M5%2012h14%22/%3E%3C/svg%3E")}
+.wiki-theme h2#reservation::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%224%22%20y%3D%225%22%20width%3D%2216%22%20height%3D%2215%22%20rx%3D%222%22/%3E%3Cpath%20d%3D%22M8%203v4M16%203v4M4%2010h16M9%2015l2%202%204-4%22/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%224%22%20y%3D%225%22%20width%3D%2216%22%20height%3D%2215%22%20rx%3D%222%22/%3E%3Cpath%20d%3D%22M8%203v4M16%203v4M4%2010h16M9%2015l2%202%204-4%22/%3E%3C/svg%3E")}
+.wiki-theme h2#plateformes::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%227%22%20y%3D%222.5%22%20width%3D%2210%22%20height%3D%2219%22%20rx%3D%222%22/%3E%3Cpath%20d%3D%22M11%2018h2%22/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%227%22%20y%3D%222.5%22%20width%3D%2210%22%20height%3D%2219%22%20rx%3D%222%22/%3E%3Cpath%20d%3D%22M11%2018h2%22/%3E%3C/svg%3E")}
+.wiki-theme h2#sanctions::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%203l9%2016H3z%22/%3E%3Cpath%20d%3D%22M12%2010v4M12%2017h.01%22/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%203l9%2016H3z%22/%3E%3Cpath%20d%3D%22M12%2010v4M12%2017h.01%22/%3E%3C/svg%3E")}
+
+.wiki-theme > .meta{margin-left:2.4rem}
+@media (max-width:30rem){.wiki-theme > .meta{margin-left:0}.wiki-liste .num-art{display:block;min-width:0}}
+
+/* encadrés */
+.en-clair{border:0;border-radius:var(--rayon);padding:.5rem 1.6rem 1.5rem;box-shadow:var(--ombre);border-left:5px solid var(--accent-trait);margin:2rem 0 1rem}
+.concretement{border-radius:var(--rayon-p);padding:1rem 1.2rem}
+.retenir{border:0;border-radius:var(--rayon);box-shadow:var(--ombre);border-top:0;padding:.5rem 1.6rem 1rem;position:relative;overflow:hidden}
+.retenir::before{content:"";position:absolute;left:0;top:0;right:0;height:5px;background:repeating-linear-gradient(90deg,var(--jaune) 0 1.2rem,var(--encre) 1.2rem 2.4rem)}
+.retenir h2{margin-top:1.4rem}
+.officiel{background:var(--carte);border:1px solid var(--filet);border-left:1px solid var(--filet);border-radius:var(--rayon);padding:1.4rem 1.6rem 1rem}
+.sommaire{border-left:0;border-radius:var(--rayon);padding:1.1rem 1.4rem}
+.sommaire ul{gap:.5rem}
+.sommaire a{display:inline-block;padding:.3rem .8rem;border-radius:999px;background:var(--carte);border:1px solid var(--filet);text-decoration:none;color:var(--encre)}
+.sommaire a:hover{border-color:var(--accent-trait);color:var(--accent)}
+.note,.correction,.texte-d{border-radius:var(--rayon-p)}
+.impact{border-left:0;background:var(--doux);border-radius:var(--rayon-p);padding:1rem 1.25rem}
+.cherche{background:var(--carte);border:1px solid var(--filet);border-radius:var(--rayon);padding:1.1rem 1.25rem;box-shadow:var(--ombre)}
+input[type=search],input[type=text],textarea,select{border-radius:var(--rayon-p)}
+input[type=search]{padding:.75rem 1rem .75rem 2.6rem;background:var(--fond) no-repeat .85rem center/1.1rem;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2357534A' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-4-4'/%3E%3C/svg%3E")}
+.fil a{color:var(--gris)}
+.choix label,.choix .rep{border-radius:var(--rayon-p)}
+.breve{background:var(--carte);border:1px solid var(--filet);border-radius:var(--rayon);padding:1.25rem 1.5rem .5rem;margin:0 0 1rem}
+.breve h3{margin-top:0}
+
+/* pied : une route qui ferme la page */
+.pied{position:relative}
+.pied::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:repeating-linear-gradient(90deg,var(--jaune) 0 2.25rem,transparent 2.25rem 3.75rem);opacity:.85}
+.pied .page{padding-top:2.75rem;padding-bottom:2.5rem;gap:1.5rem 2rem}
+.pied-livre img{border-radius:4px}
+
+@media (max-width:30rem){
+  .page{padding:0 1.25rem}
+  main{padding:2.25rem 0 3.5rem}
+  h2{margin-top:2.5rem}
+  .bloc{padding:2.75rem 0}
+  .en-clair,.retenir,.officiel{padding-left:1.15rem;padding-right:1.15rem}
+  .breve{padding:1.1rem 1.15rem .4rem}
+}
+@media (prefers-reduced-motion: reduce){.trois li:hover,.bouton:hover,.une-couv{transform:none !important}}
+@media print{.trois li,.en-clair,.retenir,.officiel,.breve{box-shadow:none}.pied::before,.une::after{display:none}}
+.entete .page{max-width:74rem}
+.nav a{padding:.45rem .7rem}
+.trois{grid-template-columns:repeat(auto-fit,minmax(min(20rem,100%),1fr))}
+.trois .surtitre{letter-spacing:.06em}
+@media (max-width:52rem){.entete .page{max-width:100%}}
+.wiki-liste li{padding-top:.7rem;padding-bottom:.7rem}
