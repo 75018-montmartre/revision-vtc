@@ -398,3 +398,53 @@ input[type=search]{padding:.75rem 1rem .75rem 2.6rem;background:var(--fond) no-r
 .trois .surtitre{letter-spacing:.06em}
 @media (max-width:52rem){.entete .page{max-width:100%}}
 .wiki-liste li{padding-top:.7rem;padding-bottom:.7rem}
+
+/* =====================================================================
+   Version 3 : blocs nettement délimités, plus de pointillés
+   ===================================================================== */
+/* les motifs pointillés sont retirés */
+.une::after,.pied::before{display:none}
+.retenir::before{background:var(--accent-trait)}
+main h2:not(.sans-filet):not(.visuellement-cache)::before{width:2rem;height:3px;background:var(--accent-trait)}
+
+/* rythme des blocs de l'accueil : chaque bloc a son fond et une frontière nette */
+.bloc{padding:4.5rem 0}
+.bloc + .bloc{border-top:1px solid var(--filet)}
+.bloc-blanc{background:var(--carte)}
+.bloc-doux{background:var(--doux)}
+.bloc-doux + .bloc,.bloc + .bloc-doux,.bloc-blanc + .bloc,.bloc + .bloc-blanc{border-top-color:transparent}
+
+/* en-tête de bloc : surtitre + titre à gauche, lien « tout voir » à droite, filet épais dessous */
+.tete-bloc{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:.75rem 2rem;
+  padding-bottom:1.1rem;margin-bottom:2rem;border-bottom:2px solid var(--encre)}
+.tete-bloc .surtitre{margin:0 0 .35rem}
+.tete-bloc h2{margin:0;font-size:clamp(1.375rem,2.6vw,1.75rem);letter-spacing:-.02em}
+.tete-intro{margin:.5rem 0 0;color:var(--gris);font-size:1.0625rem;max-width:40rem}
+.tete-bloc .lien-fleche{flex:none;padding:.5rem 0;text-decoration:none;border-bottom:2px solid var(--accent-trait)}
+.tete-bloc .lien-fleche:hover{color:var(--encre)}
+
+/* les quatre tuiles : 4 colonnes, puis 2, puis 1 — jamais une tuile orpheline */
+.trois{grid-template-columns:repeat(4,minmax(0,1fr));gap:1.25rem}
+@media (max-width:64rem){.trois{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:36rem){.trois{grid-template-columns:1fr}}
+
+/* dernier numéro de l'Actualité */
+.une-actu{position:relative;background:var(--carte);border:1px solid var(--filet);border-left:5px solid var(--accent-trait);border-radius:var(--rayon);padding:1.6rem 1.8rem 1rem;box-shadow:var(--ombre);max-width:52rem}
+.une-actu h3{font-size:clamp(1.25rem,2.4vw,1.5rem);margin:.25rem 0 1rem;line-height:1.25}
+.une-actu h3 a{color:var(--encre);text-decoration:none}
+.une-actu h3 a:hover{color:var(--accent);text-decoration:underline}
+.une-actu .meta{margin:0}
+
+/* questions en grille sur l'accueil */
+.questions-grille{grid-template-columns:repeat(auto-fill,minmax(min(22rem,100%),1fr));gap:1rem;margin-top:0}
+.questions-grille li{padding:1.4rem 1.5rem}
+.questions-grille a{margin-top:0}
+
+/* liens essentiels : un peu plus de respiration */
+.essentiel-liens{margin:0}
+
+@media (max-width:36rem){
+  .bloc{padding:3rem 0}
+  .tete-bloc{margin-bottom:1.5rem}
+  .une-actu{padding:1.25rem 1.2rem .75rem}
+}

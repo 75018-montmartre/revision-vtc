@@ -104,18 +104,30 @@ def lire_numeros():
 
 
 # ------------------------------------------------------------------ accueil
+def tete_bloc(ident, surtitre, titre, lien=None, texte_lien=None, intro=None):
+    """En-tête commun des blocs de l'accueil : surtitre, titre, lien « tout voir » aligné à droite."""
+    l = f'<a class="lien-fleche" href="{lien}">{ty(texte_lien)}</a>' if lien else ""
+    i = f'<p class="tete-intro">{ty(intro)}</p>' if intro else ""
+    return f'''<div class="tete-bloc">
+          <div><p class="surtitre">{ty(surtitre)}</p><h2 id="{ident}" class="sans-filet">{ty(titre)}</h2>{i}</div>
+          {l}
+        </div>'''
+
+
 def accueil(nums, qs=()):
     dernier = ""
     if nums:
         n = nums[0]
         pts = "".join(f"<li>{ty(x)}</li>" for x in n["a_retenir"])
         dernier = f'''
-    <section class="bloc doux" aria-labelledby="titre-dernier">
-      <div class="page">
-        <p class="surtitre">Actualité VTC · n° {n["numero"]} · {date_fr(n["date"])}</p>
-        <h2 id="titre-dernier" class="sans-filet"><a href="actualite/{n["date"]}.html">{ty(n["titre"])}</a></h2>
-        <ul class="points">{pts}</ul>
-        <p><a class="lien-fleche" href="actualite/index.html">Tous les numéros</a></p>
+    <section class="bloc bloc-doux" aria-labelledby="titre-dernier">
+      <div class="page large">
+        {tete_bloc("titre-dernier-rubrique", "Chaque lundi", "Le dernier numéro de l'Actualité VTC", "actualite/index.html", "Tous les numéros")}
+        <article class="une-actu">
+          <p class="meta">N° {n["numero"]} · {date_fr(n["date"])}</p>
+          <h3 id="titre-dernier"><a href="actualite/{n["date"]}.html">{ty(n["titre"])}</a></h3>
+          <ul class="points">{pts}</ul>
+        </article>
       </div>
     </section>'''
     corps = f'''    <section class="une" aria-labelledby="titre-une">
@@ -131,7 +143,7 @@ def accueil(nums, qs=()):
     </section>
     <section class="bloc" aria-labelledby="titre-rubriques">
       <div class="page large">
-        <h2 id="titre-rubriques" class="visuellement-cache">Les rubriques du site</h2>
+        {tete_bloc("titre-rubriques", "Le site", "Quatre rubriques, une seule exigence : des sources vérifiées")}
         <ul class="trois">
           <li><p class="surtitre">Chaque semaine</p><h3><a href="actualite/index.html">Actualité VTC</a></h3><p>{ty("Textes officiels, examen, plateformes, cotisations : ce qui change pour vous, toujours avec ses sources.")}</p></li>
           <li><p class="surtitre">L'essentiel du droit</p><h3><a href="wiki/index.html">Textes du métier</a></h3><p>{ty("Le droit du VTC article par article : le texte officiel, expliqué en clair avec un exemple.")}</p></li>
@@ -139,14 +151,14 @@ def accueil(nums, qs=()):
           <li><p class="surtitre">Réservé aux lecteurs</p><h3><a href="examens.html">Examens blancs n° 4 et 5</a></h3><p>{ty("À l'écran, chronométrés et corrigés, ou à imprimer.")}</p></li>
         </ul>
       </div>
-    </section>
-    <section class="bloc" aria-labelledby="titre-essentiel">
+    </section>{dernier}
+    <section class="bloc bloc-blanc" aria-labelledby="titre-essentiel">
       <div class="page large">
-        <h2 id="titre-essentiel" class="sans-filet">Réglementation VTC : l'essentiel</h2>
+        {tete_bloc("titre-essentiel", "Textes du métier", "Réglementation VTC : l'essentiel", "wiki/index.html", "Tous les textes expliqués",
+                   "Les règles les plus utiles au quotidien, avec le texte officiel et une explication en clair.")}
         <ul class="essentiel-liens">{liens_essentiels()}</ul>
-        <p><a class="lien-fleche" href="wiki/index.html">Tous les textes du métier, expliqués en clair</a></p>
       </div>
-    </section>{bloc_questions(qs)}{dernier}'''
+    </section>{bloc_questions(qs)}'''
     ecrire("index.html", page("Examen VTC 2027 et réglementation VTC expliquée · Révision VTC", corps, "accueil", "",
                               "Réussir l'examen VTC 2027 : la réglementation VTC expliquée article par article, l'actualité du métier chaque semaine et deux examens blancs corrigés. Sources officielles citées.",
                               brut=True, jsonld=[{"@context": "https://schema.org", "@graph": [SITE_LD, LIVRE_LD]}]))
@@ -162,13 +174,12 @@ ESSENTIELS = [("l3120-2", "Réservation préalable et maraude : ce qui est inter
 def bloc_questions(qs):
     if not qs:
         return ""
-    li = "".join(f'<li><a href="questions/{q["date"]}-{q["slug"]}.html">{ty(q["question"])}</a></li>' for q in list(qs)[:5])
+    li = "".join(f'<li><a href="questions/{q["date"]}-{q["slug"]}.html">{ty(q["question"])}</a><p>{ty(q["reponse_courte"])}</p></li>' for q in list(qs)[:4])
     return f'''
     <section class="bloc" aria-labelledby="titre-questions">
       <div class="page large">
-        <h2 id="titre-questions" class="sans-filet">Questions VTC : les réponses de la semaine</h2>
-        <ul class="essentiel-liens">{li}</ul>
-        <p><a class="lien-fleche" href="questions/index.html">Toutes les questions</a></p>
+        {tete_bloc("titre-questions", "Chaque jeudi", "Questions VTC : une question, une réponse sourcée", "questions/index.html", "Toutes les questions")}
+        <ul class="questions questions-grille">{li}</ul>
       </div>
     </section>'''
 
