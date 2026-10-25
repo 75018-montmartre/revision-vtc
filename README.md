@@ -86,3 +86,17 @@ Fichier `contenu/questions/AAAA-MM-JJ-adresse.json` (l'adresse est en minuscules
 ```
 
 Le générateur refuse une question sans source, sans point d'interrogation, ou qui renvoie vers une page du wiki inexistante.
+
+## Charte graphique
+
+Une seule feuille de style, `docs/css/site.css`, organisée en sept parties (jetons, base, structure, typographie, composants, pages, adaptations). Règles à respecter pour garder un site homogène :
+
+- **Couleurs** : uniquement les jetons de `:root` (`--fond`, `--carte`, `--doux`, `--encre`, `--gris`, `--filet`, `--rouge`, `--accent`). Jamais de couleur écrite en dur dans une page. Le thème sombre est géré par les mêmes jetons.
+- **Typographie** : Inter pour les titres, menus, boutons et mentions ; EB Garamond pour le texte de lecture. Pas d'autre police.
+- **Structure d'une page intérieure** (automatique, faite par `outils/gabarit.py`) : bande d'en-tête blanche avec fil d'Ariane (s'il y en a un), surtitre rouge en capitales, titre, chapeau ; puis la colonne de lecture (46rem), alignée à gauche sur le logo. Chaque page commence donc par `<p class="surtitre">` (facultatif : sinon celui de la rubrique), `<h1>`, puis `<p class="chapeau">` ou `<p class="meta">`.
+- **Deux niveaux de titres de section** : l'en-tête de bloc (`.tete-bloc` : surtitre, titre, lien « Tous les… » à droite, trait noir épais) pour les blocs de l'accueil et les thèmes du wiki ; l'intertitre de contenu (`h2`, petit trait rouge au-dessus) dans les pages.
+- **Une seule forme de boîte, la carte** : fond blanc, filet, coins arrondis (14 px), ombre légère. Variante « mise en avant » : filet rouge épais à gauche (`.en-clair`, `.retenir`, `.une-actu`). Carte cliquable : toute la surface est un lien, elle se soulève au survol. Encart secondaire : fond beige (`.concretement`, `.impact`, `.note`).
+- **Boutons** en pilule (`.bouton`, `.bouton.second`, `.bouton.petit`) ; liens « voir tout » avec `.lien-fleche`.
+- **Grilles** : tuiles de l'accueil 4 / 2 / 1 colonnes ; cartes-liens en grille automatique. Jamais de tuile orpheline.
+- **Accessibilité** : contraste AA minimum, cibles tactiles de 40 px au moins, focus visible, aucune information portée par la couleur seule, animations coupées si l'appareil le demande.
+- Avant d'ajouter une règle CSS, chercher un composant existant. Toute nouvelle règle va dans la bonne partie du fichier, avec un commentaire.

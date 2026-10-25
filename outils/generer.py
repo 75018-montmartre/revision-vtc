@@ -211,7 +211,8 @@ def numero(n, precedent, suivant):
     if precedent:
         nav.append(f'<a href="{precedent["date"]}.html">Numéro précédent : n° {precedent["numero"]}</a>')
     navh = ('<p class="meta">' + " · ".join(nav) + "</p>") if nav else ""
-    corps = f'''    <p class="surtitre">Actualité VTC · n° {n["numero"]}</p>
+    corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Actualité VTC</a></li></ol></nav>
+    <p class="surtitre">Actualité VTC · n° {n["numero"]}</p>
     <h1>{ty(n["titre"])}</h1>
     <p class="meta">Publié le {date_fr(n["date"])} · période couverte : {ty(n["periode"])}</p>
     <section class="retenir" aria-labelledby="titre-retenir"><h2 id="titre-retenir">À retenir</h2>
@@ -414,8 +415,7 @@ def wiki():
             f'''<li data-cherche="{html.escape(_sans_accents(a["num"] + " " + a["titre"] + " " + a["en_clair"] + " " + a["concretement"]))}"><a href="{a["slug"]}.html"><span class="num-art">{ty(a["num"] if not a.get("arrete") else "Arrêté")}</span> {ty(a["titre"])}</a></li>'''
             for a in liste)
         sections.append(f'''<section class="wiki-theme" aria-labelledby="{t["cle"]}">
-      <h2 id="{t["cle"]}">{ty(t["titre"])}</h2>
-      <p class="meta">{ty(t["intro"])}</p>
+      <div class="tete-bloc"><div><h2 id="{t["cle"]}">{ty(t["titre"])}</h2><p class="tete-intro">{ty(t["intro"])}</p></div><span class="meta">{len(liste)} {"textes" if len(liste) > 1 else "texte"}</span></div>
       <ul class="wiki-liste">{items}</ul>
     </section>''')
     autres = ""
@@ -432,7 +432,7 @@ def wiki():
     </div>
     <nav class="sommaire" aria-label="Thèmes"><ul>{"".join(sommaire)}</ul></nav>
     {"".join(sections)}
-    <section aria-labelledby="autres">
+    <section class="autres-textes" aria-labelledby="autres">
       <h2 id="autres">Les lois d'origine et les autres références</h2>
       <p>{ty("Ces textes ont façonné le métier ; leurs règles s'appliquent aujourd'hui à travers les articles ci-dessus. Les liens mènent au site officiel.")}</p>
       {autres}
@@ -539,7 +539,8 @@ def examens():
 
 # ------------------------------------------------------------------ pages légales
 def legales():
-    corps = f'''    <h1>Mentions légales</h1>
+    corps = f'''    <p class="surtitre">Informations</p>
+    <h1>Mentions légales</h1>
     <h2>Éditeur du site</h2>
     <p>{ty("Ce site gratuit est édité à titre non professionnel par l'auteur du livre Machine à Réussite · Examen VTC 2027. Conformément à l'article 6, III, 2 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, l'éditeur a choisi de rester anonyme : ses coordonnées ont été communiquées à l'hébergeur.")}</p>
     <p>Contact : <a href="mailto:benjamin@revision-vtc.fr">benjamin@revision-vtc.fr</a></p>
@@ -555,7 +556,8 @@ def legales():
     <p>{ty("Ce site et le livre sont des ouvrages indépendants : ils ne sont édités ni par les chambres de métiers et de l'artisanat ni par l'État. Ils préparent à l'examen et ne remplacent pas un conseil juridique, comptable ou fiscal adapté à votre situation.")}</p>'''
     ecrire("mentions-legales.html", page("Mentions légales · Révision VTC", corps, None, "",
                                          "Mentions légales de revision-vtc.fr : éditeur, hébergeur, données personnelles, propriété intellectuelle et réutilisation des textes officiels."))
-    corps = f'''    <h1>Accessibilité</h1>
+    corps = f'''    <p class="surtitre">Informations</p>
+    <h1>Accessibilité</h1>
     <p class="chapeau">{ty("Ce site a été conçu pour être utilisable par tous, au clavier, avec un lecteur d'écran ou avec un zoom important.")}</p>
     <h2>Ce qui a été fait</h2>
     <ul>
@@ -636,7 +638,8 @@ def questions(qs, w):
 
 # ------------------------------------------------------------------ à propos, page 404
 def a_propos():
-    corps = f'''    <h1>À propos et méthode</h1>
+    corps = f'''    <p class="surtitre">Le site</p>
+    <h1>À propos et méthode</h1>
     <p class="chapeau">{ty("Révision VTC est un site gratuit et indépendant sur le métier de chauffeur VTC et l'examen d'accès à la profession. Il prolonge le livre Machine à Réussite · Examen VTC 2027.")}</p>
     <h2>Qui publie ce site</h2>
     <p>{ty("Le site est publié à titre non professionnel par Benjamin Blondin, auteur du livre Machine à Réussite · Examen VTC 2027 (540 pages, ISBN 979-8-1652-8079-5). Il ne contient aucune publicité et ne vend aucune formation. Il n'est édité ni par l'État, ni par les chambres de métiers et de l'artisanat, ni par une plateforme de VTC.")}</p>
@@ -668,7 +671,8 @@ def a_propos():
 
 
 def page_404():
-    corps = f'''    <h1>Page introuvable</h1>
+    corps = f'''    <p class="surtitre">Erreur 404</p>
+    <h1>Page introuvable</h1>
     <p class="chapeau">{ty("Cette adresse n'existe pas, ou plus. Le contenu que vous cherchez est peut-être ici :")}</p>
     <ul>
       <li><a href="/wiki/index.html">{ty("La réglementation VTC, article par article")}</a></li>
