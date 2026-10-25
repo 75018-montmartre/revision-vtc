@@ -26,7 +26,7 @@ def _tete_page(corps, actif, racine):
     import re as _re
     m = _re.search(r"<h1[^>]*>.*?</h1>", corps, _re.S)
     if not m:
-        return "", corps
+        return "", corps, "mp-colonne"
     avant, h1, apres = corps[:m.start()], m.group(0), corps[m.end():]
     suite = ""
     while True:
@@ -40,20 +40,26 @@ def _tete_page(corps, actif, racine):
     accueil = f'<li><a href="{racine or "./"}index.html">Accueil</a></li>'
     if 'class="fil"' in avant:
         avant = avant.replace("<ol>", "<ol>" + accueil, 1)
-    tete = f'''<header class="tete-page">
+    if 'class="deux-col"' in apres:
+        mp = "mp-cote"
+    elif any(c in apres for c in ('class="wiki-theme"', 'class="questions', 'class="numeros"')):
+        mp = "mp-grille"
+    else:
+        mp = "mp-colonne"
+    tete = f'''<header class="tete-page {mp}">
   <div class="page">
 {avant.strip()}
     {h1}{suite}
   </div>
 </header>'''
-    return tete, apres
+    return tete, apres, mp
 
 
 def page(titre, corps, actif=None, racine="", description="", noindex=False, scripts_tete="", scripts_fin="", avant_main="", brut=False, jsonld=None):
     import json as _json
     if jsonld:
         scripts_tete += "".join('<script type="application/ld+json">' + _json.dumps(j, ensure_ascii=False).replace("</", "<\\/") + "</script>\n" for j in jsonld)
-    tete, reste = ('', corps) if brut else _tete_page(corps, actif, racine)
+    tete, reste, mp = ('', corps, '') if brut else _tete_page(corps, actif, racine)
     nav = "".join(
         f'<li><a href="{racine}{href}"' + (' aria-current="page"' if cle == actif else "") + f">{nom}</a></li>"
         for href, nom, cle in NAV)
@@ -82,7 +88,7 @@ def page(titre, corps, actif=None, racine="", description="", noindex=False, scr
   </div>
 </header>
 {avant_main}<main id="contenu" tabindex="-1">
-{corps if brut else tete + chr(10) + '  <div class="page corps-page">' + chr(10) + reste + chr(10) + '  </div>'}
+{corps if brut else tete + chr(10) + f'  <div class="page corps-page {mp}">' + chr(10) + reste + chr(10) + '  </div>'}
 </main>
 <footer class="pied">
   <div class="page">

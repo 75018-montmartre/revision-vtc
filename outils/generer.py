@@ -363,7 +363,7 @@ def wiki():
         voir = "".join(f'<li><a href="{x["slug"]}.html">{ty(x["num"] if not x.get("arrete") else "Arrêté")} · {ty(x["titre"])}</a></li>' for x in lies)
         livre = ""
         if a["fiches"]:
-            livre = f'''<section class="wiki-livre" aria-labelledby="livre">
+            livre = f'''<section class="cote-bloc wiki-livre" aria-labelledby="livre">
         <h2 id="livre">Dans le livre</h2>
         <ul>{"".join(f"<li><b>Fiche {ty(c)}</b> · {ty(t)}</li>" for c, t in a["fiches"])}</ul>
         <p class="pied-achat">{achat("bouton second petit", "Le livre sur Amazon")}</p>
@@ -371,6 +371,7 @@ def wiki():
         th = themes[a["theme"]]
         corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Textes du métier</a></li><li><a href="index.html#{a["theme"]}">{ty(th["titre"])}</a></li></ol></nav>
     {entete}
+    <div class="deux-col"><div class="col-texte">
     <section class="en-clair" aria-labelledby="clair">
       <h2 id="clair">En clair</h2>
       <p>{ty(a["en_clair"])}</p>
@@ -383,11 +384,14 @@ def wiki():
       </div>
       <p class="source">{ty("Source : Légifrance, version en vigueur au " + source_date + ".")} <a href="{html.escape(a["url"])}">{ty("Voir sur Légifrance")}</a>. {ty("Texte reproduit sous Licence Ouverte 2.0. En cas de doute, seule la version publiée sur Légifrance fait foi.")}</p>
     </section>
+    </div>
+    <aside class="col-cote" aria-label="Pour aller plus loin">
     {livre}
-    <section aria-labelledby="voir">
+    <section class="cote-bloc" aria-labelledby="voir">
       <h2 id="voir">Voir aussi</h2>
       <ul class="voir-aussi">{voir}</ul>
-    </section>'''
+    </section>
+    </aside></div>'''
         if a.get("arrete"):
             titre_page = f'{a["num"]} : {a["titre"][0].lower() + a["titre"][1:]} (VTC)'
             loi = {"@type": "Legislation", "name": a["source"], "legislationJurisdiction": "FR", "legislationType": "Arrêté",
@@ -604,18 +608,22 @@ def questions(qs, w):
     <p class="surtitre">Question VTC</p>
     <h1>{ty(q["question"])}</h1>
     <p class="meta">Publié le {date_fr(q["date"])} · vérifié le {ty(q["verifie"])}</p>
+    <div class="deux-col"><div class="col-texte">
     <section class="en-clair" aria-labelledby="courte">
       <h2 id="courte">La réponse courte</h2>
       <p>{ty(q["reponse_courte"])}</p>
     </section>
     {secs}
     <section class="retenir" aria-labelledby="retenir"><h2 id="retenir">À retenir</h2><ul>{"".join(f"<li>{ty(x)}</li>" for x in q["a_retenir"])}</ul></section>
-    {f'<h2>Les textes expliqués</h2><ul class="voir-aussi">{wiki}</ul>' if wiki else ""}
-    {f'<h2>Dans le livre</h2><ul>{livre}</ul><p class="pied-achat">{achat("bouton second petit", "Le livre sur Amazon")}</p>' if livre else ""}
     <h2>Sources</h2>
     <ul class="source">{src}</ul>
     <p class="source">{ty("Seule la version des textes publiée sur Légifrance fait foi. Cette réponse ne remplace pas un conseil juridique adapté à votre situation.")}</p>
-    {f'<h2>Autres questions</h2><ul class="voir-aussi">{autres}</ul>' if autres else ""}'''
+    </div>
+    <aside class="col-cote" aria-label="Pour aller plus loin">
+    {f'<section class="cote-bloc"><h2>Les textes expliqués</h2><ul class="voir-aussi">{wiki}</ul></section>' if wiki else ""}
+    {f'<section class="cote-bloc wiki-livre"><h2>Dans le livre</h2><ul>{livre}</ul><p class="pied-achat">{achat("bouton second petit", "Le livre sur Amazon")}</p></section>' if livre else ""}
+    {f'<section class="cote-bloc"><h2>Autres questions</h2><ul class="voir-aussi">{autres}</ul></section>' if autres else ""}
+    </aside></div>'''
         chemin = f'questions/{q["date"]}-{q["slug"]}.html'
         ld = {"@context": "https://schema.org", "@type": "Article", "headline": q["question"][:110], "description": q["reponse_courte"],
               "datePublished": q["date"], "dateModified": iso_fr(q["verifie"]), "inLanguage": "fr", "author": AUTEUR, "publisher": AUTEUR,

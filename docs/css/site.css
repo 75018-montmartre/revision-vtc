@@ -32,6 +32,7 @@
   /* largeurs */
   --large:74rem;       /* conteneur : en-tête, pied, blocs */
   --lecture:46rem;     /* colonne de lecture */
+  --cote:20rem;        /* encadré latéral */
   /* espacements */
   --e1:.25rem; --e2:.5rem; --e3:.75rem; --e4:1rem; --e5:1.5rem; --e6:2rem; --e7:3rem; --e8:4.5rem;
   /* formes */
@@ -73,9 +74,32 @@ h1[tabindex="-1"]:focus,main:focus{outline:none}
 .page.large{max-width:var(--large)}
 main{padding:0 0 var(--e8)}
 .corps-page{padding-top:var(--e7)}
-/* la colonne de lecture : tout le contenu d'une page, sauf les grilles de cartes */
+/* trois mises en page pour les pages intérieures, toujours centrées dans l'écran :
+   - mp-colonne : une colonne de lecture (46rem) ;
+   - mp-cote    : la colonne de lecture + un encadré à droite (wiki, questions) ;
+   - mp-grille  : pages d'index, texte à gauche et grilles de cartes sur toute la largeur.
+   L'en-tête de page suit exactement la même largeur que le contenu. */
+.mp-colonne.corps-page,.tete-page.mp-colonne .page{max-width:calc(var(--lecture) + 2 * var(--e5))}
+.mp-cote.corps-page,.tete-page.mp-cote .page,.mp-grille.corps-page,.tete-page.mp-grille .page{max-width:calc(var(--lecture) + var(--cote) + var(--e7) + 2 * var(--e5))}
 .corps-page > *{max-width:var(--lecture)}
-.corps-page > :is(.wiki-theme,.questions,.numeros,.essentiel-liens,.sommaire,.autres-textes){max-width:none}
+.corps-page > :is(.deux-col,.wiki-theme,.questions,.numeros,.essentiel-liens,.sommaire,.autres-textes){max-width:none}
+.deux-col{display:grid;grid-template-columns:minmax(0,var(--lecture)) var(--cote);gap:var(--e7);align-items:start}
+.col-texte > :first-child{margin-top:0}
+.col-cote{position:sticky;top:var(--e5);display:grid;gap:var(--e4)}
+.cote-bloc{background:var(--carte);border:1px solid var(--filet);border-radius:var(--rayon);box-shadow:var(--ombre);padding:var(--e4) var(--e5) var(--e2);font-size:1.0625rem;line-height:1.5}
+.cote-bloc h2{font-size:.8125rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);margin:var(--e2) 0 var(--e3)}
+.cote-bloc h2::before{display:none !important}
+.cote-bloc ul{list-style:none;padding:0;margin:0 0 var(--e3)}
+.cote-bloc li{margin:0;padding:var(--e2) 0;border-top:1px solid var(--filet)}
+.cote-bloc li:first-child{border-top:0;padding-top:0}
+.cote-bloc .voir-aussi a{text-decoration:none;color:var(--encre)}
+.cote-bloc .voir-aussi a:hover{color:var(--accent);text-decoration:underline}
+.cote-bloc .pied-achat{margin:var(--e3) 0 var(--e3) !important}
+@media (max-width:64rem){
+  .deux-col{grid-template-columns:minmax(0,1fr);gap:var(--e6)}
+  .mp-cote.corps-page,.tete-page.mp-cote .page{max-width:calc(var(--lecture) + 2 * var(--e5))}
+  .col-cote{position:static}
+}
 
 /* en-tête du site */
 .entete{background:var(--carte);border-bottom:1px solid var(--filet)}
@@ -123,7 +147,7 @@ h1{font-size:clamp(1.875rem,4vw,2.625rem);font-weight:700;margin:0 0 var(--e5)}
 h2{font-size:1.5rem;font-weight:700;margin:var(--e7) 0 var(--e4)}
 h3{font-size:1.125rem;font-weight:700;margin:var(--e6) 0 var(--e2);letter-spacing:-.01em}
 /* intertitre de contenu : un trait rouge court au-dessus */
-.corps-page > h2::before,.corps-page section > h2::before,.corps-page > section > h2::before{content:"";display:block;width:2rem;height:3px;border-radius:2px;background:var(--accent-trait);margin-bottom:var(--e3)}
+.corps-page > h2::before,.col-texte > h2::before,.corps-page section:not(.cote-bloc) > h2::before{content:"";display:block;width:2rem;height:3px;border-radius:2px;background:var(--accent-trait);margin-bottom:var(--e3)}
 .corps-page > :first-child{margin-top:0}
 p{margin:0 0 1.15rem}
 ul,ol{padding-left:1.25rem;margin:0 0 var(--e4)}
@@ -286,8 +310,6 @@ main:has(.une){padding-bottom:0}
 .wiki-theme h2#reservation::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%224%22%20y%3D%225%22%20width%3D%2216%22%20height%3D%2215%22%20rx%3D%222%22/%3E%3Cpath%20d%3D%22M8%203v4M16%203v4M4%2010h16M9%2015l2%202%204-4%22/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%224%22%20y%3D%225%22%20width%3D%2216%22%20height%3D%2215%22%20rx%3D%222%22/%3E%3Cpath%20d%3D%22M8%203v4M16%203v4M4%2010h16M9%2015l2%202%204-4%22/%3E%3C/svg%3E")}
 .wiki-theme h2#plateformes::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%227%22%20y%3D%222.5%22%20width%3D%2210%22%20height%3D%2219%22%20rx%3D%222%22/%3E%3Cpath%20d%3D%22M11%2018h2%22/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%227%22%20y%3D%222.5%22%20width%3D%2210%22%20height%3D%2219%22%20rx%3D%222%22/%3E%3Cpath%20d%3D%22M11%2018h2%22/%3E%3C/svg%3E")}
 .wiki-theme h2#sanctions::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%203l9%2016H3z%22/%3E%3Cpath%20d%3D%22M12%2010v4M12%2017h.01%22/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%203l9%2016H3z%22/%3E%3Cpath%20d%3D%22M12%2010v4M12%2017h.01%22/%3E%3C/svg%3E")}
-.wiki-livre ul,.voir-aussi{padding-left:1.25rem}
-.wiki-livre li,.voir-aussi li{margin:var(--e1) 0}
 .autres-textes .textes{list-style:none;margin:var(--e4) 0 0;padding:0;max-width:var(--lecture)}
 .texte{margin:0;padding:var(--e4) 0;border-top:1px solid var(--filet)}
 .texte p{margin:var(--e1) 0}
