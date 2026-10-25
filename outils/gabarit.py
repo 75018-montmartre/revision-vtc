@@ -59,6 +59,7 @@ def page(titre, corps, actif=None, racine="", description="", noindex=False, scr
     <p class="copyright">© Benjamin Blondin, 2026</p>
   </div>
 </footer>
-{scripts_fin}</body>
+{scripts_fin}<script data-goatcounter="https://revision-vtc.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
 </html>
 '''
