@@ -240,3 +240,7 @@ input[type=search]{font-family:var(--sans);font-size:1rem;padding:.625rem .75rem
 .wiki-liste li{border-bottom:1px solid var(--filet);padding:.625rem 0}
 .wiki-liste a{text-decoration:none;color:var(--encre)}
 .wiki-liste a:hover{color:var(--accent);text-decoration:underline}
+.essentiel-liens{list-style:none;padding:0;margin:1rem 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(19rem,1fr));gap:0 2rem;border-top:1px solid var(--filet)}
+.essentiel-liens li{border-bottom:1px solid var(--filet);padding:.75rem 0;font-family:var(--sans);font-size:1rem;line-height:1.4}
+.essentiel-liens a{color:var(--encre);text-decoration:none;font-weight:600}
+.essentiel-liens a:hover{color:var(--accent);text-decoration:underline}

@@ -31,13 +31,58 @@ def ty(t):
     return t
 
 
+def iso_fr(texte):
+    """« 25 octobre 2026 » ou « 1er janvier 2027 » -> « 2026-10-25 »."""
+    j, m, a = texte.replace("1er", "1").split()
+    return f"{int(a):04d}-{MOIS.index(m) + 1:02d}-{int(j):02d}"
+
+
 def date_fr(iso):
     d = datetime.date.fromisoformat(iso)
     j = "1er" if d.day == 1 else str(d.day)
     return f"{j} {MOIS[d.month - 1]} {d.year}"
 
 
+AUTEUR = {"@type": "Person", "name": "Benjamin Blondin", "url": SITE + "a-propos.html"}
+LIVRE_LD = {"@type": "Book", "@id": SITE + "#livre", "name": "Machine à Réussite · Examen VTC 2027", "author": AUTEUR,
+            "isbn": "9798165280795", "bookFormat": "https://schema.org/Paperback", "numberOfPages": 540, "inLanguage": "fr",
+            "datePublished": "2026-10", "image": SITE + "couverture.jpg",
+            "about": "Préparation à l'examen d'accès à la profession de conducteur de voiture de transport avec chauffeur (VTC)"}
+SITE_LD = {"@type": "WebSite", "@id": SITE + "#site", "name": "Révision VTC", "url": SITE, "inLanguage": "fr-FR",
+           "description": "Réglementation VTC expliquée article par article, actualité du métier chaque semaine et examens blancs, par l'auteur du livre Machine à Réussite · Examen VTC 2027.",
+           "publisher": AUTEUR}
+
+
+def fil(*etapes):
+    """Données structurées du fil d'Ariane : (nom, chemin relatif au site)."""
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i, "name": n, "item": SITE + c} for i, (n, c) in enumerate(etapes, 1)]}
+
+
+def _seo(chemin, contenu):
+    """Ajoute l'adresse canonique et les balises de partage (Open Graph) à une page indexable."""
+    if "</head>" not in contenu or 'content="noindex"' in contenu or 'http-equiv="refresh"' in contenu:
+        return contenu
+    titre = html.unescape(re.search(r"<title>(.*?)</title>", contenu, re.S).group(1))
+    m = re.search(r'<meta name="description" content="(.*?)">', contenu)
+    assert m and len(html.unescape(m.group(1))) >= 50, f"{chemin} : description absente ou trop courte"
+    desc = html.unescape(m.group(1))
+    url = SITE + (chemin[:-10] if chemin.endswith("index.html") else chemin)
+    a = lambda t: html.escape(t, quote=True)
+    type_og = "article" if chemin.startswith(("wiki/", "actualite/2")) else "website"
+    tete = (f'<link rel="canonical" href="{url}">\n'
+            f'<meta property="og:site_name" content="Révision VTC">\n<meta property="og:locale" content="fr_FR">\n'
+            f'<meta property="og:type" content="{type_og}">\n<meta property="og:title" content="{a(titre)}">\n'
+            f'<meta property="og:description" content="{a(desc)}">\n<meta property="og:url" content="{url}">\n'
+            f'<meta property="og:image" content="{SITE}partage.jpg">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'
+            f'<meta property="og:image:alt" content="Révision VTC, le site du livre Machine à Réussite · Examen VTC 2027">\n'
+            f'<meta name="twitter:card" content="summary_large_image">\n')
+    return contenu.replace("</head>", tete + "</head>", 1)
+
+
 def ecrire(chemin, contenu):
+    if chemin.endswith(".html"):
+        contenu = _seo(chemin, contenu)
     chemin = os.path.join(DOCS, chemin)
     os.makedirs(os.path.dirname(chemin), exist_ok=True)
     with open(chemin, "w", encoding="utf-8") as f:
@@ -94,9 +139,28 @@ def accueil(nums):
           <li><p class="surtitre">Réservé aux lecteurs</p><h3><a href="examens.html">Examens blancs n° 4 et 5</a></h3><p>{ty("À l'écran, chronométrés et corrigés, ou à imprimer.")}</p></li>
         </ul>
       </div>
+    </section>
+    <section class="bloc" aria-labelledby="titre-essentiel">
+      <div class="page large">
+        <h2 id="titre-essentiel" class="sans-filet">Réglementation VTC : l'essentiel</h2>
+        <ul class="essentiel-liens">{liens_essentiels()}</ul>
+        <p><a class="lien-fleche" href="wiki/index.html">Tous les textes du métier, expliqués en clair</a></p>
+      </div>
     </section>{dernier}'''
-    ecrire("index.html", page("Révision VTC · Le site du livre Machine à Réussite", corps, "accueil", "",
-                              "Le site du livre Machine à Réussite · Examen VTC 2027 : actualité VTC chaque semaine, mises à jour du livre et examens blancs en ligne.", brut=True))
+    ecrire("index.html", page("Examen VTC 2027 et réglementation VTC expliquée · Révision VTC", corps, "accueil", "",
+                              "Réussir l'examen VTC 2027 : la réglementation VTC expliquée article par article, l'actualité du métier chaque semaine et deux examens blancs corrigés. Sources officielles citées.",
+                              brut=True, jsonld=[{"@context": "https://schema.org", "@graph": [SITE_LD, LIVRE_LD]}]))
+
+
+ESSENTIELS = [("l3120-2", "Réservation préalable et maraude : ce qui est interdit"), ("d3120-3", "Attente devant les gares et aéroports : une heure maximum"),
+              ("l3122-9", "Le retour à la base après une course"), ("r3120-6", "La carte professionnelle VTC : conditions et délai"),
+              ("arrete-6-avril-2017-examen", "L'examen VTC : épreuves, coefficients, notes éliminatoires"), ("l3122-3", "Le registre des VTC"),
+              ("arrete-26-mars-2015-vehicules", "Le véhicule VTC : âge, dimensions, puissance"), ("arrete-6-aout-2025-reservation", "Le justificatif de réservation : les sept mentions"),
+              ("l3124-12", "Maraude, démarchage, conduite sans carte : les sanctions")]
+
+
+def liens_essentiels():
+    return "".join(f'<li><a href="wiki/{s}.html">{ty(t)}</a></li>' for s, t in ESSENTIELS)
 
 
 # ------------------------------------------------------------------ actualité
@@ -133,8 +197,14 @@ def numero(n, precedent, suivant):
     {navh}
     <p><a href="index.html">Tous les numéros</a></p>'''
     titre = f'{n["titre"]} · Actualité VTC n° {n["numero"]}'
-    ecrire(f'actualite/{n["date"]}.html', page(html.escape(titre), corps, "actualite", "../",
-                                               html.escape(" ".join(n["a_retenir"])[:300])))
+    resume = " ".join(n["a_retenir"])
+    ld = {"@context": "https://schema.org", "@type": "NewsArticle", "headline": n["titre"][:110], "description": resume[:300],
+          "datePublished": n["date"], "dateModified": n["date"], "inLanguage": "fr", "author": AUTEUR, "publisher": AUTEUR,
+          "image": SITE + "partage.jpg", "mainEntityOfPage": SITE + f'actualite/{n["date"]}.html',
+          "citation": [s["url"] for r in n["rubriques"] for b in r["breves"] for s in b["sources"]][:20]}
+    ecrire(f'actualite/{n["date"]}.html', page(html.escape(titre, quote=False), corps, "actualite", "../",
+                                               html.escape(resume[:300].rsplit(" ", 1)[0] + "…"),
+                                               jsonld=[ld, fil(("Accueil", ""), ("Actualité VTC", "actualite/"), (f'N° {n["numero"]}', f'actualite/{n["date"]}.html'))]))
 
 
 def actualite(nums):
@@ -150,7 +220,7 @@ def actualite(nums):
     <h2>Les numéros</h2>
     <ol class="numeros" reversed>{liste}
     </ol>'''
-    ecrire("actualite/index.html", page("Actualité VTC · Révision VTC", corps, "actualite", "../",
+    ecrire("actualite/index.html", page("Actualité VTC : l'info des chauffeurs VTC chaque semaine · Révision VTC", corps, "actualite", "../",
                                         "L'actualité VTC chaque semaine : textes officiels, examen, plateformes, cotisations. Sources citées."))
 
 
@@ -292,9 +362,23 @@ def wiki():
       <h2 id="voir">Voir aussi</h2>
       <ul class="voir-aussi">{voir}</ul>
     </section>'''
-        titre_page = (f'Article {a["num"]} · ' if not a.get("arrete") else "") + a["titre"]
-        ecrire(f'wiki/{a["slug"]}.html', page(f"{titre_page} · Révision VTC", corps, "textes", "../",
-                                             (a["en_clair"][:155].rsplit(" ", 1)[0] + "…").replace('"', "&quot;")))
+        if a.get("arrete"):
+            titre_page = f'{a["num"]} : {a["titre"][0].lower() + a["titre"][1:]} (VTC)'
+            loi = {"@type": "Legislation", "name": a["source"], "legislationJurisdiction": "FR", "legislationType": "Arrêté",
+                   "legislationLegalForce": "https://schema.org/InForce", "url": a["url"], "inLanguage": "fr"}
+        else:
+            titre_page = f'Article {a["num"]} du Code des transports : {a["titre"][0].lower() + a["titre"][1:]}'
+            loi = {"@type": "Legislation", "name": f'Article {a["num"]} du Code des transports', "legislationIdentifier": a["num"],
+                   "legislationJurisdiction": "FR", "legislationType": "Code", "legislationLegalForce": "https://schema.org/InForce",
+                   "isPartOf": {"@type": "Legislation", "name": "Code des transports", "legislationIdentifier": "LEGITEXT000023086525"},
+                   "url": a["url"], "inLanguage": "fr"}
+        desc = a["en_clair"] if len(a["en_clair"]) <= 158 else a["en_clair"][:155].rsplit(" ", 1)[0] + "…"
+        ld = {"@context": "https://schema.org", "@type": "Article", "headline": titre_page[:110], "description": a["en_clair"],
+              "inLanguage": "fr", "dateModified": iso_fr(source_date), "author": AUTEUR, "publisher": AUTEUR,
+              "image": SITE + "partage.jpg", "mainEntityOfPage": SITE + f'wiki/{a["slug"]}.html', "about": loi,
+              "isBasedOn": a["url"], "license": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/"}
+        ecrire(f'wiki/{a["slug"]}.html', page(html.escape(titre_page, quote=False), corps, "textes", "../", html.escape(desc),
+                                             jsonld=[ld, fil(("Accueil", ""), ("Textes du métier", "wiki/"), (th["titre"], f'wiki/#{a["theme"]}'), (titre_page, f'wiki/{a["slug"]}.html'))]))
 
     # index
     sections, sommaire = [], []
@@ -339,9 +423,12 @@ s.hidden=vis===0;total+=vis;});
 r.textContent=v?(total?total+(total>1?" articles trouvés":" article trouvé"):"Aucun article ne correspond."):"";});})();
 </script>
 '''
-    ecrire("wiki/index.html", page("Textes du métier · Révision VTC", corps, "textes", "../",
-                                   "Le droit du VTC expliqué article par article : réservation, carte, registre, véhicule, plateformes, sanctions. Textes officiels en vigueur.",
-                                   scripts_fin=script))
+    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Réglementation VTC : les textes du métier expliqués",
+          "url": SITE + "wiki/", "inLanguage": "fr", "dateModified": iso_fr(source_date), "author": AUTEUR, "isPartOf": {"@id": SITE + "#site"},
+          "hasPart": [{"@type": "Article", "headline": a["titre"], "url": SITE + f'wiki/{a["slug"]}.html'} for a in arts]}
+    ecrire("wiki/index.html", page("Réglementation VTC : les textes du métier expliqués en clair · Révision VTC", corps, "textes", "../",
+                                   "La réglementation VTC article par article : réservation préalable, maraude, carte professionnelle, registre, véhicule, plateformes, sanctions. Texte officiel en vigueur et explication en clair.",
+                                   scripts_fin=script, jsonld=[ld, fil(("Accueil", ""), ("Textes du métier", "wiki/"))]))
     # l'ancienne page renvoie vers le wiki
     ecrire("textes.html", f'''<!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><title>Textes du métier · Révision VTC</title>
@@ -441,7 +528,8 @@ def legales():
     <p>{ty("Les textes officiels reproduits dans la rubrique Textes du métier proviennent de Légifrance (DILA). Ils sont réutilisés sous Licence Ouverte 2.0, avec mention de la source et de la date de version. Seule la version publiée sur Légifrance fait foi.")}</p>
     <h2>Avertissement</h2>
     <p>{ty("Ce site et le livre sont des ouvrages indépendants : ils ne sont édités ni par les chambres de métiers et de l'artisanat ni par l'État. Ils préparent à l'examen et ne remplacent pas un conseil juridique, comptable ou fiscal adapté à votre situation.")}</p>'''
-    ecrire("mentions-legales.html", page("Mentions légales · Révision VTC", corps, None, ""))
+    ecrire("mentions-legales.html", page("Mentions légales · Révision VTC", corps, None, "",
+                                         "Mentions légales de revision-vtc.fr : éditeur, hébergeur, données personnelles, propriété intellectuelle et réutilisation des textes officiels."))
     corps = f'''    <h1>Accessibilité</h1>
     <p class="chapeau">{ty("Ce site a été conçu pour être utilisable par tous, au clavier, avec un lecteur d'écran ou avec un zoom important.")}</p>
     <h2>Ce qui a été fait</h2>
@@ -456,17 +544,118 @@ def legales():
     <p>{ty("Le site n'a pas fait l'objet d'un audit de conformité au RGAA. Il a été vérifié avec des outils automatiques et une navigation au clavier.")}</p>
     <h2>Signaler un problème</h2>
     <p>{ty("Si un contenu vous est inaccessible, écrivez à")} <a href="mailto:benjamin@revision-vtc.fr">benjamin@revision-vtc.fr</a> {ty(": vous recevrez l'information sous une autre forme, et le problème sera corrigé.")}</p>'''
-    ecrire("accessibilite.html", page("Accessibilité · Révision VTC", corps, None, ""))
+    ecrire("accessibilite.html", page("Accessibilité · Révision VTC", corps, None, "",
+                                      "Ce qui a été fait pour que revision-vtc.fr soit utilisable par tous : clavier, lecteur d'écran, contrastes, zoom."))
 
 
-def plan(nums, arts):
-    urls = ["", "actualite/index.html", "wiki/index.html", "mises-a-jour.html", "examens.html", "mentions-legales.html", "accessibilite.html"]
-    urls += [f'actualite/{n["date"]}.html' for n in nums]
-    urls += [f'wiki/{a["slug"]}.html' for a in arts]
+# ------------------------------------------------------------------ à propos, page 404
+def a_propos():
+    corps = f'''    <h1>À propos et méthode</h1>
+    <p class="chapeau">{ty("Révision VTC est un site gratuit et indépendant sur le métier de chauffeur VTC et l'examen d'accès à la profession. Il prolonge le livre Machine à Réussite · Examen VTC 2027.")}</p>
+    <h2>Qui publie ce site</h2>
+    <p>{ty("Le site est publié à titre non professionnel par Benjamin Blondin, auteur du livre Machine à Réussite · Examen VTC 2027 (540 pages, ISBN 979-8-1652-8079-5). Il ne contient aucune publicité et ne vend aucune formation. Il n'est édité ni par l'État, ni par les chambres de métiers et de l'artisanat, ni par une plateforme de VTC.")}</p>
+    <h2>Ce que vous y trouvez</h2>
+    <ul>
+      <li><a href="wiki/index.html">{ty("Les textes du métier")}</a> {ty(": chaque article utile du Code des transports et chaque arrêté, avec le texte officiel en vigueur, une explication en clair et un exemple concret.")}</li>
+      <li><a href="actualite/index.html">{ty("L'Actualité VTC")}</a> {ty(": chaque semaine, ce qui change pour les chauffeurs et les candidats, avec ses sources.")}</li>
+      <li><a href="mises-a-jour.html">{ty("Les mises à jour du livre")}</a> {ty(": chaque règle qui a changé depuis l'impression, avec le texte qui la fonde.")}</li>
+      <li><a href="examens.html">{ty("Deux examens blancs")}</a> {ty("corrigés, en plus des trois du livre.")}</li>
+    </ul>
+    <h2>Comment les informations sont vérifiées</h2>
+    <ul>
+      <li>{ty("Une information n'est publiée que si elle repose sur un texte officiel (Légifrance, Journal officiel, administration) ou sur deux sources indépendantes qui concordent.")}</li>
+      <li>{ty("Chaque information cite sa source, avec un lien et une date. Ce qui n'a pas pu être vérifié n'est pas publié.")}</li>
+      <li>{ty("Le site distingue toujours ce qui est en vigueur, ce qui est adopté mais pas encore applicable, et ce qui n'est qu'un projet.")}</li>
+      <li>{ty("Les textes officiels du wiki sont recopiés tels quels depuis Légifrance, sans retouche, et comparés chaque semaine à la version en vigueur. La date de vérification figure sur chaque page.")}</li>
+      <li>{ty("Quand une règle enseignée par le livre change, elle est inscrite dans les mises à jour du livre.")}</li>
+    </ul>
+    <h2>Les limites</h2>
+    <p>{ty("Ce site prépare à l'examen et aide à comprendre la réglementation. Il ne remplace pas un conseil juridique, comptable ou fiscal adapté à votre situation. En cas de doute, seule la version des textes publiée sur Légifrance fait foi.")}</p>
+    <h2>Signaler une erreur</h2>
+    <p>{ty("Une erreur, un texte qui a changé, une question ? Écrivez à")} <a href="mailto:benjamin@revision-vtc.fr">benjamin@revision-vtc.fr</a>{ty(". Les corrections sont publiées avec leur date.")}</p>'''
+    ld = {"@context": "https://schema.org", "@type": "AboutPage", "name": "À propos et méthode", "url": SITE + "a-propos.html",
+          "inLanguage": "fr", "mainEntity": dict(AUTEUR, **{"@id": SITE + "a-propos.html#auteur", "description": "Auteur du livre Machine à Réussite · Examen VTC 2027",
+                                                         "email": "benjamin@revision-vtc.fr"}), "about": {"@id": SITE + "#livre"}}
+    ecrire("a-propos.html", page("À propos et méthode de vérification · Révision VTC", corps, None, "",
+                                 "Qui publie Révision VTC et comment chaque information est vérifiée : textes officiels, deux sources concordantes, vérification hebdomadaire sur Légifrance.",
+                                 jsonld=[ld]))
+
+
+def page_404():
+    corps = f'''    <h1>Page introuvable</h1>
+    <p class="chapeau">{ty("Cette adresse n'existe pas, ou plus. Le contenu que vous cherchez est peut-être ici :")}</p>
+    <ul>
+      <li><a href="/wiki/index.html">{ty("La réglementation VTC, article par article")}</a></li>
+      <li><a href="/actualite/index.html">{ty("L'Actualité VTC")}</a></li>
+      <li><a href="/examens.html">{ty("Les examens blancs")}</a></li>
+      <li><a href="/index.html">{ty("L'accueil du site")}</a></li>
+    </ul>'''
+    ecrire("404.html", page("Page introuvable · Révision VTC", corps, None, "/", noindex=True))
+
+
+ROBOTS_IA = ["Googlebot", "Bingbot", "Google-Extended", "GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot",
+             "Claude-User", "PerplexityBot", "Perplexity-User", "Applebot", "Applebot-Extended", "DuckAssistBot", "MistralAI-User", "CCBot"]
+
+
+def plan(nums, arts, wiki_date):
+    der = nums[0]["date"] if nums else wiki_date
+    urls = [("", max(der, wiki_date)), ("actualite/", der), ("wiki/", wiki_date), ("a-propos.html", None), ("mises-a-jour.html", None),
+            ("examens.html", None), ("mentions-legales.html", None), ("accessibilite.html", None)]
+    urls += [(f'actualite/{n["date"]}.html', n["date"]) for n in nums]
+    urls += [(f'wiki/{a["slug"]}.html', wiki_date) for a in arts]
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    xml += "".join(f"  <url><loc>{SITE}{u}</loc></url>\n" for u in urls) + "</urlset>\n"
+    xml += "".join(f"  <url><loc>{SITE}{u}</loc>" + (f"<lastmod>{d}</lastmod>" if d else "") + "</url>\n" for u, d in urls) + "</urlset>\n"
     ecrire("sitemap.xml", xml)
-    ecrire("robots.txt", f"User-agent: *\nDisallow: /examen.html\nSitemap: {SITE}sitemap.xml\n")
+    # les moteurs de recherche et les assistants d'IA sont explicitement les bienvenus (référencement et citations)
+    ecrire("robots.txt", "".join(f"User-agent: {r}\n" for r in ROBOTS_IA) + "Allow: /\nDisallow: /examen.html\n\n"
+           f"User-agent: *\nAllow: /\nDisallow: /examen.html\n\nSitemap: {SITE}sitemap.xml\n")
+
+
+def llms(nums, w):
+    """llms.txt : le plan du site pour les assistants d'IA ; llms-full.txt : tout le wiki en texte brut, avec ses sources."""
+    themes = {t["cle"]: t["titre"] for t in w["themes"]}
+    l = ["# Révision VTC (revision-vtc.fr)", "",
+         "> Site gratuit et indépendant sur le métier de chauffeur VTC en France et l'examen d'accès à la profession : "
+         "la réglementation VTC expliquée article par article (texte officiel Légifrance en vigueur + explication en clair), "
+         "l'actualité du métier chaque semaine avec ses sources, et des examens blancs. Tenu par Benjamin Blondin, auteur du livre "
+         "« Machine à Réussite · Examen VTC 2027 » (ISBN 979-8-1652-8079-5).", "",
+         f"Règles éditoriales : chaque information repose sur un texte officiel ou sur deux sources concordantes, toujours citées. "
+         f"Les textes du wiki sont comparés chaque semaine à la version en vigueur sur Légifrance (dernière vérification : {w['verifie']}). "
+         "Seule la version publiée sur Légifrance fait foi.", "",
+         "## Pages principales", "",
+         f"- [Réglementation VTC, les textes du métier]({SITE}wiki/): index de tous les articles par thème",
+         f"- [Actualité VTC]({SITE}actualite/): un numéro par semaine, sources citées",
+         f"- [Mises à jour du livre]({SITE}mises-a-jour.html): règles qui ont changé depuis l'impression",
+         f"- [Examens blancs]({SITE}examens.html): deux examens blancs corrigés, réservés aux lecteurs du livre",
+         f"- [À propos et méthode]({SITE}a-propos.html): qui écrit, comment les informations sont vérifiées",
+         f"- [Texte intégral du wiki]({SITE}llms-full.txt): toutes les explications et tous les textes officiels en texte brut", ""]
+    for t in w["themes"]:
+        l += [f"## {t['titre']}", ""]
+        l += [f"- [{a['num'] if not a.get('arrete') else 'Arrêté'} · {a['titre']}]({SITE}wiki/{a['slug']}.html): {a['en_clair']}" for a in w["articles"] if a["theme"] == t["cle"]]
+        l.append("")
+    if nums:
+        l += ["## Derniers numéros de l'Actualité VTC", ""]
+        l += [f"- [{n['titre']}]({SITE}actualite/{n['date']}.html): {' '.join(n['a_retenir'])}" for n in nums[:8]]
+        l.append("")
+    ecrire("llms.txt", "\n".join(l))
+    f = [f"# Réglementation VTC expliquée · revision-vtc.fr", "",
+         f"Textes officiels recopiés de Légifrance, version en vigueur au {w['verifie']} (Licence Ouverte 2.0). "
+         "Explications « En clair » et « Concrètement » publiées sous la responsabilité de Benjamin Blondin. Seule la version publiée sur Légifrance fait foi.", ""]
+    for t in w["themes"]:
+        f += [f"## {t['titre']}", ""]
+        for a in [x for x in w["articles"] if x["theme"] == t["cle"]]:
+            tete = a["num"] + " : " + a["titre"] if a.get("arrete") else f"Article {a['num']} du Code des transports : {a['titre']}"
+            f += [f"### {tete}", "", f"Page : {SITE}wiki/{a['slug']}.html", f"Source officielle : {a['url']}", "",
+                  f"En clair : {a['en_clair']}", "", f"Concrètement : {a['concretement']}", "", "Texte officiel :", ""]
+            if a.get("arrete"):
+                for p in a["articles"]:
+                    f += [f"{p['num']}.", *p["texte"], ""]
+            else:
+                f += [*a["texte"], "", a["vigueur"] + "."]
+            if a["fiches"]:
+                f += ["", "Dans le livre Machine à Réussite · Examen VTC 2027 : " + " ; ".join(f"fiche {c} ({t2})" for c, t2 in a["fiches"]) + "."]
+            f.append("")
+    ecrire("llms-full.txt", "\n".join(f))
 
 
 if __name__ == "__main__":
@@ -477,8 +666,12 @@ if __name__ == "__main__":
     actualite(nums)
     flux(nums)
     arts = wiki()
+    w = lire_wiki()
     mises_a_jour()
     examens()
     legales()
-    plan(nums, arts)
+    a_propos()
+    page_404()
+    llms(nums, w)
+    plan(nums, arts, iso_fr(w["verifie"]))
     print(f"Site généré dans docs/ : {len(nums)} numéro(s) de l'Actualité VTC.")

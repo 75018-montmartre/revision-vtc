@@ -55,3 +55,13 @@ Rubriques possibles, dans cet ordre : « Textes officiels », « Examen », « R
 ## Accès aux examens blancs
 
 Réservé aux lecteurs : le site demande le dernier mot du titre de la fiche G2.6 (page 160). Seule l'empreinte SHA-256 de la réponse est dans `docs/js/acces.js`.
+
+## Référencement (SEO) et citations par les assistants d'IA (GEO)
+
+Tout est automatique : `outils/generer.py` ajoute à chaque page indexable l'adresse canonique, les balises de partage (Open Graph, image `docs/partage.jpg`) et les données structurées schema.org (livre, articles du wiki rattachés au texte officiel, numéros de l'Actualité, fil d'Ariane). Il produit aussi `sitemap.xml` (avec dates de mise à jour), `robots.txt` (moteurs et assistants d'IA explicitement autorisés), `llms.txt` (plan du site pour les IA) et `llms-full.txt` (tout le wiki en texte brut, avec ses sources).
+
+Règles pour tout nouveau contenu :
+- chaque page a un titre unique et une description de 50 caractères au moins (le générateur s'arrête sinon) ;
+- une idée par paragraphe, la réponse d'abord, puis le détail : c'est ce que reprennent les moteurs et les assistants ;
+- chiffres exacts, avec leur unité, leur date et leur source ;
+- relier les brèves aux pages du wiki concernées.

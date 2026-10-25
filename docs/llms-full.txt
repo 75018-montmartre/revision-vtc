@@ -1,0 +1,1616 @@
+# Réglementation VTC expliquée · revision-vtc.fr
+
+Textes officiels recopiés de Légifrance, version en vigueur au 25 octobre 2026 (Licence Ouverte 2.0). Explications « En clair » et « Concrètement » publiées sous la responsabilité de Benjamin Blondin. Seule la version publiée sur Légifrance fait foi.
+
+## Le cadre du métier
+
+### Article L3120-1 du Code des transports : Le champ du transport public particulier (T3P)
+
+Page : https://revision-vtc.fr/wiki/l3120-1.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000029530535
+
+En clair : Cet article délimite le T3P : le transport de personnes payant, avec un véhicule de moins de dix places. Les bus et cars (transport collectif) et le transport privé en sont exclus.
+
+Concrètement : Un VTC, un taxi ou une moto-taxi entrent dans ce cadre ; un minibus de 12 places ou une navette d'entreprise gratuite, non.
+
+Texte officiel :
+
+Le présent titre est applicable aux prestations de transport routier de personnes effectuées à titre onéreux avec des véhicules de moins de dix places, à l'exclusion des transports publics collectifs mentionnés au titre Ier de la présente partie et du transport privé routier de personnes mentionné au titre III.
+
+En vigueur depuis le 03 octobre 2014.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.1 (Les quatre familles du T3P) ; fiche A1.3 (Ce qui n'est pas du T3P).
+
+### Article R3120-1 du Code des transports : Qui fait du T3P : taxis, VTC et deux-roues
+
+Page : https://revision-vtc.fr/wiki/r3120-1.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048391
+
+En clair : Le T3P est exercé par trois professions : les taxis, les voitures de transport avec chauffeur et les véhicules motorisés à deux ou trois roues. Le transport peut concerner autant de personnes qu'il y a de places dans le véhicule, toujours contre paiement.
+
+Concrètement : Une berline VTC de 5 places peut prendre 4 passagers pour la même course.
+
+Texte officiel :
+
+Les prestations de transports publics particuliers sont des prestations de transport public routier de personnes qui ne relèvent ni des transports publics collectifs régis par le titre Ier du présent livre, ni du transport privé routier de personnes régi par le titre III du même livre.
+Ces prestations peuvent être proposées à autant de personnes que de places disponibles dans le véhicule. Elles sont exécutées, à titre onéreux, dans les conditions fixées au présent titre, par les taxis, les voitures de transport avec chauffeur et les véhicules motorisés à deux ou trois roues.
+
+En vigueur depuis le 01 janvier 2015.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.1 (Les quatre familles du T3P).
+
+### Article L3120-5 du Code des transports : Les véhicules électriques et hybrides
+
+Page : https://revision-vtc.fr/wiki/l3120-5.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000029530543
+
+En clair : Les véhicules électriques ou hybrides peuvent servir de VTC même s'ils ne respectent pas les critères techniques fixés par les textes (dimensions, puissance, âge).
+
+Concrètement : Une petite citadine hybride, trop courte pour les critères classiques, peut être utilisée comme VTC.
+
+Texte officiel :
+
+Les prestations de transport mentionnées à l'article L. 3120-1 peuvent être effectuées avec des véhicules électriques ou hybrides, par dérogation aux caractéristiques techniques imposées par voie réglementaire en application du présent titre.
+
+En vigueur depuis le 03 octobre 2014.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche G2.3 (Hybrides et électriques ; le verdissement des flottes).
+
+### Article L3120-7 du Code des transports : La base de données nationale du T3P
+
+Page : https://revision-vtc.fr/wiki/l3120-7.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039677691
+
+En clair : Une base nationale recense les conducteurs, les exploitants et les véhicules du T3P, et les démarches de la profession se font en ligne. Les autorités de contrôle peuvent y accéder.
+
+Concrètement : Lors d'un contrôle, l'agent peut vérifier en direct votre carte et l'inscription de votre véhicule.
+
+Texte officiel :
+
+Une base de données nationale sur le transport public particulier de personnes recense les informations relatives aux conducteurs, aux exploitants et aux véhicules.
+Les procédures relatives à l'exercice des professions du transport public particulier de personnes sont dématérialisées. (1)
+Les autorités administratives et judiciaires peuvent avoir accès aux données nécessaires à l'exercice de leurs missions de contrôle des règles de la police de la circulation.
+Un décret en Conseil d'Etat pris après avis de la Commission nationale de l'informatique et des libertés détermine les modalités d'application du présent article.
+
+En vigueur depuis le 27 décembre 2019.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.5 (Qui fait quoi).
+
+### Article L3122-1 du Code des transports : Ce qu'est un exploitant de VTC
+
+Page : https://revision-vtc.fr/wiki/l3122-1.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033745479
+
+En clair : Le chapitre sur les VTC s'applique aux exploitants qui mettent à disposition de leurs clients une ou plusieurs voitures avec chauffeur, à des conditions fixées à l'avance entre les parties.
+
+Concrètement : Le prix et les conditions de la course sont convenus avant la prise en charge, jamais au compteur comme un taxi.
+
+Texte officiel :
+
+Le présent chapitre s'applique aux exploitants qui mettent à la disposition de leur clientèle une ou plusieurs voitures de transport avec chauffeur, dans des conditions fixées à l'avance entre les parties.
+Les modalités d'application du présent chapitre sont définies par décret en Conseil d'Etat.
+
+En vigueur depuis le 31 décembre 2016.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.2 (Taxi ou VTC : ce qui les sépare) ; fiche G1.1 (Exploitant et conducteur : deux qualités distinctes).
+
+### Article L3122-4-1 du Code des transports : Le label de qualité des VTC
+
+Page : https://revision-vtc.fr/wiki/l3122-4-1.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033738019
+
+En clair : Un label peut être attribué aux exploitants de VTC qui offrent des prestations répondant à des normes de qualité particulières. Ses critères sont fixés par arrêté des ministres des transports et du tourisme.
+
+Concrètement : Ce label est facultatif : il ne conditionne pas le droit d'exercer.
+
+Texte officiel :
+
+Un label peut être attribué aux exploitants de voitures de transport avec chauffeur mentionnés à l'article L. 3122-1 qui offrent aux passagers des prestations répondant à des normes de qualité particulières.
+Les critères et les modalités d'attribution du label sont définis par un arrêté conjoint des ministres chargés des transports et du tourisme.
+
+En vigueur depuis le 31 décembre 2016.
+
+## Devenir et rester conducteur
+
+### Article L3120-2-1 du Code des transports : Aptitude et honorabilité : les deux conditions
+
+Page : https://revision-vtc.fr/wiki/l3120-2-1.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039784444
+
+En clair : Tout conducteur de T3P doit remplir des conditions d'aptitude professionnelle (l'examen) et d'honorabilité (un casier compatible), précisées par décret.
+
+Concrètement : Réussir l'examen ne suffit pas : une condamnation incompatible empêche d'obtenir la carte (voir R3120-8).
+
+Texte officiel :
+
+Les conducteurs des véhicules qui exécutent les prestations mentionnées à l'article L. 3120-1 répondent, dans des conditions définies par décret en Conseil d'Etat, à des conditions d'aptitude professionnelle, à l'exclusion des conducteurs de cycles à pédalage assisté, et à des conditions d'honorabilité professionnelle.
+
+En vigueur depuis le 27 décembre 2019.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A2.1 (Les conditions d'accès à la profession) ; fiche A2.2 (Honorabilité et bulletin n° 2).
+
+### Article L3120-2-2 du Code des transports : La carte professionnelle obligatoire
+
+Page : https://revision-vtc.fr/wiki/l3120-2-2.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039784441
+
+En clair : Tout conducteur de taxi, de VTC ou de deux-roues motorisé doit être titulaire d'une carte professionnelle délivrée par l'administration.
+
+Concrètement : Conduire un client sans carte est un délit (voir L3124-12).
+
+Texte officiel :
+
+Les conducteurs des véhicules qui exécutent les prestations mentionnées à l'article L. 3120-1, à l'exclusion des conducteurs de cycles à pédalage assisté, sont titulaires d'une carte professionnelle délivrée par l'autorité administrative.
+
+En vigueur depuis le 27 décembre 2019.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A2.6 (La carte professionnelle au quotidien).
+
+### Article R3120-6 du Code des transports : La carte professionnelle : conditions, délai, affichage
+
+Page : https://revision-vtc.fr/wiki/r3120-6.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054659832
+
+En clair : La carte est délivrée à celui qui a un permis hors période probatoire, a réussi l'examen (ou fait reconnaître une qualification européenne) et remplit la condition d'honorabilité. La préfecture la remet dans un délai maximum de trois mois. Pendant le travail, elle est apposée sur le pare-brise, photo visible de l'extérieur.
+
+Concrètement : Le chauffeur qui arrête définitivement son activité rend sa carte ; s'il ne le fait pas, elle lui est retirée.
+
+Texte officiel :
+
+Lorsque le conducteur d'un véhicule de transport public particulier utilise ce dernier à titre professionnel, il appose sa carte professionnelle sur le pare-brise ou, à défaut, sur le véhicule de telle façon que la photographie soit facilement visible de l'extérieur. Cette carte comporte les informations fixées par un arrêté du ministre chargé des transports.
+La carte professionnelle, ou son équivalent pour les conducteurs relevant de l'article R. 3120-8-1, est délivrée à toute personne souhaitant exercer la profession de conducteur d'un véhicule de transport public particulier qui :
+1° Est titulaire d'un permis de conduire autorisant la conduite du véhicule utilisé et pour lequel, selon le cas, le délai prévu au 3° de l'article L. 3123-1 du présent code ou le délai probatoire prévu à l'article L. 223-1 du code de la route est expiré lors de l'entrée initiale dans la profession ou, pour une personne relevant de l'article R. 3120-8-1, est titulaire d'un permis qui lui a été délivré depuis plus de trois ans à la date du dépôt de la demande prévue à cet article ;
+2° Satisfait à une condition d'aptitude professionnelle conformément, selon le cas, soit à l'article R. 3120-7, soit à l'article R. 3120-8-1 ;
+3° Satisfait à une condition d'honorabilité professionnelle conformément à l'article R. 3120-8 ou, pour les conducteurs relevant de l'article R. 3120-8-1, justifie de garanties d'honorabilité équivalentes.
+L'autorité administrative compétente remet la carte professionnelle dans un délai maximum de trois mois suivant la date de la demande. A l'appui de sa demande, le conducteur fournit les documents justificatifs fixés par un arrêté du ministre chargé des transports.
+Le conducteur restitue sa carte professionnelle lorsqu'il cesse définitivement son activité professionnelle. A défaut d'avoir été restituée, elle lui est retirée par l'autorité administrative.
+Il la restitue également lorsque l'une des conditions auxquelles sa délivrance est subordonnée par les dispositions du présent titre cesse d'être remplie. A défaut de restitution, elle lui est retirée après qu'il a été mis à même de présenter ses observations écrites sur la décision de retrait envisagée par l'autorité compétente.
+
+En vigueur depuis le 12 août 2026.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A2.1 (Les conditions d'accès à la profession) ; fiche A2.6 (La carte professionnelle au quotidien).
+
+### Article R3120-7 du Code des transports : L'examen d'accès à la profession
+
+Page : https://revision-vtc.fr/wiki/r3120-7.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043177694
+
+En clair : L'aptitude est constatée par un examen propre à chaque profession : des épreuves écrites d'admissibilité puis une épreuve pratique d'admission. On ne peut pas s'y inscrire après un retrait définitif de carte de moins de dix ans, une exclusion pour fraude de moins de cinq ans, ou avec un permis encore probatoire.
+
+Concrètement : Un candidat dont le permis est en période probatoire doit attendre la fin de celle-ci pour s'inscrire.
+
+Texte officiel :
+
+Le respect de la condition d'aptitude professionnelle mentionnée à l'article L. 3120-2-1 est constaté par la réussite à un examen, propre à chacune des professions du transport public particulier de personnes. Cet examen comprend des épreuves écrites d'admissibilité et une épreuve pratique d'admission dont le programme et les épreuves sont définis par un arrêté du ministre chargé des transports et du ministre chargé de l'économie.
+Il est organisé dans les conditions prévues par les articles 24 à 24-4 et par le II de l'article 26 du code de l'artisanat. Le contenu et la difficulté des sujets des épreuves écrites d'admissibilité et des épreuves d'admission revêtent un caractère adéquat et proportionné à l'appréciation de la condition d'aptitude professionnelle mentionnée à l'article L. 3120-2-1 du code des transports qui consiste à être en capacité d'assurer dans des conditions de confort et de sécurité le transport de passagers, dans le respect des règles applicables à sa profession et à être en capacité d'informer de manière claire les passagers sur la facturation des courses. Le ministre chargé des transports et le ministre chargé de l'économie peuvent adresser à cette fin des instructions aux personnes participant à l'évaluation des candidats.
+Nul ne peut s'inscrire à ces examens si :
+1° Il a fait l'objet, dans les dix ans qui précèdent sa demande, d'un retrait définitif de sa carte professionnelle en application de l'article L. 3124-11 ;
+2° Il a fait l'objet, dans les cinq ans qui précèdent sa demande, d'une exclusion pour fraude lors d'une session à l'un des examens des professions du transport public particulier de personnes ;
+3° Le délai probatoire applicable à son permis en vertu de l'article L. 223-1 du code de la route n'est pas expiré ou, le cas échéant, si la condition d'ancienneté prévue au 3° de l'article L. 3123-1 du présent code n'est pas remplie.
+
+En vigueur depuis le 25 février 2021.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A2.4 (L'examen, seule porte d'entrée).
+
+### Article R3120-8 du Code des transports : L'honorabilité : les condamnations qui interdisent d'exercer
+
+Page : https://revision-vtc.fr/wiki/r3120-8.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389382
+
+En clair : On ne peut pas être conducteur si le bulletin n° 2 du casier judiciaire porte certaines condamnations : un délit routier sanctionné par la perte de la moitié des points, une conduite sans permis ou malgré une annulation, ou au moins six mois de prison pour vol, escroquerie, abus de confiance, violences volontaires, agression sexuelle, trafic d'armes ou de stupéfiants, extorsion.
+
+Concrètement : Une condamnation pour conduite après annulation du permis ferme l'accès à la profession.
+
+Texte officiel :
+
+Nul ne peut exercer la profession de conducteur de véhicule de transport public particulier si figure au bulletin n° 2 de son casier judiciaire, ou à son équivalent pour les non-nationaux, l'une des condamnations suivantes :
+1° Une condamnation définitive pour un délit sanctionné en vertu du code de la route par une réduction de la moitié du nombre maximal de points du permis de conduire ;
+2° Une condamnation définitive pour conduite d'un véhicule sans être titulaire du permis de conduire correspondant à la catégorie du véhicule utilisé ou pour conduite malgré l'annulation du permis de conduire ou malgré l'interdiction d'obtenir la délivrance du permis, ou encore pour refus de restituer son permis de conduire après l'invalidation ou l'annulation de celui-ci ;
+3° Une condamnation définitive prononcée par une juridiction, française ou étrangère, à une peine criminelle ou à une peine correctionnelle d'au moins six mois d'emprisonnement pour vol, escroquerie, abus de confiance, atteinte volontaire à l'intégrité de la personne, agression sexuelle , trafic d'armes, extorsion de fonds ou infraction à la législation sur les stupéfiants.
+
+En vigueur depuis le 08 avril 2017.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A2.2 (Honorabilité et bulletin n° 2).
+
+### Article R3120-8-1 du Code des transports : Les conducteurs venant d'un autre pays européen
+
+Page : https://revision-vtc.fr/wiki/r3120-8-1.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054659821
+
+En clair : Un ressortissant de l'Union européenne ou de l'EEE peut faire reconnaître son aptitude par un titre de formation de son pays ou par un an d'expérience au cours des dix dernières années. Le préfet peut exiger une épreuve d'aptitude ou un stage d'adaptation, et contrôler le niveau de français.
+
+Concrètement : Pour un conducteur VTC, c'est le préfet du département de domicile qui constate l'aptitude (le préfet de police à Paris).
+
+Texte officiel :
+
+I.-Les conducteurs, ressortissants d'un Etat membre de l'Union européenne ou d'un Etat partie à l'Espace économique européen, qui souhaitent exercer de manière durable leur profession sur le territoire national, peuvent justifier de leur aptitude professionnelle de conducteur pour exécuter les prestations mentionnées à l'article L. 3120-1 :
+1° Soit par la production d'une attestation de compétences ou d'un titre de formation délivré par l'autorité compétente d'un de ces Etats lorsqu'une telle attestation ou un tel titre est exigé pour exécuter ces prestations ;
+2° Soit par la production de toute pièce de nature à établir une expérience professionnelle dans l'exercice de cette profession d'une durée minimale d'un an à temps plein, ou à temps partiel pour une durée équivalente, au cours des dix dernières années.
+II.-L'aptitude professionnelle est constatée :
+1° Pour les demandeurs souhaitant exercer une activité de conducteur de taxi, par le préfet du département dans lequel le demandeur souhaite exercer son activité ou par le préfet de police dans sa zone de compétence ;
+2° Pour les demandeurs souhaitant exercer une activité de conducteur de voiture de transport avec chauffeur ou de conducteur de véhicules à deux ou trois roues motorisé, par le préfet du département de leur domiciliation ou par le préfet de police dans sa zone de compétence.
+III.-Le préfet de département ou le préfet de police dans sa zone de compétence peut soumettre le demandeur à l'obligation, au choix de ce dernier, de passer avec succès une épreuve d'aptitude ou de suivre un stage d'adaptation lorsque les compétences qu'il a acquises au cours de son expérience professionnelle ou au moyen de la formation qu'il a reçue dans son Etat d'origine ne couvrent pas, en ce qui concerne les matières essentielles à l'exercice de son activité, la différence constatée entre, d'une part, la formation reçue dans son Etat d'origine et, d'autre part, les compétences validées par l'examen prévu à l'article R. 3120-7.
+IV.-Les personnes mentionnées au I doivent disposer d'un niveau en langue française suffisant pour exercer la profession souhaitée. Le préfet du département ou, dans sa zone de compétence, le préfet de police, peut organiser un contrôle de ce niveau de connaissance après la reconnaissance des qualifications professionnelles et s'il existe un doute sérieux et concret sur le niveau suffisant des connaissances linguistiques du professionnel au regard des activités qu'il entend exercer.
+V.-Les modalités d'application du présent article, notamment le contenu des mesures de compensation prévues au III et du contrôle linguistique prévu au IV, ainsi que les modalités selon lesquelles le préfet ou le préfet de police établit un rapport annuel rendant compte de son activité en matière de reconnaissance des qualifications professionnelles, sont précisées par arrêté du ministre chargé des transports.
+
+En vigueur depuis le 12 août 2026.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A2.4 (L'examen, seule porte d'entrée).
+
+### Article R3120-8-2 du Code des transports : La formation continue tous les cinq ans
+
+Page : https://revision-vtc.fr/wiki/r3120-8-2.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034380984
+
+En clair : Tout conducteur suit tous les cinq ans un stage de formation continue dans un centre agréé. Il reçoit une attestation valable cinq ans, nécessaire au renouvellement de la carte.
+
+Concrètement : Le contenu du stage (14 heures) est fixé par l'arrêté du 11 août 2017.
+
+Texte officiel :
+
+Tout conducteur exécutant des prestations mentionnées à l'article L. 3120-1 est tenu de suivre, tous les cinq ans, un stage de formation continue dispensé par un centre de formation agréé conformément à l'article R. 3120-9. Le contenu de cette formation est défini par un arrêté du ministre chargé des transports et du ministre chargé de l'économie. L'accomplissement de cette obligation est sanctionné par la délivrance d'une attestation valable cinq ans.
+
+En vigueur depuis le 08 avril 2017.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A2.7 (La formation continue obligatoire).
+
+### Article R3120-9 du Code des transports : Les centres de formation agréés
+
+Page : https://revision-vtc.fr/wiki/r3120-9.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389387
+
+En clair : Un centre qui forme les conducteurs (formation initiale ou continue) doit être agréé par le préfet, pour cinq ans. L'agrément peut être suspendu jusqu'à six mois ou retiré si les conditions ne sont plus remplies.
+
+Concrètement : Avant de payer une formation, vérifiez que le centre figure sur la liste des centres agréés de la préfecture.
+
+Texte officiel :
+
+L'exploitation d'un centre de formation en vue de la formation, initiale ou continue, des conducteurs des véhicules de transport public particulier est subordonnée à la délivrance d'un agrément par le préfet du département où est situé le centre de formation, ou, s'il est situé dans la commune de Paris, le préfet de police. Cet agrément est valable cinq ans.
+La procédure d'instruction des demandes et les conditions de délivrance de cet agrément sont définies par un arrêté du ministre chargé des transports, notamment en ce qui concerne les clauses obligatoires du règlement intérieur de l'établissement, les exigences minimales concernant la qualification des formateurs, les locaux, les matériels et véhicules utilisés, ainsi que le programme et le contenu des formations.
+L'agrément peut être suspendu pour une durée maximale de six mois ou retiré par l'autorité administrative qui l'a délivré lorsque l'une des conditions auxquelles sa délivrance est subordonnée cesse d'être remplie.
+La suspension ou le retrait de l'agrément sont décidés après que le gestionnaire du centre de formation, préalablement informé des griefs susceptibles d'être retenus contre lui, a été mis à même de présenter ses observations écrites et, le cas échéant, sur sa demande, des observations orales. Il peut se faire assister par un conseil ou se faire représenter par le mandataire de son choix. La décision de suspension ou de retrait de l'agrément est notifiée au représentant légal du centre de formation.
+L'agrément ne peut être délivré aux personnes qui ont fait l'objet d'une condamnation prononcée par une juridiction, française ou étrangère, à une peine criminelle ou à une peine correctionnelle pour l'une des infractions sanctionnées à l'article R. 212-4 du code de la route.
+
+En vigueur depuis le 08 avril 2017.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A2.7 (La formation continue obligatoire).
+
+### Article D3120-5 du Code des transports : La visite médicale
+
+Page : https://revision-vtc.fr/wiki/d3120-5.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048401
+
+En clair : Les règles de la visite médicale périodique des conducteurs de T3P sont celles du Code de la route, aux articles R. 221-10 et R. 221-11.
+
+Concrètement : Un avis médical en cours de validité est exigé pour obtenir et renouveler la carte.
+
+Texte officiel :
+
+Les règles relatives à la visite médicale périodique des conducteurs de véhicules de transport public particulier sont fixées par les articles R. 221-10 et R. 221-11 du code de la route.
+
+En vigueur depuis le 01 janvier 2015.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A2.3 (L'aptitude médicale).
+
+### Article R3122-10 du Code des transports : Qui délivre la carte VTC
+
+Page : https://revision-vtc.fr/wiki/r3122-10.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037661921
+
+En clair : La carte professionnelle de conducteur VTC est délivrée par le préfet du département où le demandeur a élu domicile, ou par le préfet de police s'il habite Paris.
+
+Concrètement : Un chauffeur domicilié à Lyon s'adresse à la préfecture du Rhône.
+
+Texte officiel :
+
+L'autorité administrative compétente pour délivrer la carte professionnelle de conducteur de voiture de transport avec chauffeur, mentionnée à l'article L. 3120-2-2, est le préfet du département dans lequel le demandeur a élu domicile ou, s'il a élu domicile dans la commune de Paris, le préfet de police.
+
+En vigueur depuis le 01 janvier 2019.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A2.6 (La carte professionnelle au quotidien).
+
+### Arrêté du 6 avril 2017 : Programme et notation de l'examen
+
+Page : https://revision-vtc.fr/wiki/arrete-6-avril-2017-examen.html
+Source officielle : https://www.legifrance.gouv.fr/loda/id/JORFTEXT000034379046
+
+En clair : Il fixe les épreuves de l'examen VTC : sept épreuves écrites (A à G) avec leur durée, leur barème et leur coefficient, puis une épreuve pratique notée sur 20. Pour être admissible : 10/20 de moyenne, au moins 6/20 à chaque épreuve sauf l'anglais (4/20).
+
+Concrètement : Un candidat admissible peut se présenter trois fois à l'épreuve pratique dans l'année qui suit ; il faut 12/20 pour être reçu.
+
+Texte officiel :
+
+Article 1.
+L'examen d'accès à la profession de conducteur de taxi et l'examen d'accès à la profession de conducteur de voiture de transport avec chauffeur se composent d'épreuves théoriques d'admissibilité et d'une épreuve pratique d'admission selon les modalités définies au présent arrêté.
+
+Article 2.
+Les épreuves d'admissibilité sont réalisées sous la forme de questions à choix multiples et de questions à réponses courtes. Elles portent sur les matières et les connaissances énumérées dans le référentiel de connaissances figurant en annexe I du présent arrêté.
+I. - Les épreuves d'admissibilité communes aux candidats à l'examen d'accès à la profession de conducteur de taxi et à l'examen d'accès à la profession de conducteur de voiture de transport avec chauffeur sont les suivantes :
+A. - Une épreuve portant sur la réglementation du transport public particulier de personnes et la prévention des discriminations et des violences sexuelles et sexistes, d'une durée de quarante-cinq minutes, notée sur vingt points, affectée d'un coefficient trois.
+Cette épreuve est composée de cinq questions à réponses courtes, notées sur deux points, et de dix questions à choix multiples, notées sur un point.
+B. - Une épreuve portant sur la gestion, d'une durée de quarante-cinq minutes, notée sur vingt points, affectée d'un coefficient deux.
+Cette épreuve est composée de deux questions à réponses courtes, notées sur deux points, et de seize questions à choix multiples, notées sur un point.
+C. - Une épreuve portant sur la sécurité routière, d'une durée de trente minutes, notée sur vingt points, affectée d'un coefficient trois.
+Cette épreuve est composée de vingt questions à choix multiples notées sur un point.
+D. - Une épreuve destinée à évaluer la capacité d'expression et de compréhension en langue française, d'une durée de trente minutes, notée sur vingt points, affectée d'un coefficient deux.
+Cette épreuve est constituée de questions portant sur la compréhension d'un texte de quinze à vingt lignes en lien notamment avec le thème des transports.
+Elle est composée de trois questions à réponses courtes, notées sur deux points et de sept questions à choix multiples notées sur deux points.
+Un point est retiré lorsque le candidat a commis plus de cinq fautes d'orthographe dans la totalité de ses réponses aux questions à réponse courtes.
+E. - Une épreuve destinée à évaluer la capacité d'expression et de compréhension en langue anglaise, à un niveau équivalent au niveau A2 du cadre européen commun de référence pour les langues, d'une durée de trente minutes, notée sur vingt points, affectée d'un coefficient un.
+Cette épreuve est composée de vingt questions à choix multiples notées sur un point.
+II. - Les épreuves spécifiques de l'examen d'accès à la profession de conducteur de taxi et de l'examen d'accès à la profession de conducteur de voiture de transport avec chauffeur sont les suivantes :
+1°Les épreuves spécifiques d'accès à la profession de conducteur de taxi sont les suivantes :
+A. - Une épreuve " F (T) " portant sur la connaissance du territoire et la réglementation locale, d'une durée de vingt minutes, notée sur vingt points, affectée d'un coefficient trois.
+Cette épreuve est composée de deux questions à réponses courtes, notées sur quatre points, et de six questions à choix multiples, notées sur deux points.
+B. - Une épreuve " G (T) " portant sur la réglementation nationale de l'activité taxis ainsi que sur la gestion propre à cette activité d'une durée de trente minutes, notée sur vingt points, affectée d'un coefficient trois.
+Cette épreuve est composée de quatre questions à réponses courtes, notées sur deux points, et de douze questions à choix multiples, notées sur un point.
+2°Les épreuves spécifiques de l'examen d'accès à la profession de conducteur de voiture de transport avec chauffeur sont les suivantes :
+A. - Une épreuve " F (V) " portant sur le développement commercial et la gestion propre à l'activité de voiture de transport avec chauffeur, d'une durée de trente minutes, notée sur vingt points, affectée d'un coefficient trois.
+Cette épreuve est composée de quatre questions à réponses courtes, notées sur deux points, et de douze questions à choix multiples, notées sur un point.
+B. - Une épreuve " G (V) " portant sur la réglementation nationale spécifique de l'activité de voiture de transport avec chauffeur, d'une durée de vingt minutes, notée sur vingt points, affectée d'un coefficient trois.
+Cette épreuve est composée de deux questions à réponses courtes, notées sur quatre points, et de six questions à choix multiples, notées sur deux points.
+III. - Est déclaré admissible à l'examen le candidat qui a obtenu cumulativement :
+- une note moyenne d'au moins dix sur vingt, calculée sur l'ensemble des sept épreuves d'admissibilité pondérées de leurs coefficients respectifs ;
+- une note d'au moins six sur vingt à chacune des épreuves A, B, C, D, F et G ;
+- une note d'au moins quatre sur vingt à l'épreuve E.
+Un candidat déclaré admissible peut se présenter trois fois à l'épreuve d'admission dans un délai d'un an à compter de la publication des résultats des épreuves d'admissibilité.
+
+Article 3.
+I. - L'épreuve d'admission consiste en une mise en situation pratique de réalisation, selon l'examen auquel le candidat postule, d'une course de taxi ou d'une mission de transport en voiture de transport avec chauffeur. Elle a pour objectif d'évaluer la capacité du candidat à assurer, par sa conduite en circulation, la sécurité des passagers et des autres usagers de la route tout en proposant aux clients un service commercial de qualité.
+L'épreuve pratique comprend une phase de conduite en circulation d'une durée minimum de vingt minutes.
+II. - L'épreuve est notée sur vingt points. La notation est effectuée par groupe de compétences selon les modalités suivantes :
+1° Pour l'épreuve pratique de l'examen d'accès à la profession de conducteur de taxi :
+A. - La préparation et la réalisation du parcours. Cette compétence est notée sur deux points ;
+B. - La sécurité et la souplesse de la conduite et le respect du code de la route. Cette compétence est notée sur dix points ;
+C. - La qualité de la prise en charge et de la relation client ainsi que la capacité à apporter des informations à caractère touristique. Cette compétence est notée sur cinq points ;
+D. - La facturation et l'utilisation des équipements spéciaux. Cette compétence est notée sur trois points.
+2° Pour l'épreuve pratique de l'examen d'accès à la profession de conducteur de voiture de transport avec chauffeur :
+A. - La préparation et la réalisation du parcours. Cette compétence est notée sur trois points ;
+B. - La sécurité et la souplesse de la conduite et le respect du code de la route. Cette compétence est notée sur dix points ;
+C. - La qualité de la prise en charge et de la relation client ainsi que la capacité à apporter des informations à caractère touristique. Cette compétence est notée sur cinq points ;
+D. - La facturation. Cette compétence est notée sur deux points.
+III. - Toute intervention de l'examinateur sur le dispositif de double commande ou sur le volant de direction entraîne l'arrêt de l'épreuve et l'ajournement du candidat.
+Le référentiel de compétences de l'épreuve d'admission figure en annexe II du présent arrêté. La grille d'évaluation des candidats pour l'épreuve pratique de l'examen d'accès à la profession de conducteur de taxi figure en annexe III du présent arrêté. La grille d'évaluation des candidats pour l'épreuve pratique de l'examen d'accès à la profession de conducteur de voiture de transport avec chauffeur figure en annexe III bis du présent arrêté.
+IV. - Est déclaré reçu à l'examen le candidat qui a obtenu une note d'au moins douze sur vingt à l'épreuve pratique.
+
+Article 4.
+Le dossier d'inscription des candidats à l'examen comporte les pièces suivantes :
+-une demande d'inscription à l'examen présentée par le candidat qui comprend la date de la session souhaitée ;
+-une photocopie recto-verso de la carte nationale d'identité ou du passeport en cours de validité ;
+-pour les étrangers ressortissants d'un Etat non membre de l'Union européenne, l'autorisation de travail mentionnée au 2° de l'article L. 5221-2 du code du travail ;
+-un justificatif de domicile de moins de trois mois ;
+-une photocopie recto-verso du permis de conduire de la catégorie B ;
+-une photographie d'identité récente ;
+-la signature du candidat ;
+-le paiement des droits d'examen ;
+-pour les candidats mentionnés aux quatre derniers alinéas de l'article 5, une attestation de réussite à l'épreuve d'admissibilité.
+
+Article 5.
+Les candidats s'inscrivent soit à l'examen d'accès à la profession de conducteur de taxi, soit à l'examen d'accès à la profession de conducteur de voiture de transport avec chauffeur et se présentent aux épreuves d'admissibilité et d'admission de l'examen auquel ils se sont inscrits.
+Toutefois, les candidats qui ont été reconnus admissibles à l'un ou l'autre de ces deux examens dans les conditions prévues par le III de l'article 2 du présent arrêté depuis moins de 3 ans sont réputés avoir satisfait aux épreuves communes d'admissibilité énumérées au I de l'article 2 du même arrêté pour se présenter à l'examen d'accès à l'autre profession. Ces candidats doivent se soumettre aux épreuves spécifiques d'admissibilité prévues au II de ce même article.
+Est déclaré admissible à l'examen dans les conditions prévues par le deuxième alinéa du présent article et peut se présenter à l'épreuve pratique d'admission prévue à l'article 3 du présent arrêté, le candidat qui a obtenu cumulativement :
+- une note moyenne d'au moins dix sur vingt, calculée sur les deux épreuves spécifiques prévues au II de l'article 2, pondérées de leurs coefficients respectifs ;
+- une note d'au moins six sur vingt à chacune des épreuves F (T) et G (T) ou F (V) et G (V).
+
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A2.4 (L'examen, seule porte d'entrée).
+
+### Arrêté du 11 août 2017 : La formation continue
+
+Page : https://revision-vtc.fr/wiki/arrete-11-aout-2017-formation-continue.html
+Source officielle : https://www.legifrance.gouv.fr/loda/id/JORFTEXT000035484647
+
+En clair : Il fixe le stage de formation continue : 14 heures en présentiel, fractionnables en quatre périodes sur deux mois au plus, dans un centre agréé, en sessions propres aux VTC, avec trois modules obligatoires (droit du T3P, réglementation VTC, sécurité routière) et un module au choix (anglais, gestion et développement commercial, ou prévention et secours civiques).
+
+Concrètement : À la fin du stage, le centre remet une attestation à joindre au renouvellement de la carte.
+
+Texte officiel :
+
+Article 1.
+La formation continue obligatoire prévue à l'article R. 3120-8-2 du code des transports permet la mise à jour des connaissances essentielles pour la pratique de l'activité de conducteur de taxi ou de conducteur de voiture de transport avec chauffeur. Ce stage comporte quatorze heures de formation, pouvant être fractionnées en quatre périodes de trois heures trente au cours d'une période de deux mois maximum, et est dispensé en présentiel au sein d'un centre de formation agréé en application de l'article R. 3120-9 du code des transports.
+Chaque session de formation est organisée spécifiquement soit pour des conducteurs de taxi, soit pour des conducteurs de voiture de transport avec chauffeur.
+La formation comporte trois modules d'approfondissement obligatoires :
+A.-Droit du transport public particulier de personnes.
+B.-Réglementation spécifique à l'activité taxi ou réglementation spécifique à l'activité de voiture de transport avec chauffeur, selon la profession du conducteur stagiaire.
+C.-Sécurité routière.
+La formation comporte également un module d'approfondissement au choix :
+D.-Anglais.
+E.-Gestion et développement commercial, dont l'utilisation des nouvelles technologies de l'information et de la communication.
+F.-Prévention et secours civiques.
+Le référentiel des connaissances est celui figurant en annexe I de l'arrêté du 6 avril 2017 relatif aux programmes et à l'évaluation des épreuves des examens d'accès aux professions de conducteur de taxi et de conducteur de voiture de transport avec chauffeur pour les modules A, B, C, D, E et celui figurant en annexes 1,2 et 3 de l'arrêté du 24 juillet 2007 fixant le référentiel national de compétences de sécurité civile relatif à l'unité d'enseignement " premiers secours citoyen " pour le module F.
+Les modules d'approfondissement obligatoires A, B, C et le module d'approfondissement au choix D, E ou F sont traités chacun en trois heures trente.
+
+Article 2.
+Le conducteur de taxi titulaire d'une carte professionnelle en cours de validité souhaitant poursuivre l'exercice de son activité dans un autre département que celui dans lequel il a obtenu son examen est tenu de suivre un stage de formation à la mobilité qui comporte quatorze heures de formation, et qui est dispensé en présentiel au sein d'un centre de formation agréé en application de l'article R. 3120-9 du code des transports situé dans le département au sein duquel il souhaite poursuivre son activité.
+Le conducteur de taxi titulaire d'une carte professionnelle en cours de validité souhaitant poursuivre l'exercice de son activité dans la zone des taxis parisiens est tenu de suivre un stage de formation à la mobilité dispensé en présentiel au sein d'un centre de formation agréé en application de l'article R. 3120-9 du code des transports situé dans la zone des taxis parisiens.
+La formation comporte deux modules d'approfondissement obligatoires :
+A. - Connaissance du territoire.
+B. - Réglementation locale.
+Le référentiel des connaissances pour chacun de ces modules est celui figurant en annexe I de l'arrêté du 6 avril 2017 relatif aux programmes et à l'évaluation des épreuves des examens.
+Les modules d'approfondissement obligatoires A et B sont traités chacun, au minimum, en sept heures.
+Par dérogation à la durée du stage mentionnée au premier alinéa du présent article, le conducteur de taxi souhaitant poursuivre l'exercice de son activité dans la zone des taxis parisiens est tenu de suivre un stage de formation à la mobilité d'une durée de trente-cinq heures.
+
+Article 3.
+A l'issue du stage de formation continue, une attestation de suivi de la formation continue, signée et datée par le représentant légal du centre de formation, est remise au conducteur sans délai, sur un support durable au sens du 3° de l'article L. 221-1 du code de la consommation.
+
+Article 4.
+A l'issue du stage de formation à la mobilité, une attestation de suivi de la formation à la mobilité, signée et datée par le représentant légal du centre de formation, est remise sans délai, sur un support durable au sens du 3° de l'article L. 221-1 du code de la consommation, au conducteur, au préfet du département dans lequel le conducteur a obtenu son examen, ou au préfet de police, si le conducteur a obtenu son examen dans la zone des taxis parisiens, et au préfet du département dans lequel le conducteur souhaite exercer son activité ou au préfet de police, si le conducteur souhaite exercer son activité dans la zone des taxis parisiens.
+Une autorisation d'exercice est délivrée sur un support durable au sens du 3° de l'article L. 221-1 du code de la consommation par le préfet du département dans lequel le conducteur souhaite exercer son activité ou par le préfet de police, si le conducteur souhaite exercer son activité dans la zone des taxis parisiens.
+
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A2.7 (La formation continue obligatoire).
+
+## L'exploitant et le registre
+
+### Article L3120-4 du Code des transports : L'assurance responsabilité civile professionnelle
+
+Page : https://revision-vtc.fr/wiki/l3120-4.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033745494
+
+En clair : Toute personne qui fournit des prestations de T3P doit pouvoir justifier à tout moment d'une assurance couvrant sa responsabilité civile professionnelle.
+
+Concrètement : Cette attestation est jointe à la demande d'inscription au registre (R3122-1).
+
+Texte officiel :
+
+Les personnes qui fournissent des prestations mentionnées à l'article L. 3120-1 sont en mesure de justifier à tout moment de l'existence d'un contrat d'assurance couvrant leur responsabilité civile professionnelle.
+
+En vigueur depuis le 31 décembre 2016.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A4.2 (Les deux assurances du chauffeur).
+
+### Article R3120-4 du Code des transports : Le justificatif d'assurance à bord
+
+Page : https://revision-vtc.fr/wiki/r3120-4.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048547741
+
+En clair : Le conducteur doit pouvoir présenter à tout moment aux agents de contrôle le justificatif d'assurance pour le transport de personnes à titre onéreux.
+
+Concrètement : Ne pas le présenter est une contravention de 5e classe (R3124-11).
+
+Texte officiel :
+
+Le conducteur d'un véhicule de transport public particulier est, à tout moment, en mesure de présenter aux agents chargés des contrôles le justificatif d'assurance pour le transport public de personnes à titre onéreux mentionné au III de l'article R. 211-14-0-1 du code des assurances.
+
+En vigueur depuis le 01 avril 2024.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A4.2 (Les deux assurances du chauffeur) ; fiche G4.2 (Présenter ses documents sur-le-champ).
+
+### Article L3122-3 du Code des transports : Le registre des VTC
+
+Page : https://revision-vtc.fr/wiki/l3122-3.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054336017
+
+En clair : Les exploitants de VTC doivent être inscrits sur un registre public, renouvelable tous les cinq ans, contre paiement de frais. L'inscription ne peut pas être prêtée ou louée à un tiers. L'exploitant y déclare ses conducteurs, leur numéro de carte et les immatriculations de ses véhicules.
+
+Concrètement : Exercer sans être inscrit est un délit : trois ans de prison et 45 000 € d'amende (L3124-7).
+
+Texte officiel :
+
+Les exploitants mentionnés à l'article L. 3122-1 sont inscrits sur un registre dont les modalités de gestion sont définies par voie réglementaire. L'inscription sur ce registre est effectuée dès que le dossier d'inscription est complet et qu'il en résulte que l'exploitant remplit les conditions prévues à l'article L. 3122-4, sous réserve du deuxième alinéa de l'article L. 3124-8.
+Cette inscription au registre ne peut être mise à la disposition d'un tiers, à titre gratuit ou onéreux.
+Le registre mentionné au premier alinéa du présent article est public.
+Cette inscription est renouvelable tous les cinq ans. Elle donne lieu à une mise à jour régulière des informations du dossier d'inscription.
+L'inscription est subordonnée au paiement préalable, auprès du gestionnaire du registre mentionné au premier alinéa, de frais dont le montant est fixé par décret. Ces frais sont recouvrés par le gestionnaire du registre. Leur paiement intervient au moment du dépôt de la demande ou de la demande de renouvellement. Le produit résultant du paiement des frais est exclusivement affecté au financement de la gestion des registres.
+Les exploitants déclarent notamment dans le registre le nom des conducteurs employés en application du deuxième alinéa de l'article L. 3122-4, le numéro de la carte professionnelle de ces conducteurs ainsi que les numéros d'immatriculation des véhicules qu'ils exploitent.
+Les modalités d'application du présent article, notamment les conditions dans lesquelles les professionnels mentionnés à l'article L. 3141-1 peuvent accéder aux données du registre pour vérifier les informations relatives aux exploitants, aux conducteurs et aux véhicules auxquels ils ont recours et le contenu du dossier d'inscription, sont définies par voie réglementaire.
+
+En vigueur depuis le 27 juin 2026.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche G1.2 (S'inscrire au registre des VTC) ; fiche G1.5 (Prêter ou louer son inscription).
+
+### Article L3122-4 du Code des transports : Les obligations de l'exploitant
+
+Page : https://revision-vtc.fr/wiki/l3122-4.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039784161
+
+En clair : L'exploitant dispose d'une ou plusieurs voitures conformes aux conditions techniques et de confort, emploie des conducteurs titulaires de la carte et justifie de capacités financières.
+
+Concrètement : Les véhicules de collection et ceux adaptés aux personnes à mobilité réduite échappent aux conditions techniques.
+
+Texte officiel :
+
+Les exploitants disposent d'une ou de plusieurs voitures de transport avec chauffeur. A l'exception des véhicules qui contribuent à la préservation du patrimoine automobile dont ceux disposant d'un certificat d'immatriculation comportant la mention d'usage de collection et des véhicules spécialement adaptés aux personnes à mobilité réduite, ces véhicules doivent répondre à des conditions techniques et de confort définies par voie réglementaire.
+Les exploitants emploient un ou plusieurs conducteurs répondant aux conditions prévues à l'article L. 3120-2-2.
+Ils justifient de capacités financières définies par le décret en Conseil d'Etat mentionné à l'article L. 3122-1.
+
+En vigueur depuis le 27 décembre 2019.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche G1.1 (Exploitant et conducteur : deux qualités distinctes) ; fiche G1.3 (La capacité financière de l'exploitant).
+
+### Article R3122-1 du Code des transports : La demande d'inscription au registre
+
+Page : https://revision-vtc.fr/wiki/r3122-1.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389523
+
+En clair : La demande se fait en ligne, avec l'attestation d'assurance RC professionnelle et le justificatif d'immatriculation de l'entreprise. Le dossier contient la preuve de capacité financière, la carte grise de chaque véhicule et la carte professionnelle de chaque conducteur. Tout changement est signalé dans les quinze jours.
+
+Concrètement : Un véhicule de remplacement peut être utilisé exceptionnellement, au plus un mois, à condition de le déclarer au gestionnaire du registre.
+
+Texte officiel :
+
+I.-La demande d'inscription au registre des voitures de transport avec chauffeur prévu à l'article L. 3122-3 est adressée au gestionnaire par voie électronique. Elle est accompagnée d'une attestation de l'assurance, couvrant la responsabilité civile professionnelle, mentionnée à l'article L. 3120-4 et,, d'une copie du justificatif d'immatriculation de l'entreprise à jour.
+Lorsque la demande d'inscription est formée par une personne physique, elle mentionne l'état civil, la profession et le domicile du demandeur ainsi que l'adresse de son principal établissement.
+Lorsque la demande d'inscription est présentée au nom d'une personne morale, elle mentionne sa dénomination sociale, sa forme juridique, son adresse, son lieu d'établissement, ainsi que l'état civil et le domicile du ou de ses représentants légaux, seuls habilités à présenter la demande.
+II.-Le dossier d'inscription est composé :
+1° D'un justificatif de la capacité financière mentionnée à l'article L. 3122-4 ;
+2° Pour chaque voiture de transport avec chauffeur, d'une copie du certificat d'immatriculation mentionné au I de l'article R. 322-1 du code de la route ;
+3° Pour chaque conducteur, d'une copie de la carte professionnelle mentionnée à l'article L. 3120-2-2.
+Sous réserve du III ci-dessous, les exploitants inscrits au registre sont tenus de porter à la connaissance du gestionnaire, dans un délai maximum de quinze jours francs et par voie électronique, tout changement relatif aux informations mentionnées aux I et II afin que le gestionnaire procède à sa mise à jour.
+III.-Les exploitants peuvent avoir recours, à titre exceptionnel, à des véhicules supplémentaires en cas d'impossibilité matérielle d'utiliser les véhicules inscrits au registre. Ils sont, dans ce cas, tenus d'envoyer au gestionnaire du registre, selon le même mode, le certificat mentionné au 2° du II assorti de la période correspondant à ce recours exceptionnel, dont la durée ne peut excéder un mois.
+Ils peuvent également avoir recours, à titre exceptionnel, à des véhicules ou à des conducteurs dans le cadre de manifestations commerciales, sportives, culturelles, éducatives ou politiques ou d'événements précis justifiant un tel recours. Ils sont, dans ce cas, tenus d'envoyer préalablement au gestionnaire du registre, selon le même mode, les documents mentionnés aux 2° et 3° du II assortis de la période correspondant à ce recours exceptionnel, dont la durée ne peut excéder un mois.
+Les informations transmises en application des deux alinéas précédents ne sont pas prises en compte pour la mise à jour du registre.
+
+En vigueur depuis le 01 juillet 2017.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche G1.2 (S'inscrire au registre des VTC) ; fiche G1.4 (Déclarer ses conducteurs et ses véhicules) ; fiche G2.5 (Remplacer son véhicule).
+
+### Article R3122-2 du Code des transports : Délai d'inscription et renouvellement
+
+Page : https://revision-vtc.fr/wiki/r3122-2.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389532
+
+En clair : L'inscription intervient dans les deux mois suivant l'envoi du dossier complet et le paiement des frais. Elle peut être refusée si le dossier est incomplet, après une mise en demeure. Le renouvellement se demande au moins trois mois avant la fin de validité.
+
+Concrètement : Une inscription qui expire en juin se renouvelle au plus tard en mars.
+
+Texte officiel :
+
+L'inscription au registre des voitures de transport avec chauffeur est effectuée dans un délai de deux mois à compter de l'envoi du dossier complet d'inscription par l'exploitant sous réserve de la transmission au gestionnaire du registre du récépissé de paiement des frais d'inscription prévus au quatrième alinéa de l'article L. 3122-3. Elle donne lieu à l'envoi d'une attestation d'inscription à l'exploitant.
+L'inscription est refusée si le dossier est incomplet ou si les documents communiqués ne justifient pas de l'accomplissement par l'exploitant des obligations mentionnées au premier alinéa de l'article L. 3122-4. Ce refus intervient après qu'une mise en demeure, invitant l'exploitant à compléter le dossier d'inscription, est restée sans effet. Le refus d'inscription, qui est motivé, ainsi que la mise en demeure sont notifiés à l'exploitant par tout moyen permettant d'en accuser réception.
+A la demande du titulaire formée au moins trois mois avant le terme de la durée de validité de l'inscription au registre, l'autorité compétente renouvelle l'inscription avant ce terme, sauf si l'une des conditions auxquelles est soumise sa délivrance n'est pas remplie.
+
+En vigueur depuis le 01 juillet 2017.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche G1.2 (S'inscrire au registre des VTC).
+
+### Article R3122-3 du Code des transports : Les frais d'inscription au registre
+
+Page : https://revision-vtc.fr/wiki/r3122-3.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048487
+
+En clair : Les frais d'inscription sont fixés par arrêté, dans la limite de 250 € par exploitant.
+
+Concrètement : Le montant exact en vigueur est celui fixé par l'arrêté ; le décret ne fixe qu'un plafond.
+
+Texte officiel :
+
+Les frais d'inscription prévus au quatrième alinéa de l'article L. 3122-3 sont fixés par arrêté conjoint des ministres chargés, respectivement, du budget et des transports dans la limite de 250 euros par exploitant.
+
+En vigueur depuis le 01 janvier 2015.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche G1.2 (S'inscrire au registre des VTC).
+
+### Article R3122-4 du Code des transports : La radiation du registre
+
+Page : https://revision-vtc.fr/wiki/r3122-4.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038954621
+
+En clair : L'exploitant est radié s'il ne remplit plus une condition d'inscription (par exemple s'il prête son inscription) ou s'il cesse son activité. La radiation intervient après une mise en demeure restée sans effet.
+
+Concrètement : Prêter son numéro d'inscription à un autre chauffeur entraîne la radiation.
+
+Texte officiel :
+
+Les exploitants sont radiés du registre des voitures de transport avec chauffeur :
+-lorsque cesse d'être remplie l'une des conditions requises lors de leur inscription à ce registre, notamment lorsque l'exploitant met à disposition d'un tiers, à titre onéreux ou non, l'inscription au registre mentionnée à l'article L. 3122-3 qu'il a obtenue pour son propre compte ;
+-lorsque, pour quelque motif que ce soit, l'exploitant cesse son activité de transport avec des véhicules de transport avec chauffeur.
+La radiation ne peut être prononcée qu'après une mise en demeure demeurée sans effet. La décision de radiation, qui est motivée, ainsi que la mise en demeure sont notifiées à l'exploitant par tout moyen permettant d'en accuser réception. Toutefois, la mise en demeure préalable est remplacée par une information préalable, lorsque la radiation est prononcée à la demande de l'exploitant ou lorsque le gestionnaire du registre a constaté que l'exploitant a cessé son activité.
+
+En vigueur depuis le 24 août 2019.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche G1.6 (Changer de structure, cesser, être radié).
+
+### Article R*3122-5 du Code des transports : Qui gère le registre
+
+Page : https://revision-vtc.fr/wiki/r3122-5.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043154015
+
+En clair : Le préfet de la région Île-de-France gère le registre des VTC pour toute la France.
+
+Concrètement : Où que vous soyez installé, l'inscription se fait auprès du même gestionnaire national.
+
+Texte officiel :
+
+Le préfet de la région d'Ile-de-France est compétent sur l'ensemble du territoire national pour assurer la gestion du registre des voitures de transport avec chauffeur mentionné à l'article L. 3122-3.
+
+En vigueur depuis le 01 mars 2021.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche G1.2 (S'inscrire au registre des VTC).
+
+### Article R3122-5-1 du Code des transports : Le rôle du gestionnaire du registre
+
+Page : https://revision-vtc.fr/wiki/r3122-5-1.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043152476
+
+En clair : Le gestionnaire instruit les dossiers, tient le registre, envoie les attestations, mises en demeure et décisions, et fait publier la liste des exploitants inscrits sur le site du ministère des transports.
+
+Concrètement : La liste des exploitants inscrits est publique et consultable en ligne.
+
+Texte officiel :
+
+La gestion de ce registre consiste, d'une part, à assurer l'instruction des dossiers, la tenue du registre, l'envoi à l'exploitant, dès l'inscription ou son renouvellement, des attestations d'inscription ainsi que des notifications, des mises en demeure, des décisions de refus et de radiation prévues à la présente section, et, d'autre part, à s'assurer de la publication, sur le site internet du ministère chargé des transports, de la liste de l'ensemble des exploitants inscrits.
+
+En vigueur depuis le 01 mars 2021.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche G1.2 (S'inscrire au registre des VTC).
+
+### Article R3122-9 du Code des transports : La capacité financière
+
+Page : https://revision-vtc.fr/wiki/r3122-9.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389540
+
+En clair : Pour chaque véhicule utilisé régulièrement, l'exploitant prouve qu'il en est propriétaire, qu'il le loue pour au moins six mois, ou qu'il dispose d'une garantie financière de 1 500 € par véhicule, sauf si cette capacité a déjà été justifiée pour ce véhicule à un autre titre.
+
+Concrètement : Une location longue durée de 36 mois suffit à justifier la capacité financière pour ce véhicule.
+
+Texte officiel :
+
+La condition de capacités financières prévue à l'article L. 3122-4 est satisfaite lorsque l'exploitant de voitures de transport avec chauffeur, pour chaque véhicule utilisé de façon régulière, démontre :
+-soit qu'il est propriétaire du véhicule ;-soit qu'il justifie d'un contrat de location d'une durée d'au moins six mois ;-soit qu'il présente une garantie financière, d'un montant égal à 1 500 euros par véhicule, accordée soit par un ou plusieurs organismes financiers agréés par l'Autorité de contrôle prudentiel et de résolution se portant caution de l'entreprise pour le montant exigible, soit par tout établissement de crédit fournissant des prestations ou disposant de succursales en France conformément aux articles L. 511-22 et L. 511-23 du code monétaire et financier, qui est habilité à fournir ce type de service ;-soit qu'une justification de capacités financières a déjà été produite pour le véhicule conformément à l'un des trois alinéas précédents en application d'autres dispositions, notamment celles de l'article R. 3113-31.
+
+En vigueur depuis le 08 avril 2017.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche G1.3 (La capacité financière de l'exploitant).
+
+## Le véhicule et la vignette
+
+### Article R3122-6 du Code des transports : Le nombre de places et les critères du véhicule
+
+Page : https://revision-vtc.fr/wiki/r3122-6.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389552
+
+En clair : Une VTC compte de 4 à 9 places, conducteur compris. Un arrêté fixe les dimensions, la puissance minimales et l'âge maximal des véhicules, sauf pour les hybrides et électriques.
+
+Concrètement : Les critères chiffrés figurent dans l'arrêté du 26 mars 2015.
+
+Texte officiel :
+
+Les voitures de transport avec chauffeur comportent au moins quatre et au plus neuf places, y compris celle du conducteur.
+Un arrêté du ministre chargé des transports et du ministre chargé de l'économie fixe les dimensions et la puissance minimales ainsi que l'ancienneté maximale des voitures de transport avec chauffeur, autres que les véhicules hybrides et électriques mentionnés à l'article L. 3120-5.
+
+En vigueur depuis le 08 avril 2017.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche G2.2 (Places, portes et âge du véhicule).
+
+### Article R3122-7 du Code des transports : Pas d'équipement de taxi sur un VTC
+
+Page : https://revision-vtc.fr/wiki/r3122-7.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048497
+
+En clair : Il est interdit d'utiliser une VTC munie d'équipements propres aux taxis qui pourraient créer une confusion (lumineux, compteur…).
+
+Concrètement : C'est une contravention de 3e classe (R3124-5).
+
+Texte officiel :
+
+Il est interdit d'utiliser une voiture de transport avec chauffeur qui est munie de tout ou partie des équipements spéciaux définis au I de l'article R. 3121-1 de nature à créer une confusion avec un véhicule de taxi.
+
+En vigueur depuis le 01 janvier 2015.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche G3.2 (Rien qui ressemble à un taxi).
+
+### Article R3122-8 du Code des transports : La vignette VTC
+
+Page : https://revision-vtc.fr/wiki/r3122-8.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389549
+
+En clair : Les VTC portent une signalétique distinctive délivrée par l'Imprimerie nationale. Une signalétique temporaire est prévue en attendant les vignettes définitives.
+
+Concrètement : Rouler sans vignette, ou avec une vignette mal utilisée, est une contravention de 4e classe (R3124-6).
+
+Texte officiel :
+
+Les voitures de transport avec chauffeur sont munies d'une signalétique distinctive définie par arrêté du ministre chargé des transports et délivrée par l'Imprimerie nationale.
+Le même arrêté prévoit également des dispositions spécifiques afin de permettre aux exploitants de disposer d'une signalétique temporaire en cas de recours exceptionnel à des véhicules en application du III de l'article R. 3122-1 ou après leur inscription au registre, ou à la suite d'une mise à jour de ce dernier.
+
+En vigueur depuis le 01 juillet 2017.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche G3.1 (Les deux vignettes : où, quoi, comment).
+
+### Article R3120-10 du Code des transports : Le contrôle technique
+
+Page : https://revision-vtc.fr/wiki/r3120-10.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048413
+
+En clair : Les véhicules de T3P passent le contrôle technique selon les règles du Code de la route (R. 323-24 ou R. 323-26), sauf disposition contraire.
+
+Concrètement : Pour un VTC, le contrôle technique est annuel.
+
+Texte officiel :
+
+Sauf dispositions contraires du présent titre, les véhicules de transport public particulier sont soumis au contrôle technique dans les conditions prévues à l'article R. 323-24 du code de la route ou, le cas échéant, à l'article R. 323-26 du même code.
+
+En vigueur depuis le 01 janvier 2015.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A4.1 (Le contrôle technique du véhicule).
+
+### Arrêté du 26 mars 2015 : Les caractéristiques du véhicule
+
+Page : https://revision-vtc.fr/wiki/arrete-26-mars-2015-vehicules.html
+Source officielle : https://www.legifrance.gouv.fr/loda/id/JORFTEXT000030429911
+
+En clair : Une VTC thermique a moins de sept ans (sauf véhicule de collection), au moins quatre portes, 4,50 m de long et 1,70 m de large au minimum, et un moteur d'au moins 84 kW. Ces critères ne s'appliquent pas aux hybrides et électriques.
+
+Concrètement : Une berline thermique de 8 ans ne peut plus être utilisée comme VTC.
+
+Texte officiel :
+
+Article 1.
+En application du deuxième alinéa de l'article R. 3122-6 susvisé, les voitures de transport avec chauffeur doivent être âgées de moins de sept ans, sauf s'il s'agit de véhicules de collection.
+Les véhicules de transport avec chauffeur doivent être munis d'au moins quatre portes et avoir une longueur hors tout minimale de 4,50 mètres et une largeur hors tout minimale de 1,70 mètre.
+Leur moteur doit avoir une puissance nette supérieure ou égale à 84 kilowatts.
+
+Article 2.
+Les dispositions de l'article 1er ne sont pas applicables aux catégories de véhicules hybrides et électriques mentionnées à l'article R. 3120-11 susvisé.
+
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche G2.1 (Taille et puissance : lire la carte grise) ; fiche G2.2 (Places, portes et âge du véhicule).
+
+### Arrêté du 6 avril 2017 : La vignette VTC
+
+Page : https://revision-vtc.fr/wiki/arrete-6-avril-2017-signaletique.html
+Source officielle : https://www.legifrance.gouv.fr/loda/id/JORFTEXT000034379025
+
+En clair : La signalétique définitive comprend deux vignettes autocollantes de l'Imprimerie nationale, délivrées pour chaque véhicule validé au registre ; une vignette temporaire, imprimée sur papier, sert en attendant (30 jours ouvrés au plus). Les vignettes définitives se collent en bas à gauche du pare-brise avant et en bas à droite de la lunette arrière.
+
+Concrètement : Les vignettes cessent d'être valides quand le véhicule n'est plus conforme ou quand l'inscription au registre expire.
+
+Texte officiel :
+
+Article 1.
+La signalétique prévue à l'article R. 3122-8 du code des transports est constituée de vignettes conformes au modèle figurant en annexe du présent arrêté et réalisées par l'Imprimerie nationale.
+La signalétique définitive comprend deux vignettes autocollantes produites et diffusées par l'Imprimerie nationale. La signalétique temporaire comprend une vignette imprimée sur papier libre à partir d'un exemplaire transmis par l'Imprimerie nationale par voie électronique.
+
+Article 2.
+Sur demande de l'exploitant, la signalétique définitive est délivrée pour chaque véhicule validé sur le registre des exploitants de voitures de transport avec chauffeur prévu à l'article L. 3122-3 du même code, en application des articles R. 3122-1 et R. 3122-6 du code des transports.
+Dans l'attente de la réception de la signalétique définitive après leur inscription au registre, après une mise à jour de ce dernier, après un renouvellement d'inscription, ou après une déclaration de recours à des véhicules dans les conditions prévues au III de l'article R. 3122-1, une signalétique temporaire est délivrée dès réception du paiement.
+
+Article 3.
+La signalétique définitive cesse d'être valide :
+- lorsque le véhicule déclaré au registre n'est plus conforme aux caractéristiques techniques prévues à l'article R. 3122-6 du même code et aux textes pris pour son application ;
+- lorsque l'inscription en cours de l'exploitant arrive à échéance et en tout état de cause à échéance maximum de cinq ans ;
+- lorsque la durée du recours à des véhicules dans les conditions prévues au III de l'article R. 3122-1 est expirée.
+La durée de validité de la signalétique temporaire ne peut ni excéder trente jours ouvrés maximum à compter de l'envoi par voie électronique de la vignette par l'Imprimerie nationale ni, le cas échéant, excéder la date de fin du recours mentionné à l'alinéa précédent.
+
+Article 4.
+Les deux vignettes de la signalétique définitive sont collées de manière inamovible sans détruire les vignettes respectivement dans l'angle du pare-brise avant situé en bas à gauche de la place du conducteur ainsi que dans l'angle du pare-brise arrière situé en bas à droite, à l'opposé de la place du conducteur.
+La vignette de la signalétique temporaire est apposée dans l'angle du pare-brise avant situé en bas à gauche de la place du conducteur.
+
+Annexe.
+ANNEXE
+VIGNETTE DE VOITURE DE TRANSPORT AVEC CHAUFFEUR
+La vignette comporte quatre champs spécifiques à chaque véhicule dans lesquels sont inscrits le numéro d'inscription de l'exploitant auprès du gestionnaire du registre, le numéro d'immatriculation du véhicule, le code-barres bidimensionnel et le numéro de référence de la vignette.
+
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche G3.1 (Les deux vignettes : où, quoi, comment) ; fiche G3.3 (Quand la vignette cesse de valoir).
+
+## Réservation, maraude et attente
+
+### Article L3120-2 du Code des transports : Réservation préalable et interdiction de la maraude
+
+Page : https://revision-vtc.fr/wiki/l3120-2.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033745346
+
+En clair : Un VTC ne peut prendre un client que sur réservation préalable. Il ne peut ni chercher des clients en circulant ou en stationnant sur la voie publique, ni attendre devant une gare ou un aéroport au-delà d'une durée fixée. Il est aussi interdit d'indiquer à un client la position et la disponibilité d'un VTC avant sa réservation, de démarcher un client sur la voie publique ou de vendre une telle prise en charge.
+
+Concrètement : Prendre un passant qui vous fait signe sans réservation est un délit (trois ans de prison, 45 000 € d'amende, L3124-12). Circuler en quête de clients ou attendre trop tôt devant une gare est une contravention de 5e classe (R3124-11).
+
+Texte officiel :
+
+I.-Les véhicules qui effectuent les prestations mentionnées à l'article L. 3120-1 ne peuvent pas être loués à la place, sauf s'ils font l'objet d'une réservation préalable dans les conditions définies par un décret en Conseil d'Etat.
+II.-A moins de justifier de l'autorisation de stationnement mentionnée à l'article L. 3121-1, le conducteur d'un véhicule mentionné au I du présent article ne peut :
+1° Prendre en charge un client sur la voie ouverte à la circulation publique, sauf s'il justifie d'une réservation préalable ;
+2° S'arrêter, stationner ou circuler sur la voie ouverte à la circulation publique en quête de clients ;
+3° Stationner sur la voie ouverte à la circulation publique, à l'abord des gares et des aérogares ou, le cas échéant, dans l'enceinte de celles-ci, au delà d'une durée, fixée par décret, précédant la prise en charge du client qui a effectué une réservation préalable.
+III.-Sont interdits aux personnes réalisant des prestations mentionnées à l'article L. 3120-1 et aux intermédiaires auxquels elles ont recours, notamment les centrales de réservation au sens de l'article L. 3142-1 :
+1° Le fait d'informer un client, avant la réservation mentionnée au 1° du II du présent article, quel que soit le moyen utilisé, à la fois de la localisation et de la disponibilité d'un véhicule mentionné au I quand il est situé sur la voie ouverte à la circulation publique sans que son propriétaire ou son exploitant soit titulaire d'une autorisation de stationnement mentionnée à l'article L. 3121-1 ;
+2° Le démarchage d'un client en vue de sa prise en charge dans les conditions mentionnées au 1° du II du présent article ;
+3° Le fait de proposer à la vente ou de promouvoir une offre de prise en charge effectuée dans les conditions mentionnées au même 1°.
+
+En vigueur depuis le 31 décembre 2016.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A3.1 (La réservation préalable et sa preuve) ; fiche A3.2 (La maraude, réservée au taxi) ; fiche A3.4 (Gares et aéroports) ; fiche A3.7 (La géolocalisation : ce que l'appli ne doit pas montrer).
+
+### Article R3120-2 du Code des transports : Le justificatif de réservation
+
+Page : https://revision-vtc.fr/wiki/r3120-2.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038954680
+
+En clair : La réservation préalable se prouve par un document papier ou électronique, que le conducteur présente à tout agent de contrôle. Son contenu est fixé par arrêté.
+
+Concrètement : L'écran de l'application de réservation suffit s'il comporte les informations exigées par l'arrêté du 6 août 2025.
+
+Texte officiel :
+
+Sans préjudice de l'article R. 3122-12, la justification de l'existence de la réservation préalable mentionnée au I et aux 1° et 3° du II de l'article L. 3120-2 peut être apportée au moyen d'un document écrit sur un support papier ou électronique.
+Le conducteur est tenu de présenter ce justificatif à toute demande des agents chargés des contrôles.
+Un arrêté des ministres chargés, respectivement, de l'économie et des transports et du ministre de l'intérieur précise les informations figurant sur ce justificatif et ses caractéristiques.
+
+En vigueur depuis le 24 août 2019.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A3.1 (La réservation préalable et sa preuve) ; fiche G4.1 (Le justificatif de réservation : sept mentions).
+
+### Article D3120-3 du Code des transports : L'attente devant les gares et aéroports : une heure maximum
+
+Page : https://revision-vtc.fr/wiki/d3120-3.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048397
+
+En clair : Un VTC ne peut pas stationner sur la voie publique aux abords d'une gare ou d'un aéroport plus d'une heure avant l'heure de prise en charge réservée par le client.
+
+Concrètement : Pour un client attendu à 15 h à Orly, le VTC ne stationne pas avant 14 h.
+
+Texte officiel :
+
+La durée maximale de stationnement prévue au 3° du II de l'article L. 3120-2 est fixée à une heure précédant l'horaire de prise en charge souhaité par le client.
+
+En vigueur depuis le 01 janvier 2015.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A3.4 (Gares et aéroports).
+
+### Article L3122-9 du Code des transports : Le retour à la base
+
+Page : https://revision-vtc.fr/wiki/l3122-9.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000029529985
+
+En clair : Après une course réservée, le conducteur de VTC retourne au lieu d'établissement de l'exploitant ou dans un lieu hors de la chaussée où le stationnement est autorisé, sauf s'il a déjà une nouvelle réservation ou un contrat avec un client final.
+
+Concrètement : Entre deux courses, attendre sur un parking autorisé est permis ; tourner en ville à vide en attendant un client ne l'est pas.
+
+Texte officiel :
+
+Dès l'achèvement de la prestation commandée au moyen d'une réservation préalable, le conducteur d'une voiture de transport avec chauffeur dans l'exercice de ses missions est tenu de retourner au lieu d'établissement de l'exploitant de cette voiture ou dans un lieu, hors de la chaussée, où le stationnement est autorisé, sauf s'il justifie d'une réservation préalable ou d'un contrat avec le client final.
+
+En vigueur depuis le 03 octobre 2014.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A3.3 (Où attendre entre deux courses) ; fiche A3.5 (Le retour après la course).
+
+### Article R3122-12 du Code des transports : Le contrat avec un client final
+
+Page : https://revision-vtc.fr/wiki/r3122-12.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037653617
+
+En clair : Le contrat avec un client final (qui peut être une entreprise) est un document écrit précisant sa durée, sa date d'effet, les prestations, les lieux de prise en charge et les bénéficiaires. De simples conditions générales de vente ne suffisent pas.
+
+Concrètement : Un contrat écrit avec un hôtel pour transporter ses clients permet d'enchaîner les courses sans repasser par la base.
+
+Texte officiel :
+
+L'existence d'un contrat avec un client final, qui peut être une personne morale, est justifiée au moyen d'un document écrit sur un support papier ou électronique qui précise les clauses particulières relatives à sa durée, sa date d'effet, la nature des prestations couvertes, le ou les lieux de prise en charge et la qualité des bénéficiaires des prestations. Des conditions générales de vente ne constituent pas un contrat avec le client final.
+Le conducteur est tenu de présenter ce justificatif à toute demande des agents chargés des contrôles.
+Un arrêté des ministres chargés, respectivement, de l'économie et des transports et du ministre de l'intérieur précise les informations figurant sur ce justificatif et ses caractéristiques.
+
+En vigueur depuis le 01 janvier 2019.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A3.5 (Le retour après la course).
+
+### Arrêté du 6 août 2025 : Le justificatif de réservation
+
+Page : https://revision-vtc.fr/wiki/arrete-6-aout-2025-reservation.html
+Source officielle : https://www.legifrance.gouv.fr/loda/id/JORFTEXT000052153206
+
+En clair : Le justificatif de réservation (papier ou électronique) comporte obligatoirement : l'exploitant et ses coordonnées, son numéro d'inscription au registre, son numéro SIREN, le nom et le téléphone du client, la date et l'heure de la réservation, la date et l'heure de prise en charge, et le lieu de prise en charge.
+
+Concrètement : Si le nom ou le téléphone du client manque, le conducteur doit permettre sans délai à l'agent de le contacter.
+
+Texte officiel :
+
+Article 1.
+La justification de la réservation préalable des véhicules de transports avec chauffeur ou des véhicules motorisés à deux ou trois roues effectuant les prestations de transport public particulier de personnes à titre onéreux, prévue à l'article R. 3120-2 du code des transports, est apportée par la production d'un support papier ou électronique comportant obligatoirement les informations suivantes :
+1° Nom ou dénomination sociale et coordonnées de la société exerçant l'activité d'exploitant de voitures de transport avec chauffeur ou d'exploitant de véhicules motorisés à deux ou trois roues ;
+2° Numéro d'inscription de l'exploitant susmentionné au registre institué par l'article L. 3122-3 du code des transports, dans le cas où le véhicule utilisé est une voiture de transport avec chauffeur ;
+3° Numéro unique d'identification dudit exploitant délivré conformément à l'article D. 123-235 du code de commerce ;
+4° Nom et coordonnées téléphoniques du client sollicitant une prestation de transport public particulier de personnes à titre onéreux ;
+5° Date et heure de la réservation préalable effectuée par le client ;
+6° Date et heure de la prise en charge souhaitées par le client ;
+7° Lieu de prise en charge indiqué par le client.
+Dans le cas où les informations mentionnées au 4° ne figurent pas sur le justificatif, le conducteur fournit, sans délai, à l'agent de contrôle, les moyens de prendre contact avec le client.
+
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche G4.1 (Le justificatif de réservation : sept mentions).
+
+## Plateformes et centrales de réservation
+
+### Article L1326-1 du Code des transports : Les chauffeurs concernés par les droits face aux plateformes
+
+Page : https://revision-vtc.fr/wiki/l1326-1.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039677955
+
+En clair : Ce chapitre protège les travailleurs indépendants qui conduisent un VTC (ou livrent en deux-roues) en passant par une plateforme.
+
+Concrètement : Un chauffeur micro-entrepreneur qui travaille via une application de VTC est concerné.
+
+Texte officiel :
+
+Les dispositions du présent chapitre sont applicables aux travailleurs définis à l'article L. 7341-1 du code du travail recourant pour leur activité à des plateformes mentionnées à l'article L. 7342-1 du même code et exerçant l'une des activités suivantes :
+1° Conduite d'une voiture de transport avec chauffeur ;
+2° Livraison de marchandises au moyen d'un véhicule à deux ou trois roues, motorisé ou non.
+
+En vigueur depuis le 27 décembre 2019.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A8.1 (Les droits du chauffeur face à la plateforme).
+
+### Article L1326-2 du Code des transports : Distance, prix et droit de refuser une course
+
+Page : https://revision-vtc.fr/wiki/l1326-2.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045525868
+
+En clair : Avant chaque course, la plateforme indique au chauffeur la distance, la destination et le prix minimal garanti après commission, et lui laisse un délai raisonnable. Le chauffeur peut refuser sans pénalité ; la plateforme ne peut pas le suspendre pour ce motif.
+
+Concrètement : Refuser une course trop courte ou trop lointaine ne peut pas entraîner la désactivation du compte.
+
+Texte officiel :
+
+Les plateformes mentionnées à l'article L. 1326-1 communiquent aux travailleurs, lorsqu'elles leur proposent une prestation, la distance couverte par cette prestation, la destination et le prix minimal garanti dont ils bénéficieront, déduction faite des frais de commission, dans des conditions précisées par décret. Elles laissent aux travailleurs un délai raisonnable pour accepter ou refuser la prestation proposée.
+Les travailleurs peuvent refuser une proposition de prestation de transport sans faire l'objet d'une quelconque pénalité. La plateforme ne peut notamment pas suspendre ou mettre fin à la relation contractuelle qui l'unit aux travailleurs au motif que ceux-ci ont refusé une ou plusieurs propositions.
+
+En vigueur depuis le 08 avril 2022.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A8.1 (Les droits du chauffeur face à la plateforme).
+
+### Article L1326-3 du Code des transports : La transparence sur le temps et le revenu
+
+Page : https://revision-vtc.fr/wiki/l1326-3.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039677959
+
+En clair : Chaque plateforme publie sur son site des indicateurs sur la durée d'activité et le revenu des chauffeurs pour l'année précédente.
+
+Concrètement : Ces chiffres permettent de comparer ce que gagnent réellement les chauffeurs d'une plateforme à l'autre.
+
+Texte officiel :
+
+La plateforme mentionnée à l'article L. 1326-1 est tenue de publier sur son site internet, de manière loyale, claire et transparente, des indicateurs relatifs à la durée d'activité et au revenu d'activité au titre des activités des travailleurs en lien avec la plateforme, au cours de l'année civile précédente. Ces indicateurs sont précisés par décret en Conseil d'Etat.
+
+En vigueur depuis le 27 décembre 2019.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A8.1 (Les droits du chauffeur face à la plateforme).
+
+### Article L1326-4 du Code des transports : Les libertés du chauffeur : horaires, matériel, itinéraire
+
+Page : https://revision-vtc.fr/wiki/l1326-4.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045525865
+
+En clair : Le chauffeur choisit ses horaires et peut se déconnecter ; on ne peut pas lui imposer un matériel donné ; il peut travailler pour plusieurs plateformes ou avoir ses propres clients ; il choisit librement son itinéraire. Exercer ces droits ne peut pas, sauf abus, justifier une sanction.
+
+Concrètement : Utiliser deux applications en même temps est un droit garanti par la loi.
+
+Texte officiel :
+
+Les plateformes mentionnées à l'article L. 1326-1 assurent aux travailleurs y ayant recours pour leur activité les droits suivants :
+1° Les travailleurs choisissent leurs plages horaires d'activité et leurs périodes d'inactivité, et peuvent se déconnecter durant leurs plages horaires d'activité ;
+2° Pour l'exécution de leurs prestations :
+a) Les travailleurs ne peuvent se voir imposer l'utilisation d'un matériel ou d'un équipement déterminé, sous réserve des obligations légales et réglementaires en matière notamment de santé, de sécurité et de préservation de l'environnement ;
+b) Les travailleurs peuvent recourir, simultanément, à plusieurs intermédiaires ou acteurs de mise en relation avec des clients en vue de la réalisation de ces prestations ou commercialiser, sans intermédiaire, les services de transport qu'ils exécutent ;
+c) Les travailleurs déterminent librement leur itinéraire au regard notamment des conditions de circulation, de l'itinéraire proposé par la plateforme et le cas échéant du choix du client.
+L'exercice des droits énumérés au présent article ne peut, sauf abus, engager la responsabilité contractuelle des travailleurs, constituer un motif de suspension ou de rupture de leurs relations avec les plateformes, ni justifier de mesures les pénalisant dans l'exercice de leur activité. Toute stipulation contraire est réputée non écrite.
+Ces dispositions ne font pas obstacle au recours à une application dédiée mise à disposition par la plateforme.
+
+En vigueur depuis le 08 avril 2022.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A8.1 (Les droits du chauffeur face à la plateforme).
+
+### Article L3141-1 du Code des transports : Les plateformes concernées
+
+Page : https://revision-vtc.fr/wiki/l3141-1.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043411217
+
+En clair : Les règles s'appliquent aux professionnels qui mettent en relation des conducteurs et des passagers pour des déplacements en véhicule motorisé de 8 places passagers au maximum, hors transport public organisé, transport conventionné par l'assurance maladie et covoiturage.
+
+Concrètement : Une application de VTC est concernée ; un site de covoiturage ne l'est pas.
+
+Texte officiel :
+
+Le présent titre est applicable aux professionnels qui mettent en relation des conducteurs ou des entreprises de transport et des passagers pour la réalisation de déplacements répondant aux caractéristiques suivantes :
+1° Ils sont effectués au moyen de véhicules motorisés, y compris de véhicules à deux ou trois roues, comportant, outre le siège du conducteur, huit places assises au maximum ;
+2° Ils ne présentent pas le caractère d'un service public de transport organisé par une autorité organisatrice mentionnée à l'article L. 1221-1 ;
+3° Ils ne sont pas réalisés dans le cadre du conventionnement prévu à l'article L. 322-5 du code de la sécurité sociale ;
+4° Ils ne sont pas effectués dans le cadre du covoiturage, tel qu'il est défini à l'article L. 3132-1 du présent code.
+Le présent titre n'est pas applicable :
+a) Aux personnes qui exploitent des services de transport, lorsque la mise en relation a pour objet les services de transport qu'elles exécutent elles-mêmes ;
+b) Aux personnes qui organisent des services privés de transport dans les conditions prévues à l'article L. 3131-1, lorsque la mise en relation a pour objet ces services privés de transport ;
+c) Aux activités de mise en relation par voie électronique régies par le titre V.
+
+En vigueur depuis le 01 juin 2023.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.4 (Plateformes et centrales de réservation).
+
+### Article L3141-2 du Code des transports : Ce que la plateforme doit vérifier
+
+Page : https://revision-vtc.fr/wiki/l3141-2.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033737593
+
+En clair : La plateforme s'assure que chaque conducteur a son permis, l'assurance du véhicule, l'assurance RC et sa carte professionnelle, que l'exploitant est inscrit au registre et assuré, et que le véhicule respecte les conditions techniques.
+
+Concrètement : Sans ces pièces, la plateforme doit refuser de vous proposer des courses (R3141-6).
+
+Texte officiel :
+
+I.-Le professionnel mentionné à l'article L. 3141-1 s'assure que tout conducteur qui réalise un déplacement mentionné au premier alinéa du même article L. 3141-1 dispose des documents suivants :
+1° Le permis de conduire requis pour la conduite du véhicule utilisé ;
+2° Un justificatif de l'assurance du véhicule utilisé ;
+3° Un justificatif de l'assurance de responsabilité civile requise pour l'activité pratiquée ;
+4° Le cas échéant, la carte professionnelle requise pour l'activité pratiquée.
+II.-Le professionnel mentionné audit article L. 3141-1 s'assure que l'entreprise dont le conducteur relève dispose d'un justificatif de l'assurance de responsabilité civile professionnelle et, le cas échéant, du certificat d'inscription au registre mentionné à l'article L. 1421-1 ou du certificat d'inscription au registre mentionné à l'article L. 3122-3.
+III.-Lorsque la mise en relation a pour objet un déplacement réalisé en voiture de transport avec chauffeur, le professionnel mentionné à l'article L. 3141-1 s'assure que le véhicule utilisé répond aux conditions techniques et de confort mentionnées à l'article L. 3122-4.
+IV.-Les conditions d'application du présent article sont fixées par décret en Conseil d'Etat.
+
+En vigueur depuis le 31 décembre 2016.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.4 (Plateformes et centrales de réservation).
+
+### Article R3141-1 du Code des transports : Vérification du permis par la plateforme
+
+Page : https://revision-vtc.fr/wiki/r3141-1.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037661904
+
+En clair : Avant la première course, la plateforme vérifie l'original du permis du conducteur, puis chaque année (relevé du permis ou nouvelle présentation).
+
+Concrètement : Une plateforme peut vous demander chaque année votre relevé de permis.
+
+Texte officiel :
+
+L'opérateur de mise en relation mentionné à l'article L. 3141-1 satisfait l'obligation qui lui incombe en vertu des dispositions du 1° du I de l'article L. 3141-2 en demandant à tout conducteur souhaitant être mis en relation avec des passagers pour la réalisation de déplacements par son intermédiaire de se présenter, préalablement à la première mise en relation, muni de l'original du permis de conduire requis, en cours de validité.
+Chaque année par la suite, sauf expiration entre-temps du permis de conduire, le même opérateur demande au conducteur, au choix de ce dernier, soit de lui adresser le relevé portant les informations relatives à l'existence, la catégorie et la validité de son permis de conduire, établi en application du 1° de l'article L. 225-5 du code de la route, soit de lui présenter à nouveau l'original du permis de conduire requis, en cours de validité.
+
+En vigueur depuis le 01 janvier 2019.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.4 (Plateformes et centrales de réservation).
+
+### Article R3141-2 du Code des transports : Vérification de l'assurance par la plateforme
+
+Page : https://revision-vtc.fr/wiki/r3141-2.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037661902
+
+En clair : La plateforme vérifie l'assurance du véhicule avant la première course, puis au moins chaque année.
+
+Concrètement : Une attestation d'assurance expirée bloque l'accès aux courses.
+
+Texte officiel :
+
+L'opérateur de mise en relation mentionné à l'article L. 3141-1 satisfait l'obligation prévue par les dispositions des 2° et 3° du I de l'article L. 3141-2 en s'assurant, préalablement à la première mise en relation avec des passagers pour la réalisation de déplacements par son intermédiaire et ensuite au moins chaque année sauf expiration entre-temps du contrat d'assurance, de la transmission par le conducteur des justificatifs en cours de validité de l'assurance du véhicule utilisé.
+
+En vigueur depuis le 01 janvier 2019.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.4 (Plateformes et centrales de réservation).
+
+### Article R3141-3 du Code des transports : Vérification de la carte professionnelle
+
+Page : https://revision-vtc.fr/wiki/r3141-3.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037661900
+
+En clair : Avant la première course, le conducteur présente l'original de sa carte professionnelle à la plateforme, puis en transmet une copie chaque année.
+
+Concrètement : Une carte expirée doit être renouvelée avant de pouvoir reprendre les courses.
+
+Texte officiel :
+
+Le même opérateur satisfait l'obligation prévue au 4° du I de l'article L. 3141-2 en demandant à tout conducteur pratiquant une activité pour laquelle la possession d'une carte professionnelle est requise en vertu du titre II du présent livre de se présenter, préalablement à la première mise en relation avec des passagers pour la réalisation de déplacements par son intermédiaire, muni de l'original de sa carte professionnelle, en cours de validité puis, par la suite, de lui en transmettre, chaque année sauf expiration de celle-ci entre-temps, une copie.
+
+En vigueur depuis le 01 janvier 2019.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.4 (Plateformes et centrales de réservation).
+
+### Article R3141-4 du Code des transports : Vérification de l'exploitant
+
+Page : https://revision-vtc.fr/wiki/r3141-4.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037661898
+
+En clair : Avant toute mise en relation, la plateforme dispose de l'attestation d'inscription au registre VTC et de l'assurance RC professionnelle de l'exploitant.
+
+Concrètement : L'attestation d'inscription au registre est la première pièce demandée par une plateforme.
+
+Texte officiel :
+
+Le même opérateur satisfait l'obligation prévue au II de l'article L. 3141-2 en s'assurant, préalablement à toute mise en relation avec des passagers, de disposer :
+1° Lorsque le conducteur relève d'une entreprise de voiture de transport avec chauffeur, de l'attestation de son inscription au registre prévu à l'article L. 3122-3, en cours de validité ;
+2° Lorsque le conducteur relève d'une entreprise de transport public collectif occasionnel, de la copie certifiée conforme de la licence de transport intérieur en cours de validité, délivrée à l'entreprise en application du troisième alinéa de l'article L. 3411-1 ;
+3° D'un justificatif en cours de validité de l'assurance couvrant la responsabilité civile professionnelle de l'exploitant pour l'activité pratiquée.
+
+En vigueur depuis le 01 janvier 2019.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.4 (Plateformes et centrales de réservation).
+
+### Article R3141-5 du Code des transports : Vérification des véhicules
+
+Page : https://revision-vtc.fr/wiki/r3141-5.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037661896
+
+En clair : La plateforme vérifie que l'immatriculation du véhicule utilisé figure parmi celles déclarées au registre ; l'exploitant lui transmet la liste.
+
+Concrètement : Un véhicule non déclaré au registre ne peut pas être utilisé sur la plateforme.
+
+Texte officiel :
+
+L'obligation de vérification des conditions techniques et de confort des véhicules prévue au III de l'article L. 3141-2 est satisfaite par la vérification, préalablement à toute mise en relation, que le numéro d'immatriculation du véhicule utilisé pour effectuer la prestation de transport est au nombre de ceux qui ont été communiqués au gestionnaire du registre mentionné à l'article L. 3122-3. A cette fin, copie de la liste communiquée au gestionnaire du registre est transmise à l'opérateur de mise en relation par l'exploitant de voiture de transport, en même temps que l'attestation d'inscription prévue à l'article R. 3141-4.
+
+En vigueur depuis le 01 janvier 2019.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.4 (Plateformes et centrales de réservation).
+
+### Article R3141-6 du Code des transports : Pas de document, pas de course
+
+Page : https://revision-vtc.fr/wiki/r3141-6.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037661894
+
+En clair : Si le conducteur ou l'exploitant ne fournit pas les documents exigés, ou si l'administration signale qu'un document n'est plus valable, la plateforme doit cesser de faire appel à lui.
+
+Concrètement : Une suspension de carte signalée par la préfecture entraîne l'arrêt des courses sur la plateforme.
+
+Texte officiel :
+
+S'il n'obtient pas du conducteur ou de l'entreprise de transport les documents dont la présentation ou la communication sont prévues par les dispositions du présent chapitre, l'opérateur de mise en relation est tenu de s'abstenir de faire appel à eux pour assurer une prestation de transport de passagers répondant aux caractéristiques définies à l'article L. 3141-1.
+Il en va de même en cas de signalement par l'autorité administrative de la fin anticipée de la validité de l'une des pièces transmises en application du présent chapitre.
+
+En vigueur depuis le 01 janvier 2019.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.4 (Plateformes et centrales de réservation).
+
+### Article R3141-7 du Code des transports : L'information du chauffeur écarté
+
+Page : https://revision-vtc.fr/wiki/r3141-7.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037661892
+
+En clair : Quand la plateforme cesse de mettre en relation un chauffeur pour un document manquant, elle l'informe sans délai du motif et des démarches pour y remédier.
+
+Concrètement : La plateforme doit dire précisément quel document manque.
+
+Texte officiel :
+
+L'opérateur informe sans délai l'exploitant de l'entreprise de transport et le conducteur des motifs, lorsqu'ils sont tirés de la méconnaissance des obligations prévues au présent chapitre, pour lesquels il s'abstient de toute mise en relation avec des passagers et, le cas échéant, des démarches à entreprendre pour y remédier.
+
+En vigueur depuis le 01 janvier 2019.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.4 (Plateformes et centrales de réservation).
+
+### Article L3142-1 du Code des transports : Ce qu'est une centrale de réservation
+
+Page : https://revision-vtc.fr/wiki/l3142-1.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033737619
+
+En clair : Une centrale de réservation est un intermédiaire qui met en relation des passagers avec des conducteurs professionnels.
+
+Concrètement : Les grandes applications de VTC sont des centrales de réservation au sens de la loi.
+
+Texte officiel :
+
+Pour l'application du présent chapitre, est considéré comme une centrale de réservation tout professionnel relevant de l'article L. 3141-1 dès lors que les conducteurs qui réalisent les déplacements mentionnés au premier alinéa du même article L. 3141-1 exercent leur activité à titre professionnel.
+
+En vigueur depuis le 31 décembre 2016.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.4 (Plateformes et centrales de réservation).
+
+### Article L3142-2 du Code des transports : La déclaration annuelle des centrales
+
+Page : https://revision-vtc.fr/wiki/l3142-2.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033737628
+
+En clair : Toute centrale de réservation déclare son activité à l'administration chaque année, et à chaque changement.
+
+Concrètement : Ne pas déclarer son activité est puni de 15 000 € d'amende (L3143-2).
+
+Texte officiel :
+
+Toute centrale de réservation, au sens de l'article L. 3142-1, déclare son activité à l'autorité administrative.
+La déclaration est renouvelée chaque année et lorsqu'un changement intervient dans les éléments de la déclaration.
+Les conditions d'application du présent article sont définies par voie réglementaire.
+
+En vigueur depuis le 31 décembre 2016.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.4 (Plateformes et centrales de réservation).
+
+### Article L3142-3 du Code des transports : La responsabilité de la centrale envers le client
+
+Page : https://revision-vtc.fr/wiki/l3142-3.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033737658
+
+En clair : La centrale est responsable de plein droit envers le client de la bonne exécution du transport, même réalisé par un autre prestataire. Elle peut s'exonérer en prouvant la faute du client, le fait imprévisible d'un tiers ou la force majeure.
+
+Concrètement : Un client mal pris en charge peut se retourner directement contre la centrale.
+
+Texte officiel :
+
+La centrale de réservation est responsable de plein droit, à l'égard du client, de la bonne exécution des obligations résultant du contrat de transport, que ce contrat ait été conclu à distance ou non et que ces obligations soient à exécuter par la centrale elle-même ou par d'autres prestataires de services, sans préjudice du droit de recours de la centrale contre ceux-ci.
+Toutefois, la centrale peut s'exonérer de tout ou partie de sa responsabilité en apportant la preuve que l'inexécution ou la mauvaise exécution du contrat est imputable soit au client, soit au fait imprévisible et insurmontable d'un tiers étranger à la fourniture de la prestation prévue au contrat, soit à un cas de force majeure.
+
+En vigueur depuis le 31 décembre 2016.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.4 (Plateformes et centrales de réservation).
+
+### Article L3142-4 du Code des transports : L'assurance de la centrale
+
+Page : https://revision-vtc.fr/wiki/l3142-4.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033737665
+
+En clair : La centrale de réservation justifie d'une assurance couvrant sa responsabilité civile professionnelle.
+
+Concrètement : Cette assurance est distincte de celle du chauffeur.
+
+Texte officiel :
+
+La centrale de réservation justifie de l'existence d'un contrat d'assurance couvrant sa responsabilité civile professionnelle.
+
+En vigueur depuis le 31 décembre 2016.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.4 (Plateformes et centrales de réservation).
+
+### Article L3143-1 du Code des transports : Qui contrôle les plateformes
+
+Page : https://revision-vtc.fr/wiki/l3143-1.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054336087
+
+En clair : Les infractions des plateformes sont constatées par la police et la gendarmerie, et par des fonctionnaires assermentés désignés par le ministre des transports ; certains manquements aussi par l'inspection du travail.
+
+Concrètement : Les contrôleurs des transports terrestres peuvent contrôler une plateforme.
+
+Texte officiel :
+
+Les infractions aux dispositions législatives et réglementaires relatives aux activités de mise en relation mentionnées au présent titre sont recherchées et constatées par, outre les officiers et agents de police judiciaire, les fonctionnaires assermentés désignés par le ministre chargé des transports et commissionnés à cet effet.
+Les manquements aux articles L. 3141-3 et L. 3141-4 sont en outre recherchés et constatés par les agents de contrôle mentionnés à l'article L. 8271-1-2 du code du travail.
+
+En vigueur depuis le 27 juin 2026.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.4 (Plateformes et centrales de réservation).
+
+### Article L3143-2 du Code des transports : Sanction de la centrale non déclarée
+
+Page : https://revision-vtc.fr/wiki/l3143-2.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033737713
+
+En clair : Une centrale qui ne déclare pas son activité encourt 15 000 € d'amende ; une personne morale encourt aussi des peines complémentaires, dont l'interdiction d'exercer.
+
+Concrètement : La sanction vise la centrale, pas le chauffeur.
+
+Texte officiel :
+
+Est puni de 15 000 € d'amende le fait de contrevenir à l'article L. 3142-2.
+Les personnes morales déclarées responsables pénalement du délit prévu au présent article encourent, outre l'amende suivant les modalités prévues à l'article 131-38 du code pénal, les peines prévues aux 2° à 9° de l'article 131-39 du même code. L'interdiction mentionnée au 2° du même article 131-39 porte sur l'activité dans l'exercice ou à l'occasion de l'exercice de laquelle l'infraction a été commise.
+
+En vigueur depuis le 31 décembre 2016.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.4 (Plateformes et centrales de réservation).
+
+### Article L3143-3 du Code des transports : Sanction de la centrale qui bride un taxi
+
+Page : https://revision-vtc.fr/wiki/l3143-3.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033737727
+
+En clair : Une centrale qui interdit à un taxi de prendre un client qui le sollicite directement encourt 75 000 € d'amende.
+
+Concrètement : Cette règle protège les taxis ; elle ne concerne pas les VTC.
+
+Texte officiel :
+
+Est puni de 75 000 € d'amende le fait de contrevenir à l'article L. 3142-5.
+Le tribunal peut ordonner que sa décision soit publiée intégralement ou par extraits dans les journaux qu'il désigne, aux frais du condamné.
+
+En vigueur depuis le 31 décembre 2016.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.4 (Plateformes et centrales de réservation).
+
+### Article L3143-4 du Code des transports : Organiser du transport avec des non-professionnels
+
+Page : https://revision-vtc.fr/wiki/l3143-4.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033737738
+
+En clair : Mettre des passagers en relation avec des personnes qui ne sont ni transporteurs, ni taxis, ni VTC, ni deux-roues professionnels est puni de deux ans de prison et 300 000 € d'amende.
+
+Concrètement : Une application qui ferait transporter des clients payants par des particuliers sans carte commet ce délit.
+
+Texte officiel :
+
+Est puni de deux ans d'emprisonnement et de 300 000 € d'amende le fait d'organiser la mise en relation de passagers et de personnes qui ne sont ni des entreprises de transport public routier de personnes au sens du titre Ier du présent livre, ni des exploitants de taxis, de voitures de transport avec chauffeur ou de véhicules motorisés à deux ou trois roues au sens du titre II du même livre, en vue de la réalisation des prestations mentionnées aux articles L. 3112-1 ou L. 3120-1.
+Les personnes morales déclarées responsables pénalement du délit prévu au présent article encourent, outre l'amende suivant les modalités prévues à l'article 131-38 du code pénal, les peines prévues aux 2° à 9° de l'article 131-39 du même code. L'interdiction mentionnée au 2° du même article 131-39 porte sur l'activité dans l'exercice ou à l'occasion de l'exercice de laquelle l'infraction a été commise. Les peines prévues aux 2° à 7° dudit article 131-39 ne peuvent être prononcées que pour une durée maximale de cinq ans.
+
+En vigueur depuis le 31 décembre 2016.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.4 (Plateformes et centrales de réservation).
+
+### Article L3143-5 du Code des transports : L'amende administrative des plateformes (loi de 2026)
+
+Page : https://revision-vtc.fr/wiki/l3143-5.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054317800
+
+En clair : Depuis la loi du 25 juin 2026, une plateforme qui méconnaît les obligations des articles L3141-3 ou L3141-4 encourt une amende administrative de 150 € au plus par mise en relation, dans la limite de 5 % de son chiffre d'affaires annuel en France.
+
+Concrètement : L'amende est prononcée par l'administration, contestable devant le tribunal administratif.
+
+Texte officiel :
+
+I. - La méconnaissance des articles L. 3141-3 ou L. 3141-4 par le professionnel mentionné à l'article L. 3141-1 est passible d'une sanction administrative dans les conditions prévues au présent article.
+Le montant maximal de l'amende est de 150 euros par mise en relation par un professionnel mentionné à l'article L. 3141-1 avec un ou plusieurs passagers, en méconnaissance des articles L. 3141-3 ou L. 3141-4.
+Le montant total des amendes prononcées à l'encontre d'un même professionnel au cours d'une année ne peut excéder 5 % du montant de son chiffre d'affaires hors taxes réalisé en France au titre du dernier exercice clos.
+L'amende est prononcée par l'autorité administrative compétente, après constatation des faits par l'un des officiers ou l'un des agents mentionnés à l'article L. 3143-1.
+Pour fixer le montant total de l'amende, l'autorité administrative prend en compte les circonstances et la gravité du manquement, son éventuelle réitération, le comportement de son auteur, notamment sa bonne foi, ainsi que les ressources et les charges de celui-ci.
+Le délai de prescription de l'action de l'administration pour la sanction du manquement par une amende administrative est de deux années révolues à compter du jour où le manquement a été commis.
+Le professionnel mentionné à l'article L. 3141-1 peut contester la décision de l'administration devant le tribunal administratif, à l'exclusion de tout recours hiérarchique.
+L'amende est recouvrée comme les créances de l'Etat étrangères à l'impôt et au domaine. L'opposition à l'exécution ou aux poursuites n'a pas pour effet de suspendre l'action en recouvrement de la créance.
+II. - Les conditions d'application du présent article sont déterminées par décret en Conseil d'Etat.
+
+En vigueur depuis le 27 juin 2026.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A1.4 (Plateformes et centrales de réservation).
+
+## Contrôles et sanctions
+
+### Article L3124-7 du Code des transports : Exercer sans être inscrit au registre
+
+Page : https://revision-vtc.fr/wiki/l3124-7.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054336028
+
+En clair : Exercer l'activité d'exploitant VTC sans être inscrit au registre est puni de trois ans de prison et 45 000 € d'amende, avec des peines complémentaires : suspension du permis jusqu'à cinq ans, immobilisation ou confiscation du véhicule, interdiction de paraître dans certains lieux. Une amende forfaitaire de 500 € peut éteindre l'action.
+
+Concrètement : Un chauffeur non inscrit contrôlé à l'aéroport peut se voir confisquer son véhicule.
+
+Texte officiel :
+
+I.-Est puni de trois ans d'emprisonnement et de 45 000 € d'amende le fait d'exercer l'activité prévue à l'article L. 3122-1 sans être inscrit au registre mentionné à l'article L. 3122-3.
+II.-Les personnes physiques reconnues coupables de l'infraction prévue au I encourent également les peines complémentaires suivantes :
+1° La suspension, pour une durée maximale de cinq ans, du permis de conduire ;
+2° L'immobilisation, pour une durée maximale d'un an, du véhicule qui a servi à commettre l'infraction ;
+3° La confiscation du véhicule qui a servi à commettre l'infraction ;
+4° L'interdiction de paraître dans certains lieux ou dans certaines catégories de lieux prévue au 12° de l'article 131-6 du code pénal.
+III.-Les personnes morales déclarées responsables pénalement, dans les conditions prévues à l'article 121-2 du code pénal, de l'infraction prévue au I du présent article encourent, outre l'amende suivant les modalités prévues à l'article 131-38 du même code, les peines prévues aux 8° et 9° de l'article 131-39 dudit code.
+L'action publique peut être éteinte, dans les conditions prévues aux articles 495-17 à 495-25 du code de procédure pénale, par le versement d'une amende forfaitaire d'un montant de 500 euros. Le montant de l'amende forfaitaire minorée est de 400 euros et le montant de l'amende forfaitaire majorée est de 1 000 euros.
+
+En vigueur depuis le 27 juin 2026.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A5.6 (Exercer sans carte ou sans inscription) ; fiche G1.5 (Prêter ou louer son inscription).
+
+### Article L3124-11 du Code des transports : Avertissement et retrait de la carte
+
+Page : https://revision-vtc.fr/wiki/l3124-11.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033745438
+
+En clair : En cas de violation de la réglementation, l'administration peut donner un avertissement au conducteur ou lui retirer sa carte, temporairement ou définitivement. La loi ne fixe pas de durée maximale au retrait temporaire.
+
+Concrètement : Le Conseil d'État a admis en 2023 un retrait temporaire de huit ans (CE, 18 octobre 2023, n° 475657).
+
+Texte officiel :
+
+En cas de violation de la réglementation applicable à la profession par le conducteur d'un véhicule de transport public particulier de personnes, l'autorité administrative peut lui donner un avertissement ou procéder au retrait temporaire ou définitif de sa carte professionnelle.
+
+En vigueur depuis le 01 janvier 2017.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A5.4 (Avertissement, retrait : les sanctions administratives).
+
+### Article L3124-12 du Code des transports : Les délits : maraude, démarchage, conduite sans carte
+
+Page : https://revision-vtc.fr/wiki/l3124-12.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054336042
+
+En clair : Est puni de trois ans de prison et 45 000 € d'amende le fait de louer un VTC à la place ou de prendre en charge un client sans réservation préalable, de démarcher un client pour une telle prise en charge, de la proposer à la vente ou de la promouvoir, ou de faire réaliser des courses par un conducteur sans carte professionnelle. S'y ajoutent les mêmes peines complémentaires (permis, véhicule, interdiction de paraître) ; une amende forfaitaire de 500 € peut éteindre l'action.
+
+Concrètement : Racoler des voyageurs à la sortie d'une gare est un délit, même si un prix est annoncé.
+
+Texte officiel :
+
+I. - Est puni de trois ans d'emprisonnement et de 45 000 € d'amende le fait de contrevenir au I, au 1° du II ou aux 2° ou 3° du III de l'article L. 3120-2 ou de réaliser ou de faire réaliser des prestations de transport relevant du présent titre lorsque le conducteur ne dispose pas de la carte professionnelle mentionnée à l'article L. 3120-2-2 correspondant à l'activité pratiquée.
+II. - Les personnes physiques reconnues coupables des infractions prévues au I du présent article encourent également les peines complémentaires suivantes :
+1° La suspension, pour une durée maximale de cinq ans, du permis de conduire ;
+2° L'immobilisation, pour une durée maximale d'un an, du véhicule qui a servi à commettre l'infraction ;
+3° La confiscation du véhicule qui a servi à commettre l'infraction ;
+4° L'interdiction de paraître dans certains lieux ou dans certaines catégories de lieux prévue au 12° de l'article 131-6 du code pénal.
+III. - Les personnes morales déclarées responsables pénalement, dans les conditions prévues à l'article 121-2 du code pénal, des infractions prévues au I du présent article encourent, outre l'amende suivant les modalités prévues à l'article 131-38 du même code, les peines prévues aux 8° et 9° de l'article 131-39 dudit code.
+L'action publique peut être éteinte, dans les conditions prévues aux articles 495-17 à 495-25 du code de procédure pénale, par le versement d'une amende forfaitaire d'un montant de 500 euros. Le montant de l'amende forfaitaire minorée est de 400 euros et le montant de l'amende forfaitaire majorée est de 1 000 euros.
+
+En vigueur depuis le 27 juin 2026.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A3.2 (La maraude, réservée au taxi) ; fiche A3.6 (Le client qui hèle et la fausse réservation) ; fiche A5.6 (Exercer sans carte ou sans inscription).
+
+### Article L3124-13 du Code des transports : Le contrôle incognito (loi de 2026)
+
+Page : https://revision-vtc.fr/wiki/l3124-13.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054336093
+
+En clair : Quand c'est nécessaire pour prouver un délit, les agents de contrôle peuvent ne révéler leur qualité qu'au moment où ils informent la personne de l'infraction.
+
+Concrètement : Un « client » qui demande une course sans réservation peut être un agent en civil.
+
+Texte officiel :
+
+Lorsque l'établissement de la preuve d'un des délits définis au présent chapitre en dépend, les agents habilités à constater des infractions au titre du présent code peuvent ne décliner leur qualité qu'au moment où ils informent la personne contrôlée de la constatation de l'infraction.
+
+En vigueur depuis le 27 juin 2026.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A5.3 (Le contrôle incognito).
+
+### Article R3124-1 du Code des transports : Qui sanctionne le conducteur
+
+Page : https://revision-vtc.fr/wiki/r3124-1.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389644
+
+En clair : Pour le retrait de carte (L3124-11), l'autorité compétente est celle qui a délivré la carte professionnelle.
+
+Concrètement : C'est la préfecture qui vous a délivré la carte qui peut la retirer.
+
+Texte officiel :
+
+Pour l'application de l'article L. 3124-1, l'autorité compétente est celle qui a délivré l'autorisation de stationnement.
+Pour l'application de l'article L. 3124-11, l'autorité compétente est celle qui a délivré la carte professionnelle.
+
+En vigueur depuis le 08 avril 2017.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A5.4 (Avertissement, retrait : les sanctions administratives).
+
+### Article R3124-4 du Code des transports : Le préfet du lieu de l'infraction
+
+Page : https://revision-vtc.fr/wiki/r3124-4.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389628
+
+En clair : Pour les sanctions administratives des conducteurs de VTC (L3124-11), l'autorité compétente est le préfet du département où l'infraction a été commise, ou le préfet de police à Paris.
+
+Concrètement : Une infraction commise à Nice relève du préfet des Alpes-Maritimes.
+
+Texte officiel :
+
+Pour l'application de l'article L. 3124-11, l'autorité compétente est le préfet de département du lieu de commission de la violation de la réglementation ou, si elle a lieu dans la commune de Paris, le préfet de police.
+
+En vigueur depuis le 08 avril 2017.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A5.4 (Avertissement, retrait : les sanctions administratives).
+
+### Article R3124-5 du Code des transports : Véhicule non conforme ou équipement de taxi
+
+Page : https://revision-vtc.fr/wiki/r3124-5.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048554
+
+En clair : Exploiter des VTC non conformes aux caractéristiques réglementaires, ou équipés d'un élément propre aux taxis, est une contravention de 3e classe.
+
+Concrètement : Un lumineux de toit sur une berline VTC est sanctionné.
+
+Texte officiel :
+
+Est puni de l'amende prévue pour les contraventions de la troisième classe :
+-le fait d'exercer l'activité d'exploitant de voitures de transport avec chauffeur avec des véhicules non conformes aux caractéristiques prévues à l'article R. 3122-6 ;
+-l'utilisation, par l'exploitant de voitures de transport avec chauffeur, à bord de ses véhicules, de l'un des équipements propres aux taxis énumérés au I de l'article R. 3122-7.
+
+En vigueur depuis le 01 janvier 2015.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche G3.2 (Rien qui ressemble à un taxi).
+
+### Article R3124-6 du Code des transports : Rouler sans vignette
+
+Page : https://revision-vtc.fr/wiki/r3124-6.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389612
+
+En clair : Utiliser une VTC sans la signalétique réglementaire, ou avec une signalétique mal utilisée, est une contravention de 4e classe.
+
+Concrètement : Vignettes retirées ou collées au mauvais endroit : 4e classe.
+
+Texte officiel :
+
+Est puni de l'amende prévue pour les contraventions de la quatrième classe, l'utilisation, par l'exploitant de voitures de transport avec chauffeur, de véhicules sans la signalétique prévue à l'article R. 3122-8, ou avec une signalétique utilisée dans des conditions non conformes aux dispositions de cet article.
+
+En vigueur depuis le 01 juillet 2017.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche G3.1 (Les deux vignettes : où, quoi, comment).
+
+### Article R3124-7 du Code des transports : Ne pas déclarer un changement au registre
+
+Page : https://revision-vtc.fr/wiki/r3124-7.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037330085
+
+En clair : Ne pas signaler dans les délais un changement au gestionnaire du registre, ou ne pas déclarer un véhicule de remplacement, est une contravention de 4e classe.
+
+Concrètement : Changer de véhicule sans le déclarer au registre est sanctionné.
+
+Texte officiel :
+
+Est puni de l'amende prévue pour les contraventions de la quatrième classe le fait de contrevenir au cinquième alinéa du II et aux obligations de transmission mentionnées au premier et au second alinéas du III de l'article R. 3122-1.
+
+En vigueur depuis le 24 août 2018.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche G1.4 (Déclarer ses conducteurs et ses véhicules).
+
+### Article R3124-11 du Code des transports : Contraventions de 5e classe : réservation et assurance
+
+Page : https://revision-vtc.fr/wiki/r3124-11.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389618
+
+En clair : Est une contravention de 5e classe le fait d'enfreindre certaines interdictions de l'article L3120-2 (celles qui ne sont pas des délits), ou de ne pas pouvoir présenter le justificatif d'assurance transport de personnes.
+
+Concrètement : Stationner à l'aéroport plus d'une heure avant la prise en charge relève de cette contravention.
+
+Texte officiel :
+
+Est puni de l'amende prévue pour les contraventions de la cinquième classe le fait de contrevenir aux dispositions :
+-à l'une des interdictions édictées à l'article L. 3120-2, à l'exception de celles prévues au 1° de son II et au 1° de son III,
+-de l'article R. 3120-4.
+
+En vigueur depuis le 08 avril 2017.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A3.4 (Gares et aéroports) ; fiche A4.2 (Les deux assurances du chauffeur).
+
+### Article R3124-12 du Code des transports : Les sanctions liées à la carte professionnelle
+
+Page : https://revision-vtc.fr/wiki/r3124-12.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048576
+
+En clair : Carte non apposée : 1re classe. Carte non présentée immédiatement : 2e classe. Carte non présentée dans les cinq jours après y avoir été invité : 4e classe. Exercer sans carte valide, ou faire travailler un conducteur sans carte valable : 5e classe. Faire réaliser des courses sans carte est par ailleurs un délit (L3124-12).
+
+Concrètement : Carte laissée dans la boîte à gants : contravention de 1re classe.
+
+Texte officiel :
+
+I.-Est puni de l'amende prévue pour les contraventions de la première classe le fait, pour tout conducteur d'un véhicule mentionné à l'article R. 3120-1 de ne pas apposer sa carte professionnelle conformément au premier alinéa de l'article R. 3120-6.
+II.-Est puni de l'amende prévue pour les contraventions de la deuxième classe le fait, pour tout conducteur mentionné au I, de ne pas présenter immédiatement sa carte professionnelle, en cours de validité, aux agents des services chargés des contrôles.
+III.-Est puni de l'amende prévue pour les contraventions de la quatrième classe le fait, pour tout conducteur mentionné au I, invité à justifier dans un délai de cinq jours de la possession d'une carte professionnelle, en cours de validité, de ne pas présenter ce document avant l'expiration de ce délai.
+IV.-Est puni de l'amende prévue pour les contraventions de la cinquième classe :
+-le fait d'exercer l'activité de conducteur de l'un des véhicules mentionnés au I sans être titulaire d'une carte professionnelle en cours de validité ;
+-le fait d'exercer l'activité d'exploitant de l'un des véhicules mentionnés au I en recourant à des conducteurs de véhicules mentionnés au I qui ne sont pas titulaires d'une carte professionnelle valable pour le transport effectué.
+
+En vigueur depuis le 01 janvier 2015.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A2.6 (La carte professionnelle au quotidien) ; fiche A2.8 (Carte expirée, oubliée ou prêtée).
+
+### Article R3124-13 du Code des transports : Vendre une course avec un véhicule non autorisé
+
+Page : https://revision-vtc.fr/wiki/r3124-13.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048578
+
+En clair : Proposer ou promouvoir une offre de transport avec des véhicules qui ne sont pas des véhicules de T3P, ou non conformes, est une contravention de 5e classe.
+
+Concrètement : Publier une annonce de « chauffeur privé » avec une voiture non inscrite au registre est sanctionné.
+
+Texte officiel :
+
+Est puni de l'amende prévue pour les contraventions de la cinquième classe :
+-le fait de proposer à la vente ou de promouvoir une offre de transport mentionnée à l'article L. 3120-1 avec des véhicules qui ne sont pas des véhicules de transport public particulier ;
+-le fait de proposer à la vente ou de promouvoir une offre de transport mentionnée à l'article L. 3120-1 effectuée avec des véhicules de transport public particulier non conformes aux caractéristiques définies par le présent titre.
+
+En vigueur depuis le 01 janvier 2015.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A5.6 (Exercer sans carte ou sans inscription).
+
+### Article D3120-21 du Code des transports : La commission locale du T3P
+
+Page : https://revision-vtc.fr/wiki/d3120-21.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034084266
+
+En clair : Chaque département a une commission locale des transports publics particuliers de personnes ; une commission unique couvre Paris et la petite couronne, auprès du préfet de police.
+
+Concrètement : C'est cette commission qui, en formation disciplinaire, donne son avis avant un retrait de carte.
+
+Texte officiel :
+
+Il est créé dans chaque département une commission consultative dénommée commission locale des transports publics particuliers de personnes.
+Pour la zone constituée de la ville de Paris, des départements des Hauts-de-Seine, de la Seine-Saint-Denis et du Val-de-Marne et des parties de Seine-et-Marne et du Val-d'Oise situées sur les emprises des aéroports de Paris-Charles-de-Gaulle et de Paris-Le Bourget, une commission unique est créée auprès du préfet de police.
+
+En vigueur depuis le 01 juin 2017.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A5.4 (Avertissement, retrait : les sanctions administratives).
+
+### Article D3120-32 du Code des transports : Les sections disciplinaires
+
+Page : https://revision-vtc.fr/wiki/d3120-32.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034084298
+
+En clair : La commission locale peut comprendre une section disciplinaire par profession (taxis, VTC, deux-roues), composée à parts égales de représentants de l'État et de professionnels.
+
+Concrètement : Un dossier de VTC est examiné par la section VTC, avec des professionnels du métier.
+
+Texte officiel :
+
+La commission peut comprendre jusqu'à trois sections spécialisées en matière disciplinaire pour respectivement les taxis, les voitures de transport avec chauffeur et les véhicules motorisés à deux ou trois roues.
+Chaque section spécialisée en matière disciplinaire est composée, à parts égales, de membres du collège de l'Etat et de membres du collège des professionnels relevant de la profession concernée.
+
+En vigueur depuis le 01 juin 2017.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A5.4 (Avertissement, retrait : les sanctions administratives).
+
+### Article D3120-38 du Code des transports : L'avis de la commission avant une sanction
+
+Page : https://revision-vtc.fr/wiki/d3120-38.html
+Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034084314
+
+En clair : Les préfectures fixent les conditions dans lesquelles les sections disciplinaires sont consultées avant une sanction administrative (L3124-11).
+
+Concrètement : Le conducteur convoqué peut présenter ses observations avant la décision.
+
+Texte officiel :
+
+Les autorités compétentes pour délivrer les cartes professionnelles de conducteurs définissent les conditions dans lesquelles les sections disciplinaires de la commission des transports publics particuliers sont consultées pour avis dans le cadre des procédures de sanctions administratives prévues à l'article L. 3124-11.
+
+En vigueur depuis le 01 juin 2017.
+
+Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A5.4 (Avertissement, retrait : les sanctions administratives) ; fiche A5.5 (Contester une sanction).
