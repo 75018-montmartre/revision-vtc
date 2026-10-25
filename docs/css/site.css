@@ -218,3 +218,25 @@ main:has(.une){padding-top:0}
 .texte p{margin:.25rem 0}
 .texte-ref{font-family:var(--sans);font-size:.875rem;font-weight:600;color:var(--accent)}
 .texte-fiches{font-family:var(--sans);font-size:.875rem;color:var(--gris)}
+
+/* wiki des textes du métier */
+.fil ol{list-style:none;margin:0 0 1rem;padding:0;display:flex;flex-wrap:wrap;gap:.25rem;font-family:var(--sans);font-size:.875rem;color:var(--gris)}
+.fil li+li::before{content:"›";margin:0 .4rem 0 .15rem;color:var(--gris)}
+.num-art{font-family:var(--sans);font-weight:700;color:var(--accent);white-space:nowrap;margin-right:.35rem}
+h1 .num-art{display:block;font-size:1rem;letter-spacing:.02em;margin-bottom:.35rem}
+.en-clair{background:var(--carte);border:1px solid var(--filet);border-left:4px solid var(--accent-trait);padding:.25rem 1.25rem 1rem;margin:1.5rem 0}
+.en-clair h2{border-top:0;margin-top:.75rem;padding-top:0}
+.concretement{background:var(--doux);padding:.75rem 1rem;margin:0}
+.officiel{font-size:1.0625rem;line-height:1.6;border-left:2px solid var(--filet);padding-left:1.125rem}
+.officiel p{margin:0 0 .75rem}
+.officiel h3{font-size:1rem;margin:1.25rem 0 .5rem}
+.officiel-art:first-child h3{margin-top:0}
+.source{font-family:var(--sans);font-size:.875rem;color:var(--gris);line-height:1.5}
+.wiki-livre ul,.voir-aussi{padding-left:1.25rem}
+.wiki-livre li,.voir-aussi li{margin:.25rem 0}
+.cherche{margin:1.5rem 0 1rem;max-width:32rem}
+input[type=search]{font-family:var(--sans);font-size:1rem;padding:.625rem .75rem;border:1.5px solid var(--gris);border-radius:2px;background:var(--fond);color:var(--encre);width:100%;box-sizing:border-box}
+.wiki-liste{list-style:none;padding:0;margin:.5rem 0 0;border-top:1px solid var(--filet)}
+.wiki-liste li{border-bottom:1px solid var(--filet);padding:.625rem 0}
+.wiki-liste a{text-decoration:none;color:var(--encre)}
+.wiki-liste a:hover{color:var(--accent);text-decoration:underline}

@@ -1,0 +1,2326 @@
+{
+ "verifie": "25 octobre 2026",
+ "themes": [
+  {
+   "cle": "cadre",
+   "titre": "Le cadre du métier",
+   "intro": "Ce qu'est le transport public particulier de personnes et la place du VTC."
+  },
+  {
+   "cle": "conducteur",
+   "titre": "Devenir et rester conducteur",
+   "intro": "Examen, carte professionnelle, honorabilité, formation continue."
+  },
+  {
+   "cle": "exploitant",
+   "titre": "L'exploitant et le registre",
+   "intro": "L'inscription au registre des VTC, la capacité financière, l'assurance."
+  },
+  {
+   "cle": "vehicule",
+   "titre": "Le véhicule et la vignette",
+   "intro": "Les caractéristiques du véhicule, la signalétique, le contrôle technique."
+  },
+  {
+   "cle": "reservation",
+   "titre": "Réservation, maraude et attente",
+   "intro": "La réservation préalable, son justificatif, le retour à la base."
+  },
+  {
+   "cle": "plateformes",
+   "titre": "Plateformes et centrales de réservation",
+   "intro": "Les droits du chauffeur face aux plateformes et leurs obligations."
+  },
+  {
+   "cle": "sanctions",
+   "titre": "Contrôles et sanctions",
+   "intro": "Délits, contraventions, retrait de carte, contrôle incognito."
+  }
+ ],
+ "articles": [
+  {
+   "slug": "l3120-1",
+   "num": "L3120-1",
+   "source": "Code des transports",
+   "theme": "cadre",
+   "titre": "Le champ du transport public particulier (T3P)",
+   "en_clair": "Cet article délimite le T3P : le transport de personnes payant, avec un véhicule de moins de dix places. Les bus et cars (transport collectif) et le transport privé en sont exclus.",
+   "concretement": "Un VTC, un taxi ou une moto-taxi entrent dans ce cadre ; un minibus de 12 places ou une navette d'entreprise gratuite, non.",
+   "fiches": [
+    [
+     "A1.1",
+     "Les quatre familles du T3P"
+    ],
+    [
+     "A1.3",
+     "Ce qui n'est pas du T3P"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 03 octobre 2014",
+   "modif": [
+    "Création LOI n°2014-1104 du 1er octobre 2014 - art. 10"
+   ],
+   "texte": [
+    "Le présent titre est applicable aux prestations de transport routier de personnes effectuées à titre onéreux avec des véhicules de moins de dix places, à l'exclusion des transports publics collectifs mentionnés au titre Ier de la présente partie et du transport privé routier de personnes mentionné au titre III."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000029530535"
+  },
+  {
+   "slug": "r3120-1",
+   "num": "R3120-1",
+   "source": "Code des transports",
+   "theme": "cadre",
+   "titre": "Qui fait du T3P : taxis, VTC et deux-roues",
+   "en_clair": "Le T3P est exercé par trois professions : les taxis, les voitures de transport avec chauffeur et les véhicules motorisés à deux ou trois roues. Le transport peut concerner autant de personnes qu'il y a de places dans le véhicule, toujours contre paiement.",
+   "concretement": "Une berline VTC de 5 places peut prendre 4 passagers pour la même course.",
+   "fiches": [
+    [
+     "A1.1",
+     "Les quatre familles du T3P"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 janvier 2015",
+   "modif": [
+    "Créé par DÉCRET n°2014-1725 du 30 décembre 2014 - art."
+   ],
+   "texte": [
+    "Les prestations de transports publics particuliers sont des prestations de transport public routier de personnes qui ne relèvent ni des transports publics collectifs régis par le titre Ier du présent livre, ni du transport privé routier de personnes régi par le titre III du même livre.",
+    "Ces prestations peuvent être proposées à autant de personnes que de places disponibles dans le véhicule. Elles sont exécutées, à titre onéreux, dans les conditions fixées au présent titre, par les taxis, les voitures de transport avec chauffeur et les véhicules motorisés à deux ou trois roues."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048391"
+  },
+  {
+   "slug": "l3120-5",
+   "num": "L3120-5",
+   "source": "Code des transports",
+   "theme": "cadre",
+   "titre": "Les véhicules électriques et hybrides",
+   "en_clair": "Les véhicules électriques ou hybrides peuvent servir de VTC même s'ils ne respectent pas les critères techniques fixés par les textes (dimensions, puissance, âge).",
+   "concretement": "Une petite citadine hybride, trop courte pour les critères classiques, peut être utilisée comme VTC.",
+   "fiches": [
+    [
+     "G2.3",
+     "Hybrides et électriques ; le verdissement des flottes"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 03 octobre 2014",
+   "modif": [
+    "Création LOI n°2014-1104 du 1er octobre 2014 - art. 10"
+   ],
+   "texte": [
+    "Les prestations de transport mentionnées à l'article L. 3120-1 peuvent être effectuées avec des véhicules électriques ou hybrides, par dérogation aux caractéristiques techniques imposées par voie réglementaire en application du présent titre."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000029530543"
+  },
+  {
+   "slug": "l3120-7",
+   "num": "L3120-7",
+   "source": "Code des transports",
+   "theme": "cadre",
+   "titre": "La base de données nationale du T3P",
+   "en_clair": "Une base nationale recense les conducteurs, les exploitants et les véhicules du T3P, et les démarches de la profession se font en ligne. Les autorités de contrôle peuvent y accéder.",
+   "concretement": "Lors d'un contrôle, l'agent peut vérifier en direct votre carte et l'inscription de votre véhicule.",
+   "fiches": [
+    [
+     "A1.5",
+     "Qui fait quoi"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 27 décembre 2019",
+   "modif": [
+    "Création LOI n°2019-1428 du 24 décembre 2019 - art. 46 (V)"
+   ],
+   "texte": [
+    "Une base de données nationale sur le transport public particulier de personnes recense les informations relatives aux conducteurs, aux exploitants et aux véhicules.",
+    "Les procédures relatives à l'exercice des professions du transport public particulier de personnes sont dématérialisées. (1)",
+    "Les autorités administratives et judiciaires peuvent avoir accès aux données nécessaires à l'exercice de leurs missions de contrôle des règles de la police de la circulation.",
+    "Un décret en Conseil d'Etat pris après avis de la Commission nationale de l'informatique et des libertés détermine les modalités d'application du présent article."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039677691"
+  },
+  {
+   "slug": "l3122-1",
+   "num": "L3122-1",
+   "source": "Code des transports",
+   "theme": "cadre",
+   "titre": "Ce qu'est un exploitant de VTC",
+   "en_clair": "Le chapitre sur les VTC s'applique aux exploitants qui mettent à disposition de leurs clients une ou plusieurs voitures avec chauffeur, à des conditions fixées à l'avance entre les parties.",
+   "concretement": "Le prix et les conditions de la course sont convenus avant la prise en charge, jamais au compteur comme un taxi.",
+   "fiches": [
+    [
+     "A1.2",
+     "Taxi ou VTC : ce qui les sépare"
+    ],
+    [
+     "G1.1",
+     "Exploitant et conducteur : deux qualités distinctes"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 31 décembre 2016",
+   "modif": [
+    "Modifié par LOI n°2016-1920 du 29 décembre 2016 - art. 13 (V)"
+   ],
+   "texte": [
+    "Le présent chapitre s'applique aux exploitants qui mettent à la disposition de leur clientèle une ou plusieurs voitures de transport avec chauffeur, dans des conditions fixées à l'avance entre les parties.",
+    "Les modalités d'application du présent chapitre sont définies par décret en Conseil d'Etat."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033745479"
+  },
+  {
+   "slug": "l3122-4-1",
+   "num": "L3122-4-1",
+   "source": "Code des transports",
+   "theme": "cadre",
+   "titre": "Le label de qualité des VTC",
+   "en_clair": "Un label peut être attribué aux exploitants de VTC qui offrent des prestations répondant à des normes de qualité particulières. Ses critères sont fixés par arrêté des ministres des transports et du tourisme.",
+   "concretement": "Ce label est facultatif : il ne conditionne pas le droit d'exercer.",
+   "fiches": [],
+   "vigueur": "En vigueur depuis le 31 décembre 2016",
+   "modif": [
+    "Création LOI n°2016-1920 du 29 décembre 2016 - art. 4"
+   ],
+   "texte": [
+    "Un label peut être attribué aux exploitants de voitures de transport avec chauffeur mentionnés à l'article L. 3122-1 qui offrent aux passagers des prestations répondant à des normes de qualité particulières.",
+    "Les critères et les modalités d'attribution du label sont définis par un arrêté conjoint des ministres chargés des transports et du tourisme."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033738019"
+  },
+  {
+   "slug": "l3120-2-1",
+   "num": "L3120-2-1",
+   "source": "Code des transports",
+   "theme": "conducteur",
+   "titre": "Aptitude et honorabilité : les deux conditions",
+   "en_clair": "Tout conducteur de T3P doit remplir des conditions d'aptitude professionnelle (l'examen) et d'honorabilité (un casier compatible), précisées par décret.",
+   "concretement": "Réussir l'examen ne suffit pas : une condamnation incompatible empêche d'obtenir la carte (voir R3120-8).",
+   "fiches": [
+    [
+     "A2.1",
+     "Les conditions d'accès à la profession"
+    ],
+    [
+     "A2.2",
+     "Honorabilité et bulletin n° 2"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 27 décembre 2019",
+   "modif": [
+    "Modifié par LOI n°2019-1428 du 24 décembre 2019 - art. 43"
+   ],
+   "texte": [
+    "Les conducteurs des véhicules qui exécutent les prestations mentionnées à l'article L. 3120-1 répondent, dans des conditions définies par décret en Conseil d'Etat, à des conditions d'aptitude professionnelle, à l'exclusion des conducteurs de cycles à pédalage assisté, et à des conditions d'honorabilité professionnelle."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039784444"
+  },
+  {
+   "slug": "l3120-2-2",
+   "num": "L3120-2-2",
+   "source": "Code des transports",
+   "theme": "conducteur",
+   "titre": "La carte professionnelle obligatoire",
+   "en_clair": "Tout conducteur de taxi, de VTC ou de deux-roues motorisé doit être titulaire d'une carte professionnelle délivrée par l'administration.",
+   "concretement": "Conduire un client sans carte est un délit (voir L3124-12).",
+   "fiches": [
+    [
+     "A2.6",
+     "La carte professionnelle au quotidien"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 27 décembre 2019",
+   "modif": [
+    "Modifié par LOI n°2019-1428 du 24 décembre 2019 - art. 43"
+   ],
+   "texte": [
+    "Les conducteurs des véhicules qui exécutent les prestations mentionnées à l'article L. 3120-1, à l'exclusion des conducteurs de cycles à pédalage assisté, sont titulaires d'une carte professionnelle délivrée par l'autorité administrative."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039784441"
+  },
+  {
+   "slug": "r3120-6",
+   "num": "R3120-6",
+   "source": "Code des transports",
+   "theme": "conducteur",
+   "titre": "La carte professionnelle : conditions, délai, affichage",
+   "en_clair": "La carte est délivrée à celui qui a un permis hors période probatoire, a réussi l'examen (ou fait reconnaître une qualification européenne) et remplit la condition d'honorabilité. La préfecture la remet dans un délai maximum de trois mois. Pendant le travail, elle est apposée sur le pare-brise, photo visible de l'extérieur.",
+   "concretement": "Le chauffeur qui arrête définitivement son activité rend sa carte ; s'il ne le fait pas, elle lui est retirée.",
+   "fiches": [
+    [
+     "A2.1",
+     "Les conditions d'accès à la profession"
+    ],
+    [
+     "A2.6",
+     "La carte professionnelle au quotidien"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 12 août 2026",
+   "modif": [
+    "Modifié par Décret n°2026-764 du 5 août 2026 - art. 1"
+   ],
+   "texte": [
+    "Lorsque le conducteur d'un véhicule de transport public particulier utilise ce dernier à titre professionnel, il appose sa carte professionnelle sur le pare-brise ou, à défaut, sur le véhicule de telle façon que la photographie soit facilement visible de l'extérieur. Cette carte comporte les informations fixées par un arrêté du ministre chargé des transports.",
+    "La carte professionnelle, ou son équivalent pour les conducteurs relevant de l'article R. 3120-8-1, est délivrée à toute personne souhaitant exercer la profession de conducteur d'un véhicule de transport public particulier qui :",
+    "1° Est titulaire d'un permis de conduire autorisant la conduite du véhicule utilisé et pour lequel, selon le cas, le délai prévu au 3° de l'article L. 3123-1 du présent code ou le délai probatoire prévu à l'article L. 223-1 du code de la route est expiré lors de l'entrée initiale dans la profession ou, pour une personne relevant de l'article R. 3120-8-1, est titulaire d'un permis qui lui a été délivré depuis plus de trois ans à la date du dépôt de la demande prévue à cet article ;",
+    "2° Satisfait à une condition d'aptitude professionnelle conformément, selon le cas, soit à l'article R. 3120-7, soit à l'article R. 3120-8-1 ;",
+    "3° Satisfait à une condition d'honorabilité professionnelle conformément à l'article R. 3120-8 ou, pour les conducteurs relevant de l'article R. 3120-8-1, justifie de garanties d'honorabilité équivalentes.",
+    "L'autorité administrative compétente remet la carte professionnelle dans un délai maximum de trois mois suivant la date de la demande. A l'appui de sa demande, le conducteur fournit les documents justificatifs fixés par un arrêté du ministre chargé des transports.",
+    "Le conducteur restitue sa carte professionnelle lorsqu'il cesse définitivement son activité professionnelle. A défaut d'avoir été restituée, elle lui est retirée par l'autorité administrative.",
+    "Il la restitue également lorsque l'une des conditions auxquelles sa délivrance est subordonnée par les dispositions du présent titre cesse d'être remplie. A défaut de restitution, elle lui est retirée après qu'il a été mis à même de présenter ses observations écrites sur la décision de retrait envisagée par l'autorité compétente."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054659832"
+  },
+  {
+   "slug": "r3120-7",
+   "num": "R3120-7",
+   "source": "Code des transports",
+   "theme": "conducteur",
+   "titre": "L'examen d'accès à la profession",
+   "en_clair": "L'aptitude est constatée par un examen propre à chaque profession : des épreuves écrites d'admissibilité puis une épreuve pratique d'admission. On ne peut pas s'y inscrire après un retrait définitif de carte de moins de dix ans, une exclusion pour fraude de moins de cinq ans, ou avec un permis encore probatoire.",
+   "concretement": "Un candidat dont le permis est en période probatoire doit attendre la fin de celle-ci pour s'inscrire.",
+   "fiches": [
+    [
+     "A2.4",
+     "L'examen, seule porte d'entrée"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 25 février 2021",
+   "modif": [
+    "Modifié par Décret n°2021-202 du 23 février 2021 - art. 10"
+   ],
+   "texte": [
+    "Le respect de la condition d'aptitude professionnelle mentionnée à l'article L. 3120-2-1 est constaté par la réussite à un examen, propre à chacune des professions du transport public particulier de personnes. Cet examen comprend des épreuves écrites d'admissibilité et une épreuve pratique d'admission dont le programme et les épreuves sont définis par un arrêté du ministre chargé des transports et du ministre chargé de l'économie.",
+    "Il est organisé dans les conditions prévues par les articles 24 à 24-4 et par le II de l'article 26 du code de l'artisanat. Le contenu et la difficulté des sujets des épreuves écrites d'admissibilité et des épreuves d'admission revêtent un caractère adéquat et proportionné à l'appréciation de la condition d'aptitude professionnelle mentionnée à l'article L. 3120-2-1 du code des transports qui consiste à être en capacité d'assurer dans des conditions de confort et de sécurité le transport de passagers, dans le respect des règles applicables à sa profession et à être en capacité d'informer de manière claire les passagers sur la facturation des courses. Le ministre chargé des transports et le ministre chargé de l'économie peuvent adresser à cette fin des instructions aux personnes participant à l'évaluation des candidats.",
+    "Nul ne peut s'inscrire à ces examens si :",
+    "1° Il a fait l'objet, dans les dix ans qui précèdent sa demande, d'un retrait définitif de sa carte professionnelle en application de l'article L. 3124-11 ;",
+    "2° Il a fait l'objet, dans les cinq ans qui précèdent sa demande, d'une exclusion pour fraude lors d'une session à l'un des examens des professions du transport public particulier de personnes ;",
+    "3° Le délai probatoire applicable à son permis en vertu de l'article L. 223-1 du code de la route n'est pas expiré ou, le cas échéant, si la condition d'ancienneté prévue au 3° de l'article L. 3123-1 du présent code n'est pas remplie."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043177694"
+  },
+  {
+   "slug": "r3120-8",
+   "num": "R3120-8",
+   "source": "Code des transports",
+   "theme": "conducteur",
+   "titre": "L'honorabilité : les condamnations qui interdisent d'exercer",
+   "en_clair": "On ne peut pas être conducteur si le bulletin n° 2 du casier judiciaire porte certaines condamnations : un délit routier sanctionné par la perte de la moitié des points, une conduite sans permis ou malgré une annulation, ou au moins six mois de prison pour vol, escroquerie, abus de confiance, violences volontaires, agression sexuelle, trafic d'armes ou de stupéfiants, extorsion.",
+   "concretement": "Une condamnation pour conduite après annulation du permis ferme l'accès à la profession.",
+   "fiches": [
+    [
+     "A2.2",
+     "Honorabilité et bulletin n° 2"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 08 avril 2017",
+   "modif": [
+    "Modifié par Décret n°2017-483 du 6 avril 2017 - art. 2"
+   ],
+   "texte": [
+    "Nul ne peut exercer la profession de conducteur de véhicule de transport public particulier si figure au bulletin n° 2 de son casier judiciaire, ou à son équivalent pour les non-nationaux, l'une des condamnations suivantes :",
+    "1° Une condamnation définitive pour un délit sanctionné en vertu du code de la route par une réduction de la moitié du nombre maximal de points du permis de conduire ;",
+    "2° Une condamnation définitive pour conduite d'un véhicule sans être titulaire du permis de conduire correspondant à la catégorie du véhicule utilisé ou pour conduite malgré l'annulation du permis de conduire ou malgré l'interdiction d'obtenir la délivrance du permis, ou encore pour refus de restituer son permis de conduire après l'invalidation ou l'annulation de celui-ci ;",
+    "3° Une condamnation définitive prononcée par une juridiction, française ou étrangère, à une peine criminelle ou à une peine correctionnelle d'au moins six mois d'emprisonnement pour vol, escroquerie, abus de confiance, atteinte volontaire à l'intégrité de la personne, agression sexuelle , trafic d'armes, extorsion de fonds ou infraction à la législation sur les stupéfiants."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389382"
+  },
+  {
+   "slug": "r3120-8-1",
+   "num": "R3120-8-1",
+   "source": "Code des transports",
+   "theme": "conducteur",
+   "titre": "Les conducteurs venant d'un autre pays européen",
+   "en_clair": "Un ressortissant de l'Union européenne ou de l'EEE peut faire reconnaître son aptitude par un titre de formation de son pays ou par un an d'expérience au cours des dix dernières années. Le préfet peut exiger une épreuve d'aptitude ou un stage d'adaptation, et contrôler le niveau de français.",
+   "concretement": "Pour un conducteur VTC, c'est le préfet du département de domicile qui constate l'aptitude (le préfet de police à Paris).",
+   "fiches": [
+    [
+     "A2.4",
+     "L'examen, seule porte d'entrée"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 12 août 2026",
+   "modif": [
+    "Modifié par Décret n°2026-764 du 5 août 2026 - art. 1"
+   ],
+   "texte": [
+    "I.-Les conducteurs, ressortissants d'un Etat membre de l'Union européenne ou d'un Etat partie à l'Espace économique européen, qui souhaitent exercer de manière durable leur profession sur le territoire national, peuvent justifier de leur aptitude professionnelle de conducteur pour exécuter les prestations mentionnées à l'article L. 3120-1 :",
+    "1° Soit par la production d'une attestation de compétences ou d'un titre de formation délivré par l'autorité compétente d'un de ces Etats lorsqu'une telle attestation ou un tel titre est exigé pour exécuter ces prestations ;",
+    "2° Soit par la production de toute pièce de nature à établir une expérience professionnelle dans l'exercice de cette profession d'une durée minimale d'un an à temps plein, ou à temps partiel pour une durée équivalente, au cours des dix dernières années.",
+    "II.-L'aptitude professionnelle est constatée :",
+    "1° Pour les demandeurs souhaitant exercer une activité de conducteur de taxi, par le préfet du département dans lequel le demandeur souhaite exercer son activité ou par le préfet de police dans sa zone de compétence ;",
+    "2° Pour les demandeurs souhaitant exercer une activité de conducteur de voiture de transport avec chauffeur ou de conducteur de véhicules à deux ou trois roues motorisé, par le préfet du département de leur domiciliation ou par le préfet de police dans sa zone de compétence.",
+    "III.-Le préfet de département ou le préfet de police dans sa zone de compétence peut soumettre le demandeur à l'obligation, au choix de ce dernier, de passer avec succès une épreuve d'aptitude ou de suivre un stage d'adaptation lorsque les compétences qu'il a acquises au cours de son expérience professionnelle ou au moyen de la formation qu'il a reçue dans son Etat d'origine ne couvrent pas, en ce qui concerne les matières essentielles à l'exercice de son activité, la différence constatée entre, d'une part, la formation reçue dans son Etat d'origine et, d'autre part, les compétences validées par l'examen prévu à l'article R. 3120-7.",
+    "IV.-Les personnes mentionnées au I doivent disposer d'un niveau en langue française suffisant pour exercer la profession souhaitée. Le préfet du département ou, dans sa zone de compétence, le préfet de police, peut organiser un contrôle de ce niveau de connaissance après la reconnaissance des qualifications professionnelles et s'il existe un doute sérieux et concret sur le niveau suffisant des connaissances linguistiques du professionnel au regard des activités qu'il entend exercer.",
+    "V.-Les modalités d'application du présent article, notamment le contenu des mesures de compensation prévues au III et du contrôle linguistique prévu au IV, ainsi que les modalités selon lesquelles le préfet ou le préfet de police établit un rapport annuel rendant compte de son activité en matière de reconnaissance des qualifications professionnelles, sont précisées par arrêté du ministre chargé des transports."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054659821"
+  },
+  {
+   "slug": "r3120-8-2",
+   "num": "R3120-8-2",
+   "source": "Code des transports",
+   "theme": "conducteur",
+   "titre": "La formation continue tous les cinq ans",
+   "en_clair": "Tout conducteur suit tous les cinq ans un stage de formation continue dans un centre agréé. Il reçoit une attestation valable cinq ans, nécessaire au renouvellement de la carte.",
+   "concretement": "Le contenu du stage (14 heures) est fixé par l'arrêté du 11 août 2017.",
+   "fiches": [
+    [
+     "A2.7",
+     "La formation continue obligatoire"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 08 avril 2017",
+   "modif": [
+    "Créé par Décret n°2017-483 du 6 avril 2017 - art. 2"
+   ],
+   "texte": [
+    "Tout conducteur exécutant des prestations mentionnées à l'article L. 3120-1 est tenu de suivre, tous les cinq ans, un stage de formation continue dispensé par un centre de formation agréé conformément à l'article R. 3120-9. Le contenu de cette formation est défini par un arrêté du ministre chargé des transports et du ministre chargé de l'économie. L'accomplissement de cette obligation est sanctionné par la délivrance d'une attestation valable cinq ans."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034380984"
+  },
+  {
+   "slug": "r3120-9",
+   "num": "R3120-9",
+   "source": "Code des transports",
+   "theme": "conducteur",
+   "titre": "Les centres de formation agréés",
+   "en_clair": "Un centre qui forme les conducteurs (formation initiale ou continue) doit être agréé par le préfet, pour cinq ans. L'agrément peut être suspendu jusqu'à six mois ou retiré si les conditions ne sont plus remplies.",
+   "concretement": "Avant de payer une formation, vérifiez que le centre figure sur la liste des centres agréés de la préfecture.",
+   "fiches": [
+    [
+     "A2.7",
+     "La formation continue obligatoire"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 08 avril 2017",
+   "modif": [
+    "Modifié par Décret n°2017-483 du 6 avril 2017 - art. 2"
+   ],
+   "texte": [
+    "L'exploitation d'un centre de formation en vue de la formation, initiale ou continue, des conducteurs des véhicules de transport public particulier est subordonnée à la délivrance d'un agrément par le préfet du département où est situé le centre de formation, ou, s'il est situé dans la commune de Paris, le préfet de police. Cet agrément est valable cinq ans.",
+    "La procédure d'instruction des demandes et les conditions de délivrance de cet agrément sont définies par un arrêté du ministre chargé des transports, notamment en ce qui concerne les clauses obligatoires du règlement intérieur de l'établissement, les exigences minimales concernant la qualification des formateurs, les locaux, les matériels et véhicules utilisés, ainsi que le programme et le contenu des formations.",
+    "L'agrément peut être suspendu pour une durée maximale de six mois ou retiré par l'autorité administrative qui l'a délivré lorsque l'une des conditions auxquelles sa délivrance est subordonnée cesse d'être remplie.",
+    "La suspension ou le retrait de l'agrément sont décidés après que le gestionnaire du centre de formation, préalablement informé des griefs susceptibles d'être retenus contre lui, a été mis à même de présenter ses observations écrites et, le cas échéant, sur sa demande, des observations orales. Il peut se faire assister par un conseil ou se faire représenter par le mandataire de son choix. La décision de suspension ou de retrait de l'agrément est notifiée au représentant légal du centre de formation.",
+    "L'agrément ne peut être délivré aux personnes qui ont fait l'objet d'une condamnation prononcée par une juridiction, française ou étrangère, à une peine criminelle ou à une peine correctionnelle pour l'une des infractions sanctionnées à l'article R. 212-4 du code de la route."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389387"
+  },
+  {
+   "slug": "d3120-5",
+   "num": "D3120-5",
+   "source": "Code des transports",
+   "theme": "conducteur",
+   "titre": "La visite médicale",
+   "en_clair": "Les règles de la visite médicale périodique des conducteurs de T3P sont celles du Code de la route, aux articles R. 221-10 et R. 221-11.",
+   "concretement": "Un avis médical en cours de validité est exigé pour obtenir et renouveler la carte.",
+   "fiches": [
+    [
+     "A2.3",
+     "L'aptitude médicale"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 janvier 2015",
+   "modif": [
+    "Créé par DÉCRET n°2014-1725 du 30 décembre 2014 - art."
+   ],
+   "texte": [
+    "Les règles relatives à la visite médicale périodique des conducteurs de véhicules de transport public particulier sont fixées par les articles R. 221-10 et R. 221-11 du code de la route."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048401"
+  },
+  {
+   "slug": "r3122-10",
+   "num": "R3122-10",
+   "source": "Code des transports",
+   "theme": "conducteur",
+   "titre": "Qui délivre la carte VTC",
+   "en_clair": "La carte professionnelle de conducteur VTC est délivrée par le préfet du département où le demandeur a élu domicile, ou par le préfet de police s'il habite Paris.",
+   "concretement": "Un chauffeur domicilié à Lyon s'adresse à la préfecture du Rhône.",
+   "fiches": [
+    [
+     "A2.6",
+     "La carte professionnelle au quotidien"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 janvier 2019",
+   "modif": [
+    "Modifié par Décret n°2018-1036 du 26 novembre 2018 - art. 2"
+   ],
+   "texte": [
+    "L'autorité administrative compétente pour délivrer la carte professionnelle de conducteur de voiture de transport avec chauffeur, mentionnée à l'article L. 3120-2-2, est le préfet du département dans lequel le demandeur a élu domicile ou, s'il a élu domicile dans la commune de Paris, le préfet de police."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037661921"
+  },
+  {
+   "slug": "l3120-4",
+   "num": "L3120-4",
+   "source": "Code des transports",
+   "theme": "exploitant",
+   "titre": "L'assurance responsabilité civile professionnelle",
+   "en_clair": "Toute personne qui fournit des prestations de T3P doit pouvoir justifier à tout moment d'une assurance couvrant sa responsabilité civile professionnelle.",
+   "concretement": "Cette attestation est jointe à la demande d'inscription au registre (R3122-1).",
+   "fiches": [
+    [
+     "A4.2",
+     "Les deux assurances du chauffeur"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 31 décembre 2016",
+   "modif": [
+    "Modifié par LOI n°2016-1920 du 29 décembre 2016 - art. 13 (V)"
+   ],
+   "texte": [
+    "Les personnes qui fournissent des prestations mentionnées à l'article L. 3120-1 sont en mesure de justifier à tout moment de l'existence d'un contrat d'assurance couvrant leur responsabilité civile professionnelle."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033745494"
+  },
+  {
+   "slug": "r3120-4",
+   "num": "R3120-4",
+   "source": "Code des transports",
+   "theme": "exploitant",
+   "titre": "Le justificatif d'assurance à bord",
+   "en_clair": "Le conducteur doit pouvoir présenter à tout moment aux agents de contrôle le justificatif d'assurance pour le transport de personnes à titre onéreux.",
+   "concretement": "Ne pas le présenter est une contravention de 5e classe (R3124-11).",
+   "fiches": [
+    [
+     "A4.2",
+     "Les deux assurances du chauffeur"
+    ],
+    [
+     "G4.2",
+     "Présenter ses documents sur-le-champ"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 avril 2024",
+   "modif": [
+    "Modifié par Décret n°2023-1152 du 8 décembre 2023 - art. 6"
+   ],
+   "texte": [
+    "Le conducteur d'un véhicule de transport public particulier est, à tout moment, en mesure de présenter aux agents chargés des contrôles le justificatif d'assurance pour le transport public de personnes à titre onéreux mentionné au III de l'article R. 211-14-0-1 du code des assurances."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048547741"
+  },
+  {
+   "slug": "l3122-3",
+   "num": "L3122-3",
+   "source": "Code des transports",
+   "theme": "exploitant",
+   "titre": "Le registre des VTC",
+   "en_clair": "Les exploitants de VTC doivent être inscrits sur un registre public, renouvelable tous les cinq ans, contre paiement de frais. L'inscription ne peut pas être prêtée ou louée à un tiers. L'exploitant y déclare ses conducteurs, leur numéro de carte et les immatriculations de ses véhicules.",
+   "concretement": "Exercer sans être inscrit est un délit : trois ans de prison et 45 000 € d'amende (L3124-7).",
+   "fiches": [
+    [
+     "G1.2",
+     "S'inscrire au registre des VTC"
+    ],
+    [
+     "G1.5",
+     "Prêter ou louer son inscription"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 27 juin 2026",
+   "modif": [
+    "Modifié par LOI n°2026-534 du 25 juin 2026 - art. 28 (V)"
+   ],
+   "texte": [
+    "Les exploitants mentionnés à l'article L. 3122-1 sont inscrits sur un registre dont les modalités de gestion sont définies par voie réglementaire. L'inscription sur ce registre est effectuée dès que le dossier d'inscription est complet et qu'il en résulte que l'exploitant remplit les conditions prévues à l'article L. 3122-4, sous réserve du deuxième alinéa de l'article L. 3124-8.",
+    "Cette inscription au registre ne peut être mise à la disposition d'un tiers, à titre gratuit ou onéreux.",
+    "Le registre mentionné au premier alinéa du présent article est public.",
+    "Cette inscription est renouvelable tous les cinq ans. Elle donne lieu à une mise à jour régulière des informations du dossier d'inscription.",
+    "L'inscription est subordonnée au paiement préalable, auprès du gestionnaire du registre mentionné au premier alinéa, de frais dont le montant est fixé par décret. Ces frais sont recouvrés par le gestionnaire du registre. Leur paiement intervient au moment du dépôt de la demande ou de la demande de renouvellement. Le produit résultant du paiement des frais est exclusivement affecté au financement de la gestion des registres.",
+    "Les exploitants déclarent notamment dans le registre le nom des conducteurs employés en application du deuxième alinéa de l'article L. 3122-4, le numéro de la carte professionnelle de ces conducteurs ainsi que les numéros d'immatriculation des véhicules qu'ils exploitent.",
+    "Les modalités d'application du présent article, notamment les conditions dans lesquelles les professionnels mentionnés à l'article L. 3141-1 peuvent accéder aux données du registre pour vérifier les informations relatives aux exploitants, aux conducteurs et aux véhicules auxquels ils ont recours et le contenu du dossier d'inscription, sont définies par voie réglementaire."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054336017"
+  },
+  {
+   "slug": "l3122-4",
+   "num": "L3122-4",
+   "source": "Code des transports",
+   "theme": "exploitant",
+   "titre": "Les obligations de l'exploitant",
+   "en_clair": "L'exploitant dispose d'une ou plusieurs voitures conformes aux conditions techniques et de confort, emploie des conducteurs titulaires de la carte et justifie de capacités financières.",
+   "concretement": "Les véhicules de collection et ceux adaptés aux personnes à mobilité réduite échappent aux conditions techniques.",
+   "fiches": [
+    [
+     "G1.1",
+     "Exploitant et conducteur : deux qualités distinctes"
+    ],
+    [
+     "G1.3",
+     "La capacité financière de l'exploitant"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 27 décembre 2019",
+   "modif": [
+    "Modifié par LOI n°2019-1428 du 24 décembre 2019 - art. 20"
+   ],
+   "texte": [
+    "Les exploitants disposent d'une ou de plusieurs voitures de transport avec chauffeur. A l'exception des véhicules qui contribuent à la préservation du patrimoine automobile dont ceux disposant d'un certificat d'immatriculation comportant la mention d'usage de collection et des véhicules spécialement adaptés aux personnes à mobilité réduite, ces véhicules doivent répondre à des conditions techniques et de confort définies par voie réglementaire.",
+    "Les exploitants emploient un ou plusieurs conducteurs répondant aux conditions prévues à l'article L. 3120-2-2.",
+    "Ils justifient de capacités financières définies par le décret en Conseil d'Etat mentionné à l'article L. 3122-1."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039784161"
+  },
+  {
+   "slug": "r3122-1",
+   "num": "R3122-1",
+   "source": "Code des transports",
+   "theme": "exploitant",
+   "titre": "La demande d'inscription au registre",
+   "en_clair": "La demande se fait en ligne, avec l'attestation d'assurance RC professionnelle et le justificatif d'immatriculation de l'entreprise. Le dossier contient la preuve de capacité financière, la carte grise de chaque véhicule et la carte professionnelle de chaque conducteur. Tout changement est signalé dans les quinze jours.",
+   "concretement": "Un véhicule de remplacement peut être utilisé exceptionnellement, au plus un mois, à condition de le déclarer au gestionnaire du registre.",
+   "fiches": [
+    [
+     "G1.2",
+     "S'inscrire au registre des VTC"
+    ],
+    [
+     "G1.4",
+     "Déclarer ses conducteurs et ses véhicules"
+    ],
+    [
+     "G2.5",
+     "Remplacer son véhicule"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 juillet 2017",
+   "modif": [
+    "Modifié par Décret n°2017-483 du 6 avril 2017 - art. 4"
+   ],
+   "texte": [
+    "I.-La demande d'inscription au registre des voitures de transport avec chauffeur prévu à l'article L. 3122-3 est adressée au gestionnaire par voie électronique. Elle est accompagnée d'une attestation de l'assurance, couvrant la responsabilité civile professionnelle, mentionnée à l'article L. 3120-4 et,, d'une copie du justificatif d'immatriculation de l'entreprise à jour.",
+    "Lorsque la demande d'inscription est formée par une personne physique, elle mentionne l'état civil, la profession et le domicile du demandeur ainsi que l'adresse de son principal établissement.",
+    "Lorsque la demande d'inscription est présentée au nom d'une personne morale, elle mentionne sa dénomination sociale, sa forme juridique, son adresse, son lieu d'établissement, ainsi que l'état civil et le domicile du ou de ses représentants légaux, seuls habilités à présenter la demande.",
+    "II.-Le dossier d'inscription est composé :",
+    "1° D'un justificatif de la capacité financière mentionnée à l'article L. 3122-4 ;",
+    "2° Pour chaque voiture de transport avec chauffeur, d'une copie du certificat d'immatriculation mentionné au I de l'article R. 322-1 du code de la route ;",
+    "3° Pour chaque conducteur, d'une copie de la carte professionnelle mentionnée à l'article L. 3120-2-2.",
+    "Sous réserve du III ci-dessous, les exploitants inscrits au registre sont tenus de porter à la connaissance du gestionnaire, dans un délai maximum de quinze jours francs et par voie électronique, tout changement relatif aux informations mentionnées aux I et II afin que le gestionnaire procède à sa mise à jour.",
+    "III.-Les exploitants peuvent avoir recours, à titre exceptionnel, à des véhicules supplémentaires en cas d'impossibilité matérielle d'utiliser les véhicules inscrits au registre. Ils sont, dans ce cas, tenus d'envoyer au gestionnaire du registre, selon le même mode, le certificat mentionné au 2° du II assorti de la période correspondant à ce recours exceptionnel, dont la durée ne peut excéder un mois.",
+    "Ils peuvent également avoir recours, à titre exceptionnel, à des véhicules ou à des conducteurs dans le cadre de manifestations commerciales, sportives, culturelles, éducatives ou politiques ou d'événements précis justifiant un tel recours. Ils sont, dans ce cas, tenus d'envoyer préalablement au gestionnaire du registre, selon le même mode, les documents mentionnés aux 2° et 3° du II assortis de la période correspondant à ce recours exceptionnel, dont la durée ne peut excéder un mois.",
+    "Les informations transmises en application des deux alinéas précédents ne sont pas prises en compte pour la mise à jour du registre."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389523"
+  },
+  {
+   "slug": "r3122-2",
+   "num": "R3122-2",
+   "source": "Code des transports",
+   "theme": "exploitant",
+   "titre": "Délai d'inscription et renouvellement",
+   "en_clair": "L'inscription intervient dans les deux mois suivant l'envoi du dossier complet et le paiement des frais. Elle peut être refusée si le dossier est incomplet, après une mise en demeure. Le renouvellement se demande au moins trois mois avant la fin de validité.",
+   "concretement": "Une inscription qui expire en juin se renouvelle au plus tard en mars.",
+   "fiches": [
+    [
+     "G1.2",
+     "S'inscrire au registre des VTC"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 juillet 2017",
+   "modif": [
+    "Modifié par Décret n°2017-483 du 6 avril 2017 - art. 4"
+   ],
+   "texte": [
+    "L'inscription au registre des voitures de transport avec chauffeur est effectuée dans un délai de deux mois à compter de l'envoi du dossier complet d'inscription par l'exploitant sous réserve de la transmission au gestionnaire du registre du récépissé de paiement des frais d'inscription prévus au quatrième alinéa de l'article L. 3122-3. Elle donne lieu à l'envoi d'une attestation d'inscription à l'exploitant.",
+    "L'inscription est refusée si le dossier est incomplet ou si les documents communiqués ne justifient pas de l'accomplissement par l'exploitant des obligations mentionnées au premier alinéa de l'article L. 3122-4. Ce refus intervient après qu'une mise en demeure, invitant l'exploitant à compléter le dossier d'inscription, est restée sans effet. Le refus d'inscription, qui est motivé, ainsi que la mise en demeure sont notifiés à l'exploitant par tout moyen permettant d'en accuser réception.",
+    "A la demande du titulaire formée au moins trois mois avant le terme de la durée de validité de l'inscription au registre, l'autorité compétente renouvelle l'inscription avant ce terme, sauf si l'une des conditions auxquelles est soumise sa délivrance n'est pas remplie."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389532"
+  },
+  {
+   "slug": "r3122-3",
+   "num": "R3122-3",
+   "source": "Code des transports",
+   "theme": "exploitant",
+   "titre": "Les frais d'inscription au registre",
+   "en_clair": "Les frais d'inscription sont fixés par arrêté, dans la limite de 250 € par exploitant.",
+   "concretement": "Le montant exact en vigueur est celui fixé par l'arrêté ; le décret ne fixe qu'un plafond.",
+   "fiches": [
+    [
+     "G1.2",
+     "S'inscrire au registre des VTC"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 janvier 2015",
+   "modif": [
+    "Création DÉCRET n°2014-1725 du 30 décembre 2014 - art."
+   ],
+   "texte": [
+    "Les frais d'inscription prévus au quatrième alinéa de l'article L. 3122-3 sont fixés par arrêté conjoint des ministres chargés, respectivement, du budget et des transports dans la limite de 250 euros par exploitant."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048487"
+  },
+  {
+   "slug": "r3122-4",
+   "num": "R3122-4",
+   "source": "Code des transports",
+   "theme": "exploitant",
+   "titre": "La radiation du registre",
+   "en_clair": "L'exploitant est radié s'il ne remplit plus une condition d'inscription (par exemple s'il prête son inscription) ou s'il cesse son activité. La radiation intervient après une mise en demeure restée sans effet.",
+   "concretement": "Prêter son numéro d'inscription à un autre chauffeur entraîne la radiation.",
+   "fiches": [
+    [
+     "G1.6",
+     "Changer de structure, cesser, être radié"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 24 août 2019",
+   "modif": [
+    "Modifié par Décret n°2019-866 du 21 août 2019 - art. 3"
+   ],
+   "texte": [
+    "Les exploitants sont radiés du registre des voitures de transport avec chauffeur :",
+    "-lorsque cesse d'être remplie l'une des conditions requises lors de leur inscription à ce registre, notamment lorsque l'exploitant met à disposition d'un tiers, à titre onéreux ou non, l'inscription au registre mentionnée à l'article L. 3122-3 qu'il a obtenue pour son propre compte ;",
+    "-lorsque, pour quelque motif que ce soit, l'exploitant cesse son activité de transport avec des véhicules de transport avec chauffeur.",
+    "La radiation ne peut être prononcée qu'après une mise en demeure demeurée sans effet. La décision de radiation, qui est motivée, ainsi que la mise en demeure sont notifiées à l'exploitant par tout moyen permettant d'en accuser réception. Toutefois, la mise en demeure préalable est remplacée par une information préalable, lorsque la radiation est prononcée à la demande de l'exploitant ou lorsque le gestionnaire du registre a constaté que l'exploitant a cessé son activité."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038954621"
+  },
+  {
+   "slug": "r3122-5",
+   "num": "R*3122-5",
+   "source": "Code des transports",
+   "theme": "exploitant",
+   "titre": "Qui gère le registre",
+   "en_clair": "Le préfet de la région Île-de-France gère le registre des VTC pour toute la France.",
+   "concretement": "Où que vous soyez installé, l'inscription se fait auprès du même gestionnaire national.",
+   "fiches": [
+    [
+     "G1.2",
+     "S'inscrire au registre des VTC"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 mars 2021",
+   "modif": [
+    "Modifié par Décret n°2021-177 du 17 février 2021 - art. 1"
+   ],
+   "texte": [
+    "Le préfet de la région d'Ile-de-France est compétent sur l'ensemble du territoire national pour assurer la gestion du registre des voitures de transport avec chauffeur mentionné à l'article L. 3122-3."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043154015"
+  },
+  {
+   "slug": "r3122-5-1",
+   "num": "R3122-5-1",
+   "source": "Code des transports",
+   "theme": "exploitant",
+   "titre": "Le rôle du gestionnaire du registre",
+   "en_clair": "Le gestionnaire instruit les dossiers, tient le registre, envoie les attestations, mises en demeure et décisions, et fait publier la liste des exploitants inscrits sur le site du ministère des transports.",
+   "concretement": "La liste des exploitants inscrits est publique et consultable en ligne.",
+   "fiches": [
+    [
+     "G1.2",
+     "S'inscrire au registre des VTC"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 mars 2021",
+   "modif": [
+    "Création Décret n°2021-177 du 17 février 2021 - art. 1"
+   ],
+   "texte": [
+    "La gestion de ce registre consiste, d'une part, à assurer l'instruction des dossiers, la tenue du registre, l'envoi à l'exploitant, dès l'inscription ou son renouvellement, des attestations d'inscription ainsi que des notifications, des mises en demeure, des décisions de refus et de radiation prévues à la présente section, et, d'autre part, à s'assurer de la publication, sur le site internet du ministère chargé des transports, de la liste de l'ensemble des exploitants inscrits."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043152476"
+  },
+  {
+   "slug": "r3122-9",
+   "num": "R3122-9",
+   "source": "Code des transports",
+   "theme": "exploitant",
+   "titre": "La capacité financière",
+   "en_clair": "Pour chaque véhicule utilisé régulièrement, l'exploitant prouve qu'il en est propriétaire, qu'il le loue pour au moins six mois, ou qu'il dispose d'une garantie financière de 1 500 € par véhicule, sauf si cette capacité a déjà été justifiée pour ce véhicule à un autre titre.",
+   "concretement": "Une location longue durée de 36 mois suffit à justifier la capacité financière pour ce véhicule.",
+   "fiches": [
+    [
+     "G1.3",
+     "La capacité financière de l'exploitant"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 08 avril 2017",
+   "modif": [
+    "Modifié par Décret n°2017-483 du 6 avril 2017 - art. 5"
+   ],
+   "texte": [
+    "La condition de capacités financières prévue à l'article L. 3122-4 est satisfaite lorsque l'exploitant de voitures de transport avec chauffeur, pour chaque véhicule utilisé de façon régulière, démontre :",
+    "-soit qu'il est propriétaire du véhicule ;-soit qu'il justifie d'un contrat de location d'une durée d'au moins six mois ;-soit qu'il présente une garantie financière, d'un montant égal à 1 500 euros par véhicule, accordée soit par un ou plusieurs organismes financiers agréés par l'Autorité de contrôle prudentiel et de résolution se portant caution de l'entreprise pour le montant exigible, soit par tout établissement de crédit fournissant des prestations ou disposant de succursales en France conformément aux articles L. 511-22 et L. 511-23 du code monétaire et financier, qui est habilité à fournir ce type de service ;-soit qu'une justification de capacités financières a déjà été produite pour le véhicule conformément à l'un des trois alinéas précédents en application d'autres dispositions, notamment celles de l'article R. 3113-31."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389540"
+  },
+  {
+   "slug": "r3122-6",
+   "num": "R3122-6",
+   "source": "Code des transports",
+   "theme": "vehicule",
+   "titre": "Le nombre de places et les critères du véhicule",
+   "en_clair": "Une VTC compte de 4 à 9 places, conducteur compris. Un arrêté fixe les dimensions, la puissance minimales et l'âge maximal des véhicules, sauf pour les hybrides et électriques.",
+   "concretement": "Les critères chiffrés figurent dans l'arrêté du 26 mars 2015.",
+   "fiches": [
+    [
+     "G2.2",
+     "Places, portes et âge du véhicule"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 08 avril 2017",
+   "modif": [
+    "Modifié par Décret n°2017-483 du 6 avril 2017 - art. 5"
+   ],
+   "texte": [
+    "Les voitures de transport avec chauffeur comportent au moins quatre et au plus neuf places, y compris celle du conducteur.",
+    "Un arrêté du ministre chargé des transports et du ministre chargé de l'économie fixe les dimensions et la puissance minimales ainsi que l'ancienneté maximale des voitures de transport avec chauffeur, autres que les véhicules hybrides et électriques mentionnés à l'article L. 3120-5."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389552"
+  },
+  {
+   "slug": "r3122-7",
+   "num": "R3122-7",
+   "source": "Code des transports",
+   "theme": "vehicule",
+   "titre": "Pas d'équipement de taxi sur un VTC",
+   "en_clair": "Il est interdit d'utiliser une VTC munie d'équipements propres aux taxis qui pourraient créer une confusion (lumineux, compteur…).",
+   "concretement": "C'est une contravention de 3e classe (R3124-5).",
+   "fiches": [
+    [
+     "G3.2",
+     "Rien qui ressemble à un taxi"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 janvier 2015",
+   "modif": [
+    "Création DÉCRET n°2014-1725 du 30 décembre 2014 - art."
+   ],
+   "texte": [
+    "Il est interdit d'utiliser une voiture de transport avec chauffeur qui est munie de tout ou partie des équipements spéciaux définis au I de l'article R. 3121-1 de nature à créer une confusion avec un véhicule de taxi."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048497"
+  },
+  {
+   "slug": "r3122-8",
+   "num": "R3122-8",
+   "source": "Code des transports",
+   "theme": "vehicule",
+   "titre": "La vignette VTC",
+   "en_clair": "Les VTC portent une signalétique distinctive délivrée par l'Imprimerie nationale. Une signalétique temporaire est prévue en attendant les vignettes définitives.",
+   "concretement": "Rouler sans vignette, ou avec une vignette mal utilisée, est une contravention de 4e classe (R3124-6).",
+   "fiches": [
+    [
+     "G3.1",
+     "Les deux vignettes : où, quoi, comment"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 juillet 2017",
+   "modif": [
+    "Modifié par Décret n°2017-483 du 6 avril 2017 - art. 5"
+   ],
+   "texte": [
+    "Les voitures de transport avec chauffeur sont munies d'une signalétique distinctive définie par arrêté du ministre chargé des transports et délivrée par l'Imprimerie nationale.",
+    "Le même arrêté prévoit également des dispositions spécifiques afin de permettre aux exploitants de disposer d'une signalétique temporaire en cas de recours exceptionnel à des véhicules en application du III de l'article R. 3122-1 ou après leur inscription au registre, ou à la suite d'une mise à jour de ce dernier."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389549"
+  },
+  {
+   "slug": "r3120-10",
+   "num": "R3120-10",
+   "source": "Code des transports",
+   "theme": "vehicule",
+   "titre": "Le contrôle technique",
+   "en_clair": "Les véhicules de T3P passent le contrôle technique selon les règles du Code de la route (R. 323-24 ou R. 323-26), sauf disposition contraire.",
+   "concretement": "Pour un VTC, le contrôle technique est annuel.",
+   "fiches": [
+    [
+     "A4.1",
+     "Le contrôle technique du véhicule"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 janvier 2015",
+   "modif": [
+    "Créé par DÉCRET n°2014-1725 du 30 décembre 2014 - art."
+   ],
+   "texte": [
+    "Sauf dispositions contraires du présent titre, les véhicules de transport public particulier sont soumis au contrôle technique dans les conditions prévues à l'article R. 323-24 du code de la route ou, le cas échéant, à l'article R. 323-26 du même code."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048413"
+  },
+  {
+   "slug": "l3120-2",
+   "num": "L3120-2",
+   "source": "Code des transports",
+   "theme": "reservation",
+   "titre": "Réservation préalable et interdiction de la maraude",
+   "en_clair": "Un VTC ne peut prendre un client que sur réservation préalable. Il ne peut ni chercher des clients en circulant ou en stationnant sur la voie publique, ni attendre devant une gare ou un aéroport au-delà d'une durée fixée. Il est aussi interdit d'indiquer à un client la position et la disponibilité d'un VTC avant sa réservation, de démarcher un client sur la voie publique ou de vendre une telle prise en charge.",
+   "concretement": "Prendre un passant qui vous fait signe sans réservation est un délit (trois ans de prison, 45 000 € d'amende, L3124-12). Circuler en quête de clients ou attendre trop tôt devant une gare est une contravention de 5e classe (R3124-11).",
+   "fiches": [
+    [
+     "A3.1",
+     "La réservation préalable et sa preuve"
+    ],
+    [
+     "A3.2",
+     "La maraude, réservée au taxi"
+    ],
+    [
+     "A3.4",
+     "Gares et aéroports"
+    ],
+    [
+     "A3.7",
+     "La géolocalisation : ce que l'appli ne doit pas montrer"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 31 décembre 2016",
+   "modif": [
+    "Modifié par LOI n°2016-1920 du 29 décembre 2016 - art. 13 (V)Modifié par LOI n°2016-1920 du 29 décembre 2016 - art. 6"
+   ],
+   "texte": [
+    "I.-Les véhicules qui effectuent les prestations mentionnées à l'article L. 3120-1 ne peuvent pas être loués à la place, sauf s'ils font l'objet d'une réservation préalable dans les conditions définies par un décret en Conseil d'Etat.",
+    "II.-A moins de justifier de l'autorisation de stationnement mentionnée à l'article L. 3121-1, le conducteur d'un véhicule mentionné au I du présent article ne peut :",
+    "1° Prendre en charge un client sur la voie ouverte à la circulation publique, sauf s'il justifie d'une réservation préalable ;",
+    "2° S'arrêter, stationner ou circuler sur la voie ouverte à la circulation publique en quête de clients ;",
+    "3° Stationner sur la voie ouverte à la circulation publique, à l'abord des gares et des aérogares ou, le cas échéant, dans l'enceinte de celles-ci, au delà d'une durée, fixée par décret, précédant la prise en charge du client qui a effectué une réservation préalable.",
+    "III.-Sont interdits aux personnes réalisant des prestations mentionnées à l'article L. 3120-1 et aux intermédiaires auxquels elles ont recours, notamment les centrales de réservation au sens de l'article L. 3142-1 :",
+    "1° Le fait d'informer un client, avant la réservation mentionnée au 1° du II du présent article, quel que soit le moyen utilisé, à la fois de la localisation et de la disponibilité d'un véhicule mentionné au I quand il est situé sur la voie ouverte à la circulation publique sans que son propriétaire ou son exploitant soit titulaire d'une autorisation de stationnement mentionnée à l'article L. 3121-1 ;",
+    "2° Le démarchage d'un client en vue de sa prise en charge dans les conditions mentionnées au 1° du II du présent article ;",
+    "3° Le fait de proposer à la vente ou de promouvoir une offre de prise en charge effectuée dans les conditions mentionnées au même 1°."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033745346"
+  },
+  {
+   "slug": "r3120-2",
+   "num": "R3120-2",
+   "source": "Code des transports",
+   "theme": "reservation",
+   "titre": "Le justificatif de réservation",
+   "en_clair": "La réservation préalable se prouve par un document papier ou électronique, que le conducteur présente à tout agent de contrôle. Son contenu est fixé par arrêté.",
+   "concretement": "L'écran de l'application de réservation suffit s'il comporte les informations exigées par l'arrêté du 6 août 2025.",
+   "fiches": [
+    [
+     "A3.1",
+     "La réservation préalable et sa preuve"
+    ],
+    [
+     "G4.1",
+     "Le justificatif de réservation : sept mentions"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 24 août 2019",
+   "modif": [
+    "Modifié par Décret n°2019-866 du 21 août 2019 - art. 4"
+   ],
+   "texte": [
+    "Sans préjudice de l'article R. 3122-12, la justification de l'existence de la réservation préalable mentionnée au I et aux 1° et 3° du II de l'article L. 3120-2 peut être apportée au moyen d'un document écrit sur un support papier ou électronique.",
+    "Le conducteur est tenu de présenter ce justificatif à toute demande des agents chargés des contrôles.",
+    "Un arrêté des ministres chargés, respectivement, de l'économie et des transports et du ministre de l'intérieur précise les informations figurant sur ce justificatif et ses caractéristiques."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038954680"
+  },
+  {
+   "slug": "d3120-3",
+   "num": "D3120-3",
+   "source": "Code des transports",
+   "theme": "reservation",
+   "titre": "L'attente devant les gares et aéroports : une heure maximum",
+   "en_clair": "Un VTC ne peut pas stationner sur la voie publique aux abords d'une gare ou d'un aéroport plus d'une heure avant l'heure de prise en charge réservée par le client.",
+   "concretement": "Pour un client attendu à 15 h à Orly, le VTC ne stationne pas avant 14 h.",
+   "fiches": [
+    [
+     "A3.4",
+     "Gares et aéroports"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 janvier 2015",
+   "modif": [
+    "Créé par DÉCRET n°2014-1725 du 30 décembre 2014 - art."
+   ],
+   "texte": [
+    "La durée maximale de stationnement prévue au 3° du II de l'article L. 3120-2 est fixée à une heure précédant l'horaire de prise en charge souhaité par le client."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048397"
+  },
+  {
+   "slug": "l3122-9",
+   "num": "L3122-9",
+   "source": "Code des transports",
+   "theme": "reservation",
+   "titre": "Le retour à la base",
+   "en_clair": "Après une course réservée, le conducteur de VTC retourne au lieu d'établissement de l'exploitant ou dans un lieu hors de la chaussée où le stationnement est autorisé, sauf s'il a déjà une nouvelle réservation ou un contrat avec un client final.",
+   "concretement": "Entre deux courses, attendre sur un parking autorisé est permis ; tourner en ville à vide en attendant un client ne l'est pas.",
+   "fiches": [
+    [
+     "A3.3",
+     "Où attendre entre deux courses"
+    ],
+    [
+     "A3.5",
+     "Le retour après la course"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 03 octobre 2014",
+   "modif": [
+    "Création LOI n°2014-1104 du 1er octobre 2014 - art. 9"
+   ],
+   "texte": [
+    "Dès l'achèvement de la prestation commandée au moyen d'une réservation préalable, le conducteur d'une voiture de transport avec chauffeur dans l'exercice de ses missions est tenu de retourner au lieu d'établissement de l'exploitant de cette voiture ou dans un lieu, hors de la chaussée, où le stationnement est autorisé, sauf s'il justifie d'une réservation préalable ou d'un contrat avec le client final."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000029529985"
+  },
+  {
+   "slug": "r3122-12",
+   "num": "R3122-12",
+   "source": "Code des transports",
+   "theme": "reservation",
+   "titre": "Le contrat avec un client final",
+   "en_clair": "Le contrat avec un client final (qui peut être une entreprise) est un document écrit précisant sa durée, sa date d'effet, les prestations, les lieux de prise en charge et les bénéficiaires. De simples conditions générales de vente ne suffisent pas.",
+   "concretement": "Un contrat écrit avec un hôtel pour transporter ses clients permet d'enchaîner les courses sans repasser par la base.",
+   "fiches": [
+    [
+     "A3.5",
+     "Le retour après la course"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 janvier 2019",
+   "modif": [
+    "Création Décret n°2018-1036 du 26 novembre 2018 - art. 2"
+   ],
+   "texte": [
+    "L'existence d'un contrat avec un client final, qui peut être une personne morale, est justifiée au moyen d'un document écrit sur un support papier ou électronique qui précise les clauses particulières relatives à sa durée, sa date d'effet, la nature des prestations couvertes, le ou les lieux de prise en charge et la qualité des bénéficiaires des prestations. Des conditions générales de vente ne constituent pas un contrat avec le client final.",
+    "Le conducteur est tenu de présenter ce justificatif à toute demande des agents chargés des contrôles.",
+    "Un arrêté des ministres chargés, respectivement, de l'économie et des transports et du ministre de l'intérieur précise les informations figurant sur ce justificatif et ses caractéristiques."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037653617"
+  },
+  {
+   "slug": "l1326-1",
+   "num": "L1326-1",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "Les chauffeurs concernés par les droits face aux plateformes",
+   "en_clair": "Ce chapitre protège les travailleurs indépendants qui conduisent un VTC (ou livrent en deux-roues) en passant par une plateforme.",
+   "concretement": "Un chauffeur micro-entrepreneur qui travaille via une application de VTC est concerné.",
+   "fiches": [
+    [
+     "A8.1",
+     "Les droits du chauffeur face à la plateforme"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 27 décembre 2019",
+   "modif": [
+    "Création LOI n°2019-1428 du 24 décembre 2019 - art. 44"
+   ],
+   "texte": [
+    "Les dispositions du présent chapitre sont applicables aux travailleurs définis à l'article L. 7341-1 du code du travail recourant pour leur activité à des plateformes mentionnées à l'article L. 7342-1 du même code et exerçant l'une des activités suivantes :",
+    "1° Conduite d'une voiture de transport avec chauffeur ;",
+    "2° Livraison de marchandises au moyen d'un véhicule à deux ou trois roues, motorisé ou non."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039677955"
+  },
+  {
+   "slug": "l1326-2",
+   "num": "L1326-2",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "Distance, prix et droit de refuser une course",
+   "en_clair": "Avant chaque course, la plateforme indique au chauffeur la distance, la destination et le prix minimal garanti après commission, et lui laisse un délai raisonnable. Le chauffeur peut refuser sans pénalité ; la plateforme ne peut pas le suspendre pour ce motif.",
+   "concretement": "Refuser une course trop courte ou trop lointaine ne peut pas entraîner la désactivation du compte.",
+   "fiches": [
+    [
+     "A8.1",
+     "Les droits du chauffeur face à la plateforme"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 08 avril 2022",
+   "modif": [
+    "Modifié par Ordonnance n°2022-492 du 6 avril 2022 - art. 1"
+   ],
+   "texte": [
+    "Les plateformes mentionnées à l'article L. 1326-1 communiquent aux travailleurs, lorsqu'elles leur proposent une prestation, la distance couverte par cette prestation, la destination et le prix minimal garanti dont ils bénéficieront, déduction faite des frais de commission, dans des conditions précisées par décret. Elles laissent aux travailleurs un délai raisonnable pour accepter ou refuser la prestation proposée.",
+    "Les travailleurs peuvent refuser une proposition de prestation de transport sans faire l'objet d'une quelconque pénalité. La plateforme ne peut notamment pas suspendre ou mettre fin à la relation contractuelle qui l'unit aux travailleurs au motif que ceux-ci ont refusé une ou plusieurs propositions."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045525868"
+  },
+  {
+   "slug": "l1326-3",
+   "num": "L1326-3",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "La transparence sur le temps et le revenu",
+   "en_clair": "Chaque plateforme publie sur son site des indicateurs sur la durée d'activité et le revenu des chauffeurs pour l'année précédente.",
+   "concretement": "Ces chiffres permettent de comparer ce que gagnent réellement les chauffeurs d'une plateforme à l'autre.",
+   "fiches": [
+    [
+     "A8.1",
+     "Les droits du chauffeur face à la plateforme"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 27 décembre 2019",
+   "modif": [
+    "Création LOI n°2019-1428 du 24 décembre 2019 - art. 44"
+   ],
+   "texte": [
+    "La plateforme mentionnée à l'article L. 1326-1 est tenue de publier sur son site internet, de manière loyale, claire et transparente, des indicateurs relatifs à la durée d'activité et au revenu d'activité au titre des activités des travailleurs en lien avec la plateforme, au cours de l'année civile précédente. Ces indicateurs sont précisés par décret en Conseil d'Etat."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039677959"
+  },
+  {
+   "slug": "l1326-4",
+   "num": "L1326-4",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "Les libertés du chauffeur : horaires, matériel, itinéraire",
+   "en_clair": "Le chauffeur choisit ses horaires et peut se déconnecter ; on ne peut pas lui imposer un matériel donné ; il peut travailler pour plusieurs plateformes ou avoir ses propres clients ; il choisit librement son itinéraire. Exercer ces droits ne peut pas, sauf abus, justifier une sanction.",
+   "concretement": "Utiliser deux applications en même temps est un droit garanti par la loi.",
+   "fiches": [
+    [
+     "A8.1",
+     "Les droits du chauffeur face à la plateforme"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 08 avril 2022",
+   "modif": [
+    "Modifié par Ordonnance n°2022-492 du 6 avril 2022 - art. 1"
+   ],
+   "texte": [
+    "Les plateformes mentionnées à l'article L. 1326-1 assurent aux travailleurs y ayant recours pour leur activité les droits suivants :",
+    "1° Les travailleurs choisissent leurs plages horaires d'activité et leurs périodes d'inactivité, et peuvent se déconnecter durant leurs plages horaires d'activité ;",
+    "2° Pour l'exécution de leurs prestations :",
+    "a) Les travailleurs ne peuvent se voir imposer l'utilisation d'un matériel ou d'un équipement déterminé, sous réserve des obligations légales et réglementaires en matière notamment de santé, de sécurité et de préservation de l'environnement ;",
+    "b) Les travailleurs peuvent recourir, simultanément, à plusieurs intermédiaires ou acteurs de mise en relation avec des clients en vue de la réalisation de ces prestations ou commercialiser, sans intermédiaire, les services de transport qu'ils exécutent ;",
+    "c) Les travailleurs déterminent librement leur itinéraire au regard notamment des conditions de circulation, de l'itinéraire proposé par la plateforme et le cas échéant du choix du client.",
+    "L'exercice des droits énumérés au présent article ne peut, sauf abus, engager la responsabilité contractuelle des travailleurs, constituer un motif de suspension ou de rupture de leurs relations avec les plateformes, ni justifier de mesures les pénalisant dans l'exercice de leur activité. Toute stipulation contraire est réputée non écrite.",
+    "Ces dispositions ne font pas obstacle au recours à une application dédiée mise à disposition par la plateforme."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045525865"
+  },
+  {
+   "slug": "l3141-1",
+   "num": "L3141-1",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "Les plateformes concernées",
+   "en_clair": "Les règles s'appliquent aux professionnels qui mettent en relation des conducteurs et des passagers pour des déplacements en véhicule motorisé de 8 places passagers au maximum, hors transport public organisé, transport conventionné par l'assurance maladie et covoiturage.",
+   "concretement": "Une application de VTC est concernée ; un site de covoiturage ne l'est pas.",
+   "fiches": [
+    [
+     "A1.4",
+     "Plateformes et centrales de réservation"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 juin 2023",
+   "modif": [
+    "Modifié par Ordonnance n°2021-487 du 21 avril 2021 - art. 2"
+   ],
+   "texte": [
+    "Le présent titre est applicable aux professionnels qui mettent en relation des conducteurs ou des entreprises de transport et des passagers pour la réalisation de déplacements répondant aux caractéristiques suivantes :",
+    "1° Ils sont effectués au moyen de véhicules motorisés, y compris de véhicules à deux ou trois roues, comportant, outre le siège du conducteur, huit places assises au maximum ;",
+    "2° Ils ne présentent pas le caractère d'un service public de transport organisé par une autorité organisatrice mentionnée à l'article L. 1221-1 ;",
+    "3° Ils ne sont pas réalisés dans le cadre du conventionnement prévu à l'article L. 322-5 du code de la sécurité sociale ;",
+    "4° Ils ne sont pas effectués dans le cadre du covoiturage, tel qu'il est défini à l'article L. 3132-1 du présent code.",
+    "Le présent titre n'est pas applicable :",
+    "a) Aux personnes qui exploitent des services de transport, lorsque la mise en relation a pour objet les services de transport qu'elles exécutent elles-mêmes ;",
+    "b) Aux personnes qui organisent des services privés de transport dans les conditions prévues à l'article L. 3131-1, lorsque la mise en relation a pour objet ces services privés de transport ;",
+    "c) Aux activités de mise en relation par voie électronique régies par le titre V."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043411217"
+  },
+  {
+   "slug": "l3141-2",
+   "num": "L3141-2",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "Ce que la plateforme doit vérifier",
+   "en_clair": "La plateforme s'assure que chaque conducteur a son permis, l'assurance du véhicule, l'assurance RC et sa carte professionnelle, que l'exploitant est inscrit au registre et assuré, et que le véhicule respecte les conditions techniques.",
+   "concretement": "Sans ces pièces, la plateforme doit refuser de vous proposer des courses (R3141-6).",
+   "fiches": [
+    [
+     "A1.4",
+     "Plateformes et centrales de réservation"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 31 décembre 2016",
+   "modif": [
+    "Création LOI n°2016-1920 du 29 décembre 2016 - art. 1"
+   ],
+   "texte": [
+    "I.-Le professionnel mentionné à l'article L. 3141-1 s'assure que tout conducteur qui réalise un déplacement mentionné au premier alinéa du même article L. 3141-1 dispose des documents suivants :",
+    "1° Le permis de conduire requis pour la conduite du véhicule utilisé ;",
+    "2° Un justificatif de l'assurance du véhicule utilisé ;",
+    "3° Un justificatif de l'assurance de responsabilité civile requise pour l'activité pratiquée ;",
+    "4° Le cas échéant, la carte professionnelle requise pour l'activité pratiquée.",
+    "II.-Le professionnel mentionné audit article L. 3141-1 s'assure que l'entreprise dont le conducteur relève dispose d'un justificatif de l'assurance de responsabilité civile professionnelle et, le cas échéant, du certificat d'inscription au registre mentionné à l'article L. 1421-1 ou du certificat d'inscription au registre mentionné à l'article L. 3122-3.",
+    "III.-Lorsque la mise en relation a pour objet un déplacement réalisé en voiture de transport avec chauffeur, le professionnel mentionné à l'article L. 3141-1 s'assure que le véhicule utilisé répond aux conditions techniques et de confort mentionnées à l'article L. 3122-4.",
+    "IV.-Les conditions d'application du présent article sont fixées par décret en Conseil d'Etat."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033737593"
+  },
+  {
+   "slug": "r3141-1",
+   "num": "R3141-1",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "Vérification du permis par la plateforme",
+   "en_clair": "Avant la première course, la plateforme vérifie l'original du permis du conducteur, puis chaque année (relevé du permis ou nouvelle présentation).",
+   "concretement": "Une plateforme peut vous demander chaque année votre relevé de permis.",
+   "fiches": [
+    [
+     "A1.4",
+     "Plateformes et centrales de réservation"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 janvier 2019",
+   "modif": [
+    "Création Décret n°2018-1036 du 26 novembre 2018 - art. 1"
+   ],
+   "texte": [
+    "L'opérateur de mise en relation mentionné à l'article L. 3141-1 satisfait l'obligation qui lui incombe en vertu des dispositions du 1° du I de l'article L. 3141-2 en demandant à tout conducteur souhaitant être mis en relation avec des passagers pour la réalisation de déplacements par son intermédiaire de se présenter, préalablement à la première mise en relation, muni de l'original du permis de conduire requis, en cours de validité.",
+    "Chaque année par la suite, sauf expiration entre-temps du permis de conduire, le même opérateur demande au conducteur, au choix de ce dernier, soit de lui adresser le relevé portant les informations relatives à l'existence, la catégorie et la validité de son permis de conduire, établi en application du 1° de l'article L. 225-5 du code de la route, soit de lui présenter à nouveau l'original du permis de conduire requis, en cours de validité."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037661904"
+  },
+  {
+   "slug": "r3141-2",
+   "num": "R3141-2",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "Vérification de l'assurance par la plateforme",
+   "en_clair": "La plateforme vérifie l'assurance du véhicule avant la première course, puis au moins chaque année.",
+   "concretement": "Une attestation d'assurance expirée bloque l'accès aux courses.",
+   "fiches": [
+    [
+     "A1.4",
+     "Plateformes et centrales de réservation"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 janvier 2019",
+   "modif": [
+    "Création Décret n°2018-1036 du 26 novembre 2018 - art. 1"
+   ],
+   "texte": [
+    "L'opérateur de mise en relation mentionné à l'article L. 3141-1 satisfait l'obligation prévue par les dispositions des 2° et 3° du I de l'article L. 3141-2 en s'assurant, préalablement à la première mise en relation avec des passagers pour la réalisation de déplacements par son intermédiaire et ensuite au moins chaque année sauf expiration entre-temps du contrat d'assurance, de la transmission par le conducteur des justificatifs en cours de validité de l'assurance du véhicule utilisé."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037661902"
+  },
+  {
+   "slug": "r3141-3",
+   "num": "R3141-3",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "Vérification de la carte professionnelle",
+   "en_clair": "Avant la première course, le conducteur présente l'original de sa carte professionnelle à la plateforme, puis en transmet une copie chaque année.",
+   "concretement": "Une carte expirée doit être renouvelée avant de pouvoir reprendre les courses.",
+   "fiches": [
+    [
+     "A1.4",
+     "Plateformes et centrales de réservation"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 janvier 2019",
+   "modif": [
+    "Création Décret n°2018-1036 du 26 novembre 2018 - art. 1"
+   ],
+   "texte": [
+    "Le même opérateur satisfait l'obligation prévue au 4° du I de l'article L. 3141-2 en demandant à tout conducteur pratiquant une activité pour laquelle la possession d'une carte professionnelle est requise en vertu du titre II du présent livre de se présenter, préalablement à la première mise en relation avec des passagers pour la réalisation de déplacements par son intermédiaire, muni de l'original de sa carte professionnelle, en cours de validité puis, par la suite, de lui en transmettre, chaque année sauf expiration de celle-ci entre-temps, une copie."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037661900"
+  },
+  {
+   "slug": "r3141-4",
+   "num": "R3141-4",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "Vérification de l'exploitant",
+   "en_clair": "Avant toute mise en relation, la plateforme dispose de l'attestation d'inscription au registre VTC et de l'assurance RC professionnelle de l'exploitant.",
+   "concretement": "L'attestation d'inscription au registre est la première pièce demandée par une plateforme.",
+   "fiches": [
+    [
+     "A1.4",
+     "Plateformes et centrales de réservation"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 janvier 2019",
+   "modif": [
+    "Création Décret n°2018-1036 du 26 novembre 2018 - art. 1"
+   ],
+   "texte": [
+    "Le même opérateur satisfait l'obligation prévue au II de l'article L. 3141-2 en s'assurant, préalablement à toute mise en relation avec des passagers, de disposer :",
+    "1° Lorsque le conducteur relève d'une entreprise de voiture de transport avec chauffeur, de l'attestation de son inscription au registre prévu à l'article L. 3122-3, en cours de validité ;",
+    "2° Lorsque le conducteur relève d'une entreprise de transport public collectif occasionnel, de la copie certifiée conforme de la licence de transport intérieur en cours de validité, délivrée à l'entreprise en application du troisième alinéa de l'article L. 3411-1 ;",
+    "3° D'un justificatif en cours de validité de l'assurance couvrant la responsabilité civile professionnelle de l'exploitant pour l'activité pratiquée."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037661898"
+  },
+  {
+   "slug": "r3141-5",
+   "num": "R3141-5",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "Vérification des véhicules",
+   "en_clair": "La plateforme vérifie que l'immatriculation du véhicule utilisé figure parmi celles déclarées au registre ; l'exploitant lui transmet la liste.",
+   "concretement": "Un véhicule non déclaré au registre ne peut pas être utilisé sur la plateforme.",
+   "fiches": [
+    [
+     "A1.4",
+     "Plateformes et centrales de réservation"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 janvier 2019",
+   "modif": [
+    "Création Décret n°2018-1036 du 26 novembre 2018 - art. 1"
+   ],
+   "texte": [
+    "L'obligation de vérification des conditions techniques et de confort des véhicules prévue au III de l'article L. 3141-2 est satisfaite par la vérification, préalablement à toute mise en relation, que le numéro d'immatriculation du véhicule utilisé pour effectuer la prestation de transport est au nombre de ceux qui ont été communiqués au gestionnaire du registre mentionné à l'article L. 3122-3. A cette fin, copie de la liste communiquée au gestionnaire du registre est transmise à l'opérateur de mise en relation par l'exploitant de voiture de transport, en même temps que l'attestation d'inscription prévue à l'article R. 3141-4."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037661896"
+  },
+  {
+   "slug": "r3141-6",
+   "num": "R3141-6",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "Pas de document, pas de course",
+   "en_clair": "Si le conducteur ou l'exploitant ne fournit pas les documents exigés, ou si l'administration signale qu'un document n'est plus valable, la plateforme doit cesser de faire appel à lui.",
+   "concretement": "Une suspension de carte signalée par la préfecture entraîne l'arrêt des courses sur la plateforme.",
+   "fiches": [
+    [
+     "A1.4",
+     "Plateformes et centrales de réservation"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 janvier 2019",
+   "modif": [
+    "Création Décret n°2018-1036 du 26 novembre 2018 - art. 1"
+   ],
+   "texte": [
+    "S'il n'obtient pas du conducteur ou de l'entreprise de transport les documents dont la présentation ou la communication sont prévues par les dispositions du présent chapitre, l'opérateur de mise en relation est tenu de s'abstenir de faire appel à eux pour assurer une prestation de transport de passagers répondant aux caractéristiques définies à l'article L. 3141-1.",
+    "Il en va de même en cas de signalement par l'autorité administrative de la fin anticipée de la validité de l'une des pièces transmises en application du présent chapitre."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037661894"
+  },
+  {
+   "slug": "r3141-7",
+   "num": "R3141-7",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "L'information du chauffeur écarté",
+   "en_clair": "Quand la plateforme cesse de mettre en relation un chauffeur pour un document manquant, elle l'informe sans délai du motif et des démarches pour y remédier.",
+   "concretement": "La plateforme doit dire précisément quel document manque.",
+   "fiches": [
+    [
+     "A1.4",
+     "Plateformes et centrales de réservation"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 janvier 2019",
+   "modif": [
+    "Création Décret n°2018-1036 du 26 novembre 2018 - art. 1"
+   ],
+   "texte": [
+    "L'opérateur informe sans délai l'exploitant de l'entreprise de transport et le conducteur des motifs, lorsqu'ils sont tirés de la méconnaissance des obligations prévues au présent chapitre, pour lesquels il s'abstient de toute mise en relation avec des passagers et, le cas échéant, des démarches à entreprendre pour y remédier."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037661892"
+  },
+  {
+   "slug": "l3142-1",
+   "num": "L3142-1",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "Ce qu'est une centrale de réservation",
+   "en_clair": "Une centrale de réservation est un intermédiaire qui met en relation des passagers avec des conducteurs professionnels.",
+   "concretement": "Les grandes applications de VTC sont des centrales de réservation au sens de la loi.",
+   "fiches": [
+    [
+     "A1.4",
+     "Plateformes et centrales de réservation"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 31 décembre 2016",
+   "modif": [
+    "Création LOI n°2016-1920 du 29 décembre 2016 - art. 1"
+   ],
+   "texte": [
+    "Pour l'application du présent chapitre, est considéré comme une centrale de réservation tout professionnel relevant de l'article L. 3141-1 dès lors que les conducteurs qui réalisent les déplacements mentionnés au premier alinéa du même article L. 3141-1 exercent leur activité à titre professionnel."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033737619"
+  },
+  {
+   "slug": "l3142-2",
+   "num": "L3142-2",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "La déclaration annuelle des centrales",
+   "en_clair": "Toute centrale de réservation déclare son activité à l'administration chaque année, et à chaque changement.",
+   "concretement": "Ne pas déclarer son activité est puni de 15 000 € d'amende (L3143-2).",
+   "fiches": [
+    [
+     "A1.4",
+     "Plateformes et centrales de réservation"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 31 décembre 2016",
+   "modif": [
+    "Création LOI n°2016-1920 du 29 décembre 2016 - art. 1"
+   ],
+   "texte": [
+    "Toute centrale de réservation, au sens de l'article L. 3142-1, déclare son activité à l'autorité administrative.",
+    "La déclaration est renouvelée chaque année et lorsqu'un changement intervient dans les éléments de la déclaration.",
+    "Les conditions d'application du présent article sont définies par voie réglementaire."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033737628"
+  },
+  {
+   "slug": "l3142-3",
+   "num": "L3142-3",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "La responsabilité de la centrale envers le client",
+   "en_clair": "La centrale est responsable de plein droit envers le client de la bonne exécution du transport, même réalisé par un autre prestataire. Elle peut s'exonérer en prouvant la faute du client, le fait imprévisible d'un tiers ou la force majeure.",
+   "concretement": "Un client mal pris en charge peut se retourner directement contre la centrale.",
+   "fiches": [
+    [
+     "A1.4",
+     "Plateformes et centrales de réservation"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 31 décembre 2016",
+   "modif": [
+    "Création LOI n°2016-1920 du 29 décembre 2016 - art. 1"
+   ],
+   "texte": [
+    "La centrale de réservation est responsable de plein droit, à l'égard du client, de la bonne exécution des obligations résultant du contrat de transport, que ce contrat ait été conclu à distance ou non et que ces obligations soient à exécuter par la centrale elle-même ou par d'autres prestataires de services, sans préjudice du droit de recours de la centrale contre ceux-ci.",
+    "Toutefois, la centrale peut s'exonérer de tout ou partie de sa responsabilité en apportant la preuve que l'inexécution ou la mauvaise exécution du contrat est imputable soit au client, soit au fait imprévisible et insurmontable d'un tiers étranger à la fourniture de la prestation prévue au contrat, soit à un cas de force majeure."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033737658"
+  },
+  {
+   "slug": "l3142-4",
+   "num": "L3142-4",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "L'assurance de la centrale",
+   "en_clair": "La centrale de réservation justifie d'une assurance couvrant sa responsabilité civile professionnelle.",
+   "concretement": "Cette assurance est distincte de celle du chauffeur.",
+   "fiches": [
+    [
+     "A1.4",
+     "Plateformes et centrales de réservation"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 31 décembre 2016",
+   "modif": [
+    "Création LOI n°2016-1920 du 29 décembre 2016 - art. 1"
+   ],
+   "texte": [
+    "La centrale de réservation justifie de l'existence d'un contrat d'assurance couvrant sa responsabilité civile professionnelle."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033737665"
+  },
+  {
+   "slug": "l3143-1",
+   "num": "L3143-1",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "Qui contrôle les plateformes",
+   "en_clair": "Les infractions des plateformes sont constatées par la police et la gendarmerie, et par des fonctionnaires assermentés désignés par le ministre des transports ; certains manquements aussi par l'inspection du travail.",
+   "concretement": "Les contrôleurs des transports terrestres peuvent contrôler une plateforme.",
+   "fiches": [
+    [
+     "A1.4",
+     "Plateformes et centrales de réservation"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 27 juin 2026",
+   "modif": [
+    "Modifié par LOI n°2026-534 du 25 juin 2026 - art. 28 (V)"
+   ],
+   "texte": [
+    "Les infractions aux dispositions législatives et réglementaires relatives aux activités de mise en relation mentionnées au présent titre sont recherchées et constatées par, outre les officiers et agents de police judiciaire, les fonctionnaires assermentés désignés par le ministre chargé des transports et commissionnés à cet effet.",
+    "Les manquements aux articles L. 3141-3 et L. 3141-4 sont en outre recherchés et constatés par les agents de contrôle mentionnés à l'article L. 8271-1-2 du code du travail."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054336087"
+  },
+  {
+   "slug": "l3143-2",
+   "num": "L3143-2",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "Sanction de la centrale non déclarée",
+   "en_clair": "Une centrale qui ne déclare pas son activité encourt 15 000 € d'amende ; une personne morale encourt aussi des peines complémentaires, dont l'interdiction d'exercer.",
+   "concretement": "La sanction vise la centrale, pas le chauffeur.",
+   "fiches": [
+    [
+     "A1.4",
+     "Plateformes et centrales de réservation"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 31 décembre 2016",
+   "modif": [
+    "Création LOI n°2016-1920 du 29 décembre 2016 - art. 1"
+   ],
+   "texte": [
+    "Est puni de 15 000 € d'amende le fait de contrevenir à l'article L. 3142-2.",
+    "Les personnes morales déclarées responsables pénalement du délit prévu au présent article encourent, outre l'amende suivant les modalités prévues à l'article 131-38 du code pénal, les peines prévues aux 2° à 9° de l'article 131-39 du même code. L'interdiction mentionnée au 2° du même article 131-39 porte sur l'activité dans l'exercice ou à l'occasion de l'exercice de laquelle l'infraction a été commise."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033737713"
+  },
+  {
+   "slug": "l3143-3",
+   "num": "L3143-3",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "Sanction de la centrale qui bride un taxi",
+   "en_clair": "Une centrale qui interdit à un taxi de prendre un client qui le sollicite directement encourt 75 000 € d'amende.",
+   "concretement": "Cette règle protège les taxis ; elle ne concerne pas les VTC.",
+   "fiches": [
+    [
+     "A1.4",
+     "Plateformes et centrales de réservation"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 31 décembre 2016",
+   "modif": [
+    "Création LOI n°2016-1920 du 29 décembre 2016 - art. 1"
+   ],
+   "texte": [
+    "Est puni de 75 000 € d'amende le fait de contrevenir à l'article L. 3142-5.",
+    "Le tribunal peut ordonner que sa décision soit publiée intégralement ou par extraits dans les journaux qu'il désigne, aux frais du condamné."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033737727"
+  },
+  {
+   "slug": "l3143-4",
+   "num": "L3143-4",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "Organiser du transport avec des non-professionnels",
+   "en_clair": "Mettre des passagers en relation avec des personnes qui ne sont ni transporteurs, ni taxis, ni VTC, ni deux-roues professionnels est puni de deux ans de prison et 300 000 € d'amende.",
+   "concretement": "Une application qui ferait transporter des clients payants par des particuliers sans carte commet ce délit.",
+   "fiches": [
+    [
+     "A1.4",
+     "Plateformes et centrales de réservation"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 31 décembre 2016",
+   "modif": [
+    "Création LOI n°2016-1920 du 29 décembre 2016 - art. 1"
+   ],
+   "texte": [
+    "Est puni de deux ans d'emprisonnement et de 300 000 € d'amende le fait d'organiser la mise en relation de passagers et de personnes qui ne sont ni des entreprises de transport public routier de personnes au sens du titre Ier du présent livre, ni des exploitants de taxis, de voitures de transport avec chauffeur ou de véhicules motorisés à deux ou trois roues au sens du titre II du même livre, en vue de la réalisation des prestations mentionnées aux articles L. 3112-1 ou L. 3120-1.",
+    "Les personnes morales déclarées responsables pénalement du délit prévu au présent article encourent, outre l'amende suivant les modalités prévues à l'article 131-38 du code pénal, les peines prévues aux 2° à 9° de l'article 131-39 du même code. L'interdiction mentionnée au 2° du même article 131-39 porte sur l'activité dans l'exercice ou à l'occasion de l'exercice de laquelle l'infraction a été commise. Les peines prévues aux 2° à 7° dudit article 131-39 ne peuvent être prononcées que pour une durée maximale de cinq ans."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033737738"
+  },
+  {
+   "slug": "l3143-5",
+   "num": "L3143-5",
+   "source": "Code des transports",
+   "theme": "plateformes",
+   "titre": "L'amende administrative des plateformes (loi de 2026)",
+   "en_clair": "Depuis la loi du 25 juin 2026, une plateforme qui méconnaît les obligations des articles L3141-3 ou L3141-4 encourt une amende administrative de 150 € au plus par mise en relation, dans la limite de 5 % de son chiffre d'affaires annuel en France.",
+   "concretement": "L'amende est prononcée par l'administration, contestable devant le tribunal administratif.",
+   "fiches": [
+    [
+     "A1.4",
+     "Plateformes et centrales de réservation"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 27 juin 2026",
+   "modif": [
+    "Création LOI n°2026-534 du 25 juin 2026 - art. 28 (V)"
+   ],
+   "texte": [
+    "I. - La méconnaissance des articles L. 3141-3 ou L. 3141-4 par le professionnel mentionné à l'article L. 3141-1 est passible d'une sanction administrative dans les conditions prévues au présent article.",
+    "Le montant maximal de l'amende est de 150 euros par mise en relation par un professionnel mentionné à l'article L. 3141-1 avec un ou plusieurs passagers, en méconnaissance des articles L. 3141-3 ou L. 3141-4.",
+    "Le montant total des amendes prononcées à l'encontre d'un même professionnel au cours d'une année ne peut excéder 5 % du montant de son chiffre d'affaires hors taxes réalisé en France au titre du dernier exercice clos.",
+    "L'amende est prononcée par l'autorité administrative compétente, après constatation des faits par l'un des officiers ou l'un des agents mentionnés à l'article L. 3143-1.",
+    "Pour fixer le montant total de l'amende, l'autorité administrative prend en compte les circonstances et la gravité du manquement, son éventuelle réitération, le comportement de son auteur, notamment sa bonne foi, ainsi que les ressources et les charges de celui-ci.",
+    "Le délai de prescription de l'action de l'administration pour la sanction du manquement par une amende administrative est de deux années révolues à compter du jour où le manquement a été commis.",
+    "Le professionnel mentionné à l'article L. 3141-1 peut contester la décision de l'administration devant le tribunal administratif, à l'exclusion de tout recours hiérarchique.",
+    "L'amende est recouvrée comme les créances de l'Etat étrangères à l'impôt et au domaine. L'opposition à l'exécution ou aux poursuites n'a pas pour effet de suspendre l'action en recouvrement de la créance.",
+    "II. - Les conditions d'application du présent article sont déterminées par décret en Conseil d'Etat."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054317800"
+  },
+  {
+   "slug": "l3124-7",
+   "num": "L3124-7",
+   "source": "Code des transports",
+   "theme": "sanctions",
+   "titre": "Exercer sans être inscrit au registre",
+   "en_clair": "Exercer l'activité d'exploitant VTC sans être inscrit au registre est puni de trois ans de prison et 45 000 € d'amende, avec des peines complémentaires : suspension du permis jusqu'à cinq ans, immobilisation ou confiscation du véhicule, interdiction de paraître dans certains lieux. Une amende forfaitaire de 500 € peut éteindre l'action.",
+   "concretement": "Un chauffeur non inscrit contrôlé à l'aéroport peut se voir confisquer son véhicule.",
+   "fiches": [
+    [
+     "A5.6",
+     "Exercer sans carte ou sans inscription"
+    ],
+    [
+     "G1.5",
+     "Prêter ou louer son inscription"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 27 juin 2026",
+   "modif": [
+    "Modifié par LOI n°2026-534 du 25 juin 2026 - art. 28 (V)Modifié par LOI n°2023-22 du 24 janvier 2023 - art. 25 (V)"
+   ],
+   "texte": [
+    "I.-Est puni de trois ans d'emprisonnement et de 45 000 € d'amende le fait d'exercer l'activité prévue à l'article L. 3122-1 sans être inscrit au registre mentionné à l'article L. 3122-3.",
+    "II.-Les personnes physiques reconnues coupables de l'infraction prévue au I encourent également les peines complémentaires suivantes :",
+    "1° La suspension, pour une durée maximale de cinq ans, du permis de conduire ;",
+    "2° L'immobilisation, pour une durée maximale d'un an, du véhicule qui a servi à commettre l'infraction ;",
+    "3° La confiscation du véhicule qui a servi à commettre l'infraction ;",
+    "4° L'interdiction de paraître dans certains lieux ou dans certaines catégories de lieux prévue au 12° de l'article 131-6 du code pénal.",
+    "III.-Les personnes morales déclarées responsables pénalement, dans les conditions prévues à l'article 121-2 du code pénal, de l'infraction prévue au I du présent article encourent, outre l'amende suivant les modalités prévues à l'article 131-38 du même code, les peines prévues aux 8° et 9° de l'article 131-39 dudit code.",
+    "L'action publique peut être éteinte, dans les conditions prévues aux articles 495-17 à 495-25 du code de procédure pénale, par le versement d'une amende forfaitaire d'un montant de 500 euros. Le montant de l'amende forfaitaire minorée est de 400 euros et le montant de l'amende forfaitaire majorée est de 1 000 euros."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054336028"
+  },
+  {
+   "slug": "l3124-11",
+   "num": "L3124-11",
+   "source": "Code des transports",
+   "theme": "sanctions",
+   "titre": "Avertissement et retrait de la carte",
+   "en_clair": "En cas de violation de la réglementation, l'administration peut donner un avertissement au conducteur ou lui retirer sa carte, temporairement ou définitivement. La loi ne fixe pas de durée maximale au retrait temporaire.",
+   "concretement": "Le Conseil d'État a admis en 2023 un retrait temporaire de huit ans (CE, 18 octobre 2023, n° 475657).",
+   "fiches": [
+    [
+     "A5.4",
+     "Avertissement, retrait : les sanctions administratives"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 janvier 2017",
+   "modif": [
+    "Modifié par LOI n°2016-1920 du 29 décembre 2016 - art. 9 (V)"
+   ],
+   "texte": [
+    "En cas de violation de la réglementation applicable à la profession par le conducteur d'un véhicule de transport public particulier de personnes, l'autorité administrative peut lui donner un avertissement ou procéder au retrait temporaire ou définitif de sa carte professionnelle."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033745438"
+  },
+  {
+   "slug": "l3124-12",
+   "num": "L3124-12",
+   "source": "Code des transports",
+   "theme": "sanctions",
+   "titre": "Les délits : maraude, démarchage, conduite sans carte",
+   "en_clair": "Est puni de trois ans de prison et 45 000 € d'amende le fait de louer un VTC à la place ou de prendre en charge un client sans réservation préalable, de démarcher un client pour une telle prise en charge, de la proposer à la vente ou de la promouvoir, ou de faire réaliser des courses par un conducteur sans carte professionnelle. S'y ajoutent les mêmes peines complémentaires (permis, véhicule, interdiction de paraître) ; une amende forfaitaire de 500 € peut éteindre l'action.",
+   "concretement": "Racoler des voyageurs à la sortie d'une gare est un délit, même si un prix est annoncé.",
+   "fiches": [
+    [
+     "A3.2",
+     "La maraude, réservée au taxi"
+    ],
+    [
+     "A3.6",
+     "Le client qui hèle et la fausse réservation"
+    ],
+    [
+     "A5.6",
+     "Exercer sans carte ou sans inscription"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 27 juin 2026",
+   "modif": [
+    "Modifié par LOI n°2026-534 du 25 juin 2026 - art. 28 (V)Modifié par LOI n°2023-22 du 24 janvier 2023 - art. 25 (V)"
+   ],
+   "texte": [
+    "I. - Est puni de trois ans d'emprisonnement et de 45 000 € d'amende le fait de contrevenir au I, au 1° du II ou aux 2° ou 3° du III de l'article L. 3120-2 ou de réaliser ou de faire réaliser des prestations de transport relevant du présent titre lorsque le conducteur ne dispose pas de la carte professionnelle mentionnée à l'article L. 3120-2-2 correspondant à l'activité pratiquée.",
+    "II. - Les personnes physiques reconnues coupables des infractions prévues au I du présent article encourent également les peines complémentaires suivantes :",
+    "1° La suspension, pour une durée maximale de cinq ans, du permis de conduire ;",
+    "2° L'immobilisation, pour une durée maximale d'un an, du véhicule qui a servi à commettre l'infraction ;",
+    "3° La confiscation du véhicule qui a servi à commettre l'infraction ;",
+    "4° L'interdiction de paraître dans certains lieux ou dans certaines catégories de lieux prévue au 12° de l'article 131-6 du code pénal.",
+    "III. - Les personnes morales déclarées responsables pénalement, dans les conditions prévues à l'article 121-2 du code pénal, des infractions prévues au I du présent article encourent, outre l'amende suivant les modalités prévues à l'article 131-38 du même code, les peines prévues aux 8° et 9° de l'article 131-39 dudit code.",
+    "L'action publique peut être éteinte, dans les conditions prévues aux articles 495-17 à 495-25 du code de procédure pénale, par le versement d'une amende forfaitaire d'un montant de 500 euros. Le montant de l'amende forfaitaire minorée est de 400 euros et le montant de l'amende forfaitaire majorée est de 1 000 euros."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054336042"
+  },
+  {
+   "slug": "l3124-13",
+   "num": "L3124-13",
+   "source": "Code des transports",
+   "theme": "sanctions",
+   "titre": "Le contrôle incognito (loi de 2026)",
+   "en_clair": "Quand c'est nécessaire pour prouver un délit, les agents de contrôle peuvent ne révéler leur qualité qu'au moment où ils informent la personne de l'infraction.",
+   "concretement": "Un « client » qui demande une course sans réservation peut être un agent en civil.",
+   "fiches": [
+    [
+     "A5.3",
+     "Le contrôle incognito"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 27 juin 2026",
+   "modif": [
+    "Modifié par LOI n°2026-534 du 25 juin 2026 - art. 28 (V)"
+   ],
+   "texte": [
+    "Lorsque l'établissement de la preuve d'un des délits définis au présent chapitre en dépend, les agents habilités à constater des infractions au titre du présent code peuvent ne décliner leur qualité qu'au moment où ils informent la personne contrôlée de la constatation de l'infraction."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054336093"
+  },
+  {
+   "slug": "r3124-1",
+   "num": "R3124-1",
+   "source": "Code des transports",
+   "theme": "sanctions",
+   "titre": "Qui sanctionne le conducteur",
+   "en_clair": "Pour le retrait de carte (L3124-11), l'autorité compétente est celle qui a délivré la carte professionnelle.",
+   "concretement": "C'est la préfecture qui vous a délivré la carte qui peut la retirer.",
+   "fiches": [
+    [
+     "A5.4",
+     "Avertissement, retrait : les sanctions administratives"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 08 avril 2017",
+   "modif": [
+    "Modifié par Décret n°2017-483 du 6 avril 2017 - art. 8"
+   ],
+   "texte": [
+    "Pour l'application de l'article L. 3124-1, l'autorité compétente est celle qui a délivré l'autorisation de stationnement.",
+    "Pour l'application de l'article L. 3124-11, l'autorité compétente est celle qui a délivré la carte professionnelle."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389644"
+  },
+  {
+   "slug": "r3124-4",
+   "num": "R3124-4",
+   "source": "Code des transports",
+   "theme": "sanctions",
+   "titre": "Le préfet du lieu de l'infraction",
+   "en_clair": "Pour les sanctions administratives des conducteurs de VTC (L3124-11), l'autorité compétente est le préfet du département où l'infraction a été commise, ou le préfet de police à Paris.",
+   "concretement": "Une infraction commise à Nice relève du préfet des Alpes-Maritimes.",
+   "fiches": [
+    [
+     "A5.4",
+     "Avertissement, retrait : les sanctions administratives"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 08 avril 2017",
+   "modif": [
+    "Modifié par Décret n°2017-483 du 6 avril 2017 - art. 8"
+   ],
+   "texte": [
+    "Pour l'application de l'article L. 3124-11, l'autorité compétente est le préfet de département du lieu de commission de la violation de la réglementation ou, si elle a lieu dans la commune de Paris, le préfet de police."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389628"
+  },
+  {
+   "slug": "r3124-5",
+   "num": "R3124-5",
+   "source": "Code des transports",
+   "theme": "sanctions",
+   "titre": "Véhicule non conforme ou équipement de taxi",
+   "en_clair": "Exploiter des VTC non conformes aux caractéristiques réglementaires, ou équipés d'un élément propre aux taxis, est une contravention de 3e classe.",
+   "concretement": "Un lumineux de toit sur une berline VTC est sanctionné.",
+   "fiches": [
+    [
+     "G3.2",
+     "Rien qui ressemble à un taxi"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 janvier 2015",
+   "modif": [
+    "Création DÉCRET n°2014-1725 du 30 décembre 2014 - art."
+   ],
+   "texte": [
+    "Est puni de l'amende prévue pour les contraventions de la troisième classe :",
+    "-le fait d'exercer l'activité d'exploitant de voitures de transport avec chauffeur avec des véhicules non conformes aux caractéristiques prévues à l'article R. 3122-6 ;",
+    "-l'utilisation, par l'exploitant de voitures de transport avec chauffeur, à bord de ses véhicules, de l'un des équipements propres aux taxis énumérés au I de l'article R. 3122-7."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048554"
+  },
+  {
+   "slug": "r3124-6",
+   "num": "R3124-6",
+   "source": "Code des transports",
+   "theme": "sanctions",
+   "titre": "Rouler sans vignette",
+   "en_clair": "Utiliser une VTC sans la signalétique réglementaire, ou avec une signalétique mal utilisée, est une contravention de 4e classe.",
+   "concretement": "Vignettes retirées ou collées au mauvais endroit : 4e classe.",
+   "fiches": [
+    [
+     "G3.1",
+     "Les deux vignettes : où, quoi, comment"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 juillet 2017",
+   "modif": [
+    "Modifié par Décret n°2017-483 du 6 avril 2017 - art. 8"
+   ],
+   "texte": [
+    "Est puni de l'amende prévue pour les contraventions de la quatrième classe, l'utilisation, par l'exploitant de voitures de transport avec chauffeur, de véhicules sans la signalétique prévue à l'article R. 3122-8, ou avec une signalétique utilisée dans des conditions non conformes aux dispositions de cet article."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389612"
+  },
+  {
+   "slug": "r3124-7",
+   "num": "R3124-7",
+   "source": "Code des transports",
+   "theme": "sanctions",
+   "titre": "Ne pas déclarer un changement au registre",
+   "en_clair": "Ne pas signaler dans les délais un changement au gestionnaire du registre, ou ne pas déclarer un véhicule de remplacement, est une contravention de 4e classe.",
+   "concretement": "Changer de véhicule sans le déclarer au registre est sanctionné.",
+   "fiches": [
+    [
+     "G1.4",
+     "Déclarer ses conducteurs et ses véhicules"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 24 août 2018",
+   "modif": [
+    "Modifié par Décret n°2018-736 du 21 août 2018 - art. 2"
+   ],
+   "texte": [
+    "Est puni de l'amende prévue pour les contraventions de la quatrième classe le fait de contrevenir au cinquième alinéa du II et aux obligations de transmission mentionnées au premier et au second alinéas du III de l'article R. 3122-1."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037330085"
+  },
+  {
+   "slug": "r3124-11",
+   "num": "R3124-11",
+   "source": "Code des transports",
+   "theme": "sanctions",
+   "titre": "Contraventions de 5e classe : réservation et assurance",
+   "en_clair": "Est une contravention de 5e classe le fait d'enfreindre certaines interdictions de l'article L3120-2 (celles qui ne sont pas des délits), ou de ne pas pouvoir présenter le justificatif d'assurance transport de personnes.",
+   "concretement": "Stationner à l'aéroport plus d'une heure avant la prise en charge relève de cette contravention.",
+   "fiches": [
+    [
+     "A3.4",
+     "Gares et aéroports"
+    ],
+    [
+     "A4.2",
+     "Les deux assurances du chauffeur"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 08 avril 2017",
+   "modif": [
+    "Modifié par Décret n°2017-483 du 6 avril 2017 - art. 8"
+   ],
+   "texte": [
+    "Est puni de l'amende prévue pour les contraventions de la cinquième classe le fait de contrevenir aux dispositions :",
+    "-à l'une des interdictions édictées à l'article L. 3120-2, à l'exception de celles prévues au 1° de son II et au 1° de son III,",
+    "-de l'article R. 3120-4."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389618"
+  },
+  {
+   "slug": "r3124-12",
+   "num": "R3124-12",
+   "source": "Code des transports",
+   "theme": "sanctions",
+   "titre": "Les sanctions liées à la carte professionnelle",
+   "en_clair": "Carte non apposée : 1re classe. Carte non présentée immédiatement : 2e classe. Carte non présentée dans les cinq jours après y avoir été invité : 4e classe. Exercer sans carte valide, ou faire travailler un conducteur sans carte valable : 5e classe. Faire réaliser des courses sans carte est par ailleurs un délit (L3124-12).",
+   "concretement": "Carte laissée dans la boîte à gants : contravention de 1re classe.",
+   "fiches": [
+    [
+     "A2.6",
+     "La carte professionnelle au quotidien"
+    ],
+    [
+     "A2.8",
+     "Carte expirée, oubliée ou prêtée"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 janvier 2015",
+   "modif": [
+    "Création DÉCRET n°2014-1725 du 30 décembre 2014 - art."
+   ],
+   "texte": [
+    "I.-Est puni de l'amende prévue pour les contraventions de la première classe le fait, pour tout conducteur d'un véhicule mentionné à l'article R. 3120-1 de ne pas apposer sa carte professionnelle conformément au premier alinéa de l'article R. 3120-6.",
+    "II.-Est puni de l'amende prévue pour les contraventions de la deuxième classe le fait, pour tout conducteur mentionné au I, de ne pas présenter immédiatement sa carte professionnelle, en cours de validité, aux agents des services chargés des contrôles.",
+    "III.-Est puni de l'amende prévue pour les contraventions de la quatrième classe le fait, pour tout conducteur mentionné au I, invité à justifier dans un délai de cinq jours de la possession d'une carte professionnelle, en cours de validité, de ne pas présenter ce document avant l'expiration de ce délai.",
+    "IV.-Est puni de l'amende prévue pour les contraventions de la cinquième classe :",
+    "-le fait d'exercer l'activité de conducteur de l'un des véhicules mentionnés au I sans être titulaire d'une carte professionnelle en cours de validité ;",
+    "-le fait d'exercer l'activité d'exploitant de l'un des véhicules mentionnés au I en recourant à des conducteurs de véhicules mentionnés au I qui ne sont pas titulaires d'une carte professionnelle valable pour le transport effectué."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048576"
+  },
+  {
+   "slug": "r3124-13",
+   "num": "R3124-13",
+   "source": "Code des transports",
+   "theme": "sanctions",
+   "titre": "Vendre une course avec un véhicule non autorisé",
+   "en_clair": "Proposer ou promouvoir une offre de transport avec des véhicules qui ne sont pas des véhicules de T3P, ou non conformes, est une contravention de 5e classe.",
+   "concretement": "Publier une annonce de « chauffeur privé » avec une voiture non inscrite au registre est sanctionné.",
+   "fiches": [
+    [
+     "A5.6",
+     "Exercer sans carte ou sans inscription"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 janvier 2015",
+   "modif": [
+    "Création DÉCRET n°2014-1725 du 30 décembre 2014 - art."
+   ],
+   "texte": [
+    "Est puni de l'amende prévue pour les contraventions de la cinquième classe :",
+    "-le fait de proposer à la vente ou de promouvoir une offre de transport mentionnée à l'article L. 3120-1 avec des véhicules qui ne sont pas des véhicules de transport public particulier ;",
+    "-le fait de proposer à la vente ou de promouvoir une offre de transport mentionnée à l'article L. 3120-1 effectuée avec des véhicules de transport public particulier non conformes aux caractéristiques définies par le présent titre."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048578"
+  },
+  {
+   "slug": "d3120-21",
+   "num": "D3120-21",
+   "source": "Code des transports",
+   "theme": "sanctions",
+   "titre": "La commission locale du T3P",
+   "en_clair": "Chaque département a une commission locale des transports publics particuliers de personnes ; une commission unique couvre Paris et la petite couronne, auprès du préfet de police.",
+   "concretement": "C'est cette commission qui, en formation disciplinaire, donne son avis avant un retrait de carte.",
+   "fiches": [
+    [
+     "A5.4",
+     "Avertissement, retrait : les sanctions administratives"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 juin 2017",
+   "modif": [
+    "Créé par Décret n°2017-236 du 24 février 2017 - art. 1"
+   ],
+   "texte": [
+    "Il est créé dans chaque département une commission consultative dénommée commission locale des transports publics particuliers de personnes.",
+    "Pour la zone constituée de la ville de Paris, des départements des Hauts-de-Seine, de la Seine-Saint-Denis et du Val-de-Marne et des parties de Seine-et-Marne et du Val-d'Oise situées sur les emprises des aéroports de Paris-Charles-de-Gaulle et de Paris-Le Bourget, une commission unique est créée auprès du préfet de police."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034084266"
+  },
+  {
+   "slug": "d3120-32",
+   "num": "D3120-32",
+   "source": "Code des transports",
+   "theme": "sanctions",
+   "titre": "Les sections disciplinaires",
+   "en_clair": "La commission locale peut comprendre une section disciplinaire par profession (taxis, VTC, deux-roues), composée à parts égales de représentants de l'État et de professionnels.",
+   "concretement": "Un dossier de VTC est examiné par la section VTC, avec des professionnels du métier.",
+   "fiches": [
+    [
+     "A5.4",
+     "Avertissement, retrait : les sanctions administratives"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 juin 2017",
+   "modif": [
+    "Créé par Décret n°2017-236 du 24 février 2017 - art. 1"
+   ],
+   "texte": [
+    "La commission peut comprendre jusqu'à trois sections spécialisées en matière disciplinaire pour respectivement les taxis, les voitures de transport avec chauffeur et les véhicules motorisés à deux ou trois roues.",
+    "Chaque section spécialisée en matière disciplinaire est composée, à parts égales, de membres du collège de l'Etat et de membres du collège des professionnels relevant de la profession concernée."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034084298"
+  },
+  {
+   "slug": "d3120-38",
+   "num": "D3120-38",
+   "source": "Code des transports",
+   "theme": "sanctions",
+   "titre": "L'avis de la commission avant une sanction",
+   "en_clair": "Les préfectures fixent les conditions dans lesquelles les sections disciplinaires sont consultées avant une sanction administrative (L3124-11).",
+   "concretement": "Le conducteur convoqué peut présenter ses observations avant la décision.",
+   "fiches": [
+    [
+     "A5.4",
+     "Avertissement, retrait : les sanctions administratives"
+    ],
+    [
+     "A5.5",
+     "Contester une sanction"
+    ]
+   ],
+   "vigueur": "En vigueur depuis le 01 juin 2017",
+   "modif": [
+    "Créé par Décret n°2017-236 du 24 février 2017 - art. 1"
+   ],
+   "texte": [
+    "Les autorités compétentes pour délivrer les cartes professionnelles de conducteurs définissent les conditions dans lesquelles les sections disciplinaires de la commission des transports publics particuliers sont consultées pour avis dans le cadre des procédures de sanctions administratives prévues à l'article L. 3124-11."
+   ],
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034084314"
+  },
+  {
+   "slug": "arrete-6-avril-2017-examen",
+   "num": "Arrêté du 6 avril 2017",
+   "source": "Arrêté du 6 avril 2017 relatif aux programmes et à l'évaluation des épreuves des examens d'accès aux professions de conducteur de taxi et de conducteur de voiture de transport avec chauffeur",
+   "theme": "conducteur",
+   "titre": "Programme et notation de l'examen",
+   "en_clair": "Il fixe les épreuves de l'examen VTC : sept épreuves écrites (A à G) avec leur durée, leur barème et leur coefficient, puis une épreuve pratique notée sur 20. Pour être admissible : 10/20 de moyenne, au moins 6/20 à chaque épreuve sauf l'anglais (4/20).",
+   "concretement": "Un candidat admissible peut se présenter trois fois à l'épreuve pratique dans l'année qui suit ; il faut 12/20 pour être reçu.",
+   "fiches": [
+    [
+     "A2.4",
+     "L'examen, seule porte d'entrée"
+    ]
+   ],
+   "articles": [
+    {
+     "num": "Article 1",
+     "vigueur": "En vigueur depuis le 08 avril 2017",
+     "texte": [
+      "L'examen d'accès à la profession de conducteur de taxi et l'examen d'accès à la profession de conducteur de voiture de transport avec chauffeur se composent d'épreuves théoriques d'admissibilité et d'une épreuve pratique d'admission selon les modalités définies au présent arrêté."
+     ]
+    },
+    {
+     "num": "Article 2",
+     "vigueur": "En vigueur depuis le 01 avril 2024",
+     "texte": [
+      "Les épreuves d'admissibilité sont réalisées sous la forme de questions à choix multiples et de questions à réponses courtes. Elles portent sur les matières et les connaissances énumérées dans le référentiel de connaissances figurant en annexe I du présent arrêté.",
+      "I. - Les épreuves d'admissibilité communes aux candidats à l'examen d'accès à la profession de conducteur de taxi et à l'examen d'accès à la profession de conducteur de voiture de transport avec chauffeur sont les suivantes :",
+      "A. - Une épreuve portant sur la réglementation du transport public particulier de personnes et la prévention des discriminations et des violences sexuelles et sexistes, d'une durée de quarante-cinq minutes, notée sur vingt points, affectée d'un coefficient trois.",
+      "Cette épreuve est composée de cinq questions à réponses courtes, notées sur deux points, et de dix questions à choix multiples, notées sur un point.",
+      "B. - Une épreuve portant sur la gestion, d'une durée de quarante-cinq minutes, notée sur vingt points, affectée d'un coefficient deux.",
+      "Cette épreuve est composée de deux questions à réponses courtes, notées sur deux points, et de seize questions à choix multiples, notées sur un point.",
+      "C. - Une épreuve portant sur la sécurité routière, d'une durée de trente minutes, notée sur vingt points, affectée d'un coefficient trois.",
+      "Cette épreuve est composée de vingt questions à choix multiples notées sur un point.",
+      "D. - Une épreuve destinée à évaluer la capacité d'expression et de compréhension en langue française, d'une durée de trente minutes, notée sur vingt points, affectée d'un coefficient deux.",
+      "Cette épreuve est constituée de questions portant sur la compréhension d'un texte de quinze à vingt lignes en lien notamment avec le thème des transports.",
+      "Elle est composée de trois questions à réponses courtes, notées sur deux points et de sept questions à choix multiples notées sur deux points.",
+      "Un point est retiré lorsque le candidat a commis plus de cinq fautes d'orthographe dans la totalité de ses réponses aux questions à réponse courtes.",
+      "E. - Une épreuve destinée à évaluer la capacité d'expression et de compréhension en langue anglaise, à un niveau équivalent au niveau A2 du cadre européen commun de référence pour les langues, d'une durée de trente minutes, notée sur vingt points, affectée d'un coefficient un.",
+      "Cette épreuve est composée de vingt questions à choix multiples notées sur un point.",
+      "II. - Les épreuves spécifiques de l'examen d'accès à la profession de conducteur de taxi et de l'examen d'accès à la profession de conducteur de voiture de transport avec chauffeur sont les suivantes :",
+      "1°Les épreuves spécifiques d'accès à la profession de conducteur de taxi sont les suivantes :",
+      "A. - Une épreuve \" F (T) \" portant sur la connaissance du territoire et la réglementation locale, d'une durée de vingt minutes, notée sur vingt points, affectée d'un coefficient trois.",
+      "Cette épreuve est composée de deux questions à réponses courtes, notées sur quatre points, et de six questions à choix multiples, notées sur deux points.",
+      "B. - Une épreuve \" G (T) \" portant sur la réglementation nationale de l'activité taxis ainsi que sur la gestion propre à cette activité d'une durée de trente minutes, notée sur vingt points, affectée d'un coefficient trois.",
+      "Cette épreuve est composée de quatre questions à réponses courtes, notées sur deux points, et de douze questions à choix multiples, notées sur un point.",
+      "2°Les épreuves spécifiques de l'examen d'accès à la profession de conducteur de voiture de transport avec chauffeur sont les suivantes :",
+      "A. - Une épreuve \" F (V) \" portant sur le développement commercial et la gestion propre à l'activité de voiture de transport avec chauffeur, d'une durée de trente minutes, notée sur vingt points, affectée d'un coefficient trois.",
+      "Cette épreuve est composée de quatre questions à réponses courtes, notées sur deux points, et de douze questions à choix multiples, notées sur un point.",
+      "B. - Une épreuve \" G (V) \" portant sur la réglementation nationale spécifique de l'activité de voiture de transport avec chauffeur, d'une durée de vingt minutes, notée sur vingt points, affectée d'un coefficient trois.",
+      "Cette épreuve est composée de deux questions à réponses courtes, notées sur quatre points, et de six questions à choix multiples, notées sur deux points.",
+      "III. - Est déclaré admissible à l'examen le candidat qui a obtenu cumulativement :",
+      "- une note moyenne d'au moins dix sur vingt, calculée sur l'ensemble des sept épreuves d'admissibilité pondérées de leurs coefficients respectifs ;",
+      "- une note d'au moins six sur vingt à chacune des épreuves A, B, C, D, F et G ;",
+      "- une note d'au moins quatre sur vingt à l'épreuve E.",
+      "Un candidat déclaré admissible peut se présenter trois fois à l'épreuve d'admission dans un délai d'un an à compter de la publication des résultats des épreuves d'admissibilité."
+     ]
+    },
+    {
+     "num": "Article 3",
+     "vigueur": "En vigueur depuis le 02 septembre 2017",
+     "texte": [
+      "I. - L'épreuve d'admission consiste en une mise en situation pratique de réalisation, selon l'examen auquel le candidat postule, d'une course de taxi ou d'une mission de transport en voiture de transport avec chauffeur. Elle a pour objectif d'évaluer la capacité du candidat à assurer, par sa conduite en circulation, la sécurité des passagers et des autres usagers de la route tout en proposant aux clients un service commercial de qualité.",
+      "L'épreuve pratique comprend une phase de conduite en circulation d'une durée minimum de vingt minutes.",
+      "II. - L'épreuve est notée sur vingt points. La notation est effectuée par groupe de compétences selon les modalités suivantes :",
+      "1° Pour l'épreuve pratique de l'examen d'accès à la profession de conducteur de taxi :",
+      "A. - La préparation et la réalisation du parcours. Cette compétence est notée sur deux points ;",
+      "B. - La sécurité et la souplesse de la conduite et le respect du code de la route. Cette compétence est notée sur dix points ;",
+      "C. - La qualité de la prise en charge et de la relation client ainsi que la capacité à apporter des informations à caractère touristique. Cette compétence est notée sur cinq points ;",
+      "D. - La facturation et l'utilisation des équipements spéciaux. Cette compétence est notée sur trois points.",
+      "2° Pour l'épreuve pratique de l'examen d'accès à la profession de conducteur de voiture de transport avec chauffeur :",
+      "A. - La préparation et la réalisation du parcours. Cette compétence est notée sur trois points ;",
+      "B. - La sécurité et la souplesse de la conduite et le respect du code de la route. Cette compétence est notée sur dix points ;",
+      "C. - La qualité de la prise en charge et de la relation client ainsi que la capacité à apporter des informations à caractère touristique. Cette compétence est notée sur cinq points ;",
+      "D. - La facturation. Cette compétence est notée sur deux points.",
+      "III. - Toute intervention de l'examinateur sur le dispositif de double commande ou sur le volant de direction entraîne l'arrêt de l'épreuve et l'ajournement du candidat.",
+      "Le référentiel de compétences de l'épreuve d'admission figure en annexe II du présent arrêté. La grille d'évaluation des candidats pour l'épreuve pratique de l'examen d'accès à la profession de conducteur de taxi figure en annexe III du présent arrêté. La grille d'évaluation des candidats pour l'épreuve pratique de l'examen d'accès à la profession de conducteur de voiture de transport avec chauffeur figure en annexe III bis du présent arrêté.",
+      "IV. - Est déclaré reçu à l'examen le candidat qui a obtenu une note d'au moins douze sur vingt à l'épreuve pratique."
+     ]
+    },
+    {
+     "num": "Article 4",
+     "vigueur": "En vigueur depuis le 10 août 2018",
+     "texte": [
+      "Le dossier d'inscription des candidats à l'examen comporte les pièces suivantes :",
+      "-une demande d'inscription à l'examen présentée par le candidat qui comprend la date de la session souhaitée ;",
+      "-une photocopie recto-verso de la carte nationale d'identité ou du passeport en cours de validité ;",
+      "-pour les étrangers ressortissants d'un Etat non membre de l'Union européenne, l'autorisation de travail mentionnée au 2° de l'article L. 5221-2 du code du travail ;",
+      "-un justificatif de domicile de moins de trois mois ;",
+      "-une photocopie recto-verso du permis de conduire de la catégorie B ;",
+      "-une photographie d'identité récente ;",
+      "-la signature du candidat ;",
+      "-le paiement des droits d'examen ;",
+      "-pour les candidats mentionnés aux quatre derniers alinéas de l'article 5, une attestation de réussite à l'épreuve d'admissibilité."
+     ]
+    },
+    {
+     "num": "Article 5",
+     "vigueur": "En vigueur depuis le 08 avril 2017",
+     "texte": [
+      "Les candidats s'inscrivent soit à l'examen d'accès à la profession de conducteur de taxi, soit à l'examen d'accès à la profession de conducteur de voiture de transport avec chauffeur et se présentent aux épreuves d'admissibilité et d'admission de l'examen auquel ils se sont inscrits.",
+      "Toutefois, les candidats qui ont été reconnus admissibles à l'un ou l'autre de ces deux examens dans les conditions prévues par le III de l'article 2 du présent arrêté depuis moins de 3 ans sont réputés avoir satisfait aux épreuves communes d'admissibilité énumérées au I de l'article 2 du même arrêté pour se présenter à l'examen d'accès à l'autre profession. Ces candidats doivent se soumettre aux épreuves spécifiques d'admissibilité prévues au II de ce même article.",
+      "Est déclaré admissible à l'examen dans les conditions prévues par le deuxième alinéa du présent article et peut se présenter à l'épreuve pratique d'admission prévue à l'article 3 du présent arrêté, le candidat qui a obtenu cumulativement :",
+      "- une note moyenne d'au moins dix sur vingt, calculée sur les deux épreuves spécifiques prévues au II de l'article 2, pondérées de leurs coefficients respectifs ;",
+      "- une note d'au moins six sur vingt à chacune des épreuves F (T) et G (T) ou F (V) et G (V)."
+     ]
+    }
+   ],
+   "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000034379046",
+   "arrete": true
+  },
+  {
+   "slug": "arrete-11-aout-2017-formation-continue",
+   "num": "Arrêté du 11 août 2017",
+   "source": "Arrêté du 11 août 2017 relatif à la formation continue des conducteurs de taxi et des conducteurs de voiture de transport avec chauffeur et à la mobilité des conducteurs de taxi",
+   "theme": "conducteur",
+   "titre": "La formation continue",
+   "en_clair": "Il fixe le stage de formation continue : 14 heures en présentiel, fractionnables en quatre périodes sur deux mois au plus, dans un centre agréé, en sessions propres aux VTC, avec trois modules obligatoires (droit du T3P, réglementation VTC, sécurité routière) et un module au choix (anglais, gestion et développement commercial, ou prévention et secours civiques).",
+   "concretement": "À la fin du stage, le centre remet une attestation à joindre au renouvellement de la carte.",
+   "fiches": [
+    [
+     "A2.7",
+     "La formation continue obligatoire"
+    ]
+   ],
+   "articles": [
+    {
+     "num": "Article 1",
+     "vigueur": "En vigueur depuis le 10 juillet 2024",
+     "texte": [
+      "La formation continue obligatoire prévue à l'article R. 3120-8-2 du code des transports permet la mise à jour des connaissances essentielles pour la pratique de l'activité de conducteur de taxi ou de conducteur de voiture de transport avec chauffeur. Ce stage comporte quatorze heures de formation, pouvant être fractionnées en quatre périodes de trois heures trente au cours d'une période de deux mois maximum, et est dispensé en présentiel au sein d'un centre de formation agréé en application de l'article R. 3120-9 du code des transports.",
+      "Chaque session de formation est organisée spécifiquement soit pour des conducteurs de taxi, soit pour des conducteurs de voiture de transport avec chauffeur.",
+      "La formation comporte trois modules d'approfondissement obligatoires :",
+      "A.-Droit du transport public particulier de personnes.",
+      "B.-Réglementation spécifique à l'activité taxi ou réglementation spécifique à l'activité de voiture de transport avec chauffeur, selon la profession du conducteur stagiaire.",
+      "C.-Sécurité routière.",
+      "La formation comporte également un module d'approfondissement au choix :",
+      "D.-Anglais.",
+      "E.-Gestion et développement commercial, dont l'utilisation des nouvelles technologies de l'information et de la communication.",
+      "F.-Prévention et secours civiques.",
+      "Le référentiel des connaissances est celui figurant en annexe I de l'arrêté du 6 avril 2017 relatif aux programmes et à l'évaluation des épreuves des examens d'accès aux professions de conducteur de taxi et de conducteur de voiture de transport avec chauffeur pour les modules A, B, C, D, E et celui figurant en annexes 1,2 et 3 de l'arrêté du 24 juillet 2007 fixant le référentiel national de compétences de sécurité civile relatif à l'unité d'enseignement \" premiers secours citoyen \" pour le module F.",
+      "Les modules d'approfondissement obligatoires A, B, C et le module d'approfondissement au choix D, E ou F sont traités chacun en trois heures trente."
+     ]
+    },
+    {
+     "num": "Article 2",
+     "vigueur": "En vigueur depuis le 26 juillet 2018",
+     "texte": [
+      "Le conducteur de taxi titulaire d'une carte professionnelle en cours de validité souhaitant poursuivre l'exercice de son activité dans un autre département que celui dans lequel il a obtenu son examen est tenu de suivre un stage de formation à la mobilité qui comporte quatorze heures de formation, et qui est dispensé en présentiel au sein d'un centre de formation agréé en application de l'article R. 3120-9 du code des transports situé dans le département au sein duquel il souhaite poursuivre son activité.",
+      "Le conducteur de taxi titulaire d'une carte professionnelle en cours de validité souhaitant poursuivre l'exercice de son activité dans la zone des taxis parisiens est tenu de suivre un stage de formation à la mobilité dispensé en présentiel au sein d'un centre de formation agréé en application de l'article R. 3120-9 du code des transports situé dans la zone des taxis parisiens.",
+      "La formation comporte deux modules d'approfondissement obligatoires :",
+      "A. - Connaissance du territoire.",
+      "B. - Réglementation locale.",
+      "Le référentiel des connaissances pour chacun de ces modules est celui figurant en annexe I de l'arrêté du 6 avril 2017 relatif aux programmes et à l'évaluation des épreuves des examens.",
+      "Les modules d'approfondissement obligatoires A et B sont traités chacun, au minimum, en sept heures.",
+      "Par dérogation à la durée du stage mentionnée au premier alinéa du présent article, le conducteur de taxi souhaitant poursuivre l'exercice de son activité dans la zone des taxis parisiens est tenu de suivre un stage de formation à la mobilité d'une durée de trente-cinq heures."
+     ]
+    },
+    {
+     "num": "Article 3",
+     "vigueur": "En vigueur depuis le 02 septembre 2017",
+     "texte": [
+      "A l'issue du stage de formation continue, une attestation de suivi de la formation continue, signée et datée par le représentant légal du centre de formation, est remise au conducteur sans délai, sur un support durable au sens du 3° de l'article L. 221-1 du code de la consommation."
+     ]
+    },
+    {
+     "num": "Article 4",
+     "vigueur": "En vigueur depuis le 02 septembre 2017",
+     "texte": [
+      "A l'issue du stage de formation à la mobilité, une attestation de suivi de la formation à la mobilité, signée et datée par le représentant légal du centre de formation, est remise sans délai, sur un support durable au sens du 3° de l'article L. 221-1 du code de la consommation, au conducteur, au préfet du département dans lequel le conducteur a obtenu son examen, ou au préfet de police, si le conducteur a obtenu son examen dans la zone des taxis parisiens, et au préfet du département dans lequel le conducteur souhaite exercer son activité ou au préfet de police, si le conducteur souhaite exercer son activité dans la zone des taxis parisiens.",
+      "Une autorisation d'exercice est délivrée sur un support durable au sens du 3° de l'article L. 221-1 du code de la consommation par le préfet du département dans lequel le conducteur souhaite exercer son activité ou par le préfet de police, si le conducteur souhaite exercer son activité dans la zone des taxis parisiens."
+     ]
+    }
+   ],
+   "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000035484647",
+   "arrete": true
+  },
+  {
+   "slug": "arrete-26-mars-2015-vehicules",
+   "num": "Arrêté du 26 mars 2015",
+   "source": "Arrêté du 26 mars 2015 relatif aux caractéristiques des véhicules utilisés par les exploitants de voitures de transport avec chauffeur",
+   "theme": "vehicule",
+   "titre": "Les caractéristiques du véhicule",
+   "en_clair": "Une VTC thermique a moins de sept ans (sauf véhicule de collection), au moins quatre portes, 4,50 m de long et 1,70 m de large au minimum, et un moteur d'au moins 84 kW. Ces critères ne s'appliquent pas aux hybrides et électriques.",
+   "concretement": "Une berline thermique de 8 ans ne peut plus être utilisée comme VTC.",
+   "fiches": [
+    [
+     "G2.1",
+     "Taille et puissance : lire la carte grise"
+    ],
+    [
+     "G2.2",
+     "Places, portes et âge du véhicule"
+    ]
+   ],
+   "articles": [
+    {
+     "num": "Article 1",
+     "vigueur": "En vigueur depuis le 06 décembre 2023",
+     "texte": [
+      "En application du deuxième alinéa de l'article R. 3122-6 susvisé, les voitures de transport avec chauffeur doivent être âgées de moins de sept ans, sauf s'il s'agit de véhicules de collection.",
+      "Les véhicules de transport avec chauffeur doivent être munis d'au moins quatre portes et avoir une longueur hors tout minimale de 4,50 mètres et une largeur hors tout minimale de 1,70 mètre.",
+      "Leur moteur doit avoir une puissance nette supérieure ou égale à 84 kilowatts."
+     ]
+    },
+    {
+     "num": "Article 2",
+     "vigueur": "En vigueur depuis le 04 avril 2015",
+     "texte": [
+      "Les dispositions de l'article 1er ne sont pas applicables aux catégories de véhicules hybrides et électriques mentionnées à l'article R. 3120-11 susvisé."
+     ]
+    }
+   ],
+   "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000030429911",
+   "arrete": true
+  },
+  {
+   "slug": "arrete-6-avril-2017-signaletique",
+   "num": "Arrêté du 6 avril 2017",
+   "source": "Arrêté du 6 avril 2017 relatif à la signalétique des voitures de transport avec chauffeur",
+   "theme": "vehicule",
+   "titre": "La vignette VTC",
+   "en_clair": "La signalétique définitive comprend deux vignettes autocollantes de l'Imprimerie nationale, délivrées pour chaque véhicule validé au registre ; une vignette temporaire, imprimée sur papier, sert en attendant (30 jours ouvrés au plus). Les vignettes définitives se collent en bas à gauche du pare-brise avant et en bas à droite de la lunette arrière.",
+   "concretement": "Les vignettes cessent d'être valides quand le véhicule n'est plus conforme ou quand l'inscription au registre expire.",
+   "fiches": [
+    [
+     "G3.1",
+     "Les deux vignettes : où, quoi, comment"
+    ],
+    [
+     "G3.3",
+     "Quand la vignette cesse de valoir"
+    ]
+   ],
+   "articles": [
+    {
+     "num": "Article 1",
+     "vigueur": "En vigueur depuis le 08 avril 2017",
+     "texte": [
+      "La signalétique prévue à l'article R. 3122-8 du code des transports est constituée de vignettes conformes au modèle figurant en annexe du présent arrêté et réalisées par l'Imprimerie nationale.",
+      "La signalétique définitive comprend deux vignettes autocollantes produites et diffusées par l'Imprimerie nationale. La signalétique temporaire comprend une vignette imprimée sur papier libre à partir d'un exemplaire transmis par l'Imprimerie nationale par voie électronique."
+     ]
+    },
+    {
+     "num": "Article 2",
+     "vigueur": "En vigueur depuis le 08 avril 2017",
+     "texte": [
+      "Sur demande de l'exploitant, la signalétique définitive est délivrée pour chaque véhicule validé sur le registre des exploitants de voitures de transport avec chauffeur prévu à l'article L. 3122-3 du même code, en application des articles R. 3122-1 et R. 3122-6 du code des transports.",
+      "Dans l'attente de la réception de la signalétique définitive après leur inscription au registre, après une mise à jour de ce dernier, après un renouvellement d'inscription, ou après une déclaration de recours à des véhicules dans les conditions prévues au III de l'article R. 3122-1, une signalétique temporaire est délivrée dès réception du paiement."
+     ]
+    },
+    {
+     "num": "Article 3",
+     "vigueur": "En vigueur depuis le 08 avril 2017",
+     "texte": [
+      "La signalétique définitive cesse d'être valide :",
+      "- lorsque le véhicule déclaré au registre n'est plus conforme aux caractéristiques techniques prévues à l'article R. 3122-6 du même code et aux textes pris pour son application ;",
+      "- lorsque l'inscription en cours de l'exploitant arrive à échéance et en tout état de cause à échéance maximum de cinq ans ;",
+      "- lorsque la durée du recours à des véhicules dans les conditions prévues au III de l'article R. 3122-1 est expirée.",
+      "La durée de validité de la signalétique temporaire ne peut ni excéder trente jours ouvrés maximum à compter de l'envoi par voie électronique de la vignette par l'Imprimerie nationale ni, le cas échéant, excéder la date de fin du recours mentionné à l'alinéa précédent."
+     ]
+    },
+    {
+     "num": "Article 4",
+     "vigueur": "En vigueur depuis le 02 août 2025",
+     "texte": [
+      "Les deux vignettes de la signalétique définitive sont collées de manière inamovible sans détruire les vignettes respectivement dans l'angle du pare-brise avant situé en bas à gauche de la place du conducteur ainsi que dans l'angle du pare-brise arrière situé en bas à droite, à l'opposé de la place du conducteur.",
+      "La vignette de la signalétique temporaire est apposée dans l'angle du pare-brise avant situé en bas à gauche de la place du conducteur."
+     ]
+    },
+    {
+     "num": "Annexe",
+     "vigueur": "",
+     "texte": [
+      "ANNEXE",
+      "VIGNETTE DE VOITURE DE TRANSPORT AVEC CHAUFFEUR",
+      "La vignette comporte quatre champs spécifiques à chaque véhicule dans lesquels sont inscrits le numéro d'inscription de l'exploitant auprès du gestionnaire du registre, le numéro d'immatriculation du véhicule, le code-barres bidimensionnel et le numéro de référence de la vignette."
+     ]
+    }
+   ],
+   "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000034379025",
+   "arrete": true
+  },
+  {
+   "slug": "arrete-6-aout-2025-reservation",
+   "num": "Arrêté du 6 août 2025",
+   "source": "Arrêté du 6 août 2025 relatif au justificatif de la réservation préalable applicable aux voitures de transport avec chauffeur et aux véhicules motorisés à deux ou trois roues",
+   "theme": "reservation",
+   "titre": "Le justificatif de réservation",
+   "en_clair": "Le justificatif de réservation (papier ou électronique) comporte obligatoirement : l'exploitant et ses coordonnées, son numéro d'inscription au registre, son numéro SIREN, le nom et le téléphone du client, la date et l'heure de la réservation, la date et l'heure de prise en charge, et le lieu de prise en charge.",
+   "concretement": "Si le nom ou le téléphone du client manque, le conducteur doit permettre sans délai à l'agent de le contacter.",
+   "fiches": [
+    [
+     "G4.1",
+     "Le justificatif de réservation : sept mentions"
+    ]
+   ],
+   "articles": [
+    {
+     "num": "Article 1",
+     "vigueur": "En vigueur depuis le 30 août 2025",
+     "texte": [
+      "La justification de la réservation préalable des véhicules de transports avec chauffeur ou des véhicules motorisés à deux ou trois roues effectuant les prestations de transport public particulier de personnes à titre onéreux, prévue à l'article R. 3120-2 du code des transports, est apportée par la production d'un support papier ou électronique comportant obligatoirement les informations suivantes :",
+      "1° Nom ou dénomination sociale et coordonnées de la société exerçant l'activité d'exploitant de voitures de transport avec chauffeur ou d'exploitant de véhicules motorisés à deux ou trois roues ;",
+      "2° Numéro d'inscription de l'exploitant susmentionné au registre institué par l'article L. 3122-3 du code des transports, dans le cas où le véhicule utilisé est une voiture de transport avec chauffeur ;",
+      "3° Numéro unique d'identification dudit exploitant délivré conformément à l'article D. 123-235 du code de commerce ;",
+      "4° Nom et coordonnées téléphoniques du client sollicitant une prestation de transport public particulier de personnes à titre onéreux ;",
+      "5° Date et heure de la réservation préalable effectuée par le client ;",
+      "6° Date et heure de la prise en charge souhaitées par le client ;",
+      "7° Lieu de prise en charge indiqué par le client.",
+      "Dans le cas où les informations mentionnées au 4° ne figurent pas sur le justificatif, le conducteur fournit, sans délai, à l'agent de contrôle, les moyens de prendre contact avec le client."
+     ]
+    }
+   ],
+   "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000052153206",
+   "arrete": true
+  }
+ ],
+ "autres": [
+  {
+   "titre": "Les lois qui ont façonné le métier",
+   "intro": "Elles ont modifié le Code des transports. Leurs règles s'appliquent aujourd'hui à travers les articles du code ci-dessus.",
+   "textes": [
+    {
+     "nom": "Loi n° 2014-1104 du 1er octobre 2014 relative aux taxis et aux voitures de transport avec chauffeur",
+     "ref": "Dite « loi Thévenoud »",
+     "objet": "Fixe le cadre actuel du VTC.",
+     "fiches": "A1.6",
+     "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000029527162"
+    },
+    {
+     "nom": "Loi n° 2016-1920 du 29 décembre 2016 relative à la régulation, à la responsabilisation et à la simplification dans le secteur du transport public particulier de personnes",
+     "ref": "Dite « loi Grandguillot »",
+     "objet": "L'examen d'accès, et la fin du détour par le transport collectif.",
+     "fiches": "A1.6",
+     "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000033734510"
+    },
+    {
+     "nom": "Loi n° 2019-1428 du 24 décembre 2019 d'orientation des mobilités",
+     "ref": "Dite « LOM »",
+     "objet": "Droits des chauffeurs face aux plateformes.",
+     "fiches": "A1.6, A8.1",
+     "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000039666574"
+    },
+    {
+     "nom": "Loi n° 2026-534 du 25 juin 2026 relative à la lutte contre les fraudes sociales et fiscales",
+     "ref": "La loi à jour de laquelle est le livre",
+     "objet": "Registre, contrôles et sanctions renforcés pour les VTC.",
+     "fiches": "A2.8, A5, G1",
+     "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054309429"
+    }
+   ]
+  },
+  {
+   "titre": "Europe",
+   "intro": "",
+   "textes": [
+    {
+     "nom": "Directive (UE) 2024/2831 du 23 octobre 2024 relative à l'amélioration des conditions de travail dans le cadre du travail via une plateforme",
+     "ref": "À transposer en droit français au plus tard le 2 décembre 2026",
+     "objet": "Présomption de salariat quand la plateforme dirige et contrôle le travail ; décisions importantes sur le compte prises par un humain. Elle ne s'applique pas directement aux chauffeurs : il faut une loi française.",
+     "fiches": "A8.3, B5.7",
+     "url": "https://eur-lex.europa.eu/eli/dir/2024/2831/oj"
+    }
+   ]
+  },
+  {
+   "titre": "Autres références",
+   "intro": "",
+   "textes": [
+    {
+     "nom": "Décret n° 2026-764 du 5 août 2026",
+     "ref": "Journal officiel",
+     "objet": "Supprime l'accès à la profession par reconnaissance de l'expérience professionnelle. Depuis le 12 août 2026, l'examen est la seule voie d'accès, hors reconnaissance des titres européens.",
+     "fiches": "A2.4",
+     "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054658967"
+    },
+    {
+     "nom": "exament3p.fr",
+     "ref": "Site des chambres de métiers et de l'artisanat",
+     "objet": "Inscription à l'examen, dates des sessions, tarifs et pièces à fournir.",
+     "fiches": "A2",
+     "url": "https://www.exament3p.fr"
+    }
+   ]
+  }
+ ]
+}

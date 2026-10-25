@@ -13,7 +13,7 @@ def achat(classe="bouton", texte="Acheter le livre sur Amazon"):
     return f'<span class="{classe} bientot">Bientôt disponible sur Amazon</span>'
 
 NAV = [("index.html", "Accueil", "accueil"), ("actualite/index.html", "Actualité VTC", "actualite"),
-       ("textes.html", "Textes du métier", "textes"), ("mises-a-jour.html", "Mises à jour du livre", "maj"), ("examens.html", "Examens blancs", "examens")]
+       ("wiki/index.html", "Textes du métier", "textes"), ("mises-a-jour.html", "Mises à jour du livre", "maj"), ("examens.html", "Examens blancs", "examens")]
 
 
 def page(titre, corps, actif=None, racine="", description="", noindex=False, scripts_tete="", scripts_fin="", avant_main="", brut=False):

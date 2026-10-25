@@ -89,7 +89,7 @@ def accueil(nums):
         <h2 id="titre-rubriques" class="visuellement-cache">Les rubriques du site</h2>
         <ul class="trois">
           <li><p class="surtitre">Chaque semaine</p><h3><a href="actualite/index.html">Actualité VTC</a></h3><p>{ty("Textes officiels, examen, plateformes, cotisations : ce qui change pour vous, toujours avec ses sources.")}</p></li>
-          <li><p class="surtitre">L'essentiel du droit</p><h3><a href="textes.html">Textes du métier</a></h3><p>{ty("Les lois, décrets et arrêtés qui encadrent le VTC, avec le lien vers leur version en vigueur.")}</p></li>
+          <li><p class="surtitre">L'essentiel du droit</p><h3><a href="wiki/index.html">Textes du métier</a></h3><p>{ty("Le droit du VTC article par article : le texte officiel, expliqué en clair avec un exemple.")}</p></li>
           <li><p class="surtitre">Après l'impression</p><h3><a href="mises-a-jour.html">Mises à jour du livre</a></h3><p>{ty("Chaque règle qui change, avec sa date, la fiche concernée et le texte qui la fonde.")}</p></li>
           <li><p class="surtitre">Réservé aux lecteurs</p><h3><a href="examens.html">Examens blancs n° 4 et 5</a></h3><p>{ty("À l'écran, chronométrés et corrigés, ou à imprimer.")}</p></li>
         </ul>
@@ -207,34 +207,148 @@ def mises_a_jour():
                                      "Les règles du livre Machine à Réussite · Examen VTC 2027 qui ont changé depuis l'impression."))
 
 
-# ------------------------------------------------------------------ textes du métier
-def textes():
-    with open(os.path.join(CONTENU, "textes.json"), encoding="utf-8") as h:
-        d = json.load(h)
-    sommaire, groupes = [], []
-    for i, g in enumerate(d["groupes"], 1):
-        ident = f"groupe-{i}"
-        sommaire.append(f'<li><a href="#{ident}">{ty(g["titre"])}</a></li>')
+# ------------------------------------------------------------------ wiki des textes du métier
+def lire_wiki():
+    with open(os.path.join(CONTENU, "wiki.json"), encoding="utf-8") as h:
+        w = json.load(h)
+    for a in w["articles"]:
+        assert a["en_clair"] and a["url"].startswith("https://www.legifrance.gouv.fr/"), a["num"]
+    return w
+
+
+def _sans_accents(t):
+    import unicodedata
+    return "".join(c for c in unicodedata.normalize("NFD", t.lower()) if unicodedata.category(c) != "Mn")
+
+
+def _liens_articles(t, par_num, ici):
+    """Transforme « article L. 3120-2 » du texte officiel en lien vers la page du wiki, si elle existe."""
+    def rep(m):
+        num = m.group(1) + m.group(2)
+        a = par_num.get(num)
+        if not a or a["slug"] == ici:
+            return m.group(0)
+        return f'<a href="{a["slug"]}.html">{m.group(0)}</a>'
+    return re.sub(r"\b([LRD])\. ?\s?(\d{4}(?:-\d+)*)\b(?! du code (?:de la|du|de l))", rep, t)
+
+
+def wiki():
+    w = lire_wiki()
+    arts = w["articles"]
+    par_num = {a["num"].replace("R*", "R"): a for a in arts if not a.get("arrete")}
+    themes = {t["cle"]: t for t in w["themes"]}
+    source_date = w["verifie"]
+
+    for a in arts:
+        if a.get("arrete"):
+            blocs = "".join(
+                f'''<section class="officiel-art">
+          <h3>{ty(p["num"])}</h3>
+          {"".join(f"<p>{_liens_articles(ty(x), par_num, a['slug'])}</p>" for x in p["texte"])}
+          {f'<p class="meta">{ty(p["vigueur"])}</p>' if p.get("vigueur") else ""}
+        </section>''' for p in a["articles"])
+            entete = f'<p class="surtitre">{ty("Arrêté")}</p>\n    <h1>{ty(a["titre"])}</h1>\n    <p class="texte-ref">{ty(a["source"])}</p>'
+            renvois = set(re.findall(r"\b[LRD]\.\s?\d{4}(?:-\d+)*", " ".join(x for p in a["articles"] for x in p["texte"])))
+        else:
+            blocs = "".join(f"<p>{_liens_articles(ty(x), par_num, a['slug'])}</p>" for x in a["texte"])
+            blocs += f'\n        <p class="meta">{ty(a["vigueur"])}' + (f' · {ty(a["modif"][0])}' if a.get("modif") else "") + "</p>"
+            entete = f'<p class="surtitre">{ty(a["source"])}</p>\n    <h1><span class="num-art">Article {ty(a["num"])}</span> {ty(a["titre"])}</h1>'
+            renvois = set(re.findall(r"\b[LRD]\.\s?\d{4}(?:-\d+)*", " ".join(a["texte"])))
+        lies = []
+        for r in sorted(renvois):
+            x = par_num.get(re.sub(r"[.\s ]", "", r))
+            if x and x["slug"] != a["slug"] and x not in lies:
+                lies.append(x)
+        for x in arts:
+            if len(lies) >= 5:
+                break
+            if x["theme"] == a["theme"] and x["slug"] != a["slug"] and x not in lies:
+                lies.append(x)
+        voir = "".join(f'<li><a href="{x["slug"]}.html">{ty(x["num"] if not x.get("arrete") else "Arrêté")} · {ty(x["titre"])}</a></li>' for x in lies)
+        livre = ""
+        if a["fiches"]:
+            livre = f'''<section class="wiki-livre" aria-labelledby="livre">
+        <h2 id="livre">Dans le livre</h2>
+        <ul>{"".join(f"<li><b>Fiche {ty(c)}</b> · {ty(t)}</li>" for c, t in a["fiches"])}</ul>
+        <p class="pied-achat">{achat("bouton second petit", "Le livre sur Amazon")}</p>
+      </section>'''
+        th = themes[a["theme"]]
+        corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Textes du métier</a></li><li><a href="index.html#{a["theme"]}">{ty(th["titre"])}</a></li></ol></nav>
+    {entete}
+    <section class="en-clair" aria-labelledby="clair">
+      <h2 id="clair">En clair</h2>
+      <p>{ty(a["en_clair"])}</p>
+      <p class="concretement"><b>Concrètement :</b> {ty(a["concretement"])}</p>
+    </section>
+    <section aria-labelledby="officiel">
+      <h2 id="officiel">Le texte officiel</h2>
+      <div class="officiel">
+        {blocs}
+      </div>
+      <p class="source">{ty("Source : Légifrance, version en vigueur au " + source_date + ".")} <a href="{html.escape(a["url"])}">{ty("Voir sur Légifrance")}</a>. {ty("Texte reproduit sous Licence Ouverte 2.0. En cas de doute, seule la version publiée sur Légifrance fait foi.")}</p>
+    </section>
+    {livre}
+    <section aria-labelledby="voir">
+      <h2 id="voir">Voir aussi</h2>
+      <ul class="voir-aussi">{voir}</ul>
+    </section>'''
+        titre_page = (f'Article {a["num"]} · ' if not a.get("arrete") else "") + a["titre"]
+        ecrire(f'wiki/{a["slug"]}.html', page(f"{titre_page} · Révision VTC", corps, "textes", "../",
+                                             (a["en_clair"][:155].rsplit(" ", 1)[0] + "…").replace('"', "&quot;")))
+
+    # index
+    sections, sommaire = [], []
+    for t in w["themes"]:
+        liste = [a for a in arts if a["theme"] == t["cle"]]
+        sommaire.append(f'<li><a href="#{t["cle"]}">{ty(t["titre"])}</a></li>')
         items = "".join(
-            f'''<li class="texte">
-          <h3><a href="{html.escape(x["url"])}">{ty(x["nom"])}</a></h3>
-          <p class="texte-ref">{ty(x["ref"])}</p>
-          <p>{ty(x["objet"])}</p>
-          <p class="texte-fiches">Dans le livre : {ty(x["fiches"])}</p>
-        </li>''' for x in g["textes"])
-        intro = f'<p>{ty(g["intro"])}</p>' if g.get("intro") else ""
-        groupes.append(f'''<section aria-labelledby="{ident}">
-      <h2 id="{ident}">{ty(g["titre"])}</h2>
-      {intro}
-      <ul class="textes">{items}</ul>
+            f'''<li data-cherche="{html.escape(_sans_accents(a["num"] + " " + a["titre"] + " " + a["en_clair"] + " " + a["concretement"]))}"><a href="{a["slug"]}.html"><span class="num-art">{ty(a["num"] if not a.get("arrete") else "Arrêté")}</span> {ty(a["titre"])}</a></li>'''
+            for a in liste)
+        sections.append(f'''<section class="wiki-theme" aria-labelledby="{t["cle"]}">
+      <h2 id="{t["cle"]}">{ty(t["titre"])}</h2>
+      <p class="meta">{ty(t["intro"])}</p>
+      <ul class="wiki-liste">{items}</ul>
     </section>''')
+    autres = ""
+    for g in w["autres"]:
+        autres += f'<h3>{ty(g["titre"])}</h3><ul class="textes">' + "".join(
+            f'<li class="texte"><p><a href="{html.escape(x["url"])}">{ty(x["nom"])}</a></p><p class="texte-ref">{ty(x["ref"])}</p><p>{ty(x["objet"])}</p></li>'
+            for x in g["textes"]) + "</ul>"
     corps = f'''    <h1>Textes du métier</h1>
-    <p class="chapeau">{ty("L'essentiel des textes qui encadrent le métier de conducteur VTC. Chaque lien mène à la version officielle, sur Légifrance ou EUR-Lex : c'est elle qui fait foi.")}</p>
-    <nav class="sommaire" aria-label="Sur cette page"><ul>{"".join(sommaire)}</ul></nav>
-    {"".join(groupes)}
-    <p class="meta">{ty("Liste vérifiée le " + d["verifie"] + ". Les changements sont annoncés dans l'Actualité VTC et, quand ils touchent une règle du livre, dans les mises à jour du livre.")}</p>'''
-    ecrire("textes.html", page("Textes du métier · Révision VTC", corps, "textes", "",
-                               "Les lois, décrets et arrêtés qui encadrent le métier de conducteur VTC, avec le lien vers leur version officielle."))
+    <p class="chapeau">{ty("Les articles de loi, décrets et arrêtés qui encadrent le métier de conducteur VTC, chacun expliqué en clair avec un exemple, puis reproduit dans sa version officielle.")}</p>
+    <div class="cherche">
+      <label for="q">Chercher un article ou un mot</label>
+      <input type="search" id="q" autocomplete="off" placeholder="{ty("Ex. : maraude, R3120-6, registre, vignette")}">
+      <p id="q-res" class="meta" role="status" aria-live="polite"></p>
+    </div>
+    <nav class="sommaire" aria-label="Thèmes"><ul>{"".join(sommaire)}</ul></nav>
+    {"".join(sections)}
+    <section aria-labelledby="autres">
+      <h2 id="autres">Les lois d'origine et les autres références</h2>
+      <p>{ty("Ces textes ont façonné le métier ; leurs règles s'appliquent aujourd'hui à travers les articles ci-dessus. Les liens mènent au site officiel.")}</p>
+      {autres}
+    </section>
+    <p class="meta">{ty("Textes vérifiés sur Légifrance le " + source_date + ". Ils sont comparés chaque semaine à la version en vigueur ; les changements sont annoncés dans l'Actualité VTC.")}</p>'''
+    script = '''<script>
+(function(){var q=document.getElementById("q"),r=document.getElementById("q-res");
+function n(s){return s.toLowerCase().normalize("NFD").replace(/[\\u0300-\\u036f]/g,"");}
+q.addEventListener("input",function(){var v=n(q.value.trim()).replace(/\\s+/g," "),total=0;
+document.querySelectorAll(".wiki-theme").forEach(function(s){var vis=0;
+s.querySelectorAll("li[data-cherche]").forEach(function(li){var ok=!v||v.split(" ").every(function(m){return li.dataset.cherche.indexOf(m)>-1||li.dataset.cherche.replace(/-/g,"").indexOf(m.replace(/-/g,""))>-1;});li.hidden=!ok;if(ok)vis++;});
+s.hidden=vis===0;total+=vis;});
+r.textContent=v?(total?total+(total>1?" articles trouvés":" article trouvé"):"Aucun article ne correspond."):"";});})();
+</script>
+'''
+    ecrire("wiki/index.html", page("Textes du métier · Révision VTC", corps, "textes", "../",
+                                   "Le droit du VTC expliqué article par article : réservation, carte, registre, véhicule, plateformes, sanctions. Textes officiels en vigueur.",
+                                   scripts_fin=script))
+    # l'ancienne page renvoie vers le wiki
+    ecrire("textes.html", f'''<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Textes du métier · Révision VTC</title>
+<link rel="canonical" href="{SITE}wiki/index.html"><meta http-equiv="refresh" content="0; url=wiki/index.html"></head>
+<body><p><a href="wiki/index.html">Les textes du métier ont déménagé : cliquez ici.</a></p></body></html>
+''')
+    return arts
 
 
 # ------------------------------------------------------------------ examens
@@ -324,6 +438,7 @@ def legales():
     <p>{ty("Les polices de caractères sont hébergées sur ce site. Le seul service tiers appelé est GoatCounter (gc.zgo.at), pour la mesure de fréquentation. L'hébergeur peut conserver des journaux techniques de connexion (adresse IP) pour la sécurité du service.")}</p>
     <h2>Propriété intellectuelle</h2>
     <p>{ty("Les textes, questions et corrigés de ce site sont la propriété de Benjamin Blondin. Toute reproduction sans autorisation est interdite (Code de la propriété intellectuelle, art. L122-4). Les brèves de l'Actualité VTC citent leurs sources, qui restent la propriété de leurs auteurs.")}</p>
+    <p>{ty("Les textes officiels reproduits dans la rubrique Textes du métier proviennent de Légifrance (DILA). Ils sont réutilisés sous Licence Ouverte 2.0, avec mention de la source et de la date de version. Seule la version publiée sur Légifrance fait foi.")}</p>
     <h2>Avertissement</h2>
     <p>{ty("Ce site et le livre sont des ouvrages indépendants : ils ne sont édités ni par les chambres de métiers et de l'artisanat ni par l'État. Ils préparent à l'examen et ne remplacent pas un conseil juridique, comptable ou fiscal adapté à votre situation.")}</p>'''
     ecrire("mentions-legales.html", page("Mentions légales · Révision VTC", corps, None, ""))
@@ -344,9 +459,10 @@ def legales():
     ecrire("accessibilite.html", page("Accessibilité · Révision VTC", corps, None, ""))
 
 
-def plan(nums):
-    urls = ["", "actualite/index.html", "textes.html", "mises-a-jour.html", "examens.html", "mentions-legales.html", "accessibilite.html"]
+def plan(nums, arts):
+    urls = ["", "actualite/index.html", "wiki/index.html", "mises-a-jour.html", "examens.html", "mentions-legales.html", "accessibilite.html"]
     urls += [f'actualite/{n["date"]}.html' for n in nums]
+    urls += [f'wiki/{a["slug"]}.html' for a in arts]
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     xml += "".join(f"  <url><loc>{SITE}{u}</loc></url>\n" for u in urls) + "</urlset>\n"
     ecrire("sitemap.xml", xml)
@@ -360,9 +476,9 @@ if __name__ == "__main__":
         numero(n, nums[i + 1] if i + 1 < len(nums) else None, nums[i - 1] if i > 0 else None)
     actualite(nums)
     flux(nums)
-    textes()
+    arts = wiki()
     mises_a_jour()
     examens()
     legales()
-    plan(nums)
+    plan(nums, arts)
     print(f"Site généré dans docs/ : {len(nums)} numéro(s) de l'Actualité VTC.")
