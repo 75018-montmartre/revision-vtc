@@ -9,6 +9,8 @@ Site compagnon du livre *Machine à Réussite · Examen VTC 2027* (Benjamin Blon
 | `contenu/actualite/AAAA-MM-JJ.json` | Un numéro de l'Actualité VTC (un fichier par semaine, nommé par sa date de publication) |
 | `contenu/mises-a-jour.json` | Les corrections du livre après impression et les points à surveiller |
 | `contenu/wiki.json` | Le wiki « Textes du métier » (`docs/wiki/`) : pour chaque article, le thème, l'explication « En clair », l'exemple « Concrètement », les fiches du livre, le texte officiel recopié de Légifrance (`texte`, `vigueur`, `modif`) et son lien ; plus les lois d'origine et références externes (`autres`). Date de vérification : `verifie`. |
+| `contenu/questions/AAAA-MM-JJ-adresse.json` | Une « Question VTC » (une par semaine, publiée le jeudi) : question, réponse courte, développement, à retenir, liens vers le wiki, fiches du livre, sources |
+| `contenu/fiches.json` | Codes et titres des fiches du livre, pour les renvois « Dans le livre » |
 | `contenu/livre.json` | L'adresse de la page Amazon du livre (`amazon`) ; vide, le site affiche « Bientôt disponible sur Amazon » |
 | `outils/generer.py` | Génère tout le site dans `docs/` à partir de `contenu/` |
 | `outils/gabarit.py` | En-tête, menu et pied de page communs |
@@ -65,3 +67,20 @@ Règles pour tout nouveau contenu :
 - une idée par paragraphe, la réponse d'abord, puis le détail : c'est ce que reprennent les moteurs et les assistants ;
 - chiffres exacts, avec leur unité, leur date et leur source ;
 - relier les brèves aux pages du wiki concernées.
+
+## Publier une Question VTC
+
+Fichier `contenu/questions/AAAA-MM-JJ-adresse.json` (l'adresse est en minuscules, mots séparés par des tirets, avec le mot-clé principal : `vtc-attente-gare-aeroport`). Modèle : la première question publiée.
+
+```json
+{"date": "AAAA-MM-JJ", "slug": "adresse-de-la-page",
+ "question": "La question telle qu'un chauffeur la taperait dans Google ?",
+ "reponse_courte": "La réponse en une ou deux phrases, autonome (50 à 400 caractères).",
+ "sections": [{"titre": "Intertitre", "texte": ["Paragraphe."]}],
+ "a_retenir": ["Trois phrases autonomes au plus."],
+ "wiki": ["l3120-2"], "fiches": [["A3.4", "Gares et aéroports"]],
+ "sources": [{"nom": "Nom de la source", "url": "https://...", "date": "JJ mois AAAA"}],
+ "verifie": "JJ mois AAAA"}
+```
+
+Le générateur refuse une question sans source, sans point d'interrogation, ou qui renvoie vers une page du wiki inexistante.

@@ -104,7 +104,7 @@ def lire_numeros():
 
 
 # ------------------------------------------------------------------ accueil
-def accueil(nums):
+def accueil(nums, qs=()):
     dernier = ""
     if nums:
         n = nums[0]
@@ -146,7 +146,7 @@ def accueil(nums):
         <ul class="essentiel-liens">{liens_essentiels()}</ul>
         <p><a class="lien-fleche" href="wiki/index.html">Tous les textes du métier, expliqués en clair</a></p>
       </div>
-    </section>{dernier}'''
+    </section>{bloc_questions(qs)}{dernier}'''
     ecrire("index.html", page("Examen VTC 2027 et réglementation VTC expliquée · Révision VTC", corps, "accueil", "",
                               "Réussir l'examen VTC 2027 : la réglementation VTC expliquée article par article, l'actualité du métier chaque semaine et deux examens blancs corrigés. Sources officielles citées.",
                               brut=True, jsonld=[{"@context": "https://schema.org", "@graph": [SITE_LD, LIVRE_LD]}]))
@@ -157,6 +157,20 @@ ESSENTIELS = [("l3120-2", "Réservation préalable et maraude : ce qui est inter
               ("arrete-6-avril-2017-examen", "L'examen VTC : épreuves, coefficients, notes éliminatoires"), ("l3122-3", "Le registre des VTC"),
               ("arrete-26-mars-2015-vehicules", "Le véhicule VTC : âge, dimensions, puissance"), ("arrete-6-aout-2025-reservation", "Le justificatif de réservation : les sept mentions"),
               ("l3124-12", "Maraude, démarchage, conduite sans carte : les sanctions")]
+
+
+def bloc_questions(qs):
+    if not qs:
+        return ""
+    li = "".join(f'<li><a href="questions/{q["date"]}-{q["slug"]}.html">{ty(q["question"])}</a></li>' for q in list(qs)[:5])
+    return f'''
+    <section class="bloc" aria-labelledby="titre-questions">
+      <div class="page large">
+        <h2 id="titre-questions" class="sans-filet">Questions VTC : les réponses de la semaine</h2>
+        <ul class="essentiel-liens">{li}</ul>
+        <p><a class="lien-fleche" href="questions/index.html">Toutes les questions</a></p>
+      </div>
+    </section>'''
 
 
 def liens_essentiels():
@@ -548,6 +562,67 @@ def legales():
                                       "Ce qui a été fait pour que revision-vtc.fr soit utilisable par tous : clavier, lecteur d'écran, contrastes, zoom."))
 
 
+# ------------------------------------------------------------------ questions VTC
+def lire_questions(slugs_wiki):
+    qs = []
+    for f in sorted(glob.glob(os.path.join(CONTENU, "questions", "*.json")), reverse=True):
+        with open(f, encoding="utf-8") as h:
+            q = json.load(h)
+        assert os.path.basename(f) == f'{q["date"]}-{q["slug"]}.json', f
+        assert q["sources"] and all(x["url"].startswith("https://") for x in q["sources"]), f"{f} : source manquante"
+        assert q["question"].endswith("?") and 50 <= len(q["reponse_courte"]) <= 400, f"{f} : question ou réponse courte"
+        for w in q.get("wiki", []):
+            assert w in slugs_wiki, f"{f} : page du wiki inconnue {w}"
+        qs.append(q)
+    slugs = [q["slug"] for q in qs]
+    assert len(slugs) == len(set(slugs)), "deux questions ont la même adresse"
+    return qs
+
+
+def questions(qs, w):
+    arts = {a["slug"]: a for a in w["articles"]}
+    for q in qs:
+        secs = "".join(f'<h2>{ty(x["titre"])}</h2>' + "".join(f"<p>{ty(p)}</p>" for p in x["texte"]) for x in q["sections"])
+        wiki = "".join(f'<li><a href="../wiki/{s}.html">{ty(arts[s]["num"] if not arts[s].get("arrete") else "Arrêté")} · {ty(arts[s]["titre"])}</a></li>' for s in q.get("wiki", []))
+        livre = "".join(f"<li><b>Fiche {ty(c)}</b> · {ty(t)}</li>" for c, t in q.get("fiches", []))
+        src = "".join(f'<li><a href="{html.escape(x["url"])}">{ty(x["nom"])}</a>' + (f", {ty(x['date'])}" if x.get("date") else "") + "</li>" for x in q["sources"])
+        autres = "".join(f'<li><a href="{x["date"]}-{x["slug"]}.html">{ty(x["question"])}</a></li>' for x in qs if x is not q)[:4000]
+        corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Questions VTC</a></li></ol></nav>
+    <p class="surtitre">Question VTC</p>
+    <h1>{ty(q["question"])}</h1>
+    <p class="meta">Publié le {date_fr(q["date"])} · vérifié le {ty(q["verifie"])}</p>
+    <section class="en-clair" aria-labelledby="courte">
+      <h2 id="courte">La réponse courte</h2>
+      <p>{ty(q["reponse_courte"])}</p>
+    </section>
+    {secs}
+    <section class="retenir" aria-labelledby="retenir"><h2 id="retenir">À retenir</h2><ul>{"".join(f"<li>{ty(x)}</li>" for x in q["a_retenir"])}</ul></section>
+    {f'<h2>Les textes expliqués</h2><ul class="voir-aussi">{wiki}</ul>' if wiki else ""}
+    {f'<h2>Dans le livre</h2><ul>{livre}</ul><p class="pied-achat">{achat("bouton second petit", "Le livre sur Amazon")}</p>' if livre else ""}
+    <h2>Sources</h2>
+    <ul class="source">{src}</ul>
+    <p class="source">{ty("Seule la version des textes publiée sur Légifrance fait foi. Cette réponse ne remplace pas un conseil juridique adapté à votre situation.")}</p>
+    {f'<h2>Autres questions</h2><ul class="voir-aussi">{autres}</ul>' if autres else ""}'''
+        chemin = f'questions/{q["date"]}-{q["slug"]}.html'
+        ld = {"@context": "https://schema.org", "@type": "Article", "headline": q["question"][:110], "description": q["reponse_courte"],
+              "datePublished": q["date"], "dateModified": iso_fr(q["verifie"]), "inLanguage": "fr", "author": AUTEUR, "publisher": AUTEUR,
+              "image": SITE + "partage.jpg", "mainEntityOfPage": SITE + chemin, "citation": [x["url"] for x in q["sources"]],
+              "mainEntity": {"@type": "Question", "name": q["question"], "acceptedAnswer": {"@type": "Answer", "text": q["reponse_courte"]}}}
+        ecrire(chemin, page(html.escape(q["question"] + " · Révision VTC", quote=False), corps, "questions", "../",
+                            html.escape(q["reponse_courte"] if len(q["reponse_courte"]) <= 158 else q["reponse_courte"][:155].rsplit(" ", 1)[0] + "…"),
+                            jsonld=[ld, fil(("Accueil", ""), ("Questions VTC", "questions/"), (q["question"], chemin))]))
+    liste = "".join(f'''<li><span class="meta">{date_fr(q["date"])}</span><a href="{q["date"]}-{q["slug"]}.html">{ty(q["question"])}</a><p>{ty(q["reponse_courte"])}</p></li>''' for q in qs)
+    corps = f'''    <h1>Questions VTC</h1>
+    <p class="chapeau">{ty("Les questions concrètes que se posent les chauffeurs VTC et les candidats à l'examen, avec une réponse courte, les textes qui la fondent et leurs sources.")}</p>
+    <p>{ty("Une nouvelle question chaque semaine. Les règles citées sont expliquées article par article dans les")} <a href="../wiki/index.html">textes du métier</a>.</p>
+    <ul class="questions">{liste}</ul>'''
+    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Questions VTC", "url": SITE + "questions/", "inLanguage": "fr",
+          "hasPart": [{"@type": "Article", "headline": q["question"], "url": SITE + f'questions/{q["date"]}-{q["slug"]}.html'} for q in qs]}
+    ecrire("questions/index.html", page("Questions VTC : réponses courtes et sourcées sur le métier et l'examen · Révision VTC", corps, "questions", "../",
+                                        "Les questions concrètes des chauffeurs VTC et des candidats à l'examen : une réponse courte, les textes officiels qui la fondent et leurs sources. Une nouvelle question chaque semaine.",
+                                        jsonld=[ld, fil(("Accueil", ""), ("Questions VTC", "questions/"))]))
+
+
 # ------------------------------------------------------------------ à propos, page 404
 def a_propos():
     corps = f'''    <h1>À propos et méthode</h1>
@@ -597,12 +672,15 @@ ROBOTS_IA = ["Googlebot", "Bingbot", "Google-Extended", "GPTBot", "OAI-SearchBot
              "Claude-User", "PerplexityBot", "Perplexity-User", "Applebot", "Applebot-Extended", "DuckAssistBot", "MistralAI-User", "CCBot"]
 
 
-def plan(nums, arts, wiki_date):
+def plan(nums, arts, wiki_date, qs=()):
     der = nums[0]["date"] if nums else wiki_date
     urls = [("", max(der, wiki_date)), ("actualite/", der), ("wiki/", wiki_date), ("a-propos.html", None), ("mises-a-jour.html", None),
             ("examens.html", None), ("mentions-legales.html", None), ("accessibilite.html", None)]
     urls += [(f'actualite/{n["date"]}.html', n["date"]) for n in nums]
     urls += [(f'wiki/{a["slug"]}.html', wiki_date) for a in arts]
+    if qs:
+        urls.insert(3, ("questions/", qs[0]["date"]))
+        urls += [(f'questions/{q["date"]}-{q["slug"]}.html', iso_fr(q["verifie"])) for q in qs]
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     xml += "".join(f"  <url><loc>{SITE}{u}</loc>" + (f"<lastmod>{d}</lastmod>" if d else "") + "</url>\n" for u, d in urls) + "</urlset>\n"
     ecrire("sitemap.xml", xml)
@@ -611,7 +689,7 @@ def plan(nums, arts, wiki_date):
            f"User-agent: *\nAllow: /\nDisallow: /examen.html\n\nSitemap: {SITE}sitemap.xml\n")
 
 
-def llms(nums, w):
+def llms(nums, w, qs=()):
     """llms.txt : le plan du site pour les assistants d'IA ; llms-full.txt : tout le wiki en texte brut, avec ses sources."""
     themes = {t["cle"]: t["titre"] for t in w["themes"]}
     l = ["# Révision VTC (revision-vtc.fr)", "",
@@ -625,6 +703,7 @@ def llms(nums, w):
          "## Pages principales", "",
          f"- [Réglementation VTC, les textes du métier]({SITE}wiki/): index de tous les articles par thème",
          f"- [Actualité VTC]({SITE}actualite/): un numéro par semaine, sources citées",
+         f"- [Questions VTC]({SITE}questions/): une question concrète par semaine, réponse courte et sources officielles",
          f"- [Mises à jour du livre]({SITE}mises-a-jour.html): règles qui ont changé depuis l'impression",
          f"- [Examens blancs]({SITE}examens.html): deux examens blancs corrigés, réservés aux lecteurs du livre",
          f"- [À propos et méthode]({SITE}a-propos.html): qui écrit, comment les informations sont vérifiées",
@@ -632,6 +711,10 @@ def llms(nums, w):
     for t in w["themes"]:
         l += [f"## {t['titre']}", ""]
         l += [f"- [{a['num'] if not a.get('arrete') else 'Arrêté'} · {a['titre']}]({SITE}wiki/{a['slug']}.html): {a['en_clair']}" for a in w["articles"] if a["theme"] == t["cle"]]
+        l.append("")
+    if qs:
+        l += ["## Questions VTC", ""]
+        l += [f"- [{q['question']}]({SITE}questions/{q['date']}-{q['slug']}.html): {q['reponse_courte']}" for q in qs]
         l.append("")
     if nums:
         l += ["## Derniers numéros de l'Actualité VTC", ""]
@@ -660,18 +743,20 @@ def llms(nums, w):
 
 if __name__ == "__main__":
     nums = lire_numeros()
-    accueil(nums)
+    accueil(nums, lire_questions({a["slug"] for a in lire_wiki()["articles"]}))
     for i, n in enumerate(nums):
         numero(n, nums[i + 1] if i + 1 < len(nums) else None, nums[i - 1] if i > 0 else None)
     actualite(nums)
     flux(nums)
     arts = wiki()
     w = lire_wiki()
+    qs = lire_questions({a["slug"] for a in w["articles"]})
+    questions(qs, w)
     mises_a_jour()
     examens()
     legales()
     a_propos()
     page_404()
-    llms(nums, w)
-    plan(nums, arts, iso_fr(w["verifie"]))
+    llms(nums, w, qs)
+    plan(nums, arts, iso_fr(w["verifie"]), qs)
     print(f"Site généré dans docs/ : {len(nums)} numéro(s) de l'Actualité VTC.")
