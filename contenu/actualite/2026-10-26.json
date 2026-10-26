@@ -1,0 +1,111 @@
+{
+  "date": "2026-10-26",
+  "numero": 2,
+  "titre": "Directive européenne plateformes : la France en retard, examen VTC inchangé",
+  "periode": "du 23 au 26 octobre 2026",
+  "a_retenir": [
+    "La directive européenne sur le travail via une plateforme doit être transposée au plus tard le 2 décembre 2026, mais le ministre du Travail a annoncé que la France ne tiendrait pas cette échéance.",
+    "Aucune loi de transposition n'est adoptée : les règles applicables aux chauffeurs VTC en France ne changent pas pour l'instant.",
+    "Les tarifs 2026 de l'examen VTC restent affichés sur exament3p.fr au 26 octobre 2026 : 241 € pour l'examen complet, 168 € pour la mobilité, 118 € pour l'admission seule."
+  ],
+  "rubriques": [
+    {
+      "titre": "Textes officiels",
+      "breves": [
+        {
+          "titre": "Aucun nouveau texte VTC repéré au Journal officiel du 23 au 26 octobre 2026",
+          "texte": [
+            "Aucun décret ni arrêté sur les voitures de transport avec chauffeur (VTC) n'a été repéré au Journal officiel du 23 au 26 octobre 2026.",
+            "Légifrance n'a pas répondu à nos consultations directes cette semaine. La vérification a donc porté sur les pages de legifrance.gouv.fr indexées par les moteurs de recherche : elles ne font apparaître aucun texte postérieur au décret n° 2026-764 du 5 août 2026 et à la loi n° 2026-798 du 18 août 2026, déjà intégrés au livre. Ce point sera revérifié directement sur Légifrance dans le prochain numéro."
+          ],
+          "sources": [
+            {
+              "nom": "Légifrance, Journal officiel, recherche « voiture de transport avec chauffeur »",
+              "url": "https://www.legifrance.gouv.fr/search/jorf?tab_selection=jorf&searchField=ALL&query=%22voiture+de+transport+avec+chauffeur%22&sortValue=PUBLI_DATE_DESC&page=1&init=true",
+              "date": "recherche indexée, 26 octobre 2026"
+            },
+            {
+              "nom": "Légifrance, décret n° 2026-764 du 5 août 2026",
+              "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054658967",
+              "date": "5 août 2026"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titre": "Examen",
+      "breves": [
+        {
+          "titre": "Examen VTC : les tarifs 2026 restent affichés sur exament3p.fr",
+          "texte": [
+            "Au 26 octobre 2026, exament3p.fr, la plateforme d'inscription des chambres de métiers et de l'artisanat (CMA), affiche toujours les tarifs 2026 de l'examen : 241 € pour l'examen complet, 168 € pour la mobilité professionnelle et 118 € pour la seule épreuve d'admission. Aucun tarif 2027 n'y figure.",
+            "Les pièces demandées sont inchangées : pièce d'identité en cours de validité, permis de conduire hors période probatoire, photo d'identité, justificatif de domicile de moins de trois mois et signature."
+          ],
+          "sources": [
+            {
+              "nom": "exament3p.fr, page « Informations »",
+              "url": "https://www.exament3p.fr/informations",
+              "date": "consulté le 26 octobre 2026"
+            },
+            {
+              "nom": "revision-vtc.fr, wiki : l'examen d'accès à la profession",
+              "url": "https://revision-vtc.fr/wiki/r3120-7.html",
+              "date": "26 octobre 2026"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titre": "Europe",
+      "breves": [
+        {
+          "titre": "Directive plateformes : pas de transposition en France avant le 2 décembre 2026",
+          "texte": [
+            "La directive (UE) 2024/2831 du 23 octobre 2024, qui encadre le travail via une plateforme, chauffeurs VTC compris, doit être transposée au plus tard le 2 décembre 2026. Le ministre du Travail, Jean-Pierre Farandou, a déclaré à l'Agence France-Presse (AFP) le 11 septembre 2026 que cette échéance ne serait pas tenue.",
+            "Il prépare un projet de loi à partir d'une mission nommée en février 2026, mais craint qu'il ne puisse être voté avant la fin de la session parlementaire, en février 2027. Une proposition de loi de transposition (n° 3081), déposée à l'Assemblée nationale le 23 juillet 2026, a été renvoyée à la commission des affaires sociales. Aucune loi de transposition n'est adoptée."
+          ],
+          "sources": [
+            {
+              "nom": "AFP, reprise par Boursorama",
+              "url": "https://www.boursorama.com/actualite-economique/actualites/travailleurs-des-plateformes-la-directive-europeenne-ne-pourra-etre-transposee-dans-les-temps-farandou-a-l-afp-2b5026f47a755f3e51389660e4f3c2f4",
+              "date": "11 septembre 2026"
+            },
+            {
+              "nom": "Syndicalisme Hebdo",
+              "url": "https://www.syndicalismehebdo.fr/article/travailleurs-de-plateformes-la-france-ne-transposera-pas-la-directive-dans-les-temps",
+              "date": "22 septembre 2026"
+            },
+            {
+              "nom": "Assemblée nationale, réponse du Gouvernement à la question écrite n° 14781",
+              "url": "https://www.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE14781",
+              "date": "21 juillet 2026"
+            },
+            {
+              "nom": "Assemblée nationale, proposition de loi n° 3081",
+              "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3081_proposition-loi",
+              "date": "23 juillet 2026"
+            },
+            {
+              "nom": "EUR-Lex, directive (UE) 2024/2831",
+              "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32024L2831",
+              "date": "23 octobre 2024"
+            },
+            {
+              "nom": "revision-vtc.fr, wiki : les chauffeurs concernés par les droits face aux plateformes",
+              "url": "https://revision-vtc.fr/wiki/l1326-1.html",
+              "date": "26 octobre 2026"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "impact_livre": [
+    "Rien à corriger dans le livre.",
+    "La directive européenne est présentée dans la fiche A8.3 et la question du statut dans la fiche B5.7 : tant qu'aucune loi de transposition n'est adoptée, les règles françaises enseignées dans le livre restent celles qui s'appliquent.",
+    "Examen : aucune règle ni aucun tarif modifié sur la période, rien à mettre à jour dans le livre."
+  ],
+  "verifie": "26 octobre 2026"
+}
