@@ -110,3 +110,7 @@ Une seule feuille de style, `docs/css/site.css`, organisée en sept parties (jet
 **Toute publication doit donc avoir un message de commit complet** : une première ligne courte (le titre), une ligne vide, puis le récapitulatif en texte simple (ce qui a été publié, les sources consultées et celles non lues, ce qui n'a pas été retenu, les règles du livre touchées, les points à trancher).
 
 L'envoi passe par la boîte benjamin@revision-vtc.fr (serveur mail.gandi.net, port 465). Les identifiants sont dans les secrets GitHub du dépôt (`SMTP_UTILISATEUR`, `SMTP_MOT_DE_PASSE`, `RECAP_DESTINATAIRE`), jamais dans les fichiers.
+
+## Journal des mises à jour
+
+`JOURNAL.md` (à la racine, hors du site publié) garde la trace de chaque publication, la plus récente en haut. **Toute publication y ajoute une entrée** : jour, heure de Paris, titre, pages publiées ou modifiées avec leur adresse en ligne, points importants (règle du livre modifiée, problème), et lien vers le commit (`https://github.com/75018-montmartre/revision-vtc/commit/<identifiant>`, identifiant du commit précédent si besoin, ou la page des commits). L'auteur le consulte à l'adresse https://github.com/75018-montmartre/revision-vtc/blob/main/JOURNAL.md
