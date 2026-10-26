@@ -45,7 +45,22 @@
   <div class="page corps-page mp-colonne">
 
     
-    <p class="note">Le formulaire de contact sera ouvert très prochainement. En attendant, écrivez à <a href="mailto:benjamin@revision-vtc.fr">benjamin@revision-vtc.fr</a>.</p>
+    <form id="form-contact" class="contact" action="https://api.web3forms.com/submit" method="POST" novalidate>
+      <input type="hidden" name="access_key" value="4af30584-f001-4965-abce-d9e9c4fc6e22">
+      <input type="hidden" name="subject" value="Message depuis revision-vtc.fr">
+      <input type="hidden" name="from_name" value="revision-vtc.fr">
+      <p class="piege" aria-hidden="true"><label>Ne pas remplir <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></p>
+      <p class="aide">Tous les champs sont obligatoires.</p>
+      <div class="champs-2">
+        <div class="champ"><label for="prenom">Prénom</label><input type="text" id="prenom" name="prenom" autocomplete="given-name" required maxlength="60" aria-describedby="err-prenom"><p class="erreur" id="err-prenom"></p></div>
+        <div class="champ"><label for="nom">Nom</label><input type="text" id="nom" name="nom" autocomplete="family-name" required maxlength="60" aria-describedby="err-nom"><p class="erreur" id="err-nom"></p></div>
+      </div>
+      <div class="champ"><label for="email">Adresse e-mail</label><p class="aide" id="aide-email">Pour vous répondre. Exemple : prenom.nom@exemple.fr</p><input type="email" id="email" name="email" autocomplete="email" required maxlength="120" aria-describedby="aide-email err-email"><p class="erreur" id="err-email"></p></div>
+      <div class="champ"><label for="message">Votre message</label><p class="aide" id="aide-message">1&#8239;000 caractères au maximum.</p><textarea id="message" name="message" required maxlength="1000" rows="7" aria-describedby="aide-message compteur err-message"></textarea><p class="meta compteur" id="compteur" aria-live="polite">0 / 1000</p><p class="erreur" id="err-message"></p></div>
+      <p class="aide">Vos données servent uniquement à vous répondre. Elles sont transmises par le service Web3Forms, qui ne conserve pas les messages, et ne sont jamais utilisées à d’autres fins. Détails dans les <a href="mentions-legales.html">mentions légales</a>.</p>
+      <div class="actions"><button type="submit" class="bouton" id="envoyer">Envoyer le message</button></div>
+      <div id="etat" role="status" aria-live="polite"></div>
+    </form>
     <h2>Avant d'écrire</h2>
     <ul>
       <li>Pour une question de réglementation, la réponse est peut-être déjà dans les <a href="wiki/index.html">textes du métier</a> ou les <a href="questions/index.html">Questions VTC</a>.</li>
@@ -73,6 +88,41 @@
     <p class="copyright">© Benjamin Blondin, 2026</p>
   </div>
 </footer>
+<script>
+(function(){
+  var f=document.getElementById('form-contact'); if(!f) return;
+  var debut=Date.now(), b=document.getElementById('envoyer'), etat=document.getElementById('etat'), msg=document.getElementById('message'), cpt=document.getElementById('compteur');
+  msg.addEventListener('input',function(){cpt.textContent=msg.value.length+' / '+msg.maxLength;});
+  var regles={prenom:'Indiquez votre prénom.',nom:'Indiquez votre nom.',email:'Indiquez une adresse e-mail valide, par exemple prenom.nom@exemple.fr.',message:'Écrivez votre message.'};
+  function verifier(){
+    var premier=null;
+    Object.keys(regles).forEach(function(id){
+      var c=document.getElementById(id), e=document.getElementById('err-'+id), ok=c.value.trim()!=='' && c.checkValidity();
+      e.textContent= ok ? '' : regles[id];
+      if(ok) c.removeAttribute('aria-invalid'); else { c.setAttribute('aria-invalid','true'); if(!premier) premier=c; }
+    });
+    if(premier) premier.focus();
+    return !premier;
+  }
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    if(!verifier()) return;
+    if(f.botcheck.checked || Date.now()-debut<3000){ etat.className='note'; etat.textContent='Merci, votre message a bien été envoyé.'; return; }
+    b.disabled=true; b.textContent='Envoi en cours…'; etat.className=''; etat.textContent='';
+    var donnees=Object.fromEntries(new FormData(f));
+    donnees.name=donnees.prenom+' '+donnees.nom;
+    fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(donnees)})
+      .then(function(r){return r.json();})
+      .then(function(j){
+        if(j.success){ f.reset(); cpt.textContent='0 / '+msg.maxLength; etat.className='note succes'; etat.textContent='Merci, votre message a bien été envoyé. Vous recevrez une réponse à l’adresse indiquée.'; }
+        else throw new Error();
+      })
+      .catch(function(){ etat.className='note echec'; etat.innerHTML='Le message n’a pas pu partir. Réessayez dans un instant, ou écrivez directement à <a href="mailto:benjamin@revision-vtc.fr">benjamin@revision-vtc.fr</a>.'; })
+      .finally(function(){ b.disabled=false; b.textContent='Envoyer le message'; etat.focus(); });
+  });
+  etat.setAttribute('tabindex','-1');
+})();
+</script>
 <script data-goatcounter="https://revision-vtc.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
