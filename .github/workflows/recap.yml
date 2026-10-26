@@ -1,0 +1,34 @@
+# Envoie un récapitulatif par e-mail à chaque mise à jour du site (branche main).
+# Secrets à créer dans GitHub (Settings > Secrets and variables > Actions) :
+#   SMTP_UTILISATEUR  l'adresse de la boîte d'envoi (benjamin@revision-vtc.fr)
+#   SMTP_MOT_DE_PASSE son mot de passe
+#   RECAP_DESTINATAIRE l'adresse qui reçoit les récapitulatifs
+# Serveur : mail.gandi.net, port 465 (SSL), lu dans le DNS du domaine.
+name: Récapitulatif par e-mail
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: recap
+  cancel-in-progress: false
+jobs:
+  recap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Envoyer le récapitulatif
+        env:
+          SMTP_SERVEUR: mail.gandi.net
+          SMTP_PORT: "465"
+          SMTP_UTILISATEUR: ${{ secrets.SMTP_UTILISATEUR }}
+          SMTP_MOT_DE_PASSE: ${{ secrets.SMTP_MOT_DE_PASSE }}
+          RECAP_DESTINATAIRE: ${{ secrets.RECAP_DESTINATAIRE }}
+          AVANT: ${{ github.event.before }}
+          APRES: ${{ github.sha }}
+          DEPOT: ${{ github.repository }}
+        run: python3 outils/recap_mail.py

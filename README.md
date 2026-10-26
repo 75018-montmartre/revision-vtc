@@ -102,3 +102,11 @@ Une seule feuille de style, `docs/css/site.css`, organisée en sept parties (jet
 - **Grilles** : tuiles de l'accueil 4 / 2 / 1 colonnes ; cartes-liens en grille automatique. Jamais de tuile orpheline.
 - **Accessibilité** : contraste AA minimum, cibles tactiles de 40 px au moins, focus visible, aucune information portée par la couleur seule, animations coupées si l'appareil le demande.
 - Avant d'ajouter une règle CSS, chercher un composant existant. Toute nouvelle règle va dans la bonne partie du fichier, avec un commentaire.
+
+## Récapitulatif par e-mail
+
+À chaque mise à jour de `main`, GitHub Actions (`.github/workflows/recap.yml`) lance `outils/recap_mail.py`, qui envoie un e-mail au destinataire configuré : le récapitulatif écrit dans le corps des messages de commit, la liste des pages ajoutées, de celles dont le contenu a changé et de celles supprimées (avec leur adresse en ligne), et le lien vers le détail sur GitHub.
+
+**Toute publication doit donc avoir un message de commit complet** : une première ligne courte (le titre), une ligne vide, puis le récapitulatif en texte simple (ce qui a été publié, les sources consultées et celles non lues, ce qui n'a pas été retenu, les règles du livre touchées, les points à trancher).
+
+L'envoi passe par la boîte benjamin@revision-vtc.fr (serveur mail.gandi.net, port 465). Les identifiants sont dans les secrets GitHub du dépôt (`SMTP_UTILISATEUR`, `SMTP_MOT_DE_PASSE`, `RECAP_DESTINATAIRE`), jamais dans les fichiers.
