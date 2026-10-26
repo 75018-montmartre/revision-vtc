@@ -552,7 +552,9 @@ def legales():
     <p>GitHub, Inc. (service GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. Téléphone : +1 877 448 4820.</p>
     <h2>Données personnelles</h2>
     <p>{ty("Ce site ne dépose aucun cookie et n'affiche aucune publicité. Il mesure sa fréquentation avec GoatCounter, un outil sans cookie qui ne conserve que des chiffres d'ensemble (pages vues, site de provenance, type d'appareil, pays) et ne permet pas d'identifier les visiteurs. Vos réponses aux examens blancs sont enregistrées uniquement dans votre navigateur, pour que vous puissiez reprendre là où vous en étiez : elles ne sont jamais envoyées. Vous pouvez les effacer depuis l'examen (« Effacer mes réponses ») ou en vidant les données du site dans votre navigateur.")}</p>
-    <p>{ty("Les polices de caractères sont hébergées sur ce site. Le seul service tiers appelé est GoatCounter (gc.zgo.at), pour la mesure de fréquentation. L'hébergeur peut conserver des journaux techniques de connexion (adresse IP) pour la sécurité du service.")}</p>
+    <p>{ty("Les polices de caractères sont hébergées sur ce site. Deux services tiers sont appelés : GoatCounter (gc.zgo.at), pour la mesure de fréquentation, et, seulement quand vous envoyez un message depuis la page Contact, Web3Forms (api.web3forms.com). L'hébergeur peut conserver des journaux techniques de connexion (adresse IP) pour la sécurité du service.")}</p>
+    <h3>Formulaire de contact</h3>
+    <p>{ty("Les informations saisies (prénom, nom, adresse e-mail, message) servent uniquement à répondre à votre message. Elles sont transmises par le service Web3Forms, qui les achemine par e-mail sans conserver les messages, puis conservées dans la boîte de réception de l'éditeur le temps de l'échange, et au plus un an. Elles ne sont ni cédées, ni utilisées pour de la prospection. Base légale : votre demande. Vous pouvez demander leur consultation, leur rectification ou leur effacement en écrivant à")} <a href="mailto:benjamin@revision-vtc.fr">benjamin@revision-vtc.fr</a>{ty(", et saisir la CNIL (cnil.fr) en cas de difficulté.")}</p>
     <h2>Propriété intellectuelle</h2>
     <p>{ty("Les textes, questions et corrigés de ce site sont la propriété de Benjamin Blondin. Toute reproduction sans autorisation est interdite (Code de la propriété intellectuelle, art. L122-4). Les brèves de l'Actualité VTC citent leurs sources, qui restent la propriété de leurs auteurs.")}</p>
     <p>{ty("Les textes officiels reproduits dans la rubrique Textes du métier proviennent de Légifrance (DILA). Ils sont réutilisés sous Licence Ouverte 2.0, avec mention de la source et de la date de version. Seule la version publiée sur Légifrance fait foi.")}</p>
@@ -644,6 +646,86 @@ def questions(qs, w):
                                         jsonld=[ld, fil(("Accueil", ""), ("Questions VTC", "questions/"))]))
 
 
+# ------------------------------------------------------------------ contact
+def contact():
+    with open(os.path.join(CONTENU, "contact.json"), encoding="utf-8") as h:
+        cle = json.load(h).get("web3forms_cle", "").strip()
+    assert re.fullmatch(r"[0-9a-f-]{0,40}", cle), "clé Web3Forms invalide"
+    MAX = 1000
+    if cle:
+        formulaire = f"""
+    <form id="form-contact" class="contact" action="https://api.web3forms.com/submit" method="POST" novalidate>
+      <input type="hidden" name="access_key" value="{cle}">
+      <input type="hidden" name="subject" value="Message depuis revision-vtc.fr">
+      <input type="hidden" name="from_name" value="revision-vtc.fr">
+      <p class="piege" aria-hidden="true"><label>Ne pas remplir <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></p>
+      <p class="aide">Tous les champs sont obligatoires.</p>
+      <div class="champs-2">
+        <div class="champ"><label for="prenom">Prénom</label><input type="text" id="prenom" name="prenom" autocomplete="given-name" required maxlength="60" aria-describedby="err-prenom"><p class="erreur" id="err-prenom"></p></div>
+        <div class="champ"><label for="nom">Nom</label><input type="text" id="nom" name="nom" autocomplete="family-name" required maxlength="60" aria-describedby="err-nom"><p class="erreur" id="err-nom"></p></div>
+      </div>
+      <div class="champ"><label for="email">Adresse e-mail</label><p class="aide" id="aide-email">Pour vous répondre. Exemple : prenom.nom@exemple.fr</p><input type="email" id="email" name="email" autocomplete="email" required maxlength="120" aria-describedby="aide-email err-email"><p class="erreur" id="err-email"></p></div>
+      <div class="champ"><label for="message">Votre message</label><p class="aide" id="aide-message">1&#8239;000 caractères au maximum.</p><textarea id="message" name="message" required maxlength="{MAX}" rows="7" aria-describedby="aide-message compteur err-message"></textarea><p class="meta compteur" id="compteur" aria-live="polite">0 / {MAX}</p><p class="erreur" id="err-message"></p></div>
+      <p class="aide">{ty("Vos données servent uniquement à vous répondre. Elles sont transmises par le service Web3Forms, qui ne conserve pas les messages, et ne sont jamais utilisées à d'autres fins. Détails dans les")} <a href="mentions-legales.html">mentions légales</a>.</p>
+      <div class="actions"><button type="submit" class="bouton" id="envoyer">Envoyer le message</button></div>
+      <div id="etat" role="status" aria-live="polite"></div>
+    </form>"""
+        script = """<script>
+(function(){
+  var f=document.getElementById('form-contact'); if(!f) return;
+  var debut=Date.now(), b=document.getElementById('envoyer'), etat=document.getElementById('etat'), msg=document.getElementById('message'), cpt=document.getElementById('compteur');
+  msg.addEventListener('input',function(){cpt.textContent=msg.value.length+' / '+msg.maxLength;});
+  var regles={prenom:'Indiquez votre prénom.',nom:'Indiquez votre nom.',email:'Indiquez une adresse e-mail valide, par exemple prenom.nom@exemple.fr.',message:'Écrivez votre message.'};
+  function verifier(){
+    var premier=null;
+    Object.keys(regles).forEach(function(id){
+      var c=document.getElementById(id), e=document.getElementById('err-'+id), ok=c.value.trim()!=='' && c.checkValidity();
+      e.textContent= ok ? '' : regles[id];
+      if(ok) c.removeAttribute('aria-invalid'); else { c.setAttribute('aria-invalid','true'); if(!premier) premier=c; }
+    });
+    if(premier) premier.focus();
+    return !premier;
+  }
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    if(!verifier()) return;
+    if(f.botcheck.checked || Date.now()-debut<3000){ etat.className='note'; etat.textContent='Merci, votre message a bien été envoyé.'; return; }
+    b.disabled=true; b.textContent='Envoi en cours…'; etat.className=''; etat.textContent='';
+    var donnees=Object.fromEntries(new FormData(f));
+    donnees.name=donnees.prenom+' '+donnees.nom;
+    fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(donnees)})
+      .then(function(r){return r.json();})
+      .then(function(j){
+        if(j.success){ f.reset(); cpt.textContent='0 / '+msg.maxLength; etat.className='note succes'; etat.textContent='Merci, votre message a bien été envoyé. Vous recevrez une réponse à l’adresse indiquée.'; }
+        else throw new Error();
+      })
+      .catch(function(){ etat.className='note echec'; etat.innerHTML='Le message n’a pas pu partir. Réessayez dans un instant, ou écrivez directement à <a href="mailto:benjamin@revision-vtc.fr">benjamin@revision-vtc.fr</a>.'; })
+      .finally(function(){ b.disabled=false; b.textContent='Envoyer le message'; etat.focus(); });
+  });
+  etat.setAttribute('tabindex','-1');
+})();
+</script>
+"""
+    else:
+        formulaire = f"""
+    <p class="note">{ty("Le formulaire de contact sera ouvert très prochainement. En attendant, écrivez à")} <a href="mailto:benjamin@revision-vtc.fr">benjamin@revision-vtc.fr</a>.</p>"""
+        script = ""
+    corps = f'''    <p class="surtitre">Le site</p>
+    <h1>Contact</h1>
+    <p class="chapeau">{ty("Une question sur le livre, une erreur à signaler, une règle qui a changé ? Écrivez ici : chaque message est lu et reçoit une réponse.")}</p>
+    {formulaire}
+    <h2>Avant d'écrire</h2>
+    <ul>
+      <li>{ty("Pour une question de réglementation, la réponse est peut-être déjà dans les")} <a href="wiki/index.html">textes du métier</a> {ty("ou les")} <a href="questions/index.html">Questions VTC</a>.</li>
+      <li>{ty("Ce site ne donne pas de conseil juridique, comptable ou fiscal personnalisé.")}</li>
+    </ul>'''
+    ld = {"@context": "https://schema.org", "@type": "ContactPage", "name": "Contact", "url": SITE + "contact.html", "inLanguage": "fr",
+          "about": {"@id": SITE + "#site"}}
+    ecrire("contact.html", page("Contact · Révision VTC", corps, None, "",
+                                "Écrire à l'auteur du site Révision VTC et du livre Machine à Réussite · Examen VTC 2027 : question, erreur à signaler, règle qui a changé.",
+                                scripts_fin=script, jsonld=[ld]))
+
+
 # ------------------------------------------------------------------ à propos, page 404
 def a_propos():
     corps = f'''    <p class="surtitre">Le site</p>
@@ -697,7 +779,7 @@ ROBOTS_IA = ["Googlebot", "Bingbot", "Google-Extended", "GPTBot", "OAI-SearchBot
 
 def plan(nums, arts, wiki_date, qs=()):
     der = nums[0]["date"] if nums else wiki_date
-    urls = [("", max(der, wiki_date)), ("actualite/", der), ("wiki/", wiki_date), ("a-propos.html", None), ("mises-a-jour.html", None),
+    urls = [("", max(der, wiki_date)), ("actualite/", der), ("wiki/", wiki_date), ("a-propos.html", None), ("contact.html", None), ("mises-a-jour.html", None),
             ("examens.html", None), ("mentions-legales.html", None), ("accessibilite.html", None)]
     urls += [(f'actualite/{n["date"]}.html', n["date"]) for n in nums]
     urls += [(f'wiki/{a["slug"]}.html', wiki_date) for a in arts]
@@ -779,6 +861,7 @@ if __name__ == "__main__":
     examens()
     legales()
     a_propos()
+    contact()
     page_404()
     llms(nums, w, qs)
     plan(nums, arts, iso_fr(w["verifie"]), qs)

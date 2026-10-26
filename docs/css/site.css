@@ -378,3 +378,20 @@ fieldset.question legend + *{clear:both}
 @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto !important;transition:none !important}.trois li:hover,.bouton:hover,.une-couv,.questions li:hover,.wiki-liste li:hover,.essentiel-liens li:hover,.numeros > li:hover{transform:none !important}}
 @media print{.entete .nav,.pied,.barre,.actions{display:none}
   .trois li,.essentiel-liens li,.wiki-liste li,.questions li,.numeros > li,.une-actu,.en-clair,.retenir,.officiel,.breve,.cherche{box-shadow:none}}
+
+/* formulaire de contact (composant « formulaire ») */
+.contact{margin:var(--e5) 0}
+.contact .champ{margin-bottom:var(--e4)}
+.contact .champ .aide{margin-top:0}
+.champs-2{display:grid;grid-template-columns:1fr 1fr;gap:0 var(--e4)}
+@media (max-width:36rem){.champs-2{grid-template-columns:1fr}}
+.contact input[type=email]{width:100%;font-family:var(--sans);font-size:1rem;padding:.7rem .9rem;border:1.5px solid var(--gris);border-radius:var(--rayon-p);background:var(--fond);color:var(--encre)}
+.contact [aria-invalid="true"]{border-color:var(--ko)}
+.contact .erreur:empty{min-height:0;margin:0}
+.compteur{text-align:right;margin:var(--e1) 0 0}
+.piege{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.note.succes{background:var(--ok-fond);color:var(--ok);font-family:var(--sans);font-weight:600}
+.note.echec{background:var(--ko-fond);color:var(--ko);font-family:var(--sans)}
+#etat:focus{outline:none}
+button.bouton:disabled{opacity:.6;cursor:wait;transform:none}
+.contact input[aria-invalid="true"],.contact textarea[aria-invalid="true"]{border-color:var(--ko);border-width:2px}

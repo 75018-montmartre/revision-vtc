@@ -100,6 +100,7 @@ def page(titre, corps, actif=None, racine="", description="", noindex=False, scr
       </div>
     </div>
     <ul>
+      <li><a href="{racine}contact.html">Contact</a></li>
       <li><a href="{racine}a-propos.html">À propos et méthode</a></li>
       <li><a href="{racine}wiki/index.html">Réglementation VTC</a></li>
       <li><a href="{racine}mentions-legales.html">Mentions légales</a></li>

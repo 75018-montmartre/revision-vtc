@@ -11,6 +11,7 @@ Site compagnon du livre *Machine à Réussite · Examen VTC 2027* (Benjamin Blon
 | `contenu/wiki.json` | Le wiki « Textes du métier » (`docs/wiki/`) : pour chaque article, le thème, l'explication « En clair », l'exemple « Concrètement », les fiches du livre, le texte officiel recopié de Légifrance (`texte`, `vigueur`, `modif`) et son lien ; plus les lois d'origine et références externes (`autres`). Date de vérification : `verifie`. |
 | `contenu/questions/AAAA-MM-JJ-adresse.json` | Une « Question VTC » (une par semaine, publiée le jeudi) : question, réponse courte, développement, à retenir, liens vers le wiki, fiches du livre, sources |
 | `contenu/fiches.json` | Codes et titres des fiches du livre, pour les renvois « Dans le livre » |
+| `contenu/contact.json` | La clé d'accès Web3Forms du formulaire de contact (`web3forms_cle`) ; vide, la page Contact affiche l'adresse e-mail à la place du formulaire |
 | `contenu/livre.json` | L'adresse de la page Amazon du livre (`amazon`) ; vide, le site affiche « Bientôt disponible sur Amazon » |
 | `outils/generer.py` | Génère tout le site dans `docs/` à partir de `contenu/` |
 | `outils/gabarit.py` | En-tête, menu et pied de page communs |
