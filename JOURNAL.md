@@ -6,6 +6,12 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mardi 27 octobre 2026, 9 h · Le livre est en vente : liens Amazon activés
+
+- Tous les boutons « Bientôt disponible sur Amazon » deviennent « Acheter le livre sur Amazon » : https://www.amazon.fr/dp/B0HPCMRKDR (accueil, pied de toutes les pages, encadrés « Dans le livre » du wiki et des questions).
+- Données structurées du livre complétées (lien Amazon, prix 27,90 €) pour Google et les assistants d'IA.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Lundi 26 octobre 2026, fin d'après-midi · Journal et récapitulatifs
 
 - Création de ce journal.
