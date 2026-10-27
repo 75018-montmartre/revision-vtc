@@ -12,6 +12,7 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 - Prix mis à jour dans les données structurées du livre (Google, assistants d'IA).
 - Campagne Amazon Ads « A - VTC Mots-cles » lancée ce soir (25 mots-clés, 14 négatifs, 10 €/jour, enchères à la baisse uniquement).
 - Campagne Amazon Ads « B - VTC Livres concurrents » lancée ce soir (18 livres concurrents ciblés, 0,40 € par clic, 5 €/jour).
+- Campagne Amazon Ads « C - Auto » lancée ce soir (ciblage automatique, 0,40 € par défaut, 14 négatifs, 3 €/jour).
 - Premier bilan des campagnes prévu le mardi 3 novembre 2026.
 - Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
 
