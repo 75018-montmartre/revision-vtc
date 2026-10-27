@@ -11,6 +11,8 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 - Prix du livre broché passé de 27,90 € à 24,90 € (prix de lancement, à remonter après les premiers avis).
 - Prix mis à jour dans les données structurées du livre (Google, assistants d'IA).
 - Campagne Amazon Ads « A - VTC Mots-cles » lancée ce soir (25 mots-clés, 14 négatifs, 10 €/jour, enchères à la baisse uniquement).
+- Campagne Amazon Ads « B - VTC Livres concurrents » lancée ce soir (18 livres concurrents ciblés, 0,40 € par clic, 5 €/jour).
+- Premier bilan des campagnes prévu le mardi 3 novembre 2026.
 - Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
 
 ## Mardi 27 octobre 2026, 9 h · Le livre est en vente : liens Amazon activés
