@@ -71,7 +71,7 @@ def _seo(chemin, contenu):
     desc = html.unescape(m.group(1))
     url = SITE + (chemin[:-10] if chemin.endswith("index.html") else chemin)
     a = lambda t: html.escape(t, quote=True)
-    type_og = "article" if chemin.startswith(("wiki/", "actualite/2")) else "website"
+    type_og = "article" if chemin.startswith(("wiki/", "actualite/2", "questions/2")) or (chemin.startswith("dossiers/") and not chemin.endswith("index.html")) else "website"
     tete = (f'<link rel="canonical" href="{url}">\n'
             f'<meta property="og:site_name" content="Révision VTC">\n<meta property="og:locale" content="fr_FR">\n'
             f'<meta property="og:type" content="{type_og}">\n<meta property="og:title" content="{a(titre)}">\n'
@@ -728,6 +728,146 @@ def contact():
                                 scripts_fin=script, jsonld=[ld]))
 
 
+# ------------------------------------------------------------------ dossiers
+APERCU = "--apercu" in sys.argv   # génère aussi les brouillons, dans apercu/ (jamais publié)
+
+
+def liens(t):
+    """Texte déjà passé par ty() : transforme [texte](adresse) en lien (maillage interne et sources)."""
+    return re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", lambda m: f'<a href="{m.group(2)}">{m.group(1)}</a>', t)
+
+
+def _bloc_dossier(b):
+    """Un bloc d'une section : paragraphe (texte), liste, tableau chiffré ou encart."""
+    if isinstance(b, str):
+        return f"<p>{liens(ty(b))}</p>"
+    if "liste" in b:
+        return "<ul>" + "".join(f"<li>{liens(ty(x))}</li>" for x in b["liste"]) + "</ul>"
+    if "note" in b:
+        return f'<p class="note">{liens(ty(b["note"]))}</p>'
+    t = b["tableau"]
+    assert t.get("legende") and t["colonnes"] and t["lignes"], "tableau sans légende"
+    nombres = set(t.get("nombres", []))
+    cl = lambda i: ' class="nombre"' if i in nombres else ""
+    tete = "".join(f'<th scope="col"{cl(i)}>{ty(c)}</th>' for i, c in enumerate(t["colonnes"]))
+    def ligne(l, total=False):
+        assert len(l) == len(t["colonnes"]), f"tableau « {t['legende']} » : ligne de {len(l)} cases"
+        gras = (lambda x: f"<strong>{x}</strong>" if x else "") if total else (lambda x: x)
+        return "<tr>" + f'<th scope="row">{liens(ty(l[0]))}</th>' + "".join(f"<td{cl(i)}>{gras(liens(ty(c)))}</td>" for i, c in enumerate(l[1:], 1)) + "</tr>"
+    pied = f'<tfoot>{"".join(ligne(l, True) for l in t["total"])}</tfoot>' if t.get("total") else ""
+    _bloc_dossier.n = getattr(_bloc_dossier, "n", 0) + 1
+    ident = f"tableau-{_bloc_dossier.n}"
+    # la zone défile sur téléphone : elle doit pouvoir recevoir le focus clavier (accessibilité)
+    return (f'<div class="defile" tabindex="0" role="region" aria-labelledby="{ident}"><table><caption id="{ident}">{ty(t["legende"])}</caption><thead><tr>{tete}</tr></thead>'
+            f'<tbody>{"".join(ligne(l) for l in t["lignes"])}</tbody>{pied}</table></div>')
+
+
+def _texte_dossier(d):
+    """Tout le texte d'un dossier, sans balises (comptage des mots, llms-full)."""
+    morceaux = [d["chapeau"], *d["en_bref"]]
+    for s in d["sections"]:
+        morceaux.append(s["titre"])
+        for b in s["blocs"]:
+            if isinstance(b, str):
+                morceaux.append(b)
+            elif "liste" in b:
+                morceaux += b["liste"]
+            elif "note" in b:
+                morceaux.append(b["note"])
+            else:
+                morceaux += [" ".join(l) for l in b["tableau"]["lignes"] + b["tableau"].get("total", [])]
+    morceaux += d["a_retenir"]
+    return re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", "\n".join(morceaux))
+
+
+def lire_dossiers(slugs_wiki):
+    ds = []
+    for f in sorted(glob.glob(os.path.join(CONTENU, "dossiers", "*.json"))):
+        with open(f, encoding="utf-8") as h:
+            d = json.load(h)
+        assert os.path.basename(f) == d["slug"] + ".json", f"{f} : le nom du fichier doit être l'adresse de la page"
+        assert re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", d["slug"]), f"{f} : adresse invalide"
+        assert d["sources"] and all(x["url"].startswith("https://") for x in d["sources"]), f"{f} : source manquante"
+        assert 50 <= len(d["description"]) <= 160, f"{f} : description de 50 à 160 caractères"
+        for w in d.get("wiki", []):
+            assert w in slugs_wiki, f"{f} : page du wiki inconnue {w}"
+        for s in d["sections"]:
+            assert re.fullmatch(r"[a-z0-9-]+", s["id"]), f"{f} : identifiant de section {s['id']}"
+        d["mots"] = len(re.findall(r"\w+", _texte_dossier(d)))
+        assert d.get("brouillon") or 1200 <= d["mots"] <= 3000, f"{f} : {d['mots']} mots (dossier : 1 500 à 2 500 mots)"
+        if d.get("brouillon") and not APERCU:
+            continue
+        ds.append(d)
+    ds.sort(key=lambda d: d["date"], reverse=True)
+    assert len({d["numero"] for d in ds}) == len(ds), "deux dossiers ont le même numéro"
+    return ds
+
+
+def dossiers(ds, w, qs=()):
+    arts = {a["slug"]: a for a in w["articles"]}
+    for d in ds:
+        secs = "".join(f'\n    <h2 id="{s["id"]}">{ty(s["titre"])}</h2>' + "".join(_bloc_dossier(b) for b in s["blocs"]) for s in d["sections"])
+        sommaire = "".join(f'<li><a href="#{s["id"]}">{ty(s["titre"])}</a></li>' for s in d["sections"])
+        wiki = "".join(f'<li><a href="../wiki/{s}.html">{ty(arts[s]["num"] if not arts[s].get("arrete") else "Arrêté")} · {ty(arts[s]["titre"])}</a></li>' for s in d.get("wiki", []))
+        livre = "".join(f"<li><b>Fiche {ty(c)}</b> · {ty(t)}</li>" for c, t in d.get("fiches", []))
+        autres = "".join(f'<li><a href="{x["slug"]}.html">{ty(x["titre"])}</a></li>' for x in ds if x is not d)
+        src = "".join(f'<li><a href="{html.escape(x["url"])}">{ty(x["nom"])}</a>' + (f", {ty(x['date'])}" if x.get("date") else "") + "</li>" for x in d["sources"])
+        maj = f' · mis à jour le {ty(d["mis_a_jour"])}' if d.get("mis_a_jour") else ""
+        corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Dossiers</a></li></ol></nav>
+    <p class="surtitre">Dossier n° {d["numero"]}</p>
+    <h1>{ty(d["titre"])}</h1>
+    <p class="chapeau">{ty(d["chapeau"])}</p>
+    <p class="meta">Publié le {date_fr(d["date"])}{maj} · chiffres vérifiés le {ty(d["verifie"])} · {d["mots"] // 230 + 1} min de lecture</p>
+    <div class="deux-col"><div class="col-texte">
+    <section class="en-clair" aria-labelledby="en-bref">
+      <h2 id="en-bref">La réponse en bref</h2>
+      {"".join(f"<p>{liens(ty(p))}</p>" for p in d["en_bref"])}
+    </section>{secs}
+    <section class="retenir" aria-labelledby="retenir"><h2 id="retenir">À retenir</h2><ul>{"".join(f"<li>{liens(ty(x))}</li>" for x in d["a_retenir"])}</ul></section>
+    <h2 id="sources">Sources</h2>
+    <ul class="source">{src}</ul>
+    <p class="source">{ty("Montants vérifiés le " + d["verifie"] + " sur les sites officiels cités ; les tarifs non réglementés (formation, assurance, véhicule) sont des fourchettes publiées, à comparer avec vos propres devis. Ce dossier ne remplace pas un conseil juridique, comptable ou financier adapté à votre situation.")}</p>
+    </div>
+    <aside class="col-cote" aria-label="Sommaire et pour aller plus loin">
+    <nav class="cote-bloc" aria-labelledby="titre-sommaire"><h2 id="titre-sommaire">Sommaire</h2><ul class="voir-aussi">{sommaire}</ul></nav>
+    {f'<section class="cote-bloc" aria-labelledby="titre-textes"><h2 id="titre-textes">Les textes expliqués</h2><ul class="voir-aussi">{wiki}</ul></section>' if wiki else ""}
+    {f'<section class="cote-bloc wiki-livre" aria-labelledby="titre-livre"><h2 id="titre-livre">Dans le livre</h2><ul>{livre}</ul><p class="pied-achat">{achat("bouton second petit", "Le livre sur Amazon")}</p></section>' if livre else ""}
+    {f'<section class="cote-bloc" aria-labelledby="titre-autres"><h2 id="titre-autres">Autres dossiers</h2><ul class="voir-aussi">{autres}</ul></section>' if autres else ""}
+    </aside></div>'''
+        chemin = f'dossiers/{d["slug"]}.html'
+        ld = {"@context": "https://schema.org", "@type": "Article", "headline": d["titre"][:110], "description": d["description"],
+              "abstract": " ".join(d["en_bref"]), "datePublished": d["date"], "dateModified": iso_fr(d.get("mis_a_jour") or d["verifie"]) if iso_fr(d.get("mis_a_jour") or d["verifie"]) > d["date"] else d["date"],
+              "inLanguage": "fr", "author": AUTEUR, "publisher": AUTEUR, "image": SITE + "partage.jpg", "mainEntityOfPage": SITE + chemin,
+              "articleSection": "Dossiers", "wordCount": d["mots"], "keywords": d.get("mots_cles", []), "isPartOf": {"@id": SITE + "#site"},
+              "citation": [x["url"] for x in d["sources"]]}
+        ecrire(chemin, page(html.escape(d.get("titre_page", d["titre"]) + " · Révision VTC", quote=False), corps, "dossiers", "../", html.escape(d["description"]),
+                            noindex=bool(d.get("brouillon")),
+                            jsonld=[ld, fil(("Accueil", ""), ("Dossiers", "dossiers/"), (d["titre"], chemin))]))
+    if ds:
+        liste = "".join(f'''<li><span class="meta">Dossier n° {d["numero"]} · {date_fr(d["date"])}</span><a href="{d["slug"]}.html">{ty(d["titre"])}</a><p>{ty(d["description"])}</p></li>''' for d in ds)
+        liste = f'<ul class="questions">{liste}</ul>'
+    else:
+        liste = f'<p class="note">{ty("Le premier dossier sera publié très prochainement.")}</p>'
+    corps = f'''    <h1>Dossiers VTC</h1>
+    <p class="chapeau">{ty("Les grandes questions du métier de chauffeur VTC, traitées à fond : coûts, revenus, statut, véhicule, cotisations. Chaque chiffre est daté et relié à sa source.")}</p>
+    <p>{ty("Un nouveau dossier chaque semaine. Pour une réponse rapide à une question précise, voyez les")} <a href="../questions/index.html">Questions VTC</a> {ty("; pour le texte exact d'une règle, les")} <a href="../wiki/index.html">textes du métier</a>.</p>
+    {liste}'''
+    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Dossiers VTC", "url": SITE + "dossiers/", "inLanguage": "fr",
+          "isPartOf": {"@id": SITE + "#site"},
+          "hasPart": [{"@type": "Article", "headline": d["titre"], "url": SITE + f'dossiers/{d["slug"]}.html'} for d in ds]}
+    ecrire("dossiers/index.html", page("Dossiers VTC : coûts, revenus, statut, véhicule, expliqués et chiffrés · Révision VTC", corps, "dossiers", "../",
+                                       "Les dossiers de Révision VTC : combien coûte le lancement en VTC, combien gagne un chauffeur, quel statut choisir. Chiffres datés et sources officielles.",
+                                       jsonld=[ld, fil(("Accueil", ""), ("Dossiers", "dossiers/"))]))
+
+
+def indexnow():
+    """IndexNow (Bing, Yandex, Seznam…) : la clé publique doit être servie à la racine du site."""
+    with open(os.path.join(CONTENU, "indexnow.json"), encoding="utf-8") as h:
+        cle = json.load(h)["cle"]
+    assert re.fullmatch(r"[0-9a-f]{32}", cle), "clé IndexNow invalide"
+    ecrire(f"{cle}.txt", cle)
+
+
 # ------------------------------------------------------------------ à propos, page 404
 def a_propos():
     corps = f'''    <p class="surtitre">Le site</p>
@@ -779,7 +919,7 @@ ROBOTS_IA = ["Googlebot", "Bingbot", "Google-Extended", "GPTBot", "OAI-SearchBot
              "Claude-User", "PerplexityBot", "Perplexity-User", "Applebot", "Applebot-Extended", "DuckAssistBot", "MistralAI-User", "CCBot"]
 
 
-def plan(nums, arts, wiki_date, qs=()):
+def plan(nums, arts, wiki_date, qs=(), ds=()):
     der = nums[0]["date"] if nums else wiki_date
     urls = [("", max(der, wiki_date)), ("actualite/", der), ("wiki/", wiki_date), ("a-propos.html", None), ("contact.html", None), ("mises-a-jour.html", None),
             ("examens.html", None), ("mentions-legales.html", None), ("accessibilite.html", None)]
@@ -788,6 +928,10 @@ def plan(nums, arts, wiki_date, qs=()):
     if qs:
         urls.insert(3, ("questions/", qs[0]["date"]))
         urls += [(f'questions/{q["date"]}-{q["slug"]}.html', iso_fr(q["verifie"])) for q in qs]
+    if ds:
+        maj = lambda d: max(d["date"], iso_fr(d.get("mis_a_jour") or d["verifie"]))
+        urls.insert(4, ("dossiers/", max(maj(d) for d in ds)))
+        urls += [(f'dossiers/{d["slug"]}.html', maj(d)) for d in ds]
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     xml += "".join(f"  <url><loc>{SITE}{u}</loc>" + (f"<lastmod>{d}</lastmod>" if d else "") + "</url>\n" for u, d in urls) + "</urlset>\n"
     ecrire("sitemap.xml", xml)
@@ -796,7 +940,7 @@ def plan(nums, arts, wiki_date, qs=()):
            f"User-agent: *\nAllow: /\nDisallow: /examen.html\n\nSitemap: {SITE}sitemap.xml\n")
 
 
-def llms(nums, w, qs=()):
+def llms(nums, w, qs=(), ds=()):
     """llms.txt : le plan du site pour les assistants d'IA ; llms-full.txt : tout le wiki en texte brut, avec ses sources."""
     themes = {t["cle"]: t["titre"] for t in w["themes"]}
     l = ["# Révision VTC (revision-vtc.fr)", "",
@@ -811,6 +955,7 @@ def llms(nums, w, qs=()):
          f"- [Réglementation VTC, les textes du métier]({SITE}wiki/): index de tous les articles par thème",
          f"- [Actualité VTC]({SITE}actualite/): un numéro par semaine, sources citées",
          f"- [Questions VTC]({SITE}questions/): une question concrète par semaine, réponse courte et sources officielles",
+         f"- [Dossiers VTC]({SITE}dossiers/): articles longs et chiffrés (coût du lancement, revenus, statut, véhicule), sources datées",
          f"- [Mises à jour du livre]({SITE}mises-a-jour.html): règles qui ont changé depuis l'impression",
          f"- [Examens blancs]({SITE}examens.html): deux examens blancs corrigés, réservés aux lecteurs du livre",
          f"- [À propos et méthode]({SITE}a-propos.html): qui écrit, comment les informations sont vérifiées",
@@ -818,6 +963,10 @@ def llms(nums, w, qs=()):
     for t in w["themes"]:
         l += [f"## {t['titre']}", ""]
         l += [f"- [{a['num'] if not a.get('arrete') else 'Arrêté'} · {a['titre']}]({SITE}wiki/{a['slug']}.html): {a['en_clair']}" for a in w["articles"] if a["theme"] == t["cle"]]
+        l.append("")
+    if ds:
+        l += ["## Dossiers VTC", ""]
+        l += [f"- [{d['titre']}]({SITE}dossiers/{d['slug']}.html): {' '.join(d['en_bref'])}" for d in ds]
         l.append("")
     if qs:
         l += ["## Questions VTC", ""]
@@ -849,6 +998,12 @@ def llms(nums, w, qs=()):
 
 
 if __name__ == "__main__":
+    if APERCU:
+        # aperçu des brouillons : une copie complète du site dans apercu/, jamais publiée (voir .gitignore)
+        import shutil
+        shutil.rmtree(os.path.join(RACINE, "apercu"), ignore_errors=True)
+        shutil.copytree(DOCS, os.path.join(RACINE, "apercu"))
+        DOCS = os.path.join(RACINE, "apercu")
     nums = lire_numeros()
     accueil(nums, lire_questions({a["slug"] for a in lire_wiki()["articles"]}))
     for i, n in enumerate(nums):
@@ -859,12 +1014,15 @@ if __name__ == "__main__":
     w = lire_wiki()
     qs = lire_questions({a["slug"] for a in w["articles"]})
     questions(qs, w)
+    ds = lire_dossiers({a["slug"] for a in w["articles"]})
+    dossiers(ds, w, qs)
+    indexnow()
     mises_a_jour()
     examens()
     legales()
     a_propos()
     contact()
     page_404()
-    llms(nums, w, qs)
-    plan(nums, arts, iso_fr(w["verifie"]), qs)
+    llms(nums, w, qs, [d for d in ds if not d.get("brouillon")])
+    plan(nums, arts, iso_fr(w["verifie"]), qs, [d for d in ds if not d.get("brouillon")])
     print(f"Site généré dans docs/ : {len(nums)} numéro(s) de l'Actualité VTC.")
