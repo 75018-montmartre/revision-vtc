@@ -6,6 +6,13 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mardi 27 octobre 2026, 19 h 10 · Prix de lancement du livre
+
+- Prix du livre broché passé de 27,90 € à 24,90 € (prix de lancement, à remonter après les premiers avis).
+- Prix mis à jour dans les données structurées du livre (Google, assistants d'IA).
+- Campagne Amazon Ads « A - VTC Mots-cles » lancée ce soir (25 mots-clés, 14 négatifs, 10 €/jour, enchères à la baisse uniquement).
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mardi 27 octobre 2026, 9 h · Le livre est en vente : liens Amazon activés
 
 - Tous les boutons « Bientôt disponible sur Amazon » deviennent « Acheter le livre sur Amazon » : https://www.amazon.fr/dp/B0HPCMRKDR (accueil, pied de toutes les pages, encadrés « Dans le livre » du wiki et des questions).

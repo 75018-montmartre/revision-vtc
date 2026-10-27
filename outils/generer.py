@@ -48,7 +48,7 @@ LIVRE_LD = {"@type": "Book", "@id": SITE + "#livre", "name": "Machine à Réussi
             "isbn": "9798165280795", "bookFormat": "https://schema.org/Paperback", "numberOfPages": 540, "inLanguage": "fr",
             "datePublished": "2026-10", "image": SITE + "couverture.jpg",
             "url": "https://www.amazon.fr/dp/B0HPCMRKDR", "sameAs": ["https://www.amazon.fr/dp/B0HPCMRKDR"],
-            "offers": {"@type": "Offer", "price": "27.90", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.fr/dp/B0HPCMRKDR"},
+            "offers": {"@type": "Offer", "price": "24.90", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.fr/dp/B0HPCMRKDR"},
             "about": "Préparation à l'examen d'accès à la profession de conducteur de voiture de transport avec chauffeur (VTC)"}
 SITE_LD = {"@type": "WebSite", "@id": SITE + "#site", "name": "Révision VTC", "url": SITE, "inLanguage": "fr-FR",
            "description": "Réglementation VTC expliquée article par article, actualité du métier chaque semaine et examens blancs, par l'auteur du livre Machine à Réussite · Examen VTC 2027.",
