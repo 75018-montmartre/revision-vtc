@@ -6,6 +6,16 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 28 octobre 2026, 7 h 45 · Veille du wiki (tâche du mercredi)
+
+- **PROBLÈME : Légifrance inaccessible depuis l'environnement de la tâche.** Le réseau de la tâche refuse toute connexion à legifrance.gouv.fr (et aux données ouvertes de la DILA). Seule une lecture résumée passe, et elle affiche une version datée du 20 septembre 2024 : elle ne permet pas de comparer mot à mot.
+- Articles vérifiés : 0 sur 78. Articles non lus : les 78 (73 articles de code et 5 arrêtés).
+- Aucun texte modifié, aucune explication réécrite (chaque réécriture exige de relire l'article officiel).
+- Date « vérifié » laissée au 25 octobre 2026.
+- Contrôle technique : génération réussie, aucune différence avec les pages en ligne, sitemap complet (79 adresses du wiki).
+- Pour la semaine prochaine : faire tourner la tâche depuis l'ordinateur (option « Exiger cet ordinateur », navigateur intégré) ou autoriser legifrance.gouv.fr dans les accès réseau.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mardi 27 octobre 2026, 19 h 10 · Prix de lancement du livre
 
 - Prix du livre broché passé de 27,90 € à 24,90 € (prix de lancement, à remonter après les premiers avis).
