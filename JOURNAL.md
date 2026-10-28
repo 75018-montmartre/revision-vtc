@@ -6,6 +6,16 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 28 octobre 2026, 15 h · Veille du wiki (tâche du mercredi)
+
+- **PROBLÈME : Légifrance toujours inaccessible (troisième passage de la journée).** Connexion directe refusée (403) à legifrance.gouv.fr, aux données ouvertes de la DILA, à l'API PISTE et à data.gouv.fr. L'outil web ne renvoie qu'un résumé d'une version datée du 20 septembre 2024 : impossible de comparer mot à mot.
+- Articles vérifiés : 0 sur 78. Articles non lus : les 78 (73 articles de code et 5 arrêtés).
+- Aucun texte modifié, aucune explication réécrite (chaque réécriture exige de relire l'article officiel).
+- Date « vérifié » laissée au 25 octobre 2026.
+- Contrôle technique : génération réussie, aucune différence avec les pages en ligne, sitemap complet (79 adresses du wiki).
+- À faire : autoriser legifrance.gouv.fr dans les accès réseau de la tâche, ou la faire tourner depuis l'ordinateur (option « Exiger cet ordinateur », navigateur intégré). Inutile de relancer la tâche avant ce réglage : le résultat sera le même.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 28 octobre 2026, 14 h 50 · Veille du wiki (tâche du mercredi)
 
 - **PROBLÈME : Légifrance toujours inaccessible (deuxième passage de la journée).** Le réseau de la tâche refuse encore la connexion à legifrance.gouv.fr (refus 403), et la lecture par l'outil web a été bloquée faute d'autorisation.
