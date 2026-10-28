@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-28",
+  "numero": 3,
+  "titre": "Examen VTC 2027 : 11 dates publiées, aucun nouveau texte officiel",
+  "periode": "du 27 au 28 octobre 2026",
+  "a_retenir": [
+    "CMA France a publié le calendrier national 2027 des épreuves d'admissibilité de l'examen VTC : 11 sessions, toutes un mardi, du 26 janvier au 7 décembre 2027.",
+    "Chaque chambre de métiers régionale choisit ses sessions et fixe ses dates limites d'inscription : dans les Hauts-de-France, il faut s'inscrire avant le 18 décembre 2026 à 12 h pour l'épreuve du 26 janvier 2027.",
+    "Aucun nouveau texte sur les VTC n'a été repéré au Journal officiel du 27 au 28 octobre 2026 : les règles enseignées dans le livre restent applicables."
+  ],
+  "rubriques": [
+    {
+      "titre": "Textes officiels",
+      "breves": [
+        {
+          "titre": "Aucun nouveau texte VTC repéré au Journal officiel du 27 au 28 octobre 2026",
+          "texte": [
+            "Aucun décret ni arrêté sur les voitures de transport avec chauffeur (VTC) n'a été repéré au Journal officiel du 27 au 28 octobre 2026. Les derniers textes repérés restent le décret n° 2026-764 du 5 août 2026 et la loi n° 2026-798 du 18 août 2026, déjà intégrés au livre.",
+            "Légifrance n'a pas répondu à nos consultations directes cette semaine non plus. La vérification a porté sur les pages de legifrance.gouv.fr indexées par les moteurs de recherche. Ce point sera revérifié directement sur Légifrance dès que le site sera de nouveau accessible."
+          ],
+          "sources": [
+            {
+              "nom": "Légifrance, Journal officiel, recherche « voiture de transport avec chauffeur »",
+              "url": "https://www.legifrance.gouv.fr/search/jorf?tab_selection=jorf&searchField=ALL&query=%22voiture+de+transport+avec+chauffeur%22&sortValue=PUBLI_DATE_DESC&page=1&init=true",
+              "date": "recherche indexée, 28 octobre 2026"
+            },
+            {
+              "nom": "Légifrance, décret n° 2026-764 du 5 août 2026",
+              "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054658967",
+              "date": "5 août 2026"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titre": "Examen",
+      "breves": [
+        {
+          "titre": "Examen VTC 2027 : le calendrier national des 11 épreuves d'admissibilité est publié",
+          "texte": [
+            "CMA France, tête de réseau des chambres de métiers et de l'artisanat (CMA), a publié le calendrier national 2027 des épreuves d'admissibilité de l'examen de conducteur de taxi, de VTC et de VMDTR (véhicule motorisé à deux ou trois roues). Les 11 dates sont toutes des mardis : 26 janvier, 23 février, 30 mars, 27 avril, 25 mai, 29 juin, 20 juillet, 28 septembre, 26 octobre, 16 novembre et 7 décembre 2027.",
+            "Chaque CMA régionale retient une partie de ces dates. La CMA Hauts-de-France en annonce six, la première le 26 janvier 2027, avec inscription complète avant le vendredi 18 décembre 2026 à 12 h. Elle affiche encore les tarifs 2026, réévalués chaque année : 241 € pour l'examen complet."
+          ],
+          "sources": [
+            {
+              "nom": "CMA France, calendrier national 2027 des épreuves d'admissibilité taxi, VTC et VMDTR",
+              "url": "https://www.artisanat.fr/media/3195/download",
+              "date": "consulté le 28 octobre 2026"
+            },
+            {
+              "nom": "CMA France, page « Examens taxi, VTC, VMDTR »",
+              "url": "https://www.artisanat.fr/nous-connaitre/vous-accompagner/examens-taxi-vtc-vmdtr",
+              "date": "consulté le 28 octobre 2026"
+            },
+            {
+              "nom": "CMA Hauts-de-France, page « Examen Taxi et VTC »",
+              "url": "https://www.cma-hautsdefrance.fr/examen-taxi-et-vtc/",
+              "date": "consulté le 28 octobre 2026"
+            },
+            {
+              "nom": "revision-vtc.fr, wiki : l'examen d'accès à la profession",
+              "url": "https://revision-vtc.fr/wiki/r3120-7.html",
+              "date": "28 octobre 2026"
+            },
+            {
+              "nom": "revision-vtc.fr, wiki : l'arrêté du 6 avril 2017 sur l'examen",
+              "url": "https://revision-vtc.fr/wiki/arrete-6-avril-2017-examen.html",
+              "date": "28 octobre 2026"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "impact_livre": [
+    "Rien à corriger dans le livre.",
+    "Fiche A2.4 (l'examen, seule porte d'entrée) : le calendrier 2027 ne modifie aucune règle de l'examen. Il fixe seulement les dates des épreuves d'admissibilité ; les dates limites d'inscription dépendent de chaque CMA régionale.",
+    "Textes officiels : aucun texte nouveau sur la période, rien à mettre à jour dans le livre."
+  ],
+  "verifie": "28 octobre 2026"
+}

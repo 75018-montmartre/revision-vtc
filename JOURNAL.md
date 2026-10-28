@@ -6,6 +6,16 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 28 octobre 2026, 19 h 20 · Actualité VTC n° 3 (tâche du lundi)
+
+- **PROBLÈME : Légifrance toujours inaccessible** (refus 403). Journal officiel vérifié seulement par les pages indexées ; exament3p.fr non lu cette fois (lecture non autorisée à temps).
+- Publié : https://revision-vtc.fr/actualite/2026-10-28.html
+- Titre : « Examen VTC 2027 : 11 dates publiées, aucun nouveau texte officiel » (période du 27 au 28 octobre 2026, tâche lancée le mercredi).
+- Textes officiels : aucun nouveau texte VTC repéré au Journal officiel du 27 au 28 octobre 2026.
+- Examen : calendrier national 2027 de CMA France, 11 épreuves d'admissibilité (mardis, du 26 janvier au 7 décembre 2027) ; Hauts-de-France : inscription avant le 18 décembre 2026 à 12 h pour le 26 janvier 2027.
+- Livre : rien à corriger.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 28 octobre 2026, 16 h 10 · Rubrique Dossiers, dossier n° 1 et IndexNow
 
 - Nouvelle rubrique « Dossiers » (articles longs, un par semaine, relus par l'auteur) : https://revision-vtc.fr/dossiers/ , lien « Dossiers » ajouté au menu de toutes les pages.
