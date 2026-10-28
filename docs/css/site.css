@@ -26,6 +26,8 @@
   --accent-trait:#C9361B;
   --ok:#1F6B34; --ok-fond:#E9F3EA; --ko:#A52C15; --ko-fond:#FBECE8;
   --focus:#1F4FCC;
+  /* surfaces foncées (pied de page, diapositives foncées de l'accueil), identiques en clair et en sombre sauf le fond */
+  --fonce:#1A1917; --sur-fonce:#FFFFFF; --sur-fonce-doux:#E7E3DB; --sur-fonce-gris:#A9A398; --sur-fonce-filet:rgba(255,255,255,.2);
   /* typographie */
   --sans:"Inter","Helvetica Neue",Arial,sans-serif;          /* titres, interface */
   --serif:"EB Garamond",Georgia,"Times New Roman",serif;     /* texte de lecture */
@@ -46,7 +48,7 @@
   :root{--fond:#161514;--carte:#1F1D1B;--doux:#24221F;--encre:#ECE9E3;--gris:#B3AEA4;--filet:#3A3833;--rouge:#A52C15;
         --accent:#F08C74;--accent-trait:#E0573A;--ok:#8FD39C;--ok-fond:#1C2A1F;--ko:#F49A86;--ko-fond:#2E1D19;--focus:#8DB0FF;
         --ombre:0 1px 2px rgba(0,0,0,.4);--ombre-h:0 10px 26px -12px rgba(0,0,0,.7);
-        --p1:#3A2420;--p2:#3A3220;--p3:#22322A;--p4:#242B3B}
+        --p1:#3A2420;--p2:#3A3220;--p3:#22322A;--p4:#242B3B;--fonce:#0E0D0C}
 }
 
 /* 2. Base ------------------------------------------------------------------ */
@@ -148,19 +150,18 @@ main{padding:0 0 var(--e8)}
 .fil a{color:var(--gris)}
 
 /* pied */
-.pied{background:var(--encre);color:#E7E3DB;font-family:var(--sans);font-size:.875rem}
+.pied{background:var(--fonce);color:var(--sur-fonce-doux);font-family:var(--sans);font-size:.875rem}
 .pied .page{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:var(--e5) var(--e6);padding-top:var(--e7);padding-bottom:var(--e6)}
-.pied a{color:#E7E3DB}
+.pied a{color:var(--sur-fonce-doux)}
 .pied ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:var(--e1) var(--e5)}
 .pied li{margin:0}
 .pied-livre{display:flex;gap:var(--e4);align-items:flex-start;max-width:28rem}
 .pied-livre img{flex:none;display:block;border-radius:4px}
 .pied-livre p{margin:0;font-family:var(--serif);font-size:1rem;line-height:1.45;color:#CFC9BE}
-.pied-livre b{font-family:var(--sans);color:#fff;font-size:.9375rem}
+.pied-livre b{font-family:var(--sans);color:var(--sur-fonce);font-size:.9375rem}
 .pied-achat{margin-top:var(--e4) !important}
-.pied .copyright{width:100%;margin:0;color:#A9A398}
+.pied .copyright{width:100%;margin:0;color:var(--sur-fonce-gris)}
 .pied :focus-visible{outline-color:#9DBBFF}
-@media (prefers-color-scheme: dark){.pied{background:#0E0D0C}}
 
 /* 4. Typographie de contenu ------------------------------------------------ */
 h1,h2,h3{font-family:var(--sans);color:var(--encre);line-height:1.2;letter-spacing:-.02em}
@@ -199,7 +200,7 @@ h1 .num-art{display:block;font-size:1rem;letter-spacing:.02em;margin-bottom:var(
 .bouton.contour{background:transparent;border-color:#fff;color:#fff}
 .bouton.contour:hover{background:rgba(255,255,255,.12);color:#fff}
 .bouton.bientot,.bouton.bientot:hover{cursor:default;background:transparent;border-style:dashed;transform:none}
-.pied .bouton.bientot{color:#E7E3DB;border-color:#A9A398}
+.pied .bouton.bientot{color:var(--sur-fonce-doux);border-color:var(--sur-fonce-gris)}
 .pied .bouton.clair:not(.bientot){color:#1A1917}
 
 /* carte : le seul modèle de boîte du site */
@@ -314,14 +315,14 @@ main:has(.une){padding-bottom:0}
 .diapo .chapeau{max-width:36rem}
 .diapo .actions{margin-bottom:0}
 /* diapositives foncées : le site (couleur du pied de page) et le livre (rouge du livre) */
-.diapo-site{background:var(--encre)}
+.diapo-site{background:var(--fonce)}
 .diapo-livre{background:var(--rouge)}
-@media (prefers-color-scheme: dark){.diapo-site{background:#0E0D0C;border:1px solid var(--filet)}}
-.diapo-site,.diapo-livre{color:#fff}
-.diapo-site :is(h1,h2,.chapeau),.diapo-livre :is(h1,h2,.chapeau){color:#fff}
-.diapo-site .surtitre,.diapo-livre .surtitre{color:#fff;opacity:.92}
-.diapo-site :focus-visible,.diapo-livre :focus-visible{outline-color:#fff}
-.une .bouton.bientot{color:#fff;border-color:#fff}
+@media (prefers-color-scheme: dark){.diapo-site{border:1px solid var(--filet)}}
+.diapo-site,.diapo-livre{color:var(--sur-fonce)}
+.diapo-site :is(h1,h2,.chapeau),.diapo-livre :is(h1,h2,.chapeau){color:var(--sur-fonce)}
+.diapo-site .surtitre,.diapo-livre .surtitre{color:var(--sur-fonce);opacity:.92}
+.diapo-site :focus-visible,.diapo-livre :focus-visible{outline-color:var(--sur-fonce)}
+.une .bouton.bientot{color:var(--sur-fonce);border-color:var(--sur-fonce)}
 /* diapositive claire : le simulateur, avec un exemple chiffré en carte */
 .diapo-simu{background:var(--doux);border:1px solid var(--filet)}
 .exemple-simu{width:19rem;background:var(--carte);border:1px solid var(--filet);border-left:5px solid var(--accent-trait);border-radius:var(--rayon);box-shadow:var(--ombre);padding:var(--e5)}
@@ -330,12 +331,12 @@ main:has(.une){padding-bottom:0}
 .exemple-net{font-family:var(--sans);font-size:.9375rem;color:var(--gris);margin-bottom:var(--e3) !important}
 .exemple-net .resultat{display:block;font-size:2.75rem;line-height:1.05;margin:0;color:var(--encre);letter-spacing:-.03em}
 /* les garanties du site, à droite de la première diapositive */
-.garanties{width:19rem;list-style:none;margin:0;padding:0;font-family:var(--sans);font-size:.9375rem;line-height:1.45;color:#E7E3DB}
-.garanties li{margin:0;padding:var(--e4) 0 var(--e4) 2rem;border-top:1px solid rgba(255,255,255,.2);position:relative}
+.garanties{width:19rem;list-style:none;margin:0;padding:0;font-family:var(--sans);font-size:.9375rem;line-height:1.45;color:var(--sur-fonce-doux)}
+.garanties li{margin:0;padding:var(--e4) 0 var(--e4) 2rem;border-top:1px solid var(--sur-fonce-filet);position:relative}
 .garanties li:first-child{border-top:0;padding-top:0}
-.garanties li::before{content:"";position:absolute;left:.15rem;top:calc(var(--e4) + .3rem);width:.55rem;height:.95rem;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+.garanties li::before{content:"";position:absolute;left:.15rem;top:calc(var(--e4) + .3rem);width:.55rem;height:.95rem;border:solid var(--sur-fonce);border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
 .garanties li:first-child::before{top:.3rem}
-.garanties b{display:block;color:#fff;font-size:1.0625rem}
+.garanties b{display:block;color:var(--sur-fonce);font-size:1.0625rem}
 .une-couv{width:clamp(10rem,22vw,15rem);height:auto;display:block;border-radius:6px;transform:rotate(2.5deg);transition:transform .3s;box-shadow:0 1px 0 rgba(0,0,0,.08),0 18px 40px -18px rgba(0,0,0,.45)}
 .une-couv:hover{transform:rotate(0)}
 /* commandes : une pilule par diapositive (numéro et nom), puis pause */
@@ -472,7 +473,7 @@ fieldset.question legend + *{clear:both}
   .menu-livre{padding-right:1.25rem}
   .menu-livre ul{right:1.25rem}
   .nav{position:relative;width:100%;min-width:0}
-  .nav ul{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 1.25rem .15rem;max-width:100%}
+  .nav ul{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:none;scroll-padding-inline:1.25rem;padding:0 1.25rem .15rem;max-width:100%}
   .nav ul::-webkit-scrollbar{display:none}
   .nav li{flex:none;scroll-snap-align:start}
   .nav a{background:var(--doux)}

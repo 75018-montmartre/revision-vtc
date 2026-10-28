@@ -6,6 +6,15 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 28 octobre 2026, 21 h 40 · Charte graphique : contrôle de tout le site après la refonte
+
+- Tour complet des 16 types de pages (accueil, actualité, questions, dossiers, wiki, simulateur, mises à jour, examens, contact, à propos, mentions légales, 404), sur ordinateur et téléphone : même en-tête, mêmes composants partout.
+- Corrigé : couleurs des surfaces foncées (pied de page et diapositive « Le site ») passées en jetons (`--fonce`, `--sur-fonce`…) au lieu de valeurs écrites en dur ; rendu inchangé.
+- Corrigé sur téléphone : la rubrique en cours est amenée à l'écran dans le menu qui défile (elle était cachée pour Textes du métier et Simulateur) ; marge gauche du menu respectée.
+- README, « Charte graphique » : en-tête et menu « Le livre », carrousel de l'accueil, étapes numérotées, jetons des surfaces foncées.
+- Vérifications : aucune erreur d'accessibilité (axe) en clair et en sombre de 320 à 1 920 px ; aucun débordement.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 28 octobre 2026, 21 h 20 · Refonte de l'accueil, du menu et de l'introduction du simulateur
 
 - **Sauvegarde avant refonte** : branche `sauvegarde-2026-10-28` (état du site au commit 5b12445) : https://github.com/75018-montmartre/revision-vtc/tree/sauvegarde-2026-10-28 . Pour revenir en arrière : remettre `main` sur ce commit (ou annuler le commit de la refonte, 052ab2b).

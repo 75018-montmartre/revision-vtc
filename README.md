@@ -22,7 +22,7 @@ Site compagnon du livre *Machine à Réussite · Examen VTC 2027* (Benjamin Blon
 | `outils/gabarit.py` | En-tête, menu et pied de page communs |
 | `docs/` | Le site publié par GitHub Pages (ne pas modifier les pages HTML à la main : elles sont régénérées) |
 
-Les fichiers fixes de `docs/` (feuille de style, polices, scripts et données des examens, PDF, `CNAME`) ne sont pas régénérés.
+Les fichiers fixes de `docs/` (feuille de style, polices, scripts communs `js/site.js` et des examens, données des examens, PDF, `CNAME`) ne sont pas régénérés.
 
 ## Publier un numéro de l'Actualité VTC
 
@@ -142,12 +142,15 @@ Page : https://revision-vtc.fr/simulateurs/cout-revient-revenu-net-vtc.html (adr
 
 Une seule feuille de style, `docs/css/site.css`, organisée en sept parties (jetons, base, structure, typographie, composants, pages, adaptations). Règles à respecter pour garder un site homogène :
 
-- **Couleurs** : uniquement les jetons de `:root` (`--fond`, `--carte`, `--doux`, `--encre`, `--gris`, `--filet`, `--rouge`, `--accent`). Jamais de couleur écrite en dur dans une page. Le thème sombre est géré par les mêmes jetons.
+- **Couleurs** : uniquement les jetons de `:root` (`--fond`, `--carte`, `--doux`, `--encre`, `--gris`, `--filet`, `--rouge`, `--accent`). Surfaces foncées (pied de page, diapositives foncées de l'accueil) : `--fonce` pour le fond, `--sur-fonce`, `--sur-fonce-doux`, `--sur-fonce-gris` et `--sur-fonce-filet` pour ce qui est posé dessus. Jamais de couleur écrite en dur dans une page. Le thème sombre est géré par les mêmes jetons.
 - **Typographie** : Inter pour les titres, menus, boutons et mentions ; EB Garamond pour le texte de lecture. Pas d'autre police.
+- **En-tête du site** (toutes les pages, `outils/gabarit.py`) : logo et nom du site à gauche ; menu des cinq rubriques (`NAV` : Actualité VTC, Questions VTC, Dossiers, Textes du métier, Simulateur) ; à droite, le menu déroulant « Le livre » (`MENU_LIVRE` : mises à jour, examens blancs, achat), pilule à contour rouge, noire quand on est sur une de ses pages. Pas d'« Accueil » dans le menu : le logo y mène. Une nouvelle rubrique s'ajoute à `NAV` seulement si elle est de même niveau que les cinq autres ; tout ce qui concerne le livre va dans `MENU_LIVRE`. Sur une seule ligne sur grand écran, menu sous le logo sur écran moyen, menu qui défile horizontalement sur téléphone (la rubrique en cours est amenée à l'écran par `docs/js/site.js`).
+- **Accueil** : carrousel de trois diapositives en panneaux à coins arrondis, détachés de l'en-tête (le site sur fond foncé, le simulateur sur fond beige avec un exemple en carte, le livre sur fond rouge) ; commandes en pilules numérotées et bouton de pause ; défilement automatique arrêté au survol, au clavier, au choix d'une diapositive et si l'appareil demande moins d'animations (`docs/js/site.js`). Le titre principal de la page (`h1`) est permanent et caché visuellement ; les titres des diapositives sont des `h2`.
 - **Structure d'une page intérieure** (automatique, faite par `outils/gabarit.py`) : bande d'en-tête blanche avec fil d'Ariane (s'il y en a un), surtitre rouge en capitales, titre, chapeau ; puis la colonne de lecture (46rem), alignée à gauche sur le logo. Chaque page commence donc par `<p class="surtitre">` (facultatif : sinon celui de la rubrique), `<h1>`, puis `<p class="chapeau">` ou `<p class="meta">`.
 - **Trois mises en page, choisies automatiquement et toujours centrées dans l'écran** : une colonne de lecture (pages simples) ; colonne + encadré à droite « Dans le livre », « Voir aussi » (`.deux-col`, pages du wiki et Questions VTC ; l'encadré passe sous le texte sur tablette et téléphone) ; pages d'index avec grilles de cartes. L'en-tête de page prend toujours la même largeur que le contenu.
 - **Deux niveaux de titres de section** : l'en-tête de bloc (`.tete-bloc` : surtitre, titre, lien « Tous les… » à droite, trait noir épais) pour les blocs de l'accueil et les thèmes du wiki ; l'intertitre de contenu (`h2`, petit trait rouge au-dessus) dans les pages.
 - **Une seule forme de boîte, la carte** : fond blanc, filet, coins arrondis (14 px), ombre légère. Variante « mise en avant » : filet rouge épais à gauche (`.en-clair`, `.retenir`, `.une-actu`). Carte cliquable : toute la surface est un lien, elle se soulève au survol. Encart secondaire : fond beige (`.concretement`, `.impact`, `.note`).
+- **Étapes numérotées** (`.etapes`, mode d'emploi d'un outil) : pastille foncée numérotée, titre court en gras, explication ; un petit lexique se met dans un encart beige (`.note` avec une liste `dl`).
 - **Boutons** en pilule (`.bouton`, `.bouton.second`, `.bouton.petit`) ; liens « voir tout » avec `.lien-fleche`.
 - **Grilles** : tuiles de l'accueil 4 / 2 / 1 colonnes ; cartes-liens en grille automatique. Jamais de tuile orpheline.
 - **Accessibilité** : contraste AA minimum, cibles tactiles de 40 px au moins, focus visible, aucune information portée par la couleur seule, animations coupées si l'appareil le demande.

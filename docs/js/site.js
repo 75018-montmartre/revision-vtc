@@ -1,4 +1,5 @@
 /* revision-vtc.fr : scripts communs à toutes les pages.
+   0. Menu sur téléphone (défilement horizontal) : la rubrique en cours est amenée à l'écran.
    1. Menu « Le livre » (balise details) : se ferme avec Échap ou un clic ailleurs.
    2. Carrousel de l'accueil : trois diapositives ; défilement automatique toutes les 8 s,
       arrêté au survol, quand le clavier est dedans, dès que l'on choisit une diapositive,
@@ -6,6 +7,13 @@
       Sans JavaScript, les trois diapositives s'affichent l'une sous l'autre. */
 (function () {
   "use strict";
+
+  var liste = document.querySelector(".nav ul"), courante = document.querySelector('.nav a[aria-current="page"]');
+  if (liste && courante && liste.scrollWidth > liste.clientWidth) {
+    var marge = parseFloat(getComputedStyle(liste).paddingLeft) || 0;
+    var cible = courante.parentNode.offsetLeft - marge;
+    if (courante.parentNode.offsetLeft + courante.offsetWidth > liste.clientWidth) liste.scrollLeft = cible;
+  }
 
   var menu = document.querySelector(".menu-livre");
   if (menu) {
