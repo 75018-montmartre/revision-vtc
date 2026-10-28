@@ -899,6 +899,11 @@ def lire_simulateur():
         assert v.get("exemple") or v.get("sources"), f"simulateur : {cle} sans source"
         for i in v.get("sources", []):
             assert i in ids, f"simulateur : source inconnue {i}"
+    c = s["valeurs"]
+    assert c["prix_e10"]["date"] == c["prix_gazole"]["date"], "simulateur : les deux prix des carburants doivent avoir la même date"
+    dgec = next(x for x in s["sources"] if x["id"] == "dgec")
+    assert c["prix_e10"]["date"] in dgec["nom"], "simulateur : la source DGEC doit citer la date des prix des carburants"
+    assert 0.5 < c["prix_e10"]["valeur"] < 5 and 0.5 < c["prix_gazole"]["valeur"] < 5, "simulateur : prix des carburants invraisemblable"
     return s
 
 
@@ -981,7 +986,7 @@ def simulateur(ds):
         <div class="champs-2">
           {champ("conso_thermique", "Consommation", "conso_thermique", "(L / 100 km)", ty("Corolla hybride : 4,3 à 4,9 L/100 km au cycle d'homologation ; souvent plus en ville."), 0, 30, energie="thermique")}
           {champ("conso_elec", "Consommation", "conso_elec", "(kWh / 100 km)", ty("Tesla Model 3 : 12,5 à 13,6 kWh/100 km au cycle d'homologation."), 0, 60, energie="electricite")}
-          {champ("prix_energie", "Prix", "prix_e10", "(€ par litre)", ty("Moyennes nationales du 23 octobre 2026 : SP95-E10 2,116 €, gazole 2,352 € le litre. Électricité à domicile : 0,20 € le kWh (tarif réglementé, option Base). La recharge rapide coûte plus cher."), 0, 5)}
+          {champ("prix_energie", "Prix", "prix_e10", "(€ par litre)", ty(f"Moyennes nationales du {V['prix_e10']['date']} : SP95-E10 {num(V['prix_e10']['valeur'])} €, gazole {num(V['prix_gazole']['valeur'])} € le litre. Électricité à domicile : 0,20 € le kWh (tarif réglementé, option Base). La recharge rapide coûte plus cher."), 0, 5)}
         </div>
       </fieldset>
       <fieldset class="bloc-simu"><legend>3. Autres frais et impôt</legend>
@@ -1029,7 +1034,7 @@ def simulateur(ds):
                                       ["Versé par les plateformes", m(a["verse"]), m(b["verse"])],
                                       [f'Cotisations et contributions ({num(round(a["taux"], 2))} %)', "− " + m(a["social"]), "− " + m(b["social"])],
                                       ["Location (280 € × 52 semaines)", "− " + m(a["loyer"]), "− " + m(b["loyer"])],
-                                      ["Carburant (60 000 km, 4,9 L/100 km, 2,116 €/L)", "− " + m(a["energie"]), "− " + m(b["energie"])],
+                                      [f"Carburant (60 000 km, 4,9 L/100 km, {num(V['prix_e10']['valeur'])} €/L)", "− " + m(a["energie"]), "− " + m(b["energie"])],
                                       ["Assurance (responsabilité civile professionnelle)", "− " + m(a["assurance"]), "− " + m(b["assurance"])],
                                       ["Carte, registre, visite médicale (sur 5 ans)", "− " + m(a["regl"]), "− " + m(b["regl"])]],
                            "total": [["Revenu net avant impôt", m(a["net"]), m(b["net"])]]}}
@@ -1042,7 +1047,7 @@ def simulateur(ds):
         ("Prix d'achat d'une berline hybride", "34 200 €", "prix_achat"),
         ("Assurance, responsabilité civile professionnelle seule", "600 € par an (haut de la fourchette 350 à 600 €)", "assurance_rc"),
         ("Assurance voiture et RC pro, débutant", "4 100 € par an (haut des formules de base)", "assurance_complete"),
-        ("Prix du SP95-E10 / du gazole", "2,116 € / 2,352 € le litre (23 octobre 2026)", "prix_e10"),
+        ("Prix du SP95-E10 / du gazole", f"{num(V['prix_e10']['valeur'])} € / {num(V['prix_gazole']['valeur'])} € le litre ({V['prix_e10']['date']})", "prix_e10"),
         ("Consommation d'une hybride", "4,9 L/100 km (cycle WLTP)", "conso_thermique"),
         ("Électricité à domicile", "0,20 € le kWh (option Base, 6 kVA)", "prix_kwh"),
         ("Consommation d'une électrique", "13,6 kWh/100 km (cycle WLTP)", "conso_elec"),
