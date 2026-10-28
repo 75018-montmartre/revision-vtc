@@ -353,6 +353,44 @@ fieldset.question legend + *{clear:both}
 .option-chrono input{width:1.25rem;height:1.25rem;accent-color:var(--encre)}
 .option-chrono label{margin:0;font-weight:400}
 
+/* simulateur : formulaire en blocs numérotés (champs = composant « formulaire », choix = composant des examens),
+   résultat dans l'encadré latéral (carte), qui défile seul s'il dépasse la hauteur de l'écran */
+.simu{margin:var(--e5) 0 0}
+.bloc-simu{border:0;border-top:2px solid var(--encre);margin:0 0 var(--e5);padding:var(--e4) 0 0;min-width:0}
+.bloc-simu > legend{font-family:var(--sans);font-weight:700;font-size:1.25rem;letter-spacing:-.01em;padding:0 0 var(--e3);float:left;width:100%}
+.bloc-simu > legend + *{clear:both}
+.simu .champ{margin-bottom:var(--e3)}
+.simu .champ .aide{margin-top:0}
+.simu .erreur:empty{min-height:0;margin:0}
+.simu .unite{font-weight:400;color:var(--gris)}
+.simu .groupe{border:0;margin:0 0 var(--e4);padding:0;min-width:0}
+.simu .groupe legend{font-family:var(--sans);font-weight:600;font-size:1rem;padding:0;margin-bottom:var(--e2)}
+.simu .choix label{font-size:1.0625rem;line-height:1.4}
+.simu input[type=text]{font-variant-numeric:tabular-nums}
+.col-cote .resultat-simu{max-height:calc(100vh - 2 * var(--e5));overflow-y:auto}
+.resultat-simu .resultat{font-size:2.25rem;line-height:1.1;margin:var(--e1) 0 var(--e2)}
+.resultat-simu p{margin:0 0 var(--e3)}
+.resultat-simu table{font-size:.875rem;margin:var(--e3) 0}
+.resultat-simu caption{font-size:.875rem}
+.resultat-simu td,.resultat-simu th{padding:.4rem .25rem;font-weight:400}
+.resultat-simu td.nombre{white-space:nowrap}
+/* sur grand écran le résultat est à côté du formulaire : le lien « Aller au résultat » ne sert qu'au téléphone et à la tablette */
+@media (min-width:64.0625rem){.lien-resultat{display:none}}
+.resultat-simu tr.sous-total > *,.resultat-simu tr.total > *{font-weight:700}
+.resultat-simu tr.total > *{border-top:2px solid var(--encre);border-bottom:0}
+.resultat-simu .note{font-size:.9375rem;line-height:1.45;font-family:var(--sans)}
+.chiffres{margin:0 0 var(--e3);font-family:var(--sans);font-size:.9375rem}
+.chiffres div{padding:var(--e2) 0;border-top:1px solid var(--filet)}
+.chiffres dt{color:var(--gris)}
+.chiffres dd{margin:0;font-weight:700}
+/* barre « où vont 100 € versés » : quatre parts, toujours doublées d'une phrase (jamais la couleur seule) */
+.repartition{display:flex;height:.875rem;border-radius:var(--pilule);overflow:hidden;background:var(--doux);margin:var(--e3) 0 var(--e2)}
+.repartition span{flex:0 0 0;min-width:0}
+.part-social{background:var(--gris)}
+.part-voiture{background:var(--accent-trait)}
+.part-autres{background:var(--filet)}
+.part-net{background:var(--ok)}
+
 /* 7. Adaptations ----------------------------------------------------------- */
 @media (max-width:64rem){.trois{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:52rem){

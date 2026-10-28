@@ -11,12 +11,14 @@ Site compagnon du livre *Machine à Réussite · Examen VTC 2027* (Benjamin Blon
 | `contenu/wiki.json` | Le wiki « Textes du métier » (`docs/wiki/`) : pour chaque article, le thème, l'explication « En clair », l'exemple « Concrètement », les fiches du livre, le texte officiel recopié de Légifrance (`texte`, `vigueur`, `modif`) et son lien ; plus les lois d'origine et références externes (`autres`). Date de vérification : `verifie`. |
 | `contenu/questions/AAAA-MM-JJ-adresse.json` | Une « Question VTC » (une par semaine, publiée le jeudi) : question, réponse courte, développement, à retenir, liens vers le wiki, fiches du livre, sources |
 | `contenu/dossiers/adresse.json` | Un dossier (article long de 1 500 à 2 500 mots, publié dans `docs/dossiers/`) : voir « Publier un dossier » |
+| `contenu/simulateur.json` | Les hypothèses du simulateur « coût de revient et revenu net » (`docs/simulateurs/`) : chaque valeur, ses sources et la date de vérification ; voir « Mettre à jour le simulateur » |
 | `contenu/indexnow.json` | La clé publique IndexNow (`cle`), servie à la racine du site sous `docs/<clé>.txt` |
 | `contenu/fiches.json` | Codes et titres des fiches du livre, pour les renvois « Dans le livre » |
 | `contenu/contact.json` | La clé d'accès Web3Forms du formulaire de contact (`web3forms_cle`) ; vide, la page Contact affiche l'adresse e-mail à la place du formulaire |
 | `contenu/livre.json` | L'adresse de la page Amazon du livre (`amazon`) ; vide, le site affiche « Bientôt disponible sur Amazon » |
 | `outils/generer.py` | Génère tout le site dans `docs/` à partir de `contenu/` |
 | `outils/indexnow.py` | Signale à Bing (IndexNow) les pages ajoutées ou modifiées, lancé par `.github/workflows/indexnow.yml` |
+| `outils/test_simulateur.js` | Vérifie le calcul du simulateur sur des cas faits à la main (`node outils/test_simulateur.js`) |
 | `outils/gabarit.py` | En-tête, menu et pied de page communs |
 | `docs/` | Le site publié par GitHub Pages (ne pas modifier les pages HTML à la main : elles sont régénérées) |
 
@@ -123,6 +125,14 @@ Fichier `contenu/dossiers/adresse.json`, nommé par l'adresse de la page (minusc
 - **Photos** (Pixabay ou équivalent, jamais d'image générée par IA) : recadrées en 3:2 et enregistrées dans `docs/images/dossiers/` sous un nom qui décrit la photo, en deux tailles WebP (`<nom>-640.webp`, `<nom>-1200.webp`) ; la photo d'en-tête (`image`) a aussi un `<nom>-1200.jpg`, utilisé pour le partage sur les réseaux sociaux et dans les données structurées. Une photo par section au plus, placée en tête de section. Le texte alternatif décrit ce qu'on voit ; la légende dit ce que le lecteur doit retenir. Le générateur refuse une photo dont un fichier manque ou sans texte alternatif.
 - Données structurées : `Article` (avec `wordCount`, `citation`, `abstract` = la réponse en bref) et fil d'Ariane ; le dossier entre dans `sitemap.xml` et `llms.txt`.
 - Chaque chiffre a sa source : texte officiel ou deux sources concordantes. Les prix libres (formation, assurance, véhicule) sont donnés en fourchettes publiées, avec leurs sources, jamais comme un tarif.
+
+## Mettre à jour le simulateur
+
+Page : https://revision-vtc.fr/simulateurs/cout-revient-revenu-net-vtc.html (adresse définitive), avec la page d'accueil de la rubrique `simulateurs/`. Le calcul se fait dans le navigateur (`docs/js/simulateur.js`) ; les valeurs par défaut viennent de `contenu/simulateur.json`, injecté dans la page par le générateur, qui recalcule aussi l'exemple chiffré publié dans la page (`calcul_simulateur`, même formule que le script).
+
+- Chaque valeur a des `sources` (identifiants de la liste `sources`) ou est marquée `"exemple": true` (hypothèse à remplacer par l'utilisateur, jamais présentée comme un chiffre de référence). Le générateur refuse une valeur sans l'un ou l'autre.
+- **À revoir chaque mois** : prix des carburants (fichier « Prix HTT et TTC depuis janvier 2020 » de la DGEC, prix du vendredi). **Chaque 1er janvier** : taux de cotisations, seuils de TVA et de la micro-entreprise. **Au 1er août et au 1er février** : tarif réglementé de l'électricité. Mettre à jour `verifie`, puis les textes d'aide de `simulateur()` dans `outils/generer.py` qui citent ces valeurs.
+- Après toute modification du calcul : `node outils/test_simulateur.js`, puis vérifier la page en clair et en sombre, de 320 px au grand écran.
 
 ## IndexNow (Bing)
 

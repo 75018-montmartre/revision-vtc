@@ -852,6 +852,7 @@ def dossiers(ds, w, qs=()):
     <nav class="cote-bloc" aria-labelledby="titre-sommaire"><h2 id="titre-sommaire">Sommaire</h2><ul class="voir-aussi">{sommaire}</ul></nav>
     {f'<section class="cote-bloc" aria-labelledby="titre-textes"><h2 id="titre-textes">Les textes expliqués</h2><ul class="voir-aussi">{wiki}</ul></section>' if wiki else ""}
     {f'<section class="cote-bloc wiki-livre" aria-labelledby="titre-livre"><h2 id="titre-livre">Dans le livre</h2><ul>{livre}</ul><p class="pied-achat">{achat("bouton second petit", "Le livre sur Amazon")}</p></section>' if livre else ""}
+    <section class="cote-bloc" aria-labelledby="titre-simu"><h2 id="titre-simu">Simulateur gratuit</h2><ul class="voir-aussi"><li><a href="../simulateurs/cout-revient-revenu-net-vtc.html">{ty("Coût de revient de la voiture et revenu net : faites le calcul avec vos chiffres")}</a></li></ul></section>
     {f'<section class="cote-bloc" aria-labelledby="titre-autres"><h2 id="titre-autres">Autres dossiers</h2><ul class="voir-aussi">{autres}</ul></section>' if autres else ""}
     </aside></div>'''
         chemin = f'dossiers/{d["slug"]}.html'
@@ -877,7 +878,7 @@ def dossiers(ds, w, qs=()):
         liste = f'<p class="note">{ty("Le premier dossier sera publié très prochainement.")}</p>'
     corps = f'''    <h1>Dossiers VTC</h1>
     <p class="chapeau">{ty("Les grandes questions du métier de chauffeur VTC, traitées à fond : coûts, revenus, statut, véhicule, cotisations. Chaque chiffre est daté et relié à sa source.")}</p>
-    <p>{ty("Un nouveau dossier chaque semaine. Pour une réponse rapide à une question précise, voyez les")} <a href="../questions/index.html">Questions VTC</a> {ty("; pour le texte exact d'une règle, les")} <a href="../wiki/index.html">textes du métier</a>.</p>
+    <p>{ty("Un nouveau dossier chaque semaine. Pour une réponse rapide à une question précise, voyez les")} <a href="../questions/index.html">Questions VTC</a> {ty("; pour le texte exact d'une règle, les")} <a href="../wiki/index.html">textes du métier</a>. {ty("Pour chiffrer votre propre activité :")} <a href="../simulateurs/cout-revient-revenu-net-vtc.html">{ty("le simulateur de coût de revient et de revenu net")}</a>.</p>
     {liste}'''
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Dossiers VTC", "url": SITE + "dossiers/", "inLanguage": "fr",
           "isPartOf": {"@id": SITE + "#site"},
@@ -885,6 +886,251 @@ def dossiers(ds, w, qs=()):
     ecrire("dossiers/index.html", page("Dossiers VTC : coûts, revenus, statut, véhicule, expliqués et chiffrés · Révision VTC", corps, "dossiers", "../",
                                        "Les dossiers de Révision VTC : combien coûte le lancement en VTC, combien gagne un chauffeur, quel statut choisir. Chiffres datés et sources officielles.",
                                        jsonld=[ld, fil(("Accueil", ""), ("Dossiers", "dossiers/"))]))
+
+
+# ------------------------------------------------------------------ simulateur
+def lire_simulateur():
+    """Hypothèses du simulateur (contenu/simulateur.json) : chaque valeur non marquée « exemple » cite au moins une source."""
+    with open(os.path.join(CONTENU, "simulateur.json"), encoding="utf-8") as h:
+        s = json.load(h)
+    ids = {x["id"] for x in s["sources"]}
+    assert all(x["url"].startswith("https://") for x in s["sources"]), "simulateur : source sans adresse"
+    for cle, v in s["valeurs"].items():
+        assert v.get("exemple") or v.get("sources"), f"simulateur : {cle} sans source"
+        for i in v.get("sources", []):
+            assert i in ids, f"simulateur : source inconnue {i}"
+    return s
+
+
+def calcul_simulateur(s, **e):
+    """Même calcul que docs/js/simulateur.js (vérifié par outils/test_simulateur.js) : sert à l'exemple chiffré de la page."""
+    v = {k: x["valeur"] for k, x in s["valeurs"].items()}
+    verse = e["verse_semaine"] * e["semaines"]
+    prix = verse / (1 - e["commission"] / 100)
+    ca = verse if e["base"] == "verse" else prix
+    taux = v["taux_cotisations"] + v["taux_formation"] + v["taux_cma"]
+    social = ca * taux / 100
+    loyer = e["loyer_semaine"] * 52
+    energie = e["km_an"] * e["conso"] / 100 * e["prix_energie"]
+    voiture = loyer + energie + e["assurance"]
+    regl = v["reglementaire_5ans"] / 5
+    net = verse - social - voiture - regl
+    return {"verse": verse, "prix": prix, "commission": prix - verse, "ca": ca, "taux": taux, "social": social, "loyer": loyer,
+            "energie": energie, "assurance": e["assurance"], "voiture": voiture, "regl": regl, "net": net, "km": voiture / e["km_an"]}
+
+
+def _euros(x, cts=False):
+    t = f"{x:,.2f}" if cts else f"{round(x):,}"
+    return t.replace(",", " ").replace(".", ",") + " €"
+
+
+def simulateur(ds):
+    s = lire_simulateur()
+    V = {k: x for k, x in s["valeurs"].items()}
+    src = {x["id"]: x for x in s["sources"]}
+    num = lambda x: str(x).replace(".", ",")
+    refs = lambda cle: " ; ".join(f'<a href="#source-{i}">{ty(src[i]["nom"].split(" (")[0].split(", «")[0].split(" «")[0])}</a>' for i in V[cle].get("sources", []))
+
+    def champ(ident, libelle, cle, unite, aide="", mn=0, mx=1e9, valeur=None, mode=None, energie=None):
+        val = num(V[cle]["valeur"] if valeur is None else valeur)
+        attr = (f' data-mode="{mode}"' if mode else "") + (f' data-energie="{energie}"' if energie else "")
+        ident_aide = f"aide-{ident}"
+        u = f'<span class="unite" id="unite-{ident}">{ty(unite)}</span>' if ident == "prix_energie" else f'<span class="unite">{ty(unite)}</span>'
+        return (f'<div class="champ"{attr}><label for="{ident}">{ty(libelle)} {u}</label>'
+                + (f'<p class="aide" id="{ident_aide}">{aide}</p>' if aide else "")
+                + f'<input type="text" inputmode="decimal" autocomplete="off" id="{ident}" name="{ident}" value="{val}" data-min="{mn}" data-max="{mx}" '
+                f'aria-describedby="{ident_aide + " " if aide else ""}err-{ident}"><p class="erreur" id="err-{ident}"></p></div>')
+
+    def radios(nom, legende, options, aide=""):
+        o = "".join(f'<label><input type="radio" name="{nom}" value="{val}"{" checked" if i == 0 else ""}><span>{ty(t)}</span></label>' for i, (val, t) in enumerate(options))
+        return f'<fieldset class="groupe"><legend>{ty(legende)}</legend>' + (f'<p class="aide">{aide}</p>' if aide else "") + f'<div class="choix">{o}</div></fieldset>'
+
+    sdes = src["sdes"]
+    formulaire = f'''
+    <form id="simu" class="simu" novalidate hidden aria-describedby="simu-intro">
+      <p class="aide" id="simu-intro">{ty("Les valeurs proposées sont des hypothèses sourcées ou des exemples : remplacez-les par vos chiffres. Le résultat se met à jour à chaque saisie ; rien n'est envoyé.")} <a class="lien-resultat" href="#resultat">{ty("Aller au résultat")}</a></p>
+      <fieldset class="bloc-simu"><legend>1. Votre activité</legend>
+        {champ("verse_semaine", "Montant versé par les plateformes", "verse_semaine", "(€ par semaine)",
+               ty("Ce que vous recevez chaque semaine, commission déjà retirée, sans les pourboires. Repère : en septembre et octobre 2024, les plateformes ont versé en moyenne 38 € par heure de course, approche comprise, attente non comprise (") + f'<a href="#source-sdes">SDES</a>).', 0, 20000)}
+        <div class="champs-2">
+          {champ("commission", "Commission moyenne", "commission", "(%)", ty("Uber : de 3 à 45 % selon la course ; Bolt : 24 % dans les grandes villes ; environ 25 % en moyenne."), 0, 60)}
+          {champ("semaines", "Semaines travaillées", "semaines", "(par an)", ty("Exemple : 52 semaines moins 5 de repos."), 1, 52)}
+        </div>
+        <div class="champs-2">
+          {champ("km_an", "Kilomètres parcourus", "km_an", "(par an)", ty("Courses, approches et retours compris. Repère publié : de 40 000 à 80 000 km."), 0, 300000)}
+          {champ("heures", "Heures de travail", "heures", "(par semaine, facultatif)", ty("Attente comprise, pour calculer votre revenu net par heure."), 0, 100)}
+        </div>
+        {radios("base", "Sur quel montant calculer les cotisations ?", [("clients", "Le prix payé par les clients, commission comprise (prudent)"), ("verse", "Le montant versé par les plateformes")],
+                ty("Aucun texte officiel ne tranche ce point : voir plus bas « Ce que le simulateur ne tranche pas »."))}
+      </fieldset>
+      <fieldset class="bloc-simu"><legend>2. Votre voiture</legend>
+        {radios("mode", "Comment disposez-vous de la voiture ?", [("location", "Location à la semaine (assurance du véhicule et entretien compris)"), ("lld", "Location longue durée ou avec option d'achat"), ("achat", "Achat")])}
+        {champ("loyer_semaine", "Loyer", "loyer_semaine", "(€ par semaine)", ty("Hybride chez un loueur spécialisé : de 210 à 350 € par semaine. Compté 52 semaines par an : la voiture reste louée pendant vos repos."), 0, 2000, mode="location")}
+        {champ("loyer_mois", "Loyer", "loyer_mois", "(€ par mois)", ty("Offres publiées : de 400 à 1 200 € par mois, assurance non comprise."), 0, 5000, mode="lld")}
+        <div class="champs-2" data-mode="achat">
+          {champ("prix_achat", "Prix d'achat", "prix_achat", "(€)", ty("Exemple : berline hybride Toyota Corolla 2026, à partir de 34 200 €."), 0, 200000)}
+          {champ("duree_ans", "Durée de détention", "duree_ans", "(années)", ty("Une voiture thermique doit avoir moins de 7 ans ; pas de limite pour une hybride."), 1, 15)}
+        </div>
+        {champ("revente", "Valeur de revente estimée", "revente", "(€)", ty("Laissez 0 si vous ne savez pas : le calcul reste prudent."), 0, 200000, mode="achat")}
+        <div class="champ"><label for="assurance">Assurance <span class="unite">(€ par an)</span></label>
+          <p class="aide" id="aide-assurance-location">{ty("Responsabilité civile professionnelle seule (le loueur assure la voiture) : de 350 à 600 € par an pour un débutant.")}</p>
+          <p class="aide" id="aide-assurance-complete" hidden>{ty("Voiture et responsabilité civile professionnelle, débutant : de 2 000 à 4 100 € par an en formule de base, jusqu'à 7 580 € en tous risques ; plus cher en Île-de-France.")}</p>
+          <input type="text" inputmode="decimal" autocomplete="off" id="assurance" name="assurance" value="{num(V["assurance_rc"]["valeur"])}" data-min="0" data-max="30000" aria-describedby="aide-assurance-location aide-assurance-complete err-assurance"><p class="erreur" id="err-assurance"></p></div>
+        {champ("entretien_mois", "Entretien et pneus", "entretien_mois", "(€ par mois)", ty("À indiquer si la voiture n'est pas louée à la semaine : aucun montant de référence fiable n'est publié."), 0, 5000, mode="lld achat")}
+        {radios("energie", "Énergie", [("essence", "Essence (hybride)"), ("gazole", "Gazole"), ("electricite", "Électricité")])}
+        <div class="champs-2">
+          {champ("conso_thermique", "Consommation", "conso_thermique", "(L / 100 km)", ty("Corolla hybride : 4,3 à 4,9 L/100 km au cycle d'homologation ; souvent plus en ville."), 0, 30, energie="thermique")}
+          {champ("conso_elec", "Consommation", "conso_elec", "(kWh / 100 km)", ty("Tesla Model 3 : 12,5 à 13,6 kWh/100 km au cycle d'homologation."), 0, 60, energie="electricite")}
+          {champ("prix_energie", "Prix", "prix_e10", "(€ par litre)", ty("Moyennes nationales du 23 octobre 2026 : SP95-E10 2,116 €, gazole 2,352 € le litre. Électricité à domicile : 0,20 € le kWh (tarif réglementé, option Base). La recharge rapide coûte plus cher."), 0, 5)}
+        </div>
+      </fieldset>
+      <fieldset class="bloc-simu"><legend>3. Autres frais et impôt</legend>
+        {champ("autres_mois", "Autres frais", "autres_mois", "(€ par mois)", ty("Téléphone, eau et lavage, péages, stationnement, comptable, banque… La carte, le registre et la visite médicale sont déjà comptés."), 0, 10000)}
+        {radios("cma", "Où est immatriculée votre entreprise ?", [("france", "Hors Alsace-Moselle"), ("rhin", "Bas-Rhin ou Haut-Rhin"), ("moselle", "Moselle")])}
+        <p class="option-chrono"><input type="checkbox" id="vl" name="vl"><label for="vl">{ty("J'ai opté pour le versement libératoire de l'impôt (1,7 % du chiffre d'affaires)")}</label></p>
+      </fieldset>
+      <div class="actions"><button type="submit" class="bouton">Voir le résultat</button><button type="button" class="bouton second" id="simu-raz">Revenir aux valeurs par défaut</button></div>
+      <p class="erreur" id="simu-etat" role="status"></p>
+    </form>
+    <p class="note" id="simu-sans-js">{ty("Le simulateur a besoin de JavaScript. Sans lui, l'exemple chiffré plus bas donne le calcul complet avec les valeurs par défaut.")}</p>'''
+
+    resultat = f'''
+    <section class="cote-bloc resultat-simu" id="resultat" tabindex="-1" aria-labelledby="titre-resultat" hidden>
+      <h2 id="titre-resultat">Votre résultat</h2>
+      <p class="meta">Revenu net estimé, par mois</p>
+      <p class="resultat" id="res-net"></p>
+      <p class="meta" id="res-net-an"></p>
+      <div id="res-alertes"></div>
+      <div class="repartition" aria-hidden="true"><span id="barre-social" class="part-social"></span><span id="barre-voiture" class="part-voiture"></span><span id="barre-autres" class="part-autres"></span><span id="barre-net" class="part-net"></span></div>
+      <p class="meta" id="barre-texte"></p>
+      <table><caption>Le détail, en euros par mois</caption><tbody id="res-detail"></tbody></table>
+      <dl class="chiffres">
+        <div><dt>Coût de revient de la voiture</dt><dd><span id="res-km"></span> par km · <span id="res-voiture-mois"></span> par mois</dd></div>
+        <div><dt>Seuil de rentabilité</dt><dd><span id="res-seuil"></span> versés par semaine</dd></div>
+        <div id="res-heure-bloc" hidden><dt>Revenu net par heure de travail</dt><dd id="res-heure"></dd></div>
+      </dl>
+      <p class="meta" id="res-impot"></p>
+      <div class="actions"><button type="button" class="bouton second petit" id="simu-lien">Copier le lien de cette simulation</button></div>
+      <p class="meta" id="lien-etat" aria-live="polite"></p>
+      <p class="visuellement-cache" id="simu-annonce" aria-live="polite"></p>
+    </section>'''
+
+    # exemple chiffré avec les valeurs par défaut (location à la semaine, hybride essence)
+    defaut = dict(verse_semaine=V["verse_semaine"]["valeur"], semaines=V["semaines"]["valeur"], commission=V["commission"]["valeur"],
+                  loyer_semaine=V["loyer_semaine"]["valeur"], km_an=V["km_an"]["valeur"], conso=V["conso_thermique"]["valeur"],
+                  prix_energie=V["prix_e10"]["valeur"], assurance=V["assurance_rc"]["valeur"])
+    a = calcul_simulateur(s, base="clients", **defaut)
+    b = calcul_simulateur(s, base="verse", **defaut)
+    m = lambda x: _euros(x / 12)
+    exemple = {"tableau": {"legende": "Exemple : 1 000 € versés par semaine, 47 semaines, voiture hybride louée à la semaine, en euros par mois",
+                           "colonnes": ["Poste", "Cotisations sur le prix payé par les clients", "Cotisations sur le montant versé"], "nombres": [1, 2],
+                           "lignes": [["Prix payé par les clients", m(a["prix"]), m(b["prix"])],
+                                      ["Commission (25 %)", "− " + m(a["commission"]), "− " + m(b["commission"])],
+                                      ["Versé par les plateformes", m(a["verse"]), m(b["verse"])],
+                                      [f'Cotisations et contributions ({num(round(a["taux"], 2))} %)', "− " + m(a["social"]), "− " + m(b["social"])],
+                                      ["Location (280 € × 52 semaines)", "− " + m(a["loyer"]), "− " + m(b["loyer"])],
+                                      ["Carburant (60 000 km, 4,9 L/100 km, 2,116 €/L)", "− " + m(a["energie"]), "− " + m(b["energie"])],
+                                      ["Assurance (responsabilité civile professionnelle)", "− " + m(a["assurance"]), "− " + m(b["assurance"])],
+                                      ["Carte, registre, visite médicale (sur 5 ans)", "− " + m(a["regl"]), "− " + m(b["regl"])]],
+                           "total": [["Revenu net avant impôt", m(a["net"]), m(b["net"])]]}}
+    ecart = b["net"] - a["net"]
+
+    lignes_hyp = [
+        ("Commission des plateformes", "25 %", "commission"), ("Kilomètres par an", "60 000 km", "km_an"),
+        ("Location d'une hybride à la semaine", "280 € (fourchette 210 à 350 €)", "loyer_semaine"),
+        ("Location longue durée ou LOA", "800 € par mois (fourchette 400 à 1 200 €)", "loyer_mois"),
+        ("Prix d'achat d'une berline hybride", "34 200 €", "prix_achat"),
+        ("Assurance, responsabilité civile professionnelle seule", "600 € par an (haut de la fourchette 350 à 600 €)", "assurance_rc"),
+        ("Assurance voiture et RC pro, débutant", "4 100 € par an (haut des formules de base)", "assurance_complete"),
+        ("Prix du SP95-E10 / du gazole", "2,116 € / 2,352 € le litre (23 octobre 2026)", "prix_e10"),
+        ("Consommation d'une hybride", "4,9 L/100 km (cycle WLTP)", "conso_thermique"),
+        ("Électricité à domicile", "0,20 € le kWh (option Base, 6 kVA)", "prix_kwh"),
+        ("Consommation d'une électrique", "13,6 kWh/100 km (cycle WLTP)", "conso_elec"),
+        ("Cotisations sociales", "21,2 % du chiffre d'affaires", "taux_cotisations"),
+        ("Formation professionnelle", "0,3 %", "taux_formation"),
+        ("Taxe de chambre de métiers", "0,48 % (0,65 % Bas-Rhin et Haut-Rhin, 0,83 % Moselle)", "taux_cma"),
+        ("Versement libératoire / abattement fiscal", "1,7 % / 50 %", "taux_vl"),
+        ("Carte, registre, visite médicale", "263,60 € tous les 5 ans (hors envoi et vignettes)", "reglementaire_5ans"),
+        ("Franchise de TVA", "37 500 € (seuil majoré 41 250 €)", "seuil_tva"),
+        ("Plafond de la micro-entreprise", "83 600 €", "seuil_micro")]
+    hyp = {"tableau": {"legende": f"Les hypothèses par défaut, vérifiées le {s['verifie']}", "colonnes": ["Hypothèse", "Valeur", "Source"],
+                       "lignes": [[l, v, "__REF__" + c] for l, v, c in lignes_hyp]}}
+    tab_hyp = _bloc_dossier(hyp)
+    for _, _, c in lignes_hyp:
+        tab_hyp = tab_hyp.replace(ty("__REF__" + c), refs(c), 1)
+    sources = "".join(f'<li id="source-{x["id"]}"><a href="{html.escape(x["url"])}">{ty(x["nom"])}</a>, {ty(x["date"])}</li>' for x in s["sources"])
+    dossier1 = '<a href="../dossiers/cout-pour-devenir-chauffeur-vtc.html">' + ty("Combien coûte vraiment le lancement en VTC ?") + "</a>"
+
+    corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Simulateurs</a></li></ol></nav>
+    <p class="surtitre">Simulateur gratuit</p>
+    <h1>{ty("Simulateur VTC : coût de revient de la voiture et revenu net")}</h1>
+    <p class="chapeau">{ty("Combien vous coûte votre voiture au kilomètre, et combien il vous reste chaque mois une fois payés la commission, les cotisations, la voiture et les frais ? Pour un chauffeur VTC en micro-entreprise, avec des hypothèses sourcées et modifiables.")}</p>
+    <p class="meta">{ty("Hypothèses vérifiées le " + s["verifie"] + " · calcul fait dans votre navigateur, rien n'est envoyé")}</p>
+    <div class="deux-col"><div class="col-texte">
+    <section class="en-clair" aria-labelledby="en-bref">
+      <h2 id="en-bref">La réponse en bref</h2>
+      <p>{ty(f"Exemple : un chauffeur à qui les plateformes versent 1 000 € par semaine pendant 47 semaines, avec une hybride louée 280 € par semaine et 60 000 km par an, garde environ {_euros(a['net'] / 12)} par mois avant impôt si ses cotisations portent sur le prix payé par les clients, et {_euros(b['net'] / 12)} si elles portent sur le montant versé. Sa voiture lui coûte {_euros(a['km'], True)} par kilomètre, carburant et assurance compris.")}</p>
+      <p>{ty("La location, le carburant et les cotisations pèsent le plus. Les sommes versées par les plateformes ne sont pas un revenu : elles doivent d'abord couvrir tous ces frais.")}</p>
+    </section>
+    {formulaire}
+    </div>
+    <aside class="col-cote" aria-label="Résultat de la simulation">{resultat}
+    </aside></div>
+    <h2 id="calcul">Comment le simulateur calcule</h2>
+    <ol>
+      <li>{ty("Montant versé sur l'année = montant versé par semaine × semaines travaillées. Prix payé par les clients = montant versé ÷ (1 − commission).")}</li>
+      <li>{ty("Cotisations et contributions = chiffre d'affaires × 21,98 % (21,2 % de cotisations sociales, 0,3 % de formation professionnelle, 0,48 % de taxe de chambre de métiers hors Alsace-Moselle), plus 1,7 % si vous avez choisi le versement libératoire.")}</li>
+      <li>{ty("Voiture = loyer (ou prix d'achat moins revente, divisé par la durée de détention) + énergie (kilomètres × consommation × prix) + assurance + entretien. Divisé par les kilomètres, c'est le coût de revient au kilomètre.")}</li>
+      <li>{ty("Revenu net = montant versé − cotisations − voiture − carte, registre et visite médicale − autres frais. La commission est déjà retirée du montant versé.")}</li>
+      <li>{ty("Seuil de rentabilité = montant versé par semaine à partir duquel le revenu net devient positif.")}</li>
+    </ol>
+    {_bloc_dossier(exemple)}
+    <p>{ty(f"Dans cet exemple, le choix de la base des cotisations change le revenu net de {_euros(ecart / 12)} par mois. Le chiffre d'affaires annuel dépasse aussi le seuil de la franchise de TVA : la TVA due n'est pas déduite, le revenu réel est donc plus bas.")}</p>
+    <h2 id="non-tranche">Ce que le simulateur ne tranche pas</h2>
+    <h3>{ty("Les cotisations : sur le prix payé par les clients ou sur le montant versé ?")}</h3>
+    <p>{ty("En micro-entreprise, les cotisations sont un pourcentage du chiffre d'affaires, sans déduction des frais. Pour un chauffeur de plateforme, le chiffre d'affaires est-il le prix payé par le client, ou ce que la plateforme reverse après sa commission ? Aucun texte officiel ne le dit. Des experts-comptables recommandent de déclarer le prix avant commission, par prudence ; la même source rapporte qu'Uber invite à déclarer le montant après commission. Le simulateur calcule les deux : choisissez, et en cas de doute, faites le point avec un expert-comptable ou l'Urssaf.")}</p>
+    <h3>{ty("La TVA au-delà de 41 250 € de chiffre d'affaires")}</h3>
+    <p>{ty("Un chauffeur en micro-entreprise ne facture pas la TVA tant que son chiffre d'affaires ne dépasse pas 37 500 € sur l'année précédente et 41 250 € sur l'année en cours (seuils 2026). Au-delà, la TVA est due au taux réduit des transports de voyageurs, et une partie de la TVA payée sur les frais devient récupérable. Ce calcul dépend de chaque situation : le simulateur le signale mais ne le fait pas.")}</p>
+    <h3>{ty("Les aides et les changements de 2027")}</h3>
+    <p>{ty("L'Acre réduit les cotisations sociales au début de l'activité (15,9 % au lieu de 21,2 % pour une micro-entreprise créée depuis le 1er juillet 2026, sous conditions) : elle n'est pas comptée ici. Le précompte des cotisations par les plateformes, prévu au 1er janvier 2027, change la façon de payer, pas les taux. Le détail des taux est dans la question")} <a href="../questions/2026-10-28-cotisations-vtc-micro-entreprise.html">{ty("« Quelles cotisations paie un chauffeur VTC en micro-entreprise ? »")}</a>.</p>
+    <h2 id="non-compte">Ce que le simulateur ne compte pas</h2>
+    <ul>
+      <li>{ty("l'impôt sur le revenu sans versement libératoire : il dépend de votre foyer ; le simulateur donne seulement le revenu imposable après l'abattement de 50 % ;")}</li>
+      <li>{ty("la cotisation foncière des entreprises (CFE), dont le montant dépend de la commune ;")}</li>
+      <li>{ty("le stage de formation continue et le contrôle technique annuel, à prix libres ; les intérêts d'un crédit ;")}</li>
+      <li>{ty("les dépenses de lancement (examen, formation, caution du loueur) : elles sont détaillées dans le dossier")} {dossier1}.</li>
+    </ul>
+    <h2 id="hypotheses">Les hypothèses par défaut et leurs sources</h2>
+    <p>{ty("Chaque valeur proposée vient d'un texte officiel, d'une donnée publique ou de deux sources concordantes. Les prix libres (location, assurance) sont des fourchettes publiées, pas des tarifs : comparez avec vos devis. Le montant versé par semaine, les semaines travaillées et la durée de détention sont des exemples à remplacer.")}</p>
+    {tab_hyp}
+    <h2 id="sources">Sources</h2>
+    <ul class="source">{sources}</ul>
+    <p class="source">{ty("Simulation indicative pour un chauffeur VTC en micro-entreprise ; elle ne remplace pas un conseil comptable ou fiscal adapté à votre situation. Les prix des carburants sont mis à jour régulièrement ; la date de vérification figure en haut de la page.")}</p>'''
+
+    donnees = json.dumps({"valeurs": s["valeurs"]}, ensure_ascii=False).replace("</", "<\\/")
+    fin = f'<script id="simu-donnees" type="application/json">{donnees}</script>\n<script src="../js/simulateur.js"></script>\n'
+    chemin = f'simulateurs/{s["slug"]}.html'
+    titre = "Simulateur VTC : coût de revient de la voiture et revenu net"
+    desc = "Simulateur VTC gratuit : coût de revient de votre voiture au km et revenu net après commission, cotisations, location, carburant et assurance. Hypothèses sourcées."
+    ld = {"@context": "https://schema.org", "@type": "WebApplication", "name": titre, "url": SITE + chemin, "description": desc,
+          "applicationCategory": "FinanceApplication", "operatingSystem": "Navigateur web", "inLanguage": "fr", "isAccessibleForFree": True,
+          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "author": AUTEUR, "publisher": AUTEUR,
+          "datePublished": s["date"], "dateModified": iso_fr(s["verifie"]), "isPartOf": {"@id": SITE + "#site"},
+          "isBasedOn": [x["url"] for x in s["sources"]]}
+    ecrire(chemin, page(html.escape(titre + " · Révision VTC", quote=False), corps, "simulateurs", "../", html.escape(desc),
+                        scripts_fin=fin, jsonld=[ld, fil(("Accueil", ""), ("Simulateurs", "simulateurs/"), (titre, chemin))]))
+
+    liste = f'''<ul class="questions"><li><span class="meta">{ty("Mis à jour le " + s["verifie"])}</span><a href="{s["slug"]}.html">{ty(titre)}</a><p>{ty("Le coût de revient de votre voiture au kilomètre et ce qu'il vous reste chaque mois, après commission, cotisations, location, carburant et assurance.")}</p></li></ul>'''
+    corps = f'''    <h1>Simulateurs VTC</h1>
+    <p class="chapeau">{ty("Des calculateurs gratuits pour chiffrer votre activité de chauffeur VTC avec vos propres chiffres. Chaque hypothèse par défaut est sourcée et datée ; le calcul se fait dans votre navigateur.")}</p>
+    <p>{ty("Pour comprendre les montants avant de les saisir, lisez les")} <a href="../dossiers/index.html">dossiers</a> {ty("; pour les règles du métier, les")} <a href="../wiki/index.html">textes du métier</a>.</p>
+    {liste}'''
+    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Simulateurs VTC", "url": SITE + "simulateurs/", "inLanguage": "fr",
+          "isPartOf": {"@id": SITE + "#site"}, "hasPart": [{"@type": "WebApplication", "name": titre, "url": SITE + chemin}]}
+    ecrire("simulateurs/index.html", page("Simulateurs VTC gratuits : coût de revient, revenu net · Révision VTC", corps, "simulateurs", "../",
+                                          "Simulateurs gratuits pour chauffeurs VTC : coût de revient de la voiture au kilomètre et revenu net mensuel, avec des hypothèses sourcées et datées.",
+                                          jsonld=[ld, fil(("Accueil", ""), ("Simulateurs", "simulateurs/"))]))
+    return s
 
 
 def indexnow():
@@ -946,7 +1192,7 @@ ROBOTS_IA = ["Googlebot", "Bingbot", "Google-Extended", "GPTBot", "OAI-SearchBot
              "Claude-User", "PerplexityBot", "Perplexity-User", "Applebot", "Applebot-Extended", "DuckAssistBot", "MistralAI-User", "CCBot"]
 
 
-def plan(nums, arts, wiki_date, qs=(), ds=()):
+def plan(nums, arts, wiki_date, qs=(), ds=(), simu=None):
     der = nums[0]["date"] if nums else wiki_date
     urls = [("", max(der, wiki_date)), ("actualite/", der), ("wiki/", wiki_date), ("a-propos.html", None), ("contact.html", None), ("mises-a-jour.html", None),
             ("examens.html", None), ("mentions-legales.html", None), ("accessibilite.html", None)]
@@ -959,6 +1205,9 @@ def plan(nums, arts, wiki_date, qs=(), ds=()):
         maj = lambda d: max(d["date"], iso_fr(d.get("mis_a_jour") or d["verifie"]))
         urls.insert(4, ("dossiers/", max(maj(d) for d in ds)))
         urls += [(f'dossiers/{d["slug"]}.html', maj(d)) for d in ds]
+    if simu:
+        urls.insert(5, ("simulateurs/", iso_fr(simu["verifie"])))
+        urls.append((f'simulateurs/{simu["slug"]}.html', iso_fr(simu["verifie"])))
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     xml += "".join(f"  <url><loc>{SITE}{u}</loc>" + (f"<lastmod>{d}</lastmod>" if d else "") + "</url>\n" for u, d in urls) + "</urlset>\n"
     ecrire("sitemap.xml", xml)
@@ -967,7 +1216,7 @@ def plan(nums, arts, wiki_date, qs=(), ds=()):
            f"User-agent: *\nAllow: /\nDisallow: /examen.html\n\nSitemap: {SITE}sitemap.xml\n")
 
 
-def llms(nums, w, qs=(), ds=()):
+def llms(nums, w, qs=(), ds=(), simu=None):
     """llms.txt : le plan du site pour les assistants d'IA ; llms-full.txt : tout le wiki en texte brut, avec ses sources."""
     themes = {t["cle"]: t["titre"] for t in w["themes"]}
     l = ["# Révision VTC (revision-vtc.fr)", "",
@@ -983,6 +1232,7 @@ def llms(nums, w, qs=(), ds=()):
          f"- [Actualité VTC]({SITE}actualite/): un numéro par semaine, sources citées",
          f"- [Questions VTC]({SITE}questions/): une question concrète par semaine, réponse courte et sources officielles",
          f"- [Dossiers VTC]({SITE}dossiers/): articles longs et chiffrés (coût du lancement, revenus, statut, véhicule), sources datées",
+         f"- [Simulateur VTC : coût de revient de la voiture et revenu net]({SITE}simulateurs/cout-revient-revenu-net-vtc.html): calcul gratuit pour un chauffeur VTC en micro-entreprise (commission, cotisations, location ou achat, carburant, assurance), hypothèses sourcées et datées",
          f"- [Mises à jour du livre]({SITE}mises-a-jour.html): règles qui ont changé depuis l'impression",
          f"- [Examens blancs]({SITE}examens.html): deux examens blancs corrigés, réservés aux lecteurs du livre",
          f"- [À propos et méthode]({SITE}a-propos.html): qui écrit, comment les informations sont vérifiées",
@@ -1049,6 +1299,7 @@ if __name__ == "__main__":
     questions(qs, w)
     ds = lire_dossiers({a["slug"] for a in w["articles"]})
     dossiers(ds, w, qs)
+    simu = simulateur(ds)
     indexnow()
     mises_a_jour()
     examens()
@@ -1056,6 +1307,6 @@ if __name__ == "__main__":
     a_propos()
     contact()
     page_404()
-    llms(nums, w, qs, [d for d in ds if not d.get("brouillon")])
-    plan(nums, arts, iso_fr(w["verifie"]), qs, [d for d in ds if not d.get("brouillon")])
+    llms(nums, w, qs, [d for d in ds if not d.get("brouillon")], simu)
+    plan(nums, arts, iso_fr(w["verifie"]), qs, [d for d in ds if not d.get("brouillon")], simu)
     print(f"Site généré dans docs/ : {len(nums)} numéro(s) de l'Actualité VTC.")

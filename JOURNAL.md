@@ -6,6 +6,20 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 28 octobre 2026, 20 h 10 · Simulateur « coût de revient de la voiture VTC et revenu net »
+
+- Nouvelle rubrique « Simulateur » (lien ajouté au menu de toutes les pages) : https://revision-vtc.fr/simulateurs/
+- Publié : https://revision-vtc.fr/simulateurs/cout-revient-revenu-net-vtc.html
+  - Pour un chauffeur en micro-entreprise : montant versé par les plateformes, commission, location à la semaine / LLD-LOA / achat, essence, gazole ou électricité, assurance, entretien, autres frais, Alsace-Moselle, versement libératoire.
+  - Résultats : revenu net par mois et par an, détail poste par poste, coût de revient de la voiture au km et par mois, seuil de rentabilité par semaine, revenu net par heure, revenu imposable ; alertes TVA (37 500 / 41 250 €), plafond micro (83 600 €), perte, entretien non saisi. Lien partageable (la simulation est dans l'adresse) ; rien n'est envoyé.
+  - Exemple publié (valeurs par défaut) : 1 000 € versés par semaine, 47 semaines, hybride louée 280 €/semaine, 60 000 km → 983 € net par mois si cotisations sur le prix payé par les clients, 1 270 € si sur le montant versé ; voiture 0,36 €/km.
+  - 26 sources : fiches Service-Public (cotisations, formation, CMA, régime fiscal, TVA, seuils micro), DGEC (carburants du 23 octobre 2026), ADEME Car Labelling, SDES (38 € par heure en 2024), Uber, Bolt, CRE via deux sources (électricité), courtiers et loueurs du dossier n° 1.
+- **Point à trancher** : aucun texte officiel ne dit si le chiffre d'affaires d'un chauffeur de plateforme est le prix payé par le client ou le montant versé après commission ; le simulateur propose les deux (« prudent » par défaut). La TVA au-delà de 41 250 € est signalée mais pas calculée (règles de déduction à vérifier sur le BOFiP avant de l'ajouter).
+- Maillage : lien depuis le dossier n° 1 (section « Le budget total ») et encadré « Simulateur gratuit » sur chaque dossier ; index des dossiers ; sitemap, llms.txt, données structurées WebApplication.
+- À mettre à jour : prix des carburants chaque mois, taux et seuils au 1er janvier 2027, électricité au 1er février 2027 (procédure dans README, « Mettre à jour le simulateur »).
+- Vérifications : calcul testé (node outils/test_simulateur.js, même résultat que le générateur) ; aucune erreur d'accessibilité (axe) en clair et en sombre à 320, 768, 1 280 et 1 920 px sur le simulateur, les dossiers et l'accueil ; aucun débordement horizontal ; aucun lien interne cassé.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 28 octobre 2026, 19 h 20 · Actualité VTC n° 3 (tâche du lundi)
 
 - **PROBLÈME : Légifrance toujours inaccessible** (refus 403). Journal officiel vérifié seulement par les pages indexées ; exament3p.fr non lu cette fois (lecture non autorisée à temps).

@@ -10,6 +10,7 @@ Règles éditoriales : chaque information repose sur un texte officiel ou sur de
 - [Actualité VTC](https://revision-vtc.fr/actualite/): un numéro par semaine, sources citées
 - [Questions VTC](https://revision-vtc.fr/questions/): une question concrète par semaine, réponse courte et sources officielles
 - [Dossiers VTC](https://revision-vtc.fr/dossiers/): articles longs et chiffrés (coût du lancement, revenus, statut, véhicule), sources datées
+- [Simulateur VTC : coût de revient de la voiture et revenu net](https://revision-vtc.fr/simulateurs/cout-revient-revenu-net-vtc.html): calcul gratuit pour un chauffeur VTC en micro-entreprise (commission, cotisations, location ou achat, carburant, assurance), hypothèses sourcées et datées
 - [Mises à jour du livre](https://revision-vtc.fr/mises-a-jour.html): règles qui ont changé depuis l'impression
 - [Examens blancs](https://revision-vtc.fr/examens.html): deux examens blancs corrigés, réservés aux lecteurs du livre
 - [À propos et méthode](https://revision-vtc.fr/a-propos.html): qui écrit, comment les informations sont vérifiées

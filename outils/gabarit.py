@@ -12,11 +12,11 @@ def achat(classe="bouton", texte="Acheter le livre sur Amazon"):
         return f'<a class="{classe}" href="{LIVRE["amazon"]}">{texte}</a>'
     return f'<span class="{classe} bientot">Bientôt disponible sur Amazon</span>'
 
-NAV = [("index.html", "Accueil", "accueil"), ("actualite/index.html", "Actualité VTC", "actualite"), ("questions/index.html", "Questions VTC", "questions"), ("dossiers/index.html", "Dossiers", "dossiers"),
+NAV = [("index.html", "Accueil", "accueil"), ("actualite/index.html", "Actualité VTC", "actualite"), ("questions/index.html", "Questions VTC", "questions"), ("dossiers/index.html", "Dossiers", "dossiers"), ("simulateurs/index.html", "Simulateur", "simulateurs"),
        ("wiki/index.html", "Textes du métier", "textes"), ("mises-a-jour.html", "Mises à jour du livre", "maj"), ("examens.html", "Examens blancs", "examens")]
 
 
-SURTITRES = {"actualite": "Chaque lundi", "questions": "Chaque jeudi", "dossiers": "Dossiers VTC", "textes": "Réglementation VTC",
+SURTITRES = {"actualite": "Chaque lundi", "questions": "Chaque jeudi", "dossiers": "Dossiers VTC", "simulateurs": "Simulateur gratuit", "textes": "Réglementation VTC",
              "maj": "Le livre", "examens": "Réservé aux lecteurs"}
 
 

@@ -1666,7 +1666,7 @@ Véhicule : achat – – 34 200
 Assurance (1re année) 350 à 600 (RC pro seule) 350 à 600 (RC pro seule) 2 460 à 7 580
 Total 2 730 à 4 040 3 130 à 7 040 37 600 à 45 320
 Le profil 1 est le lancement le moins cher possible : candidat libre, voiture louée à la semaine avec assurance du véhicule comprise. Il demande ensuite de payer chaque semaine le loyer, de 210 € à 350 €, soit de 900 € à 1 500 € par mois environ, avant d'avoir encaissé ses premières courses.
-Le profil 3 coûte dix fois plus au départ, mais n'a plus de loyer à payer : la voiture appartient à l'entreprise. Financée à crédit, la dépense se répartit sur plusieurs années, avec les intérêts en plus. C'est le calcul du coût de revient qui permet de comparer les deux sur la durée.
+Le profil 3 coûte dix fois plus au départ, mais n'a plus de loyer à payer : la voiture appartient à l'entreprise. Financée à crédit, la dépense se répartit sur plusieurs années, avec les intérêts en plus. C'est le calcul du coût de revient qui permet de comparer les deux sur la durée : faites-le avec vos chiffres dans le simulateur de coût de revient et de revenu net.
 Pour les trois profils, l'administration conseille de se constituer une réserve pour faire face aux imprévus. Une bonne mesure : de quoi payer un à deux mois de loyer ou de crédit, d'assurance et de carburant sans compter sur les recettes.
 Après le lancement : les dépenses qui reviennent
 Une fois l'activité lancée, certaines dépenses reviennent à date fixe. Mieux vaut les prévoir dès le départ :
