@@ -6,6 +6,16 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 28 octobre 2026, 21 h 20 · Refonte de l'accueil, du menu et de l'introduction du simulateur
+
+- **Sauvegarde avant refonte** : branche `sauvegarde-2026-10-28` (état du site au commit 5b12445) : https://github.com/75018-montmartre/revision-vtc/tree/sauvegarde-2026-10-28 . Pour revenir en arrière : remettre `main` sur ce commit (ou annuler le commit de la refonte, 052ab2b).
+- Toutes les pages : en-tête refait (logo agrandi, sous-titre « Examen, réglementation et métier de chauffeur VTC »), menu réduit à cinq rubriques (Actualité VTC, Questions VTC, Dossiers, Textes du métier, Simulateur) ; « Mises à jour du livre », « Examens blancs n° 4 et 5 » et l'achat Amazon regroupés dans un menu déroulant « Le livre » ; « Accueil » retiré du menu (le logo y mène).
+- Accueil : https://revision-vtc.fr/ : carrousel de trois diapositives (le site, gratuit et sourcé ; le simulateur, avec l'exemple recalculé à 983 € nets par mois ; le livre), détaché de l'en-tête ; défilement toutes les 8 s avec bouton de pause, arrêté au survol, au clavier et si l'appareil demande moins d'animations. Tuiles : Actualité, Textes du métier, Dossiers, Simulateur.
+- Simulateur : https://revision-vtc.fr/simulateurs/cout-revient-revenu-net-vtc.html : nouveau chapeau, « Comment ça marche » en trois étapes, lexique (montant versé, coût de revient, seuil de rentabilité, revenu net) ; page d'index https://revision-vtc.fr/simulateurs/ : chapeau réécrit. Aucun chiffre ni calcul modifié.
+- Nouveaux fichiers fixes : `docs/js/site.js` (menu « Le livre », carrousel) ; composant CSS « .etapes ».
+- Vérifications : aucune erreur d'accessibilité (axe) en clair et en sombre à 320, 375, 768, 1 100, 1 280 et 1 920 px (accueil avec chaque diapositive, simulateur, mises à jour, examens, wiki, actualité, dossier, 404) ; aucun débordement horizontal ; aucun lien interne cassé ; calcul du simulateur testé.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 28 octobre 2026, 20 h 10 · Simulateur « coût de revient de la voiture VTC et revenu net »
 
 - Nouvelle rubrique « Simulateur » (lien ajouté au menu de toutes les pages) : https://revision-vtc.fr/simulateurs/
