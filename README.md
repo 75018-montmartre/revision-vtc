@@ -10,10 +10,13 @@ Site compagnon du livre *Machine à Réussite · Examen VTC 2027* (Benjamin Blon
 | `contenu/mises-a-jour.json` | Les corrections du livre après impression et les points à surveiller |
 | `contenu/wiki.json` | Le wiki « Textes du métier » (`docs/wiki/`) : pour chaque article, le thème, l'explication « En clair », l'exemple « Concrètement », les fiches du livre, le texte officiel recopié de Légifrance (`texte`, `vigueur`, `modif`) et son lien ; plus les lois d'origine et références externes (`autres`). Date de vérification : `verifie`. |
 | `contenu/questions/AAAA-MM-JJ-adresse.json` | Une « Question VTC » (une par semaine, publiée le jeudi) : question, réponse courte, développement, à retenir, liens vers le wiki, fiches du livre, sources |
+| `contenu/dossiers/adresse.json` | Un dossier (article long de 1 500 à 2 500 mots, publié dans `docs/dossiers/`) : voir « Publier un dossier » |
+| `contenu/indexnow.json` | La clé publique IndexNow (`cle`), servie à la racine du site sous `docs/<clé>.txt` |
 | `contenu/fiches.json` | Codes et titres des fiches du livre, pour les renvois « Dans le livre » |
 | `contenu/contact.json` | La clé d'accès Web3Forms du formulaire de contact (`web3forms_cle`) ; vide, la page Contact affiche l'adresse e-mail à la place du formulaire |
 | `contenu/livre.json` | L'adresse de la page Amazon du livre (`amazon`) ; vide, le site affiche « Bientôt disponible sur Amazon » |
 | `outils/generer.py` | Génère tout le site dans `docs/` à partir de `contenu/` |
+| `outils/indexnow.py` | Signale à Bing (IndexNow) les pages ajoutées ou modifiées, lancé par `.github/workflows/indexnow.yml` |
 | `outils/gabarit.py` | En-tête, menu et pied de page communs |
 | `docs/` | Le site publié par GitHub Pages (ne pas modifier les pages HTML à la main : elles sont régénérées) |
 
@@ -87,6 +90,43 @@ Fichier `contenu/questions/AAAA-MM-JJ-adresse.json` (l'adresse est en minuscules
 ```
 
 Le générateur refuse une question sans source, sans point d'interrogation, ou qui renvoie vers une page du wiki inexistante.
+
+## Publier un dossier
+
+Fichier `contenu/dossiers/adresse.json`, nommé par l'adresse de la page (minuscules, tirets, mots-clés principaux : `cout-pour-devenir-chauffeur-vtc`). La page est publiée à `https://revision-vtc.fr/dossiers/adresse.html` ; l'adresse ne change plus ensuite (un dossier se met à jour, avec `mis_a_jour`). Modèle : le dossier n° 1.
+
+```json
+{"numero": 1, "slug": "adresse", "date": "AAAA-MM-JJ", "brouillon": true,
+ "titre": "Le titre affiché, avec les mots que les gens tapent",
+ "titre_page": "Le titre de l'onglet et de Google (facultatif)",
+ "image": {"fichier": "...", "alt": "...", "legende": "...", "credit": "...", "lien": "..."},
+ "description": "50 à 160 caractères, avec les chiffres clés.",
+ "mots_cles": ["..."],
+ "chapeau": "Une ou deux phrases.",
+ "en_bref": ["La réponse d'abord, autonome, chiffrée."],
+ "sections": [{"id": "ancre", "titre": "Intertitre", "blocs": [
+   "Paragraphe ; lien : [texte](../wiki/r3120-6.html)",
+   {"liste": ["élément"]},
+   {"note": "Encart beige"},
+   {"tableau": {"legende": "Légende obligatoire", "colonnes": ["Poste", "Montant"], "nombres": [1],
+                "lignes": [["Examen", "241 €"]], "total": [["Total", "241 €"]]}},
+   {"image": {"fichier": "nom-de-la-photo", "alt": "Ce que montre la photo", "legende": "Phrase utile au lecteur",
+              "credit": "auteur Pixabay", "lien": "https://pixabay.com/fr/photos/..."}}]}],
+ "a_retenir": ["Phrases autonomes."],
+ "wiki": ["r3120-6"], "fiches": [["A2.6", "La carte professionnelle au quotidien"]],
+ "sources": [{"nom": "Nom de la source", "url": "https://...", "date": "consulté le JJ mois AAAA"}],
+ "verifie": "JJ mois AAAA", "mis_a_jour": "JJ mois AAAA (facultatif)"}
+```
+
+- **Brouillon** : tant que `"brouillon": true`, le dossier n'est pas publié. `python3 outils/generer.py --apercu` construit une copie complète du site avec les brouillons dans `apercu/` (jamais versionné) pour la relecture par l'auteur. Pour publier : retirer la ligne `brouillon`, mettre la date de publication, lancer `python3 outils/generer.py`.
+- Le générateur refuse un dossier sans source, de moins de 1 200 ou de plus de 3 000 mots (hors brouillon), qui renvoie vers une page du wiki inexistante ou dont la description est trop courte ou trop longue.
+- **Photos** (Pixabay ou équivalent, jamais d'image générée par IA) : recadrées en 3:2 et enregistrées dans `docs/images/dossiers/` sous un nom qui décrit la photo, en deux tailles WebP (`<nom>-640.webp`, `<nom>-1200.webp`) ; la photo d'en-tête (`image`) a aussi un `<nom>-1200.jpg`, utilisé pour le partage sur les réseaux sociaux et dans les données structurées. Une photo par section au plus, placée en tête de section. Le texte alternatif décrit ce qu'on voit ; la légende dit ce que le lecteur doit retenir. Le générateur refuse une photo dont un fichier manque ou sans texte alternatif.
+- Données structurées : `Article` (avec `wordCount`, `citation`, `abstract` = la réponse en bref) et fil d'Ariane ; le dossier entre dans `sitemap.xml` et `llms.txt`.
+- Chaque chiffre a sa source : texte officiel ou deux sources concordantes. Les prix libres (formation, assurance, véhicule) sont donnés en fourchettes publiées, avec leurs sources, jamais comme un tarif.
+
+## IndexNow (Bing)
+
+À chaque mise à jour de `main` qui touche `docs/`, GitHub Actions (`.github/workflows/indexnow.yml`) attend que GitHub Pages serve la nouvelle version, puis envoie à IndexNow la liste des pages HTML ajoutées ou modifiées (pages `noindex` et redirections exclues). Aucun secret : la clé est publique. Envoi complet du sitemap : onglet Actions > « IndexNow (Bing) » > Run workflow, case « Envoyer toutes les adresses ». Essai sans envoi : `python3 outils/indexnow.py --essai`.
 
 ## Charte graphique
 

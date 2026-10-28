@@ -6,6 +6,19 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 28 octobre 2026, 16 h 10 · Rubrique Dossiers, dossier n° 1 et IndexNow
+
+- Nouvelle rubrique « Dossiers » (articles longs, un par semaine, relus par l'auteur) : https://revision-vtc.fr/dossiers/ , lien « Dossiers » ajouté au menu de toutes les pages.
+- Dossier n° 1 publié : « Combien coûte vraiment le lancement en VTC ? Le budget complet 2026-2027 » : https://revision-vtc.fr/dossiers/cout-pour-devenir-chauffeur-vtc.html
+  - Frais obligatoires 2026 : 539,60 € plus l'envoi de la carte (examen 241 €, visite médicale 36 €, carte 57,60 €, registre 170 €, vignette 35 € environ, micro-entreprise gratuite).
+  - Trois budgets : de 2 730 € à 4 040 € (candidat libre, voiture louée à la semaine), de 3 130 € à 7 040 € (avec formation), de 37 600 € à 45 320 € (voiture neuve achetée comptant).
+  - 13 sources, dont la fiche officielle « Devenir chauffeur de VTC » vérifiée le 12 août 2026 ; 5 photos Pixabay choisies par l'auteur, avec crédit.
+  - À mettre à jour en janvier 2027 : tarif de l'examen (réévalué chaque 1er janvier).
+- Données structurées Article, image de partage propre au dossier, entrées dans sitemap.xml, llms.txt et llms-full.txt.
+- IndexNow pour Bing : clé publique en ligne (https://revision-vtc.fr/ffb463a3b58a4d6f80ea5043c02886aa.txt) ; à chaque publication, une tâche GitHub signale à Bing les pages ajoutées ou modifiées (onglet Actions, « IndexNow (Bing) »). Premier envoi : toutes les pages, puisque le menu a changé partout.
+- Vérifications : aucune erreur d'accessibilité (axe) en clair et en sombre, de 320 px au grand écran ; aucun lien interne cassé.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 28 octobre 2026, 15 h 47 · Question VTC (tâche du jeudi)
 
 - Question : « Quelles cotisations paie un chauffeur VTC en micro-entreprise ? »

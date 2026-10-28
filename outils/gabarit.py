@@ -12,11 +12,11 @@ def achat(classe="bouton", texte="Acheter le livre sur Amazon"):
         return f'<a class="{classe}" href="{LIVRE["amazon"]}">{texte}</a>'
     return f'<span class="{classe} bientot">Bientôt disponible sur Amazon</span>'
 
-NAV = [("index.html", "Accueil", "accueil"), ("actualite/index.html", "Actualité VTC", "actualite"), ("questions/index.html", "Questions VTC", "questions"),
+NAV = [("index.html", "Accueil", "accueil"), ("actualite/index.html", "Actualité VTC", "actualite"), ("questions/index.html", "Questions VTC", "questions"), ("dossiers/index.html", "Dossiers", "dossiers"),
        ("wiki/index.html", "Textes du métier", "textes"), ("mises-a-jour.html", "Mises à jour du livre", "maj"), ("examens.html", "Examens blancs", "examens")]
 
 
-SURTITRES = {"actualite": "Chaque lundi", "questions": "Chaque jeudi", "textes": "Réglementation VTC",
+SURTITRES = {"actualite": "Chaque lundi", "questions": "Chaque jeudi", "dossiers": "Dossiers VTC", "textes": "Réglementation VTC",
              "maj": "Le livre", "examens": "Réservé aux lecteurs"}
 
 
@@ -42,7 +42,7 @@ def _tete_page(corps, actif, racine):
         avant = avant.replace("<ol>", "<ol>" + accueil, 1)
     if 'class="deux-col"' in apres:
         mp = "mp-cote"
-    elif any(c in apres for c in ('class="wiki-theme"', 'class="questions', 'class="numeros"')):
+    elif any(c in apres for c in ('class="wiki-theme"', 'class="questions', 'class="numeros"', 'class="dossiers')):
         mp = "mp-grille"
     else:
         mp = "mp-colonne"

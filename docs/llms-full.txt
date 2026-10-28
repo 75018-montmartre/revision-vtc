@@ -1614,3 +1614,71 @@ Les autorités compétentes pour délivrer les cartes professionnelles de conduc
 En vigueur depuis le 01 juin 2017.
 
 Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A5.4 (Avertissement, retrait : les sanctions administratives) ; fiche A5.5 (Contester une sanction).
+
+## Dossiers VTC
+
+### Combien coûte vraiment le lancement en VTC ? Le budget complet 2026-2027
+
+Page : https://revision-vtc.fr/dossiers/cout-pour-devenir-chauffeur-vtc.html
+Publié le 28 octobre 2026, chiffres vérifiés le 27 octobre 2026.
+
+Examen, visite médicale, carte professionnelle, registre, vignette, formation, véhicule, assurance : chaque dépense, avec son montant officiel ou la fourchette publiée, puis trois budgets complets calculés poste par poste.
+Les démarches obligatoires coûtent 539,60 € en 2026, plus l'envoi de la carte : examen 241 €, visite médicale 36 €, carte professionnelle 57,60 €, registre des VTC 170 €, vignette 35 € environ. L'immatriculation d'une micro-entreprise est gratuite.
+Le véhicule fait tout le reste du budget. Avec une voiture louée à la semaine et sans formation, il faut compter de 2 730 € à 4 040 € avant le premier mois d'activité. Avec une formation et une voiture neuve achetée comptant, de 37 600 € à 45 320 € la première année.
+Les frais obligatoires : 539,60 € en 2026
+Cinq dépenses sont imposées à tout futur chauffeur VTC, quel que soit son projet. Leurs montants sont fixés par l'administration ou par les organismes qui délivrent les documents : ils sont les mêmes partout en France.
+Inscription à l'examen (épreuves écrites et pratique) 241 € Chambre de métiers et de l'artisanat (CMA) Non (118 € pour repasser l'épreuve pratique seule)
+Visite médicale chez un médecin agréé 36 € Le médecin agréé Tous les 5 ans avant 55 ans
+Carte professionnelle VTC 57,60 € + envoi Imprimerie nationale Tous les 5 ans
+Inscription au registre des VTC 170 € Gestionnaire du registre Tous les 5 ans
+Vignette VTC (deux autocollants) 35 € environ Imprimerie nationale À chaque véhicule
+Immatriculation de la micro-entreprise 0 € Guichet des formalités des entreprises Non
+Total 539,60 € + envoi  
+L'examen est la plus grosse ligne. Les CMA appliquent en 2026 le tarif de 241 € pour l'ensemble des épreuves : les sept épreuves écrites d'admissibilité et l'épreuve pratique d'admission. Ce tarif est réévalué chaque 1er janvier : celui de 2027 n'est pas encore publié, et ce dossier sera mis à jour dès qu'il le sera. Un candidat qui échoue à l'épreuve pratique la repasse seule pour 118 €. Le détail des épreuves est expliqué dans la page sur l'arrêté du 6 avril 2017.
+La visite médicale se fait chez un médecin agréé par la préfecture, jamais chez son médecin traitant. Elle coûte 36 € et n'est pas remboursée par l'Assurance maladie. Elle est à refaire tous les cinq ans jusqu'à 55 ans, puis plus souvent avec l'âge (article D3120-5).
+La carte professionnelle est demandée en ligne après la réussite à l'examen. Elle est fabriquée et facturée par l'Imprimerie nationale : 57,60 € TTC, plus les frais d'envoi. La préfecture a trois mois au plus pour la délivrer (article R3120-6).
+L'inscription au registre des VTC coûte 170 €, payés en ligne. Elle est obligatoire pour l'exploitant, c'est-à-dire pour l'entreprise, même si elle ne compte qu'un chauffeur. Le Code des transports plafonne ces frais à 250 € (article R3122-3). Les vignettes rouges, à coller sur le pare-brise et la lunette arrière, se commandent ensuite depuis le compte du registre, pour 35 € environ (article R3122-8).
+Ce que vous n'avez plus à payer : le brevet de secourisme (PSC1) n'est plus obligatoire, même s'il reste conseillé. Et depuis le 12 août 2026, l'expérience professionnelle ne permet plus d'obtenir la carte : l'examen est la seule voie d'accès.
+La formation : de 0 € à 3 000 €
+La formation avant l'examen n'est pas obligatoire. On peut s'inscrire à l'examen en candidat libre et le préparer seul : c'est le choix le moins cher, à condition de travailler les sept épreuves écrites et de s'entraîner à l'épreuve pratique de conduite.
+Une formation en centre agréé coûte, selon le site officiel de l'administration, entre 400 € et 3 000 € environ, pour une durée de 50 à 300 heures. L'écart tient au nombre d'heures, à la part de cours en salle et aux heures de conduite sur véhicule école. Le compte personnel de formation (CPF) peut la financer, et France Travail peut aider les demandeurs d'emploi.
+Avant de choisir, vérifiez trois points : le centre est-il agréé par la préfecture (article R3120-9) ? Le prix comprend-il les frais d'examen de 241 € ou s'y ajoutent-ils ? Prévoit-il des heures de conduite pour l'épreuve pratique, et la location du véhicule le jour de l'examen ?
+Une dépense revient plus tard : tous les cinq ans, le renouvellement de la carte exige un stage de formation continue de 14 heures dans un centre agréé (article R3120-8-2). Son prix est libre ; il s'ajoute aux 57,60 € de la nouvelle carte.
+Le véhicule : acheter, louer, ou louer longtemps
+C'est le poste qui décide du budget. La voiture doit d'abord être conforme : quatre à neuf places conducteur compris, au moins quatre portes, 4,50 m de long et 1,70 m de large au minimum, un moteur d'au moins 84 kW, et moins de sept ans (arrêté du 26 mars 2015). Ces critères ne s'appliquent pas aux voitures hybrides et électriques (article L3120-5) : une hybride récente élargit beaucoup le choix, en location comme à l'achat.
+Trois façons de disposer d'une voiture, avec un effet direct sur le registre : pour chaque véhicule utilisé régulièrement, l'entreprise doit prouver qu'elle en est propriétaire, qu'elle le loue pour six mois au moins, ou présenter une garantie financière de 1 500 € par véhicule, sous forme de caution d'une banque ou d'un assureur (article R3122-9).
+Location à la semaine chez un loueur spécialisé (hybride) Caution de 1 000 à 1 500 € + premières semaines 210 à 350 € par semaine, assurance du véhicule souvent comprise Location de moins de 6 mois : garantie financière, sauf justification déjà faite pour ce véhicule (à demander au loueur)
+Location longue durée ou avec option d'achat (LLD, LOA) Premier loyer, parfois un apport 400 à 1 200 € par mois selon les offres, assurance en plus Location de 6 mois ou plus : contrat suffisant
+Achat (exemple : berline hybride neuve) 34 200 € (prix de départ), ou l'apport d'un crédit Assurance, entretien, remboursement du crédit Carte grise : propriété prouvée
+La location à la semaine est l'entrée la moins chère : chez les loueurs spécialisés, une hybride se loue de 210 € à 350 € par semaine, avec une caution de 1 000 € à 1 500 €. Le loyer comprend souvent l'assurance du véhicule, l'entretien et l'assistance ; la responsabilité civile professionnelle, elle, n'est pas toujours incluse. Lisez le contrat : franchise en cas d'accident, kilométrage compris, durée minimale.
+La location longue durée ou avec option d'achat se situe, selon les offres publiées, entre 400 € et 1 200 € par mois, sans l'assurance. Elle coûte moins cher par mois que la location à la semaine, mais engage pour plusieurs années.
+L'achat d'une voiture neuve est la solution la plus lourde au départ. Exemple : la berline hybride Toyota Corolla est annoncée par le constructeur à partir de 34 200 € pour l'année-modèle 2026, hors options. Une voiture d'occasion coûte moins cher, mais une thermique doit avoir moins de sept ans, y compris pendant toute son exploitation : une voiture de cinq ans ne pourra servir que deux ans.
+L'assurance : 2 000 € à plus de 7 000 € par an pour un débutant
+L'entreprise doit pouvoir justifier à tout moment d'une assurance de responsabilité civile professionnelle (article L3120-4). S'y ajoute l'assurance du véhicule pour un usage de transport de personnes contre rémunération : une assurance auto ordinaire ne couvre pas cette activité.
+Les tarifs ne sont pas réglementés. Les grilles publiées par des courtiers spécialisés en 2026 concordent sur un point : le débutant paie nettement plus cher que le chauffeur expérimenté. Elles situent la prime annuelle d'un chauffeur débutant entre 2 000 € et 4 100 € environ pour les formules de base, et jusqu'à 7 580 € en tous risques, avant majoration en Île-de-France, où un courtier l'estime de 40 à 50 % plus élevée. La responsabilité civile professionnelle seule, quand elle est vendue à part, coûte de 350 € à 600 € par an pour un débutant.
+Si la voiture est louée à la semaine avec assurance comprise, il ne reste en général que la responsabilité civile professionnelle à souscrire. Dans tous les cas, demandez au moins trois devis avant de signer quoi que ce soit.
+Le budget total : trois profils calculés
+Les trois budgets ci-dessous additionnent les montants vus plus haut. Le bas de chaque fourchette retient les prix les plus bas publiés, le haut les plus élevés. Ils couvrent les dépenses jusqu'à la première course ; les cotisations sociales et les impôts, calculés sur le chiffre d'affaires, ne sont pas des frais de lancement.
+Frais obligatoires 540 540 540
+Formation 0 400 à 3 000 400 à 3 000
+Véhicule : caution et 4 semaines de location 1 840 à 2 900 1 840 à 2 900 –
+Véhicule : achat – – 34 200
+Assurance (1re année) 350 à 600 (RC pro seule) 350 à 600 (RC pro seule) 2 460 à 7 580
+Total 2 730 à 4 040 3 130 à 7 040 37 600 à 45 320
+Le profil 1 est le lancement le moins cher possible : candidat libre, voiture louée à la semaine avec assurance du véhicule comprise. Il demande ensuite de payer chaque semaine le loyer, de 210 € à 350 €, soit de 900 € à 1 500 € par mois environ, avant d'avoir encaissé ses premières courses.
+Le profil 3 coûte dix fois plus au départ, mais n'a plus de loyer à payer : la voiture appartient à l'entreprise. Financée à crédit, la dépense se répartit sur plusieurs années, avec les intérêts en plus. C'est le calcul du coût de revient qui permet de comparer les deux sur la durée.
+Pour les trois profils, l'administration conseille de se constituer une réserve pour faire face aux imprévus. Une bonne mesure : de quoi payer un à deux mois de loyer ou de crédit, d'assurance et de carburant sans compter sur les recettes.
+Après le lancement : les dépenses qui reviennent
+Une fois l'activité lancée, certaines dépenses reviennent à date fixe. Mieux vaut les prévoir dès le départ :
+tous les ans : le contrôle technique du véhicule, obligatoire chaque année pour un VTC (article R3120-10) ;
+tous les cinq ans : la carte professionnelle (57,60 € plus l'envoi), le stage de formation continue de 14 heures et l'inscription au registre (170 €) ;
+tous les cinq ans jusqu'à 55 ans, puis plus souvent : la visite médicale (36 €) ;
+à chaque changement de véhicule : de nouvelles vignettes (35 € environ), et une voiture thermique à remplacer au plus tard à sept ans.
+Les cotisations sociales, elles, se calculent sur le chiffre d'affaires et ne s'ajoutent pas au budget de départ : la Question VTC « Quelles cotisations paie un chauffeur VTC en micro-entreprise ? » donne les taux de 2026. Un prochain dossier sera consacré au précompte des cotisations par les plateformes, prévu au 1er janvier 2027 : qui est concerné, et ce qui change (ce n'est pas le prélèvement à la source de l'impôt). Pour une réponse rapide sur une règle du métier, consultez les Questions VTC.
+Les frais obligatoires pour devenir chauffeur VTC s'élèvent à 539,60 € en 2026, plus l'envoi de la carte : examen 241 €, visite médicale 36 €, carte 57,60 €, registre 170 €, vignette 35 € environ.
+La formation n'est pas obligatoire ; en centre agréé, elle coûte de 400 € à 3 000 € environ.
+Les voitures hybrides et électriques échappent aux critères de taille, de puissance et d'âge imposés aux voitures thermiques.
+Lancement le moins cher : de 2 730 € à 4 040 € avec une voiture louée à la semaine ; avec une voiture neuve achetée comptant, de 37 600 € à 45 320 € la première année.
+Le tarif de l'examen change chaque 1er janvier : vérifiez celui de 2027 auprès de votre CMA avant de vous inscrire.
+
+Sources : Service Public Entreprendre, « Devenir chauffeur de VTC » (fiche F31027, vérifiée le 12 août 2026) (https://entreprendre.service-public.gouv.fr/vosdroits/F31027) ; CMA Hauts-de-France, « Examen taxi et VTC », tarifs 2026 (https://www.cma-hautsdefrance.fr/examen-taxi-et-vtc/) ; CMA Provence-Alpes-Côte d'Azur, « Examens taxis et VTC », droits d'inscription au 1er janvier 2026 (https://www.cmar-paca.fr/article/examens-taxis-et-vtc) ; Service-public.fr, « Contrôle médical obligatoire pour le permis de conduire professionnel » (https://www.service-public.gouv.fr/particuliers/vosdroits/F36483) ; Préfecture d'Indre-et-Loire, « Examen médical des permis de conduire » (https://www.indre-et-loire.gouv.fr/Demarches-administratives/Examen-medical-des-permis-de-conduire) ; Préfecture du Pas-de-Calais, « VTC » (prix de la carte professionnelle) (https://www.pas-de-calais.gouv.fr/Demarches/Activites-et-professions-reglementees/VTC) ; Service Public Entreprendre, « Formalités d'immatriculation d'une micro-entreprise » (vérifiée le 18 mars 2026) (https://entreprendre.service-public.gouv.fr/vosdroits/F36746) ; BVTC, « Macaron VTC : comment l'obtenir ? » (mis à jour le 5 août 2026) (https://bvtc.fr/bible-du-vtc/acces-metier-vtc/macaron-vtc/) ; Toyota France, communiqué « Toyota Corolla 2026 », 10 décembre 2025 (https://media.toyota.fr/toyota-corolla-2026--de-nouveaux-atouts-pour-un-succes-toujours-plus-durable/) ; City Car Actu, « Location VTC à la semaine ou au mois : prix, cautions et pièges à éviter en 2026 », 17 mars 2026 (https://city-car.fr/actualite/location-vtc-city-car-a-la-semaine-ou-au-mois-prix-cautions-et-pieges-a-eviter-en-2026/) ; Incom Services, « Guide location voiture VTC 2026 » (https://www.incom-services.com/guides-vtc/location-voiture-vtc) ; Ingpro, « Assurance VTC : prix 2026 » (mis à jour le 13 août 2026) (https://ingpro.fr/assurance-vtc-prix/) ; HiAssur VTC, « Prix d'une assurance VTC en 2026 », 18 août 2026 (https://hiassur-vtc.fr/blog/assurance-vtc-prix-2026).

@@ -1,0 +1,33 @@
+# Signale à Bing (protocole IndexNow) les pages ajoutées ou modifiées à chaque mise à jour de main.
+# Aucun secret : la clé IndexNow est publique par construction (fichier <clé>.txt à la racine du site,
+# écrit par outils/generer.py à partir de contenu/indexnow.json).
+# Le script attend que GitHub Pages serve la nouvelle version avant d'envoyer la liste.
+name: IndexNow (Bing)
+on:
+  push:
+    branches: [main]
+    paths: ["docs/**"]
+  workflow_dispatch:
+    inputs:
+      tout:
+        description: "Envoyer toutes les adresses du sitemap"
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Signaler les pages à IndexNow
+        env:
+          AVANT: ${{ github.event.before }}
+          APRES: ${{ github.sha }}
+        run: python3 outils/indexnow.py --attendre ${{ (github.event_name == 'workflow_dispatch' && inputs.tout) && '--tout' || '' }}

@@ -224,6 +224,12 @@ h1 .num-art{display:block;font-size:1rem;letter-spacing:.02em;margin-bottom:var(
 .retenir ul{margin-bottom:0}
 .concretement,.impact,.note,.correction{background:var(--doux);border-radius:var(--rayon-p);padding:var(--e4) 1.2rem;margin:0 0 var(--e4)}
 .concretement{margin:0}
+/* illustration d'un dossier : photo à la largeur de la colonne, légende et crédit dessous */
+.illustration{margin:var(--e6) 0}
+.illustration img{display:block;width:100%;height:auto;border-radius:var(--rayon);background:var(--doux)}
+.illustration figcaption{font-family:var(--sans);font-size:.875rem;line-height:1.45;color:var(--gris);margin-top:var(--e2)}
+.illustration .credit,.illustration figcaption a{color:var(--gris)}
+.col-texte > .illustration:first-child{margin-top:0}
 .officiel{padding:var(--e5) var(--e5) var(--e3);font-size:1.0625rem;line-height:1.6}
 .officiel p{margin:0 0 var(--e3)}
 .officiel-art + .officiel-art{border-top:1px solid var(--filet);margin-top:var(--e4);padding-top:var(--e2)}
