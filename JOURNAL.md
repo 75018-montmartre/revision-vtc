@@ -6,6 +6,15 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 28 octobre 2026, 15 h 47 · Question VTC (tâche du jeudi)
+
+- Question : « Quelles cotisations paie un chauffeur VTC en micro-entreprise ? »
+- Publié : https://revision-vtc.fr/questions/2026-10-28-cotisations-vtc-micro-entreprise.html
+- Réponse courte : en 2026, 21,2 % du chiffre d'affaires en cotisations sociales, plus 0,3 % de formation professionnelle et, hors Alsace-Moselle, 0,48 % de taxe de chambre de métiers, soit près de 22 % au total, calculés sur le chiffre d'affaires et non sur le bénéfice.
+- Sources : fiches officielles d'Entreprendre.Service-Public.fr et guide Urssaf (Légifrance toujours inaccessible depuis la tâche : sujet choisi pour reposer sur des sources lisibles).
+- Publication anticipée d'un jour (tâche lancée le mercredi).
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 28 octobre 2026, 15 h · Veille du wiki (tâche du mercredi)
 
 - **PROBLÈME : Légifrance toujours inaccessible (troisième passage de la journée).** Connexion directe refusée (403) à legifrance.gouv.fr, aux données ouvertes de la DILA, à l'API PISTE et à data.gouv.fr. L'outil web ne renvoie qu'un résumé d'une version datée du 20 septembre 2024 : impossible de comparer mot à mot.

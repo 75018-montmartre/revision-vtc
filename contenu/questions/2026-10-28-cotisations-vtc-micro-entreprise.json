@@ -1,0 +1,109 @@
+{
+ "date": "2026-10-28",
+ "slug": "cotisations-vtc-micro-entreprise",
+ "question": "Quelles cotisations paie un chauffeur VTC en micro-entreprise ?",
+ "reponse_courte": "En 2026, un chauffeur VTC en micro-entreprise paie 21,2 % de son chiffre d'affaires en cotisations sociales, plus 0,3 % pour la formation professionnelle et, hors Alsace-Moselle, 0,48 % de taxe pour la chambre de métiers : près de 22 % au total, calculés sur le chiffre d'affaires et non sur le bénéfice.",
+ "sections": [
+  {
+   "titre": "Un chauffeur VTC est un artisan pour l'Urssaf",
+   "texte": [
+    "Un chauffeur VTC qui travaille à son compte doit immatriculer son entreprise au Registre national des entreprises, dans le secteur des métiers et de l'artisanat.",
+    "L'administration range d'ailleurs le taxi et le VTC parmi les exemples d'activités artisanales.",
+    "Pour l'Urssaf, les artisans relèvent de la ligne « prestations de services commerciales ou artisanales (BIC) ». C'est elle qui fixe le taux de cotisations du chauffeur VTC en micro-entreprise."
+   ]
+  },
+  {
+   "titre": "Les trois prélèvements, taux par taux",
+   "texte": [
+    "1. Les cotisations sociales : 21,2 % du chiffre d'affaires pour une activité de prestation de services BIC.",
+    "2. La contribution à la formation professionnelle : 0,3 % du chiffre d'affaires annuel pour une activité artisanale (0,1 % pour une activité commerciale).",
+    "3. La taxe pour frais de chambre de métiers et de l'artisanat : 0,48 % du chiffre d'affaires pour une prestation de services, sauf dans le Bas-Rhin et le Haut-Rhin (0,65 %) et en Moselle (0,83 %). Les micro-entrepreneurs dont le chiffre d'affaires ne dépasse pas 5 000 € en sont exonérés.",
+    "Hors Alsace-Moselle, le total atteint donc 21,98 % du chiffre d'affaires, soit près de 22 %."
+   ]
+  },
+  {
+   "titre": "Calculées sur le chiffre d'affaires, pas sur le bénéfice",
+   "texte": [
+    "Le montant des cotisations est un pourcentage du chiffre d'affaires. Le carburant, la location ou l'entretien du véhicule ne viennent pas en déduction.",
+    "Le chiffre d'affaires se déclare en ligne chaque mois ou chaque trimestre, selon l'option choisie. La première déclaration se fait au plus tôt 90 jours après le début de l'activité.",
+    "Un mois ou un trimestre sans chiffre d'affaires ne donne lieu à aucune cotisation sociale."
+   ]
+  },
+  {
+   "titre": "Un exemple chiffré",
+   "texte": [
+    "Prenons un chauffeur installé hors Alsace-Moselle, qui déclare 3 000 € de chiffre d'affaires sur un mois, sans Acre ni versement libératoire.",
+    "Cotisations sociales : 3 000 € × 21,2 % = 636 €. Formation professionnelle : 3 000 € × 0,3 % = 9 €. Taxe de chambre de métiers : 3 000 € × 0,48 % = 14,40 €.",
+    "Total : 659,40 €, soit 21,98 % du chiffre d'affaires. Les frais du véhicule restent à payer sur les 2 340,60 € restants.",
+    "Avec le versement libératoire de l'impôt sur le revenu, il faut ajouter 1,7 % : 51 € de plus, soit 710,40 €."
+   ]
+  },
+  {
+   "titre": "Deux options qui changent le montant",
+   "texte": [
+    "Le versement libératoire permet de payer l'impôt sur le revenu en même temps que les cotisations, au taux de 1,7 % du chiffre d'affaires pour une prestation de services BIC. C'est une option, soumise à une condition de revenu fiscal de référence du foyer.",
+    "L'Acre réduit les cotisations sociales au début de l'activité. Pour une micro-entreprise créée depuis le 1er juillet 2026, le taux réduit est égal à 75 % du taux normal, soit 15,9 % au lieu de 21,2 %, jusqu'à la fin du 3e trimestre civil qui suit le début d'activité.",
+    "L'Acre n'est pas automatique : la demande se fait auprès de l'Urssaf dans les 60 jours qui suivent le début d'activité. Elle est réservée à certaines situations, par exemple les demandeurs d'emploi indemnisés, les bénéficiaires du RSA ou les jeunes de 18 à 25 ans, et à ceux qui n'en ont pas bénéficié au cours des trois années précédentes.",
+    "Le choix entre ces options dépend de votre situation. Pour un cas précis, faites le point avec un expert-comptable."
+   ]
+  }
+ ],
+ "a_retenir": [
+  "Un chauffeur VTC en micro-entreprise paie 21,2 % de son chiffre d'affaires en cotisations sociales en 2026.",
+  "S'y ajoutent 0,3 % de formation professionnelle et 0,48 % de taxe de chambre de métiers hors Alsace-Moselle, soit près de 22 % au total.",
+  "Les frais du véhicule ne se déduisent pas : les cotisations portent sur le chiffre d'affaires, pas sur le bénéfice."
+ ],
+ "wiki": [
+  "l3122-1"
+ ],
+ "fiches": [
+  ["B5.1", "Les cotisations du micro-entrepreneur"],
+  ["B1.2", "La micro-entreprise : un régime, pas une société"],
+  ["B1.6", "Déclarer son entreprise ; le rôle de la CMA"],
+  ["B4.2", "Le versement libératoire"],
+  ["B3.5", "Ce qui reste au micro-entrepreneur"]
+ ],
+ "sources": [
+  {
+   "nom": "Entreprendre.Service-Public.fr, « Cotisations sociales du micro-entrepreneur : ce qu'il faut savoir » (fiche F36232, vérifiée le 1er janvier 2026)",
+   "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F36232",
+   "date": "consultée le 28 octobre 2026"
+  },
+  {
+   "nom": "Entreprendre.Service-Public.fr, contribution à la formation professionnelle de l'entrepreneur individuel (fiche F23459, vérifiée le 1er janvier 2026)",
+   "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F23459",
+   "date": "consultée le 28 octobre 2026"
+  },
+  {
+   "nom": "Entreprendre.Service-Public.fr, taxes pour frais de chambre consulaire du micro-entrepreneur (fiche F37483, vérifiée le 24 décembre 2025)",
+   "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F37483",
+   "date": "consultée le 28 octobre 2026"
+  },
+  {
+   "nom": "Entreprendre.Service-Public.fr, « Devenir chauffeur de VTC » (fiche F31027, vérifiée le 12 août 2026)",
+   "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F31027",
+   "date": "consultée le 28 octobre 2026"
+  },
+  {
+   "nom": "Entreprendre.Service-Public.fr, déterminer la nature de l'activité d'une entreprise (fiche F32887)",
+   "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F32887",
+   "date": "consultée le 28 octobre 2026"
+  },
+  {
+   "nom": "Entreprendre.Service-Public.fr, aide à la création ou à la reprise d'entreprise, Acre (fiche F11677, vérifiée le 1er juillet 2026)",
+   "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F11677",
+   "date": "consultée le 28 octobre 2026"
+  },
+  {
+   "nom": "Entreprendre.Service-Public.fr, actualité « Acre : changement pour le dispositif d'aide » (11 février 2026, décret n° 2026-69 du 6 février 2026)",
+   "url": "https://entreprendre.service-public.gouv.fr/actualites/A18795",
+   "date": "consultée le 28 octobre 2026"
+  },
+  {
+   "nom": "Urssaf, guide « Vous souhaitez devenir auto-entrepreneur » (édition 2023) : artisans et prestations de services BIC, versement libératoire",
+   "url": "https://www.autoentrepreneur.urssaf.fr/portail/files/Guides/Urssaf-Guide-AutoEntrepreneur-metropole.pdf",
+   "date": "consulté le 28 octobre 2026"
+  }
+ ],
+ "verifie": "28 octobre 2026"
+}

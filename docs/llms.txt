@@ -115,6 +115,7 @@ Règles éditoriales : chaque information repose sur un texte officiel ou sur de
 
 ## Questions VTC
 
+- [Quelles cotisations paie un chauffeur VTC en micro-entreprise ?](https://revision-vtc.fr/questions/2026-10-28-cotisations-vtc-micro-entreprise.html): En 2026, un chauffeur VTC en micro-entreprise paie 21,2 % de son chiffre d'affaires en cotisations sociales, plus 0,3 % pour la formation professionnelle et, hors Alsace-Moselle, 0,48 % de taxe pour la chambre de métiers : près de 22 % au total, calculés sur le chiffre d'affaires et non sur le bénéfice.
 - [Combien de temps un VTC peut-il attendre devant une gare ou un aéroport ?](https://revision-vtc.fr/questions/2026-10-25-vtc-attente-gare-aeroport.html): Une heure au maximum avant l'heure de prise en charge demandée par le client, et uniquement pour un client qui a réservé. Sans réservation, un VTC n'a pas le droit de stationner aux abords d'une gare ou d'un aéroport pour attendre des clients.
 
 ## Derniers numéros de l'Actualité VTC
