@@ -31,8 +31,9 @@
 <a class="evitement" href="#contenu">Aller au contenu</a>
 <header class="entete">
   <div class="page">
-    <a class="nom-site" href="../index.html"><span class="marque" aria-hidden="true">R</span><span class="nom">Révision VTC<span class="sous">Le site du livre Machine à Réussite</span></span></a>
-    <nav class="nav" aria-label="Menu principal"><ul><li><a href="../index.html">Accueil</a></li><li><a href="../actualite/index.html">Actualité VTC</a></li><li><a href="../questions/index.html">Questions VTC</a></li><li><a href="../dossiers/index.html">Dossiers</a></li><li><a href="../simulateurs/index.html" aria-current="page">Simulateur</a></li><li><a href="../wiki/index.html">Textes du métier</a></li><li><a href="../mises-a-jour.html">Mises à jour du livre</a></li><li><a href="../examens.html">Examens blancs</a></li></ul></nav>
+    <a class="nom-site" href="../index.html"><span class="marque" aria-hidden="true">R</span><span class="nom">Révision VTC<span class="sous">Examen, réglementation et métier de chauffeur VTC</span></span></a>
+    <nav class="nav" aria-label="Menu principal"><ul><li><a href="../actualite/index.html">Actualité VTC</a></li><li><a href="../questions/index.html">Questions VTC</a></li><li><a href="../dossiers/index.html">Dossiers</a></li><li><a href="../wiki/index.html">Textes du métier</a></li><li><a href="../simulateurs/index.html" aria-current="page">Simulateur</a></li></ul></nav>
+    <details class="menu-livre"><summary>Le livre</summary><ul><li><a href="../mises-a-jour.html">Mises à jour du livre</a></li><li><a href="../examens.html">Examens blancs n° 4 et 5</a></li><li><a href="https://www.amazon.fr/dp/B0HPCMRKDR">Acheter le livre sur Amazon</a></li></ul></details>
   </div>
 </header>
 <main id="contenu" tabindex="-1">
@@ -41,15 +42,37 @@
 <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="../index.html">Accueil</a></li><li><a href="index.html">Simulateurs</a></li></ol></nav>
     <p class="surtitre">Simulateur gratuit</p>
     <h1>Simulateur VTC : coût de revient de la voiture et revenu net</h1>
-    <p class="chapeau">Combien vous coûte votre voiture au kilomètre, et combien il vous reste chaque mois une fois payés la commission, les cotisations, la voiture et les frais ? Pour un chauffeur VTC en micro-entreprise, avec des hypothèses sourcées et modifiables.</p>
-    <p class="meta">Hypothèses vérifiées le 28 octobre 2026 · calcul fait dans votre navigateur, rien n’est envoyé</p>
+    <p class="chapeau">Les plateformes vous versent de l’argent chaque semaine, mais ce n’est pas votre salaire : il faut encore payer la voiture, le carburant, l’assurance et les cotisations. Ce simulateur gratuit fait toutes ces soustractions pour vous et vous montre ce qui vous reste vraiment, en euros par mois.</p>
+    <p class="meta">Pour les chauffeurs VTC en micro-entreprise · hypothèses vérifiées le 28 octobre 2026 · calcul fait dans votre navigateur, rien n’est envoyé</p>
   </div>
 </header>
   <div class="page corps-page mp-cote">
 
     <div class="deux-col"><div class="col-texte">
+    <section aria-labelledby="mode-emploi">
+      <h2 id="mode-emploi">Comment ça marche</h2>
+      <ol class="etapes">
+        <li><b>Vous décrivez votre activité</b>Ce que les plateformes vous versent par semaine, le nombre de semaines où vous travaillez dans l’année et les kilomètres que vous parcourez.</li>
+        <li><b>Vous décrivez votre voiture et vos frais</b>Louée à la semaine, en location longue durée ou achetée ; essence, gazole ou électrique ; votre assurance et vos autres dépenses (téléphone, lavage, péages…).</li>
+        <li><b>Le simulateur fait le calcul et vous répond</b>Il retire les cotisations, le coût de la voiture et les frais obligatoires du métier (carte professionnelle, registre, visite médicale), puis affiche :
+          <ul>
+            <li>votre revenu net, par mois et par an ;</li>
+            <li>ce que vous coûte la voiture à chaque kilomètre ;</li>
+            <li>le montant à faire chaque semaine pour ne pas travailler à perte.</li>
+          </ul></li>
+      </ol>
+      <p>Les cases sont déjà remplies avec un exemple réaliste, dont chaque valeur est sourcée : changez seulement ce que vous connaissez, le résultat se met à jour tout seul.</p>
+      <div class="note">
+        <dl>
+          <dt>Montant versé</dt><dd>Ce que la plateforme vous vire, sa commission déjà retirée. C’est le chiffre de vos relevés Uber, Bolt ou Heetch.</dd>
+          <dt>Coût de revient de la voiture</dt><dd>Tout ce que coûte la voiture sur l’année (loyer ou achat, énergie, assurance, entretien), divisé par les kilomètres parcourus.</dd>
+          <dt>Seuil de rentabilité</dt><dd>Le montant versé par semaine en dessous duquel vos frais dépassent ce que vous gagnez.</dd>
+          <dt>Revenu net</dt><dd>Ce qui vous reste pour vivre, avant l’impôt sur le revenu.</dd>
+        </dl>
+      </div>
+    </section>
     <section class="en-clair" aria-labelledby="en-bref">
-      <h2 id="en-bref">La réponse en bref</h2>
+      <h2 id="en-bref">Un exemple pour commencer</h2>
       <p>Exemple : un chauffeur à qui les plateformes versent 1 000 € par semaine pendant 47 semaines, avec une hybride louée 280 € par semaine et 60 000 km par an, garde environ 983 € par mois avant impôt si ses cotisations portent sur le prix payé par les clients, et 1 270 € si elles portent sur le montant versé. Sa voiture lui coûte 0,36 € par kilomètre, carburant et assurance compris.</p>
       <p>La location, le carburant et les cotisations pèsent le plus. Les sommes versées par les plateformes ne sont pas un revenu : elles doivent d’abord couvrir tous ces frais.</p>
     </section>
@@ -172,6 +195,7 @@
     <p class="copyright">© Benjamin Blondin, 2026</p>
   </div>
 </footer>
+<script src="../js/site.js" defer></script>
 <script id="simu-donnees" type="application/json">{"valeurs": {"verse_semaine": {"valeur": 1000, "exemple": true}, "commission": {"valeur": 25, "sources": ["uber", "bolt", "clf", "keobiz"]}, "semaines": {"valeur": 47, "exemple": true}, "heures": {"valeur": 0, "exemple": true}, "km_an": {"valeur": 60000, "sources": ["keobiz", "assurup"]}, "loyer_semaine": {"valeur": 280, "sources": ["citycar", "incom"]}, "loyer_mois": {"valeur": 800, "sources": ["dossier1"]}, "prix_achat": {"valeur": 34200, "sources": ["toyota"]}, "duree_ans": {"valeur": 5, "exemple": true}, "revente": {"valeur": 0, "exemple": true}, "assurance_rc": {"valeur": 600, "sources": ["ingpro", "hiassur"]}, "assurance_complete": {"valeur": 4100, "sources": ["ingpro", "hiassur"]}, "entretien_mois": {"valeur": 0, "exemple": true}, "autres_mois": {"valeur": 0, "exemple": true}, "prix_e10": {"valeur": 2.116, "date": "23 octobre 2026", "sources": ["dgec"]}, "prix_gazole": {"valeur": 2.352, "date": "23 octobre 2026", "sources": ["dgec"]}, "conso_thermique": {"valeur": 4.9, "sources": ["ademe_corolla"]}, "prix_kwh": {"valeur": 0.2, "sources": ["selectra", "fournisseurs"]}, "conso_elec": {"valeur": 13.6, "sources": ["ademe_model3"]}, "taux_cotisations": {"valeur": 21.2, "sources": ["sp_cotisations"]}, "taux_formation": {"valeur": 0.3, "sources": ["sp_formation"]}, "taux_cma": {"valeur": 0.48, "bas_haut_rhin": 0.65, "moselle": 0.83, "sources": ["sp_cma"]}, "taux_vl": {"valeur": 1.7, "sources": ["sp_fiscal"]}, "abattement": {"valeur": 50, "sources": ["sp_fiscal"]}, "reglementaire_5ans": {"valeur": 263.6, "detail": "carte 57,60 € + registre 170 € + visite médicale 36 €", "sources": ["dossier1"]}, "seuil_tva": {"valeur": 37500, "majore": 41250, "sources": ["sp_tva"]}, "seuil_micro": {"valeur": 83600, "sources": ["sp_micro"]}}}</script>
 <script src="../js/simulateur.js"></script>
 <script data-goatcounter="https://revision-vtc.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>

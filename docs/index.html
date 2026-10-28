@@ -30,20 +30,63 @@
 <a class="evitement" href="#contenu">Aller au contenu</a>
 <header class="entete">
   <div class="page">
-    <a class="nom-site" href="index.html"><span class="marque" aria-hidden="true">R</span><span class="nom">Révision VTC<span class="sous">Le site du livre Machine à Réussite</span></span></a>
-    <nav class="nav" aria-label="Menu principal"><ul><li><a href="index.html" aria-current="page">Accueil</a></li><li><a href="actualite/index.html">Actualité VTC</a></li><li><a href="questions/index.html">Questions VTC</a></li><li><a href="dossiers/index.html">Dossiers</a></li><li><a href="simulateurs/index.html">Simulateur</a></li><li><a href="wiki/index.html">Textes du métier</a></li><li><a href="mises-a-jour.html">Mises à jour du livre</a></li><li><a href="examens.html">Examens blancs</a></li></ul></nav>
+    <a class="nom-site" href="index.html" aria-current="page"><span class="marque" aria-hidden="true">R</span><span class="nom">Révision VTC<span class="sous">Examen, réglementation et métier de chauffeur VTC</span></span></a>
+    <nav class="nav" aria-label="Menu principal"><ul><li><a href="actualite/index.html">Actualité VTC</a></li><li><a href="questions/index.html">Questions VTC</a></li><li><a href="dossiers/index.html">Dossiers</a></li><li><a href="wiki/index.html">Textes du métier</a></li><li><a href="simulateurs/index.html">Simulateur</a></li></ul></nav>
+    <details class="menu-livre"><summary>Le livre</summary><ul><li><a href="mises-a-jour.html">Mises à jour du livre</a></li><li><a href="examens.html">Examens blancs n° 4 et 5</a></li><li><a href="https://www.amazon.fr/dp/B0HPCMRKDR">Acheter le livre sur Amazon</a></li></ul></details>
   </div>
 </header>
 <main id="contenu" tabindex="-1">
-    <section class="une" aria-labelledby="titre-une">
-      <div class="page large une-grille">
-        <div class="une-texte">
-          <p class="surtitre">Le site du livre <i>Machine à Réussite</i></p>
-          <h1 id="titre-une">Réussir l’examen VTC avec des règles à jour</h1>
-          <p class="chapeau">Le livre a été vérifié en octobre 2026. Ici, il continue : l’actualité du métier chaque semaine, les règles qui changent, et deux examens blancs en ligne.</p>
-          <div class="actions"><a class="bouton clair" href="https://www.amazon.fr/dp/B0HPCMRKDR">Acheter le livre sur Amazon</a><a class="bouton contour" href="actualite/index.html">Lire l’Actualité VTC</a></div>
+    <section class="une" aria-label="À la une">
+      <div class="page large">
+        <h1 class="visuellement-cache">Révision VTC : l’examen VTC, la réglementation et le métier de chauffeur VTC expliqués, sources à l’appui</h1>
+        <div class="carrousel" aria-roledescription="carrousel" aria-label="À la une : le site, le simulateur, le livre">
+          <div class="diapos" id="diapos">
+            <div class="diapo diapo-site active" id="diapo-1" role="group" aria-roledescription="diapositive" aria-label="1 sur 3 : le site">
+              <div class="diapo-texte">
+                <p class="surtitre">Gratuit · sans inscription · sans publicité</p>
+                <h2 id="titre-une" class="sans-filet">Examen, réglementation, revenus : le métier de chauffeur VTC expliqué, sources à l’appui</h2>
+                <p class="chapeau">Vous préparez l’examen, vous roulez déjà ou vous pensez vous lancer ? Révision VTC répond aux questions du métier à partir des textes officiels, et les tient à jour chaque semaine.</p>
+                <div class="actions"><a class="bouton clair" href="actualite/index.html">Lire l’Actualité VTC</a><a class="bouton contour" href="wiki/index.html">Les textes du métier</a></div>
+              </div>
+              <ul class="garanties">
+                <li><b>78 articles de loi</b> du Code des transports et des arrêtés, recopiés de Légifrance et expliqués en clair</li>
+                <li><b>Chaque chiffre sourcé</b> et daté : texte officiel, ou deux sources qui concordent</li>
+                <li><b>Chaque semaine</b> l’actualité du métier le lundi, une question-réponse le jeudi</li>
+              </ul>
+            </div>
+            <div class="diapo diapo-simu" id="diapo-2" role="group" aria-roledescription="diapositive" aria-label="2 sur 3 : le simulateur">
+              <div class="diapo-texte">
+                <p class="surtitre">Outil gratuit</p>
+                <h2 class="sans-filet">Combien vous reste-t-il vraiment à la fin du mois ?</h2>
+                <p class="chapeau">Indiquez ce que vous versent les plateformes : le simulateur retire la commission, les cotisations, la voiture et les frais, et vous donne votre revenu net, le coût de votre voiture au kilomètre et le montant à faire pour ne pas perdre d’argent.</p>
+                <div class="actions"><a class="bouton" href="simulateurs/cout-revient-revenu-net-vtc.html">Faire ma simulation</a><a class="bouton second" href="dossiers/cout-pour-devenir-chauffeur-vtc.html">Le budget pour se lancer</a></div>
+              </div>
+              <div class="exemple-simu">
+                <p class="meta">Exemple, avec les valeurs du simulateur</p>
+                <p class="exemple-verse">1 000 € versés par semaine par les plateformes</p>
+                <p class="exemple-net"><span class="resultat">983 €</span> nets par mois, avant impôt</p>
+                <p class="meta">Hybride louée 280 € par semaine, 60 000 km et 47 semaines par an ; voiture à 0,36 € le kilomètre.</p>
+              </div>
+            </div>
+            <div class="diapo diapo-livre" id="diapo-3" role="group" aria-roledescription="diapositive" aria-label="3 sur 3 : le livre">
+              <div class="diapo-texte">
+                <p class="surtitre">Le livre <i>Machine à Réussite</i></p>
+                <h2 class="sans-filet">Réussir l’examen VTC 2027 avec des règles à jour</h2>
+                <p class="chapeau">213 fiches de cours, 1 191 questions corrigées et 3 examens blancs, vérifiés en octobre 2026. Les lecteurs retrouvent ici les mises à jour du livre et deux examens blancs de plus.</p>
+                <div class="actions"><a class="bouton clair" href="https://www.amazon.fr/dp/B0HPCMRKDR">Voir le livre sur Amazon</a><a class="bouton contour" href="mises-a-jour.html">Les mises à jour du livre</a></div>
+              </div>
+              <img class="une-couv" src="couverture.jpg" width="408" height="528" alt="Couverture du livre Machine à Réussite · Examen VTC 2027, de Benjamin Blondin">
+            </div>
+          </div>
+          <div class="carrousel-commandes" hidden>
+            <ul class="carrousel-choix" aria-label="Choisir la diapositive">
+              <li><button type="button" aria-controls="diapo-1" aria-current="true"><span>1</span> Le site</button></li>
+              <li><button type="button" aria-controls="diapo-2"><span>2</span> Le simulateur</button></li>
+              <li><button type="button" aria-controls="diapo-3"><span>3</span> Le livre</button></li>
+            </ul>
+            <button type="button" class="carrousel-pause" aria-controls="diapos">Mettre en pause</button>
+          </div>
         </div>
-        <img class="une-couv" src="couverture.jpg" width="408" height="528" alt="Couverture du livre Machine à Réussite · Examen VTC 2027, de Benjamin Blondin">
       </div>
     </section>
     <section class="bloc" aria-labelledby="titre-rubriques">
@@ -53,10 +96,10 @@
           
         </div>
         <ul class="trois">
-          <li><p class="surtitre">Chaque semaine</p><h3><a href="actualite/index.html">Actualité VTC</a></h3><p>Textes officiels, examen, plateformes, cotisations : ce qui change pour vous, toujours avec ses sources.</p></li>
+          <li><p class="surtitre">Chaque lundi</p><h3><a href="actualite/index.html">Actualité VTC</a></h3><p>Textes officiels, examen, plateformes, cotisations : ce qui change pour vous, toujours avec ses sources.</p></li>
           <li><p class="surtitre">L'essentiel du droit</p><h3><a href="wiki/index.html">Textes du métier</a></h3><p>Le droit du VTC article par article : le texte officiel, expliqué en clair avec un exemple.</p></li>
-          <li><p class="surtitre">Après l'impression</p><h3><a href="mises-a-jour.html">Mises à jour du livre</a></h3><p>Chaque règle qui change, avec sa date, la fiche concernée et le texte qui la fonde.</p></li>
-          <li><p class="surtitre">Réservé aux lecteurs</p><h3><a href="examens.html">Examens blancs n° 4 et 5</a></h3><p>À l’écran, chronométrés et corrigés, ou à imprimer.</p></li>
+          <li><p class="surtitre">À fond</p><h3><a href="dossiers/index.html">Dossiers</a></h3><p>Un sujet du métier traité en détail, comme le budget pour se lancer, avec chaque chiffre sourcé et daté.</p></li>
+          <li><p class="surtitre">Outil gratuit</p><h3><a href="simulateurs/index.html">Simulateur</a></h3><p>Votre revenu net et le coût de votre voiture au kilomètre, calculés avec vos propres chiffres.</p></li>
         </ul>
       </div>
     </section>
@@ -112,6 +155,7 @@
     <p class="copyright">© Benjamin Blondin, 2026</p>
   </div>
 </footer>
+<script src="js/site.js" defer></script>
 <script data-goatcounter="https://revision-vtc.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

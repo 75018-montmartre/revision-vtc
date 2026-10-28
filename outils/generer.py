@@ -11,7 +11,7 @@ from email.utils import format_datetime
 
 ICI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, ICI)
-from gabarit import page, achat
+from gabarit import page, achat, LIVRE
 
 RACINE = os.path.dirname(ICI)
 DOCS = os.path.join(RACINE, "docs")
@@ -133,25 +133,72 @@ def accueil(nums, qs=()):
         </article>
       </div>
     </section>'''
-    corps = f'''    <section class="une" aria-labelledby="titre-une">
-      <div class="page large une-grille">
-        <div class="une-texte">
-          <p class="surtitre">Le site du livre <i>Machine à Réussite</i></p>
-          <h1 id="titre-une">Réussir l’examen VTC avec des règles à jour</h1>
-          <p class="chapeau">{ty("Le livre a été vérifié en octobre 2026. Ici, il continue : l'actualité du métier chaque semaine, les règles qui changent, et deux examens blancs en ligne.")}</p>
-          <div class="actions">{achat("bouton clair")}<a class="bouton contour" href="actualite/index.html">Lire l’Actualité VTC</a></div>
+    # exemple du simulateur (mêmes valeurs par défaut que la page du simulateur, base prudente)
+    sim = lire_simulateur()
+    ex = calcul_simulateur(sim, base="clients", **defauts_simulateur(sim))
+    n_wiki = len(lire_wiki()["articles"])
+    amazon = f'<a class="bouton clair" href="{LIVRE["amazon"]}">Voir le livre sur Amazon</a>' if LIVRE.get("amazon") else achat("bouton clair")
+    corps = f'''    <section class="une" aria-label="À la une">
+      <div class="page large">
+        <h1 class="visuellement-cache">{ty("Révision VTC : l'examen VTC, la réglementation et le métier de chauffeur VTC expliqués, sources à l'appui")}</h1>
+        <div class="carrousel" aria-roledescription="carrousel" aria-label="À la une : le site, le simulateur, le livre">
+          <div class="diapos" id="diapos">
+            <div class="diapo diapo-site active" id="diapo-1" role="group" aria-roledescription="diapositive" aria-label="1 sur 3 : le site">
+              <div class="diapo-texte">
+                <p class="surtitre">Gratuit · sans inscription · sans publicité</p>
+                <h2 id="titre-une" class="sans-filet">{ty("Examen, réglementation, revenus : le métier de chauffeur VTC expliqué, sources à l'appui")}</h2>
+                <p class="chapeau">{ty("Vous préparez l'examen, vous roulez déjà ou vous pensez vous lancer ? Révision VTC répond aux questions du métier à partir des textes officiels, et les tient à jour chaque semaine.")}</p>
+                <div class="actions"><a class="bouton clair" href="actualite/index.html">Lire l’Actualité VTC</a><a class="bouton contour" href="wiki/index.html">Les textes du métier</a></div>
+              </div>
+              <ul class="garanties">
+                <li><b>{n_wiki} articles de loi</b> {ty("du Code des transports et des arrêtés, recopiés de Légifrance et expliqués en clair")}</li>
+                <li><b>{ty("Chaque chiffre sourcé")}</b> {ty("et daté : texte officiel, ou deux sources qui concordent")}</li>
+                <li><b>{ty("Chaque semaine")}</b> {ty("l'actualité du métier le lundi, une question-réponse le jeudi")}</li>
+              </ul>
+            </div>
+            <div class="diapo diapo-simu" id="diapo-2" role="group" aria-roledescription="diapositive" aria-label="2 sur 3 : le simulateur">
+              <div class="diapo-texte">
+                <p class="surtitre">Outil gratuit</p>
+                <h2 class="sans-filet">{ty("Combien vous reste-t-il vraiment à la fin du mois ?")}</h2>
+                <p class="chapeau">{ty("Indiquez ce que vous versent les plateformes : le simulateur retire la commission, les cotisations, la voiture et les frais, et vous donne votre revenu net, le coût de votre voiture au kilomètre et le montant à faire pour ne pas perdre d'argent.")}</p>
+                <div class="actions"><a class="bouton" href="simulateurs/{sim["slug"]}.html">Faire ma simulation</a><a class="bouton second" href="dossiers/cout-pour-devenir-chauffeur-vtc.html">Le budget pour se lancer</a></div>
+              </div>
+              <div class="exemple-simu">
+                <p class="meta">Exemple, avec les valeurs du simulateur</p>
+                <p class="exemple-verse">{ty("1 000 € versés par semaine par les plateformes")}</p>
+                <p class="exemple-net"><span class="resultat">{_euros(ex["net"] / 12)}</span> {ty("nets par mois, avant impôt")}</p>
+                <p class="meta">{ty(f"Hybride louée 280 € par semaine, 60 000 km et 47 semaines par an ; voiture à {_euros(ex['km'], True)} le kilomètre.")}</p>
+              </div>
+            </div>
+            <div class="diapo diapo-livre" id="diapo-3" role="group" aria-roledescription="diapositive" aria-label="3 sur 3 : le livre">
+              <div class="diapo-texte">
+                <p class="surtitre">Le livre <i>Machine à Réussite</i></p>
+                <h2 class="sans-filet">{ty("Réussir l'examen VTC 2027 avec des règles à jour")}</h2>
+                <p class="chapeau">{ty("213 fiches de cours, 1 191 questions corrigées et 3 examens blancs, vérifiés en octobre 2026. Les lecteurs retrouvent ici les mises à jour du livre et deux examens blancs de plus.")}</p>
+                <div class="actions">{amazon}<a class="bouton contour" href="mises-a-jour.html">Les mises à jour du livre</a></div>
+              </div>
+              <img class="une-couv" src="couverture.jpg" width="408" height="528" alt="Couverture du livre Machine à Réussite · Examen VTC 2027, de Benjamin Blondin">
+            </div>
+          </div>
+          <div class="carrousel-commandes" hidden>
+            <ul class="carrousel-choix" aria-label="Choisir la diapositive">
+              <li><button type="button" aria-controls="diapo-1" aria-current="true"><span>1</span> Le site</button></li>
+              <li><button type="button" aria-controls="diapo-2"><span>2</span> Le simulateur</button></li>
+              <li><button type="button" aria-controls="diapo-3"><span>3</span> Le livre</button></li>
+            </ul>
+            <button type="button" class="carrousel-pause" aria-controls="diapos">Mettre en pause</button>
+          </div>
         </div>
-        <img class="une-couv" src="couverture.jpg" width="408" height="528" alt="Couverture du livre Machine à Réussite · Examen VTC 2027, de Benjamin Blondin">
       </div>
     </section>
     <section class="bloc" aria-labelledby="titre-rubriques">
       <div class="page large">
         {tete_bloc("titre-rubriques", "Le site", "Quatre rubriques, une seule exigence : des sources vérifiées")}
         <ul class="trois">
-          <li><p class="surtitre">Chaque semaine</p><h3><a href="actualite/index.html">Actualité VTC</a></h3><p>{ty("Textes officiels, examen, plateformes, cotisations : ce qui change pour vous, toujours avec ses sources.")}</p></li>
+          <li><p class="surtitre">Chaque lundi</p><h3><a href="actualite/index.html">Actualité VTC</a></h3><p>{ty("Textes officiels, examen, plateformes, cotisations : ce qui change pour vous, toujours avec ses sources.")}</p></li>
           <li><p class="surtitre">L'essentiel du droit</p><h3><a href="wiki/index.html">Textes du métier</a></h3><p>{ty("Le droit du VTC article par article : le texte officiel, expliqué en clair avec un exemple.")}</p></li>
-          <li><p class="surtitre">Après l'impression</p><h3><a href="mises-a-jour.html">Mises à jour du livre</a></h3><p>{ty("Chaque règle qui change, avec sa date, la fiche concernée et le texte qui la fonde.")}</p></li>
-          <li><p class="surtitre">Réservé aux lecteurs</p><h3><a href="examens.html">Examens blancs n° 4 et 5</a></h3><p>{ty("À l'écran, chronométrés et corrigés, ou à imprimer.")}</p></li>
+          <li><p class="surtitre">À fond</p><h3><a href="dossiers/index.html">Dossiers</a></h3><p>{ty("Un sujet du métier traité en détail, comme le budget pour se lancer, avec chaque chiffre sourcé et daté.")}</p></li>
+          <li><p class="surtitre">Outil gratuit</p><h3><a href="simulateurs/index.html">Simulateur</a></h3><p>{ty("Votre revenu net et le coût de votre voiture au kilomètre, calculés avec vos propres chiffres.")}</p></li>
         </ul>
       </div>
     </section>{dernier}
@@ -840,7 +887,7 @@ def dossiers(ds, w, qs=()):
     <div class="deux-col"><div class="col-texte">
     {illustration(d["image"], premiere=True) if d.get("image") else ""}
     <section class="en-clair" aria-labelledby="en-bref">
-      <h2 id="en-bref">La réponse en bref</h2>
+      <h2 id="en-bref">Un exemple pour commencer</h2>
       {"".join(f"<p>{liens(ty(p))}</p>" for p in d["en_bref"])}
     </section>{secs}
     <section class="retenir" aria-labelledby="retenir"><h2 id="retenir">À retenir</h2><ul>{"".join(f"<li>{liens(ty(x))}</li>" for x in d["a_retenir"])}</ul></section>
@@ -922,6 +969,14 @@ def calcul_simulateur(s, **e):
     net = verse - social - voiture - regl
     return {"verse": verse, "prix": prix, "commission": prix - verse, "ca": ca, "taux": taux, "social": social, "loyer": loyer,
             "energie": energie, "assurance": e["assurance"], "voiture": voiture, "regl": regl, "net": net, "km": voiture / e["km_an"]}
+
+
+def defauts_simulateur(s):
+    """Valeurs par défaut de l'exemple (location à la semaine, hybride essence), reprises par la page du simulateur et l'accueil."""
+    V = s["valeurs"]
+    return dict(verse_semaine=V["verse_semaine"]["valeur"], semaines=V["semaines"]["valeur"], commission=V["commission"]["valeur"],
+                loyer_semaine=V["loyer_semaine"]["valeur"], km_an=V["km_an"]["valeur"], conso=V["conso_thermique"]["valeur"],
+                prix_energie=V["prix_e10"]["valeur"], assurance=V["assurance_rc"]["valeur"])
 
 
 def _euros(x, cts=False):
@@ -1021,9 +1076,7 @@ def simulateur(ds):
     </section>'''
 
     # exemple chiffré avec les valeurs par défaut (location à la semaine, hybride essence)
-    defaut = dict(verse_semaine=V["verse_semaine"]["valeur"], semaines=V["semaines"]["valeur"], commission=V["commission"]["valeur"],
-                  loyer_semaine=V["loyer_semaine"]["valeur"], km_an=V["km_an"]["valeur"], conso=V["conso_thermique"]["valeur"],
-                  prix_energie=V["prix_e10"]["valeur"], assurance=V["assurance_rc"]["valeur"])
+    defaut = defauts_simulateur(s)
     a = calcul_simulateur(s, base="clients", **defaut)
     b = calcul_simulateur(s, base="verse", **defaut)
     m = lambda x: _euros(x / 12)
@@ -1069,11 +1122,33 @@ def simulateur(ds):
     corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Simulateurs</a></li></ol></nav>
     <p class="surtitre">Simulateur gratuit</p>
     <h1>{ty("Simulateur VTC : coût de revient de la voiture et revenu net")}</h1>
-    <p class="chapeau">{ty("Combien vous coûte votre voiture au kilomètre, et combien il vous reste chaque mois une fois payés la commission, les cotisations, la voiture et les frais ? Pour un chauffeur VTC en micro-entreprise, avec des hypothèses sourcées et modifiables.")}</p>
-    <p class="meta">{ty("Hypothèses vérifiées le " + s["verifie"] + " · calcul fait dans votre navigateur, rien n'est envoyé")}</p>
+    <p class="chapeau">{ty("Les plateformes vous versent de l'argent chaque semaine, mais ce n'est pas votre salaire : il faut encore payer la voiture, le carburant, l'assurance et les cotisations. Ce simulateur gratuit fait toutes ces soustractions pour vous et vous montre ce qui vous reste vraiment, en euros par mois.")}</p>
+    <p class="meta">{ty("Pour les chauffeurs VTC en micro-entreprise · hypothèses vérifiées le " + s["verifie"] + " · calcul fait dans votre navigateur, rien n'est envoyé")}</p>
     <div class="deux-col"><div class="col-texte">
+    <section aria-labelledby="mode-emploi">
+      <h2 id="mode-emploi">{ty("Comment ça marche")}</h2>
+      <ol class="etapes">
+        <li><b>{ty("Vous décrivez votre activité")}</b>{ty("Ce que les plateformes vous versent par semaine, le nombre de semaines où vous travaillez dans l'année et les kilomètres que vous parcourez.")}</li>
+        <li><b>{ty("Vous décrivez votre voiture et vos frais")}</b>{ty("Louée à la semaine, en location longue durée ou achetée ; essence, gazole ou électrique ; votre assurance et vos autres dépenses (téléphone, lavage, péages…).")}</li>
+        <li><b>{ty("Le simulateur fait le calcul et vous répond")}</b>{ty("Il retire les cotisations, le coût de la voiture et les frais obligatoires du métier (carte professionnelle, registre, visite médicale), puis affiche :")}
+          <ul>
+            <li>{ty("votre revenu net, par mois et par an ;")}</li>
+            <li>{ty("ce que vous coûte la voiture à chaque kilomètre ;")}</li>
+            <li>{ty("le montant à faire chaque semaine pour ne pas travailler à perte.")}</li>
+          </ul></li>
+      </ol>
+      <p>{ty("Les cases sont déjà remplies avec un exemple réaliste, dont chaque valeur est sourcée : changez seulement ce que vous connaissez, le résultat se met à jour tout seul.")}</p>
+      <div class="note">
+        <dl>
+          <dt>{ty("Montant versé")}</dt><dd>{ty("Ce que la plateforme vous vire, sa commission déjà retirée. C'est le chiffre de vos relevés Uber, Bolt ou Heetch.")}</dd>
+          <dt>{ty("Coût de revient de la voiture")}</dt><dd>{ty("Tout ce que coûte la voiture sur l'année (loyer ou achat, énergie, assurance, entretien), divisé par les kilomètres parcourus.")}</dd>
+          <dt>{ty("Seuil de rentabilité")}</dt><dd>{ty("Le montant versé par semaine en dessous duquel vos frais dépassent ce que vous gagnez.")}</dd>
+          <dt>{ty("Revenu net")}</dt><dd>{ty("Ce qui vous reste pour vivre, avant l'impôt sur le revenu.")}</dd>
+        </dl>
+      </div>
+    </section>
     <section class="en-clair" aria-labelledby="en-bref">
-      <h2 id="en-bref">La réponse en bref</h2>
+      <h2 id="en-bref">Un exemple pour commencer</h2>
       <p>{ty(f"Exemple : un chauffeur à qui les plateformes versent 1 000 € par semaine pendant 47 semaines, avec une hybride louée 280 € par semaine et 60 000 km par an, garde environ {_euros(a['net'] / 12)} par mois avant impôt si ses cotisations portent sur le prix payé par les clients, et {_euros(b['net'] / 12)} si elles portent sur le montant versé. Sa voiture lui coûte {_euros(a['km'], True)} par kilomètre, carburant et assurance compris.")}</p>
       <p>{ty("La location, le carburant et les cotisations pèsent le plus. Les sommes versées par les plateformes ne sont pas un revenu : elles doivent d'abord couvrir tous ces frais.")}</p>
     </section>
@@ -1127,7 +1202,7 @@ def simulateur(ds):
 
     liste = f'''<ul class="questions"><li><span class="meta">{ty("Mis à jour le " + s["verifie"])}</span><a href="{s["slug"]}.html">{ty(titre)}</a><p>{ty("Le coût de revient de votre voiture au kilomètre et ce qu'il vous reste chaque mois, après commission, cotisations, location, carburant et assurance.")}</p></li></ul>'''
     corps = f'''    <h1>Simulateurs VTC</h1>
-    <p class="chapeau">{ty("Des calculateurs gratuits pour chiffrer votre activité de chauffeur VTC avec vos propres chiffres. Chaque hypothèse par défaut est sourcée et datée ; le calcul se fait dans votre navigateur.")}</p>
+    <p class="chapeau">{ty("Avant de louer une voiture, de vous lancer ou de changer de plateforme, chiffrez ce que votre activité de chauffeur VTC vous rapporte vraiment. Vous saisissez vos propres chiffres ; chaque valeur proposée par défaut est sourcée et datée, et le calcul se fait dans votre navigateur.")}</p>
     <p>{ty("Pour comprendre les montants avant de les saisir, lisez les")} <a href="../dossiers/index.html">dossiers</a> {ty("; pour les règles du métier, les")} <a href="../wiki/index.html">textes du métier</a>.</p>
     {liste}'''
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Simulateurs VTC", "url": SITE + "simulateurs/", "inLanguage": "fr",

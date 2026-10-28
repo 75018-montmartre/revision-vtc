@@ -12,8 +12,11 @@ def achat(classe="bouton", texte="Acheter le livre sur Amazon"):
         return f'<a class="{classe}" href="{LIVRE["amazon"]}">{texte}</a>'
     return f'<span class="{classe} bientot">Bientôt disponible sur Amazon</span>'
 
-NAV = [("index.html", "Accueil", "accueil"), ("actualite/index.html", "Actualité VTC", "actualite"), ("questions/index.html", "Questions VTC", "questions"), ("dossiers/index.html", "Dossiers", "dossiers"), ("simulateurs/index.html", "Simulateur", "simulateurs"),
-       ("wiki/index.html", "Textes du métier", "textes"), ("mises-a-jour.html", "Mises à jour du livre", "maj"), ("examens.html", "Examens blancs", "examens")]
+# menu principal : les cinq rubriques du site ; le livre a son propre menu, à droite (MENU_LIVRE).
+# L'accueil n'est plus dans le menu : le logo y mène (et le fil d'Ariane de chaque page).
+NAV = [("actualite/index.html", "Actualité VTC", "actualite"), ("questions/index.html", "Questions VTC", "questions"), ("dossiers/index.html", "Dossiers", "dossiers"),
+       ("wiki/index.html", "Textes du métier", "textes"), ("simulateurs/index.html", "Simulateur", "simulateurs")]
+MENU_LIVRE = [("mises-a-jour.html", "Mises à jour du livre", "maj"), ("examens.html", "Examens blancs n° 4 et 5", "examens")]
 
 
 SURTITRES = {"actualite": "Chaque lundi", "questions": "Chaque jeudi", "dossiers": "Dossiers VTC", "simulateurs": "Simulateur gratuit", "textes": "Réglementation VTC",
@@ -60,9 +63,12 @@ def page(titre, corps, actif=None, racine="", description="", noindex=False, scr
     if jsonld:
         scripts_tete += "".join('<script type="application/ld+json">' + _json.dumps(j, ensure_ascii=False).replace("</", "<\\/") + "</script>\n" for j in jsonld)
     tete, reste, mp = ('', corps, '') if brut else _tete_page(corps, actif, racine)
-    nav = "".join(
-        f'<li><a href="{racine}{href}"' + (' aria-current="page"' if cle == actif else "") + f">{nom}</a></li>"
-        for href, nom, cle in NAV)
+    courant = lambda cle: ' aria-current="page"' if cle == actif else ""
+    nav = "".join(f'<li><a href="{racine}{href}"{courant(cle)}>{nom}</a></li>' for href, nom, cle in NAV)
+    livre = "".join(f'<li><a href="{racine}{href}"{courant(cle)}>{nom}</a></li>' for href, nom, cle in MENU_LIVRE)
+    if LIVRE.get("amazon"):
+        livre += f'<li><a href="{LIVRE["amazon"]}">Acheter le livre sur Amazon</a></li>'
+    livre_actif = " actif" if actif in {c for _, _, c in MENU_LIVRE} else ""
     meta = f'<meta name="description" content="{description}">\n' if description else ""
     robots = '<meta name="robots" content="noindex">\n' if noindex else ""
     return f'''<!doctype html>
@@ -83,8 +89,9 @@ def page(titre, corps, actif=None, racine="", description="", noindex=False, scr
 <a class="evitement" href="#contenu">Aller au contenu</a>
 <header class="entete">
   <div class="page">
-    <a class="nom-site" href="{racine}index.html"><span class="marque" aria-hidden="true">R</span><span class="nom">Révision VTC<span class="sous">Le site du livre Machine à Réussite</span></span></a>
+    <a class="nom-site" href="{racine}index.html"{courant("accueil")}><span class="marque" aria-hidden="true">R</span><span class="nom">Révision VTC<span class="sous">Examen, réglementation et métier de chauffeur VTC</span></span></a>
     <nav class="nav" aria-label="Menu principal"><ul>{nav}</ul></nav>
+    <details class="menu-livre{livre_actif}"><summary>Le livre</summary><ul>{livre}</ul></details>
   </div>
 </header>
 {avant_main}<main id="contenu" tabindex="-1">
@@ -110,6 +117,7 @@ def page(titre, corps, actif=None, racine="", description="", noindex=False, scr
     <p class="copyright">© Benjamin Blondin, 2026</p>
   </div>
 </footer>
+<script src="{racine}js/site.js" defer></script>
 {scripts_fin}<script data-goatcounter="https://revision-vtc.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
