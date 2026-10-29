@@ -2,9 +2,15 @@
  "numero": 4,
  "slug": "chauffeur-vtc-salarie-ou-independant",
  "date": "2026-10-29",
- "brouillon": true,
  "titre": "Chauffeur VTC salarié ou indépendant : que choisir pour débuter ?",
  "titre_page": "Chauffeur VTC salarié ou indépendant : que choisir pour débuter en 2027 ?",
+ "image": {
+  "fichier": "salarie-independant-vtc-chauffeur-au-volant",
+  "alt": "Un chauffeur en costume et gants tient le volant d'une voiture au tableau de bord en bois.",
+  "legende": "Même métier, deux façons de l'exercer : avec un employeur qui fournit la voiture, ou à son compte.",
+  "credit": "MULTIMEDIOSDS",
+  "lien": "https://pixabay.com/fr/photos/chauffeur-pilote-v%C3%A9hicule-transfert-4786555/"
+ },
  "description": "Chauffeur VTC salarié ou indépendant ? Salaire, voiture, cotisations, risques : le comparatif honnête pour débuter, avec le SMIC 2026.",
  "mots_cles": [
   "chauffeur VTC salarié",

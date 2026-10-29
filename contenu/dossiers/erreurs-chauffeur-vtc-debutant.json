@@ -2,9 +2,15 @@
  "numero": 3,
  "slug": "erreurs-chauffeur-vtc-debutant",
  "date": "2026-10-29",
- "brouillon": true,
  "titre": "Chauffeur VTC débutant : 10 erreurs qui coûtent cher (et comment les éviter)",
  "titre_page": "Chauffeur VTC débutant : 10 erreurs qui coûtent cher et comment les éviter",
+ "image": {
+  "fichier": "erreurs-vtc-remise-des-cles",
+  "alt": "Dans un bureau, une main tend une clé de voiture à une autre main qui tient un document.",
+  "legende": "Avant de prendre les clés, lisez le contrat : kilométrage, franchise, sortie anticipée.",
+  "credit": "dbelkin",
+  "lien": "https://pixabay.com/fr/photos/cl%C3%A9s-mains-donner-donnant-5235220/"
+ },
  "description": "Voiture choisie sur la mensualité, papiers oubliés, compte prêté, aucune épargne : les 10 erreurs qui coûtent cher au chauffeur VTC débutant.",
  "mots_cles": [
   "chauffeur VTC débutant",

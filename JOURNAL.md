@@ -6,6 +6,18 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Jeudi 29 octobre 2026, 14 h 30 · Publication des articles n° 2, 3 et 4
+
+- Publiés (relus par l'auteur) :
+  - n° 2 « Chauffeur VTC : combien gagne-t-on vraiment de l'heure sur Uber, Bolt et Heetch ? » : https://revision-vtc.fr/dossiers/combien-gagne-chauffeur-vtc-par-heure.html
+  - n° 3 « Chauffeur VTC débutant : 10 erreurs qui coûtent cher (et comment les éviter) » : https://revision-vtc.fr/dossiers/erreurs-chauffeur-vtc-debutant.html
+  - n° 4 « Chauffeur VTC salarié ou indépendant : que choisir pour débuter ? » : https://revision-vtc.fr/dossiers/chauffeur-vtc-salarie-ou-independant.html
+- Une photo d'en-tête Pixabay par article, avec crédit et lien : REDioACTIVE (conduite de nuit, n° 1929135), dbelkin (remise des clés, n° 5235220), MULTIMEDIOSDS (chauffeur au volant, n° 4786555). Fichiers WebP 640 et 1200 + JPEG 1200 pour le partage dans `docs/images/dossiers/`.
+- Index des articles : à date égale, le numéro le plus récent passe en premier.
+- Entrées ajoutées dans sitemap.xml, llms.txt et llms-full.txt ; IndexNow signalera les nouvelles pages à Bing.
+- Vérifications : aucune erreur d'accessibilité (axe) en clair et en sombre de 320 à 1 920 px ; aucun débordement ; aucun lien interne cassé.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Jeudi 29 octobre 2026, 12 h 25 · « Dossiers » devient « Articles » ; trois articles en brouillon
 
 - La rubrique s'affiche désormais « Articles » partout : menu de toutes les pages, accueil, fil d'Ariane, page d'index (« Articles VTC »), surtitre « Article n° », encadré « Autres articles », données structurées, llms.txt. **Adresses inchangées** (https://revision-vtc.fr/dossiers/ …), conformément à la règle « jamais de changement d'adresse ».

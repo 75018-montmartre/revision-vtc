@@ -2,9 +2,15 @@
  "numero": 2,
  "slug": "combien-gagne-chauffeur-vtc-par-heure",
  "date": "2026-10-29",
- "brouillon": true,
  "titre": "Chauffeur VTC : combien gagne-t-on vraiment de l'heure sur Uber, Bolt et Heetch ?",
  "titre_page": "Combien gagne un chauffeur VTC par heure ? Uber, Bolt, Heetch en 2025",
+ "image": {
+  "fichier": "revenu-vtc-heure-conduite-de-nuit",
+  "alt": "Vue depuis le siège conducteur, la nuit : le volant, le tableau de bord allumé, un écran de navigation et les lumières de la ville à travers le pare-brise.",
+  "legende": "Une heure au volant, ce n'est pas une heure de course : entre deux clients, l'attente compte aussi.",
+  "credit": "REDioACTIVE",
+  "lien": "https://pixabay.com/fr/photos/auto-conduire-vue-de-nuit-nuit-1929135/"
+ },
  "description": "47,60 € de l'heure chez Uber ? Une fois l'attente, la voiture et les cotisations déduites, il reste souvent moins de 12 €. Calcul pas à pas, chiffres ARPE 2025.",
  "mots_cles": [
   "combien gagne un chauffeur VTC",

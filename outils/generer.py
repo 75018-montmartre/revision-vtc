@@ -865,7 +865,7 @@ def lire_dossiers(slugs_wiki):
         if d.get("brouillon") and not APERCU:
             continue
         ds.append(d)
-    ds.sort(key=lambda d: d["date"], reverse=True)
+    ds.sort(key=lambda d: (d["date"], d["numero"]), reverse=True)   # le plus récent d'abord ; même jour : le numéro le plus grand
     assert len({d["numero"] for d in ds}) == len(ds), "deux articles ont le même numéro"
     return ds
 
