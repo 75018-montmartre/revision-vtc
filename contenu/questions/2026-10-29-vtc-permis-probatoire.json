@@ -1,0 +1,89 @@
+{
+ "date": "2026-10-29",
+ "slug": "vtc-permis-probatoire",
+ "question": "Peut-on devenir chauffeur VTC avec un permis probatoire ?",
+ "reponse_courte": "Non. Pour s'inscrire à l'examen VTC, le délai probatoire du permis B doit être terminé à la date du dépôt de la candidature : en général 3 ans après l'obtention du permis, 2 ans après un apprentissage anticipé de la conduite (conduite accompagnée).",
+ "sections": [
+  {
+   "titre": "La règle : un permis sorti de la période probatoire",
+   "texte": [
+    "L'article R3120-7 du Code des transports interdit de s'inscrire à l'examen d'accès aux professions de taxi et de VTC si le délai probatoire du permis, prévu à l'article L223-1 du Code de la route, n'est pas expiré.",
+    "Le règlement général de l'examen des chambres de métiers et de l'artisanat reprend cette condition. Le dossier d'inscription comporte une copie recto verso du permis B, qui doit être « non soumis à la période probatoire » pour un permis français.",
+    "La condition s'apprécie à la date du dépôt de la candidature. Un candidat encore en période probatoire ce jour-là ne peut pas s'inscrire, même si sa période se termine avant la date de l'épreuve."
+   ]
+  },
+  {
+   "titre": "Combien de temps dure la période probatoire ?",
+   "texte": [
+    "1. Formule classique : 3 ans. Le permis démarre à 6 points et gagne 2 points par an, jusqu'à 12 points.",
+    "2. Apprentissage anticipé de la conduite (conduite accompagnée) : 2 ans. Le permis gagne 3 points par an.",
+    "3. Avec la formation complémentaire : 2 ans en formule classique, 1 an et 6 mois après une conduite accompagnée. Cette formation d'une journée se suit dans une école de conduite labellisée, entre le 6e et le 12e mois après l'obtention du permis.",
+    "Pour bénéficier de cette réduction, il ne faut pas avoir commis d'infraction entraînant un retrait de points, ni avoir fait l'objet d'une restriction ou d'une suspension du droit de conduire."
+   ]
+  },
+  {
+   "titre": "Trois ans de permis ou fin du délai probatoire ?",
+   "texte": [
+    "Service-public.fr résume la condition ainsi : avoir le permis B depuis 3 ans au minimum, ou depuis 2 ans en cas de conduite accompagnée. Ce sont les durées normales de la période probatoire.",
+    "Le texte officiel, lui, vise la fin du délai probatoire et non un nombre d'années. Si votre période probatoire a été raccourcie par la formation complémentaire, demandez à votre chambre de métiers, avant de déposer votre dossier, quelle pièce elle accepte pour le prouver."
+   ]
+  },
+  {
+   "titre": "Un exemple daté",
+   "texte": [
+    "Un candidat a obtenu son permis B en formule classique le 15 mars 2024, sans formation complémentaire. Sa période probatoire dure 3 ans : elle se termine le 15 mars 2027.",
+    "Il ne peut donc pas s'inscrire à une session d'examen dont la date limite de dépôt des candidatures tombe avant cette date. Rien ne l'empêche en revanche de réviser avant cette date."
+   ]
+  },
+  {
+   "titre": "Cas particuliers : permis étranger, permis annulé",
+   "texte": [
+    "Un permis délivré dans un autre pays de l'Union européenne ou de l'Espace économique européen doit l'avoir été depuis au moins trois ans. Un permis délivré hors de l'Union européenne doit lui aussi dater d'au moins trois ans, être d'une catégorie équivalente au permis B et être reconnu valable en France.",
+    "Après une annulation ou une invalidation, le permis obtenu de nouveau est un permis probatoire, qui redémarre à 6 points. Pour un candidat qui n'est pas encore entré dans le métier, il faut donc attendre la fin de cette nouvelle période avant de s'inscrire à l'examen."
+   ]
+  }
+ ],
+ "a_retenir": [
+  "On ne peut pas s'inscrire à l'examen VTC tant que le délai probatoire du permis B n'est pas terminé.",
+  "La période probatoire dure 3 ans en formule classique et 2 ans après une conduite accompagnée, moins avec la formation complémentaire.",
+  "La condition est vérifiée à la date du dépôt de la candidature auprès de la chambre de métiers."
+ ],
+ "wiki": [
+  "r3120-7",
+  "l3120-2-1",
+  "r3120-6"
+ ],
+ "fiches": [
+  ["A2.1", "Les conditions d'accès à la profession"],
+  ["A2.4", "L'examen, seule porte d'entrée"],
+  ["C7.1", "Le permis à points"]
+ ],
+ "sources": [
+  {
+   "nom": "Code des transports, article R3120-7 (texte recopié dans le wiki du site et vérifié le 25 octobre 2026 ; Légifrance inaccessible depuis l'outil le 29 octobre 2026)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043177694",
+   "date": "version en vigueur depuis le 25 février 2021"
+  },
+  {
+   "nom": "CMA France, Règlement général de l'examen de conducteur de taxi, VTC et VMDTR (version de novembre 2021), article III.1 : conditions d'inscription et pièces du dossier",
+   "url": "https://www.artisanat.fr/media/831/download",
+   "date": "consulté le 29 octobre 2026"
+  },
+  {
+   "nom": "CMA Alsace-Moselle Grand Est, fiche « Habilitation accès à la profession de conducteur VTC » (version 1.4 du 26 janvier 2026) : permis B « expiré du délai probatoire à la date de dépôt de candidature »",
+   "url": "https://www.cma-alsace-moselle-grandest.fr/sites/default/files/2026-02/Habilitation_acces_profession_conducteur_VTC_V1.4_26012026_AA.pdf",
+   "date": "consultée le 29 octobre 2026"
+  },
+  {
+   "nom": "Service-Public.fr, « Qu'est-ce que le permis probatoire ? » (fiche F2390, vérifiée le 15 janvier 2026)",
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2390",
+   "date": "consultée le 29 octobre 2026"
+  },
+  {
+   "nom": "Entreprendre.Service-Public.fr, « Devenir chauffeur de VTC » (fiche F31027, vérifiée le 12 août 2026)",
+   "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F31027",
+   "date": "consultée le 29 octobre 2026"
+  }
+ ],
+ "verifie": "29 octobre 2026"
+}

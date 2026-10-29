@@ -6,6 +6,14 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Jeudi 29 octobre 2026, 7 h 45 · Question VTC (tâche du jeudi)
+
+- Question : « Peut-on devenir chauffeur VTC avec un permis probatoire ? »
+- Page publiée : https://revision-vtc.fr/questions/2026-10-29-vtc-permis-probatoire.html
+- Réponse courte : Non. Pour s'inscrire à l'examen VTC, le délai probatoire du permis B doit être terminé à la date du dépôt de la candidature : en général 3 ans après l'obtention du permis, 2 ans après un apprentissage anticipé de la conduite (conduite accompagnée).
+- À noter : Légifrance toujours inaccessible depuis la tâche ; l'article R3120-7 est cité d'après le texte du wiki (vérifié le 25 octobre 2026) et le règlement général des CMA qui le reprend mot pour mot.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 28 octobre 2026, 21 h 40 · Charte graphique : contrôle de tout le site après la refonte
 
 - Tour complet des 16 types de pages (accueil, actualité, questions, dossiers, wiki, simulateur, mises à jour, examens, contact, à propos, mentions légales, 404), sur ordinateur et téléphone : même en-tête, mêmes composants partout.
