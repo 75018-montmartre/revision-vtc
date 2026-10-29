@@ -6,6 +6,21 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Jeudi 29 octobre 2026, 12 h 25 · « Dossiers » devient « Articles » ; trois articles en brouillon
+
+- La rubrique s'affiche désormais « Articles » partout : menu de toutes les pages, accueil, fil d'Ariane, page d'index (« Articles VTC »), surtitre « Article n° », encadré « Autres articles », données structurées, llms.txt. **Adresses inchangées** (https://revision-vtc.fr/dossiers/ …), conformément à la règle « jamais de changement d'adresse ».
+- Trois articles rédigés à partir de l'audit « métier de chauffeur VTC fin 2026 », ton de blog pédagogique, **en brouillon** (non publiés, à relire) :
+  - n° 2 « Chauffeur VTC : combien gagne-t-on vraiment de l'heure sur Uber, Bolt et Heetch ? » → https://revision-vtc.fr/dossiers/combien-gagne-chauffeur-vtc-par-heure.html (après publication)
+  - n° 3 « Chauffeur VTC débutant : 10 erreurs qui coûtent cher (et comment les éviter) » → https://revision-vtc.fr/dossiers/erreurs-chauffeur-vtc-debutant.html (après publication)
+  - n° 4 « Chauffeur VTC salarié ou indépendant : que choisir pour débuter ? » → https://revision-vtc.fr/dossiers/chauffeur-vtc-salarie-ou-independant.html (après publication)
+- Chiffres revérifiés sur les sources primaires (rapport ARPE avril 2026, accord du 19 décembre 2023, rapport ARPE de juin 2025 sur les désactivations, fiches Service-Public F31027, F23547, F21746, F2258, SMIC au 1er juin 2026, Cour de cassation 4 mars 2020, directive (UE) 2024/2831). Corrigé par rapport à l'audit : revenu moyen Uber 2025 = 17,30 € (et non « ≈ 17 € »), d'où 35,40 €/h attente comprise.
+- Écartés faute de vérification suffisante : la baisse de revenu INSEE taxis-VTC, l'autoliquidation de TVA sur les commissions facturées depuis l'étranger, les chiffres d'offres d'emploi salariées.
+- Ajouté : minimum horaire relevé à 32 € en octobre et novembre 2026 (Economie Matin et Entrevue, 30 septembre 2026) ; temps d'attente publié par Uber pour 2024 (41,35 min entre deux courses effectuées).
+- Générateur : `**texte**` affiche du gras dans les articles. README mis à jour (« Publier un article »).
+- Vérifications : aucune erreur d'accessibilité (axe) en clair et en sombre à 320, 375, 768, 1 280 et 1 920 px (index, quatre articles, accueil, simulateur) ; aucun débordement horizontal.
+- Pour publier : retirer la ligne `"brouillon": true` des trois fichiers de `contenu/dossiers/`, puis `python3 outils/generer.py`.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Jeudi 29 octobre 2026, 7 h 45 · Question VTC (tâche du jeudi)
 
 - Question : « Peut-on devenir chauffeur VTC avec un permis probatoire ? »

@@ -197,7 +197,7 @@ def accueil(nums, qs=()):
         <ul class="trois">
           <li><p class="surtitre">Chaque lundi</p><h3><a href="actualite/index.html">Actualité VTC</a></h3><p>{ty("Textes officiels, examen, plateformes, cotisations : ce qui change pour vous, toujours avec ses sources.")}</p></li>
           <li><p class="surtitre">L'essentiel du droit</p><h3><a href="wiki/index.html">Textes du métier</a></h3><p>{ty("Le droit du VTC article par article : le texte officiel, expliqué en clair avec un exemple.")}</p></li>
-          <li><p class="surtitre">À fond</p><h3><a href="dossiers/index.html">Dossiers</a></h3><p>{ty("Un sujet du métier traité en détail, comme le budget pour se lancer, avec chaque chiffre sourcé et daté.")}</p></li>
+          <li><p class="surtitre">À fond</p><h3><a href="dossiers/index.html">Articles</a></h3><p>{ty("Un sujet du métier traité en détail, comme le budget pour se lancer, avec chaque chiffre sourcé et daté.")}</p></li>
           <li><p class="surtitre">Outil gratuit</p><h3><a href="simulateurs/index.html">Simulateur</a></h3><p>{ty("Votre revenu net et le coût de votre voiture au kilomètre, calculés avec vos propres chiffres.")}</p></li>
         </ul>
       </div>
@@ -781,7 +781,8 @@ APERCU = "--apercu" in sys.argv   # génère aussi les brouillons, dans apercu/ 
 
 
 def liens(t):
-    """Texte déjà passé par ty() : transforme [texte](adresse) en lien (maillage interne et sources)."""
+    """Texte déjà passé par ty() : transforme [texte](adresse) en lien (maillage interne et sources) et **texte** en gras."""
+    t = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", t)   # **mot** : mise en gras (début d'un élément de liste, par exemple)
     return re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", lambda m: f'<a href="{m.group(2)}">{m.group(1)}</a>', t)
 
 
@@ -843,7 +844,7 @@ def _texte_dossier(d):
             else:
                 morceaux += [" ".join(l) for l in b["tableau"]["lignes"] + b["tableau"].get("total", [])]
     morceaux += d["a_retenir"]
-    return re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", "\n".join(morceaux))
+    return re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", "\n".join(morceaux)).replace("**", "")
 
 
 def lire_dossiers(slugs_wiki):
@@ -860,12 +861,12 @@ def lire_dossiers(slugs_wiki):
         for s in d["sections"]:
             assert re.fullmatch(r"[a-z0-9-]+", s["id"]), f"{f} : identifiant de section {s['id']}"
         d["mots"] = len(re.findall(r"\w+", _texte_dossier(d)))
-        assert d.get("brouillon") or 1200 <= d["mots"] <= 3000, f"{f} : {d['mots']} mots (dossier : 1 500 à 2 500 mots)"
+        assert d.get("brouillon") or 1200 <= d["mots"] <= 3000, f"{f} : {d['mots']} mots (article : 1 500 à 2 500 mots)"
         if d.get("brouillon") and not APERCU:
             continue
         ds.append(d)
     ds.sort(key=lambda d: d["date"], reverse=True)
-    assert len({d["numero"] for d in ds}) == len(ds), "deux dossiers ont le même numéro"
+    assert len({d["numero"] for d in ds}) == len(ds), "deux articles ont le même numéro"
     return ds
 
 
@@ -879,8 +880,8 @@ def dossiers(ds, w, qs=()):
         autres = "".join(f'<li><a href="{x["slug"]}.html">{ty(x["titre"])}</a></li>' for x in ds if x is not d)
         src = "".join(f'<li><a href="{html.escape(x["url"])}">{ty(x["nom"])}</a>' + (f", {ty(x['date'])}" if x.get("date") else "") + "</li>" for x in d["sources"])
         maj = f' · mis à jour le {ty(d["mis_a_jour"])}' if d.get("mis_a_jour") else ""
-        corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Dossiers</a></li></ol></nav>
-    <p class="surtitre">Dossier n° {d["numero"]}</p>
+        corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Articles</a></li></ol></nav>
+    <p class="surtitre">Article n° {d["numero"]}</p>
     <h1>{ty(d["titre"])}</h1>
     <p class="chapeau">{ty(d["chapeau"])}</p>
     <p class="meta">Publié le {date_fr(d["date"])}{maj} · chiffres vérifiés le {ty(d["verifie"])} · {d["mots"] // 230 + 1} min de lecture</p>
@@ -893,21 +894,21 @@ def dossiers(ds, w, qs=()):
     <section class="retenir" aria-labelledby="retenir"><h2 id="retenir">À retenir</h2><ul>{"".join(f"<li>{liens(ty(x))}</li>" for x in d["a_retenir"])}</ul></section>
     <h2 id="sources">Sources</h2>
     <ul class="source">{src}</ul>
-    <p class="source">{ty("Montants vérifiés le " + d["verifie"] + " sur les sites officiels cités ; les tarifs non réglementés (formation, assurance, véhicule) sont des fourchettes publiées, à comparer avec vos propres devis. Ce dossier ne remplace pas un conseil juridique, comptable ou financier adapté à votre situation.")}</p>
+    <p class="source">{ty("Montants vérifiés le " + d["verifie"] + " sur les sites officiels cités ; les tarifs non réglementés (formation, assurance, véhicule) sont des fourchettes publiées, à comparer avec vos propres devis. Cet article ne remplace pas un conseil juridique, comptable ou financier adapté à votre situation.")}</p>
     </div>
     <aside class="col-cote" aria-label="Sommaire et pour aller plus loin">
     <nav class="cote-bloc" aria-labelledby="titre-sommaire"><h2 id="titre-sommaire">Sommaire</h2><ul class="voir-aussi">{sommaire}</ul></nav>
     {f'<section class="cote-bloc" aria-labelledby="titre-textes"><h2 id="titre-textes">Les textes expliqués</h2><ul class="voir-aussi">{wiki}</ul></section>' if wiki else ""}
     {f'<section class="cote-bloc wiki-livre" aria-labelledby="titre-livre"><h2 id="titre-livre">Dans le livre</h2><ul>{livre}</ul><p class="pied-achat">{achat("bouton second petit", "Le livre sur Amazon")}</p></section>' if livre else ""}
     <section class="cote-bloc" aria-labelledby="titre-simu"><h2 id="titre-simu">Simulateur gratuit</h2><ul class="voir-aussi"><li><a href="../simulateurs/cout-revient-revenu-net-vtc.html">{ty("Coût de revient de la voiture et revenu net : faites le calcul avec vos chiffres")}</a></li></ul></section>
-    {f'<section class="cote-bloc" aria-labelledby="titre-autres"><h2 id="titre-autres">Autres dossiers</h2><ul class="voir-aussi">{autres}</ul></section>' if autres else ""}
+    {f'<section class="cote-bloc" aria-labelledby="titre-autres"><h2 id="titre-autres">Autres articles</h2><ul class="voir-aussi">{autres}</ul></section>' if autres else ""}
     </aside></div>'''
         chemin = f'dossiers/{d["slug"]}.html'
         ld = {"@context": "https://schema.org", "@type": "Article", "headline": d["titre"][:110], "description": d["description"],
               "abstract": " ".join(d["en_bref"]), "datePublished": d["date"], "dateModified": iso_fr(d.get("mis_a_jour") or d["verifie"]) if iso_fr(d.get("mis_a_jour") or d["verifie"]) > d["date"] else d["date"],
               "inLanguage": "fr", "author": AUTEUR, "publisher": AUTEUR, "mainEntityOfPage": SITE + chemin,
               "image": [SITE + f'images/dossiers/{d["image"]["fichier"]}-1200.jpg'] if d.get("image") else SITE + "partage.jpg",
-              "articleSection": "Dossiers", "wordCount": d["mots"], "keywords": d.get("mots_cles", []), "isPartOf": {"@id": SITE + "#site"},
+              "articleSection": "Articles", "wordCount": d["mots"], "keywords": d.get("mots_cles", []), "isPartOf": {"@id": SITE + "#site"},
               "citation": [x["url"] for x in d["sources"]]}
         partage = ""
         if d.get("image"):
@@ -917,22 +918,22 @@ def dossiers(ds, w, qs=()):
                        f'<meta property="og:image:height" content="800">\n<meta property="og:image:alt" content="{html.escape(d["image"]["alt"])}">\n')
         ecrire(chemin, page(html.escape(d.get("titre_page", d["titre"]) + " · Révision VTC", quote=False), corps, "dossiers", "../", html.escape(d["description"]),
                             noindex=bool(d.get("brouillon")), scripts_tete=partage,
-                            jsonld=[ld, fil(("Accueil", ""), ("Dossiers", "dossiers/"), (d["titre"], chemin))]))
+                            jsonld=[ld, fil(("Accueil", ""), ("Articles", "dossiers/"), (d["titre"], chemin))]))
     if ds:
-        liste = "".join(f'''<li><span class="meta">Dossier n° {d["numero"]} · {date_fr(d["date"])}</span><a href="{d["slug"]}.html">{ty(d["titre"])}</a><p>{ty(d["description"])}</p></li>''' for d in ds)
+        liste = "".join(f'''<li><span class="meta">Article n° {d["numero"]} · {date_fr(d["date"])}</span><a href="{d["slug"]}.html">{ty(d["titre"])}</a><p>{ty(d["description"])}</p></li>''' for d in ds)
         liste = f'<ul class="questions">{liste}</ul>'
     else:
-        liste = f'<p class="note">{ty("Le premier dossier sera publié très prochainement.")}</p>'
-    corps = f'''    <h1>Dossiers VTC</h1>
+        liste = f'<p class="note">{ty("Le premier article sera publié très prochainement.")}</p>'
+    corps = f'''    <h1>Articles VTC</h1>
     <p class="chapeau">{ty("Les grandes questions du métier de chauffeur VTC, traitées à fond : coûts, revenus, statut, véhicule, cotisations. Chaque chiffre est daté et relié à sa source.")}</p>
-    <p>{ty("Un nouveau dossier chaque semaine. Pour une réponse rapide à une question précise, voyez les")} <a href="../questions/index.html">Questions VTC</a> {ty("; pour le texte exact d'une règle, les")} <a href="../wiki/index.html">textes du métier</a>. {ty("Pour chiffrer votre propre activité :")} <a href="../simulateurs/cout-revient-revenu-net-vtc.html">{ty("le simulateur de coût de revient et de revenu net")}</a>.</p>
+    <p>{ty("Un nouvel article chaque semaine. Pour une réponse rapide à une question précise, voyez les")} <a href="../questions/index.html">Questions VTC</a> {ty("; pour le texte exact d'une règle, les")} <a href="../wiki/index.html">textes du métier</a>. {ty("Pour chiffrer votre propre activité :")} <a href="../simulateurs/cout-revient-revenu-net-vtc.html">{ty("le simulateur de coût de revient et de revenu net")}</a>.</p>
     {liste}'''
-    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Dossiers VTC", "url": SITE + "dossiers/", "inLanguage": "fr",
+    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Articles VTC", "url": SITE + "dossiers/", "inLanguage": "fr",
           "isPartOf": {"@id": SITE + "#site"},
           "hasPart": [{"@type": "Article", "headline": d["titre"], "url": SITE + f'dossiers/{d["slug"]}.html'} for d in ds]}
-    ecrire("dossiers/index.html", page("Dossiers VTC : coûts, revenus, statut, véhicule, expliqués et chiffrés · Révision VTC", corps, "dossiers", "../",
-                                       "Les dossiers de Révision VTC : combien coûte le lancement en VTC, combien gagne un chauffeur, quel statut choisir. Chiffres datés et sources officielles.",
-                                       jsonld=[ld, fil(("Accueil", ""), ("Dossiers", "dossiers/"))]))
+    ecrire("dossiers/index.html", page("Articles VTC : coûts, revenus, statut, véhicule, expliqués et chiffrés · Révision VTC", corps, "dossiers", "../",
+                                       "Les articles de Révision VTC : combien coûte le lancement en VTC, combien gagne un chauffeur, quel statut choisir. Chiffres datés et sources officielles.",
+                                       jsonld=[ld, fil(("Accueil", ""), ("Articles", "dossiers/"))]))
 
 
 # ------------------------------------------------------------------ simulateur
@@ -1178,7 +1179,7 @@ def simulateur(ds):
       <li>{ty("l'impôt sur le revenu sans versement libératoire : il dépend de votre foyer ; le simulateur donne seulement le revenu imposable après l'abattement de 50 % ;")}</li>
       <li>{ty("la cotisation foncière des entreprises (CFE), dont le montant dépend de la commune ;")}</li>
       <li>{ty("le stage de formation continue et le contrôle technique annuel, à prix libres ; les intérêts d'un crédit ;")}</li>
-      <li>{ty("les dépenses de lancement (examen, formation, caution du loueur) : elles sont détaillées dans le dossier")} {dossier1}.</li>
+      <li>{ty("les dépenses de lancement (examen, formation, caution du loueur) : elles sont détaillées dans l'article")} {dossier1}.</li>
     </ul>
     <h2 id="hypotheses">Les hypothèses par défaut et leurs sources</h2>
     <p>{ty("Chaque valeur proposée vient d'un texte officiel, d'une donnée publique ou de deux sources concordantes. Les prix libres (location, assurance) sont des fourchettes publiées, pas des tarifs : comparez avec vos devis. Le montant versé par semaine, les semaines travaillées et la durée de détention sont des exemples à remplacer.")}</p>
@@ -1203,7 +1204,7 @@ def simulateur(ds):
     liste = f'''<ul class="questions"><li><span class="meta">{ty("Mis à jour le " + s["verifie"])}</span><a href="{s["slug"]}.html">{ty(titre)}</a><p>{ty("Le coût de revient de votre voiture au kilomètre et ce qu'il vous reste chaque mois, après commission, cotisations, location, carburant et assurance.")}</p></li></ul>'''
     corps = f'''    <h1>Simulateurs VTC</h1>
     <p class="chapeau">{ty("Avant de louer une voiture, de vous lancer ou de changer de plateforme, chiffrez ce que votre activité de chauffeur VTC vous rapporte vraiment. Vous saisissez vos propres chiffres ; chaque valeur proposée par défaut est sourcée et datée, et le calcul se fait dans votre navigateur.")}</p>
-    <p>{ty("Pour comprendre les montants avant de les saisir, lisez les")} <a href="../dossiers/index.html">dossiers</a> {ty("; pour les règles du métier, les")} <a href="../wiki/index.html">textes du métier</a>.</p>
+    <p>{ty("Pour comprendre les montants avant de les saisir, lisez les")} <a href="../dossiers/index.html">articles</a> {ty("; pour les règles du métier, les")} <a href="../wiki/index.html">textes du métier</a>.</p>
     {liste}'''
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Simulateurs VTC", "url": SITE + "simulateurs/", "inLanguage": "fr",
           "isPartOf": {"@id": SITE + "#site"}, "hasPart": [{"@type": "WebApplication", "name": titre, "url": SITE + chemin}]}
@@ -1311,7 +1312,7 @@ def llms(nums, w, qs=(), ds=(), simu=None):
          f"- [Réglementation VTC, les textes du métier]({SITE}wiki/): index de tous les articles par thème",
          f"- [Actualité VTC]({SITE}actualite/): un numéro par semaine, sources citées",
          f"- [Questions VTC]({SITE}questions/): une question concrète par semaine, réponse courte et sources officielles",
-         f"- [Dossiers VTC]({SITE}dossiers/): articles longs et chiffrés (coût du lancement, revenus, statut, véhicule), sources datées",
+         f"- [Articles VTC]({SITE}dossiers/): articles de fond chiffrés (coût du lancement, revenus, statut, véhicule), sources datées",
          f"- [Simulateur VTC : coût de revient de la voiture et revenu net]({SITE}simulateurs/cout-revient-revenu-net-vtc.html): calcul gratuit pour un chauffeur VTC en micro-entreprise (commission, cotisations, location ou achat, carburant, assurance), hypothèses sourcées et datées",
          f"- [Mises à jour du livre]({SITE}mises-a-jour.html): règles qui ont changé depuis l'impression",
          f"- [Examens blancs]({SITE}examens.html): deux examens blancs corrigés, réservés aux lecteurs du livre",
@@ -1322,7 +1323,7 @@ def llms(nums, w, qs=(), ds=(), simu=None):
         l += [f"- [{a['num'] if not a.get('arrete') else 'Arrêté'} · {a['titre']}]({SITE}wiki/{a['slug']}.html): {a['en_clair']}" for a in w["articles"] if a["theme"] == t["cle"]]
         l.append("")
     if ds:
-        l += ["## Dossiers VTC", ""]
+        l += ["## Articles VTC", ""]
         l += [f"- [{d['titre']}]({SITE}dossiers/{d['slug']}.html): {' '.join(d['en_bref'])}" for d in ds]
         l.append("")
     if qs:
@@ -1352,7 +1353,7 @@ def llms(nums, w, qs=(), ds=(), simu=None):
                 f += ["", "Dans le livre Machine à Réussite · Examen VTC 2027 : " + " ; ".join(f"fiche {c} ({t2})" for c, t2 in a["fiches"]) + "."]
             f.append("")
     if ds:
-        f += ["## Dossiers VTC", ""]
+        f += ["## Articles VTC", ""]
         for d in ds:
             f += [f"### {d['titre']}", "", f"Page : {SITE}dossiers/{d['slug']}.html",
                   f"Publié le {date_fr(d['date'])}, chiffres vérifiés le {d['verifie']}.", "", _texte_dossier(d), "",

@@ -1615,7 +1615,7 @@ En vigueur depuis le 01 juin 2017.
 
 Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A5.4 (Avertissement, retrait : les sanctions administratives) ; fiche A5.5 (Contester une sanction).
 
-## Dossiers VTC
+## Articles VTC
 
 ### Combien coûte vraiment le lancement en VTC ? Le budget complet 2026-2027
 
@@ -1634,7 +1634,7 @@ Inscription au registre des VTC 170 € Gestionnaire du registre Tous les 5 ans
 Vignette VTC (deux autocollants) 35 € environ Imprimerie nationale À chaque véhicule
 Immatriculation de la micro-entreprise 0 € Guichet des formalités des entreprises Non
 Total 539,60 € + envoi  
-L'examen est la plus grosse ligne. Les CMA appliquent en 2026 le tarif de 241 € pour l'ensemble des épreuves : les sept épreuves écrites d'admissibilité et l'épreuve pratique d'admission. Ce tarif est réévalué chaque 1er janvier : celui de 2027 n'est pas encore publié, et ce dossier sera mis à jour dès qu'il le sera. Un candidat qui échoue à l'épreuve pratique la repasse seule pour 118 €. Le détail des épreuves est expliqué dans la page sur l'arrêté du 6 avril 2017.
+L'examen est la plus grosse ligne. Les CMA appliquent en 2026 le tarif de 241 € pour l'ensemble des épreuves : les sept épreuves écrites d'admissibilité et l'épreuve pratique d'admission. Ce tarif est réévalué chaque 1er janvier : celui de 2027 n'est pas encore publié, et cet article sera mis à jour dès qu'il le sera. Un candidat qui échoue à l'épreuve pratique la repasse seule pour 118 €. Le détail des épreuves est expliqué dans la page sur l'arrêté du 6 avril 2017.
 La visite médicale se fait chez un médecin agréé par la préfecture, jamais chez son médecin traitant. Elle coûte 36 € et n'est pas remboursée par l'Assurance maladie. Elle est à refaire tous les cinq ans jusqu'à 55 ans, puis plus souvent avec l'âge (article D3120-5).
 La carte professionnelle est demandée en ligne après la réussite à l'examen. Elle est fabriquée et facturée par l'Imprimerie nationale : 57,60 € TTC, plus les frais d'envoi. La préfecture a trois mois au plus pour la délivrer (article R3120-6).
 L'inscription au registre des VTC coûte 170 €, payés en ligne. Elle est obligatoire pour l'exploitant, c'est-à-dire pour l'entreprise, même si elle ne compte qu'un chauffeur. Le Code des transports plafonne ces frais à 250 € (article R3122-3). Les vignettes rouges, à coller sur le pare-brise et la lunette arrière, se commandent ensuite depuis le compte du registre, pour 35 € environ (article R3122-8).
@@ -1674,7 +1674,7 @@ tous les ans : le contrôle technique du véhicule, obligatoire chaque année po
 tous les cinq ans : la carte professionnelle (57,60 € plus l'envoi), le stage de formation continue de 14 heures et l'inscription au registre (170 €) ;
 tous les cinq ans jusqu'à 55 ans, puis plus souvent : la visite médicale (36 €) ;
 à chaque changement de véhicule : de nouvelles vignettes (35 € environ), et une voiture thermique à remplacer au plus tard à sept ans.
-Les cotisations sociales, elles, se calculent sur le chiffre d'affaires et ne s'ajoutent pas au budget de départ : la Question VTC « Quelles cotisations paie un chauffeur VTC en micro-entreprise ? » donne les taux de 2026. Un prochain dossier sera consacré au précompte des cotisations par les plateformes, prévu au 1er janvier 2027 : qui est concerné, et ce qui change (ce n'est pas le prélèvement à la source de l'impôt). Pour une réponse rapide sur une règle du métier, consultez les Questions VTC.
+Les cotisations sociales, elles, se calculent sur le chiffre d'affaires et ne s'ajoutent pas au budget de départ : la Question VTC « Quelles cotisations paie un chauffeur VTC en micro-entreprise ? » donne les taux de 2026. Un prochain article sera consacré au précompte des cotisations par les plateformes, prévu au 1er janvier 2027 : qui est concerné, et ce qui change (ce n'est pas le prélèvement à la source de l'impôt). Pour une réponse rapide sur une règle du métier, consultez les Questions VTC.
 Les frais obligatoires pour devenir chauffeur VTC s'élèvent à 539,60 € en 2026, plus l'envoi de la carte : examen 241 €, visite médicale 36 €, carte 57,60 €, registre 170 €, vignette 35 € environ.
 La formation n'est pas obligatoire ; en centre agréé, elle coûte de 400 € à 3 000 € environ.
 Les voitures hybrides et électriques échappent aux critères de taille, de puissance et d'âge imposés aux voitures thermiques.

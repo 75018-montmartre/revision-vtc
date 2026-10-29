@@ -9,7 +9,7 @@ Règles éditoriales : chaque information repose sur un texte officiel ou sur de
 - [Réglementation VTC, les textes du métier](https://revision-vtc.fr/wiki/): index de tous les articles par thème
 - [Actualité VTC](https://revision-vtc.fr/actualite/): un numéro par semaine, sources citées
 - [Questions VTC](https://revision-vtc.fr/questions/): une question concrète par semaine, réponse courte et sources officielles
-- [Dossiers VTC](https://revision-vtc.fr/dossiers/): articles longs et chiffrés (coût du lancement, revenus, statut, véhicule), sources datées
+- [Articles VTC](https://revision-vtc.fr/dossiers/): articles de fond chiffrés (coût du lancement, revenus, statut, véhicule), sources datées
 - [Simulateur VTC : coût de revient de la voiture et revenu net](https://revision-vtc.fr/simulateurs/cout-revient-revenu-net-vtc.html): calcul gratuit pour un chauffeur VTC en micro-entreprise (commission, cotisations, location ou achat, carburant, assurance), hypothèses sourcées et datées
 - [Mises à jour du livre](https://revision-vtc.fr/mises-a-jour.html): règles qui ont changé depuis l'impression
 - [Examens blancs](https://revision-vtc.fr/examens.html): deux examens blancs corrigés, réservés aux lecteurs du livre
@@ -115,7 +115,7 @@ Règles éditoriales : chaque information repose sur un texte officiel ou sur de
 - [D3120-32 · Les sections disciplinaires](https://revision-vtc.fr/wiki/d3120-32.html): La commission locale peut comprendre une section disciplinaire par profession (taxis, VTC, deux-roues), composée à parts égales de représentants de l'État et de professionnels.
 - [D3120-38 · L'avis de la commission avant une sanction](https://revision-vtc.fr/wiki/d3120-38.html): Les préfectures fixent les conditions dans lesquelles les sections disciplinaires sont consultées avant une sanction administrative (L3124-11).
 
-## Dossiers VTC
+## Articles VTC
 
 - [Combien coûte vraiment le lancement en VTC ? Le budget complet 2026-2027](https://revision-vtc.fr/dossiers/cout-pour-devenir-chauffeur-vtc.html): Les démarches obligatoires coûtent 539,60 € en 2026, plus l'envoi de la carte : examen 241 €, visite médicale 36 €, carte professionnelle 57,60 €, registre des VTC 170 €, vignette 35 € environ. L'immatriculation d'une micro-entreprise est gratuite. Le véhicule fait tout le reste du budget. Avec une voiture louée à la semaine et sans formation, il faut compter de 2 730 € à 4 040 € avant le premier mois d'activité. Avec une formation et une voiture neuve achetée comptant, de 37 600 € à 45 320 € la première année.
 

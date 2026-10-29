@@ -1,0 +1,202 @@
+{
+ "numero": 3,
+ "slug": "erreurs-chauffeur-vtc-debutant",
+ "date": "2026-10-29",
+ "brouillon": true,
+ "titre": "Chauffeur VTC débutant : 10 erreurs qui coûtent cher (et comment les éviter)",
+ "titre_page": "Chauffeur VTC débutant : 10 erreurs qui coûtent cher et comment les éviter",
+ "description": "Voiture choisie sur la mensualité, papiers oubliés, compte prêté, aucune épargne : les 10 erreurs qui coûtent cher au chauffeur VTC débutant.",
+ "mots_cles": [
+  "chauffeur VTC débutant",
+  "erreurs VTC",
+  "conseils chauffeur VTC",
+  "se lancer en VTC",
+  "location voiture VTC piège",
+  "compte Uber suspendu"
+ ],
+ "chapeau": "Les plus grosses décisions d'un chauffeur VTC se prennent au tout début : quelle voiture, quel statut, quelles applications. Justement au moment où il n'a encore aucun chiffre à lui. Voici les dix erreurs qui reviennent le plus souvent, et ce qu'il faut faire à la place.",
+ "en_bref": [
+  "Karim vient d'avoir sa carte VTC. Il signe une location à 1 100 € par mois parce que « les autres font pareil », s'inscrit sur une seule application et ne met rien de côté. Trois semaines plus tard, son compte est suspendu pour une attestation d'assurance expirée : plus de courses, mais le loyer de la voiture tombe quand même.",
+  "Aucune de ces décisions n'est interdite. Mises bout à bout, elles transforment un mauvais mois en situation difficile. Bonne nouvelle : chacune s'évite avec un peu de méthode."
+ ],
+ "sections": [
+  {
+   "id": "voiture",
+   "titre": "1. Choisir sa voiture d'après la mensualité",
+   "blocs": [
+    "C'est l'erreur la plus fréquente, et la plus lourde. Une location à 800, 1 000 ou 1 200 € par mois paraît supportable. Mais il faut y ajouter le carburant ou l'électricité, l'assurance si elle n'est pas comprise, les pneus, le lavage, les jours d'immobilisation. Le bon réflexe est de raisonner en coût par kilomètre et en chiffre d'affaires minimum à réaliser chaque semaine.",
+    "Avant de signer, lisez ces lignes du contrat : le kilométrage autorisé et le prix des kilomètres en plus, la franchise en cas d'accident, les frais de remise en état à la restitution, le coût d'une sortie anticipée, et la voiture de remplacement en cas de panne. Un contrat de trois ou quatre ans est une dépense fixe ; aucune plateforme ne vous garantit trois ou quatre ans de courses.",
+    "Un test simple avant de s'engager : calculez votre budget dans trois situations. L'activité que vous prévoyez ; un chiffre d'affaires 20 % plus bas ; deux semaines sans rouler (panne, maladie). Si la troisième situation vous met à découvert, le projet manque de marge de sécurité.",
+    "Pour les montants : la location à la semaine, la location longue durée et l'achat sont comparés dans notre article [« Combien coûte vraiment le lancement en VTC ? »](cout-pour-devenir-chauffeur-vtc.html), et le [simulateur](../simulateurs/cout-revient-revenu-net-vtc.html) calcule le coût au kilomètre de votre propre voiture."
+   ]
+  },
+  {
+   "id": "chiffre-affiche",
+   "titre": "2. Confondre ce que l'application affiche et ce qui reste",
+   "blocs": [
+    "Le montant d'une course, ou le total de la semaine, n'est pas un revenu. Il faut en retirer les cotisations sociales (près de 22 % du chiffre d'affaires en micro-entreprise en 2026), tous les frais de la voiture, puis l'impôt. Il faut aussi tenir compte des heures passées à attendre entre deux courses.",
+    "Dans l'exemple de notre simulateur, 1 000 € versés par semaine laissent entre 983 € et 1 270 € par mois avant impôt. Le calcul complet, de 47,60 € « en course » à moins de 12 € par heure réellement passée au volant, est expliqué dans l'article [« Combien gagne-t-on vraiment de l'heure ? »](combien-gagne-chauffeur-vtc-par-heure.html)."
+   ]
+  },
+  {
+   "id": "statut",
+   "titre": "3. Choisir la micro-entreprise sans faire le calcul",
+   "blocs": [
+    "La micro-entreprise est simple : on déclare son chiffre d'affaires, on paie un pourcentage, et c'est tout. C'est un très bon statut pour tester l'activité, pour un petit volume ou avec une voiture déjà payée. Le plafond est de 83 600 € de chiffre d'affaires par an en 2026.",
+    "Son point faible est connu, et il pèse lourd en VTC : on ne peut pas déduire ses frais. Les cotisations et l'impôt sont calculés sur le chiffre d'affaires, que la voiture vous coûte 300 € ou 1 500 € par mois. Pour un métier où la voiture absorbe une grande part des recettes, une entreprise individuelle au régime réel ou une société (EURL, SASU) peut devenir plus intéressante, parce qu'elle tient compte des frais réels.",
+    "Le bon ordre est donc : d'abord estimer ses recettes et ses dépenses, ensuite choisir le statut. Pas l'inverse. Un expert-comptable ou la chambre de métiers peut vous aider à comparer."
+   ]
+  },
+  {
+   "id": "tva-cfe",
+   "titre": "4. Oublier la TVA et la CFE",
+   "blocs": [
+    "Deux charges surprennent souvent les débutants, parce qu'elles n'apparaissent pas au début.",
+    "**La TVA.** En micro-entreprise, vous ne facturez pas de TVA tant que vous restez sous les seuils de la franchise, inchangés en 2026 pour les services : 37 500 € de chiffre d'affaires sur l'année. Si vous dépassez 37 500 €, la TVA s'applique au 1er janvier suivant ; si vous dépassez 41 250 € en cours d'année, elle s'applique dès le jour du dépassement. Suivez donc votre total mois par mois, pas seulement en fin d'année.",
+    "**La CFE (cotisation foncière des entreprises).** C'est un impôt local dû par toute personne qui exerce une activité non salariée, micro-entrepreneurs compris. Vous en êtes exonéré l'année de création de votre entreprise, puis la base de calcul est réduite de moitié l'année suivante. L'avis arrive en fin d'année, avec un paiement au plus tard le 15 décembre. L'exonération prévue pour les chauffeurs de taxi suppose de respecter des tarifs réglementés, ce qui n'est pas le cas des VTC, dont les prix sont libres : prévoyez donc cette dépense dans votre budget."
+   ]
+  },
+  {
+   "id": "papiers",
+   "titre": "5. Négliger ses papiers",
+   "blocs": [
+    "Carte professionnelle, attestation d'assurance, carte grise, contrôle technique, inscription au registre : ces documents ne sont pas de la paperasse secondaire, ce sont des outils de travail. Les plateformes doivent vérifier qu'ils sont valides avant de vous confier des courses, et cesser de le faire s'ils ne le sont plus ([article R3141-6](../wiki/r3141-6.html)).",
+    "Les chiffres de l'ARPE le montrent clairement. Chez Uber, Bolt et Heetch, 95,5 % des sanctions prises contre des chauffeurs en 2024 étaient des suspensions temporaires, et 93,3 % de ces suspensions étaient dues à un document non conforme ou expiré. Autrement dit, la grande majorité des comptes suspendus l'étaient pour un papier.",
+    {
+     "note": "Notez dans un agenda la date de fin de chaque document : carte professionnelle et inscription au registre (tous les 5 ans), visite médicale, assurance, contrôle technique. Envoyez les nouveaux documents à chaque plateforme avant l'échéance, pas le jour même."
+    }
+   ]
+  },
+  {
+   "id": "compte-prete",
+   "titre": "6. Travailler « sous le compte » de quelqu'un d'autre",
+   "blocs": [
+    "On propose parfois aux nouveaux chauffeurs de rouler avec le compte ou l'inscription au registre d'un autre exploitant, en attendant d'avoir les leurs. C'est une très mauvaise idée, et les règles se sont durcies en 2026.",
+    "Depuis le 27 juin 2026, l'exploitant qui prête ou loue son inscription au registre à quelqu'un est considéré comme son employeur. Il est radié immédiatement du registre et peut être interdit de se réinscrire pendant 3 ans. Exercer sans être inscrit au registre est puni de 3 ans d'emprisonnement et de 45 000 € d'amende, avec possibilité de suspension du permis et de confiscation du véhicule ([article L3124-7](../wiki/l3124-7.html)).",
+    "Côté plateformes, le partage illicite de compte figurait parmi les motifs de 20,9 % des fermetures définitives de comptes de chauffeurs VTC en 2024, selon l'ARPE. Une vraie relation de travail, c'est un contrat de travail ou un contrat de sous-traitance en bonne et due forme, jamais le prêt d'un identifiant."
+   ]
+  },
+  {
+   "id": "une-seule-appli",
+   "titre": "7. Tout miser sur une seule application",
+   "blocs": [
+    "Les plateformes apportent quelque chose de précieux : des clients dès le premier jour, sans publicité. Mais elles décident des courses qui vous sont proposées, d'une grande partie du prix et de l'accès à votre compte. Si tout votre chiffre d'affaires passe par une seule application, une suspension de quelques jours suffit à créer un trou de trésorerie, alors que la location de la voiture continue.",
+    "La plupart des chauffeurs l'ont compris : en 2024, 76 % des chauffeurs actifs ont travaillé avec plusieurs plateformes. L'étape suivante consiste à développer une clientèle à vous. Le site officiel Entreprendre.Service-Public.fr le rappelle : vous pouvez travailler avec des plateformes, qui prélèvent une commission, mais aussi constituer votre propre portefeuille de clients, en partenariat avec des hôtels, des aéroports ou des agences de voyage.",
+    "Une plateforme est un bon apporteur d'affaires. Ce n'est pas votre fonds de commerce : vos clients directs, vos contacts et votre réputation, eux, vous appartiennent."
+   ]
+  },
+  {
+   "id": "attente",
+   "titre": "8. Attendre des heures pour « la belle course »",
+   "blocs": [
+    "L'aéroport, la gare, le quartier d'affaires : ils promettent de belles courses. Mais une course doit toujours être divisée par tout le temps qu'elle a demandé. Une course à 60 € obtenue après deux heures d'attente rapporte moins de 25 € de l'heure, avant même les frais ; la même course après dix minutes, c'est une excellente affaire.",
+    "Rappel réglementaire : aux abords d'une gare ou d'un aéroport, un VTC ne peut stationner qu'une heure au maximum avant la prise en charge d'un client qui a réservé ([article D3120-3](../wiki/d3120-3.html)). Et sans réservation, il doit regagner sa base ou un parking hors de la chaussée ([article L3122-9](../wiki/l3122-9.html))."
+   ]
+  },
+  {
+   "id": "kilometres",
+   "titre": "9. Oublier les kilomètres à vide",
+   "blocs": [
+    "Rejoindre le client, revenir d'une destination éloignée, aller à la borne de recharge ou au lavage : tous ces kilomètres consomment du carburant, des pneus et de la valeur de revente, sans rien rapporter. Le minimum d'1 € par kilomètre garanti par les plateformes ne s'applique qu'à la distance prévue avec le client à bord.",
+    "Prenez l'habitude de noter chaque semaine deux chiffres : les kilomètres au compteur et les kilomètres avec client (ils figurent sur vos relevés). Si la moitié de vos kilomètres sont faits à vide, votre coût réel par course est deux fois plus élevé que vous ne le pensez."
+   ]
+  },
+  {
+   "id": "reserve",
+   "titre": "10. Ne rien mettre de côté",
+   "blocs": [
+    "Un indépendant n'a pas de congés payés ni d'indemnités comparables à celles d'un salarié. Une semaine sans rouler, c'est une semaine sans chiffre d'affaires, mais avec les mêmes dépenses fixes. Le site officiel Entreprendre.Service-Public.fr conseille d'ailleurs, avant de se lancer, de « faire une réserve financière pour faire face aux imprévus ».",
+    "Une méthode simple : dès le premier mois, mettez de côté une part de chaque semaine sur un compte séparé, pour les cotisations, la CFE, les congés, les réparations et le remplacement futur de la voiture. Gardez aussi vos preuves : relevés hebdomadaires, factures, échanges avec le support, incidents. Ils servent pour la comptabilité et pour contester une décision ou un paiement.",
+    "Dernier point, souvent oublié : la santé. Les longues journées augmentent le chiffre d'affaires à court terme, mais aussi la fatigue et le risque d'accident. Fixer une limite à sa journée est une règle de sécurité autant qu'une règle de gestion."
+   ]
+  }
+ ],
+ "a_retenir": [
+  "Choisissez votre voiture d'après son coût par kilomètre et testez votre budget avec 20 % de chiffre d'affaires en moins et deux semaines d'arrêt.",
+  "Le montant affiché par l'application n'est pas un revenu : retirez les cotisations (près de 22 % en micro-entreprise), la voiture, l'impôt et le temps d'attente.",
+  "En 2024, 93,3 % des suspensions de comptes VTC étudiées par l'ARPE (Uber, Bolt, Heetch) étaient dues à un document non conforme : surveillez vos dates d'échéance.",
+  "Prêter ou louer son inscription au registre est interdit depuis le 27 juin 2026 : radiation immédiate et jusqu'à 3 ans d'interdiction de se réinscrire.",
+  "Prévoyez la TVA (franchise jusqu'à 37 500 €) et la CFE (exonérée l'année de création seulement), et constituez une réserve dès le premier mois."
+ ],
+ "wiki": [
+  "r3141-6",
+  "l3122-3",
+  "l3124-7",
+  "d3120-3",
+  "l3122-9",
+  "l1326-2"
+ ],
+ "fiches": [
+  [
+   "B1.2",
+   "La micro-entreprise : un régime, pas une société"
+  ],
+  [
+   "B2.6",
+   "Acheter, louer longue durée, crédit-bail"
+  ],
+  [
+   "B3.2",
+   "Le coût de revient"
+  ],
+  [
+   "B4.3",
+   "La franchise en base de TVA"
+  ],
+  [
+   "B4.6",
+   "La cotisation foncière des entreprises (CFE)"
+  ],
+  [
+   "A5.6",
+   "Exercer sans carte ou sans inscription"
+  ],
+  [
+   "F1.6",
+   "Les plateformes : complément ou dépendance ?"
+  ]
+ ],
+ "sources": [
+  {
+   "nom": "Entreprendre.Service-Public.fr, « Devenir chauffeur de VTC » (fiche F31027, vérifiée le 12 août 2026) : réserve financière, micro-entreprise, registre et sanctions depuis le 27 juin 2026, choix de la clientèle",
+   "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F31027",
+   "date": "consultée le 29 octobre 2026"
+  },
+  {
+   "nom": "Entreprendre.Service-Public.fr, « Cotisation foncière des entreprises (CFE) » (fiche F23547, vérifiée le 2 avril 2026)",
+   "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F23547",
+   "date": "consultée le 29 octobre 2026"
+  },
+  {
+   "nom": "Entreprendre.Service-Public.fr, « Franchise en base de TVA » (fiche F21746, vérifiée le 1er janvier 2026)",
+   "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F21746",
+   "date": "consultée le 29 octobre 2026"
+  },
+  {
+   "nom": "ARPE, rapport d'observation 2025 sur la désactivation des comptes (conseil d'administration du 25 juin 2025) : suspensions et motifs 2023-2024 chez Uber, Bolt et Heetch",
+   "url": "https://www.arpe.gouv.fr/wp-content/uploads/2025/10/ARPE-CA-25-06-2025-Point-3-Rapport-dobservation-2025.pdf",
+   "date": "consulté le 29 octobre 2026"
+  },
+  {
+   "nom": "SDES, Observatoire national des transports publics particuliers de personnes, « Les chauffeurs des plateformes de VTC en 2024 : premiers résultats » (13 novembre 2025)",
+   "url": "https://www.statistiques.developpement-durable.gouv.fr/les-chauffeurs-des-plateformes-de-vtc-en-2024-premiers-resultats",
+   "date": "consulté le 29 octobre 2026"
+  },
+  {
+   "nom": "Accord du 19 décembre 2023 pour l'amélioration des revenus des chauffeurs VTC indépendants (garantie d'1 € par kilomètre sur la distance estimée), texte publié par l'ARPE",
+   "url": "https://www.arpe.gouv.fr/wp-content/uploads/2024/02/Accord-revenu-minimal-horaire-et-euro-kilometrique-19-Decembre-2023.pdf",
+   "date": "consulté le 29 octobre 2026"
+  },
+  {
+   "nom": "Révision VTC, « Quelles cotisations paie un chauffeur VTC en micro-entreprise ? » (28 octobre 2026)",
+   "url": "https://revision-vtc.fr/questions/2026-10-28-cotisations-vtc-micro-entreprise.html",
+   "date": "consulté le 29 octobre 2026"
+  },
+  {
+   "nom": "Révision VTC, simulateur « Coût de revient de la voiture et revenu net » (exemple chiffré, hypothèses sourcées)",
+   "url": "https://revision-vtc.fr/simulateurs/cout-revient-revenu-net-vtc.html",
+   "date": "consulté le 29 octobre 2026"
+  }
+ ],
+ "verifie": "29 octobre 2026"
+}

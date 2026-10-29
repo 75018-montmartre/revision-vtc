@@ -1,0 +1,305 @@
+{
+ "numero": 2,
+ "slug": "combien-gagne-chauffeur-vtc-par-heure",
+ "date": "2026-10-29",
+ "brouillon": true,
+ "titre": "Chauffeur VTC : combien gagne-t-on vraiment de l'heure sur Uber, Bolt et Heetch ?",
+ "titre_page": "Combien gagne un chauffeur VTC par heure ? Uber, Bolt, Heetch en 2025",
+ "description": "47,60 € de l'heure chez Uber ? Une fois l'attente, la voiture et les cotisations déduites, il reste souvent moins de 12 €. Calcul pas à pas, chiffres ARPE 2025.",
+ "mots_cles": [
+  "combien gagne un chauffeur VTC",
+  "salaire chauffeur VTC",
+  "revenu chauffeur Uber par heure",
+  "chauffeur Bolt revenu",
+  "revenu minimum VTC 30 euros",
+  "chauffeur VTC rentable"
+ ],
+ "chapeau": "Les chiffres publiés sur les plateformes donnent le tournis : plus de 40 € de l'heure. Ils sont exacts, mais ils ne mesurent qu'une chose : le temps où un client est à bord. Voici, étape par étape, comment passer de ce chiffre affiché à ce qui reste vraiment dans votre poche.",
+ "en_bref": [
+  "Selon l'ARPE, l'autorité qui suit les plateformes, une course Uber rapportait en moyenne 17,30 € au chauffeur en 2025, pour 21,8 minutes de trajet : c'est 47,60 € de l'heure… si les courses s'enchaînaient sans aucune pause.",
+  "En ajoutant les 7,5 minutes d'attente moyenne avant la proposition suivante, on tombe à 35,40 € par heure. Et après la voiture et les cotisations, l'exemple de notre simulateur laisse entre 8,90 € et 11,50 € par heure passée au volant, avant impôt."
+ ],
+ "sections": [
+  {
+   "id": "chiffre-affiche",
+   "titre": "Le chiffre affiché : plus de 40 € de l'heure",
+   "blocs": [
+    "Chaque année, les plateformes de VTC publient quelques indicateurs sur l'activité de leurs chauffeurs : ce que rapporte une course en moyenne, combien de temps elle dure, combien de temps on attend entre deux propositions. Elles y sont obligées par la loi ([article L1326-3 du Code des transports](../wiki/l1326-3.html)). L'ARPE, l'Autorité des relations sociales des plateformes d'emploi, rassemble ces chiffres et les analyse. Sa dernière édition, publiée le 22 avril 2026, couvre neuf plateformes de 2021 à 2025.",
+    "Le premier chiffre à comprendre est le revenu moyen par course : c'est ce que la plateforme reverse au chauffeur pour une course, commission déjà retirée, sans les pourboires. Le second est la durée moyenne de la course, entre la prise en charge du client et sa dépose. En divisant l'un par l'autre, l'ARPE obtient un « revenu horaire brut en course ».",
+    {
+     "tableau": {
+      "legende": "Les trois grandes plateformes grand public en 2025, selon l'ARPE",
+      "colonnes": [
+       "Plateforme",
+       "Revenu moyen par course",
+       "Durée moyenne",
+       "Attente avant la course suivante",
+       "Revenu horaire « en course »"
+      ],
+      "nombres": [
+       1,
+       2,
+       3,
+       4
+      ],
+      "lignes": [
+       [
+        "Uber",
+        "17,30 €",
+        "21,8 min",
+        "7,5 min",
+        "47,60 €"
+       ],
+       [
+        "Bolt",
+        "15,90 €",
+        "21,6 min",
+        "5,8 min",
+        "44,30 €"
+       ],
+       [
+        "Heetch",
+        "15,60 €",
+        "23 min",
+        "12,1 min",
+        "40,70 €"
+       ]
+      ]
+     }
+    },
+    "Ces 47,60 € de l'heure chez Uber sont un calcul exact. Mais l'ARPE prévient elle-même : il décrit un cas théorique, celui d'un chauffeur « continuellement en course, sans temps d'attente entre deux prestations », ce qui surestime le revenu réel. Il ne retire ni les cotisations sociales, ni le carburant, ni l'assurance, ni l'entretien, ni l'usure de la voiture, ni l'impôt.",
+    {
+     "note": "Ces chiffres servent à suivre une tendance d'une année à l'autre. L'ARPE précise qu'ils ne permettent pas de comparer les plateformes entre elles : leur taille, leurs villes et leur clientèle sont trop différentes."
+    }
+   ]
+  },
+  {
+   "id": "attente",
+   "titre": "Première étape : compter le temps d'attente",
+   "blocs": [
+    "Un chauffeur ne passe pas toute sa journée avec un client à bord. Entre deux courses, il attend qu'une nouvelle demande arrive. Ce temps n'est pas payé, mais il fait bien partie de sa journée de travail.",
+    "Refaisons le calcul en ajoutant l'attente moyenne relevée par l'ARPE. Chez Uber, une course de 21,8 minutes plus 7,5 minutes d'attente, cela fait un cycle de 29,3 minutes pour 17,30 € : environ 2 courses par heure, soit 35,40 € de l'heure. Chez Bolt, le même calcul donne 34,80 €. Chez Heetch, où l'attente est plus longue, 26,70 €.",
+    {
+     "tableau": {
+      "legende": "Revenu par heure, attente comprise : notre calcul à partir des chiffres ARPE 2025",
+      "colonnes": [
+       "Plateforme",
+       "Durée d'un cycle (course + attente)",
+       "Revenu par heure, attente comprise"
+      ],
+      "nombres": [
+       1,
+       2
+      ],
+      "lignes": [
+       [
+        "Uber",
+        "29,3 min",
+        "35,40 €"
+       ],
+       [
+        "Bolt",
+        "27,4 min",
+        "34,80 €"
+       ],
+       [
+        "Heetch",
+        "35,1 min",
+        "26,70 €"
+       ]
+      ]
+     }
+    },
+    "Ce calcul reste optimiste, pour deux raisons que l'ARPE signale. D'abord, l'attente mesurée s'arrête à la proposition d'une course, pas à son acceptation : si vous refusez la première proposition, vous attendez plus longtemps. Ensuite, le temps pour rejoindre le client n'est compté dans la durée de la course que si la plateforme le rémunère.",
+    "À l'inverse, beaucoup de chauffeurs sont connectés à plusieurs applications à la fois et attendent donc moins que ce que montrent les chiffres d'une seule plateforme. En 2024, 76 % des chauffeurs actifs ont travaillé avec plusieurs plateformes, selon l'Observatoire national des transports publics particuliers de personnes (SDES).",
+    {
+     "note": "Uber publie aussi ses propres chiffres. Pour 2024, il indique un temps moyen de 41,35 minutes entre deux courses acceptées et effectuées, pour un revenu moyen de 17,50 € par course et une durée de 21,3 minutes. Avec ces chiffres, on descend à 16,80 € par heure. C'est une moyenne qui mélange des chauffeurs très différents (et des chauffeurs qui font des courses sur une autre application pendant ce temps), mais elle montre à quel point l'attente pèse."
+    }
+   ]
+  },
+  {
+   "id": "minimums-garantis",
+   "titre": "Les minimums garantis : 30 € de l'heure, 1 € du kilomètre, 9 € la course",
+   "blocs": [
+    "Depuis 2024, des accords signés entre les plateformes et les représentants des chauffeurs, puis validés par l'ARPE, garantissent trois planchers. Ils sont rappelés sur le site officiel Entreprendre.Service-Public.fr.",
+    {
+     "liste": [
+      "**9 € minimum par course**, quelle que soit sa durée ou sa distance, commission de la plateforme déduite.",
+      "**30 € minimum par heure d'activité**, vérifiés chaque mois (ou toutes les quatre semaines) : si le total versé est inférieur, la plateforme paie la différence le mois suivant. Les primes comptent dans le calcul, les pourboires non.",
+      "**1 € minimum par kilomètre** parcouru avec le client, calculé sur la distance estimée par la plateforme entre la prise en charge et la dépose."
+     ]
+    },
+    "Le mot important est « heure d'activité ». L'accord du 19 décembre 2023 la définit précisément : pour une course immédiate, elle commence quand vous acceptez la course et s'arrête quand vous déposez le client. Le trajet pour rejoindre le client est donc compté, mais pas le temps passé à attendre une proposition. Pour une course réservée à l'avance, le trajet d'approche n'est compté que pour 15 % de la durée de la course, avec un maximum de 5 minutes.",
+    "Autrement dit, le minimum de 30 € ne veut pas dire 30 € pour chaque heure où l'application est ouverte. Une journée de 10 heures de connexion avec 6 heures d'activité est garantie à 180 €, pas à 300 €. De même, le minimum d'1 € par kilomètre ne couvre ni les kilomètres pour rejoindre le client, ni le retour à vide.",
+    {
+     "note": "Face à la hausse du prix des carburants, Uber et les plateformes de la Fédération française du transport de personnes sur réservation (Bolt, Freenow, Heetch, LeCab) ont relevé temporairement le minimum horaire de 30 € à 32 € pour octobre et novembre 2026, d'après Economie Matin et Entrevue (30 septembre 2026). Sauf nouvelle annonce, il revient à 30 € en décembre."
+    },
+    "Ces planchers protègent surtout contre les très mauvaises périodes. Selon l'Observatoire national, le chiffre d'affaires horaire moyen d'un chauffeur était de 38 € hors primes en septembre-octobre 2024, et 24 % des chauffeurs étaient sous les 30 €. Lors de la signature de l'accord, il était estimé que près de 10 % des chauffeurs toucheraient un complément."
+   ]
+  },
+  {
+   "id": "ce-qui-reste",
+   "titre": "Deuxième étape : retirer les cotisations et la voiture",
+   "blocs": [
+    "Les sommes versées par la plateforme ne sont pas un salaire : c'est le chiffre d'affaires d'une entreprise. Il faut encore en retirer deux grosses dépenses.",
+    "**Les cotisations sociales.** En micro-entreprise, elles représentent près de 22 % du chiffre d'affaires en 2026 : 21,2 % de cotisations, 0,3 % pour la formation professionnelle et 0,48 % de taxe pour la chambre de métiers (hors Alsace-Moselle). Elles se calculent sur le chiffre d'affaires, pas sur le bénéfice : même un mois à perte, elles sont dues. Le détail est dans notre réponse [« Quelles cotisations paie un chauffeur VTC en micro-entreprise ? »](../questions/2026-10-28-cotisations-vtc-micro-entreprise.html).",
+    "**La voiture.** Location, carburant ou électricité, assurance, entretien, pneus : c'est la plus grosse dépense du métier. Avec une hybride louée 280 € par semaine, roulant 60 000 km par an, notre simulateur arrive à 0,36 € par kilomètre, carburant et assurance compris.",
+    "Prenons l'exemple par défaut du [simulateur de coût de revient et de revenu net](../simulateurs/cout-revient-revenu-net-vtc.html) : 1 000 € versés par les plateformes chaque semaine, pendant 47 semaines (le reste étant pris en congés, sans revenu). Il reste au chauffeur 983 € par mois avant impôt si ses cotisations sont calculées sur le prix payé par les clients, et 1 270 € si elles le sont sur le montant versé après commission. Les deux lectures existent : aucun texte officiel ne tranche clairement la question pour les chauffeurs de plateforme, et le simulateur montre les deux.",
+    "Combien d'heures faut-il pour gagner ces 1 000 € ? Au rythme de 35,40 € par heure calculé plus haut, environ 28 heures par semaine, soit 1 328 heures sur l'année.",
+    {
+     "tableau": {
+      "legende": "De l'heure affichée à l'heure réelle : l'exemple pas à pas (hypothèses du simulateur, micro-entreprise)",
+      "colonnes": [
+       "Étape",
+       "Par heure"
+      ],
+      "nombres": [
+       1
+      ],
+      "lignes": [
+       [
+        "Revenu « en course » publié pour Uber (ARPE 2025)",
+        "47,60 €"
+       ],
+       [
+        "Avec le temps d'attente avant la course suivante",
+        "35,40 €"
+       ],
+       [
+        "Ce qui reste après voiture et cotisations, si les cotisations portent sur le prix payé par le client",
+        "8,90 €"
+       ],
+       [
+        "Même calcul si les cotisations portent sur le montant versé",
+        "11,50 €"
+       ]
+      ]
+     }
+    },
+    "Pour comparer : le SMIC brut est de 12,31 € de l'heure depuis le 1er juin 2026. Un salarié a en plus des congés payés, l'assurance chômage et une voiture fournie par l'employeur. L'indépendant, lui, choisit ses horaires et peut développer sa propre clientèle. Nous comparons les deux situations dans l'article [« Chauffeur VTC salarié ou indépendant : que choisir pour débuter ? »](chauffeur-vtc-salarie-ou-independant.html).",
+    {
+     "note": "Cet exemple n'est pas une moyenne du métier : c'est un calcul avec des hypothèses précises. Un chauffeur avec une voiture déjà payée, une bonne clientèle de réservations ou des courses longues obtient un tout autre résultat. Refaites-le avec vos propres chiffres dans le simulateur : il est gratuit et rien n'est enregistré."
+    }
+   ]
+  },
+  {
+   "id": "tendance",
+   "titre": "Une tendance à connaître : le pouvoir d'achat recule",
+   "blocs": [
+    "Entre 2021 et 2025, le revenu horaire « en course » a légèrement augmenté en euros : +3 % chez Uber, +0,7 % chez Bolt. Mais les prix ont augmenté de 13,6 % sur la même période. Une fois l'inflation déduite, l'ARPE mesure une baisse de 9,3 % chez Uber, de 11,3 % chez Bolt et de 12,3 % chez Heetch.",
+    "Dans le même temps, le nombre de chauffeurs a augmenté plus vite que le nombre de courses : environ 71 300 chauffeurs actifs en 2024, soit 27 % de plus qu'en 2023, pour 16 % de courses en plus (plus de 100 millions). Plus de chauffeurs pour se partager la demande, c'est en général plus d'attente pour chacun.",
+    "Le métier reste porteur : les courses augmentent chaque année. Mais il vaut mieux bâtir son projet sur des hypothèses prudentes que sur le chiffre le plus flatteur."
+   ]
+  },
+  {
+   "id": "gagner-plus",
+   "titre": "Comment améliorer son revenu par heure",
+   "blocs": [
+    "Le bon indicateur n'est pas le prix de la course, mais ce qui reste par heure passée au volant. Quelques réflexes simples permettent de l'améliorer.",
+    {
+     "liste": [
+      "**Mesurez vos propres chiffres** chaque semaine : sommes versées, heures connectées, kilomètres au compteur. Vos statistiques valent mieux que n'importe quelle moyenne.",
+      "**Surveillez vos kilomètres à vide.** Ils coûtent autant que les autres (0,36 € dans notre exemple) et ne sont couverts par aucune garantie.",
+      "**Regardez la distance et le prix avant d'accepter.** La plateforme doit vous les indiquer, et vous avez le droit de refuser une course ([article L1326-2](../wiki/l1326-2.html)).",
+      "**Méfiez-vous des longues attentes** en gare ou à l'aéroport : une course à 60 € obtenue après deux heures d'attente rapporte moins qu'elle n'en a l'air. Le stationnement y est d'ailleurs limité à une heure ([article D3120-3](../wiki/d3120-3.html)).",
+      "**Vérifiez le complément de garantie** sur vos relevés mensuels si votre activité a été faible.",
+      "**Développez des courses en direct** (hôtels, entreprises, clients réguliers) : vous fixez votre prix et ne payez pas de commission. Pensez au justificatif de réservation obligatoire ([article R3120-2](../wiki/r3120-2.html))."
+     ]
+    }
+   ]
+  }
+ ],
+ "a_retenir": [
+  "Le revenu horaire « en course » publié par l'ARPE (47,60 € chez Uber en 2025) suppose un chauffeur toujours en course, sans attente : ce n'est pas un salaire.",
+  "Avec le temps d'attente moyen avant la proposition suivante, on tombe à environ 35 € par heure chez Uber et Bolt, 27 € chez Heetch (chiffres 2025).",
+  "Le minimum de 30 € (32 € en octobre et novembre 2026) porte sur l'heure d'activité, de l'acceptation de la course à la dépose du client, pas sur le temps de connexion.",
+  "Les cotisations (près de 22 % du chiffre d'affaires en micro-entreprise) et la voiture absorbent une grande partie de ce qui est versé : dans l'exemple du simulateur, il reste entre 8,90 € et 11,50 € par heure avant impôt.",
+  "Pour connaître votre vrai revenu, suivez chaque semaine vos sommes versées, vos heures connectées et vos kilomètres, et faites le calcul dans le simulateur."
+ ],
+ "wiki": [
+  "l1326-3",
+  "l1326-2",
+  "l1326-1",
+  "d3120-3",
+  "r3120-2"
+ ],
+ "fiches": [
+  [
+   "A8.2",
+   "Revenu minimal et désactivation"
+  ],
+  [
+   "B3.2",
+   "Le coût de revient"
+  ],
+  [
+   "B3.4",
+   "Le seuil de rentabilité et le point mort"
+  ],
+  [
+   "B3.5",
+   "Ce qui reste au micro-entrepreneur"
+  ],
+  [
+   "B5.1",
+   "Les cotisations du micro-entrepreneur"
+  ],
+  [
+   "F1.6",
+   "Les plateformes : complément ou dépendance ?"
+  ]
+ ],
+ "sources": [
+  {
+   "nom": "ARPE, « Revenus et temps de travail : analyse de l'activité des chauffeurs VTC des plateformes de mobilité », édition 2026 (avril 2026), tableaux 1 à 3",
+   "url": "https://www.arpe.gouv.fr/wp-content/uploads/2026/04/Rapport-VTC-2026-2-vdef.pdf",
+   "date": "consulté le 29 octobre 2026"
+  },
+  {
+   "nom": "ARPE, « Plateformes de VTC : l'ARPE publie son analyse 2026 des indicateurs d'activité » (22 avril 2026)",
+   "url": "https://www.arpe.gouv.fr/actualites/larpe-publie-son-edition-2026-de-lanalyse-des-indicateurs-dactivite-des-plateformes-de-vtc/",
+   "date": "consulté le 29 octobre 2026"
+  },
+  {
+   "nom": "Accord du 19 décembre 2023 pour l'amélioration des revenus des chauffeurs VTC indépendants (garantie de 30 € par heure d'activité et d'1 € par kilomètre), texte publié par l'ARPE",
+   "url": "https://www.arpe.gouv.fr/wp-content/uploads/2024/02/Accord-revenu-minimal-horaire-et-euro-kilometrique-19-Decembre-2023.pdf",
+   "date": "consulté le 29 octobre 2026"
+  },
+  {
+   "nom": "Entreprendre.Service-Public.fr, « Devenir chauffeur de VTC » (fiche F31027, vérifiée le 12 août 2026), étape « VTC relié à une plateforme : garantie de revenu minimal »",
+   "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F31027",
+   "date": "consultée le 29 octobre 2026"
+  },
+  {
+   "nom": "Uber, « Indicateurs d'activité des plateformes mentionnés à l'article L1326-3 du Code des transports pour l'année 2024 (VTC) »",
+   "url": "https://www.uber.com/fr/blog/indicateurs-dactivite-des-plateformes-mentionnes-a-larticle-l-1326-3-du-code-des-transports-pour-lannee-2024-vtc",
+   "date": "consulté le 29 octobre 2026"
+  },
+  {
+   "nom": "SDES, Observatoire national des transports publics particuliers de personnes, « Les chauffeurs des plateformes de VTC en 2024 : premiers résultats » (13 novembre 2025)",
+   "url": "https://www.statistiques.developpement-durable.gouv.fr/les-chauffeurs-des-plateformes-de-vtc-en-2024-premiers-resultats",
+   "date": "consulté le 29 octobre 2026"
+  },
+  {
+   "nom": "Economie Matin, « VTC : une hausse de la rémunération face au prix du carburant » (30 septembre 2026)",
+   "url": "https://www.economiematin.fr/vtc-revalorisation-minimum-horaire-garanti-remuneration-plancher",
+   "date": "consulté le 29 octobre 2026"
+  },
+  {
+   "nom": "Entrevue, « VTC : Uber et ses concurrents relèvent la garantie horaire à 32 euros face au coût des carburants » (30 septembre 2026)",
+   "url": "https://entrevue.fr/emploi/vtc-uber-et-ses-concurrents-relevent-la-garantie-horaire-a-32-euros-face-au-cout-des-carburants/",
+   "date": "consulté le 29 octobre 2026"
+  },
+  {
+   "nom": "Centre Inffo, « Revalorisation du Smic au 1er juin 2026 » (arrêté du 22 mai 2026, JO du 24 mai 2026)",
+   "url": "https://www.centre-inffo.fr/site-droit-formation/actualites-droit/revalorisation-du-smic-au-1er-juin-2026",
+   "date": "consulté le 29 octobre 2026"
+  },
+  {
+   "nom": "Révision VTC, simulateur « Coût de revient de la voiture et revenu net » (hypothèses sourcées, vérifiées le 28 octobre 2026)",
+   "url": "https://revision-vtc.fr/simulateurs/cout-revient-revenu-net-vtc.html",
+   "date": "consulté le 29 octobre 2026"
+  }
+ ],
+ "verifie": "29 octobre 2026"
+}
