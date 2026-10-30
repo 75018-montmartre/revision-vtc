@@ -6,6 +6,19 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Vendredi 30 octobre 2026, 22 h 35 · Nouvel outil : calcul de la note de l'examen VTC
+
+- Page publiée (validée par l'auteur) : https://revision-vtc.fr/simulateurs/calcul-note-examen-vtc.html
+  - après un examen blanc : admissible ou non, pourquoi, et quoi travailler (note éliminatoire à rattraper, épreuve où combler la moyenne, notes à moins de 2 points du seuil, marge de moyenne) ;
+  - notes partielles : ce qu'il faut aux épreuves restantes ; mode « F et G seulement » pour les candidats admissibles au taxi depuis moins de 3 ans (article 5) ;
+  - barème officiel avec le poids de chaque épreuve, deux exemples, épreuve pratique, limites de l'outil, questions fréquentes (FAQPage).
+- Modifiés : https://revision-vtc.fr/simulateurs/ (deux outils), sitemap.xml, llms.txt.
+- Sources : arrêté du 6 avril 2017, articles 2 (version du 1er avril 2024), 3 et 5, Légifrance, consulté le 30 octobre 2026 ; CMA Alsace, fiche V1.4 du 26 janvier 2026 (seuils concordants).
+- Garde-fou : le générateur compare le barème (`contenu/calcul_note.json`) au texte de l'arrêté recopié dans le wiki ; si la veille du mercredi met à jour ce texte et que le barème change, la génération s'arrête.
+- Vérifications : `node outils/test_calcul_note.js` (cas faits à la main, 200 000 tirages, 20 000 tirages pour les conseils) ; aucune erreur d'accessibilité (axe) en clair et en sombre de 320 à 1 920 px ; aucun débordement ; aucun lien interne cassé.
+- Règles du livre touchées : aucune. Le menu affiche toujours « Simulateur » (au singulier) : à trancher par l'auteur.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Jeudi 29 octobre 2026, 14 h 30 · Publication des articles n° 2, 3 et 4
 
 - Publiés (relus par l'auteur) :
