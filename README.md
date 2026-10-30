@@ -19,6 +19,8 @@ Site compagnon du livre *Machine à Réussite · Examen VTC 2027* (Benjamin Blon
 | `outils/generer.py` | Génère tout le site dans `docs/` à partir de `contenu/` |
 | `outils/indexnow.py` | Signale à Bing (IndexNow) les pages ajoutées ou modifiées, lancé par `.github/workflows/indexnow.yml` |
 | `outils/test_simulateur.js` | Vérifie le calcul du simulateur sur des cas faits à la main (`node outils/test_simulateur.js`) |
+| `contenu/calcul_note.json` | Le barème de l'examen pour le « calcul de la note » (`docs/simulateurs/`) : voir « Calcul de la note de l'examen » |
+| `outils/test_calcul_note.js` | Vérifie le calcul de la note sur des cas faits à la main et 200 000 tirages (`node outils/test_calcul_note.js`) |
 | `outils/gabarit.py` | En-tête, menu et pied de page communs |
 | `docs/` | Le site publié par GitHub Pages (ne pas modifier les pages HTML à la main : elles sont régénérées) |
 
@@ -134,6 +136,14 @@ Page : https://revision-vtc.fr/simulateurs/cout-revient-revenu-net-vtc.html (adr
 - Chaque valeur a des `sources` (identifiants de la liste `sources`) ou est marquée `"exemple": true` (hypothèse à remplacer par l'utilisateur, jamais présentée comme un chiffre de référence). Le générateur refuse une valeur sans l'un ou l'autre.
 - **Chaque lundi (tâche « Actualité VTC »)** : prix des carburants. Dans `contenu/simulateur.json`, changer `valeur` et `date` de `prix_e10` et `prix_gazole` (prix moyens TTC du dernier vendredi, fichier « Prix HTT et TTC depuis janvier 2020 » de la DGEC, onglet « Carburants routiers », colonnes T.T.C.) et la date citée dans le nom de la source `dgec` et dans sa date de consultation ; rien d'autre : la page reprend ces valeurs partout. Le générateur refuse deux dates différentes ou une source qui ne cite pas la date. **Chaque 1er janvier** : taux de cotisations, seuils de TVA et de la micro-entreprise. **Au 1er août et au 1er février** : tarif réglementé de l'électricité. Mettre à jour `verifie`, puis les textes d'aide de `simulateur()` dans `outils/generer.py` qui citent ces valeurs.
 - Après toute modification du calcul : `node outils/test_simulateur.js`, puis vérifier la page en clair et en sombre, de 320 px au grand écran.
+
+## Calcul de la note de l'examen
+
+Page : https://revision-vtc.fr/simulateurs/calcul-note-examen-vtc.html (adresse définitive), listée dans `simulateurs/`. Le barème est dans `contenu/calcul_note.json` (épreuves A à G : durée, coefficient, note éliminatoire, composition ; deux exemples ; sources), injecté dans la page ; le calcul se fait dans le navigateur (`docs/js/calcul-note.js`), en centièmes de point entiers (une moyenne de 9,999 n'est jamais affichée 10).
+
+- **Recoupement automatique** : le générateur compare la durée et le coefficient de chaque épreuve, les seuils (10, 6, 4) et la note de l'épreuve pratique (12) au texte de l'arrêté du 6 avril 2017 recopié dans `contenu/wiki.json`. Si la veille du mercredi met à jour ce texte et que le barème change, le générateur s'arrête jusqu'à ce que `calcul_note.json` soit corrigé (puis `verifie` mis à jour).
+- Le mode « seulement F et G » applique l'article 5 de l'arrêté (candidat admissible à l'examen de taxi depuis moins de 3 ans).
+- Après toute modification : `node outils/test_calcul_note.js`, puis vérifier la page en clair et en sombre, de 320 px au grand écran.
 
 ## IndexNow (Bing)
 

@@ -985,7 +985,7 @@ def _euros(x, cts=False):
     return t.replace(",", " ").replace(".", ",") + " €"
 
 
-def simulateur(ds):
+def simulateur(ds, note=None):
     s = lire_simulateur()
     V = {k: x for k, x in s["valeurs"].items()}
     src = {x["id"]: x for x in s["sources"]}
@@ -1201,17 +1201,178 @@ def simulateur(ds):
     ecrire(chemin, page(html.escape(titre + " · Révision VTC", quote=False), corps, "simulateurs", "../", html.escape(desc),
                         scripts_fin=fin, jsonld=[ld, fil(("Accueil", ""), ("Simulateurs", "simulateurs/"), (titre, chemin))]))
 
-    liste = f'''<ul class="questions"><li><span class="meta">{ty("Mis à jour le " + s["verifie"])}</span><a href="{s["slug"]}.html">{ty(titre)}</a><p>{ty("Le coût de revient de votre voiture au kilomètre et ce qu'il vous reste chaque mois, après commission, cotisations, location, carburant et assurance.")}</p></li></ul>'''
+    note_li = (f'<li><span class="meta">{ty("Mis à jour le " + note["verifie"])}</span><a href="{note["slug"]}.html">{ty(note["titre"])}</a><p>{ty("Vos notes aux sept épreuves écrites, le barème officiel appliqué : moyenne pondérée, notes éliminatoires, et ce qu'il vous manque pour être admissible.")}</p></li>') if note else ""
+    liste = f'''<ul class="questions"><li><span class="meta">{ty("Mis à jour le " + s["verifie"])}</span><a href="{s["slug"]}.html">{ty(titre)}</a><p>{ty("Le coût de revient de votre voiture au kilomètre et ce qu'il vous reste chaque mois, après commission, cotisations, location, carburant et assurance.")}</p></li>{note_li}</ul>'''
     corps = f'''    <h1>Simulateurs VTC</h1>
-    <p class="chapeau">{ty("Avant de louer une voiture, de vous lancer ou de changer de plateforme, chiffrez ce que votre activité de chauffeur VTC vous rapporte vraiment. Vous saisissez vos propres chiffres ; chaque valeur proposée par défaut est sourcée et datée, et le calcul se fait dans votre navigateur.")}</p>
+    <p class="chapeau">{ty("Calculez votre note à l'examen VTC, ou ce que votre activité de chauffeur vous rapporte vraiment. Vous saisissez vos propres chiffres ; chaque règle et chaque valeur proposée par défaut est sourcée et datée, et le calcul se fait dans votre navigateur.")}</p>
     <p>{ty("Pour comprendre les montants avant de les saisir, lisez les")} <a href="../dossiers/index.html">articles</a> {ty("; pour les règles du métier, les")} <a href="../wiki/index.html">textes du métier</a>.</p>
     {liste}'''
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Simulateurs VTC", "url": SITE + "simulateurs/", "inLanguage": "fr",
-          "isPartOf": {"@id": SITE + "#site"}, "hasPart": [{"@type": "WebApplication", "name": titre, "url": SITE + chemin}]}
-    ecrire("simulateurs/index.html", page("Simulateurs VTC gratuits : coût de revient, revenu net · Révision VTC", corps, "simulateurs", "../",
-                                          "Simulateurs gratuits pour chauffeurs VTC : coût de revient de la voiture au kilomètre et revenu net mensuel, avec des hypothèses sourcées et datées.",
+          "isPartOf": {"@id": SITE + "#site"}, "hasPart": [{"@type": "WebApplication", "name": titre, "url": SITE + chemin}]
+          + ([{"@type": "WebApplication", "name": note["titre"], "url": SITE + f'simulateurs/{note["slug"]}.html'}] if note else [])}
+    ecrire("simulateurs/index.html", page("Simulateurs VTC gratuits : note de l'examen, coût de revient, revenu net · Révision VTC", corps, "simulateurs", "../",
+                                          "Outils gratuits VTC : calcul de la note de l'examen avec le barème officiel, coût de revient de la voiture au kilomètre et revenu net mensuel, sources datées.",
                                           jsonld=[ld, fil(("Accueil", ""), ("Simulateurs", "simulateurs/"))]))
     return s
+
+
+# ------------------------------------------------------------------ calcul de la note de l'examen
+def lire_calcul_note():
+    """Barème de l'examen (contenu/calcul_note.json), recopié de l'arrêté du 6 avril 2017, article 2 : contrôles de cohérence."""
+    with open(os.path.join(CONTENU, "calcul_note.json"), encoding="utf-8") as h:
+        n = json.load(h)
+    eps = n["epreuves"]
+    assert [e["code"] for e in eps] == list("ABCDEFG"), "calcul de la note : épreuves A à G attendues"
+    assert sum(e["coef"] for e in eps) == 17, "calcul de la note : la somme des coefficients doit être 17"
+    assert all(e["elim"] == (4 if e["code"] == "E" else 6) for e in eps), "calcul de la note : seuils éliminatoires 6 (4 en anglais)"
+    assert [e["code"] for e in eps if not e["commune"]] == ["F", "G"], "calcul de la note : F et G sont les épreuves spécifiques VTC"
+    assert n["sources"] and all(x["url"].startswith("https://") for x in n["sources"]), "calcul de la note : source sans adresse"
+    # recoupement avec le texte officiel de l'arrêté, recopié de Légifrance dans le wiki et comparé chaque semaine à la version en vigueur :
+    # si l'arrêté change, le générateur s'arrête ici tant que le barème n'est pas mis à jour
+    arr = [a for a in lire_wiki()["articles"] if a["slug"] == "arrete-6-avril-2017-examen"][0]
+    art2 = " ".join([p for p in arr["articles"] if p["num"] == "Article 2"][0]["texte"]).replace("\u2019", "'")
+    chiffres = {1: "un", 2: "deux", 3: "trois", 20: "vingt", 30: "trente", 45: "quarante-cinq"}
+    marques = {"A": "A. - Une épreuve portant sur la réglementation du transport public particulier", "B": "B. - Une épreuve portant sur la gestion",
+               "C": "C. - Une épreuve portant sur la sécurité routière", "D": "D. - Une épreuve destinée à évaluer la capacité d'expression et de compréhension en langue française",
+               "E": "E. - Une épreuve destinée à évaluer la capacité d'expression et de compréhension en langue anglaise", "F": 'A. - Une épreuve " F (V) "', "G": 'B. - Une épreuve " G (V) "'}
+    for e in eps:
+        i = art2.index(marques[e["code"]])
+        bout = art2[i:i + 400]
+        assert f'{chiffres[e["duree"]]} minutes' in bout and f'coefficient {chiffres[e["coef"]]}.' in bout, \
+            f"calcul de la note : durée ou coefficient de l'épreuve {e['code']} différent du texte de l'arrêté (wiki)"
+    for phrase in ("une note moyenne d'au moins dix sur vingt", "une note d'au moins six sur vingt à chacune des épreuves A, B, C, D, F et G",
+                   "une note d'au moins quatre sur vingt à l'épreuve E", "trois fois à l'épreuve d'admission dans un délai d'un an"):
+        assert phrase in art2, f"calcul de la note : « {phrase} » absent du texte de l'arrêté (wiki)"
+    art3 = " ".join([p for p in arr["articles"] if p["num"] == "Article 3"][0]["texte"]).replace("\u2019", "'")
+    assert "au moins douze sur vingt à l'épreuve pratique" in art3 and n["note_pratique"] == 12, "calcul de la note : note de l'épreuve pratique"
+    return n
+
+
+def calcul_note_ex(n, notes):
+    """Même calcul que docs/js/calcul-note.js (vérifié par outils/test_calcul_note.js), en centièmes entiers."""
+    pts = sum(round(notes[e["code"]] * 100) * e["coef"] for e in n["epreuves"])
+    elim = [e["code"] for e in n["epreuves"] if round(notes[e["code"]] * 100) < e["elim"] * 100]
+    return {"points": pts / 100, "moyenne": (pts // 17) / 100, "elimines": elim,
+            "admissible": pts >= n["moyenne_requise"] * 1700 and not elim}
+
+
+def calcul_note():
+    n = lire_calcul_note()
+    eps = n["epreuves"]
+    compteur = getattr(_bloc_dossier, "n", 0)   # identifiants de tableaux propres à cette page : ne décale pas ceux des autres pages
+    num = lambda x: (f"{x:.2f}".rstrip("0").rstrip(".")).replace(".", ",")
+    src = " · ".join(f'<a href="#source-{x["id"]}">{ty(x["nom"].split(",")[0])}</a>' for x in n["sources"])
+
+    def champ(e):
+        attr = ' data-commune=""' if e["commune"] else ""
+        aide = f'Coefficient {e["coef"]} · éliminatoire sous {e["elim"]} / 20 · {e["duree"]} min'
+        return (f'<div class="champ"{attr}><label for="note-{e["code"]}">{e["code"]} · {ty(e["court"])} <span class="unite">(sur 20)</span></label>'
+                f'<p class="aide" id="aide-note-{e["code"]}">{ty(aide)}</p>'
+                f'<input type="text" inputmode="decimal" autocomplete="off" id="note-{e["code"]}" name="note-{e["code"]}" value="" '
+                f'aria-describedby="aide-note-{e["code"]} err-note-{e["code"]}"><p class="erreur" id="err-note-{e["code"]}"></p></div>')
+
+    formulaire = f'''
+    <form id="note" class="simu" novalidate hidden aria-describedby="note-intro">
+      <p class="aide" id="note-intro">{ty("Saisissez les notes que vous avez, ou celles que vous visez, par exemple 12 ou 12,5. Laissez vide une épreuve pas encore passée : le calculateur vous dit ce qu'il vous faut. Rien n'est envoyé.")} <a class="lien-resultat" href="#resultat">{ty("Aller au résultat")}</a></p>
+      <fieldset class="bloc-simu"><legend>1. Votre situation</legend>
+        <fieldset class="groupe"><legend>{ty("Quelles épreuves passez-vous ?")}</legend>
+          <div class="choix">
+            <label><input type="radio" name="mode" value="complet" checked><span>{ty("Les sept épreuves écrites, de A à G (cas général)")}</span></label>
+            <label><input type="radio" name="mode" value="passerelle"><span>{ty("Seulement F et G : j'ai été déclaré admissible à l'examen de taxi il y a moins de 3 ans")}</span></label>
+          </div></fieldset>
+      </fieldset>
+      <fieldset class="bloc-simu"><legend>2. Vos notes</legend>
+        {"".join(champ(e) for e in eps)}
+      </fieldset>
+      <div class="actions"><button type="submit" class="bouton">Voir le résultat</button><button type="button" class="bouton second" id="note-raz">Effacer les notes</button></div>
+    </form>
+    <p class="note" id="note-sans-js">{ty("Le calculateur a besoin de JavaScript. Sans lui, faites le calcul à la main avec le barème ci-dessous : multipliez chaque note par son coefficient, additionnez, il faut 170 points sur 340 et aucune note éliminatoire.")}</p>'''
+
+    resultat = f'''
+    <section class="cote-bloc resultat-simu" id="resultat" tabindex="-1" aria-labelledby="titre-resultat" hidden>
+      <h2 id="titre-resultat">Votre résultat</h2>
+      <p class="resultat" id="res-verdict"></p>
+      <p class="meta" id="res-moyenne"></p>
+      <p id="res-explication"></p>
+      <div class="defile" tabindex="0" role="region" aria-labelledby="cap-detail"><table><caption id="cap-detail">Le détail par épreuve (seuil éliminatoire : OK ou raté)</caption>
+        <thead><tr><th scope="col">Épreuve</th><th scope="col" class="nombre">Note</th><th scope="col" class="nombre">Coef.</th><th scope="col" class="nombre">Points</th><th scope="col">Seuil</th></tr></thead>
+        <tbody id="res-detail"></tbody></table></div>
+      <p class="visuellement-cache" id="note-annonce" aria-live="polite"></p>
+    </section>'''
+
+    bareme = {"tableau": {"legende": "Les sept épreuves d'admissibilité de l'examen VTC (arrêté du 6 avril 2017, article 2)",
+                          "colonnes": ["Épreuve", "Durée", "Coef.", "Composition (sur 20 points)", "Éliminatoire sous"], "nombres": [1, 2, 4],
+                          "lignes": [[f'{e["code"]} · {e["titre"]}', f'{e["duree"]} min', str(e["coef"]), e["composition"], f'{e["elim"]} / 20'] for e in eps],
+                          "total": [["Total", "3 h 50", "17", "Moyenne pondérée : points ÷ 17", ""]]}}
+    assert sum(e["duree"] for e in eps) == 230, "calcul de la note : durée totale 3 h 50"
+
+    ex = n["exemples"]["admissible"]; a = calcul_note_ex(n, ex)
+    assert a["admissible"], "l'exemple « admissible » doit l'être"
+    tab_ex = {"tableau": {"legende": "Exemple : un candidat admissible avec une note faible en anglais", "colonnes": ["Épreuve", "Note", "Coef.", "Points"], "nombres": [1, 2, 3],
+                          "lignes": [[f'{e["code"]} · {e["court"]}', num(ex[e["code"]]), str(e["coef"]), num(ex[e["code"]] * e["coef"])] for e in eps],
+                          "total": [["Total", "", "17", num(a["points"])]]}}
+    pg = n["exemples"]["piege"]; b = calcul_note_ex(n, pg)
+    assert not b["admissible"] and b["elimines"] == ["E"], "l'exemple « piège » doit être éliminé en anglais seulement"
+    sources = "".join(f'<li id="source-{x["id"]}"><a href="{html.escape(x["url"])}">{ty(x["nom"])}</a>, {ty(x["date"])}</li>' for x in n["sources"])
+    wiki_lien = '<a href="../wiki/arrete-6-avril-2017-examen.html">' + ty("le texte de l'arrêté, recopié de Légifrance et expliqué") + "</a>"
+
+    corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Simulateurs</a></li></ol></nav>
+    <p class="surtitre">Outil gratuit</p>
+    <h1>{ty("Calcul de la note de l'examen VTC : suis-je admissible ?")}</h1>
+    <p class="chapeau">{ty("Entrez vos notes aux sept épreuves écrites : le calculateur applique le barème officiel, avec ses coefficients et ses notes éliminatoires, et vous dit si vous êtes admissible. S'il manque des notes, il vous dit ce qu'il vous faut aux épreuves restantes.")}</p>
+    <p class="meta">{ty("Barème de l'arrêté du 6 avril 2017, vérifié le " + n["verifie"] + " sur Légifrance · calcul fait dans votre navigateur, rien n'est envoyé")}</p>
+    <div class="deux-col"><div class="col-texte">
+    <section class="en-clair" aria-labelledby="en-bref">
+      <h2 id="en-bref">La règle en bref</h2>
+      <p>{ty("Vous êtes admissible si vous remplissez les trois conditions en même temps :")}</p>
+      <ul>
+        <li>{ty("au moins 10 / 20 de moyenne sur les sept épreuves, chaque note étant multipliée par son coefficient, soit au moins 170 points sur 340 ;")}</li>
+        <li>{ty("au moins 6 / 20 aux épreuves A, B, C, D, F et G ;")}</li>
+        <li>{ty("au moins 4 / 20 à l'épreuve E, l'anglais.")}</li>
+      </ul>
+      <p>{ty("Une seule note sous le seuil suffit à être recalé, même avec 15 de moyenne. Les épreuves A, C, F et G comptent triple : à elles quatre, elles pèsent 12 coefficients sur 17.")}</p>
+    </section>
+    {formulaire}
+    </div>
+    <aside class="col-cote" aria-label="Résultat du calcul">{resultat}
+    </aside></div>
+    <h2 id="bareme">{ty("Le barème officiel des sept épreuves")}</h2>
+    <p>{ty("Les épreuves A à E sont communes aux examens de taxi et de VTC ; F et G sont propres au VTC. Toutes sont notées sur 20, avec des questions à choix multiples (QCM) et des questions à réponse courte (QRC).")}</p>
+    {_bloc_dossier(bareme)}
+    <h2 id="exemples">{ty("Deux exemples pour comprendre")}</h2>
+    <p>{ty(f"Premier exemple : ce candidat n'a que {num(ex['E'])} / 20 en anglais et {num(ex['F'])} / 20 en développement commercial, mais il totalise {num(a['points'])} points, soit {num(a['moyenne'])} de moyenne, sans aucune note sous le seuil. Il est admissible.")}</p>
+    {_bloc_dossier(tab_ex)}
+    <p>{ty(f"Second exemple : un candidat a de très bonnes notes partout ({num(pg['A'])} en A, {num(pg['C'])} en C, {num(pg['G'])} en G), soit {num(b['moyenne'])} de moyenne, mais seulement {num(pg['E'])} / 20 en anglais. Cette note est sous le seuil de 4 : il n'est pas admissible. Ne négligez aucune épreuve, surtout celles qui vous semblent faciles.")}</p>
+    <h2 id="pratique">{ty("Après l'admissibilité : l'épreuve pratique")}</h2>
+    <p>{ty("Une fois admissible, vous passez l'épreuve pratique : une mission de transport en VTC réalisée en situation réelle, avec au moins 20 minutes de conduite en circulation. Il faut au moins 12 / 20 pour être reçu. Elle est notée en quatre parties : préparation et réalisation du parcours (3 points) ; sécurité et souplesse de la conduite et respect du code de la route (10 points) ; prise en charge, relation client et informations touristiques (5 points) ; facturation (2 points). Si l'examinateur doit intervenir sur la double commande ou le volant, l'épreuve s'arrête et le candidat est ajourné.")}</p>
+    <p>{ty("Vous pouvez vous présenter trois fois à l'épreuve pratique, dans un délai d'un an à compter de la publication des résultats des épreuves écrites.")}</p>
+    <h2 id="limites">{ty("Ce que le calculateur ne fait pas")}</h2>
+    <ul>
+      <li>{ty("Il ne corrige pas vos copies : il calcule à partir des notes que vous saisissez. Pour vous entraîner, les examens blancs corrigés donnent une note par épreuve.")}</li>
+      <li>{ty("En français (épreuve D), un point est retiré au-delà de cinq fautes d'orthographe dans les réponses rédigées : saisissez la note après ce retrait.")}</li>
+      <li>{ty("Il ne traite que la dispense prévue pour les candidats déjà admissibles à l'examen de taxi depuis moins de 3 ans. Pour toute autre dispense, renseignez-vous auprès de votre chambre de métiers et de l'artisanat (CMA).")}</li>
+      <li>{ty("Seuls les résultats publiés par la CMA font foi.")}</li>
+    </ul>
+    <p>{ty("Pour lire la règle à la source :")} {wiki_lien}. {ty("Dans le livre")} <i>Machine à Réussite</i>, {ty("la fiche A2.4 explique l'examen, et les trois examens blancs du livre, comme les")} <a href="../examens.html">{ty("deux examens blancs de ce site")}</a>, {ty("sont notés selon ce barème.")}</p>
+    <h2 id="sources">Sources</h2>
+    <ul class="source">{sources}</ul>
+    <p class="source">{ty("Outil indicatif, gratuit et indépendant, sans lien avec les chambres de métiers et de l'artisanat qui organisent l'examen. Le barème est recoupé à chaque mise à jour du site avec le texte de l'arrêté, que le site compare chaque semaine à la version en vigueur sur Légifrance.")}</p>'''
+
+    donnees = json.dumps({k: n[k] for k in ("moyenne_requise", "note_pratique", "epreuves")}, ensure_ascii=False).replace("</", "<\\/")
+    fin = f'<script id="note-donnees" type="application/json">{donnees}</script>\n<script src="../js/calcul-note.js"></script>\n'
+    chemin = f'simulateurs/{n["slug"]}.html'
+    titre = "Calcul de la note de l'examen VTC : suis-je admissible ?"
+    desc = "Calcul de la note de l'examen VTC : moyenne pondérée sur 17, notes éliminatoires (6/20, 4/20 en anglais), ce qu'il vous manque. Barème officiel en vigueur."
+    ld = {"@context": "https://schema.org", "@type": "WebApplication", "name": titre, "url": SITE + chemin, "description": desc,
+          "applicationCategory": "EducationalApplication", "operatingSystem": "Navigateur web", "inLanguage": "fr", "isAccessibleForFree": True,
+          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "author": AUTEUR, "publisher": AUTEUR,
+          "datePublished": n["date"], "dateModified": iso_fr(n["verifie"]), "isPartOf": {"@id": SITE + "#site"},
+          "isBasedOn": [x["url"] for x in n["sources"]]}
+    ecrire(chemin, page(html.escape(titre + " · Révision VTC", quote=False), corps, "simulateurs", "../", html.escape(desc),
+                        scripts_fin=fin, jsonld=[ld, fil(("Accueil", ""), ("Simulateurs", "simulateurs/"), (titre, chemin))]))
+    n["titre"] = titre
+    _bloc_dossier.n = compteur
+    return n
 
 
 def indexnow():
@@ -1273,7 +1434,7 @@ ROBOTS_IA = ["Googlebot", "Bingbot", "Google-Extended", "GPTBot", "OAI-SearchBot
              "Claude-User", "PerplexityBot", "Perplexity-User", "Applebot", "Applebot-Extended", "DuckAssistBot", "MistralAI-User", "CCBot"]
 
 
-def plan(nums, arts, wiki_date, qs=(), ds=(), simu=None):
+def plan(nums, arts, wiki_date, qs=(), ds=(), simu=None, note=None):
     der = nums[0]["date"] if nums else wiki_date
     urls = [("", max(der, wiki_date)), ("actualite/", der), ("wiki/", wiki_date), ("a-propos.html", None), ("contact.html", None), ("mises-a-jour.html", None),
             ("examens.html", None), ("mentions-legales.html", None), ("accessibilite.html", None)]
@@ -1289,6 +1450,8 @@ def plan(nums, arts, wiki_date, qs=(), ds=(), simu=None):
     if simu:
         urls.insert(5, ("simulateurs/", iso_fr(simu["verifie"])))
         urls.append((f'simulateurs/{simu["slug"]}.html', iso_fr(simu["verifie"])))
+    if note:
+        urls.append((f'simulateurs/{note["slug"]}.html', iso_fr(note["verifie"])))
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     xml += "".join(f"  <url><loc>{SITE}{u}</loc>" + (f"<lastmod>{d}</lastmod>" if d else "") + "</url>\n" for u, d in urls) + "</urlset>\n"
     ecrire("sitemap.xml", xml)
@@ -1314,6 +1477,7 @@ def llms(nums, w, qs=(), ds=(), simu=None):
          f"- [Questions VTC]({SITE}questions/): une question concrète par semaine, réponse courte et sources officielles",
          f"- [Articles VTC]({SITE}dossiers/): articles de fond chiffrés (coût du lancement, revenus, statut, véhicule), sources datées",
          f"- [Simulateur VTC : coût de revient de la voiture et revenu net]({SITE}simulateurs/cout-revient-revenu-net-vtc.html): calcul gratuit pour un chauffeur VTC en micro-entreprise (commission, cotisations, location ou achat, carburant, assurance), hypothèses sourcées et datées",
+         f"- [Calcul de la note de l'examen VTC]({SITE}simulateurs/calcul-note-examen-vtc.html): admissibilité selon l'arrêté du 6 avril 2017 (moyenne pondérée sur 17 coefficients, au moins 10/20, notes éliminatoires sous 6/20 et sous 4/20 en anglais), et ce qu'il manque aux épreuves restantes",
          f"- [Mises à jour du livre]({SITE}mises-a-jour.html): règles qui ont changé depuis l'impression",
          f"- [Examens blancs]({SITE}examens.html): deux examens blancs corrigés, réservés aux lecteurs du livre",
          f"- [À propos et méthode]({SITE}a-propos.html): qui écrit, comment les informations sont vérifiées",
@@ -1380,7 +1544,8 @@ if __name__ == "__main__":
     questions(qs, w)
     ds = lire_dossiers({a["slug"] for a in w["articles"]})
     dossiers(ds, w, qs)
-    simu = simulateur(ds)
+    note = calcul_note()
+    simu = simulateur(ds, note)
     indexnow()
     mises_a_jour()
     examens()
@@ -1389,5 +1554,5 @@ if __name__ == "__main__":
     contact()
     page_404()
     llms(nums, w, qs, [d for d in ds if not d.get("brouillon")], simu)
-    plan(nums, arts, iso_fr(w["verifie"]), qs, [d for d in ds if not d.get("brouillon")], simu)
+    plan(nums, arts, iso_fr(w["verifie"]), qs, [d for d in ds if not d.get("brouillon")], simu, note)
     print(f"Site généré dans docs/ : {len(nums)} numéro(s) de l'Actualité VTC.")
