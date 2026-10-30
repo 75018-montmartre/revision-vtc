@@ -17,14 +17,14 @@
       if (n === null || n === undefined) {
         coefRestant += e.coef; minRestant += e.elim * 100 * e.coef; maxRestant += 2000 * e.coef;
         restantes.push(e.code);
-        lignes.push({ code: e.code, note: null, coef: e.coef, points: null, elimine: false });
+        lignes.push({ code: e.code, note: null, coef: e.coef, elim: e.elim, points: null, elimine: false });
         return;
       }
       var c = Math.round(n * 100);
       pts += c * e.coef;
       var elim = c < e.elim * 100;
       if (elim) elimines.push(e.code);
-      lignes.push({ code: e.code, note: c / 100, coef: e.coef, points: c * e.coef / 100, elimine: elim });
+      lignes.push({ code: e.code, note: c / 100, coef: e.coef, elim: e.elim, points: c * e.coef / 100, elimine: elim });
     });
     var seuil = d.moyenne_requise * 100 * coefTotal;   // points pondérés nécessaires, en centièmes
     var r = { mode: mode, lignes: lignes, coefTotal: coefTotal, points: pts / 100, pointsRequis: seuil / 100,
@@ -34,6 +34,22 @@
       r.moyenneOk = pts >= seuil;
       r.admissible = r.moyenneOk && elimines.length === 0;
       r.statut = r.admissible ? 'admissible' : 'non-admissible';
+      // conseils : ce qui manque pour sortir des notes éliminatoires, l'épreuve où combler la moyenne, les points fragiles
+      r.rattrapage = lignes.filter(function (l) { return l.elimine; })
+        .map(function (l) { return { code: l.code, manque: (l.elim * 100 - Math.round(l.note * 100)) / 100, seuil: l.elim }; });
+      r.marge = r.moyenneOk ? Math.floor((pts - seuil) / coefTotal) / 100 : 0;
+      r.fragiles = lignes.filter(function (l) { return !l.elimine && l.note < l.elim + 2; }).map(function (l) { return l.code; });
+      r.levier = null;
+      if (!r.moyenneOk) {
+        var deficit = seuil - pts;
+        // l'épreuve qui comble l'écart avec le moins de points en plus : coefficient le plus fort, puis note la plus basse
+        lignes.slice().sort(function (a, b) { return b.coef - a.coef || a.note - b.note; }).some(function (l) {
+          var ajout = Math.ceil(deficit / l.coef);   // en centièmes de note
+          if (Math.round(l.note * 100) + ajout > 2000) return false;
+          r.levier = { code: l.code, coef: l.coef, ajout: ajout / 100, de: l.note, a: (Math.round(l.note * 100) + ajout) / 100 };
+          return true;
+        });
+      }
     } else {
       var manque = Math.max(seuil - pts, 0);
       r.manque = manque / 100;
@@ -97,6 +113,7 @@
       $('res-verdict').textContent = 'Corrigez la note signalée.';
       $('res-verdict').className = 'resultat';
       $('res-moyenne').textContent = ''; $('res-explication').textContent = ''; $('res-detail').innerHTML = '';
+      $('res-conseil').hidden = true;
       $('note-annonce').textContent = 'Une note est invalide.';
       return;
     }
@@ -104,6 +121,7 @@
 
     // verdict
     var v = $('res-verdict'), moy = $('res-moyenne'), ex = $('res-explication');
+    var conseil = $('res-conseil'), conseils = [];
     var aucune = r.restantes.length === r.lignes.length;
     if (aucune) {
       v.className = 'resultat'; v.textContent = 'Saisissez vos notes';
@@ -119,6 +137,17 @@
       ex.textContent = r.admissible
         ? 'Moyenne d’au moins ' + D.moyenne_requise + ' / 20 et aucune note éliminatoire : vous pouvez passer l’épreuve pratique, où il faut ' + D.note_pratique + ' / 20.'
         : 'Pourquoi : ' + raisons.join(' ; ') + '.' + (r.moyenneOk && r.elimines.length ? ' Une bonne moyenne ne rattrape pas une note éliminatoire.' : '');
+      // que travailler ?
+      r.rattrapage.forEach(function (x) {
+        conseils.push('Priorité : ' + nomEpreuve[x.code] + '. Il vous faut ' + points(x.manque) + ' de plus pour atteindre ' + x.seuil + ' / 20 et ne plus être éliminé.');
+      });
+      if (r.levier) conseils.push('Pour la moyenne : un point gagné dans une épreuve à coefficient ' + r.levier.coef + ' rapporte ' + points(r.levier.coef, 'pondéré') + '. Par exemple, passer de ' + fr(r.levier.de) + ' à ' + fr(r.levier.a) + ' / 20 en ' + nomEpreuve[r.levier.code] + ', soit ' + points(r.levier.ajout) + ' de plus, suffirait' + (r.rattrapage.length ? ' pour la moyenne.' : '.'));
+      if (r.admissible) {
+        if (r.fragiles.length) conseils.push((r.fragiles.length > 1 ? 'Points fragiles : ' : 'Point fragile : ') + liste(r.fragiles) + ', à moins de 2 points du seuil éliminatoire. Quelques erreurs de plus le jour J suffiraient à vous éliminer : c’est là qu’il faut consolider.');
+        var coef3 = m === 'passerelle' ? 'F et G' : 'les épreuves à coefficient 3 (A, C, F et G)';
+        if (r.marge < 1) conseils.push((r.marge === 0 ? 'Aucune marge : votre moyenne est pile à 10 / 20. ' : 'Marge faible : votre moyenne dépasse 10 / 20 de ' + fr2(r.marge) + ' point. ') + 'Visez au moins 1 point de marge, en travaillant d’abord ' + coef3 + '.');
+        if (!r.fragiles.length && r.marge >= 1) conseils.push('Bonne marge : moyenne au-dessus de 10 / 20 de ' + fr2(r.marge) + ' point' + (r.marge >= 2 ? 's' : '') + ', et toutes vos notes dépassent les seuils d’au moins 2 points. Continuez les examens blancs pour confirmer ce niveau.');
+      }
     } else {
       v.className = 'resultat' + (r.statut === 'elimine' || r.statut === 'impossible' ? ' ko' : '');
       var reste = liste(r.restantes);
@@ -141,6 +170,10 @@
         ex.textContent = 'Et aucune note éliminatoire : au moins 6 / 20 à chaque épreuve' + (r.restantes.indexOf('E') >= 0 ? ', 4 / 20 en anglais' : '') + '.';
       }
     }
+
+    conseil.hidden = conseils.length === 0;
+    conseil.innerHTML = '';
+    conseils.forEach(function (t) { var p = document.createElement('p'); p.textContent = t; conseil.appendChild(p); });
 
     // détail par épreuve (l'état est écrit en toutes lettres, pas seulement en couleur)
     var corps = $('res-detail'); corps.innerHTML = '';

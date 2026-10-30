@@ -84,3 +84,48 @@ for (let i = 0; i < 200000; i++) {
 }
 
 console.log('Calcul de la note de l\'examen VTC : tous les tests passent.');
+
+// 11. Conseils
+// exemple admissible : E à 5 (seuil 4) et F à 8 ? non : F 8 >= 6+2 -> pas fragile ; E 5 < 6 -> fragile ; marge 7/17 = 0,41
+r = calculer(D.exemples.admissible, 'complet', D);
+assert.deepStrictEqual(r.fragiles, ['E']); assert.strictEqual(r.marge, 0.41); assert.strictEqual(r.levier, null);
+// piège : E à 3, il manque 1 point pour atteindre 4
+r = calculer(D.exemples.piege, 'complet', D);
+assert.deepStrictEqual(r.rattrapage, [{ code: 'E', manque: 1, seuil: 4 }]); assert.strictEqual(r.levier, null);
+// tout à 9 : il manque 17 points ; meilleur levier = coefficient 3, note la plus basse (A, première à égalité) : 17/3 = 5,67 points -> de 9 à 14,67
+r = calculer(tout(9, 9, 9, 9, 9, 9, 9), 'complet', D);
+assert.deepStrictEqual(r.levier, { code: 'A', coef: 3, ajout: 5.67, de: 9, a: 14.67 });
+// le levier vise la note la plus basse parmi les coefficients 3 : F à 7
+r = calculer(tout(9, 9, 9, 9, 9, 7, 9), 'complet', D);   // 147 points, il manque 23 -> 7,67 en F
+assert.strictEqual(r.levier.code, 'F'); assert.strictEqual(r.levier.ajout, 7.67); assert.strictEqual(r.levier.a, 14.67);
+// si aucune épreuve seule ne suffit (déjà proche de 20), pas de levier
+r = calculer(tout(20, 0, 20, 0, 0, 20, 20), 'complet', D);   // 240 points : moyenne ok ; on teste un cas déficitaire saturé
+assert.strictEqual(r.moyenneOk, true);
+r = calculer(tout(18, 0, 18, 0, 0, 18, 18), 'complet', D);   // 216 points >= 170 : ok
+r = calculer(tout(19, 6, 19, 6, 4, 19, 6), 'complet', D);     // 57+12+57+12+4+57+18 = 217 : ok, mais B, D, E, G fragiles
+assert.deepStrictEqual(r.fragiles, ['B', 'D', 'E', 'G']);
+r = calculer(tout(6, 6, 6, 6, 4, 19, 19), 'complet', D);      // 18+12+18+12+4+57+57 = 178 : admissible
+assert.strictEqual(r.admissible, true);
+r = calculer(tout(6, 6, 6, 6, 4, 6, 19), 'complet', D);       // 18+12+18+12+4+18+57 = 139 : il manque 31 ; A à 6 -> +10,34 -> 16,34
+assert.deepStrictEqual(r.levier, { code: 'A', coef: 3, ajout: 10.34, de: 6, a: 16.34 });
+r = calculer(tout(19, 0, 19, 0, 0, 19, 19), 'complet', D);    // 228 ok
+r = calculer(tout(19.5, 0, 19.5, 0, 0, 19.5, 0), 'complet', D); // 175,5 ok
+r = calculer(tout(19.5, 0, 19.5, 0, 0, 0, 0), 'complet', D);    // 117 : il manque 53 ; F ou G à 0 -> +17,67 possible
+assert.strictEqual(r.levier.code, 'F'); assert.strictEqual(r.levier.ajout, 17.67);
+r = calculer(tout(19, 19, 19, 19, 19, 19, 0), 'complet', D);  // 57+38+57+38+19+57 = 266 ok
+r = calculer(tout(17, 0, 17, 0, 0, 17, 17), 'complet', D);    // 204 ok
+r = calculer(tout(14, 0, 14, 0, 0, 14, 14), 'complet', D);    // 168 : il manque 2 -> 0,67 en A
+assert.strictEqual(r.levier.ajout, 0.67);
+r = calculer(tout(19, 0, 19, 0, 0, 19, 19.9), 'complet', D);  // 228 ok
+r = calculer(tout(19.9, 0, 19.9, 0, 0, 19.9, 19.9), 'complet', D); // 238,8 ok
+r = calculer(tout(20, 0, 20, 0, 0, 20, 0), 'complet', D);      // 180 ok
+r = calculer(tout(20, 0, 20, 0, 0, 13, 0), 'complet', D);      // 159 : il manque 11 ; coef 3 : G (0) -> 3,67
+assert.strictEqual(r.levier.code, 'G');
+// le levier comble toujours exactement l'écart
+for (let i = 0; i < 20000; i++) {
+  const n = {}; for (const e of D.epreuves) n[e.code] = Math.round(alea() * 48) / 4;
+  const x = calculer(n, 'complet', D);
+  if (x.levier) { const m = { ...n, [x.levier.code]: x.levier.a }; assert.strictEqual(calculer(m, 'complet', D).moyenneOk, true, JSON.stringify(n)); }
+  else if (!x.moyenneOk) assert.ok(D.epreuves.every(e => (20 - n[e.code]) * e.coef < x.pointsRequis - x.points + 1e-9), 'levier manquant ' + JSON.stringify(n));
+}
+console.log('Conseils : tous les tests passent.');
