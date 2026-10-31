@@ -6,6 +6,16 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 31 octobre 2026, 23 h 25 · Question VTC (tâche du jeudi)
+
+- Question : « Quelles sont les voitures hybrides les moins chères pour faire VTC ? »
+- Page publiée : https://revision-vtc.fr/questions/2026-10-31-voitures-hybrides-vtc-moins-cheres.html
+- Réponse courte : au 31 octobre 2026, les hybrides non rechargeables les moins chères au prix catalogue sont la Dacia Sandero hybrid 155 (19 900 €) et la MG3 Hybrid+ (19 990 €), devant la Sandero Stepway (21 400 €) et la nouvelle Renault Clio full hybrid E-Tech (24 600 €). Une hybride peut servir de VTC sans respecter les critères de taille et de puissance.
+- Classement de neuf modèles (prix catalogue des constructeurs, consommation WLTP), méthode écrite dans la page. Toyota et Honda non classés : seuls des prix remisés étaient affichés.
+- Légifrance toujours inaccessible depuis l'outil : les textes viennent du wiki (vérifié le 25 octobre 2026) et de service-public.fr (lu le 31 octobre 2026).
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 31 octobre 2026, 23 h 30 · Nouvelle charte graphique « signalétique en relief »
 
 - Tout le site (toutes les pages) : nouvelle apparence choisie par l'auteur parmi trois prototypes, avec la rubrique Actualités du LaboINSPIRE comme inspiration pour le relief.
