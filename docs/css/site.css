@@ -39,16 +39,13 @@
   --e1:.25rem; --e2:.5rem; --e3:.75rem; --e4:1rem; --e5:1.5rem; --e6:2rem; --e7:3rem; --e8:4.5rem;
   /* formes */
   --rayon:14px; --rayon-p:10px; --pilule:999px;
-  --ombre:0 1px 2px rgba(26,25,23,.05),0 6px 18px -10px rgba(26,25,23,.18);
-  --ombre-h:0 2px 4px rgba(26,25,23,.06),0 14px 30px -14px rgba(26,25,23,.28);
-  /* pastilles des tuiles de l'accueil */
-  --p1:#FBE7E2; --p2:#FFF3CC; --p3:#E3EEE6; --p4:#E4E9F7;
+  --ombre-h:0 2px 4px rgba(26,25,23,.06),0 14px 30px -14px rgba(26,25,23,.28); /* menu déroulant seulement : pas d’ombre sur les cartes */
 }
 @media (prefers-color-scheme: dark){
   :root{--fond:#141516;--carte:#1D1E20;--doux:#232528;--encre:#E8E9EB;--gris:#AEB2B8;--filet:#36393D;--rouge:#A52C15;
         --accent:#F08C74;--accent-trait:#E0573A;--ok:#8FD39C;--ok-fond:#1C2A1F;--ko:#F49A86;--ko-fond:#2E1D19;--focus:#8DB0FF;
-        --ombre:0 1px 2px rgba(0,0,0,.4);--ombre-h:0 10px 26px -12px rgba(0,0,0,.7);
-        --p1:#3A2420;--p2:#3A3220;--p3:#22322A;--p4:#242B3B;--fonce:#0D0E0F}
+        --ombre-h:0 10px 26px -12px rgba(0,0,0,.7);
+        --fonce:#0D0E0F}
 }
 
 /* 2. Base ------------------------------------------------------------------ */
@@ -88,8 +85,8 @@ main{padding:0 0 var(--e8)}
 .deux-col{display:grid;grid-template-columns:minmax(0,var(--lecture)) var(--cote);gap:var(--e7);align-items:start}
 .col-texte > :first-child{margin-top:0}
 .col-cote{position:sticky;top:var(--e5);display:grid;gap:var(--e4)}
-.cote-bloc{background:var(--carte);border:1px solid var(--filet);border-radius:var(--rayon);box-shadow:var(--ombre);padding:var(--e4) var(--e5) var(--e2);font-size:1.0625rem;line-height:1.5}
-.cote-bloc h2{font-size:.8125rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);margin:var(--e2) 0 var(--e3)}
+.cote-bloc{background:var(--carte);border:1px solid var(--filet);border-radius:var(--rayon);padding:var(--e4) var(--e5) var(--e2);font-size:1.0625rem;line-height:1.5}
+.cote-bloc h2{font-size:.9375rem;font-weight:700;letter-spacing:0;color:var(--accent);margin:var(--e2) 0 var(--e3)}
 .cote-bloc h2::before{display:none !important}
 .cote-bloc ul{list-style:none;padding:0;margin:0 0 var(--e3)}
 .cote-bloc li{margin:0;padding:var(--e2) 0;border-top:1px solid var(--filet)}
@@ -175,7 +172,7 @@ p{margin:0 0 1.15rem}
 ul,ol{padding-left:1.25rem;margin:0 0 var(--e4)}
 li{margin-bottom:var(--e2)}
 .chapeau{font-size:1.3125rem;line-height:1.5}
-.surtitre{display:block;font-family:var(--sans);font-size:.8125rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);margin:0 0 var(--e2)}
+.surtitre{display:block;font-family:var(--sans);font-size:.9375rem;font-weight:600;letter-spacing:0;color:var(--accent);margin:0 0 var(--e2)}
 .meta{font-family:var(--sans);font-size:.875rem;color:var(--gris)}
 .source,.sources{font-family:var(--sans);font-size:.875rem;color:var(--gris);line-height:1.5}
 .sources a,.source a{color:var(--gris)}
@@ -205,12 +202,12 @@ h1 .num-art{display:block;font-size:1rem;letter-spacing:.02em;margin-bottom:var(
 
 /* carte : le seul modèle de boîte du site */
 .trois li,.essentiel-liens li,.wiki-liste li,.questions li,.numeros > li,.en-clair,.retenir,.officiel,.breve,.cherche,.texte-d{
-  background:var(--carte);border:1px solid var(--filet);border-radius:var(--rayon);box-shadow:var(--ombre)}
+  background:var(--carte);border:1px solid var(--filet);border-radius:var(--rayon)}
 /* carte mise en avant : filet rouge à gauche */
 .en-clair,.retenir{border-left:5px solid var(--accent-trait)}
-/* carte cliquable : toute la surface est un lien, elle se soulève au survol */
-.trois li,.essentiel-liens li,.wiki-liste li,.questions li,.numeros > li{position:relative;transition:border-color .15s,box-shadow .2s,transform .2s}
-.trois li:hover,.essentiel-liens li:hover,.wiki-liste li:hover,.questions li:hover,.numeros > li:hover{border-color:var(--accent-trait);box-shadow:var(--ombre-h);transform:translateY(-2px)}
+/* carte cliquable : toute la surface est un lien ; au survol, le filet passe au rouge et le titre aussi (pas d'ombre, pas de mouvement) */
+.trois li,.essentiel-liens li,.wiki-liste li,.questions li,.numeros > li{position:relative;transition:border-color .15s}
+.trois li:hover,.essentiel-liens li:hover,.wiki-liste li:hover,.questions li:hover,.numeros > li:hover{border-color:var(--accent-trait)}
 .trois h3 a::after,.essentiel-liens a::before,.wiki-liste a::before,.questions a::before,.numeros > li > div > a::before{content:"";position:absolute;inset:0;border-radius:var(--rayon)}
 .trois h3 a,.essentiel-liens a,.wiki-liste a,.questions a,.numeros > li > div > a{color:var(--encre);text-decoration:none}
 .trois li:hover h3 a,.essentiel-liens li:hover a,.wiki-liste li:hover a,.questions li:hover a,.numeros > li:hover > div > a{color:var(--accent)}
@@ -325,7 +322,7 @@ main:has(.une){padding-bottom:0}
 .une .bouton.bientot{color:var(--sur-fonce);border-color:var(--sur-fonce)}
 /* diapositive claire : le simulateur, avec un exemple chiffré en carte */
 .diapo-simu{background:var(--doux);border:1px solid var(--filet)}
-.exemple-simu{width:19rem;background:var(--carte);border:1px solid var(--filet);border-left:5px solid var(--accent-trait);border-radius:var(--rayon);box-shadow:var(--ombre);padding:var(--e5)}
+.exemple-simu{width:19rem;background:var(--carte);border:1px solid var(--filet);border-left:5px solid var(--accent-trait);border-radius:var(--rayon);padding:var(--e5)}
 .exemple-simu p{margin:0}
 .exemple-verse{font-family:var(--sans);font-weight:600;font-size:1.0625rem;line-height:1.35;margin:var(--e2) 0 !important}
 .exemple-net{font-family:var(--sans);font-size:.9375rem;color:var(--gris);margin-bottom:var(--e3) !important}
@@ -363,11 +360,7 @@ main:has(.une){padding-bottom:0}
 /* les quatre tuiles numérotées : 4, puis 2, puis 1 colonne */
 .trois{grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--e5)}
 .trois li{padding:var(--e5) var(--e5) 1.6rem;margin:0}
-.trois li::before{content:"01";display:block;width:2.25rem;height:2.25rem;border-radius:10px;margin-bottom:var(--e4);background:var(--p1);font:700 .875rem/2.25rem var(--sans);text-align:center;color:var(--encre)}
-.trois li:nth-child(2)::before{content:"02";background:var(--p2)}
-.trois li:nth-child(3)::before{content:"03";background:var(--p3)}
-.trois li:nth-child(4)::before{content:"04";background:var(--p4)}
-.trois .surtitre{margin:0;letter-spacing:.06em}
+.trois .surtitre{margin:0}
 .trois h3{margin:var(--e1) 0 var(--e2);font-size:1.25rem}
 .trois p{margin:0;color:var(--gris);font-size:1.0625rem}
 /* accueil, dernier numéro de l'Actualité : le numéro à gauche, sans boîte ; les numéros précédents à droite */

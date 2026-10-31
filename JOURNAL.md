@@ -6,6 +6,18 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 31 octobre 2026, 14 h 10 · Cartes sans ombre, surtitres en casse normale
+
+- Charte graphique, sur tout le site (feuille de style seulement, aucune page HTML modifiée) :
+  - cartes et encadrés latéraux sans ombre, filet gris seul ; au survol, le filet et le titre passent au rouge, sans soulèvement ; l'ombre reste sous le menu déroulant « Le livre » ;
+  - accueil : pastilles numérotées 01 à 04 retirées des quatre tuiles des rubriques (ce n'est pas une suite d'étapes) ;
+  - surtitres (« Chaque lundi », « Code des transports »…) et titres des encadrés latéraux (« Sommaire », « Dans le livre ») en casse normale, sans lettres espacées.
+- Jetons retirés de `site.css` : `--ombre` et les pastilles `--p1` à `--p4`, devenus inutiles.
+- README, « Charte graphique » : règles mises à jour (cartes, surtitres, tuiles de l'accueil).
+- Vérifications sur les 105 pages : feuille de style validée par le W3C (Nu) sans erreur ; aucune erreur d'accessibilité (axe) en clair et en sombre, à 320 et 1 366 px ; aucun débordement ; référencement inchangé. Adresses inchangées.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 31 octobre 2026, 13 h 05 · Fond blanc et nouveau bloc Actualité sur l'accueil
 
 - Charte graphique : le fond crème et les encarts beiges passent au blanc et au gris neutre, sur tout le site (jetons de `docs/css/site.css` uniquement : `--fond`, `--doux`, `--filet`, `--gris`, couleurs posées sur fond foncé, et leurs équivalents du thème sombre, désormais gris anthracite neutre). Deux couleurs écrites en dur remplacées (pied de page, survol du bouton clair). Le rouge du livre ne change pas.
