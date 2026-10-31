@@ -6,6 +6,22 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 31 octobre 2026, 19 h 00 · Nouvelle page « Le livre tenu à jour » : inscription des lecteurs et signalement d'erreur
+
+- Page publiée : https://revision-vtc.fr/le-livre.html
+  - cinq engagements de l'auteur (vérifier chaque règle sur sa source, revérifier le livre toutes les trois semaines, publier chaque correction, l'envoyer aux lecteurs avec la page corrigée en PDF, répondre à chaque signalement) ;
+  - inscription aux mises à jour, réservée aux lecteurs (mot de la fiche G2.6), avec double confirmation par e-mail ;
+  - formulaire de signalement d'une erreur ou d'une critique (Web3Forms) ;
+  - méthode de vérification et questions fréquentes (FAQPage, WebPage, Book).
+- Pages de retour (non indexées) : https://revision-vtc.fr/le-livre-confirmation.html et https://revision-vtc.fr/le-livre-desinscription.html
+- Modifiés : menu « Le livre » de toutes les pages (nouvelle entrée en premier) ; https://revision-vtc.fr/mises-a-jour.html (renvoi vers l'inscription) ; https://revision-vtc.fr/mentions-legales.html (deux paragraphes sur les données personnelles : inscription des lecteurs, signalements) ; sitemap.xml ; formulaires : liste déroulante et champs sur deux colonnes qui ne débordent plus à 320 px.
+- n8n (serveur de l'auteur) : workflows « Lecteurs du livre : inscription aux mises à jour », « envoyer une mise à jour » (formulaire réservé au compte n8n) et « effacer les inscriptions non confirmées » (chaque lundi) ; table `lecteurs_livre`. E-mails envoyés par benjamin@revision-vtc.fr (Gandi), sans adresse postale. Testés de bout en bout ; envoi réel vérifié vers benjamin@revision-vtc.fr.
+- README : section « Le livre tenu à jour ».
+- Vérifications sur les 108 pages : W3C (Nu) sans erreur, HTML et CSS ; axe sans erreur en clair et en sombre, à 320 et 1 366 px ; aucun débordement ; titres, descriptions, canoniques, données structurées et liens internes en ordre.
+- Points à trancher : le contrôle complet du livre toutes les trois semaines attend le dépôt privé contenant le PDF du livre.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 31 octobre 2026, 14 h 20 · Liens sans flèche, mentions sans points médians, arrondis réduits
 
 - Charte graphique, sur tout le site :

@@ -356,11 +356,183 @@ def mises_a_jour():
     <h2>Les corrections</h2>
     {tableau}
     <p class="meta">Dernière vérification : {ty(m["derniere_verification"])}.</p>
+    <p>{ty("Lecteur du livre ? Recevez chaque correction par e-mail, avec la page corrigée en PDF, et signalez une erreur depuis la page")} <a href="le-livre.html">Le livre tenu à jour</a>.</p>
     <h2>À surveiller en 2027</h2>
     <p>{ty("Le livre enseigne ces points en principe. Ils seront précisés ici dès que les textes seront publiés.")}</p>
     <ul>{surv}</ul>'''
     ecrire("mises-a-jour.html", page("Mises à jour du livre · Révision VTC", corps, "maj", "",
                                      "Les règles du livre Machine à Réussite · Examen VTC 2027 qui ont changé depuis l'impression."))
+
+
+# ------------------------------------------------------------------ le livre tenu à jour (inscription des lecteurs, signalements)
+def livre_vivant():
+    """Page « Le livre tenu à jour » : engagements, inscription aux mises à jour (n8n, double confirmation),
+    signalement d'une erreur (Web3Forms), méthode de vérification ; et les deux pages de retour des liens envoyés par e-mail."""
+    with open(os.path.join(CONTENU, "livre.json"), encoding="utf-8") as h:
+        conf = json.load(h)
+    with open(os.path.join(CONTENU, "contact.json"), encoding="utf-8") as h:
+        cle = json.load(h).get("web3forms_cle", "").strip()
+    with open(os.path.join(CONTENU, "mises-a-jour.json"), encoding="utf-8") as h:
+        m = json.load(h)
+    url_inscription = conf["inscription_url"]
+    assert re.fullmatch(r"https://[a-z0-9.-]+/webhook/livre-inscription", url_inscription), "adresse d'inscription invalide"
+    assert re.fullmatch(r"[0-9a-f-]{36}", cle), "clé Web3Forms manquante"
+    nb = len(m["corrections"])
+    etat = ("Aucune correction à ce jour : toutes les règles du livre sont à jour." if nb == 0 else
+            f"{nb} correction{'s' if nb > 1 else ''} publiée{'s' if nb > 1 else ''} depuis l'impression.")
+    faq = [
+        ("Faut-il avoir acheté le livre pour s'inscrire ?",
+         "Oui. Les pages corrigées sont réservées aux lecteurs : l'inscription demande un mot qui se trouve dans le livre. La liste des corrections reste publique sur la page Mises à jour du livre."),
+        ("Combien d'e-mails vais-je recevoir ?",
+         "Un e-mail seulement quand une règle du livre change ou qu'une erreur est corrigée. Pas de lettre d'information régulière, pas de publicité."),
+        ("Que devient mon adresse e-mail ?",
+         "Elle sert uniquement à vous envoyer les mises à jour du livre. Elle n'est ni vendue, ni prêtée, ni utilisée pour autre chose. Chaque e-mail contient un lien de désinscription, qui efface votre adresse."),
+        ("J'ai trouvé une erreur : que se passe-t-il ensuite ?",
+         "Elle est vérifiée sur le texte officiel. Si elle est confirmée, elle est corrigée, inscrite sur la page Mises à jour du livre et envoyée à tous les lecteurs inscrits. Si vous avez laissé votre adresse, vous recevez la réponse, même quand le livre était juste."),
+    ]
+    corps = f'''    <p class="surtitre">Le livre</p>
+    <h1>Un livre tenu à jour après son impression</h1>
+    <p class="chapeau">{ty("Les règles de l'examen VTC et du métier changent : décrets, arrêtés, cotisations, plateformes. Machine à Réussite – Examen VTC 2027 ne s'arrête pas à la date d'impression. Chaque règle repose sur un texte officiel, chaque règle est revérifiée régulièrement, et chaque correction est envoyée aux lecteurs.")}</p>
+
+    <h2 id="engagements">Ce que l’auteur s’engage à faire</h2>
+    <ol class="etapes">
+      <li><b>{ty("Vérifier chaque règle sur sa source")}</b>{ty("Chaque corrigé du livre cite le texte officiel qui le fonde (Code des transports, Code de la route, arrêtés de l'examen, Urssaf, BOFiP) et le mois de sa vérification. Une règle qui ne repose pas sur un texte officiel, ou sur deux sources indépendantes qui concordent, n'est pas enseignée.")}</li>
+      <li><b>{ty("Revérifier le livre entier toutes les trois semaines")}</b>{ty("Les règles du livre sont recontrôlées sur les textes en vigueur, en plus de la veille du Journal officiel faite chaque semaine pour le site. Une règle adoptée mais pas encore applicable est signalée comme telle, jamais présentée comme en vigueur.")}</li>
+      <li><b>{ty("Publier chaque correction")}</b>{ty("Toute correction est inscrite sur la page")} <a href="mises-a-jour.html">Mises à jour du livre</a> {ty(": la date, la fiche, ce que dit le livre, ce qu'il faut retenir et le texte qui fonde la nouvelle règle.")}</li>
+      <li><b>{ty("Vous l'envoyer")}</b>{ty("Les lecteurs inscrits reçoivent la correction par e-mail, avec la page corrigée en PDF, à imprimer ou à garder sur leur téléphone.")}</li>
+      <li><b>{ty("Répondre à chaque signalement")}</b>{ty("Une erreur, une règle qui a changé, un passage pas clair : chaque signalement est vérifié et reçoit une réponse. Une erreur confirmée est corrigée pour tous, même si c'est vous qui l'avez trouvée.")}</li>
+    </ol>
+    <p class="meta">{ty("Dernière vérification complète des règles : " + m["derniere_verification"] + ". " + etat)}</p>
+
+    <h2 id="inscription">Recevoir les mises à jour du livre</h2>
+    <p>{ty("Un e-mail seulement quand une règle change ou qu'une erreur est corrigée, avec la page corrigée en PDF. Vous confirmez votre inscription en cliquant sur le lien reçu par e-mail ; un lien dans chaque message permet de se désinscrire.")}</p>
+    <form id="form-inscription" class="contact" action="{url_inscription}" method="POST" novalidate>
+      <p class="piege" aria-hidden="true"><label>Ne pas remplir <input type="text" name="piege" tabindex="-1"></label></p>
+      <div class="champ"><label for="ins-email">Adresse e-mail</label><p class="aide" id="aide-ins-email">Exemple : prenom.nom@exemple.fr</p><input type="email" id="ins-email" name="email" autocomplete="email" required maxlength="120" aria-describedby="aide-ins-email err-ins-email"><p class="erreur" id="err-ins-email"></p></div>
+      <div class="champ"><label for="ins-reponse">Quel est le dernier mot du titre de la fiche G2.6, page 160 du livre ?</label><p class="aide" id="aide-ins-reponse">{ty("Un seul mot, sans article. Cette question réserve l'envoi des pages corrigées aux lecteurs du livre.")}</p><input type="text" id="ins-reponse" name="reponse" required maxlength="40" autocapitalize="none" spellcheck="false" aria-describedby="aide-ins-reponse err-ins-reponse"><p class="erreur" id="err-ins-reponse"></p></div>
+      <p class="option-chrono"><input type="checkbox" id="ins-accord" name="consentement" value="oui" required aria-describedby="err-ins-accord"><label for="ins-accord">{ty("J'accepte de recevoir par e-mail les mises à jour et les pages corrigées du livre.")}</label></p>
+      <p class="erreur" id="err-ins-accord"></p>
+      <p class="aide">{ty("Votre adresse sert uniquement à ces envois. Elle n'est ni vendue, ni prêtée. Détails dans les")} <a href="mentions-legales.html#lecteurs">mentions légales</a>.</p>
+      <div class="actions"><button type="submit" class="bouton" id="ins-envoyer">Je m’inscris</button></div>
+      <div id="ins-etat" role="status" aria-live="polite"></div>
+    </form>
+
+    <h2 id="signaler">Signaler une erreur ou faire une critique</h2>
+    <p>{ty("Vous avez repéré une règle qui a changé, une erreur, une réponse qui vous semble fausse, un passage pas clair ? Dites-le : chaque signalement est vérifié sur le texte officiel. Le livre doit être juste, pas seulement avoir raison.")}</p>
+    <form id="form-signalement" class="contact" action="https://api.web3forms.com/submit" method="POST" novalidate>
+      <input type="hidden" name="access_key" value="{cle}">
+      <input type="hidden" name="subject" value="Signalement sur le livre, depuis revision-vtc.fr">
+      <input type="hidden" name="from_name" value="revision-vtc.fr (le livre)">
+      <p class="piege" aria-hidden="true"><label>Ne pas remplir <input type="checkbox" name="botcheck" tabindex="-1"></label></p>
+      <div class="champs-2">
+        <div class="champ"><label for="sig-type">Type de signalement</label><select id="sig-type" name="type">
+          <option>Une erreur dans le livre</option><option>Une règle qui a changé</option><option>Un passage pas clair</option><option>Une autre critique ou une suggestion</option></select></div>
+        <div class="champ"><label for="sig-fiche">Fiche ou page</label><p class="aide" id="aide-sig-fiche">Exemple : A3.4, page 65</p><input type="text" id="sig-fiche" name="fiche" maxlength="60" aria-describedby="aide-sig-fiche"></div>
+      </div>
+      <div class="champ"><label for="sig-message">Ce qui pose problème</label><p class="aide" id="aide-sig-message">1&#8239;000 caractères au maximum.</p><textarea id="sig-message" name="message" required maxlength="1000" rows="6" aria-describedby="aide-sig-message err-sig-message"></textarea><p class="erreur" id="err-sig-message"></p></div>
+      <div class="champ"><label for="sig-source">Votre source, si vous en avez une (facultatif)</label><p class="aide" id="aide-sig-source">Exemple : un lien vers Légifrance, service-public.fr ou l'Urssaf</p><input type="text" id="sig-source" name="source" maxlength="300" aria-describedby="aide-sig-source"></div>
+      <div class="champ"><label for="sig-email">Votre adresse e-mail, pour recevoir la réponse (facultatif)</label><input type="email" id="sig-email" name="email" autocomplete="email" maxlength="120" aria-describedby="err-sig-email"><p class="erreur" id="err-sig-email"></p></div>
+      <p class="aide">{ty("Ces informations servent uniquement à vérifier le signalement et à vous répondre. Elles sont transmises par le service Web3Forms, qui ne conserve pas les messages. Détails dans les")} <a href="mentions-legales.html#signalements">mentions légales</a>.</p>
+      <div class="actions"><button type="submit" class="bouton" id="sig-envoyer">Envoyer le signalement</button></div>
+      <div id="sig-etat" role="status" aria-live="polite"></div>
+    </form>
+
+    <h2 id="methode">Comment le livre est vérifié</h2>
+    <ul>
+      <li>{ty("Les sources d'abord : Légifrance pour les codes, décrets et arrêtés ; service-public.fr, l'Urssaf et le BOFiP pour les démarches, les cotisations et les impôts ; les textes officiels de l'examen pour les épreuves et le barème.")}</li>
+      <li>{ty("Une règle non vérifiée n'est pas publiée. Une information qui ne vient pas d'un texte officiel doit être confirmée par deux sources indépendantes.")}</li>
+      <li>{ty("Trois états sont toujours distingués : en vigueur, adopté mais pas encore applicable, simple projet.")}</li>
+      <li>{ty("Les articles de loi utiles au métier sont recopiés et expliqués dans les")} <a href="wiki/index.html">Textes du métier</a>{ty(", et leur version est comparée chaque semaine à celle de Légifrance.")}</li>
+    </ul>
+
+    <h2 id="questions">Questions fréquentes</h2>
+    {"".join(f"<h3>{ty(q)}</h3>\n    <p>{ty(r)}</p>\n    " for q, r in faq)}
+    <p><a class="bouton second" href="{LIVRE.get("amazon", "")}">Voir le livre sur Amazon</a></p>'''
+    fin = '''<script src="js/acces.js"></script>
+<script>
+(function(){
+  function etatMsg(el, classe, html){ el.className = classe; el.innerHTML = html; el.setAttribute('tabindex','-1'); el.focus(); }
+  function erreur(id, texte){ var c = document.getElementById(id), e = document.getElementById('err-' + id); e.textContent = texte || ''; if (texte) c.setAttribute('aria-invalid','true'); else c.removeAttribute('aria-invalid'); return !texte; }
+  var emailOk = function(v){ return /^[^@\\s]+@[^@\\s]+\\.[a-z]{2,}$/i.test(v.trim()); };
+
+  var fi = document.getElementById('form-inscription');
+  if (fi) {
+    var bi = document.getElementById('ins-envoyer'), ei = document.getElementById('ins-etat');
+    fi.addEventListener('submit', async function(ev){
+      ev.preventDefault();
+      var email = document.getElementById('ins-email'), rep = document.getElementById('ins-reponse'), accord = document.getElementById('ins-accord');
+      var ok1 = erreur('ins-email', emailOk(email.value) ? '' : 'Indiquez une adresse e-mail valide, par exemple prenom.nom@exemple.fr.');
+      var ok2 = erreur('ins-reponse', rep.value.trim() === '' ? 'Indiquez le dernier mot du titre de la fiche G2.6, page 160.' : ((await window.Acces.verifier(rep.value)) ? '' : 'Ce n’est pas le bon mot. Vérifiez le titre de la fiche G2.6, page 160.'));
+      var ok3 = erreur('ins-accord', accord.checked ? '' : 'Cochez la case pour accepter de recevoir les mises à jour.');
+      if (!(ok1 && ok2 && ok3)) { (ok1 ? (ok2 ? accord : rep) : email).focus(); return; }
+      if (fi.piege.value) { etatMsg(ei, 'note succes', 'Presque fini : ouvrez l’e-mail que vous venez de recevoir et cliquez sur le lien pour confirmer.'); return; }
+      bi.disabled = true; bi.textContent = 'Inscription en cours…'; ei.className = ''; ei.textContent = '';
+      fetch(fi.action, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email.value.trim(), reponse: rep.value, consentement: 'oui', piege: '' }) })
+        .then(function(r){ return r.json().then(function(j){ return { ok: r.ok, j: j }; }); })
+        .then(function(x){
+          if (!x.ok || !x.j.ok) throw new Error();
+          fi.reset();
+          etatMsg(ei, 'note succes', x.j.deja ? 'Cette adresse est déjà inscrite : vous recevrez les prochaines mises à jour.' : 'Presque fini : ouvrez l’e-mail que vous venez de recevoir et cliquez sur le lien pour confirmer. Pensez à regarder dans les courriers indésirables.');
+        })
+        .catch(function(){ etatMsg(ei, 'note echec', 'L’inscription n’a pas pu se faire. Réessayez dans un instant, ou écrivez à <a href="mailto:benjamin@revision-vtc.fr">benjamin@revision-vtc.fr</a>.'); })
+        .finally(function(){ bi.disabled = false; bi.textContent = 'Je m’inscris'; });
+    });
+  }
+
+  var fs = document.getElementById('form-signalement');
+  if (fs) {
+    var debut = Date.now(), bs = document.getElementById('sig-envoyer'), es = document.getElementById('sig-etat');
+    fs.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var msg = document.getElementById('sig-message'), mail = document.getElementById('sig-email');
+      var ok1 = erreur('sig-message', msg.value.trim() ? '' : 'Décrivez ce qui pose problème.');
+      var ok2 = erreur('sig-email', !mail.value.trim() || emailOk(mail.value) ? '' : 'Cette adresse ne semble pas valide. Laissez le champ vide si vous ne voulez pas de réponse.');
+      if (!(ok1 && ok2)) { (ok1 ? mail : msg).focus(); return; }
+      if (fs.botcheck.checked || Date.now() - debut < 3000) { etatMsg(es, 'note succes', 'Merci, votre signalement a bien été envoyé.'); return; }
+      bs.disabled = true; bs.textContent = 'Envoi en cours…'; es.className = ''; es.textContent = '';
+      var d = Object.fromEntries(new FormData(fs));
+      d.name = d.email ? d.email : 'Lecteur anonyme';
+      fetch(fs.action, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(d) })
+        .then(function(r){ return r.json(); })
+        .then(function(j){ if (!j.success) throw new Error(); fs.reset(); etatMsg(es, 'note succes', 'Merci, votre signalement a bien été envoyé. Il sera vérifié sur le texte officiel' + (d.email ? ', et vous recevrez la réponse à l’adresse indiquée.' : '.')); })
+        .catch(function(){ etatMsg(es, 'note echec', 'Le signalement n’a pas pu partir. Réessayez dans un instant, ou écrivez à <a href="mailto:benjamin@revision-vtc.fr">benjamin@revision-vtc.fr</a>.'); })
+        .finally(function(){ bs.disabled = false; bs.textContent = 'Envoyer le signalement'; });
+    });
+  }
+})();
+</script>
+'''
+    titre = "Mises à jour du livre Examen VTC 2027 : inscription et signalement d'erreur"
+    desc = ("Machine à Réussite – Examen VTC 2027 est tenu à jour après son impression : chaque règle est vérifiée sur les textes officiels, "
+            "revérifiée toutes les trois semaines, et chaque correction est envoyée aux lecteurs inscrits.")
+    ld_page = {"@context": "https://schema.org", "@type": "WebPage", "name": titre, "url": SITE + "le-livre.html", "description": desc,
+               "inLanguage": "fr", "isPartOf": {"@id": SITE + "#site"}, "about": {"@id": SITE + "#livre"}, "author": AUTEUR}
+    ld_faq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": r}} for q, r in faq]}
+    ld_livre = dict(LIVRE_LD, **{"@context": "https://schema.org"})
+    ecrire("le-livre.html", page(html.escape(titre + " · Révision VTC", quote=False), corps, "livre", "", html.escape(desc),
+                                 scripts_fin=fin, jsonld=[ld_page, ld_livre, ld_faq, fil(("Accueil", ""), ("Le livre tenu à jour", "le-livre.html"))]))
+
+    corps_ok = f'''    <p class="surtitre">Le livre</p>
+    <h1 id="titre-retour">Inscription confirmée</h1>
+    <p class="chapeau" id="texte-retour">{ty("Merci. Vous recevrez par e-mail chaque mise à jour du livre, avec la page corrigée en PDF. Chaque message contient un lien pour vous désinscrire.")}</p>
+    <p><a href="mises-a-jour.html">{ty("Voir les mises à jour déjà publiées")}</a></p>'''
+    fin_ok = '''<script>
+(function(){
+  if (new URLSearchParams(location.search).get('lien') !== 'invalide') return;
+  document.getElementById('titre-retour').textContent = 'Ce lien ne fonctionne plus';
+  document.getElementById('texte-retour').innerHTML = 'Le lien de confirmation est incomplet ou a déjà servi. Si vous n’êtes pas encore inscrit, recommencez depuis la page <a href="le-livre.html#inscription">Le livre tenu à jour</a>.';
+  document.title = 'Ce lien ne fonctionne plus · Révision VTC';
+})();
+</script>
+'''
+    ecrire("le-livre-confirmation.html", page("Inscription confirmée · Révision VTC", corps_ok, "livre", "", noindex=True, scripts_fin=fin_ok))
+    corps_fin = f'''    <p class="surtitre">Le livre</p>
+    <h1>Vous êtes désinscrit</h1>
+    <p class="chapeau">{ty("Votre adresse a été effacée : vous ne recevrez plus les mises à jour du livre. Elles restent consultables sur la page Mises à jour du livre.")}</p>
+    <p><a href="mises-a-jour.html">Voir les mises à jour du livre</a></p>
+    <p><a href="le-livre.html#inscription">{ty("Se réinscrire")}</a></p>'''
+    ecrire("le-livre-desinscription.html", page("Désinscription · Révision VTC", corps_fin, "livre", "", noindex=True))
 
 
 # ------------------------------------------------------------------ wiki des textes du métier
@@ -615,6 +787,10 @@ def legales():
     <p>{ty("Les polices de caractères sont hébergées sur ce site. Deux services tiers sont appelés : GoatCounter (gc.zgo.at), pour la mesure de fréquentation, et, seulement quand vous envoyez un message depuis la page Contact, Web3Forms (api.web3forms.com). L'hébergeur peut conserver des journaux techniques de connexion (adresse IP) pour la sécurité du service.")}</p>
     <h3>Formulaire de contact</h3>
     <p>{ty("Les informations saisies (prénom, nom, adresse e-mail, message) servent uniquement à répondre à votre message. Elles sont transmises par le service Web3Forms, qui les achemine par e-mail sans conserver les messages, puis conservées dans la boîte de réception de l'éditeur le temps de l'échange, et au plus un an. Elles ne sont ni cédées, ni utilisées pour de la prospection. Base légale : votre demande. Vous pouvez demander leur consultation, leur rectification ou leur effacement en écrivant à")} <a href="mailto:benjamin@revision-vtc.fr">benjamin@revision-vtc.fr</a>{ty(", et saisir la CNIL (cnil.fr) en cas de difficulté.")}</p>
+    <h3 id="lecteurs">Inscription aux mises à jour du livre</h3>
+    <p>{ty("L'adresse e-mail saisie sur la page Le livre tenu à jour sert uniquement à envoyer aux lecteurs les mises à jour et les pages corrigées du livre. Base légale : votre consentement, donné en cochant la case puis confirmé par le lien reçu par e-mail ; sans confirmation, l'adresse ne reçoit rien d'autre que ce lien. Sont conservés : l'adresse, les dates d'inscription et de confirmation, et le texte de la case cochée, pour prouver le consentement. Les données sont enregistrées dans l'outil d'automatisation n8n installé sur un serveur loué par l'éditeur à Hostinger, et les e-mails partent de la boîte benjamin@revision-vtc.fr, hébergée par Gandi. Elles ne sont ni vendues, ni prêtées, ni utilisées pour de la prospection. Le lien de désinscription présent dans chaque e-mail efface l'adresse ; une adresse jamais confirmée est effacée au bout de trois mois. Vous pouvez aussi demander leur consultation, leur rectification ou leur effacement en écrivant à")} <a href="mailto:benjamin@revision-vtc.fr">benjamin@revision-vtc.fr</a>{ty(", et saisir la CNIL (cnil.fr) en cas de difficulté.")}</p>
+    <h3 id="signalements">Signalement d'une erreur dans le livre</h3>
+    <p>{ty("Les informations saisies dans le formulaire de signalement (type, fiche, message, source et, si vous la donnez, votre adresse e-mail) servent uniquement à vérifier le signalement et à vous répondre. Elles sont transmises par le service Web3Forms, qui les achemine par e-mail sans conserver les messages, puis conservées dans la boîte de réception de l'éditeur le temps de l'échange, et au plus un an. Base légale : votre demande. Mêmes droits que pour le formulaire de contact.")}</p>
     <h2>Propriété intellectuelle</h2>
     <p>{ty("Les textes, questions et corrigés de ce site sont la propriété de Benjamin Blondin. Toute reproduction sans autorisation est interdite (Code de la propriété intellectuelle, art. L122-4). Les brèves de l'Actualité VTC citent leurs sources, qui restent la propriété de leurs auteurs.")}</p>
     <p>{ty("Les textes officiels reproduits dans la rubrique Textes du métier proviennent de Légifrance (DILA). Ils sont réutilisés sous Licence Ouverte 2.0, avec mention de la source et de la date de version. Seule la version publiée sur Légifrance fait foi.")}</p>
@@ -1470,7 +1646,7 @@ ROBOTS_IA = ["Googlebot", "Bingbot", "Google-Extended", "GPTBot", "OAI-SearchBot
 
 def plan(nums, arts, wiki_date, qs=(), ds=(), simu=None, note=None):
     der = nums[0]["date"] if nums else wiki_date
-    urls = [("", max(der, wiki_date)), ("actualite/", der), ("wiki/", wiki_date), ("a-propos.html", None), ("contact.html", None), ("mises-a-jour.html", None),
+    urls = [("", max(der, wiki_date)), ("actualite/", der), ("wiki/", wiki_date), ("a-propos.html", None), ("contact.html", None), ("le-livre.html", None), ("mises-a-jour.html", None),
             ("examens.html", None), ("mentions-legales.html", None), ("accessibilite.html", None)]
     urls += [(f'actualite/{n["date"]}.html', n["date"]) for n in nums]
     urls += [(f'wiki/{a["slug"]}.html', wiki_date) for a in arts]
@@ -1582,6 +1758,7 @@ if __name__ == "__main__":
     simu = simulateur(ds, note)
     indexnow()
     mises_a_jour()
+    livre_vivant()
     examens()
     legales()
     a_propos()

@@ -16,11 +16,11 @@ def achat(classe="bouton", texte="Acheter le livre sur Amazon"):
 # L'accueil n'est plus dans le menu : le logo y mène (et le fil d'Ariane de chaque page).
 NAV = [("actualite/index.html", "Actualité VTC", "actualite"), ("questions/index.html", "Questions VTC", "questions"), ("dossiers/index.html", "Articles", "dossiers"),
        ("wiki/index.html", "Textes du métier", "textes"), ("simulateurs/index.html", "Simulateur", "simulateurs")]
-MENU_LIVRE = [("mises-a-jour.html", "Mises à jour du livre", "maj"), ("examens.html", "Examens blancs n° 4 et 5", "examens")]
+MENU_LIVRE = [("le-livre.html", "Le livre tenu à jour", "livre"), ("mises-a-jour.html", "Mises à jour du livre", "maj"), ("examens.html", "Examens blancs n° 4 et 5", "examens")]
 
 
 SURTITRES = {"actualite": "Chaque lundi", "questions": "Chaque jeudi", "dossiers": "Articles VTC", "simulateurs": "Simulateur gratuit", "textes": "Réglementation VTC",
-             "maj": "Le livre", "examens": "Réservé aux lecteurs"}
+             "maj": "Le livre", "livre": "Le livre", "examens": "Réservé aux lecteurs"}
 
 
 def _tete_page(corps, actif, racine):

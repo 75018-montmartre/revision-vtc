@@ -15,7 +15,7 @@ Site compagnon du livre *Machine à Réussite · Examen VTC 2027* (Benjamin Blon
 | `contenu/indexnow.json` | La clé publique IndexNow (`cle`), servie à la racine du site sous `docs/<clé>.txt` |
 | `contenu/fiches.json` | Codes et titres des fiches du livre, pour les renvois « Dans le livre » |
 | `contenu/contact.json` | La clé d'accès Web3Forms du formulaire de contact (`web3forms_cle`) ; vide, la page Contact affiche l'adresse e-mail à la place du formulaire |
-| `contenu/livre.json` | L'adresse de la page Amazon du livre (`amazon`) ; vide, le site affiche « Bientôt disponible sur Amazon » |
+| `contenu/livre.json` | L'adresse de la page Amazon du livre (`amazon`) ; vide, le site affiche « Bientôt disponible sur Amazon ». Et l'adresse n8n qui reçoit les inscriptions des lecteurs (`inscription_url`) |
 | `outils/generer.py` | Génère tout le site dans `docs/` à partir de `contenu/` |
 | `outils/indexnow.py` | Signale à Bing (IndexNow) les pages ajoutées ou modifiées, lancé par `.github/workflows/indexnow.yml` |
 | `outils/test_simulateur.js` | Vérifie le calcul du simulateur sur des cas faits à la main (`node outils/test_simulateur.js`) |
@@ -35,6 +35,15 @@ Les fichiers fixes de `docs/` (feuille de style, polices, scripts communs `js/si
 4. Publier directement sur `main` (commit puis push) : le site est mis à jour en quelques minutes. L'auteur reçoit ensuite un récapitulatif.
 
 Calendrier des publications automatiques : lundi, Actualité VTC ; mercredi, veille du wiki ; jeudi, Question VTC.
+
+## Le livre tenu à jour (lecteurs inscrits)
+
+Page `docs/le-livre.html` (générée par `livre_vivant()`) : engagements de l'auteur, inscription des lecteurs aux mises à jour, signalement d'une erreur, méthode de vérification. Pages de retour : `le-livre-confirmation.html` et `le-livre-desinscription.html` (non indexées).
+
+- **Inscription** : le formulaire envoie l'adresse, le mot de la fiche G2.6 et la case cochée au workflow n8n « Lecteurs du livre : inscription aux mises à jour » (adresse `inscription_url` de `contenu/livre.json`). Il vérifie la demande, enregistre l'adresse « en_attente » dans la table n8n `lecteurs_livre` et envoie un lien de confirmation depuis benjamin@revision-vtc.fr (identifiant n8n « SMTP Gandi benjamin@revision-vtc.fr »). Le lien passe l'adresse en « confirme » ; le lien de désinscription l'efface. Le workflow « effacer les inscriptions non confirmées » supprime chaque lundi celles de plus de trois mois.
+- **Signalement** : formulaire Web3Forms (même clé que la page Contact), reçu dans la boîte de l'auteur.
+- **Envoyer une correction aux lecteurs** : 1) ajouter la correction dans `contenu/mises-a-jour.json` et publier ; 2) ouvrir le formulaire n8n « Lecteurs du livre : envoyer une mise à jour » (connecté à n8n), écrire le message, joindre les pages corrigées en PDF, cocher la case, envoyer. Seules les adresses confirmées le reçoivent, chacune avec son lien de désinscription.
+- Les engagements de la page (vérification complète toutes les trois semaines, réponse à chaque signalement, envoi des corrections) doivent rester vrais : ne pas les modifier sans l'accord de l'auteur.
 
 ### Format d'un numéro
 
