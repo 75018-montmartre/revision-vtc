@@ -6,6 +6,12 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 31 octobre 2026, 20 h 50 · Formulaire de signalement : champs alignés
+
+- https://revision-vtc.fr/le-livre.html : l'exemple « A3.4, page 65 » passe sous le champ « Fiche ou page », qui s'aligne sur la liste « Type de signalement » ; les listes déroulantes du site ont la même hauteur que les champs de saisie (44 px).
+- Vérifications : W3C (Nu) sans erreur ; axe sans erreur en clair et en sombre ; aucun débordement à 320 px ; simulateurs inchangés.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 31 octobre 2026, 19 h 00 · Nouvelle page « Le livre tenu à jour » : inscription des lecteurs et signalement d'erreur
 
 - Page publiée : https://revision-vtc.fr/le-livre.html

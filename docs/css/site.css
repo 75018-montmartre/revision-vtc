@@ -279,7 +279,7 @@ input[type=text],input[type=search],textarea,select{width:100%;font-family:var(-
 input[type=search]{padding-left:2.6rem;background:var(--fond) no-repeat .85rem center/1.1rem;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2357534A' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-4-4'/%3E%3C/svg%3E")}
 textarea{min-height:7rem;resize:vertical;line-height:1.45}
-select{width:auto;max-width:100%;min-height:44px}
+select{width:auto;max-width:100%;min-height:44px;height:44px;padding-top:0;padding-bottom:0}
 form.acces{max-width:28rem}
 .cherche{padding:var(--e4) var(--e5);margin:var(--e5) 0 0;max-width:34rem}
 .cherche p{margin:var(--e2) 0 0}
