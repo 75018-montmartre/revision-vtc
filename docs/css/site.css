@@ -27,6 +27,9 @@
   --nuit-2:#243042;    /* bleu nuit clair : survol sur fond nuit, encarts dans un bandeau */
   --jaune:#F5B820;     /* jaune signal : numéros d'article, étapes, choix actif, soulignement du menu */
   --jaune-ombre:#B98500; /* relief des boutons jaunes */
+  --jaune-survol:#FFCB45; /* survol des boutons jaunes */
+  --lien-sur-nuit:#FFD766; /* liens dans un bandeau nuit (« En clair ») */
+  --focus-sur-nuit:#9DBBFF; /* contour de focus sur le pied de page */
   --sur-nuit:#FFFFFF; --sur-nuit-doux:#C9D1DC;
   --rouge:#C9361B;     /* couleur du livre : marque du site seulement */
   --accent:#1B4F9C;    /* liens (contraste AA) */
@@ -123,7 +126,7 @@ main{padding:0 0 var(--e8)}
 .entete{background:var(--carte);border-bottom:1px solid var(--filet)}
 .entete .page{display:grid;grid-template-columns:auto minmax(0,1fr) auto;grid-template-areas:"marque nav livre";align-items:center;gap:var(--e3) var(--e5);padding-top:1.125rem;padding-bottom:1.125rem}
 .nom-site{grid-area:marque;display:flex;align-items:center;gap:.8rem;font-family:var(--sans);font-weight:700;font-size:1.3125rem;letter-spacing:-.02em;color:var(--encre);text-decoration:none}
-.nom-site .marque{display:inline-flex;align-items:center;justify-content:center;flex:none;width:2.75rem;height:2.75rem;background:var(--rouge);color:#fff;font-size:1.5rem;border-radius:11px;transition:transform .2s}
+.nom-site .marque{display:inline-flex;align-items:center;justify-content:center;flex:none;width:2.75rem;height:2.75rem;background:var(--rouge);color:var(--sur-nuit);font-size:1.5rem;border-radius:11px;transition:transform .2s}
 .nom-site:hover .marque{transform:rotate(-6deg)}
 .nom-site .nom{display:flex;flex-direction:column;line-height:1.2}
 .nom-site .sous{font-family:var(--serif);font-weight:400;font-style:italic;font-size:.9375rem;letter-spacing:0;color:var(--gris)}
@@ -161,7 +164,7 @@ main{padding:0 0 var(--e8)}
 .fil ol{list-style:none;margin:0 0 var(--e5);padding:0;display:flex;flex-wrap:wrap;gap:var(--e1);font-family:var(--sans);font-size:.875rem;color:var(--gris)}
 .fil li{margin:0}
 .fil li+li::before{content:"›";margin:0 .45rem 0 .2rem}
-.fil a{color:var(--gris)}
+.fil a{color:var(--gris);display:inline-block;padding:.75rem 0;margin:-.75rem 0}
 
 /* pied */
 .pied{background:var(--fonce);color:var(--sur-fonce-doux);font-family:var(--sans);font-size:.875rem}
@@ -175,7 +178,7 @@ main{padding:0 0 var(--e8)}
 .pied-livre b{font-family:var(--sans);color:var(--sur-fonce);font-size:.9375rem}
 .pied-achat{margin-top:var(--e4) !important}
 .pied .copyright{width:100%;margin:0;color:var(--sur-fonce-gris)}
-.pied :focus-visible{outline-color:#9DBBFF}
+.pied :focus-visible{outline-color:var(--focus-sur-nuit)}
 
 /* 4. Typographie de contenu ------------------------------------------------ */
 h1,h2,h3{font-family:var(--sans);color:var(--encre);line-height:1.2;letter-spacing:-.02em}
@@ -207,32 +210,29 @@ h1 .num-art{display:block;font-size:1rem;letter-spacing:.02em;margin-bottom:var(
 .bouton:not(.bientot):hover{transform:translateY(-1px)}
 .bouton.second{background:transparent;color:var(--encre)}
 .bouton.second:hover{background:var(--doux)}
-.bouton.petit{min-height:40px;padding:.375rem .95rem;font-size:.9375rem}
-.bouton.clair{background:#fff;border-color:#fff;color:#7E2010}
-.bouton.clair:hover{background:#F3F4F5;color:#5E180C}
-.bouton.contour{background:transparent;border-color:#fff;color:#fff}
-.bouton.contour:hover{background:rgba(255,255,255,.12);color:#fff}
+.bouton.petit{min-height:44px;padding:.375rem .95rem;font-size:.9375rem}
+.bouton.contour{background:transparent}
+.bouton.contour:hover{background:var(--nuit-2)}
 .bouton.bientot,.bouton.bientot:hover{cursor:default;background:transparent;border-style:dashed;transform:none}
 .pied .bouton.bientot{color:var(--sur-fonce-doux);border-color:var(--sur-fonce-gris)}
-.pied .bouton.clair:not(.bientot){color:#1A1917}
 
 /* carte : le seul modèle de boîte du site */
-.trois li,.essentiel-liens li,.wiki-liste li,.questions li,.numeros > li,.en-clair,.retenir,.officiel,.breve,.cherche,.texte-d{
+.essentiel-liens li,.wiki-liste li,.questions li,.numeros > li,.en-clair,.retenir,.officiel,.breve,.cherche,.texte-d{
   background:var(--carte);border:1px solid var(--filet);border-radius:var(--rayon)}
 /* carte mise en avant : filet rouge à gauche */
 .en-clair,.retenir{border-left:5px solid var(--accent-trait)}
 /* carte cliquable : toute la surface est un lien ; au survol, le filet passe au rouge et le titre aussi (pas d'ombre, pas de mouvement) */
-.trois li,.essentiel-liens li,.wiki-liste li,.questions li,.numeros > li{position:relative;transition:border-color .15s}
-.trois li:hover,.essentiel-liens li:hover,.wiki-liste li:hover,.questions li:hover,.numeros > li:hover{border-color:var(--accent-trait)}
-.trois h3 a::after,.essentiel-liens a::before,.wiki-liste a::before,.questions a::before,.numeros > li > div > a::before{content:"";position:absolute;inset:0;border-radius:var(--rayon)}
-.trois h3 a,.essentiel-liens a,.wiki-liste a,.questions a,.numeros > li > div > a{color:var(--encre);text-decoration:none}
-.trois li:hover h3 a,.essentiel-liens li:hover a,.wiki-liste li:hover a,.questions li:hover a,.numeros > li:hover > div > a{color:var(--accent)}
+.essentiel-liens li,.wiki-liste li,.questions li,.numeros > li{position:relative;transition:border-color .15s}
+.essentiel-liens li:hover,.wiki-liste li:hover,.questions li:hover,.numeros > li:hover{border-color:var(--accent-trait)}
+.essentiel-liens a::before,.wiki-liste a::before,.questions a::before,.numeros > li > div > a::before{content:"";position:absolute;inset:0;border-radius:var(--rayon)}
+.essentiel-liens a,.wiki-liste a,.questions a,.numeros > li > div > a{color:var(--encre);text-decoration:none}
+.essentiel-liens li:hover a,.wiki-liste li:hover a,.questions li:hover a,.numeros > li:hover > div > a{color:var(--accent)}
 /* flèche des cartes-liens */
 .essentiel-liens li,.wiki-liste li{padding:.85rem 2.75rem .85rem 1.15rem}
 .essentiel-liens li:hover::after,.wiki-liste li:hover::after{right:.8rem}
 
 /* grilles de cartes */
-.trois,.essentiel-liens,.wiki-liste,.questions,.numeros{list-style:none;margin:0;padding:0;display:grid;gap:var(--e3)}
+.essentiel-liens,.wiki-liste,.questions,.numeros{list-style:none;margin:0;padding:0;display:grid;gap:var(--e3)}
 .essentiel-liens{grid-template-columns:repeat(auto-fill,minmax(min(19rem,100%),1fr));gap:var(--e3) var(--e4)}
 .essentiel-liens li{font-family:var(--sans);font-size:1rem;line-height:1.4;font-weight:600}
 .wiki-liste{grid-template-columns:repeat(auto-fill,minmax(min(26rem,100%),1fr))}
@@ -287,7 +287,7 @@ h1 .num-art{display:block;font-size:1rem;letter-spacing:.02em;margin-bottom:var(
 .sommaire{background:var(--doux);border-radius:var(--rayon);padding:var(--e4) var(--e5);margin:var(--e5) 0 0}
 .sommaire ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:var(--e2);font-family:var(--sans);font-size:.9375rem}
 .sommaire li{margin:0}
-.sommaire a{display:inline-flex;align-items:center;min-height:40px;padding:0 .9rem;border-radius:var(--pilule);background:var(--carte);border:1px solid var(--filet);color:var(--encre);text-decoration:none}
+.sommaire a{display:inline-flex;align-items:center;min-height:44px;padding:0 .9rem;border-radius:var(--pilule);background:var(--carte);border:1px solid var(--filet);color:var(--encre);text-decoration:none}
 .sommaire a:hover{border-color:var(--accent-trait);color:var(--accent)}
 
 /* formulaires */
@@ -372,12 +372,6 @@ main:has(.hero){padding-bottom:0}
 .tete-intro{margin:var(--e2) 0 0;color:var(--gris);font-size:1.0625rem;max-width:40rem}
 .tete-bloc .lien-fleche{flex:none;padding:var(--e2) 0;text-decoration:none;border-bottom:2px solid var(--accent-trait)}
 .tete-bloc .lien-fleche:hover{color:var(--encre)}
-/* les quatre tuiles numérotées : 4, puis 2, puis 1 colonne */
-.trois{grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--e5)}
-.trois li{padding:var(--e5) var(--e5) 1.6rem;margin:0}
-.trois .surtitre{margin:0}
-.trois h3{margin:var(--e1) 0 var(--e2);font-size:1.25rem}
-.trois p{margin:0;color:var(--gris);font-size:1.0625rem}
 /* accueil, dernier numéro de l'Actualité : le numéro à gauche, sans boîte ; les numéros précédents à droite */
 .actu-une{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:var(--e5) var(--e7);align-items:start}
 .une-actu .meta{margin:0}
@@ -405,7 +399,10 @@ main:has(.hero){padding-bottom:0}
 .wiki-theme h2#reservation::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%224%22%20y%3D%225%22%20width%3D%2216%22%20height%3D%2215%22%20rx%3D%222%22/%3E%3Cpath%20d%3D%22M8%203v4M16%203v4M4%2010h16M9%2015l2%202%204-4%22/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%224%22%20y%3D%225%22%20width%3D%2216%22%20height%3D%2215%22%20rx%3D%222%22/%3E%3Cpath%20d%3D%22M8%203v4M16%203v4M4%2010h16M9%2015l2%202%204-4%22/%3E%3C/svg%3E")}
 .wiki-theme h2#plateformes::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%227%22%20y%3D%222.5%22%20width%3D%2210%22%20height%3D%2219%22%20rx%3D%222%22/%3E%3Cpath%20d%3D%22M11%2018h2%22/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%227%22%20y%3D%222.5%22%20width%3D%2210%22%20height%3D%2219%22%20rx%3D%222%22/%3E%3Cpath%20d%3D%22M11%2018h2%22/%3E%3C/svg%3E")}
 .wiki-theme h2#sanctions::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%203l9%2016H3z%22/%3E%3Cpath%20d%3D%22M12%2010v4M12%2017h.01%22/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%203l9%2016H3z%22/%3E%3Cpath%20d%3D%22M12%2010v4M12%2017h.01%22/%3E%3C/svg%3E")}
-.autres-textes .textes{list-style:none;margin:var(--e4) 0 0;padding:0;max-width:var(--lecture)}
+.autres-textes .wiki-liste{margin:var(--e3) 0 var(--e5)}
+.textes-ref a{display:block;font-family:var(--sans);font-weight:600;line-height:1.35}
+.textes-ref .texte-ref{margin:var(--e1) 0}
+.textes-ref .objet{display:block;font-size:1rem;line-height:1.45;color:var(--gris)}
 .texte{margin:0;padding:var(--e4) 0;border-top:1px solid var(--filet)}
 .texte p{margin:var(--e1) 0}
 
@@ -416,7 +413,7 @@ main:has(.hero){padding-bottom:0}
 .chrono{flex:none;font-variant-numeric:tabular-nums;font-weight:700;font-size:1.125rem}
 .epreuves{width:100%}
 .epreuves td:nth-child(3){white-space:nowrap}
-.epreuves td .bouton{min-height:40px;padding:.375rem .875rem;font-size:.9375rem}
+.epreuves td .bouton{min-height:44px;padding:.375rem .875rem;font-size:.9375rem}
 fieldset.question{border:0;border-top:1px solid var(--filet);margin:0;padding:1.25rem 0 var(--e4);min-width:0}
 fieldset.question legend{padding:0;font-size:1.1875rem;line-height:1.5;margin-bottom:var(--e3);float:left;width:100%}
 fieldset.question legend + *{clear:both}
@@ -481,10 +478,11 @@ fieldset.question legend + *{clear:both}
 .part-net{background:var(--ok)}
 
 /* 7. Adaptations ----------------------------------------------------------- */
-@media (max-width:64rem){.trois{grid-template-columns:repeat(2,minmax(0,1fr))}.actu-une{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:64rem){.actu-une{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:52rem){
   .entete .page{gap:var(--e3) var(--e3);padding-left:0;padding-right:0;padding-top:var(--e4);padding-bottom:var(--e3);max-width:100%}
-  .nom-site{padding-left:1.25rem;font-size:1.1875rem}
+  .nom-site{padding-left:1.25rem;font-size:1.1875rem;white-space:nowrap;min-height:44px}
+  .nom-site .sous{display:none} /* le nom suffit sur téléphone : l'en-tête passe de 6 lignes à 1 */
   .nom-site .marque{width:2.5rem;height:2.5rem;font-size:1.375rem}
   .menu-livre{padding-right:1.25rem}
   .menu-livre ul{right:1.25rem}
@@ -509,7 +507,6 @@ fieldset.question legend + *{clear:both}
   body{font-size:1.125rem}
   .page{padding:0 1.25rem}
   .chapeau{font-size:1.1875rem}
-  .trois{grid-template-columns:1fr}
   .bloc{padding:var(--e7) 0}
   .tete-page{padding:var(--e5) 0}
   .corps-page{padding-top:var(--e6)}
@@ -517,9 +514,9 @@ fieldset.question legend + *{clear:both}
   .en-clair,.retenir,.officiel,.breve{padding-left:1.15rem;padding-right:1.15rem}
   .numeros > li{grid-template-columns:1fr;gap:var(--e2)}
 }
-@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto !important;transition:none !important}.trois li:hover,.bouton:hover,.nom-site .marque,.questions li:hover,.wiki-liste li:hover,.essentiel-liens li:hover,.numeros > li:hover{transform:none !important}}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto !important;transition:none !important}.bouton:hover,.nom-site .marque,.questions li:hover,.wiki-liste li:hover,.essentiel-liens li:hover,.numeros > li:hover{transform:none !important}}
 @media print{.entete .nav,.pied,.barre,.actions{display:none}
-  .trois li,.essentiel-liens li,.wiki-liste li,.questions li,.numeros > li,.en-clair,.retenir,.officiel,.breve,.cherche{box-shadow:none}}
+  .essentiel-liens li,.wiki-liste li,.questions li,.numeros > li,.en-clair,.retenir,.officiel,.breve,.cherche{box-shadow:none}}
 
 /* formulaire de contact (composant « formulaire ») */
 .contact{margin:var(--e5) 0}
@@ -578,23 +575,27 @@ h3{font-size:1.375rem;font-weight:600}
 .wiki-liste .num-art{font-size:.9375rem !important;margin-bottom:.35rem}
 
 /* boutons : jaune signal (principal), contour nuit (second) */
-.bouton{border-radius:4px;background:var(--nuit);border-color:var(--nuit);color:#fff;font-weight:600;min-height:48px}
-.bouton:hover{background:var(--nuit-2);color:#fff;transform:none !important}
+.bouton{border-radius:4px;background:var(--nuit);border-color:var(--nuit);color:var(--sur-nuit);font-weight:600;min-height:48px}
+.bouton:hover{background:var(--nuit-2);color:var(--sur-nuit);transform:none !important}
 .bouton.second{background:transparent;color:var(--encre);border-color:var(--encre)}
 .bouton.second:hover{background:var(--doux)}
 .bouton.clair{background:var(--jaune);border-color:var(--jaune);color:var(--nuit)}
-.bouton.clair:hover{background:#FFCB45;color:var(--nuit)}
+.bouton.clair:hover{background:var(--jaune-survol);color:var(--nuit)}
+/* achat du livre : un seul composant partout (pied, encadrés, page du livre), jaune comme le menu « Le livre » */
+.bouton.achat{background:var(--jaune);border-color:var(--jaune);color:var(--nuit)}
+.bouton.achat:hover{background:var(--jaune-survol);border-color:var(--jaune-survol);color:var(--nuit)}
+.pied .bouton.achat,.fond-nuit .bouton.achat{--relief:var(--jaune-ombre)}
 .bouton.contour{border-color:var(--sur-nuit);color:var(--sur-nuit)}
 
 /* cartes : panneaux à bord net */
-.trois li,.essentiel-liens li,.wiki-liste li,.questions li,.numeros > li,.officiel,.cote-bloc{border:2px solid var(--filet);border-radius:var(--rayon)}
-.trois li:hover,.essentiel-liens li:hover,.wiki-liste li:hover,.questions li:hover{border-color:var(--encre)}
-.trois li:hover h3 a,.essentiel-liens li:hover a,.wiki-liste li:hover a,.questions li:hover a{color:var(--encre)}
+.essentiel-liens li,.wiki-liste li,.questions li,.numeros > li,.officiel,.cote-bloc{border:2px solid var(--filet);border-radius:var(--rayon)}
+.essentiel-liens li:hover,.wiki-liste li:hover,.questions li:hover{border-color:var(--encre)}
+.essentiel-liens li:hover a,.wiki-liste li:hover a,.questions li:hover a{color:var(--encre)}
 .questions a{font-family:var(--cond);font-size:1.375rem;font-weight:700;line-height:1.15}
 .en-clair{border:0;border-radius:var(--rayon);background:var(--nuit);color:var(--sur-nuit);padding:var(--e2) var(--e6) var(--e6)}
 .en-clair h2{color:var(--jaune);font-size:1.25rem}
 .en-clair .concretement{background:var(--nuit-2);color:var(--sur-nuit)}
-.en-clair a{color:#FFD766}
+.en-clair a{color:var(--lien-sur-nuit)}
 .concretement,.note{border-radius:var(--rayon)}
 .cote-bloc h2{color:var(--encre);font-family:var(--cond);font-size:1.25rem}
 
@@ -638,13 +639,11 @@ input[type=text],input[type=search],textarea,select,.contact input[type=email]{b
 .bloc-doux,.tete-page{background-color:var(--doux);background-image:linear-gradient(var(--quadrille) 1px,transparent 1px),linear-gradient(90deg,var(--quadrille) 1px,transparent 1px);background-size:56px 56px;background-position:-1px -1px}
 
 /* --- cartes cliquables, grandes --- */
-.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li{position:relative;background:var(--carte);border:1.5px solid var(--relief);border-radius:12px;box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief),7px 7px 0 0 var(--relief);transition:transform .18s ease,box-shadow .18s ease}
-.trois li{padding:var(--e5) var(--e5) 5rem}
+.questions li,.numeros > li,.une-actu,.actu-precedents li{position:relative;background:var(--carte);border:1.5px solid var(--relief);border-radius:12px;box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief),7px 7px 0 0 var(--relief);transition:transform .18s ease,box-shadow .18s ease}
 .questions li{padding:var(--e5) var(--e5) 5rem}
 .une-actu{padding:var(--e5) var(--e5) 5rem}
 .actu-precedents li{padding:var(--e4) 5rem var(--e4) var(--e4);flex:1}
-.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li{--hover:0}
-.trois li::after,.questions li::after,.numeros > li::after,.une-actu::after,.actu-precedents li::after{content:"";position:absolute;right:var(--e4);bottom:var(--e4);width:2.75rem;height:2.75rem;border-radius:50%;background:var(--pastille) var(--pastille-fleche) center/1.4rem no-repeat;pointer-events:none;transition:background-position .2s}
+.questions li,.numeros > li,.une-actu,.actu-precedents li{--hover:0}
 /* --- liens en liste, petites cartes --- */
 .essentiel-liens li,.wiki-liste li,.voir-aussi li{position:relative;background:var(--carte);border:1.5px solid var(--relief);border-radius:10px;box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief);transition:transform .15s ease,box-shadow .15s ease}
 .essentiel-liens li,.wiki-liste li{padding:.85rem 3.5rem .85rem 1.15rem}
@@ -657,17 +656,17 @@ input[type=text],input[type=search],textarea,select,.contact input[type=email]{b
 .une-actu h3 a::before,.actu-precedents a::before{content:"";position:absolute;inset:0;border-radius:12px;z-index:1}
 .une-actu h3 a:hover,.actu-precedents a:hover{text-decoration:none;color:var(--encre)}
 /* survol : la carte se soulève, la flèche file */
-:is(.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li):hover,:is(.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li):focus-within{transform:translate(-3px,-3px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief),7px 7px 0 0 var(--relief),8px 8px 0 0 var(--relief),9px 9px 0 0 var(--relief),10px 10px 0 0 var(--relief);border-color:var(--relief)}
+:is(.questions li,.numeros > li,.une-actu,.actu-precedents li):hover,:is(.questions li,.numeros > li,.une-actu,.actu-precedents li):focus-within{transform:translate(-3px,-3px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief),7px 7px 0 0 var(--relief),8px 8px 0 0 var(--relief),9px 9px 0 0 var(--relief),10px 10px 0 0 var(--relief);border-color:var(--relief)}
 :is(.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover,:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li):focus-within{transform:translate(-2px,-2px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief);border-color:var(--relief)}
-:is(.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover a{color:var(--encre)}
-:is(.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover::after{animation:fleche .45s cubic-bezier(.77,0,.175,1)}
+:is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover a{color:var(--encre)}
+:is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover::after{animation:fleche .45s cubic-bezier(.77,0,.175,1)}
 @keyframes fleche{0%{background-position:center}45%{background-position:200% center}46%{background-position:-100% center}100%{background-position:center}}
 /* clic : la carte s'enfonce */
-:is(.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li):active{transform:translate(7px,7px);box-shadow:0 0 0 0 var(--relief)}
+:is(.questions li,.numeros > li,.une-actu,.actu-precedents li):active{transform:translate(7px,7px);box-shadow:0 0 0 0 var(--relief)}
 :is(.essentiel-liens li,.wiki-liste li,.voir-aussi li):active{transform:translate(4px,4px);box-shadow:0 0 0 0 var(--relief)}
 /* clavier : contour jaune autour de la carte entière */
-:is(.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li) a:focus-visible{outline:none}
-:is(.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):focus-within{outline:3px solid var(--focus);outline-offset:4px}
+:is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li) a:focus-visible{outline:none}
+:is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):focus-within{outline:3px solid var(--focus);outline-offset:4px}
 
 /* --- boutons : même relief, en plus fin --- */
 .bouton:not(.bientot){box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief);transition:transform .15s ease,box-shadow .15s ease}
@@ -687,7 +686,7 @@ input[type=text],input[type=search],textarea,select,.contact input[type=email]{b
 .choix label:hover{transform:translate(-1px,-1px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief)}
 .choix label:has(input:checked){transform:translate(4px,4px);box-shadow:0 0 0 0 var(--relief);background:var(--jaune);color:var(--nuit);border-color:var(--nuit) !important}
 .choix label:has(input:focus-visible){outline:3px solid var(--focus);outline-offset:3px}
-@media (prefers-color-scheme: dark){.choix label:has(input:checked){color:#18212F}}
+@media (prefers-color-scheme: dark){.choix label:has(input:checked){color:var(--nuit)}}
 
 /* --- accueil : en-tête de rubrique posé sur le quadrillage --- */
 .tete-bloc{background:transparent;color:var(--encre);padding:0 0 var(--e3);border-radius:0;border-bottom:3px solid var(--encre)}
@@ -700,15 +699,15 @@ input[type=text],input[type=search],textarea,select,.contact input[type=email]{b
 .actu-precedents{display:flex;flex-direction:column}
 .actu-precedents h3{font-family:var(--cond);font-size:1.25rem;margin:0 0 var(--e3)}
 .actu-precedents ol{display:flex;flex-direction:column;gap:var(--e5);flex:1}
-.trois,.questions{gap:var(--e6)}
+.questions{gap:var(--e6)}
 .essentiel-liens{gap:var(--e4) var(--e5)}
 
 @media (prefers-reduced-motion: reduce){
-  :is(.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li,.bouton,.choix label,.tete-bloc .lien-fleche){transition:none}
-  :is(.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover::after{animation:none}
+  :is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li,.bouton,.choix label,.tete-bloc .lien-fleche){transition:none}
+  :is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover::after{animation:none}
 }
 @media (max-width:64rem){.actu-une{grid-template-columns:minmax(0,1fr)}}
-@media print{:is(.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li,.bouton,.choix label){box-shadow:none !important}.bloc-doux,.tete-page{background-image:none}}
+@media print{:is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li,.bouton,.choix label){box-shadow:none !important}.bloc-doux,.tete-page{background-image:none}}
 .tete-bloc .tete-intro{color:var(--gris)}
 /* numéros de l'Actualité VTC : pastille jaune comme les étapes */
 .numeros .numero{display:flex;align-items:center;justify-content:center;width:3rem;height:3rem;border-radius:var(--rayon);background:var(--jaune);color:var(--nuit);font-family:var(--cond);font-size:1.75rem}
@@ -718,7 +717,7 @@ input[type=text],input[type=search],textarea,select,.contact input[type=email]{b
 .retenir h2{font-family:var(--cond);font-size:1.25rem}
 
 /* encadré latéral (sommaire, voir aussi, autres questions) : relief fin, sans pastille, pour rester léger */
-.cote-bloc .voir-aussi li{padding:.55rem .8rem;box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief);font-size:.9375rem}
+.cote-bloc .voir-aussi li{display:flex;align-items:center;min-height:44px;padding:.55rem .8rem;box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief);font-size:.9375rem}
 .cote-bloc .voir-aussi li::after{display:none}
 .cote-bloc .voir-aussi li:hover,.cote-bloc .voir-aussi li:focus-within{transform:translate(-1px,-1px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief)}
 .cote-bloc .voir-aussi li:active{transform:translate(3px,3px);box-shadow:0 0 0 0 var(--relief)}

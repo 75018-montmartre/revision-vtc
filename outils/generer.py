@@ -268,10 +268,11 @@ def numero(n, precedent, suivant):
     impact = "".join(f"<p>{ty(p)}</p>" for p in n["impact_livre"])
     nav = []
     if suivant:
-        nav.append(f'<a href="{suivant["date"]}.html">Numéro suivant : n° {suivant["numero"]}</a>')
+        nav.append(f'<a class="bouton second" href="{suivant["date"]}.html">Numéro suivant : n° {suivant["numero"]}</a>')
     if precedent:
-        nav.append(f'<a href="{precedent["date"]}.html">Numéro précédent : n° {precedent["numero"]}</a>')
-    navh = ('<p class="meta">' + " · ".join(nav) + "</p>") if nav else ""
+        nav.append(f'<a class="bouton second" href="{precedent["date"]}.html">Numéro précédent : n° {precedent["numero"]}</a>')
+    nav.append('<a class="bouton second" href="index.html">Tous les numéros</a>')
+    navh = '<nav class="actions" aria-label="Autres numéros">' + "".join(nav) + "</nav>"
     corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Actualité VTC</a></li></ol></nav>
     <p class="surtitre">Actualité VTC n° {n["numero"]}</p>
     <h1>{ty(n["titre"])}</h1>
@@ -281,8 +282,7 @@ def numero(n, precedent, suivant):
     <h2>Ce que ça change pour le livre</h2>
     <div class="impact">{impact}</div>
     <p class="meta">{ty("Informations vérifiées le " + n["verifie"] + ". Chaque brève repose sur un texte officiel ou sur deux sources concordantes.")}</p>
-    {navh}
-    <p><a href="index.html">Tous les numéros</a></p>'''
+    {navh}'''
     titre = f'{n["titre"]} · Actualité VTC n° {n["numero"]}'
     resume = " ".join(n["a_retenir"])
     ld = {"@context": "https://schema.org", "@type": "NewsArticle", "headline": n["titre"][:110], "description": resume[:300],
@@ -448,7 +448,7 @@ def livre_vivant():
 
     <h2 id="questions">Questions fréquentes</h2>
     {"".join(f"<h3>{ty(q)}</h3>\n    <p>{ty(r)}</p>\n    " for q, r in faq)}
-    <p><a class="bouton second" href="{LIVRE.get("amazon", "")}">Voir le livre sur Amazon</a></p>'''
+    <p>{achat("bouton achat", "Voir le livre sur Amazon")}</p>'''
     fin = '''<script src="js/acces.js"></script>
 <script>
 (function(){
@@ -599,7 +599,7 @@ def wiki():
             livre = f'''<section class="cote-bloc wiki-livre" aria-labelledby="livre">
         <h2 id="livre">Dans le livre</h2>
         <ul>{"".join(f"<li><b>Fiche {ty(c)}</b> · {ty(t)}</li>" for c, t in a["fiches"])}</ul>
-        <p class="pied-achat">{achat("bouton second petit", "Le livre sur Amazon")}</p>
+        <p class="pied-achat">{achat("bouton achat petit", "Le livre sur Amazon")}</p>
       </section>'''
         th = themes[a["theme"]]
         corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Textes du métier</a></li><li><a href="index.html#{a["theme"]}">{ty(th["titre"])}</a></li></ol></nav>
@@ -657,8 +657,8 @@ def wiki():
     </section>''')
     autres = ""
     for g in w["autres"]:
-        autres += f'<h3>{ty(g["titre"])}</h3><ul class="textes">' + "".join(
-            f'<li class="texte"><p><a href="{html.escape(x["url"])}">{ty(x["nom"])}</a></p><p class="texte-ref">{ty(x["ref"])}</p><p>{ty(x["objet"])}</p></li>'
+        autres += f'<h3>{ty(g["titre"])}</h3><ul class="wiki-liste textes-ref">' + "".join(
+            f'<li><a href="{html.escape(x["url"])}">{ty(x["nom"])}</a><span class="texte-ref">{ty(x["ref"])}</span><span class="objet">{ty(x["objet"])}</span></li>'
             for x in g["textes"]) + "</ul>"
     corps = f'''    <h1>Textes du métier</h1>
     <p class="chapeau">{ty("Les articles de loi, décrets et arrêtés qui encadrent le métier de conducteur VTC, chacun expliqué en clair avec un exemple, puis reproduit dans sa version officielle.")}</p>
@@ -694,7 +694,7 @@ r.textContent=v?(total?total+(total>1?" articles trouvés":" article trouvé"):"
     # l'ancienne page renvoie vers le wiki
     ecrire("textes.html", f'''<!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><title>Textes du métier · Révision VTC</title>
-<link rel="canonical" href="{SITE}wiki/index.html"><meta http-equiv="refresh" content="0; url=wiki/index.html"></head>
+<link rel="canonical" href="{SITE}wiki/"><meta http-equiv="refresh" content="0; url=wiki/index.html"></head>
 <body><p><a href="wiki/index.html">Les textes du métier ont déménagé : cliquez ici.</a></p></body></html>
 ''')
     return arts
@@ -860,7 +860,7 @@ def questions(qs, w):
     </div>
     <aside class="col-cote" aria-label="Pour aller plus loin">
     {f'<section class="cote-bloc"><h2>Les textes expliqués</h2><ul class="voir-aussi">{wiki}</ul></section>' if wiki else ""}
-    {f'<section class="cote-bloc wiki-livre"><h2>Dans le livre</h2><ul>{livre}</ul><p class="pied-achat">{achat("bouton second petit", "Le livre sur Amazon")}</p></section>' if livre else ""}
+    {f'<section class="cote-bloc wiki-livre"><h2>Dans le livre</h2><ul>{livre}</ul><p class="pied-achat">{achat("bouton achat petit", "Le livre sur Amazon")}</p></section>' if livre else ""}
     {f'<section class="cote-bloc"><h2>Autres questions</h2><ul class="voir-aussi">{autres}</ul></section>' if autres else ""}
     </aside></div>'''
         chemin = f'questions/{q["date"]}-{q["slug"]}.html'
@@ -1086,7 +1086,7 @@ def dossiers(ds, w, qs=()):
     <aside class="col-cote" aria-label="Sommaire et pour aller plus loin">
     <nav class="cote-bloc" aria-labelledby="titre-sommaire"><h2 id="titre-sommaire">Sommaire</h2><ul class="voir-aussi">{sommaire}</ul></nav>
     {f'<section class="cote-bloc" aria-labelledby="titre-textes"><h2 id="titre-textes">Les textes expliqués</h2><ul class="voir-aussi">{wiki}</ul></section>' if wiki else ""}
-    {f'<section class="cote-bloc wiki-livre" aria-labelledby="titre-livre"><h2 id="titre-livre">Dans le livre</h2><ul>{livre}</ul><p class="pied-achat">{achat("bouton second petit", "Le livre sur Amazon")}</p></section>' if livre else ""}
+    {f'<section class="cote-bloc wiki-livre" aria-labelledby="titre-livre"><h2 id="titre-livre">Dans le livre</h2><ul>{livre}</ul><p class="pied-achat">{achat("bouton achat petit", "Le livre sur Amazon")}</p></section>' if livre else ""}
     <section class="cote-bloc" aria-labelledby="titre-simu"><h2 id="titre-simu">Simulateur gratuit</h2><ul class="voir-aussi"><li><a href="../simulateurs/cout-revient-revenu-net-vtc.html">{ty("Coût de revient de la voiture et revenu net : faites le calcul avec vos chiffres")}</a></li></ul></section>
     {f'<section class="cote-bloc" aria-labelledby="titre-autres"><h2 id="titre-autres">Autres articles</h2><ul class="voir-aussi">{autres}</ul></section>' if autres else ""}
     </aside></div>'''

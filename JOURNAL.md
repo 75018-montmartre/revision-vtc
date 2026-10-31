@@ -6,6 +6,25 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Dimanche 1er novembre 2026, 1 h 15 · Corrections communes à toutes les pages (refonte design et UX, 2/3)
+
+- Toutes les pages :
+  - en-tête sur téléphone : nom du site sur une ligne, sous-titre masqué (l'en-tête passe de 165 px à environ 120 px) ; logo en cible de 44 px ;
+  - fil d'Ariane : zone cliquable de 44 px, aspect inchangé ;
+  - un seul bouton d'achat du livre (jaune, 44 px) dans le pied de page, l'encadré « Dans le livre » et la page du livre, au lieu de trois styles ;
+  - feuille de style : plus aucune couleur en dur hors des jetons (nouveaux jetons `--jaune-survol`, `--lien-sur-nuit`, `--focus-sur-nuit`) ; règles mortes retirées (anciens boutons, tuiles de l'ancien accueil) ;
+  - touches du sommaire, liens de l'encadré latéral et petits boutons : 44 px au moins.
+- https://revision-vtc.fr/wiki/ : « Les lois d'origine et les autres références » en petites cartes-liens en relief (toute la carte est le lien) au lieu de liens à plat.
+- https://revision-vtc.fr/textes.html (redirection) : adresse canonique alignée sur celle du wiki, `https://revision-vtc.fr/wiki/`.
+- Numéros de l'Actualité VTC (https://revision-vtc.fr/actualite/2026-10-22.html, 2026-10-26.html, 2026-10-28.html) : « Numéro précédent », « Numéro suivant » et « Tous les numéros » en boutons secondaires, sans points médians.
+- Déjà faits dans la publication 1 : menu illisible de 761 à 832 px, menu « Le livre » et liens du pied à 44 px.
+- Inchangés volontairement : liens de sources du simulateur et crédits photo des articles (liens dans le texte, à plat).
+- Adresses, titres, descriptions et données structurées inchangés.
+- README, « Charte graphique » : jetons, bouton d'achat unique, téléphone, cartes-liens, navigation entre numéros.
+- Vérifications sur les 109 pages : W3C (Nu) sans erreur, HTML et CSS ; axe sans erreur en clair et en sombre, à 320, 768 et 1 366 px, sur les 22 types de page ; aucun débordement.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Dimanche 1er novembre 2026, 0 h 55 · Accueil sans carrousel, menu réordonné, « Le livre » en bouton jaune (refonte design et UX, 1/3)
 
 - https://revision-vtc.fr/ : le carrousel et son script sont supprimés. À la place :

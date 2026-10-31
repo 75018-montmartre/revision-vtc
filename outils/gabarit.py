@@ -6,7 +6,7 @@ with open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
     LIVRE = json.load(_h)
 
 
-def achat(classe="bouton", texte="Acheter le livre sur Amazon"):
+def achat(classe="bouton achat", texte="Acheter le livre sur Amazon"):
     """Lien d'achat du livre ; tant que l'adresse Amazon n'est pas renseignée, une mention « bientôt disponible »."""
     if LIVRE.get("amazon"):
         return f'<a class="{classe}" href="{LIVRE["amazon"]}">{texte}</a>'
@@ -103,7 +103,7 @@ def page(titre, corps, actif=None, racine="", description="", noindex=False, scr
       <img src="{racine}couverture-petite.jpg" width="68" height="88" alt="">
       <div>
         <p><b>Machine à Réussite · Examen VTC 2027</b><br>Le cours, 1 191 questions corrigées et 3 examens blancs, plus 2 ici. À jour de la loi du 25 juin 2026.</p>
-        <p class="pied-achat">{achat("bouton clair petit")}</p>
+        <p class="pied-achat">{achat("bouton achat petit")}</p>
       </div>
     </div>
     <ul>
