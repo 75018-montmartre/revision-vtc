@@ -6,6 +6,20 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 31 octobre 2026, 14 h 20 · Liens sans flèche, mentions sans points médians, arrondis réduits
+
+- Charte graphique, sur tout le site :
+  - plus de flèche « → » ajoutée aux liens « Tous les… » ni aux cartes-liens du wiki et de l'accueil ;
+  - mentions de date en phrase (« Publié le 28 octobre 2026, chiffres vérifiés le 27 octobre 2026. Lecture : 9 min. ») au lieu des points médians, dans les actualités, questions, articles et simulateurs ;
+  - arrondis de 8 px pour les cartes et 6 px pour les petits encarts (au lieu de 14 et 10 px) ; boutons inchangés ;
+  - accueil, diapositive du simulateur : encart d'exemple sans bord rouge à gauche.
+- Pages modifiées (mentions seulement) : accueil https://revision-vtc.fr/ ; actualités https://revision-vtc.fr/actualite/ et les 3 numéros ; articles https://revision-vtc.fr/dossiers/ et les 4 articles ; les 3 questions de https://revision-vtc.fr/questions/ ; les 2 simulateurs de https://revision-vtc.fr/simulateurs/.
+- Inchangés volontairement : balises `<title>`, titre du livre, ligne « En vigueur depuis… · Modifié par… » du wiki (présentation de Légifrance), photos des articles (à revoir plus tard).
+- README, « Charte graphique » : règles des arrondis, des liens et des mentions.
+- Vérifications sur les 105 pages : W3C (Nu) sans erreur, HTML et CSS ; axe sans erreur en clair et en sombre, à 320 et 1 366 px ; aucun débordement ; titres, descriptions, canoniques, données structurées et liens internes en ordre. Adresses inchangées.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 31 octobre 2026, 14 h 10 · Cartes sans ombre, surtitres en casse normale
 
 - Charte graphique, sur tout le site (feuille de style seulement, aucune page HTML modifiée) :

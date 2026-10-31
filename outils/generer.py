@@ -136,7 +136,7 @@ def accueil(nums, qs=()):
         {tete_bloc("titre-dernier-rubrique", "Chaque lundi", "Le dernier numéro de l'Actualité VTC", "actualite/index.html", "Tous les numéros")}
         <div class="actu-une">
           <article class="une-actu">
-            <p class="meta">N° {n["numero"]} · {date_fr(n["date"])}</p>
+            <p class="meta">N° {n["numero"]}, {date_fr(n["date"])}</p>
             <h3 id="titre-dernier"><a href="actualite/{n["date"]}.html">{ty(n["titre"])}</a></h3>
             <ul class="points">{pts}</ul>
           </article>{precedents}
@@ -155,7 +155,7 @@ def accueil(nums, qs=()):
           <div class="diapos" id="diapos">
             <div class="diapo diapo-site active" id="diapo-1" role="group" aria-roledescription="diapositive" aria-label="1 sur 3 : le site">
               <div class="diapo-texte">
-                <p class="surtitre">Gratuit · sans inscription · sans publicité</p>
+                <p class="surtitre">Gratuit, sans inscription, sans publicité</p>
                 <h2 id="titre-une" class="sans-filet">{ty("Examen, réglementation, revenus : le métier de chauffeur VTC expliqué, sources à l'appui")}</h2>
                 <p class="chapeau">{ty("Vous préparez l'examen, vous roulez déjà ou vous pensez vous lancer ? Révision VTC répond aux questions du métier à partir des textes officiels, et les tient à jour chaque semaine.")}</p>
                 <div class="actions"><a class="bouton clair" href="actualite/index.html">Lire l’Actualité VTC</a><a class="bouton contour" href="wiki/index.html">Les textes du métier</a></div>
@@ -272,9 +272,9 @@ def numero(n, precedent, suivant):
         nav.append(f'<a href="{precedent["date"]}.html">Numéro précédent : n° {precedent["numero"]}</a>')
     navh = ('<p class="meta">' + " · ".join(nav) + "</p>") if nav else ""
     corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Actualité VTC</a></li></ol></nav>
-    <p class="surtitre">Actualité VTC · n° {n["numero"]}</p>
+    <p class="surtitre">Actualité VTC n° {n["numero"]}</p>
     <h1>{ty(n["titre"])}</h1>
-    <p class="meta">Publié le {date_fr(n["date"])} · période couverte : {ty(n["periode"])}</p>
+    <p class="meta">Publié le {date_fr(n["date"])}, période couverte : {ty(n["periode"])}</p>
     <section class="retenir" aria-labelledby="titre-retenir"><h2 id="titre-retenir">À retenir</h2>
     <ul>{retenir}</ul></section>{rub}
     <h2>Ce que ça change pour le livre</h2>
@@ -298,7 +298,7 @@ def actualite(nums):
     for n in nums:
         pts = "".join(f"<li>{ty(x)}</li>" for x in n["a_retenir"])
         liste += f'''
-      <li><span class="numero" aria-hidden="true">{n["numero"]}</span><div><span class="meta">N° {n["numero"]} · {date_fr(n["date"])}</span><a href="{n["date"]}.html">{ty(n["titre"])}</a><ul>{pts}</ul></div></li>'''
+      <li><span class="numero" aria-hidden="true">{n["numero"]}</span><div><span class="meta">N° {n["numero"]}, {date_fr(n["date"])}</span><a href="{n["date"]}.html">{ty(n["titre"])}</a><ul>{pts}</ul></div></li>'''
     corps = f'''    <h1>Actualité VTC</h1>
     <p class="chapeau">{ty("Chaque semaine, ce qui bouge pour les chauffeurs VTC et les candidats à l'examen : textes officiels, examen, plateformes, cotisations.")}</p>
     <p>{ty("Chaque information repose sur un texte officiel ou sur deux sources concordantes, toujours citées. Quand une règle du livre change, elle est aussi inscrite dans les")} <a href="../mises-a-jour.html">mises à jour du livre</a>.</p>
@@ -669,7 +669,7 @@ def questions(qs, w):
         corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Questions VTC</a></li></ol></nav>
     <p class="surtitre">Question VTC</p>
     <h1>{ty(q["question"])}</h1>
-    <p class="meta">Publié le {date_fr(q["date"])} · vérifié le {ty(q["verifie"])}</p>
+    <p class="meta">Publié le {date_fr(q["date"])}, vérifié le {ty(q["verifie"])}</p>
     <div class="deux-col"><div class="col-texte">
     <section class="en-clair" aria-labelledby="courte">
       <h2 id="courte">La réponse courte</h2>
@@ -889,12 +889,12 @@ def dossiers(ds, w, qs=()):
         livre = "".join(f"<li><b>Fiche {ty(c)}</b> · {ty(t)}</li>" for c, t in d.get("fiches", []))
         autres = "".join(f'<li><a href="{x["slug"]}.html">{ty(x["titre"])}</a></li>' for x in ds if x is not d)
         src = "".join(f'<li><a href="{html.escape(x["url"])}">{ty(x["nom"])}</a>' + (f", {ty(x['date'])}" if x.get("date") else "") + "</li>" for x in d["sources"])
-        maj = f' · mis à jour le {ty(d["mis_a_jour"])}' if d.get("mis_a_jour") else ""
+        maj = f', mis à jour le {ty(d["mis_a_jour"])}' if d.get("mis_a_jour") else ""
         corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Articles</a></li></ol></nav>
     <p class="surtitre">Article n° {d["numero"]}</p>
     <h1>{ty(d["titre"])}</h1>
     <p class="chapeau">{ty(d["chapeau"])}</p>
-    <p class="meta">Publié le {date_fr(d["date"])}{maj} · chiffres vérifiés le {ty(d["verifie"])} · {d["mots"] // 230 + 1} min de lecture</p>
+    <p class="meta">Publié le {date_fr(d["date"])}{maj}, chiffres vérifiés le {ty(d["verifie"])}. Lecture : {d["mots"] // 230 + 1} min.</p>
     <div class="deux-col"><div class="col-texte">
     {illustration(d["image"], premiere=True) if d.get("image") else ""}
     <section class="en-clair" aria-labelledby="en-bref">
@@ -930,7 +930,7 @@ def dossiers(ds, w, qs=()):
                             noindex=bool(d.get("brouillon")), scripts_tete=partage,
                             jsonld=[ld, fil(("Accueil", ""), ("Articles", "dossiers/"), (d["titre"], chemin))]))
     if ds:
-        liste = "".join(f'''<li><span class="meta">Article n° {d["numero"]} · {date_fr(d["date"])}</span><a href="{d["slug"]}.html">{ty(d["titre"])}</a><p>{ty(d["description"])}</p></li>''' for d in ds)
+        liste = "".join(f'''<li><span class="meta">Article n° {d["numero"]}, {date_fr(d["date"])}</span><a href="{d["slug"]}.html">{ty(d["titre"])}</a><p>{ty(d["description"])}</p></li>''' for d in ds)
         liste = f'<ul class="questions">{liste}</ul>'
     else:
         liste = f'<p class="note">{ty("Le premier article sera publié très prochainement.")}</p>'
@@ -1134,7 +1134,7 @@ def simulateur(ds, note=None):
     <p class="surtitre">Simulateur gratuit</p>
     <h1>{ty("Simulateur VTC : coût de revient de la voiture et revenu net")}</h1>
     <p class="chapeau">{ty("Les plateformes vous versent de l'argent chaque semaine, mais ce n'est pas votre salaire : il faut encore payer la voiture, le carburant, l'assurance et les cotisations. Ce simulateur gratuit fait toutes ces soustractions pour vous et vous montre ce qui vous reste vraiment, en euros par mois.")}</p>
-    <p class="meta">{ty("Pour les chauffeurs VTC en micro-entreprise · hypothèses vérifiées le " + s["verifie"] + " · calcul fait dans votre navigateur, rien n'est envoyé")}</p>
+    <p class="meta">{ty("Pour les chauffeurs VTC en micro-entreprise. Hypothèses vérifiées le " + s["verifie"] + ". Calcul fait dans votre navigateur : rien n'est envoyé.")}</p>
     <div class="deux-col"><div class="col-texte">
     <section aria-labelledby="mode-emploi">
       <h2 id="mode-emploi">{ty("Comment ça marche")}</h2>
@@ -1340,7 +1340,7 @@ def calcul_note():
     <p class="surtitre">Outil gratuit</p>
     <h1>{ty("Calcul de la note de l'examen VTC : suis-je admissible ?")}</h1>
     <p class="chapeau">{ty("Vous venez de faire un examen blanc ? Entrez vos notes : vous saurez si vous auriez été admissible, pourquoi, et quelle épreuve travailler en priorité. Le calcul applique le barème officiel, avec ses coefficients et ses notes éliminatoires.")}</p>
-    <p class="meta">{ty("Barème de l'arrêté du 6 avril 2017, vérifié le " + n["verifie"] + " sur Légifrance · calcul fait dans votre navigateur, rien n'est envoyé")}</p>
+    <p class="meta">{ty("Barème de l'arrêté du 6 avril 2017, vérifié le " + n["verifie"] + " sur Légifrance. Calcul fait dans votre navigateur : rien n'est envoyé.")}</p>
     <div class="deux-col"><div class="col-texte">
     <section aria-labelledby="mode-emploi">
       <h2 id="mode-emploi">{ty("Comment s'en servir")}</h2>

@@ -38,7 +38,7 @@
   /* espacements */
   --e1:.25rem; --e2:.5rem; --e3:.75rem; --e4:1rem; --e5:1.5rem; --e6:2rem; --e7:3rem; --e8:4.5rem;
   /* formes */
-  --rayon:14px; --rayon-p:10px; --pilule:999px;
+  --rayon:8px; --rayon-p:6px; --pilule:999px;
   --ombre-h:0 2px 4px rgba(26,25,23,.06),0 14px 30px -14px rgba(26,25,23,.28); /* menu déroulant seulement : pas d’ombre sur les cartes */
 }
 @media (prefers-color-scheme: dark){
@@ -181,7 +181,6 @@ ul.source{padding-left:1.25rem}
 .num-art{font-family:var(--sans);font-weight:700;color:var(--accent);white-space:nowrap}
 h1 .num-art{display:block;font-size:1rem;letter-spacing:.02em;margin-bottom:var(--e2)}
 .lien-fleche{font-family:var(--sans);font-weight:600;font-size:1rem}
-.lien-fleche::after{content:" →"}
 
 /* 5. Composants ------------------------------------------------------------ */
 /* boutons */
@@ -213,7 +212,6 @@ h1 .num-art{display:block;font-size:1rem;letter-spacing:.02em;margin-bottom:var(
 .trois li:hover h3 a,.essentiel-liens li:hover a,.wiki-liste li:hover a,.questions li:hover a,.numeros > li:hover > div > a{color:var(--accent)}
 /* flèche des cartes-liens */
 .essentiel-liens li,.wiki-liste li{padding:.85rem 2.75rem .85rem 1.15rem}
-.essentiel-liens li::after,.wiki-liste li::after{content:"→";position:absolute;right:1.1rem;top:50%;transform:translateY(-50%);font-family:var(--sans);color:var(--accent);transition:right .2s}
 .essentiel-liens li:hover::after,.wiki-liste li:hover::after{right:.8rem}
 
 /* grilles de cartes */
@@ -322,7 +320,7 @@ main:has(.une){padding-bottom:0}
 .une .bouton.bientot{color:var(--sur-fonce);border-color:var(--sur-fonce)}
 /* diapositive claire : le simulateur, avec un exemple chiffré en carte */
 .diapo-simu{background:var(--doux);border:1px solid var(--filet)}
-.exemple-simu{width:19rem;background:var(--carte);border:1px solid var(--filet);border-left:5px solid var(--accent-trait);border-radius:var(--rayon);padding:var(--e5)}
+.exemple-simu{width:19rem;background:var(--carte);border:1px solid var(--filet);border-radius:var(--rayon);padding:var(--e5)}
 .exemple-simu p{margin:0}
 .exemple-verse{font-family:var(--sans);font-weight:600;font-size:1.0625rem;line-height:1.35;margin:var(--e2) 0 !important}
 .exemple-net{font-family:var(--sans);font-size:.9375rem;color:var(--gris);margin-bottom:var(--e3) !important}
