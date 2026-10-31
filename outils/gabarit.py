@@ -12,10 +12,11 @@ def achat(classe="bouton", texte="Acheter le livre sur Amazon"):
         return f'<a class="{classe}" href="{LIVRE["amazon"]}">{texte}</a>'
     return f'<span class="{classe} bientot">Bientôt disponible sur Amazon</span>'
 
-# menu principal : les cinq rubriques du site ; le livre a son propre menu, à droite (MENU_LIVRE).
+# menu principal : les cinq rubriques du site, l'outil le plus demandé en premier ; le livre a son propre menu, à droite (MENU_LIVRE),
+# bouton jaune plein sur toutes les pages : la page du livre en cours est marquée dans le menu déroulant (aria-current).
 # L'accueil n'est plus dans le menu : le logo y mène (et le fil d'Ariane de chaque page).
-NAV = [("actualite/index.html", "Actualité VTC", "actualite"), ("questions/index.html", "Questions VTC", "questions"), ("dossiers/index.html", "Articles", "dossiers"),
-       ("wiki/index.html", "Textes du métier", "textes"), ("simulateurs/index.html", "Simulateur", "simulateurs")]
+NAV = [("simulateurs/index.html", "Simulateur", "simulateurs"), ("wiki/index.html", "Textes du métier", "textes"), ("questions/index.html", "Questions VTC", "questions"),
+       ("dossiers/index.html", "Articles", "dossiers"), ("actualite/index.html", "Actualité VTC", "actualite")]
 MENU_LIVRE = [("le-livre.html", "Le livre tenu à jour", "livre"), ("mises-a-jour.html", "Mises à jour du livre", "maj"), ("examens.html", "Examens blancs n° 4 et 5", "examens")]
 
 
@@ -68,7 +69,6 @@ def page(titre, corps, actif=None, racine="", description="", noindex=False, scr
     livre = "".join(f'<li><a href="{racine}{href}"{courant(cle)}>{nom}</a></li>' for href, nom, cle in MENU_LIVRE)
     if LIVRE.get("amazon"):
         livre += f'<li><a href="{LIVRE["amazon"]}">Acheter le livre sur Amazon</a></li>'
-    livre_actif = " actif" if actif in {c for _, _, c in MENU_LIVRE} else ""
     meta = f'<meta name="description" content="{description}">\n' if description else ""
     robots = '<meta name="robots" content="noindex">\n' if noindex else ""
     return f'''<!doctype html>
@@ -91,7 +91,7 @@ def page(titre, corps, actif=None, racine="", description="", noindex=False, scr
   <div class="page">
     <a class="nom-site" href="{racine}index.html"{courant("accueil")}><span class="marque" aria-hidden="true">R</span><span class="nom">Révision VTC<span class="sous">Examen, réglementation et métier de chauffeur VTC</span></span></a>
     <nav class="nav" aria-label="Menu principal"><ul>{nav}</ul></nav>
-    <details class="menu-livre{livre_actif}"><summary>Le livre</summary><ul>{livre}</ul></details>
+    <details class="menu-livre"><summary>Le livre</summary><ul>{livre}</ul></details>
   </div>
 </header>
 {avant_main}<main id="contenu" tabindex="-1">

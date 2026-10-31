@@ -6,6 +6,26 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Dimanche 1er novembre 2026, 0 h 55 · Accueil sans carrousel, menu réordonné, « Le livre » en bouton jaune (refonte design et UX, 1/3)
+
+- https://revision-vtc.fr/ : le carrousel et son script sont supprimés. À la place :
+  - un premier écran fixe sur fond nuit : surtitre « Examen VTC 2027, règles vérifiées en octobre 2026 » (mois tiré automatiquement de la dernière vérification du wiki), titre visible en `h1` « Réussir l'examen VTC 2027, et savoir ce que vous gagnerez vraiment », chapeau, bouton principal « Préparer l'examen 2027 », bouton secondaire « Calculer mon revenu net », mention « Gratuit, sans inscription, sans publicité. » ;
+  - deux cartes-liens en relief : l'exemple du simulateur (1 000 € versés par semaine, 983 € nets par mois, chiffre recalculé par le générateur) et le livre ;
+  - une bande de trois preuves (78 articles de loi, chiffres sourcés et datés, mise à jour chaque semaine) ;
+  - « Par où commencer ? » (je prépare l'examen, je me lance, je roule déjà) remplace le bloc « Quatre rubriques », qui répétait le menu ;
+  - ordre de la suite : réglementation essentielle, Questions VTC (2 × 2), Actualité VTC.
+- Toutes les pages :
+  - menu dans l'ordre Simulateur, Textes du métier, Questions VTC, Articles, Actualité VTC ; sur téléphone, dégradé et flèche sur le bord droit tant que le menu continue ;
+  - « Le livre » en bouton jaune plein en relief ; la page du livre en cours est marquée dans la liste ;
+  - cibles tactiles de 44 px : entrées du menu « Le livre », liens et bouton du pied de page ;
+  - menu illisible entre 761 et 832 px en thème clair (texte blanc sur fond clair) : corrigé, les deux règles ont maintenant le même point de rupture (avancé de la publication 2 pour que axe passe sans erreur).
+- Couverture du pied de page : déjà `alt=""` (décorative, le titre du livre est écrit à côté), inchangée.
+- Adresses, titres, descriptions, balises de partage et données structurées inchangés.
+- README, « Charte graphique » : en-tête, accueil, relief sur fond nuit, cibles de 44 px.
+- Vérifications sur les 109 pages : W3C (Nu) sans erreur, HTML et CSS ; axe sans erreur en clair et en sombre, à 320, 768 et 1 366 px, sur les 22 types de page ; aucun débordement ; un seul `h1` visible par page.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 31 octobre 2026, 23 h 25 · Question VTC (tâche du jeudi)
 
 - Question : « Quelles sont les voitures hybrides les moins chères pour faire VTC ? »

@@ -131,7 +131,7 @@ def accueil(nums, qs=()):
                       '\n            <h3 id="titre-precedents">Numéros précédents</h3>'
                       f'\n            <ol>{prec}</ol>\n          </aside>') if prec else ""
         dernier = f'''
-    <section class="bloc bloc-doux" aria-labelledby="titre-dernier">
+    <section class="bloc" aria-labelledby="titre-dernier">
       <div class="page large">
         {tete_bloc("titre-dernier-rubrique", "Chaque lundi", "Le dernier numéro de l'Actualité VTC", "actualite/index.html", "Tous les numéros")}
         <div class="actu-une">
@@ -147,78 +147,79 @@ def accueil(nums, qs=()):
     sim = lire_simulateur()
     ex = calcul_simulateur(sim, base="clients", **defauts_simulateur(sim))
     n_wiki = len(lire_wiki()["articles"])
-    amazon = f'<a class="bouton clair" href="{LIVRE["amazon"]}">Voir le livre sur Amazon</a>' if LIVRE.get("amazon") else achat("bouton clair")
-    corps = f'''    <section class="une" aria-label="À la une">
-      <div class="page large">
-        <h1 class="visuellement-cache">{ty("Révision VTC : l'examen VTC, la réglementation et le métier de chauffeur VTC expliqués, sources à l'appui")}</h1>
-        <div class="carrousel" role="region" aria-roledescription="carrousel" aria-label="À la une : le site, le simulateur, le livre">
-          <div class="diapos" id="diapos">
-            <div class="diapo diapo-site active" id="diapo-1" role="group" aria-roledescription="diapositive" aria-label="1 sur 3 : le site">
-              <div class="diapo-texte">
-                <p class="surtitre">Gratuit, sans inscription, sans publicité</p>
-                <h2 id="titre-une" class="sans-filet">{ty("Examen, réglementation, revenus : le métier de chauffeur VTC expliqué, sources à l'appui")}</h2>
-                <p class="chapeau">{ty("Vous préparez l'examen, vous roulez déjà ou vous pensez vous lancer ? Révision VTC répond aux questions du métier à partir des textes officiels, et les tient à jour chaque semaine.")}</p>
-                <div class="actions"><a class="bouton clair" href="actualite/index.html">Lire l’Actualité VTC</a><a class="bouton contour" href="wiki/index.html">Les textes du métier</a></div>
-              </div>
-              <ul class="garanties">
-                <li><b>{n_wiki} articles de loi</b> {ty("du Code des transports et des arrêtés, recopiés de Légifrance et expliqués en clair")}</li>
-                <li><b>{ty("Chaque chiffre sourcé")}</b> {ty("et daté : texte officiel, ou deux sources qui concordent")}</li>
-                <li><b>{ty("Chaque semaine")}</b> {ty("l'actualité du métier le lundi, une question-réponse le jeudi")}</li>
-              </ul>
-            </div>
-            <div class="diapo diapo-simu" id="diapo-2" role="group" aria-roledescription="diapositive" aria-label="2 sur 3 : le simulateur">
-              <div class="diapo-texte">
-                <p class="surtitre">Outil gratuit</p>
-                <h2 class="sans-filet">{ty("Combien vous reste-t-il vraiment à la fin du mois ?")}</h2>
-                <p class="chapeau">{ty("Indiquez ce que vous versent les plateformes : le simulateur retire la commission, les cotisations, la voiture et les frais, et vous donne votre revenu net, le coût de votre voiture au kilomètre et le montant à faire pour ne pas perdre d'argent.")}</p>
-                <div class="actions"><a class="bouton" href="simulateurs/{sim["slug"]}.html">Faire ma simulation</a><a class="bouton second" href="dossiers/cout-pour-devenir-chauffeur-vtc.html">Le budget pour se lancer</a></div>
-              </div>
-              <div class="exemple-simu">
-                <p class="meta">Exemple, avec les valeurs du simulateur</p>
-                <p class="exemple-verse">{ty("1 000 € versés par semaine par les plateformes")}</p>
-                <p class="exemple-net"><span class="resultat">{_euros(ex["net"] / 12)}</span> {ty("nets par mois, avant impôt")}</p>
-                <p class="meta">{ty(f"Hybride louée 280 € par semaine, 60 000 km et 47 semaines par an ; voiture à {_euros(ex['km'], True)} le kilomètre.")}</p>
-              </div>
-            </div>
-            <div class="diapo diapo-livre" id="diapo-3" role="group" aria-roledescription="diapositive" aria-label="3 sur 3 : le livre">
-              <div class="diapo-texte">
-                <p class="surtitre">Le livre <i>Machine à Réussite</i></p>
-                <h2 class="sans-filet">{ty("Réussir l'examen VTC 2027 avec des règles à jour")}</h2>
-                <p class="chapeau">{ty("213 fiches de cours, 1 191 questions corrigées et 3 examens blancs, vérifiés en octobre 2026. Les lecteurs retrouvent ici les mises à jour du livre et deux examens blancs de plus.")}</p>
-                <div class="actions">{amazon}<a class="bouton contour" href="mises-a-jour.html">Les mises à jour du livre</a></div>
-              </div>
-              <img class="une-couv" src="couverture.jpg" width="408" height="528" alt="Couverture du livre Machine à Réussite · Examen VTC 2027, de Benjamin Blondin">
-            </div>
-          </div>
-          <div class="carrousel-commandes" hidden>
-            <ul class="carrousel-choix" aria-label="Choisir la diapositive">
-              <li><button type="button" aria-controls="diapo-1" aria-current="true"><span>1</span> Le site</button></li>
-              <li><button type="button" aria-controls="diapo-2"><span>2</span> Le simulateur</button></li>
-              <li><button type="button" aria-controls="diapo-3"><span>3</span> Le livre</button></li>
-            </ul>
-            <button type="button" class="carrousel-pause" aria-controls="diapos">Mettre en pause</button>
-          </div>
+    # mois de la dernière vérification du wiki (« 25 octobre 2026 » -> « octobre 2026 ») : le surtitre reste vrai sans retouche
+    verif = " ".join(lire_wiki()["verifie"].split()[-2:])
+    simu = f'simulateurs/{sim["slug"]}.html'
+    # « Par où commencer ? » : trois profils, trois liens chacun (petites cartes-liens)
+    parcours = [
+        ("Je prépare l'examen", "Les épreuves, le barème et de quoi réviser.",
+         [("simulateurs/calcul-note-examen-vtc.html", "Calculer ma note à l'examen"),
+          ("wiki/arrete-6-avril-2017-examen.html", "Les épreuves et les notes éliminatoires"),
+          ("le-livre.html", "Le livre pour préparer l'examen 2027")]),
+        ("Je me lance", "Ce que coûte le démarrage et ce qu'il rapporte.",
+         [("dossiers/cout-pour-devenir-chauffeur-vtc.html", "Combien coûte le lancement en VTC"),
+          (simu, "Calculer mon revenu net"),
+          ("dossiers/chauffeur-vtc-salarie-ou-independant.html", "Salarié ou indépendant : que choisir")]),
+        ("Je roule déjà", "Ce qui change pour vous, chaque semaine.",
+         [("actualite/index.html", "L'Actualité VTC du lundi"),
+          ("questions/index.html", "Les Questions VTC du jeudi"),
+          (simu, "Calculer mon revenu net")]),
+    ]
+    cartes_parcours = "".join(
+        f'\n          <li><h3>{ty(t)}</h3><p>{ty(d)}</p><ul class="essentiel-liens">'
+        + "".join(f'<li><a href="{h}">{ty(l)}</a></li>' for h, l in liens) + "</ul></li>"
+        for t, d, liens in parcours)
+    corps = f'''    <section class="hero fond-nuit" aria-labelledby="titre-hero">
+      <div class="page large hero-grille">
+        <div class="hero-texte">
+          <p class="surtitre">{ty(f"Examen VTC 2027, règles vérifiées en {verif}")}</p>
+          <h1 id="titre-hero">{ty("Réussir l'examen VTC 2027, et savoir ce que vous gagnerez vraiment")}</h1>
+          <p class="chapeau">{ty("Le droit du VTC expliqué à partir des textes officiels, un simulateur de revenu net gratuit, et le livre pour préparer l'examen. Tout est sourcé et tenu à jour chaque semaine.")}</p>
+          <div class="actions"><a class="bouton clair" href="le-livre.html">{ty("Préparer l'examen 2027")}</a><a class="bouton contour" href="{simu}">Calculer mon revenu net</a></div>
+          <p class="hero-mention">Gratuit, sans inscription, sans publicité.</p>
+        </div>
+        <div class="hero-cartes">
+          <a class="carte-hero carte-simu" href="{simu}">
+            <span class="carte-surtitre">Simulateur gratuit, exemple</span>
+            <span class="carte-calcul">
+              <span><span class="carte-legende">Versé par les plateformes</span><span class="carte-verse">{ty("1 000 €")} <small>par semaine</small></span></span>
+              <span><span class="carte-legende">Il vous reste, avant impôt</span><span class="carte-net">{_euros(ex["net"] / 12)} <small>par mois</small></span></span>
+            </span>
+            <span class="carte-texte">{ty("Commission, cotisations, voiture et frais déduits. Faites le calcul avec vos propres chiffres.")}</span>
+            <span class="carte-lien">Faire ma simulation</span>
+          </a>
+          <a class="carte-hero carte-livre" href="le-livre.html">
+            <img src="couverture-petite.jpg" width="68" height="88" alt="">
+            <span>
+              <span class="carte-titre">{ty("Le livre Machine à Réussite")}</span>
+              <span class="carte-texte">{ty("213 fiches de cours, 1 191 questions corrigées, 3 examens blancs + 2 sur le site.")}</span>
+              <span class="carte-lien">Voir le livre</span>
+            </span>
+          </a>
         </div>
       </div>
     </section>
-    <section class="bloc" aria-labelledby="titre-rubriques">
+    <section class="preuves" aria-label="Pourquoi faire confiance au site">
+      <ul class="page large">
+        <li><b>{n_wiki} articles de loi</b> {ty("recopiés de Légifrance et expliqués en clair")}</li>
+        <li><b>{ty("Chaque chiffre sourcé")}</b> {ty("et daté : texte officiel ou deux sources concordantes")}</li>
+        <li><b>{ty("Mis à jour chaque semaine")}</b> {ty(": actualité le lundi, question-réponse le jeudi")}</li>
+      </ul>
+    </section>
+    <section class="bloc bloc-doux" aria-labelledby="titre-commencer">
       <div class="page large">
-        {tete_bloc("titre-rubriques", "Le site", "Quatre rubriques, une seule exigence : des sources vérifiées")}
-        <ul class="trois">
-          <li><p class="surtitre">Chaque lundi</p><h3><a href="actualite/index.html">Actualité VTC</a></h3><p>{ty("Textes officiels, examen, plateformes, cotisations : ce qui change pour vous, toujours avec ses sources.")}</p></li>
-          <li><p class="surtitre">L'essentiel du droit</p><h3><a href="wiki/index.html">Textes du métier</a></h3><p>{ty("Le droit du VTC article par article : le texte officiel, expliqué en clair avec un exemple.")}</p></li>
-          <li><p class="surtitre">À fond</p><h3><a href="dossiers/index.html">Articles</a></h3><p>{ty("Un sujet du métier traité en détail, comme le budget pour se lancer, avec chaque chiffre sourcé et daté.")}</p></li>
-          <li><p class="surtitre">Outil gratuit</p><h3><a href="simulateurs/index.html">Simulateur</a></h3><p>{ty("Votre revenu net et le coût de votre voiture au kilomètre, calculés avec vos propres chiffres.")}</p></li>
+        {tete_bloc("titre-commencer", "Selon votre situation", "Par où commencer ?")}
+        <ul class="parcours">{cartes_parcours}
         </ul>
       </div>
-    </section>{dernier}
+    </section>
     <section class="bloc bloc-blanc" aria-labelledby="titre-essentiel">
       <div class="page large">
         {tete_bloc("titre-essentiel", "Textes du métier", "Réglementation VTC : l'essentiel", "wiki/index.html", "Tous les textes expliqués",
                    "Les règles les plus utiles au quotidien, avec le texte officiel et une explication en clair.")}
         <ul class="essentiel-liens">{liens_essentiels()}</ul>
       </div>
-    </section>{bloc_questions(qs)}'''
+    </section>{bloc_questions(qs)}{dernier}'''
     ecrire("index.html", page("Examen VTC 2027 et réglementation VTC expliquée · Révision VTC", corps, "accueil", "",
                               "Réussir l'examen VTC 2027 : la réglementation VTC expliquée article par article, l'actualité du métier chaque semaine et deux examens blancs corrigés. Sources officielles citées.",
                               brut=True, jsonld=[{"@context": "https://schema.org", "@graph": [SITE_LD, LIVRE_LD]}]))
@@ -236,7 +237,7 @@ def bloc_questions(qs):
         return ""
     li = "".join(f'<li><a href="questions/{q["date"]}-{q["slug"]}.html">{ty(q["question"])}</a><p>{ty(q["reponse_courte"])}</p></li>' for q in list(qs)[:4])
     return f'''
-    <section class="bloc" aria-labelledby="titre-questions">
+    <section class="bloc bloc-doux" aria-labelledby="titre-questions">
       <div class="page large">
         {tete_bloc("titre-questions", "Chaque jeudi", "Questions VTC : une question, une réponse sourcée", "questions/index.html", "Toutes les questions")}
         <ul class="questions questions-grille">{li}</ul>

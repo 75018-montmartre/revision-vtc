@@ -33,13 +33,14 @@
   --accent-trait:#11161E;
   --ok:#1F6B34; --ok-fond:#E9F3EA; --ko:#A52C15; --ko-fond:#FBECE8;
   --focus:#1F4FCC;
-  /* surfaces foncées (pied de page, diapositives), identiques en clair et en sombre sauf le fond */
+  /* surfaces foncées (pied de page), identiques en clair et en sombre sauf le fond */
   --fonce:#18212F; --sur-fonce:#FFFFFF; --sur-fonce-doux:#C9D1DC; --sur-fonce-gris:#9AA5B4; --sur-fonce-filet:rgba(255,255,255,.18);
   /* relief et quadrillage */
   --relief:var(--nuit);                  /* épaisseur des éléments cliquables */
   --quadrille:rgba(24,33,47,.12);        /* lignes du fond quadrillé (plan de ville) */
   --pastille:var(--nuit);                /* pastille ronde fléchée des cartes */
   --pastille-fleche:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F5B820' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E");
+  --chevron-nav:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l6 6-6 6'/%3E%3C/svg%3E"); /* flèche « le menu continue » (téléphone), sur le bandeau nuit */
   /* typographie */
   --sans:"Barlow",Arial,sans-serif;                          /* interface et texte de lecture */
   --serif:"Barlow",Arial,sans-serif;                         /* texte de lecture (même famille) */
@@ -311,55 +312,55 @@ thead th{border-bottom:2px solid var(--encre);font-weight:700}
 td.nombre,th.nombre{text-align:right;font-variant-numeric:tabular-nums}
 
 /* 6. Pages ----------------------------------------------------------------- */
-/* accueil : carrousel de trois diapositives (le site, le simulateur, le livre), en panneaux à coins arrondis
-   détachés de l'en-tête. Sans JavaScript, les diapositives sont l'une sous l'autre ; avec, elles sont superposées
-   et seule la diapositive « active » est visible (docs/js/site.js). */
-main:has(.une){padding-bottom:0}
-.une{padding-top:var(--e6)}
-.diapos{display:grid;gap:var(--e4)}
-.diapo{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--e7);align-items:center;padding:3.25rem 3.5rem;border-radius:var(--rayon);overflow:hidden}
-.carrousel.js .diapos{gap:0}
-.carrousel.js .diapo{grid-area:1/1;opacity:0;visibility:hidden;transition:opacity .45s,visibility .45s}
-.carrousel.js .diapo.active{opacity:1;visibility:visible}
-.diapo-texte{max-width:40rem}
-.diapo h1,.diapo h2{font-size:clamp(1.875rem,3.8vw,2.75rem);letter-spacing:-.03em;line-height:1.08;margin:0 0 var(--e5);max-width:24ch}
-.diapo .chapeau{max-width:36rem}
-.diapo .actions{margin-bottom:0}
-/* diapositives foncées : le site (couleur du pied de page) et le livre (rouge du livre) */
-.diapo-site{background:var(--fonce)}
-.diapo-livre{background:var(--rouge)}
-@media (prefers-color-scheme: dark){.diapo-site{border:1px solid var(--filet)}}
-.diapo-site,.diapo-livre{color:var(--sur-fonce)}
-.diapo-site :is(h1,h2,.chapeau),.diapo-livre :is(h1,h2,.chapeau){color:var(--sur-fonce)}
-.diapo-site .surtitre,.diapo-livre .surtitre{color:var(--sur-fonce);opacity:.92}
-.diapo-site :focus-visible,.diapo-livre :focus-visible{outline-color:var(--sur-fonce)}
-.une .bouton.bientot{color:var(--sur-fonce);border-color:var(--sur-fonce)}
-/* diapositive claire : le simulateur, avec un exemple chiffré en carte */
-.diapo-simu{background:var(--doux);border:1px solid var(--filet)}
-.exemple-simu{width:19rem;background:var(--carte);border:1px solid var(--filet);border-radius:var(--rayon);padding:var(--e5)}
-.exemple-simu p{margin:0}
-.exemple-verse{font-family:var(--sans);font-weight:600;font-size:1.0625rem;line-height:1.35;margin:var(--e2) 0 !important}
-.exemple-net{font-family:var(--sans);font-size:.9375rem;color:var(--gris);margin-bottom:var(--e3) !important}
-.exemple-net .resultat{display:block;font-size:2.75rem;line-height:1.05;margin:0;color:var(--encre);letter-spacing:-.03em}
-/* les garanties du site, à droite de la première diapositive */
-.garanties{width:19rem;list-style:none;margin:0;padding:0;font-family:var(--sans);font-size:.9375rem;line-height:1.45;color:var(--sur-fonce-doux)}
-.garanties li{margin:0;padding:var(--e4) 0 var(--e4) 2rem;border-top:1px solid var(--sur-fonce-filet);position:relative}
-.garanties li:first-child{border-top:0;padding-top:0}
-.garanties li::before{content:"";position:absolute;left:.15rem;top:calc(var(--e4) + .3rem);width:.55rem;height:.95rem;border:solid var(--sur-fonce);border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
-.garanties li:first-child::before{top:.3rem}
-.garanties b{display:block;color:var(--sur-fonce);font-size:1.0625rem}
-.une-couv{width:clamp(10rem,22vw,15rem);height:auto;display:block;border-radius:6px;transform:rotate(2.5deg);transition:transform .3s;box-shadow:0 1px 0 rgba(0,0,0,.08),0 18px 40px -18px rgba(0,0,0,.45)}
-.une-couv:hover{transform:rotate(0)}
-/* commandes : une pilule par diapositive (numéro et nom), puis pause */
-.carrousel-commandes{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--e3);margin-top:var(--e4)}
-.carrousel-choix{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:var(--e2)}
-.carrousel-choix li{margin:0}
-.carrousel-choix button,.carrousel-pause{display:inline-flex;align-items:center;gap:.5rem;min-height:40px;padding:0 1rem 0 .45rem;border:1px solid var(--filet);border-radius:var(--pilule);background:var(--carte);color:var(--encre);font-family:var(--sans);font-size:.9375rem;cursor:pointer;transition:background .15s,border-color .15s}
-.carrousel-choix button span{display:inline-flex;align-items:center;justify-content:center;width:1.75rem;height:1.75rem;border-radius:50%;background:var(--doux);font-weight:700;font-size:.8125rem}
-.carrousel-choix button:hover,.carrousel-pause:hover{border-color:var(--gris)}
-.carrousel-choix button[aria-current="true"]{background:var(--encre);border-color:var(--encre);color:var(--fond);font-weight:600}
-.carrousel-choix button[aria-current="true"] span{background:var(--fond);color:var(--encre)}
-.carrousel-pause{padding:0 1rem;background:transparent;color:var(--gris)}
+/* accueil : un premier écran fixe sur fond nuit (« hero ») : titre, chapeau, deux actions, et à droite
+   (dessous sur téléphone) deux cartes-liens, l'exemple du simulateur et le livre. Puis une bande de trois preuves,
+   à plat (rien ne s'y clique), et le bloc « Par où commencer ? » : trois profils, trois liens chacun. */
+main:has(.hero){padding-bottom:0}
+.fond-nuit{background:var(--nuit);color:var(--sur-nuit)}
+.fond-nuit :is(h1,h2,h3,.chapeau){color:var(--sur-nuit)}
+.fond-nuit .surtitre{color:var(--jaune)}
+.fond-nuit :focus-visible{outline-color:var(--jaune)}
+.hero-grille{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:var(--e7) 3.5rem;align-items:center;padding-top:4.5rem;padding-bottom:5rem}
+.hero-texte{min-width:0}
+.hero .surtitre{margin:0 0 var(--e4)}
+.hero h1{margin:0 0 var(--e5);max-width:22ch}
+.hero .chapeau{margin:0;max-width:36rem;color:var(--sur-nuit-doux)}
+.hero .actions{margin:var(--e6) 0 var(--e4)}
+.hero-mention{margin:0;font-family:var(--sans);font-size:.9375rem;color:var(--sur-nuit-doux)}
+.hero-cartes{display:grid;gap:var(--e5);min-width:0}
+.carte-hero{display:flex;gap:var(--e4);padding:var(--e5);border-radius:var(--rayon-lien);font-family:var(--sans);text-decoration:none}
+.carte-simu{flex-direction:column;gap:var(--e3);background:var(--carte);color:var(--encre);border:1.5px solid var(--nuit)}
+.carte-livre{align-items:center;background:var(--nuit-2);color:var(--sur-nuit);border:1.5px solid var(--jaune-ombre)}
+.carte-livre img{flex:none;display:block;border-radius:3px}
+.carte-livre > span{display:flex;flex-direction:column;gap:var(--e1);min-width:0}
+.carte-surtitre{font-size:.9375rem;font-weight:600;color:var(--gris)}
+.carte-calcul{display:flex;flex-wrap:wrap;align-items:flex-end;gap:var(--e3) var(--e5)}
+.carte-calcul > span{display:flex;flex-direction:column}
+.carte-legende{font-size:.9375rem;color:var(--gris)}
+.carte-verse,.carte-net{font-family:var(--cond);font-weight:700;line-height:1.05;color:var(--encre)}
+.carte-verse{font-size:2rem}
+.carte-net{font-size:2.75rem}
+.carte-verse small,.carte-net small{font-family:var(--sans);font-size:1rem;font-weight:600}
+.carte-texte{font-size:1rem;line-height:1.45}
+.carte-simu .carte-texte{color:var(--gris)}
+.carte-livre .carte-texte{color:var(--sur-nuit-doux)}
+.carte-titre{font-family:var(--cond);font-weight:700;font-size:1.375rem;line-height:1.1}
+.carte-lien{font-weight:700;font-size:1rem;text-decoration:underline;text-underline-offset:.2em}
+.carte-livre .carte-lien{color:var(--jaune)}
+/* bande des preuves : à plat, coche jaune */
+.preuves{background:var(--carte);border-bottom:1px solid var(--filet)}
+.preuves ul{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--e4) var(--e6);padding-top:var(--e5);padding-bottom:var(--e5);margin:0 auto;font-family:var(--sans);font-size:1rem;line-height:1.45}
+.preuves li{position:relative;margin:0;padding-left:2rem}
+.preuves li::before{content:"";position:absolute;left:.3rem;top:.15rem;width:.55rem;height:.95rem;border:solid var(--jaune-ombre);border-width:0 3px 3px 0;transform:rotate(45deg)}
+/* « Par où commencer ? » : panneaux à plat ; les liens qu'ils contiennent sont des petites cartes-liens en relief */
+.parcours{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--e6)}
+.parcours > li{margin:0;padding:var(--e5);background:var(--carte);border:1px solid var(--filet);border-radius:var(--rayon)}
+.parcours h3{margin:0 0 var(--e1)}
+.parcours > li > p{margin:0 0 var(--e4);color:var(--gris);font-size:1.0625rem}
+.parcours .essentiel-liens{grid-template-columns:minmax(0,1fr);gap:var(--e3)}
+/* accueil, quatre dernières Questions VTC : 2 × 2 (jamais de tuile orpheline), une colonne sur téléphone */
+.questions-grille{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:52rem){.questions-grille{grid-template-columns:minmax(0,1fr)}}
 
 /* accueil : blocs aux fonds alternés, en-tête de bloc commun */
 .bloc{padding:var(--e8) 0}
@@ -494,15 +495,15 @@ fieldset.question legend + *{clear:both}
   .nav a{background:var(--doux)}
   .nav::after{content:"";position:absolute;right:0;top:0;bottom:0;width:2rem;pointer-events:none;background:linear-gradient(90deg,transparent,var(--carte))}
 }
-@media (max-width:56rem){
-  .diapo{grid-template-columns:1fr;gap:var(--e6);padding:2.25rem 2rem}
-  .garanties,.exemple-simu{width:auto;max-width:28rem}
-  .une-couv{width:9.5rem;order:-1;transform:rotate(-2deg)}
+@media (max-width:64rem){
+  .hero-grille{grid-template-columns:minmax(0,1fr);gap:var(--e6);padding-top:var(--e7);padding-bottom:var(--e7)}
+  .hero-cartes{grid-template-columns:repeat(auto-fit,minmax(min(20rem,100%),1fr))}
+  .preuves ul,.parcours{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:42rem){
-  .une{padding-top:var(--e4)}
-  .diapo{padding:1.75rem 1.25rem;gap:var(--e5)}
   .nom-site .sous{font-size:.875rem}
+  .hero .actions .bouton{flex:1 1 100%}
+  .carte-net{font-size:2.375rem}
 }
 @media (max-width:36rem){
   body{font-size:1.125rem}
@@ -516,7 +517,7 @@ fieldset.question legend + *{clear:both}
   .en-clair,.retenir,.officiel,.breve{padding-left:1.15rem;padding-right:1.15rem}
   .numeros > li{grid-template-columns:1fr;gap:var(--e2)}
 }
-@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto !important;transition:none !important}.trois li:hover,.bouton:hover,.une-couv,.nom-site .marque,.questions li:hover,.wiki-liste li:hover,.essentiel-liens li:hover,.numeros > li:hover{transform:none !important}}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto !important;transition:none !important}.trois li:hover,.bouton:hover,.nom-site .marque,.questions li:hover,.wiki-liste li:hover,.essentiel-liens li:hover,.numeros > li:hover{transform:none !important}}
 @media print{.entete .nav,.pied,.barre,.actions{display:none}
   .trois li,.essentiel-liens li,.wiki-liste li,.questions li,.numeros > li,.en-clair,.retenir,.officiel,.breve,.cherche{box-shadow:none}}
 
@@ -552,9 +553,13 @@ body{font-size:1.125rem;line-height:1.6}
 .nav a{color:var(--sur-nuit);border-radius:0;padding:0 .75rem;border-bottom:4px solid transparent;min-height:48px}
 .nav a:hover{background:var(--nuit-2)}
 .nav a[aria-current="page"]{background:transparent;color:var(--sur-nuit);border-bottom-color:var(--jaune)}
-.menu-livre summary{border-radius:4px;border-color:var(--jaune);color:var(--jaune);min-height:44px}
-.menu-livre summary:hover,.menu-livre[open] summary{background:var(--nuit-2)}
-.menu-livre.actif summary{background:var(--jaune);border-color:var(--jaune);color:var(--nuit)}
+/* « Le livre » : bouton jaune plein en relief sur toutes les pages ; la page du livre en cours est marquée dans la liste */
+.menu-livre summary{border-radius:4px;border-color:var(--jaune);background:var(--jaune);color:var(--nuit);min-height:44px;
+  box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief);transition:transform .15s ease,box-shadow .15s ease}
+.menu-livre summary:hover{background:var(--jaune);transform:translate(-1px,-1px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief)}
+.menu-livre[open] summary,.menu-livre summary:active{background:var(--jaune);transform:translate(4px,4px);box-shadow:0 0 0 0 var(--relief)}
+.menu-livre a{min-height:44px}
+.menu-livre a[aria-current="page"]{box-shadow:inset 4px 0 0 0 var(--jaune)}
 .entete :focus-visible{outline-color:var(--jaune)}
 
 /* titres : condensés, serrés, forts */
@@ -593,18 +598,9 @@ h3{font-size:1.375rem;font-weight:600}
 .concretement,.note{border-radius:var(--rayon)}
 .cote-bloc h2{color:var(--encre);font-family:var(--cond);font-size:1.25rem}
 
-/* accueil : diapositives en panneaux */
-.diapo{border-radius:6px}
-.diapo-site{background:var(--nuit)}
-.diapo-site .surtitre,.diapo-livre .surtitre{color:var(--jaune);opacity:1}
-.diapo h1,.diapo h2{font-size:clamp(2.25rem,4.6vw,3.5rem);line-height:1.02}
-.garanties li::before{border-color:var(--jaune)}
-.diapo-simu{background:var(--doux);border:0}
-.exemple-simu{border:2px solid var(--encre);border-radius:6px}
-.exemple-net .resultat,.resultat-simu .resultat{font-family:var(--cond);font-weight:700;font-size:3.25rem;letter-spacing:0}
-.carrousel-choix button,.carrousel-pause{border-radius:4px}
-.carrousel-choix button span{border-radius:3px}
-.carrousel-choix button[aria-current="true"] span{background:var(--jaune);color:var(--nuit)}
+/* accueil : chiffre du simulateur en condensé (comme le résultat de la page du simulateur) */
+.hero h1{font-size:clamp(2.375rem,5vw,3.75rem);line-height:1.02}
+.resultat-simu .resultat{font-family:var(--cond);font-weight:700;font-size:3.25rem;letter-spacing:0}
 .tete-bloc{border-bottom:0;background:var(--nuit);color:var(--sur-nuit);padding:var(--e4) var(--e5);border-radius:4px;align-items:center}
 .tete-bloc h2,.tete-bloc .surtitre{color:var(--sur-nuit)}
 .tete-bloc .surtitre{color:var(--jaune)}
@@ -625,13 +621,17 @@ input[type=text],input[type=search],textarea,select,.contact input[type=email]{b
 .part-voiture{background:var(--jaune)}
 .part-social{background:var(--nuit)}
 
-/* pied */
+/* pied : liens en cibles de 44 px (la ligne garde son aspect, la zone cliquable est plus haute) */
+.pied ul{gap:0 var(--e5)}
+.pied ul a{display:inline-flex;align-items:center;min-height:44px}
+.pied .bouton.petit{min-height:44px}
 .pied-livre b{font-family:var(--cond);font-size:1.125rem}
 .pied-livre p{font-family:var(--sans)}
-@media (max-width:760px){
+@media (max-width:52rem){ /* même point de rupture que le menu qui défile (partie 7) */
   .nav a{background:var(--nuit-2)}
   .nav a[aria-current="page"]{background:var(--nuit-2)}
-  .nav::after{background:linear-gradient(90deg,transparent,var(--nuit))}
+  .nav::after{width:3.5rem;background:var(--chevron-nav) right .5rem center/1.1rem no-repeat,linear-gradient(90deg,transparent,var(--nuit) 65%);transition:opacity .15s}
+  .nav.au-bout::after{opacity:0}
 }
 
 
@@ -673,8 +673,14 @@ input[type=text],input[type=search],textarea,select,.contact input[type=email]{b
 .bouton:not(.bientot){box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief);transition:transform .15s ease,box-shadow .15s ease}
 .bouton:not(.bientot):hover{transform:translate(-1px,-1px) !important;box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief)}
 .bouton:not(.bientot):active{transform:translate(4px,4px) !important;box-shadow:0 0 0 0 var(--relief)}
-.diapo-site .bouton.clair,.diapo-site .bouton.contour,.diapo-livre .bouton{box-shadow:1px 1px 0 0 var(--jaune-ombre),2px 2px 0 0 var(--jaune-ombre),3px 3px 0 0 var(--jaune-ombre),4px 4px 0 0 var(--jaune-ombre)}
-.diapo-site .bouton.contour{box-shadow:1px 1px 0 0 var(--nuit-2),2px 2px 0 0 var(--nuit-2),3px 3px 0 0 var(--nuit-2),4px 4px 0 0 var(--nuit-2)}
+/* --- relief sur fond nuit : un relief bleu nuit y serait invisible ; le relief y est jaune foncé (--jaune-ombre),
+   sauf le bouton à contour, en --nuit-2 pour rester second. Mêmes mouvements qu'ailleurs. --- */
+.fond-nuit .bouton.clair,.carte-hero,.menu-livre summary{--relief:var(--jaune-ombre)}
+.fond-nuit .bouton.contour{--relief:var(--nuit-2)}
+.carte-hero{box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief);transition:transform .15s ease,box-shadow .15s ease}
+.carte-hero:hover,.carte-hero:focus-visible{transform:translate(-2px,-2px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief),7px 7px 0 0 var(--relief),8px 8px 0 0 var(--relief)}
+.carte-hero:active{transform:translate(6px,6px);box-shadow:0 0 0 0 var(--relief)}
+.carte-hero:hover .carte-lien{text-decoration-thickness:2px}
 
 /* --- simulateur : les choix sont des touches ; la touche choisie est enfoncée --- */
 .choix label{background:var(--carte);border:1.5px solid var(--relief) !important;border-radius:10px;box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief);transition:transform .12s ease,box-shadow .12s ease}
@@ -717,12 +723,10 @@ input[type=text],input[type=search],textarea,select,.contact input[type=email]{b
 .cote-bloc .voir-aussi li:hover,.cote-bloc .voir-aussi li:focus-within{transform:translate(-1px,-1px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief)}
 .cote-bloc .voir-aussi li:active{transform:translate(3px,3px);box-shadow:0 0 0 0 var(--relief)}
 .cote-bloc .voir-aussi{gap:var(--e2)}
-/* sommaire des thèmes (wiki) et carrousel de l'accueil : touches en relief ; la touche active est enfoncée */
-.sommaire a,.carrousel-choix button,.carrousel-pause{border:1.5px solid var(--relief) !important;background:var(--carte);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief);transition:transform .12s ease,box-shadow .12s ease}
-.sommaire a:hover,.carrousel-choix button:hover,.carrousel-pause:hover{transform:translate(-1px,-1px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief)}
-.sommaire a:active,.carrousel-pause:active,.carrousel-choix button[aria-current="true"]{transform:translate(3px,3px);box-shadow:0 0 0 0 var(--relief)}
-.carrousel-choix button[aria-current="true"]{background:var(--nuit);color:var(--sur-nuit)}
-.carrousel-pause{color:var(--encre)}
-@media (prefers-reduced-motion: reduce){.cote-bloc .voir-aussi li,.sommaire a,.carrousel-choix button,.carrousel-pause{transition:none}}
-@media print{.sommaire a,.carrousel-choix button,.carrousel-pause,.cote-bloc .voir-aussi li{box-shadow:none}}
+/* sommaire des thèmes (wiki) : touches en relief */
+.sommaire a{border:1.5px solid var(--relief) !important;background:var(--carte);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief);transition:transform .12s ease,box-shadow .12s ease}
+.sommaire a:hover{transform:translate(-1px,-1px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief)}
+.sommaire a:active{transform:translate(3px,3px);box-shadow:0 0 0 0 var(--relief)}
+@media (prefers-reduced-motion: reduce){.cote-bloc .voir-aussi li,.sommaire a,.carte-hero,.menu-livre summary{transition:none}}
+@media print{.sommaire a,.cote-bloc .voir-aussi li,.carte-hero{box-shadow:none}}
 .sommaire a:hover{color:var(--encre)}
