@@ -39,7 +39,7 @@
     <section class="une" aria-label="À la une">
       <div class="page large">
         <h1 class="visuellement-cache">Révision VTC : l’examen VTC, la réglementation et le métier de chauffeur VTC expliqués, sources à l’appui</h1>
-        <div class="carrousel" aria-roledescription="carrousel" aria-label="À la une : le site, le simulateur, le livre">
+        <div class="carrousel" role="region" aria-roledescription="carrousel" aria-label="À la une : le site, le simulateur, le livre">
           <div class="diapos" id="diapos">
             <div class="diapo diapo-site active" id="diapo-1" role="group" aria-roledescription="diapositive" aria-label="1 sur 3 : le site">
               <div class="diapo-texte">
@@ -109,11 +109,17 @@
           <div><p class="surtitre">Chaque lundi</p><h2 id="titre-dernier-rubrique" class="sans-filet">Le dernier numéro de l’Actualité VTC</h2></div>
           <a class="lien-fleche" href="actualite/index.html">Tous les numéros</a>
         </div>
-        <article class="une-actu">
-          <p class="meta">N° 3 · 28 octobre 2026</p>
-          <h3 id="titre-dernier"><a href="actualite/2026-10-28.html">Examen VTC 2027 : 11 dates publiées, aucun nouveau texte officiel</a></h3>
-          <ul class="points"><li>CMA France a publié le calendrier national 2027 des épreuves d’admissibilité de l’examen VTC : 11 sessions, toutes un mardi, du 26 janvier au 7 décembre 2027.</li><li>Chaque chambre de métiers régionale choisit ses sessions et fixe ses dates limites d’inscription : dans les Hauts-de-France, il faut s’inscrire avant le 18 décembre 2026 à 12 h pour l’épreuve du 26 janvier 2027.</li><li>Aucun nouveau texte sur les VTC n’a été repéré au Journal officiel du 27 au 28 octobre 2026 : les règles enseignées dans le livre restent applicables.</li></ul>
-        </article>
+        <div class="actu-une">
+          <article class="une-actu">
+            <p class="meta">N° 3 · 28 octobre 2026</p>
+            <h3 id="titre-dernier"><a href="actualite/2026-10-28.html">Examen VTC 2027 : 11 dates publiées, aucun nouveau texte officiel</a></h3>
+            <ul class="points"><li>CMA France a publié le calendrier national 2027 des épreuves d’admissibilité de l’examen VTC : 11 sessions, toutes un mardi, du 26 janvier au 7 décembre 2027.</li><li>Chaque chambre de métiers régionale choisit ses sessions et fixe ses dates limites d’inscription : dans les Hauts-de-France, il faut s’inscrire avant le 18 décembre 2026 à 12 h pour l’épreuve du 26 janvier 2027.</li><li>Aucun nouveau texte sur les VTC n’a été repéré au Journal officiel du 27 au 28 octobre 2026 : les règles enseignées dans le livre restent applicables.</li></ul>
+          </article>
+          <aside class="actu-precedents" aria-labelledby="titre-precedents">
+            <h3 id="titre-precedents">Numéros précédents</h3>
+            <ol><li><span class="meta">N° 2, 26 octobre 2026</span><a href="actualite/2026-10-26.html">Directive européenne plateformes : la France en retard, examen VTC inchangé</a></li><li><span class="meta">N° 1, 22 octobre 2026</span><a href="actualite/2026-10-22.html">Revenu horaire relevé jusqu’à fin novembre, précompte confirmé pour 2027</a></li></ol>
+          </aside>
+        </div>
       </div>
     </section>
     <section class="bloc bloc-blanc" aria-labelledby="titre-essentiel">

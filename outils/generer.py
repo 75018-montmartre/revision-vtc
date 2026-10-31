@@ -122,15 +122,25 @@ def accueil(nums, qs=()):
     if nums:
         n = nums[0]
         pts = "".join(f"<li>{ty(x)}</li>" for x in n["a_retenir"])
+        # numéros précédents (trois au plus), à droite du dernier numéro ; rien s'il n'y en a pas
+        prec = "".join(
+            f'<li><span class="meta">N° {p["numero"]}, {date_fr(p["date"])}</span>'
+            f'<a href="actualite/{p["date"]}.html">{ty(p["titre"])}</a></li>'
+            for p in nums[1:4])
+        precedents = ('\n          <aside class="actu-precedents" aria-labelledby="titre-precedents">'
+                      '\n            <h3 id="titre-precedents">Numéros précédents</h3>'
+                      f'\n            <ol>{prec}</ol>\n          </aside>') if prec else ""
         dernier = f'''
     <section class="bloc bloc-doux" aria-labelledby="titre-dernier">
       <div class="page large">
         {tete_bloc("titre-dernier-rubrique", "Chaque lundi", "Le dernier numéro de l'Actualité VTC", "actualite/index.html", "Tous les numéros")}
-        <article class="une-actu">
-          <p class="meta">N° {n["numero"]} · {date_fr(n["date"])}</p>
-          <h3 id="titre-dernier"><a href="actualite/{n["date"]}.html">{ty(n["titre"])}</a></h3>
-          <ul class="points">{pts}</ul>
-        </article>
+        <div class="actu-une">
+          <article class="une-actu">
+            <p class="meta">N° {n["numero"]} · {date_fr(n["date"])}</p>
+            <h3 id="titre-dernier"><a href="actualite/{n["date"]}.html">{ty(n["titre"])}</a></h3>
+            <ul class="points">{pts}</ul>
+          </article>{precedents}
+        </div>
       </div>
     </section>'''
     # exemple du simulateur (mêmes valeurs par défaut que la page du simulateur, base prudente)
@@ -141,7 +151,7 @@ def accueil(nums, qs=()):
     corps = f'''    <section class="une" aria-label="À la une">
       <div class="page large">
         <h1 class="visuellement-cache">{ty("Révision VTC : l'examen VTC, la réglementation et le métier de chauffeur VTC expliqués, sources à l'appui")}</h1>
-        <div class="carrousel" aria-roledescription="carrousel" aria-label="À la une : le site, le simulateur, le livre">
+        <div class="carrousel" role="region" aria-roledescription="carrousel" aria-label="À la une : le site, le simulateur, le livre">
           <div class="diapos" id="diapos">
             <div class="diapo diapo-site active" id="diapo-1" role="group" aria-roledescription="diapositive" aria-label="1 sur 3 : le site">
               <div class="diapo-texte">
@@ -708,7 +718,7 @@ def contact():
       <input type="hidden" name="access_key" value="{cle}">
       <input type="hidden" name="subject" value="Message depuis revision-vtc.fr">
       <input type="hidden" name="from_name" value="revision-vtc.fr">
-      <p class="piege" aria-hidden="true"><label>Ne pas remplir <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></p>
+      <p class="piege" aria-hidden="true"><label>Ne pas remplir <input type="checkbox" name="botcheck" tabindex="-1"></label></p>
       <p class="aide">Tous les champs sont obligatoires.</p>
       <div class="champs-2">
         <div class="champ"><label for="prenom">Prénom</label><input type="text" id="prenom" name="prenom" autocomplete="given-name" required maxlength="60" aria-describedby="err-prenom"><p class="erreur" id="err-prenom"></p></div>

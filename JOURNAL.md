@@ -6,6 +6,16 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 31 octobre 2026, 13 h 05 · Fond blanc et nouveau bloc Actualité sur l'accueil
+
+- Charte graphique : le fond crème et les encarts beiges passent au blanc et au gris neutre, sur tout le site (jetons de `docs/css/site.css` uniquement : `--fond`, `--doux`, `--filet`, `--gris`, couleurs posées sur fond foncé, et leurs équivalents du thème sombre, désormais gris anthracite neutre). Deux couleurs écrites en dur remplacées (pied de page, survol du bouton clair). Le rouge du livre ne change pas.
+- Accueil, bloc « Le dernier numéro de l'Actualité VTC » : plus de boîte à filet rouge collée à gauche ; le dernier numéro à gauche, les numéros précédents (trois au plus, mis à jour automatiquement chaque lundi) à droite ; une seule colonne sur tablette et téléphone. Page modifiée : https://revision-vtc.fr/
+- Validation W3C : trois erreurs anciennes corrigées. Formulaire de contact, attribut `autocomplete` retiré de la case anti-robots (https://revision-vtc.fr/contact.html) ; accueil, rôle `region` ajouté au carrousel ; feuille de style, propriété `mask` écrite en propriétés détaillées (rendu identique).
+- README, « Charte graphique » : mentions du beige remplacées, bloc Actualité documenté.
+- Vérifications sur les 105 pages : validateur W3C (Nu) sans erreur pour le HTML et la CSS ; aucune erreur d'accessibilité (axe) en clair et en sombre, à 320 et 1 366 px ; aucun débordement ; référencement inchangé (un seul `h1`, titre, description, adresse canonique, Open Graph, données structurées valides, aucun lien interne cassé). Adresses des pages inchangées.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Vendredi 30 octobre 2026, 22 h 35 · Nouvel outil : calcul de la note de l'examen VTC
 
 - Page publiée (validée par l'auteur) : https://revision-vtc.fr/simulateurs/calcul-note-examen-vtc.html
