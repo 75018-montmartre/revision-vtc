@@ -13,24 +13,37 @@
    ========================================================================== */
 
 /* 1. Jetons ---------------------------------------------------------------- */
+/* « Signalétique en relief » : bandeaux bleu nuit et jaune signal, comme l'information routière ;
+   tout ce qui se clique a une épaisseur bleu nuit (le « relief »), le reste est à plat. */
 :root{
   /* couleurs */
   --fond:#FFFFFF;      /* fond général, blanc */
   --carte:#FFFFFF;     /* cartes et bandes blanches */
-  --doux:#F3F4F5;      /* encarts et bandes, gris très clair */
-  --encre:#1A1917;     /* texte principal */
-  --gris:#55595F;      /* texte secondaire (contraste AA) */
-  --filet:#E1E3E6;     /* bordures */
-  --rouge:#C9361B;     /* couleur du livre : bandeau, marque */
-  --accent:#A52C15;    /* liens et surtitres (contraste AA sur fond clair) */
-  --accent-trait:#C9361B;
+  --doux:#EEF1F4;      /* bandes claires (quadrillées) et encarts */
+  --encre:#11161E;     /* texte principal */
+  --gris:#4E5663;      /* texte secondaire (contraste AA) */
+  --filet:#CDD3DB;     /* bordures */
+  --nuit:#18212F;      /* bleu nuit : en-tête du site, bandeaux, relief, pastilles */
+  --nuit-2:#243042;    /* bleu nuit clair : survol sur fond nuit, encarts dans un bandeau */
+  --jaune:#F5B820;     /* jaune signal : numéros d'article, étapes, choix actif, soulignement du menu */
+  --jaune-ombre:#B98500; /* relief des boutons jaunes */
+  --sur-nuit:#FFFFFF; --sur-nuit-doux:#C9D1DC;
+  --rouge:#C9361B;     /* couleur du livre : marque du site seulement */
+  --accent:#1B4F9C;    /* liens (contraste AA) */
+  --accent-trait:#11161E;
   --ok:#1F6B34; --ok-fond:#E9F3EA; --ko:#A52C15; --ko-fond:#FBECE8;
   --focus:#1F4FCC;
-  /* surfaces foncées (pied de page, diapositives foncées de l'accueil), identiques en clair et en sombre sauf le fond */
-  --fonce:#1A1917; --sur-fonce:#FFFFFF; --sur-fonce-doux:#E3E5E8; --sur-fonce-gris:#A6AAB0; --sur-fonce-filet:rgba(255,255,255,.2);
+  /* surfaces foncées (pied de page, diapositives), identiques en clair et en sombre sauf le fond */
+  --fonce:#18212F; --sur-fonce:#FFFFFF; --sur-fonce-doux:#C9D1DC; --sur-fonce-gris:#9AA5B4; --sur-fonce-filet:rgba(255,255,255,.18);
+  /* relief et quadrillage */
+  --relief:var(--nuit);                  /* épaisseur des éléments cliquables */
+  --quadrille:rgba(24,33,47,.12);        /* lignes du fond quadrillé (plan de ville) */
+  --pastille:var(--nuit);                /* pastille ronde fléchée des cartes */
+  --pastille-fleche:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F5B820' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E");
   /* typographie */
-  --sans:"Inter","Helvetica Neue",Arial,sans-serif;          /* titres, interface */
-  --serif:"EB Garamond",Georgia,"Times New Roman",serif;     /* texte de lecture */
+  --sans:"Barlow",Arial,sans-serif;                          /* interface et texte de lecture */
+  --serif:"Barlow",Arial,sans-serif;                         /* texte de lecture (même famille) */
+  --cond:"Barlow Condensed","Arial Narrow",sans-serif;       /* titres */
   /* largeurs */
   --large:74rem;       /* conteneur : en-tête, pied, blocs */
   --lecture:46rem;     /* colonne de lecture */
@@ -38,23 +51,26 @@
   /* espacements */
   --e1:.25rem; --e2:.5rem; --e3:.75rem; --e4:1rem; --e5:1.5rem; --e6:2rem; --e7:3rem; --e8:4.5rem;
   /* formes */
-  --rayon:8px; --rayon-p:6px; --pilule:999px;
-  --ombre-h:0 2px 4px rgba(26,25,23,.06),0 14px 30px -14px rgba(26,25,23,.28); /* menu déroulant seulement : pas d’ombre sur les cartes */
+  --rayon:4px; --rayon-p:3px; --rayon-carte:12px; --rayon-lien:10px; --pilule:999px;
+  --ombre-h:0 2px 4px rgba(17,22,30,.06),0 14px 30px -14px rgba(17,22,30,.28); /* menu déroulant seulement */
 }
 @media (prefers-color-scheme: dark){
-  :root{--fond:#141516;--carte:#1D1E20;--doux:#232528;--encre:#E8E9EB;--gris:#AEB2B8;--filet:#36393D;--rouge:#A52C15;
-        --accent:#F08C74;--accent-trait:#E0573A;--ok:#8FD39C;--ok-fond:#1C2A1F;--ko:#F49A86;--ko-fond:#2E1D19;--focus:#8DB0FF;
+  :root{--fond:#0F141C;--carte:#151C27;--doux:#1C2532;--encre:#E9EDF2;--gris:#AAB3C0;--filet:#2E3A4B;--rouge:#A52C15;
+        --nuit:#0A0E14;--nuit-2:#151C27;
+        --accent:#8DB4F2;--accent-trait:#E9EDF2;--ok:#8FD39C;--ok-fond:#1C2A1F;--ko:#F49A86;--ko-fond:#2E1D19;--focus:#8DB0FF;
         --ombre-h:0 10px 26px -12px rgba(0,0,0,.7);
-        --fonce:#0D0E0F}
+        --fonce:#0A0E14;
+        --relief:#3A4A63;--quadrille:rgba(201,209,220,.07);--pastille:var(--jaune);
+        --pastille-fleche:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2318212F' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E")}
 }
 
 /* 2. Base ------------------------------------------------------------------ */
-@font-face{font-family:"Inter";src:url("../fonts/inter-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"Inter";src:url("../fonts/inter-latin-600-normal.woff2") format("woff2");font-weight:600;font-display:swap}
-@font-face{font-family:"Inter";src:url("../fonts/inter-latin-700-normal.woff2") format("woff2");font-weight:700;font-display:swap}
-@font-face{font-family:"EB Garamond";src:url("../fonts/eb-garamond-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"EB Garamond";src:url("../fonts/eb-garamond-latin-400-italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
-@font-face{font-family:"EB Garamond";src:url("../fonts/eb-garamond-latin-500-normal.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Barlow";src:url("../fonts/barlow-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Barlow";src:url("../fonts/barlow-latin-500-normal.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Barlow";src:url("../fonts/barlow-latin-600-normal.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Barlow";src:url("../fonts/barlow-latin-700-normal.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Barlow Condensed";src:url("../fonts/barlow-condensed-latin-600-normal.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Barlow Condensed";src:url("../fonts/barlow-condensed-latin-700-normal.woff2") format("woff2");font-weight:700;font-display:swap}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:1rem}
 body{margin:0;background:var(--fond);color:var(--encre);font-family:var(--serif);font-size:1.1875rem;line-height:1.68}
@@ -520,3 +536,193 @@ fieldset.question legend + *{clear:both}
 #etat:focus{outline:none}
 button.bouton:disabled{opacity:.6;cursor:wait;transform:none}
 .contact input[aria-invalid="true"],.contact textarea[aria-invalid="true"]{border-color:var(--ko);border-width:2px}
+
+/* 8. Habillage « signalétique en relief » ------------------------------------
+   Dernière couche : elle précise les composants ci-dessus (titres condensés, bandeaux nuit,
+   relief des éléments cliquables). À garder en fin de fichier. */
+
+body{font-size:1.125rem;line-height:1.6}
+
+/* en-tête : bandeau nuit, comme un panneau de quai */
+.entete{background:var(--nuit);border-bottom:0}
+.nom-site{color:var(--sur-nuit);font-family:var(--cond);font-weight:700;font-size:1.625rem;letter-spacing:0}
+.nom-site .marque{border-radius:4px;font-family:var(--cond);font-size:1.75rem}
+.nom-site .sous{color:var(--sur-nuit-doux);font-family:var(--sans);font-style:normal;font-size:.875rem}
+.nav ul{font-size:1rem;font-weight:500}
+.nav a{color:var(--sur-nuit);border-radius:0;padding:0 .75rem;border-bottom:4px solid transparent;min-height:48px}
+.nav a:hover{background:var(--nuit-2)}
+.nav a[aria-current="page"]{background:transparent;color:var(--sur-nuit);border-bottom-color:var(--jaune)}
+.menu-livre summary{border-radius:4px;border-color:var(--jaune);color:var(--jaune);min-height:44px}
+.menu-livre summary:hover,.menu-livre[open] summary{background:var(--nuit-2)}
+.menu-livre.actif summary{background:var(--jaune);border-color:var(--jaune);color:var(--nuit)}
+.entete :focus-visible{outline-color:var(--jaune)}
+
+/* titres : condensés, serrés, forts */
+h1,h2,h3{font-family:var(--cond);letter-spacing:0;line-height:1.08}
+h1{font-size:clamp(2.25rem,5.2vw,3.5rem);font-weight:700}
+h2{font-size:clamp(1.625rem,3vw,2rem);font-weight:700}
+h3{font-size:1.375rem;font-weight:600}
+.corps-page > h2::before,.col-texte > h2::before,.corps-page section:not(.cote-bloc) > h2::before{width:1rem;height:1rem;border-radius:2px;background:var(--jaune);display:inline-block;margin:0 .6rem 0 0;vertical-align:.05em}
+.surtitre{font-weight:600;color:var(--gris);font-size:1rem}
+.chapeau{font-size:1.25rem}
+
+/* en-tête de page : bande claire, code d'article en pastille jaune */
+.tete-page{background:var(--doux);border-bottom:0;padding:var(--e7) 0 var(--e6)}
+.fil a{color:var(--gris)}
+.num-art{display:inline-flex !important;align-items:center;background:var(--jaune);color:var(--nuit) !important;font-family:var(--cond);font-weight:700;font-size:1.125rem !important;letter-spacing:.01em !important;padding:.1rem .6rem;border-radius:3px;margin-bottom:var(--e3)}
+.wiki-liste .num-art{font-size:.9375rem !important;margin-bottom:.35rem}
+
+/* boutons : jaune signal (principal), contour nuit (second) */
+.bouton{border-radius:4px;background:var(--nuit);border-color:var(--nuit);color:#fff;font-weight:600;min-height:48px}
+.bouton:hover{background:var(--nuit-2);color:#fff;transform:none !important}
+.bouton.second{background:transparent;color:var(--encre);border-color:var(--encre)}
+.bouton.second:hover{background:var(--doux)}
+.bouton.clair{background:var(--jaune);border-color:var(--jaune);color:var(--nuit)}
+.bouton.clair:hover{background:#FFCB45;color:var(--nuit)}
+.bouton.contour{border-color:var(--sur-nuit);color:var(--sur-nuit)}
+
+/* cartes : panneaux à bord net */
+.trois li,.essentiel-liens li,.wiki-liste li,.questions li,.numeros > li,.officiel,.cote-bloc{border:2px solid var(--filet);border-radius:var(--rayon)}
+.trois li:hover,.essentiel-liens li:hover,.wiki-liste li:hover,.questions li:hover{border-color:var(--encre)}
+.trois li:hover h3 a,.essentiel-liens li:hover a,.wiki-liste li:hover a,.questions li:hover a{color:var(--encre)}
+.questions a{font-family:var(--cond);font-size:1.375rem;font-weight:700;line-height:1.15}
+.en-clair{border:0;border-radius:var(--rayon);background:var(--nuit);color:var(--sur-nuit);padding:var(--e2) var(--e6) var(--e6)}
+.en-clair h2{color:var(--jaune);font-size:1.25rem}
+.en-clair .concretement{background:var(--nuit-2);color:var(--sur-nuit)}
+.en-clair a{color:#FFD766}
+.concretement,.note{border-radius:var(--rayon)}
+.cote-bloc h2{color:var(--encre);font-family:var(--cond);font-size:1.25rem}
+
+/* accueil : diapositives en panneaux */
+.diapo{border-radius:6px}
+.diapo-site{background:var(--nuit)}
+.diapo-site .surtitre,.diapo-livre .surtitre{color:var(--jaune);opacity:1}
+.diapo h1,.diapo h2{font-size:clamp(2.25rem,4.6vw,3.5rem);line-height:1.02}
+.garanties li::before{border-color:var(--jaune)}
+.diapo-simu{background:var(--doux);border:0}
+.exemple-simu{border:2px solid var(--encre);border-radius:6px}
+.exemple-net .resultat,.resultat-simu .resultat{font-family:var(--cond);font-weight:700;font-size:3.25rem;letter-spacing:0}
+.carrousel-choix button,.carrousel-pause{border-radius:4px}
+.carrousel-choix button span{border-radius:3px}
+.carrousel-choix button[aria-current="true"] span{background:var(--jaune);color:var(--nuit)}
+.tete-bloc{border-bottom:0;background:var(--nuit);color:var(--sur-nuit);padding:var(--e4) var(--e5);border-radius:4px;align-items:center}
+.tete-bloc h2,.tete-bloc .surtitre{color:var(--sur-nuit)}
+.tete-bloc .surtitre{color:var(--jaune)}
+.tete-bloc .lien-fleche{color:var(--sur-nuit);border-bottom-color:var(--jaune)}
+.tete-bloc .tete-intro{color:var(--sur-nuit-doux)}
+.bloc-doux{background:var(--doux)}
+.une-actu h3,.actu-precedents a{font-family:var(--cond)}
+.une-actu h3{font-size:clamp(1.75rem,3vw,2.25rem)}
+.actu-precedents a{font-size:1.25rem;font-weight:600}
+
+/* simulateur : étapes comme des numéros de quai */
+.etapes > li::before{border-radius:4px;background:var(--jaune);color:var(--nuit);font-family:var(--cond);font-size:1.25rem}
+.bloc-simu{border-top:4px solid var(--encre)}
+.bloc-simu > legend{font-family:var(--cond);font-size:1.625rem}
+input[type=text],input[type=search],textarea,select,.contact input[type=email]{border:2px solid var(--encre);border-radius:4px;background:var(--carte)}
+.choix label,.choix .rep{font-family:var(--sans);border:2px solid var(--filet);border-radius:4px}
+.choix label:has(input:checked){border-color:var(--encre);background:var(--doux)}
+.part-voiture{background:var(--jaune)}
+.part-social{background:var(--nuit)}
+
+/* pied */
+.pied-livre b{font-family:var(--cond);font-size:1.125rem}
+.pied-livre p{font-family:var(--sans)}
+@media (max-width:760px){
+  .nav a{background:var(--nuit-2)}
+  .nav a[aria-current="page"]{background:var(--nuit-2)}
+  .nav::after{background:linear-gradient(90deg,transparent,var(--nuit))}
+}
+
+
+.bloc-doux,.tete-page{background-color:var(--doux);background-image:linear-gradient(var(--quadrille) 1px,transparent 1px),linear-gradient(90deg,var(--quadrille) 1px,transparent 1px);background-size:56px 56px;background-position:-1px -1px}
+
+/* --- cartes cliquables, grandes --- */
+.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li{position:relative;background:var(--carte);border:1.5px solid var(--relief);border-radius:12px;box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief),7px 7px 0 0 var(--relief);transition:transform .18s ease,box-shadow .18s ease}
+.trois li{padding:var(--e5) var(--e5) 5rem}
+.questions li{padding:var(--e5) var(--e5) 5rem}
+.une-actu{padding:var(--e5) var(--e5) 5rem}
+.actu-precedents li{padding:var(--e4) 5rem var(--e4) var(--e4);flex:1}
+.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li{--hover:0}
+.trois li::after,.questions li::after,.numeros > li::after,.une-actu::after,.actu-precedents li::after{content:"";position:absolute;right:var(--e4);bottom:var(--e4);width:2.75rem;height:2.75rem;border-radius:50%;background:var(--pastille) var(--pastille-fleche) center/1.4rem no-repeat;pointer-events:none;transition:background-position .2s}
+/* --- liens en liste, petites cartes --- */
+.essentiel-liens li,.wiki-liste li,.voir-aussi li{position:relative;background:var(--carte);border:1.5px solid var(--relief);border-radius:10px;box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief);transition:transform .15s ease,box-shadow .15s ease}
+.essentiel-liens li,.wiki-liste li{padding:.85rem 3.5rem .85rem 1.15rem}
+.essentiel-liens li::after,.wiki-liste li::after,.voir-aussi li::after{content:"";position:absolute;right:.75rem;top:50%;margin-top:-1rem;width:2rem;height:2rem;border-radius:50%;background:var(--pastille) var(--pastille-fleche) center/1.05rem no-repeat;pointer-events:none}
+.cote-bloc .voir-aussi{list-style:none;padding:0;margin:0;display:grid;gap:var(--e3)}
+.cote-bloc .voir-aussi li{border-top:1.5px solid var(--relief);padding:.7rem 3.25rem .7rem .9rem;margin:0;font-size:1rem;line-height:1.35}
+.cote-bloc .voir-aussi a::before{content:"";position:absolute;inset:0;border-radius:10px}
+.cote-bloc .voir-aussi a:hover{text-decoration:none;color:var(--encre)}
+/* lien étendu à toute la carte (accueil : actualité) */
+.une-actu h3 a::before,.actu-precedents a::before{content:"";position:absolute;inset:0;border-radius:12px;z-index:1}
+.une-actu h3 a:hover,.actu-precedents a:hover{text-decoration:none;color:var(--encre)}
+/* survol : la carte se soulève, la flèche file */
+:is(.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li):hover,:is(.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li):focus-within{transform:translate(-3px,-3px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief),7px 7px 0 0 var(--relief),8px 8px 0 0 var(--relief),9px 9px 0 0 var(--relief),10px 10px 0 0 var(--relief);border-color:var(--relief)}
+:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover,:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li):focus-within{transform:translate(-2px,-2px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief);border-color:var(--relief)}
+:is(.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover a{color:var(--encre)}
+:is(.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover::after{animation:fleche .45s cubic-bezier(.77,0,.175,1)}
+@keyframes fleche{0%{background-position:center}45%{background-position:200% center}46%{background-position:-100% center}100%{background-position:center}}
+/* clic : la carte s'enfonce */
+:is(.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li):active{transform:translate(7px,7px);box-shadow:0 0 0 0 var(--relief)}
+:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li):active{transform:translate(4px,4px);box-shadow:0 0 0 0 var(--relief)}
+/* clavier : contour jaune autour de la carte entière */
+:is(.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li) a:focus-visible{outline:none}
+:is(.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):focus-within{outline:3px solid var(--focus);outline-offset:4px}
+
+/* --- boutons : même relief, en plus fin --- */
+.bouton:not(.bientot){box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief);transition:transform .15s ease,box-shadow .15s ease}
+.bouton:not(.bientot):hover{transform:translate(-1px,-1px) !important;box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief)}
+.bouton:not(.bientot):active{transform:translate(4px,4px) !important;box-shadow:0 0 0 0 var(--relief)}
+.diapo-site .bouton.clair,.diapo-site .bouton.contour,.diapo-livre .bouton{box-shadow:1px 1px 0 0 var(--jaune-ombre),2px 2px 0 0 var(--jaune-ombre),3px 3px 0 0 var(--jaune-ombre),4px 4px 0 0 var(--jaune-ombre)}
+.diapo-site .bouton.contour{box-shadow:1px 1px 0 0 var(--nuit-2),2px 2px 0 0 var(--nuit-2),3px 3px 0 0 var(--nuit-2),4px 4px 0 0 var(--nuit-2)}
+
+/* --- simulateur : les choix sont des touches ; la touche choisie est enfoncée --- */
+.choix label{background:var(--carte);border:1.5px solid var(--relief) !important;border-radius:10px;box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief);transition:transform .12s ease,box-shadow .12s ease}
+.choix label:hover{transform:translate(-1px,-1px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief)}
+.choix label:has(input:checked){transform:translate(4px,4px);box-shadow:0 0 0 0 var(--relief);background:var(--jaune);color:var(--nuit);border-color:var(--nuit) !important}
+.choix label:has(input:focus-visible){outline:3px solid var(--focus);outline-offset:3px}
+@media (prefers-color-scheme: dark){.choix label:has(input:checked){color:#18212F}}
+
+/* --- accueil : en-tête de rubrique posé sur le quadrillage --- */
+.tete-bloc{background:transparent;color:var(--encre);padding:0 0 var(--e3);border-radius:0;border-bottom:3px solid var(--encre)}
+.tete-bloc h2{color:var(--encre);font-size:clamp(1.75rem,3.4vw,2.5rem)}
+.tete-bloc .surtitre{color:var(--gris)}
+:is(.tete-bloc) .lien-fleche{color:var(--encre) !important;border:1.5px solid var(--relief) !important;border-radius:999px;padding:.55rem 1.1rem !important;background:var(--carte);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief);transition:transform .15s,box-shadow .15s}
+.tete-bloc .lien-fleche:hover{transform:translate(-1px,-1px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief)}
+.tete-bloc .lien-fleche:active{transform:translate(3px,3px);box-shadow:none}
+.actu-une{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:var(--e6);align-items:stretch}
+.actu-precedents{display:flex;flex-direction:column}
+.actu-precedents h3{font-family:var(--cond);font-size:1.25rem;margin:0 0 var(--e3)}
+.actu-precedents ol{display:flex;flex-direction:column;gap:var(--e5);flex:1}
+.trois,.questions{gap:var(--e6)}
+.essentiel-liens{gap:var(--e4) var(--e5)}
+
+@media (prefers-reduced-motion: reduce){
+  :is(.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li,.bouton,.choix label,.tete-bloc .lien-fleche){transition:none}
+  :is(.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover::after{animation:none}
+}
+@media (max-width:64rem){.actu-une{grid-template-columns:minmax(0,1fr)}}
+@media print{:is(.trois li,.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li,.bouton,.choix label){box-shadow:none !important}.bloc-doux,.tete-page{background-image:none}}
+.tete-bloc .tete-intro{color:var(--gris)}
+/* numéros de l'Actualité VTC : pastille jaune comme les étapes */
+.numeros .numero{display:flex;align-items:center;justify-content:center;width:3rem;height:3rem;border-radius:var(--rayon);background:var(--jaune);color:var(--nuit);font-family:var(--cond);font-size:1.75rem}
+.numeros > li{padding:var(--e5) var(--e5) 4.75rem}
+/* « À retenir » : bande jaune sur fond clair (« En clair » reste le bandeau nuit) */
+.retenir{border:0;border-left:6px solid var(--jaune);background:var(--doux);border-radius:var(--rayon)}
+.retenir h2{font-family:var(--cond);font-size:1.25rem}
+
+/* encadré latéral (sommaire, voir aussi, autres questions) : relief fin, sans pastille, pour rester léger */
+.cote-bloc .voir-aussi li{padding:.55rem .8rem;box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief);font-size:.9375rem}
+.cote-bloc .voir-aussi li::after{display:none}
+.cote-bloc .voir-aussi li:hover,.cote-bloc .voir-aussi li:focus-within{transform:translate(-1px,-1px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief)}
+.cote-bloc .voir-aussi li:active{transform:translate(3px,3px);box-shadow:0 0 0 0 var(--relief)}
+.cote-bloc .voir-aussi{gap:var(--e2)}
+/* sommaire des thèmes (wiki) et carrousel de l'accueil : touches en relief ; la touche active est enfoncée */
+.sommaire a,.carrousel-choix button,.carrousel-pause{border:1.5px solid var(--relief) !important;background:var(--carte);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief);transition:transform .12s ease,box-shadow .12s ease}
+.sommaire a:hover,.carrousel-choix button:hover,.carrousel-pause:hover{transform:translate(-1px,-1px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief)}
+.sommaire a:active,.carrousel-pause:active,.carrousel-choix button[aria-current="true"]{transform:translate(3px,3px);box-shadow:0 0 0 0 var(--relief)}
+.carrousel-choix button[aria-current="true"]{background:var(--nuit);color:var(--sur-nuit)}
+.carrousel-pause{color:var(--encre)}
+@media (prefers-reduced-motion: reduce){.cote-bloc .voir-aussi li,.sommaire a,.carrousel-choix button,.carrousel-pause{transition:none}}
+@media print{.sommaire a,.carrousel-choix button,.carrousel-pause,.cote-bloc .voir-aussi li{box-shadow:none}}
+.sommaire a:hover{color:var(--encre)}

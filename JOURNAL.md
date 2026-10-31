@@ -6,6 +6,19 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 31 octobre 2026, 23 h 30 · Nouvelle charte graphique « signalétique en relief »
+
+- Tout le site (toutes les pages) : nouvelle apparence choisie par l'auteur parmi trois prototypes, avec la rubrique Actualités du LaboINSPIRE comme inspiration pour le relief.
+  - en-tête du site en bandeau bleu nuit, rubrique en cours soulignée en jaune ; titres en Barlow Condensed, texte en Barlow (polices hébergées sur le site ; Inter et EB Garamond retirées) ;
+  - fond quadrillé (plan de ville) dans l'en-tête des pages et les bandes claires de l'accueil ;
+  - tout ce qui se clique a un relief bleu nuit, se soulève au survol et s'enfonce au clic : cartes de l'accueil, Actualité VTC, Questions VTC, articles, listes d'articles du wiki, « Voir aussi », sommaire, boutons, choix du simulateur (la touche choisie est enfoncée et jaune) ; ce qui ne se clique pas reste à plat ;
+  - numéros d'article, étapes et numéros de l'Actualité en pastilles jaunes ; « En clair » en bandeau nuit ; « À retenir » sur fond clair avec bande jaune.
+- Contenu, adresses, balises de référencement et données structurées inchangés : seules la feuille de style, les polices et le préchargement des polices changent.
+- README : section « Charte graphique » réécrite.
+- Vérifications sur les 108 pages : W3C (Nu) sans erreur, HTML et CSS ; axe sans erreur en clair et en sombre, à 320 et 1 366 px ; aucun débordement ; titres, descriptions, canoniques et liens internes en ordre ; animations coupées si l'appareil demande moins de mouvement ; contour de focus contrasté sur les cartes.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 31 octobre 2026, 20 h 50 · Formulaire de signalement : champs alignés
 
 - https://revision-vtc.fr/le-livre.html : l'exemple « A3.4, page 65 » passe sous le champ « Fiche ou page », qui s'aligne sur la liste « Type de signalement » ; les listes déroulantes du site ont la même hauteur que les champs de saisie (44 px).

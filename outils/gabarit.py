@@ -81,8 +81,8 @@ def page(titre, corps, actif=None, racine="", description="", noindex=False, scr
 <link rel="icon" href="{racine}favicon.ico" sizes="48x48">
 <link rel="icon" href="{racine}favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{racine}apple-touch-icon.png">
-<link rel="preload" href="{racine}fonts/eb-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{racine}fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{racine}fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{racine}fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="alternate" type="application/rss+xml" title="Actualité VTC · revision-vtc.fr" href="{racine}actualite/flux.xml">
 {scripts_tete}</head>
 <body>
