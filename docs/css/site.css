@@ -350,14 +350,22 @@ main:has(.hero){padding-bottom:0}
 /* bande des preuves : à plat, coche jaune */
 .preuves{background:var(--carte);border-bottom:1px solid var(--filet)}
 .preuves ul{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--e4) var(--e6);padding-top:var(--e5);padding-bottom:var(--e5);margin:0 auto;font-family:var(--sans);font-size:1rem;line-height:1.45}
-.preuves li{position:relative;margin:0;padding-left:2rem}
-.preuves li::before{content:"";position:absolute;left:.3rem;top:.15rem;width:.55rem;height:.95rem;border:solid var(--jaune-ombre);border-width:0 3px 3px 0;transform:rotate(45deg)}
+.preuves li,.liste-coches li{position:relative;margin:0;padding-left:2rem}
+.preuves li::before,.liste-coches li::before{content:"";position:absolute;left:.3rem;top:.15rem;width:.55rem;height:.95rem;border:solid var(--jaune-ombre);border-width:0 3px 3px 0;transform:rotate(45deg)}
 /* « Par où commencer ? » : panneaux à plat ; les liens qu'ils contiennent sont des petites cartes-liens en relief */
 .parcours{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--e6)}
 .parcours > li{margin:0;padding:var(--e5);background:var(--carte);border:1px solid var(--filet);border-radius:var(--rayon)}
 .parcours h3{margin:0 0 var(--e1)}
 .parcours > li > p{margin:0 0 var(--e4);color:var(--gris);font-size:1.0625rem}
 .parcours .essentiel-liens{grid-template-columns:minmax(0,1fr);gap:var(--e3)}
+/* page du livre : présentation en tête (couverture, chiffres du livre, achat), à plat sauf les boutons */
+.presentation-livre{display:grid;grid-template-columns:11rem minmax(0,1fr);gap:var(--e6);align-items:start;margin:0 0 var(--e7);padding:var(--e5);background:var(--doux);border-radius:var(--rayon)}
+.presentation-livre img{display:block;width:100%;height:auto;border-radius:3px}
+.corps-page .presentation-livre h2{margin:0 0 var(--e3)}
+.presentation-livre p{margin:0 0 var(--e3)}
+.liste-coches{list-style:none;margin:0 0 var(--e4);padding:0;font-family:var(--sans);font-size:1.0625rem;line-height:1.45;display:grid;gap:var(--e2)}
+.presentation-livre .actions{margin:var(--e4) 0 0}
+@media (max-width:36rem){.presentation-livre{grid-template-columns:minmax(0,1fr)}.presentation-livre img{width:9rem}}
 /* accueil, quatre dernières Questions VTC : 2 × 2 (jamais de tuile orpheline), une colonne sur téléphone */
 .questions-grille{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (max-width:52rem){.questions-grille{grid-template-columns:minmax(0,1fr)}}
@@ -460,6 +468,22 @@ fieldset.question legend + *{clear:both}
 .resultat-simu caption{font-size:.875rem}
 .resultat-simu td,.resultat-simu th{padding:.4rem .25rem;font-weight:400}
 .resultat-simu td.nombre{white-space:nowrap}
+/* barre de résultat collante : téléphone et tablette seulement (sur grand écran le résultat est à côté du formulaire).
+   Bandeau nuit avec filet jaune, lisible dans les deux thèmes ; cachée (et hors du parcours au clavier) quand un champ
+   a le focus, quand le clavier est ouvert ou quand le résultat est visible (docs/js/simulateur.js). */
+.barre-resultat{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--e2) var(--e4);
+  padding:.6rem var(--e5) calc(.6rem + env(safe-area-inset-bottom));background:var(--nuit);color:var(--sur-nuit);border-top:3px solid var(--jaune);font-family:var(--sans);
+  transition:transform .2s ease}
+.barre-resultat p{margin:0;line-height:1.2}
+.barre-resultat b{font-family:var(--cond);font-weight:700;font-size:1.75rem;color:var(--sur-nuit);white-space:nowrap}
+.barre-resultat .barre-legende{font-size:.9375rem;color:var(--sur-nuit-doux)}
+.barre-resultat .bouton{--relief:var(--jaune-ombre)}
+.barre-resultat :focus-visible{outline-color:var(--jaune)}
+.barre-resultat.cachee{transform:translateY(110%);visibility:hidden;transition:transform .2s ease,visibility 0s linear .2s}
+.barre-resultat[hidden]{display:none}
+html.avec-barre{scroll-padding-bottom:6rem}
+html.avec-barre body{padding-bottom:5.5rem}
+@media (min-width:64.0625rem){.barre-resultat{display:none}}
 /* sur grand écran le résultat est à côté du formulaire : le lien « Aller au résultat » ne sert qu'au téléphone et à la tablette */
 @media (min-width:64.0625rem){.lien-resultat{display:none}}
 .resultat-simu tr.sous-total > *,.resultat-simu tr.total > *{font-weight:700}

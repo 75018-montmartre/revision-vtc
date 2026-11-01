@@ -118,6 +118,7 @@
     var r = calculer(e, D), mois = function (x) { return euro.format(x / 12); };
 
     $('res-net').textContent = euro.format(r.netMois);
+    $('barre-res-net').textContent = euro.format(r.netMois);
     $('res-net-an').textContent = euro.format(r.net) + ' par an, avant impôt sur le revenu' + (e.vl ? ' (versement libératoire déduit)' : '');
     var corps = $('res-detail'); corps.textContent = '';
     if (e.base !== 'verse') ligne(corps, 'Prix payé par les clients', mois(r.prixClients));
@@ -207,4 +208,33 @@
   $('resultat').hidden = false;
   $('simu-sans-js').hidden = true;
   calculerEtAfficher(false);
+
+  /* ---------- barre de résultat collante (téléphone et tablette, quand le résultat est sous le formulaire) ----------
+     Elle ne masque jamais un champ ni le clavier : elle s'efface dès qu'un champ du formulaire a le focus,
+     quand le clavier du téléphone réduit l'écran, et quand le résultat complet est déjà visible.
+     Elle glisse depuis le bas, sauf si l'appareil demande moins d'animations (CSS). */
+  var barre = $('barre-resultat'), petit = window.matchMedia('(max-width: 64rem)');
+  var resultatVu = false;
+  function clavierOuvert() {
+    var vv = window.visualViewport;
+    return !!vv && vv.height < window.innerHeight - 120;
+  }
+  function majBarre() {
+    var champ = document.activeElement && form.contains(document.activeElement) && document.activeElement.matches('input, select, textarea');
+    var montrer = petit.matches && !champ && !clavierOuvert() && !resultatVu;
+    barre.classList.toggle('cachee', !montrer);
+    document.documentElement.classList.toggle('avec-barre', montrer);
+  }
+  if (barre) {
+    barre.hidden = false;
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) { resultatVu = es[0].isIntersecting; majBarre(); }).observe($('resultat'));
+    }
+    form.addEventListener('focusin', majBarre);
+    form.addEventListener('focusout', function () { setTimeout(majBarre, 0); });
+    if (window.visualViewport) window.visualViewport.addEventListener('resize', majBarre);
+    if (petit.addEventListener) petit.addEventListener('change', majBarre);
+    barre.querySelector('a').addEventListener('click', function (ev) { ev.preventDefault(); $('resultat').scrollIntoView(); $('resultat').focus({ preventScroll: true }); });
+    majBarre();
+  }
 })(typeof window !== 'undefined' ? window : globalThis);

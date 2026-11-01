@@ -395,6 +395,22 @@ def livre_vivant():
     <h1>Un livre tenu à jour après son impression</h1>
     <p class="chapeau">{ty("Les règles de l'examen VTC et du métier changent : décrets, arrêtés, cotisations, plateformes. Machine à Réussite – Examen VTC 2027 ne s'arrête pas à la date d'impression. Chaque règle repose sur un texte officiel, chaque règle est revérifiée régulièrement, et chaque correction est envoyée aux lecteurs.")}</p>
 
+    <section class="presentation-livre" aria-labelledby="titre-presentation">
+      <img src="couverture.jpg" width="408" height="528" alt="{ty("Couverture du livre Machine à Réussite – Examen VTC 2027, de Benjamin Blondin")}">
+      <div>
+        <h2 id="titre-presentation">{ty("Le livre pour préparer l'examen VTC 2027")}</h2>
+        <p>{ty("Le cours et l'entraînement pour les sept épreuves écrites (A à G) et l'épreuve pratique, en 540 pages.")}</p>
+        <ul class="liste-coches">
+          <li><b>{ty("213 fiches de cours")}</b>{ty(", une règle par fiche, dans 35 chapitres")}</li>
+          <li><b>{ty("1 191 questions corrigées")}</b>{ty(" : QCM et questions à réponse courte, chaque corrigé cite son texte officiel")}</li>
+          <li><b>{ty("Un test diagnostic de 40 questions")}</b>{ty(" et trois plannings, sur 4, 8 ou 12 semaines")}</li>
+          <li><b>{ty("3 examens blancs dans le livre")}</b>{ty(", plus 2 sur ce site, réservés aux lecteurs")}</li>
+          <li><b>{ty("À jour de la loi du 25 juin 2026")}</b>{ty(", règles vérifiées en octobre 2026")}</li>
+        </ul>
+        <div class="actions">{achat("bouton achat", "Acheter le livre sur Amazon")}<a class="bouton second" href="#inscription">{ty("Déjà lecteur : recevoir les mises à jour")}</a></div>
+      </div>
+    </section>
+
     <h2 id="engagements">Ce que l’auteur s’engage à faire</h2>
     <ol class="etapes">
       <li><b>{ty("Vérifier chaque règle sur sa source")}</b>{ty("Chaque corrigé du livre cite le texte officiel qui le fonde (Code des transports, Code de la route, arrêtés de l'examen, Urssaf, BOFiP) et le mois de sa vérification. Une règle qui ne repose pas sur un texte officiel, ou sur deux sources indépendantes qui concordent, n'est pas enseignée.")}</li>
@@ -1261,7 +1277,11 @@ def simulateur(ds, note=None):
       <div class="actions"><button type="button" class="bouton second petit" id="simu-lien">Copier le lien de cette simulation</button></div>
       <p class="meta" id="lien-etat" aria-live="polite"></p>
       <p class="visuellement-cache" id="simu-annonce" aria-live="polite"></p>
-    </section>'''
+    </section>
+    <aside class="barre-resultat cachee" id="barre-resultat" aria-label="Résultat en bref" hidden>
+      <p><span class="barre-legende">Revenu net estimé</span> <b id="barre-res-net"></b> <span class="barre-legende">par mois</span></p>
+      <a class="bouton clair petit" href="#resultat">Voir le détail</a>
+    </aside>'''
 
     # exemple chiffré avec les valeurs par défaut (location à la semaine, hybride essence)
     defaut = defauts_simulateur(s)
@@ -1632,7 +1652,7 @@ def page_404():
     corps = f'''    <p class="surtitre">Erreur 404</p>
     <h1>Page introuvable</h1>
     <p class="chapeau">{ty("Cette adresse n'existe pas, ou plus. Le contenu que vous cherchez est peut-être ici :")}</p>
-    <ul>
+    <ul class="essentiel-liens">
       <li><a href="/wiki/index.html">{ty("La réglementation VTC, article par article")}</a></li>
       <li><a href="/actualite/index.html">{ty("L'Actualité VTC")}</a></li>
       <li><a href="/examens.html">{ty("Les examens blancs")}</a></li>

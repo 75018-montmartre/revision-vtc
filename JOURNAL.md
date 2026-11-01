@@ -6,6 +6,16 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Dimanche 1er novembre 2026, 1 h 40 · Simulateur, page du livre, page 404 (refonte design et UX, 3/3)
+
+- https://revision-vtc.fr/simulateurs/cout-revient-revenu-net-vtc.html : sur téléphone et tablette, barre collante en bas de l'écran avec le revenu net mensuel et « Voir le détail ». Elle s'efface quand un champ a le focus, quand le clavier du téléphone est ouvert et quand le résultat complet est à l'écran ; lisible en clair et en sombre ; sans glissement si l'appareil demande moins d'animations ; absente sans JavaScript et sur grand écran. Calcul inchangé (`node outils/test_simulateur.js` : tous les calculs justes).
+- https://revision-vtc.fr/le-livre.html : bloc de présentation en tête (couverture, 540 pages, 213 fiches, 1 191 questions corrigées, test diagnostic, 3 examens blancs plus 2 sur le site, à jour de la loi du 25 juin 2026), bouton « Acheter le livre sur Amazon » et « Déjà lecteur : recevoir les mises à jour ». Adresse inchangée ; engagements, formulaires et FAQ inchangés.
+- https://revision-vtc.fr/404.html : pages proposées en petites cartes-liens en relief.
+- README, « Charte graphique » : barre de résultat, page du livre, page 404.
+- Vérifications sur les 109 pages : W3C (Nu) sans erreur, HTML et CSS ; axe sans erreur en clair et en sombre, à 320, 768 et 1 366 px, sur les 22 types de page ; aucun débordement ; barre testée en clair et en sombre, avec et sans réduction des animations.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Dimanche 1er novembre 2026, 1 h 15 · Corrections communes à toutes les pages (refonte design et UX, 2/3)
 
 - Toutes les pages :
