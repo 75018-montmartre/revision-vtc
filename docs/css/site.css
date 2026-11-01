@@ -334,8 +334,13 @@ main:has(.hero){padding-bottom:0}
 .carte-livre img{flex:none;display:block;border-radius:3px}
 .carte-livre > span{display:flex;flex-direction:column;gap:var(--e1);min-width:0}
 .carte-surtitre{font-size:.9375rem;font-weight:600;color:var(--gris)}
-.carte-calcul{display:flex;flex-wrap:wrap;align-items:flex-end;gap:var(--e3) var(--e5)}
-.carte-calcul > span{display:flex;flex-direction:column}
+.carte-simu{container-type:inline-size}
+.carte-calcul{display:grid;grid-template-columns:auto auto;grid-template-rows:auto auto;grid-auto-flow:column;justify-content:start;align-items:baseline;gap:var(--e1) var(--e6)}
+.carte-calcul > span{display:contents}
+@container (max-width:22rem){
+  .carte-calcul{grid-template-columns:auto;grid-template-rows:none;grid-auto-flow:row}
+  .carte-calcul > span + span .carte-legende{margin-top:var(--e3)}
+}
 .carte-legende{font-size:.9375rem;color:var(--gris)}
 .carte-verse,.carte-net{font-family:var(--cond);font-weight:700;line-height:1.05;color:var(--encre)}
 .carte-verse{font-size:2rem}

@@ -182,7 +182,7 @@ def accueil(nums, qs=()):
           <a class="carte-hero carte-simu" href="{simu}">
             <span class="carte-surtitre">Simulateur gratuit, exemple</span>
             <span class="carte-calcul">
-              <span><span class="carte-legende">Versé par les plateformes</span><span class="carte-verse">{ty("1 000 €")} <small>par semaine</small></span></span>
+              <span><span class="carte-legende">Versé par les plateformes</span><span class="carte-verse">{_euros(1000)} <small>par semaine</small></span></span>
               <span><span class="carte-legende">Il vous reste, avant impôt</span><span class="carte-net">{_euros(ex["net"] / 12)} <small>par mois</small></span></span>
             </span>
             <span class="carte-texte">{ty("Commission, cotisations, voiture et frais déduits. Faites le calcul avec vos propres chiffres.")}</span>

@@ -6,6 +6,14 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Dimanche 1er novembre 2026, 22 h 10 · Accueil : carte « Simulateur gratuit » réalignée
+
+- https://revision-vtc.fr/ : dans la carte de l'exemple du simulateur, les deux légendes (« Versé par les plateformes », « Il vous reste, avant impôt ») sont maintenant sur la même ligne, et les deux montants sur la même ligne de base ; avant, les légendes étaient décalées en hauteur. Quand la carte est étroite (téléphone, tablette), les deux blocs s'empilent proprement. « 1 000 € » est écrit avec le même format que « 983 € ». Chiffres inchangés.
+- `docs/css/site.css` (`.carte-calcul`, grille à deux colonnes, requête de conteneur sous 22rem) ; `outils/generer.py` (montant versé formaté par `_euros`).
+- Vérifications : axe sans erreur en clair et en sombre à 320 et 1 366 px ; aucun débordement à 320, 700, 900 et 1 366 px.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Dimanche 1er novembre 2026, 20 h 30 · E-mail de récapitulatif envoyé une fois le site à jour
 
 - Aucune page du site modifiée.
