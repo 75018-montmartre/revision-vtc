@@ -6,6 +6,13 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Dimanche 1er novembre 2026, 20 h 30 · E-mail de récapitulatif envoyé une fois le site à jour
+
+- Aucune page du site modifiée.
+- `outils/recap_mail.py` et `.github/workflows/recap.yml` : l'e-mail de récapitulatif attend désormais que GitHub Pages serve la nouvelle version (15 minutes au plus) avant de partir. Avant, il pouvait arriver avant la fin du déploiement : un lien ouvert aussitôt affichait « Page introuvable », et GoatCounter comptait une visite 404 (deux sur le simulateur, les 29 octobre et 1er novembre, aux heures de publication). Si le site n'est pas à jour au bout de 15 minutes, l'e-mail part quand même et le signale.
+- README, « Récapitulatif par e-mail » : mis à jour.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Dimanche 1er novembre 2026, 1 h 40 · Simulateur, page du livre, page 404 (refonte design et UX, 3/3)
 
 - https://revision-vtc.fr/simulateurs/cout-revient-revenu-net-vtc.html : sur téléphone et tablette, barre collante en bas de l'écran avec le revenu net mensuel et « Voir le détail ». Elle s'efface quand un champ a le focus, quand le clavier du téléphone est ouvert et quand le résultat complet est à l'écran ; lisible en clair et en sombre ; sans glissement si l'appareil demande moins d'animations ; absente sans JavaScript et sur grand écran. Calcul inchangé (`node outils/test_simulateur.js` : tous les calculs justes).

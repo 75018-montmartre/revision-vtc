@@ -196,7 +196,7 @@ Direction « signalétique en relief », en place depuis le 31 octobre 2026 : ba
 
 ## Récapitulatif par e-mail
 
-À chaque mise à jour de `main`, GitHub Actions (`.github/workflows/recap.yml`) lance `outils/recap_mail.py`, qui envoie un e-mail au destinataire configuré : le récapitulatif écrit dans le corps des messages de commit, la liste des pages ajoutées, de celles dont le contenu a changé et de celles supprimées (avec leur adresse en ligne), et le lien vers le détail sur GitHub.
+À chaque mise à jour de `main`, GitHub Actions (`.github/workflows/recap.yml`) lance `outils/recap_mail.py`, qui attend que GitHub Pages serve la nouvelle version (15 minutes au plus, sinon le message le signale) puis envoie un e-mail au destinataire configuré : le récapitulatif écrit dans le corps des messages de commit, la liste des pages ajoutées, de celles dont le contenu a changé et de celles supprimées (avec leur adresse en ligne), et le lien vers le détail sur GitHub.
 
 **Toute publication doit donc avoir un message de commit complet** : une première ligne courte (le titre), une ligne vide, puis le récapitulatif en texte simple (ce qui a été publié, les sources consultées et celles non lues, ce qui n'a pas été retenu, les règles du livre touchées, les points à trancher).
 

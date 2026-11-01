@@ -4,6 +4,8 @@
 #   SMTP_MOT_DE_PASSE son mot de passe
 #   RECAP_DESTINATAIRE l'adresse qui reçoit les récapitulatifs
 # Serveur : mail.gandi.net, port 465 (SSL), lu dans le DNS du domaine.
+# Le script attend que GitHub Pages serve la nouvelle version (15 min au plus) avant d'envoyer :
+# les liens du message ne mènent ainsi jamais à une page encore en cours de déploiement.
 name: Récapitulatif par e-mail
 on:
   push:
@@ -16,7 +18,7 @@ concurrency:
 jobs:
   recap:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:

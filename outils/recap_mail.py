@@ -57,8 +57,37 @@ for etat, chemin in changements:
             continue
         pages[etat[0]].append(chemin)
 
+def attendre_publication(chemin, minutes=15):
+    """Attend que GitHub Pages serve la nouvelle version de la page, pour que les liens de l'e-mail
+    ne mènent jamais à une page pas encore en ligne (« Page introuvable » pendant le déploiement)."""
+    import time, urllib.request
+    try:
+        attendu = subprocess.run(["git", "show", f"{apres}:{chemin}"], capture_output=True, check=True).stdout
+    except subprocess.CalledProcessError:
+        return True
+    for _ in range(minutes * 4):
+        try:
+            with urllib.request.urlopen(url(chemin) + f"?v={int(time.time())}", timeout=20) as r:
+                if r.read() == attendu:
+                    print("Nouvelle version en ligne :", url(chemin))
+                    return True
+        except Exception:
+            pass
+        time.sleep(15)
+    print("La nouvelle version n'est pas encore en ligne : envoi quand même.")
+    return False
+
+
+# Le déploiement de GitHub Pages est d'un seul tenant : une page à jour suffit à dire que tout le site l'est.
+temoin = (sorted(pages["A"]) + sorted(pages["M"])
+          + [c for e, c in changements if e[0] in "AM" and c.startswith("docs/") and c.endswith(".html") and not c.endswith("404.html")])
+en_ligne = attendre_publication(temoin[0]) if temoin else True
+
 titre = commits[-1][1] if commits else "Mise à jour du site"
 lignes = [f"Mise à jour de revision-vtc.fr, {formatdate(localtime=True)}", ""]
+if not en_ligne:
+    lignes += ["Attention : 15 minutes après la publication, le site ne servait pas encore cette version.",
+               "Si une page affiche « Page introuvable », patientez quelques minutes puis rechargez-la.", ""]
 for _, sujet, corps in commits:
     lignes += ["=" * 70, sujet, "=" * 70]
     if corps.strip():
