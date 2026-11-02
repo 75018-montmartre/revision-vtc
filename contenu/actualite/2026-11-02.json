@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-02",
+  "numero": 4,
+  "titre": "Examen VTC 2027 : inscription à 246 €, aucun nouveau texte au Journal officiel",
+  "periode": "du 29 octobre au 2 novembre 2026",
+  "a_retenir": [
+    "Les droits d'inscription à l'examen VTC complet passent de 241 € à 246 € à partir du 1er janvier 2027, selon la plateforme officielle d'inscription exament3p.fr et la CMA Hauts-de-France.",
+    "En 2027, la mobilité professionnelle (passage du taxi au VTC ou l'inverse) coûtera 171 € et l'épreuve d'admission seule 120 €, contre 168 € et 118 € en 2026.",
+    "Aucun nouveau texte sur les voitures de transport avec chauffeur n'a été publié au Journal officiel du 29 octobre au 2 novembre 2026 : les règles enseignées dans le livre restent applicables."
+  ],
+  "rubriques": [
+    {
+      "titre": "Textes officiels",
+      "breves": [
+        {
+          "titre": "Aucun nouveau texte VTC au Journal officiel du 29 octobre au 2 novembre 2026",
+          "texte": [
+            "Aucun décret ni arrêté sur les voitures de transport avec chauffeur (VTC) n'a été publié au Journal officiel du 29 octobre au 2 novembre 2026. Cette semaine, la vérification a été faite directement sur Légifrance, dans le Journal officiel, du plus récent au plus ancien.",
+            "Avec l'expression « voiture de transport avec chauffeur », le texte le plus récent reste le décret n° 2026-764 du 5 août 2026, publié le 11 août 2026 et déjà intégré au livre. Avec « transport public particulier », le plus récent est un avis de vacance d'emploi du 18 septembre 2026, sans effet sur les règles du métier."
+          ],
+          "sources": [
+            {
+              "nom": "Légifrance, Journal officiel, recherche « voiture de transport avec chauffeur », du plus récent au plus ancien",
+              "url": "https://www.legifrance.gouv.fr/search/jorf?tab_selection=jorf&searchField=ALL&query=%22voiture+de+transport+avec+chauffeur%22&sortValue=PUBLI_DATE_DESC&page=1&init=true",
+              "date": "consulté le 2 novembre 2026"
+            },
+            {
+              "nom": "Légifrance, Journal officiel, recherche « transport public particulier », du plus récent au plus ancien",
+              "url": "https://www.legifrance.gouv.fr/search/jorf?tab_selection=jorf&searchField=ALL&query=%22transport+public+particulier%22&sortValue=PUBLI_DATE_DESC&page=1&init=true",
+              "date": "consulté le 2 novembre 2026"
+            },
+            {
+              "nom": "Légifrance, décret n° 2026-764 du 5 août 2026",
+              "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054658967",
+              "date": "5 août 2026"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titre": "Examen",
+      "breves": [
+        {
+          "titre": "Examen VTC : 246 € pour l'examen complet à partir du 1er janvier 2027",
+          "texte": [
+            "Les droits d'inscription à l'examen de conducteur de VTC passent de 241 € à 246 € pour l'examen complet (épreuves d'admissibilité et d'admission) à partir du 1er janvier 2027, soit 5 € de plus. Les tarifs 2027 sont affichés sur exament3p.fr, la plateforme officielle d'inscription des chambres de métiers et de l'artisanat (CMA), et sur le site de la CMA Hauts-de-France.",
+            "La mobilité professionnelle, pour un conducteur de taxi qui passe au VTC ou l'inverse, passe de 168 € à 171 €. L'épreuve d'admission seule passe de 118 € à 120 €. La CMA Hauts-de-France précise que le montant est réévalué chaque 1er janvier selon l'évolution du plafond de la sécurité sociale, avec un arrondi à l'euro supérieur, et que les frais d'envoi par SMS, si le candidat les choisit à l'inscription, s'élèvent à 2,50 €."
+          ],
+          "sources": [
+            {
+              "nom": "exament3p.fr (CMA), Guide des examens : tarifs 2026 et 2027",
+              "url": "https://www.exament3p.fr/informations",
+              "date": "consulté le 2 novembre 2026"
+            },
+            {
+              "nom": "CMA Hauts-de-France, page « Examen Taxi et VTC », droits d'inscription aux épreuves",
+              "url": "https://www.cma-hautsdefrance.fr/examen-taxi-et-vtc/",
+              "date": "consulté le 2 novembre 2026"
+            },
+            {
+              "nom": "revision-vtc.fr, wiki : l'arrêté du 6 avril 2017 sur l'examen",
+              "url": "https://revision-vtc.fr/wiki/arrete-6-avril-2017-examen.html",
+              "date": "2 novembre 2026"
+            },
+            {
+              "nom": "revision-vtc.fr, article : combien coûte le lancement en VTC",
+              "url": "https://revision-vtc.fr/dossiers/cout-pour-devenir-chauffeur-vtc.html",
+              "date": "2 novembre 2026"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "impact_livre": [
+    "Aucune règle de l'examen ne change.",
+    "Fiche A2.4 (l'examen, seule porte d'entrée), pages « Ce qui change en 2027 » et « S'inscrire à l'examen » : le livre indique 241 € pour les épreuves complètes, tarif en vigueur depuis le 1er janvier 2026. Pour une inscription soumise aux tarifs 2027, retenir 246 € (171 € pour la mobilité, 120 € pour l'admission seule).",
+    "Textes officiels : aucun texte nouveau sur la période, rien à mettre à jour dans le livre."
+  ],
+  "verifie": "2 novembre 2026"
+}

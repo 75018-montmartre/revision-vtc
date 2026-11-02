@@ -32,6 +32,19 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 - Règles du livre touchées : aucune.
 - Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
 
+## Lundi 2 novembre 2026, 7 h 55 (publiée à 11 h 05) · Actualité VTC n° 4 (tâche du lundi)
+
+- Préparée et vérifiée à 7 h 55 par la tâche planifiée, qui n'a pas pu l'envoyer sur GitHub ; publiée à 11 h 05 depuis le correctif, sans changement de contenu. Tarifs 2027 de l'examen revérifiés le 2 novembre 2026 sur la page de la CMA Hauts-de-France.
+- PROBLÈME : prix des carburants non mis à jour (le fichier « Prix HTT et TTC depuis janvier 2020 » de la DGEC, lu le 2 novembre 2026 à 7 h 40, s'arrêtait encore au vendredi 23 octobre 2026, déjà repris dans le simulateur).
+- Page publiée : https://revision-vtc.fr/actualite/2026-11-02.html
+- Titre : « Examen VTC 2027 : inscription à 246 €, aucun nouveau texte au Journal officiel »
+- Textes officiels : aucun nouveau texte VTC au Journal officiel du 29 octobre au 2 novembre 2026 (vérifié directement sur Légifrance).
+- Examen : droits d'inscription 2027, 246 € pour l'examen complet (241 € en 2026), 171 € pour la mobilité professionnelle, 120 € pour l'admission seule, à partir du 1er janvier 2027 (exament3p.fr et CMA Hauts-de-France).
+- Simulateur : prix des carburants inchangés, ceux du 23 octobre 2026 (SP95-E10 2,116 €, gazole 2,352 €).
+- Contenu à corriger : https://revision-vtc.fr/dossiers/cout-pour-devenir-chauffeur-vtc.html indique que le tarif 2027 de l'examen « n'est pas encore publié » (246 € désormais).
+- Livre : le livre cite 241 € (tarif 2026) pour l'examen complet (fiche A2.4) ; signalé dans « Ce que ça change pour le livre », pas de correction ajoutée (tarif publié par les CMA, pas par un texte du Journal officiel).
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Dimanche 1er novembre 2026, 22 h 10 · Accueil : carte « Simulateur gratuit » réalignée
 
 - https://revision-vtc.fr/ : dans la carte de l'exemple du simulateur, les deux légendes (« Versé par les plateformes », « Il vous reste, avant impôt ») sont maintenant sur la même ligne, et les deux montants sur la même ligne de base ; avant, les légendes étaient décalées en hauteur. Quand la carte est étroite (téléphone, tablette), les deux blocs s'empilent proprement. « 1 000 € » est écrit avec le même format que « 983 € ». Chiffres inchangés.
