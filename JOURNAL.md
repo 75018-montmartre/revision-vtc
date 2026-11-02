@@ -19,6 +19,19 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 - Règles du livre touchées : aucune.
 - Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
 
+## Lundi 2 novembre 2026, 9 h 05 (publiée à 10 h 55) · Question VTC du jour
+
+- Question : « Formation continue VTC : combien d'heures et tous les combien d'années ? »
+- Page publiée : https://revision-vtc.fr/questions/2026-11-02-formation-continue-vtc-duree.html
+- Réponse courte : 14 heures, tous les cinq ans. Le stage se suit en présentiel dans un centre de formation agréé, en quatre modules de 3 h 30, et l'attestation remise à la fin, valable cinq ans, est demandée pour renouveler la carte professionnelle VTC.
+- Préparée et vérifiée à 9 h 05 par la tâche planifiée, qui n'a pas pu l'envoyer sur GitHub ; publiée à 10 h 55 depuis le correctif, sans changement de contenu.
+- Apport : programme des quatre modules, fractionnement possible (quatre fois 3 h 30 sur deux mois au plus), présentiel obligatoire, calendrier daté du renouvellement. L'article sur le budget ne citait que « 14 heures tous les cinq ans » ; il est relié depuis la page.
+- Sources : R3120-8-2 lu sur Légifrance le 2 novembre 2026 ; arrêté du 11 août 2017 et R3124-12 d'après le wiki (vérifié le 25 octobre 2026), Légifrance renvoyant une vérification anti-robot pour ces pages ; service-public.fr (F31027, R73497) et fiche CMA Alsace-Moselle Grand Est lus le 2 novembre 2026. Relecture indépendante : 48 affirmations confirmées, 8 corrigées puis confirmées.
+- Générateur : les paragraphes des Questions VTC acceptent les liens `[texte](adresse)` (comme les articles) ; README mis à jour. La question « Visite médicale VTC » du jour est maintenant reliée à l'article sur le budget et à cette question.
+- Script du réel : `reseaux/reels/2026-11-02-formation-continue-vtc-duree.txt`.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Dimanche 1er novembre 2026, 22 h 10 · Accueil : carte « Simulateur gratuit » réalignée
 
 - https://revision-vtc.fr/ : dans la carte de l'exemple du simulateur, les deux légendes (« Versé par les plateformes », « Il vous reste, avant impôt ») sont maintenant sur la même ligne, et les deux montants sur la même ligne de base ; avant, les légendes étaient décalées en hauteur. Quand la carte est étroite (téléphone, tablette), les deux blocs s'empilent proprement. « 1 000 € » est écrit avec le même format que « 983 € ». Chiffres inchangés.

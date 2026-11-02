@@ -1,0 +1,100 @@
+{
+ "date": "2026-11-02",
+ "slug": "formation-continue-vtc-duree",
+ "question": "Formation continue VTC : combien d'heures et tous les combien d'années ?",
+ "reponse_courte": "14 heures, tous les cinq ans. Le stage se suit en présentiel dans un centre de formation agréé, en quatre modules de 3 h 30, et l'attestation remise à la fin, valable cinq ans, est demandée pour renouveler la carte professionnelle VTC.",
+ "sections": [
+  {
+   "titre": "La règle : 14 heures tous les cinq ans",
+   "texte": [
+    "L'article R3120-8-2 du Code des transports oblige tout conducteur de transport public particulier, donc tout chauffeur VTC, à suivre tous les cinq ans un stage de formation continue. Le stage est dispensé par un centre de formation agréé par le préfet (article R3120-9).",
+    "L'arrêté du 11 août 2017 fixe sa durée : quatorze heures. Le stage est dispensé en présentiel, au sein du centre agréé.",
+    "Chaque session est organisée soit pour des conducteurs de taxi, soit pour des conducteurs de VTC. Un chauffeur VTC suit donc une session réservée aux VTC, avec un module consacré à la réglementation propre à son activité."
+   ]
+  },
+  {
+   "titre": "Le programme : quatre modules de 3 h 30",
+   "texte": [
+    "Le stage comporte trois modules obligatoires et un module au choix. Chacun dure 3 h 30, soit 4 × 3 h 30 = 14 heures.",
+    "1. Module A, obligatoire : droit du transport public particulier de personnes.",
+    "2. Module B, obligatoire : réglementation spécifique à l'activité de VTC.",
+    "3. Module C, obligatoire : sécurité routière.",
+    "4. Un module au choix parmi trois : D, anglais ; E, gestion et développement commercial, dont l'utilisation des nouvelles technologies ; F, prévention et secours civiques.",
+    "Pour les modules A à E, le programme de référence est celui de l'annexe I de l'arrêté du 6 avril 2017, celui de l'examen d'accès à la profession. Le stage revient donc sur les matières de l'examen : l'arrêté le présente comme une « mise à jour des connaissances essentielles » pour l'activité. Le module F suit le référentiel « premiers secours citoyen » fixé par un arrêté du 24 juillet 2007."
+   ]
+  },
+  {
+   "titre": "En deux jours ou en quatre fois",
+   "texte": [
+    "Service-public.fr présente le stage comme une formation de 2 jours (14 heures). L'arrêté permet aussi de le fractionner en quatre périodes de 3 h 30, à condition que l'ensemble tienne dans une période de deux mois au plus.",
+    "Erreur à éviter : chercher une formation continue entièrement en ligne. L'arrêté impose le présentiel au sein d'un centre agréé. Avant de payer, vérifiez que le stage a lieu dans les locaux du centre et que celui-ci est agréé : service-public.fr renvoie à la liste publiée par la chambre de métiers et de l'artisanat de votre département.",
+    "À la fin du stage, le centre remet sans délai une attestation de suivi, signée et datée par son représentant légal (article 3 de l'arrêté). Elle est valable cinq ans."
+   ]
+  },
+  {
+   "titre": "Quand faire le stage : un exemple daté",
+   "texte": [
+    "La carte professionnelle VTC se renouvelle tous les cinq ans. Service-public.fr indique que la demande de renouvellement se fait en ligne, 3 mois avant la fin de validité, et que la nouvelle carte peut être demandée dès réception de l'attestation de formation continue.",
+    "Exemple : une carte valable jusqu'au 15 mars 2027. Trois mois avant la fin de validité, c'est le 15 décembre 2026 : le stage doit être terminé et l'attestation reçue au plus tard vers cette date pour déposer la demande à temps.",
+    "Si le centre propose le stage fractionné, ses quatre périodes tiennent en deux mois au plus : par exemple quatre séances entre le 15 octobre et le 14 décembre 2026. Le suivre en deux jours laisse plus de marge."
+   ]
+  },
+  {
+   "titre": "Sans attestation, pas de nouvelle carte",
+   "texte": [
+    "Le renouvellement de la carte suppose le stage de formation continue : sans attestation, pas de nouvelle carte. Or le Code des transports punit de l'amende des contraventions de cinquième classe le fait d'exercer comme conducteur VTC sans carte professionnelle en cours de validité (article R3124-12). Service-public.fr indique une amende de 1 500 € pour détention d'une carte professionnelle non valide.",
+    "Aucun texte réglementaire ne fixe le prix du stage ; à titre d'exemple, la CMA Alsace-Moselle Grand Est l'affiche à 280 € nets de taxes dans sa fiche de janvier 2026. Les autres dépenses qui reviennent tous les cinq ans, dont la nouvelle carte, sont chiffrées dans notre article sur [le budget complet du lancement en VTC](../dossiers/cout-pour-devenir-chauffeur-vtc.html)."
+   ]
+  }
+ ],
+ "a_retenir": [
+  "Tout chauffeur VTC suit un stage de formation continue de 14 heures tous les cinq ans, en présentiel, dans un centre de formation agréé.",
+  "Le stage compte trois modules obligatoires (droit du T3P, réglementation VTC, sécurité routière) et un module au choix, de 3 h 30 chacun.",
+  "L'attestation remise à la fin du stage, valable cinq ans, doit être obtenue avant de demander le renouvellement de la carte professionnelle, 3 mois avant sa fin de validité."
+ ],
+ "wiki": [
+  "r3120-8-2",
+  "arrete-11-aout-2017-formation-continue",
+  "r3120-9",
+  "r3124-12",
+  "arrete-6-avril-2017-examen"
+ ],
+ "fiches": [
+  ["A2.7", "La formation continue obligatoire"],
+  ["A2.6", "La carte professionnelle au quotidien"],
+  ["A2.8", "Carte expirée, oubliée ou prêtée"]
+ ],
+ "sources": [
+  {
+   "nom": "Code des transports, article R3120-8-2 (Légifrance, lu le 2 novembre 2026)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034380984",
+   "date": "version en vigueur depuis le 8 avril 2017"
+  },
+  {
+   "nom": "Arrêté du 11 août 2017 relatif à la formation continue des conducteurs de taxi et des conducteurs de voiture de transport avec chauffeur et à la mobilité des conducteurs de taxi, articles 1 et 3 (texte recopié dans le wiki du site et vérifié le 25 octobre 2026)",
+   "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000035484647",
+   "date": "article 1 en vigueur depuis le 10 juillet 2024"
+  },
+  {
+   "nom": "Code des transports, article R3124-12 (texte recopié dans le wiki du site et vérifié le 25 octobre 2026 ; Légifrance inaccessible depuis l'outil le 2 novembre 2026)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048576",
+   "date": "version en vigueur depuis le 1er janvier 2015"
+  },
+  {
+   "nom": "CMA Alsace-Moselle Grand Est, fiche « Formation continue conducteur VTC » (FOS08, version 1.3 du 26 janvier 2026) : 14 heures, présentiel, modules de 3 h 30, tarif",
+   "url": "https://www.cma-alsace-moselle-grandest.fr/sites/default/files/2026-02/FOS08_Formation_continue_conducteur_VTC_V1.3_26012026_AA.pdf",
+   "date": "consultée le 2 novembre 2026"
+  },
+  {
+   "nom": "Entreprendre.Service-Public.fr, « Devenir chauffeur de VTC » (fiche F31027, vérifiée le 12 août 2026)",
+   "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F31027",
+   "date": "consultée le 2 novembre 2026"
+  },
+  {
+   "nom": "Entreprendre.Service-Public.fr, « Demander le renouvellement de la carte professionnelle de conducteur de voiture de transport avec chauffeur (VTC) » (service en ligne R73497)",
+   "url": "https://entreprendre.service-public.gouv.fr/vosdroits/R73497",
+   "date": "consultée le 2 novembre 2026"
+  }
+ ],
+ "verifie": "2 novembre 2026"
+}

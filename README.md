@@ -104,6 +104,8 @@ Fichier `contenu/questions/AAAA-MM-JJ-adresse.json` (l'adresse est en minuscules
 
 Le générateur refuse une question sans source, sans point d'interrogation, ou qui renvoie vers une page du wiki inexistante.
 
+Dans les paragraphes des sections, `[texte](adresse)` fait un lien (par exemple vers un article : `[le budget complet](../dossiers/cout-pour-devenir-chauffeur-vtc.html)`) et `**texte**` met en gras, comme dans les articles.
+
 ## Publier un article (rubrique « Articles »)
 
 Fichier `contenu/dossiers/adresse.json`, nommé par l'adresse de la page (minuscules, tirets, mots-clés principaux : `cout-pour-devenir-chauffeur-vtc`). La rubrique s'appelait « Dossiers » jusqu'au 29 octobre 2026 ; elle s'affiche désormais « Articles », mais le dossier technique et les adresses restent `dossiers/` (règle : jamais de changement d'adresse). La page est publiée à `https://revision-vtc.fr/dossiers/adresse.html` ; l'adresse ne change plus ensuite (un article se met à jour, avec `mis_a_jour`). Modèles : l'article n° 1 (budget, ton de référence chiffré) et les articles n° 2 à 4 (ton de blog pédagogique : un exemple concret pour commencer, phrases courtes, « vous », listes en gras).

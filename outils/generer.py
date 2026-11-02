@@ -854,7 +854,7 @@ def lire_questions(slugs_wiki):
 def questions(qs, w):
     arts = {a["slug"]: a for a in w["articles"]}
     for q in qs:
-        secs = "".join(f'<h2>{ty(x["titre"])}</h2>' + "".join(f"<p>{ty(p)}</p>" for p in x["texte"]) for x in q["sections"])
+        secs = "".join(f'<h2>{ty(x["titre"])}</h2>' + "".join(f"<p>{liens(ty(p))}</p>" for p in x["texte"]) for x in q["sections"])   # [texte](adresse) : maillage vers un article ou une autre question
         wiki = "".join(f'<li><a href="../wiki/{s}.html">{ty(arts[s]["num"] if not arts[s].get("arrete") else "Arrêté")} · {ty(arts[s]["titre"])}</a></li>' for s in q.get("wiki", []))
         livre = "".join(f"<li><b>Fiche {ty(c)}</b> · {ty(t)}</li>" for c, t in q.get("fiches", []))
         src = "".join(f'<li><a href="{html.escape(x["url"])}">{ty(x["nom"])}</a>' + (f", {ty(x['date'])}" if x.get("date") else "") + "</li>" for x in q["sources"])

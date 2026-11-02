@@ -1,0 +1,58 @@
+RÉEL · Formation continue VTC : combien d'heures et tous les combien ?
+Page : https://revision-vtc.fr/questions/2026-11-02-formation-continue-vtc-duree.html
+Durée visée : 35 à 40 secondes
+
+ACCROCHE (0 à 3 s)
+  Texte à l'écran : Formation continue VTC en ligne ? Attention.
+  Voix : Votre formation continue VTC, vous comptez la faire en ligne ?
+
+DÉROULÉ
+  Plan 1 (3 à 10 s)
+    Texte à l'écran : 14 heures tous les 5 ans
+    Voix : Tout chauffeur VTC doit suivre un stage de formation continue de
+    14 heures tous les cinq ans.
+  Plan 2 (10 à 18 s)
+    Texte à l'écran : En présentiel, centre agréé
+    Voix : L'arrêté du 11 août 2017 impose le présentiel, dans un centre de
+    formation agréé, en session réservée aux VTC.
+  Plan 3 (18 à 26 s)
+    Texte à l'écran : 4 modules de 3 h 30
+    Voix : Trois modules obligatoires : droit du transport, réglementation
+    VTC, sécurité routière. Plus un au choix : anglais, gestion, ou secours.
+  Plan 4 (26 à 33 s)
+    Texte à l'écran : 2 jours, ou 4 fois en 2 mois
+    Voix : Selon le centre, en deux jours, ou en quatre fois sur deux mois
+    au plus.
+  Plan 5 (33 à 38 s)
+    Texte à l'écran : Pas d'attestation, pas de nouvelle carte
+    Voix : Sans l'attestation, pas de renouvellement de votre carte. La
+    demande se fait trois mois avant la fin de validité.
+
+CHUTE (38 à 41 s)
+  Texte à l'écran : 14 h, présentiel, tous les 5 ans
+  Voix : Quatorze heures, en présentiel, tous les cinq ans. Réponse complète
+  et sources sur revision-vtc.fr.
+
+LÉGENDE
+  Formation continue VTC : 14 heures tous les cinq ans, en présentiel dans un
+  centre agréé, quatre modules de 3 h 30. L'attestation est demandée pour
+  renouveler la carte professionnelle, demande à faire trois mois avant sa fin
+  de validité.
+  Les textes et le détail des modules sont sur la page.
+  #chauffeurvtc #vtc #formationvtc #cartevtc #examenvtc #transportdepersonnes
+  https://revision-vtc.fr/questions/2026-11-02-formation-continue-vtc-duree.html
+
+SOURCES
+  - Code des transports, article R3120-8-2 (Légifrance, lu le 2 novembre 2026)
+  - Arrêté du 11 août 2017 relatif à la formation continue des conducteurs de
+    taxi et des conducteurs de voiture de transport avec chauffeur et à la
+    mobilité des conducteurs de taxi, articles 1 et 3 (copie de Légifrance
+    du wiki du site, vérifiée le 25 octobre 2026)
+  - Code des transports, article R3124-12 (copie de Légifrance du wiki du
+    site, vérifiée le 25 octobre 2026)
+  - CMA Alsace-Moselle Grand Est, fiche FOS08 « Formation continue conducteur
+    VTC », version 1.3 du 26 janvier 2026
+  - Entreprendre.Service-Public.fr, fiche F31027 « Devenir chauffeur de VTC »,
+    vérifiée le 12 août 2026
+  - Entreprendre.Service-Public.fr, service en ligne R73497 (renouvellement de
+    la carte professionnelle VTC)
