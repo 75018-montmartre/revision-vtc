@@ -9,7 +9,7 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 ## Lundi 2 novembre 2026, 14 h 45 · Mises à jour du livre : un encadré par correction, avec la page du livre
 
 - https://revision-vtc.fr/mises-a-jour.html : chaque correction du livre s'affiche désormais dans un encadré (titre de la fiche, date, **page du livre et page du corrigé**, ce que dit le livre, ce qu'il faut retenir, texte officiel cliquable, exemplaires concernés), au lieu d'un tableau. La page n'a encore aucune correction : rien ne change pour le lecteur tant qu'il n'y en a pas.
-- Nouvelle rubrique « Quelle version du livre avez-vous ? » : version 1.0 (page 2 blanche) ou 1.1 (page 2 « Ce livre est tenu à jour », envoyée sur KDP en novembre 2026). Même pagination dans les deux versions.
+- Nouvelle rubrique « Quelle version du livre avez-vous ? » : version 1.0 (page 2 blanche) ou 1.1 (page 2 « Ce livre est tenu à jour », prête pour KDP le 2 novembre 2026). Même pagination dans les deux versions.
 - Nouveau fichier `contenu/livre_pages.json` : la page des 213 fiches du livre et de leur corrigé, relevée dans le PDF du livre. Le générateur y prend la page tout seul ; il refuse une correction sans fiche connue ou à laquelle il manque un champ. Format documenté dans `README.md` (« Format d'une correction du livre »).
 - Page « Le livre tenu à jour » : la phrase sur les corrections mentionne la page du livre.
 - Vérifié : aucune erreur axe en clair et en sombre, à 320 px et 1 280 px, avec un encadré d'essai (retiré avant publication).
