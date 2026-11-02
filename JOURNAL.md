@@ -6,6 +6,19 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Lundi 2 novembre 2026, 10 h 44 · Question VTC du jour
+
+- Question : « Visite médicale VTC : tous les combien d'années ? »
+- Page publiée : https://revision-vtc.fr/questions/2026-11-02-visite-medicale-vtc-tous-les-combien.html
+- Réponse courte : tous les 5 ans jusqu'à 60 ans, tous les 2 ans de 60 à 76 ans, puis chaque année après 76 ans. La visite se passe chez un médecin agréé par le préfet, jamais chez son médecin traitant, et coûte 36 €, non remboursés par l'Assurance maladie.
+- Apport : calendrier complet par tranche d'âge (dont la validité arrêtée aux 60 ans entre 55 et 60 ans), exemple à 57 ans, calcul sur une carrière (14 visites de 30 à 75 ans, 504 €), déroulé du contrôle. L'article sur le budget ne disait que « tous les cinq ans jusqu'à 55 ans, puis plus souvent avec l'âge ».
+- Sources : service-public.fr (F36483) et entreprendre.service-public.fr (F31027) lus le 2 novembre 2026 ; D3120-5 d'après le wiki (vérifié le 25 octobre 2026) ; R221-11 non lu sur Légifrance (vérification anti-robot), durées concordantes d'après l'OPPBTP. Relecture indépendante : 30 affirmations confirmées, 0 retirée.
+- Non publiée : la question « Formation continue VTC » préparée ce matin (correctif `claude/a_publier/2026-11-02-question-vtc-formation-continue.patch` dans le projet Claude) n'est toujours pas en ligne ; sujet non repris.
+- Maillage : pas de lien vers l'article sur le budget dans le texte, le générateur actuel n'acceptant pas encore les liens dans les Questions VTC (changement contenu dans le correctif non appliqué).
+- Script du réel : `reseaux/reels/2026-11-02-visite-medicale-vtc-tous-les-combien.txt`.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Dimanche 1er novembre 2026, 22 h 10 · Accueil : carte « Simulateur gratuit » réalignée
 
 - https://revision-vtc.fr/ : dans la carte de l'exemple du simulateur, les deux légendes (« Versé par les plateformes », « Il vous reste, avant impôt ») sont maintenant sur la même ligne, et les deux montants sur la même ligne de base ; avant, les légendes étaient décalées en hauteur. Quand la carte est étroite (téléphone, tablette), les deux blocs s'empilent proprement. « 1 000 € » est écrit avec le même format que « 983 € ». Chiffres inchangés.

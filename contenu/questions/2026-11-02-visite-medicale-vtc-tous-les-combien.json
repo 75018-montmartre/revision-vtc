@@ -1,0 +1,87 @@
+{
+ "date": "2026-11-02",
+ "slug": "visite-medicale-vtc-tous-les-combien",
+ "question": "Visite médicale VTC : tous les combien d'années ?",
+ "reponse_courte": "Tous les 5 ans jusqu'à 60 ans, tous les 2 ans de 60 à 76 ans, puis chaque année après 76 ans. La visite se passe chez un médecin agréé par le préfet, jamais chez son médecin traitant, et coûte 36 €, non remboursés par l'Assurance maladie.",
+ "sections": [
+  {
+   "titre": "La règle : 5 ans, puis 2 ans, puis 1 an",
+   "texte": [
+    "Un chauffeur VTC conduit avec un permis B, mais ce permis est soumis à un contrôle médical périodique. L'article D3120-5 du Code des transports renvoie pour cela aux articles R221-10 et R221-11 du Code de la route, et service-public.fr range le permis B utilisé pour le taxi et le VTC parmi les permis professionnels concernés.",
+    "La durée de validité dépend de l'âge du conducteur au moment du contrôle :",
+    "1. Moins de 55 ans : 5 ans.",
+    "2. De 55 à 60 ans : 5 ans, ou jusqu'à la date anniversaire des 60 ans.",
+    "3. De 60 à 76 ans : 2 ans, ou jusqu'à la date anniversaire des 76 ans.",
+    "4. Plus de 76 ans : 1 an.",
+    "Ces durées sont celles du permis B. Un chauffeur qui exerce aussi avec un permis de transport en commun (catégories D) a une règle plus stricte : un contrôle chaque année dès 60 ans."
+   ]
+  },
+  {
+   "titre": "Entre 55 et 60 ans, une validité raccourcie",
+   "texte": [
+    "Avant 60 ans, la validité ne dépasse jamais la date anniversaire des 60 ans. Un chauffeur de moins de 55 ans obtient donc 5 ans pleins ; après 55 ans, la validité peut être plus courte.",
+    "Exemple : un chauffeur passe son contrôle à 57 ans. Il n'obtient pas 5 ans, mais une validité jusqu'à ses 60 ans, soit 3 ans. À 60 ans, il repasse le contrôle et obtient 2 ans."
+   ]
+  },
+  {
+   "titre": "Sur toute une carrière : 14 visites de 30 à 75 ans",
+   "texte": [
+    "Prenons un chauffeur qui passe sa première visite à 30 ans et la renouvelle à chaque échéance, le jour de son anniversaire.",
+    "1. Avant 60 ans : visites à 30, 35, 40, 45, 50 et 55 ans, soit 6 visites. Celle de 55 ans vaut jusqu'à ses 60 ans.",
+    "2. De 60 à 76 ans : visites à 60, 62, 64, 66, 68, 70, 72 et 74 ans, soit 8 visites. Celle de 74 ans vaut jusqu'à ses 76 ans.",
+    "3. Après 76 ans : une visite par an.",
+    "Total : 14 visites de 30 à 75 ans, soit 14 × 36 € = 504 € au tarif actuel. Ces visites ne sont jamais remboursées par l'Assurance maladie."
+   ]
+  },
+  {
+   "titre": "Chez qui, et comment se passe le contrôle",
+   "texte": [
+    "Seul un médecin de ville agréé par le préfet peut faire ce contrôle. Ce ne peut pas être votre médecin traitant. La liste des médecins agréés est publiée sur le site de la préfecture.",
+    "Le jour du contrôle, apportez le formulaire d'avis médical (cerfa n° 14880) et le questionnaire de santé, préremplis, ainsi qu'une pièce d'identité et votre permis de conduire en original. Le médecin vérifie votre aptitude physique, cognitive et sensorielle à conduire.",
+    "Le contrôle coûte 36 €. L'Assurance maladie ne prend en charge ni ce contrôle ni les éventuels examens complémentaires. Avec un avis favorable, le renouvellement du permis se demande en ligne, sur le site de l'Agence nationale des titres sécurisés (ANTS), avec l'avis médical numérisé."
+   ]
+  },
+  {
+   "titre": "Erreur à éviter : laisser passer la date limite",
+   "texte": [
+    "Service-public.fr précise que le permis n'est pas annulé si la date limite du contrôle est dépassée, mais qu'il perd sa validité.",
+    "Le contrôle médical est aussi une condition pour entrer dans le métier : pour devenir chauffeur VTC, il faut avoir passé un contrôle médical qui a donné un avis positif. Notez la date limite de votre permis dans un agenda et prenez rendez-vous chez le médecin agréé avant cette date."
+   ]
+  }
+ ],
+ "a_retenir": [
+  "La visite médicale du chauffeur VTC se renouvelle tous les 5 ans avant 60 ans, tous les 2 ans de 60 à 76 ans, puis chaque année.",
+  "Entre 55 et 60 ans, la validité s'arrête à la date anniversaire des 60 ans.",
+  "Le contrôle se fait chez un médecin agréé par le préfet, jamais chez son médecin traitant, et coûte 36 € non remboursés."
+ ],
+ "wiki": [
+  "d3120-5"
+ ],
+ "fiches": [
+  ["A2.3", "L'aptitude médicale"],
+  ["A2.1", "Les conditions d'accès à la profession"]
+ ],
+ "sources": [
+  {
+   "nom": "Service-Public.fr, « Contrôle médical obligatoire pour le permis de conduire professionnel » (fiche F36483, vérifiée le 24 février 2025) : permis concernés, durées de validité selon l'âge, médecin agréé, prix",
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F36483",
+   "date": "consultée le 2 novembre 2026"
+  },
+  {
+   "nom": "Entreprendre.Service-Public.fr, « Devenir chauffeur de VTC » (fiche F31027, vérifiée le 12 août 2026) : condition de contrôle médical",
+   "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F31027",
+   "date": "consultée le 2 novembre 2026"
+  },
+  {
+   "nom": "Code des transports, article D3120-5 (texte recopié dans le wiki du site et vérifié le 25 octobre 2026 ; Légifrance inaccessible depuis l'outil le 2 novembre 2026)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048401",
+   "date": "version en vigueur depuis le 1er janvier 2015"
+  },
+  {
+   "nom": "Code de la route, article R221-11 (Légifrance inaccessible depuis l'outil le 2 novembre 2026 ; durées de 5 ans, 2 ans et 1 an concordantes d'après l'OPPBTP, fiche « Quelle est la périodicité des visites médicales pour le renouvellement des permis de conduire à usage professionnel ? », mise à jour le 18 août 2026)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000046217357",
+   "date": "consulté le 2 novembre 2026"
+  }
+ ],
+ "verifie": "2 novembre 2026"
+}
