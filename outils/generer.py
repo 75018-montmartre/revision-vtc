@@ -341,23 +341,49 @@ def flux(nums):
 def mises_a_jour():
     with open(os.path.join(CONTENU, "mises-a-jour.json"), encoding="utf-8") as h:
         m = json.load(h)
-    if m["corrections"]:
-        lignes = "".join(
-            f'<tr><td>{ty(c["date"])}</td><td>{ty(c["fiche"])}</td><td>{ty(c["avant"])}</td><td>{ty(c["apres"])}</td><td>{ty(c["texte"])}</td></tr>'
-            for c in m["corrections"])
-        tableau = f'''<div class="defile"><table>
-      <caption>Corrections du livre, de la plus récente à la plus ancienne</caption>
-      <thead><tr><th scope="col">Date</th><th scope="col">Fiche</th><th scope="col">Ce que dit le livre</th><th scope="col">Ce qu’il faut retenir</th><th scope="col">Texte</th></tr></thead>
-      <tbody>{lignes}</tbody></table></div>'''
+    with open(os.path.join(CONTENU, "livre_pages.json"), encoding="utf-8") as h:
+        pages_livre = json.load(h)["fiches"]   # page de chaque fiche dans le livre imprimé, et de son corrigé
+    with open(os.path.join(CONTENU, "fiches.json"), encoding="utf-8") as h:
+        titres = json.load(h)
+    cartes = []
+    for i, c in enumerate(m["corrections"]):   # la plus récente en tête du fichier
+        for champ in ("date", "fiche", "avant", "apres", "texte"):
+            if not str(c.get(champ, "")).strip():
+                sys.exit(f"mises-a-jour.json, correction {i + 1} : champ « {champ} » manquant")
+        if c["fiche"] not in pages_livre:
+            sys.exit(f"mises-a-jour.json, correction {i + 1} : fiche « {c['fiche']} » absente de contenu/livre_pages.json")
+        pl = pages_livre[c["fiche"]]
+        page_fiche = c.get("page", pl["page"])
+        ou = f"page {page_fiche}" + (f", corrigé page {pl['corrige']}" if pl.get("corrige") and "page" not in c else "")
+        titre = f"Fiche {c['fiche']}" + (f" · {titres[c['fiche']]}" if c["fiche"] in titres else "")
+        texte = ty(c["texte"])
+        if c.get("url"):
+            texte = f'<a href="{html.escape(c["url"])}">{texte}</a>'
+        versions = (f"Versions antérieures à la {c['corrigee_dans']} (corrigé dans la version {c['corrigee_dans']})"
+                    if c.get("corrigee_dans") else "Toutes les versions imprimées")
+        cartes.append(f'''<section class="note" aria-labelledby="corr-{i}">
+      <h3 id="corr-{i}">{ty(titre)}</h3>
+      <p class="meta">{ty("Publiée le " + c["date"] + " · dans le livre : " + ou)}</p>
+      <dl>
+        <dt>Ce que dit le livre</dt><dd>{ty(c["avant"])}</dd>
+        <dt>Ce qu’il faut retenir</dt><dd>{ty(c["apres"])}</dd>
+        <dt>Texte officiel</dt><dd>{texte}</dd>
+        <dt>Exemplaires concernés</dt><dd>{ty(versions)}</dd>
+      </dl>
+    </section>''')
+    if cartes:
+        tableau = "\n    ".join(cartes)
     else:
         tableau = "<p>Aucune correction à ce jour : toutes les règles du livre sont à jour.</p>"
     surv = "".join(f"<li>{ty(x)}</li>" for x in m["a_surveiller"])
     corps = f'''    <h1>Mises à jour du livre</h1>
-    <p class="chapeau">{ty("Les règles du livre ont été vérifiées en octobre 2026. Quand l'une d'elles change, elle est inscrite ici : la date, la fiche concernée, l'ancienne règle, la nouvelle, et le texte qui la fonde.")}</p>
+    <p class="chapeau">{ty("Les règles du livre ont été vérifiées en octobre 2026. Quand l'une d'elles change, elle est inscrite ici, dans un encadré : la date, la fiche et sa page dans le livre, ce que dit le livre, ce qu'il faut retenir, et le texte officiel qui fonde la nouvelle règle.")}</p>
     <h2>Les corrections</h2>
     {tableau}
     <p class="meta">Dernière vérification : {ty(m["derniere_verification"])}.</p>
     <p>{ty("Lecteur du livre ? Recevez chaque correction par e-mail, avec la page corrigée en PDF, et signalez une erreur depuis la page")} <a href="le-livre.html">Le livre tenu à jour</a>.</p>
+    <h2>Quelle version du livre avez-vous ?</h2>
+    <p>{ty("Ouvrez le livre à la page 2. Si elle est blanche, vous avez la version 1.0 (octobre 2026). Si elle s'intitule « Ce livre est tenu à jour », la version est écrite en bas de cette page. Les numéros de page sont les mêmes dans toutes les versions : la page indiquée dans chaque encadré est la bonne.")}</p>
     <h2>À surveiller en 2027</h2>
     <p>{ty("Le livre enseigne ces points en principe. Ils seront précisés ici dès que les textes seront publiés.")}</p>
     <ul>{surv}</ul>'''
@@ -415,7 +441,7 @@ def livre_vivant():
     <ol class="etapes">
       <li><b>{ty("Vérifier chaque règle sur sa source")}</b>{ty("Chaque corrigé du livre cite le texte officiel qui le fonde (Code des transports, Code de la route, arrêtés de l'examen, Urssaf, BOFiP) et le mois de sa vérification. Une règle qui ne repose pas sur un texte officiel, ou sur deux sources indépendantes qui concordent, n'est pas enseignée.")}</li>
       <li><b>{ty("Revérifier le livre entier toutes les trois semaines")}</b>{ty("Les règles du livre sont recontrôlées sur les textes en vigueur, en plus de la veille du Journal officiel faite chaque semaine pour le site. Une règle adoptée mais pas encore applicable est signalée comme telle, jamais présentée comme en vigueur.")}</li>
-      <li><b>{ty("Publier chaque correction")}</b>{ty("Toute correction est inscrite sur la page")} <a href="mises-a-jour.html">Mises à jour du livre</a> {ty(": la date, la fiche, ce que dit le livre, ce qu'il faut retenir et le texte qui fonde la nouvelle règle.")}</li>
+      <li><b>{ty("Publier chaque correction")}</b>{ty("Toute correction est inscrite sur la page")} <a href="mises-a-jour.html">Mises à jour du livre</a> {ty(": la date, la fiche et sa page dans le livre, ce que dit le livre, ce qu'il faut retenir et le texte qui fonde la nouvelle règle.")}</li>
       <li><b>{ty("Vous l'envoyer")}</b>{ty("Les lecteurs inscrits reçoivent la correction par e-mail, avec la page corrigée en PDF, à imprimer ou à garder sur leur téléphone.")}</li>
       <li><b>{ty("Répondre à chaque signalement")}</b>{ty("Une erreur, une règle qui a changé, un passage pas clair : chaque signalement est vérifié et reçoit une réponse. Une erreur confirmée est corrigée pour tous, même si c'est vous qui l'avez trouvée.")}</li>
     </ol>

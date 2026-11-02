@@ -1,0 +1,857 @@
+{
+ "note": "Page de chaque fiche dans le livre imprimé (versions 1.0 et 1.1 : même pagination) et page de son corrigé. Généré depuis le PDF du livre le 2 novembre 2026 ; à régénérer seulement si la pagination du livre change.",
+ "fiches": {
+  "A1.1": {
+   "page": 34,
+   "corrige": 43
+  },
+  "A1.2": {
+   "page": 35,
+   "corrige": 40
+  },
+  "A1.3": {
+   "page": 36,
+   "corrige": 41
+  },
+  "A1.4": {
+   "page": 37,
+   "corrige": 41
+  },
+  "A1.5": {
+   "page": 38,
+   "corrige": 42
+  },
+  "A1.6": {
+   "page": 39,
+   "corrige": 42
+  },
+  "A2.1": {
+   "page": 47,
+   "corrige": 55
+  },
+  "A2.2": {
+   "page": 48,
+   "corrige": 56
+  },
+  "A2.3": {
+   "page": 49,
+   "corrige": 56
+  },
+  "A2.4": {
+   "page": 50,
+   "corrige": 57
+  },
+  "A2.5": {
+   "page": 51,
+   "corrige": 57
+  },
+  "A2.6": {
+   "page": 52,
+   "corrige": 58
+  },
+  "A2.7": {
+   "page": 53,
+   "corrige": 58
+  },
+  "A2.8": {
+   "page": 54,
+   "corrige": 59
+  },
+  "A3.1": {
+   "page": 63,
+   "corrige": 71
+  },
+  "A3.2": {
+   "page": 64,
+   "corrige": 71
+  },
+  "A3.3": {
+   "page": 65,
+   "corrige": 72
+  },
+  "A3.4": {
+   "page": 66,
+   "corrige": 72
+  },
+  "A3.5": {
+   "page": 67,
+   "corrige": 73
+  },
+  "A3.6": {
+   "page": 68,
+   "corrige": 73
+  },
+  "A3.7": {
+   "page": 69,
+   "corrige": 74
+  },
+  "A3.8": {
+   "page": 70,
+   "corrige": 74
+  },
+  "A4.1": {
+   "page": 79,
+   "corrige": 89
+  },
+  "A4.2": {
+   "page": 80,
+   "corrige": 86
+  },
+  "A4.3": {
+   "page": 81,
+   "corrige": 87
+  },
+  "A4.4": {
+   "page": 82,
+   "corrige": 87
+  },
+  "A4.5": {
+   "page": 83,
+   "corrige": 88
+  },
+  "A4.6": {
+   "page": 84,
+   "corrige": 88
+  },
+  "A4.7": {
+   "page": 85,
+   "corrige": 89
+  },
+  "A5.1": {
+   "page": 93,
+   "corrige": 101
+  },
+  "A5.2": {
+   "page": 94,
+   "corrige": 101
+  },
+  "A5.3": {
+   "page": 95,
+   "corrige": 102
+  },
+  "A5.4": {
+   "page": 96,
+   "corrige": 102
+  },
+  "A5.5": {
+   "page": 97,
+   "corrige": 103
+  },
+  "A5.6": {
+   "page": 98,
+   "corrige": 103
+  },
+  "A5.7": {
+   "page": 99,
+   "corrige": 104
+  },
+  "A5.8": {
+   "page": 100,
+   "corrige": 104
+  },
+  "A6.1": {
+   "page": 108,
+   "corrige": 114
+  },
+  "A6.2": {
+   "page": 109,
+   "corrige": 112
+  },
+  "A6.3": {
+   "page": 110,
+   "corrige": 113
+  },
+  "A6.4": {
+   "page": 111,
+   "corrige": 113
+  },
+  "A7.1": {
+   "page": 118,
+   "corrige": 125
+  },
+  "A7.2": {
+   "page": 119,
+   "corrige": 125
+  },
+  "A7.3": {
+   "page": 120,
+   "corrige": 126
+  },
+  "A7.4": {
+   "page": 121,
+   "corrige": 126
+  },
+  "A7.5": {
+   "page": 122,
+   "corrige": 127
+  },
+  "A7.6": {
+   "page": 123,
+   "corrige": 127
+  },
+  "A7.7": {
+   "page": 124,
+   "corrige": 128
+  },
+  "A8.1": {
+   "page": 131,
+   "corrige": 135
+  },
+  "A8.2": {
+   "page": 132,
+   "corrige": 134
+  },
+  "A8.3": {
+   "page": 133,
+   "corrige": 135
+  },
+  "G1.1": {
+   "page": 141,
+   "corrige": 148
+  },
+  "G1.2": {
+   "page": 142,
+   "corrige": 148
+  },
+  "G1.3": {
+   "page": 143,
+   "corrige": 149
+  },
+  "G1.4": {
+   "page": 144,
+   "corrige": 149
+  },
+  "G1.5": {
+   "page": 145,
+   "corrige": 150
+  },
+  "G1.6": {
+   "page": 146,
+   "corrige": 150
+  },
+  "G1.7": {
+   "page": 147,
+   "corrige": 151
+  },
+  "G2.1": {
+   "page": 155,
+   "corrige": 161
+  },
+  "G2.2": {
+   "page": 156,
+   "corrige": 161
+  },
+  "G2.3": {
+   "page": 157,
+   "corrige": 162
+  },
+  "G2.4": {
+   "page": 158,
+   "corrige": 162
+  },
+  "G2.5": {
+   "page": 159,
+   "corrige": 163
+  },
+  "G2.6": {
+   "page": 160,
+   "corrige": 163
+  },
+  "G3.1": {
+   "page": 167,
+   "corrige": 170
+  },
+  "G3.2": {
+   "page": 168,
+   "corrige": 170
+  },
+  "G3.3": {
+   "page": 169,
+   "corrige": 171
+  },
+  "G4.1": {
+   "page": 174,
+   "corrige": 178
+  },
+  "G4.2": {
+   "page": 175,
+   "corrige": 178
+  },
+  "G4.3": {
+   "page": 176,
+   "corrige": 179
+  },
+  "G4.4": {
+   "page": 177,
+   "corrige": 179
+  },
+  "C1.1": {
+   "page": 186,
+   "corrige": 193
+  },
+  "C1.2": {
+   "page": 186,
+   "corrige": 193
+  },
+  "C1.3": {
+   "page": 187,
+   "corrige": 194
+  },
+  "C1.4": {
+   "page": 187,
+   "corrige": 194
+  },
+  "C1.5": {
+   "page": 188,
+   "corrige": 195
+  },
+  "C1.6": {
+   "page": 188,
+   "corrige": 195
+  },
+  "C1.7": {
+   "page": 189,
+   "corrige": 196
+  },
+  "C1.8": {
+   "page": 189,
+   "corrige": 196
+  },
+  "C1.9": {
+   "page": 190,
+   "corrige": 196
+  },
+  "C1.10": {
+   "page": 190,
+   "corrige": 197
+  },
+  "C1.11": {
+   "page": 191,
+   "corrige": 197
+  },
+  "C1.12": {
+   "page": 191,
+   "corrige": 198
+  },
+  "C1.13": {
+   "page": 192,
+   "corrige": 198
+  },
+  "C2.1": {
+   "page": 203,
+   "corrige": 206
+  },
+  "C2.2": {
+   "page": 203,
+   "corrige": 206
+  },
+  "C2.3": {
+   "page": 204,
+   "corrige": 207
+  },
+  "C2.4": {
+   "page": 204,
+   "corrige": 207
+  },
+  "C2.5": {
+   "page": 205,
+   "corrige": 208
+  },
+  "C3.1": {
+   "page": 212,
+   "corrige": 215
+  },
+  "C3.2": {
+   "page": 212,
+   "corrige": 215
+  },
+  "C3.3": {
+   "page": 213,
+   "corrige": 216
+  },
+  "C3.4": {
+   "page": 213,
+   "corrige": 216
+  },
+  "C3.5": {
+   "page": 214,
+   "corrige": 217
+  },
+  "C3.6": {
+   "page": 214,
+   "corrige": 217
+  },
+  "C4.1": {
+   "page": 221,
+   "corrige": 223
+  },
+  "C4.2": {
+   "page": 221,
+   "corrige": 223
+  },
+  "C4.3": {
+   "page": 222,
+   "corrige": 224
+  },
+  "C4.4": {
+   "page": 222,
+   "corrige": 224
+  },
+  "C5.1": {
+   "page": 229,
+   "corrige": 235
+  },
+  "C5.2": {
+   "page": 229,
+   "corrige": 232
+  },
+  "C5.3": {
+   "page": 230,
+   "corrige": 233
+  },
+  "C5.4": {
+   "page": 230,
+   "corrige": 233
+  },
+  "C5.5": {
+   "page": 231,
+   "corrige": 234
+  },
+  "C5.6": {
+   "page": 231,
+   "corrige": 234
+  },
+  "C6.1": {
+   "page": 238,
+   "corrige": 240
+  },
+  "C6.2": {
+   "page": 238,
+   "corrige": 240
+  },
+  "C6.3": {
+   "page": 239,
+   "corrige": 241
+  },
+  "C7.1": {
+   "page": 244,
+   "corrige": 246
+  },
+  "C7.2": {
+   "page": 244,
+   "corrige": 246
+  },
+  "C7.3": {
+   "page": 245,
+   "corrige": 247
+  },
+  "B1.1": {
+   "page": 253,
+   "corrige": 259
+  },
+  "B1.2": {
+   "page": 254,
+   "corrige": 259
+  },
+  "B1.3": {
+   "page": 255,
+   "corrige": 260
+  },
+  "B1.4": {
+   "page": 256,
+   "corrige": 260
+  },
+  "B1.5": {
+   "page": 257,
+   "corrige": 261
+  },
+  "B1.6": {
+   "page": 258,
+   "corrige": 261
+  },
+  "B2.1": {
+   "page": 266,
+   "corrige": 272
+  },
+  "B2.2": {
+   "page": 267,
+   "corrige": 272
+  },
+  "B2.3": {
+   "page": 268,
+   "corrige": 273
+  },
+  "B2.4": {
+   "page": 269,
+   "corrige": 273
+  },
+  "B2.5": {
+   "page": 270,
+   "corrige": 274
+  },
+  "B2.6": {
+   "page": 271,
+   "corrige": 274
+  },
+  "B3.1": {
+   "page": 279,
+   "corrige": 284
+  },
+  "B3.2": {
+   "page": 280,
+   "corrige": 284
+  },
+  "B3.3": {
+   "page": 281,
+   "corrige": 285
+  },
+  "B3.4": {
+   "page": 282,
+   "corrige": 285
+  },
+  "B3.5": {
+   "page": 283,
+   "corrige": 286
+  },
+  "B4.1": {
+   "page": 290,
+   "corrige": 297
+  },
+  "B4.2": {
+   "page": 291,
+   "corrige": 297
+  },
+  "B4.3": {
+   "page": 292,
+   "corrige": 298
+  },
+  "B4.4": {
+   "page": 293,
+   "corrige": 298
+  },
+  "B4.5": {
+   "page": 294,
+   "corrige": 299
+  },
+  "B4.6": {
+   "page": 295,
+   "corrige": 299
+  },
+  "B4.7": {
+   "page": 296,
+   "corrige": 300
+  },
+  "B5.1": {
+   "page": 304,
+   "corrige": 312
+  },
+  "B5.2": {
+   "page": 305,
+   "corrige": 312
+  },
+  "B5.3": {
+   "page": 306,
+   "corrige": 313
+  },
+  "B5.4": {
+   "page": 307,
+   "corrige": 313
+  },
+  "B5.5": {
+   "page": 308,
+   "corrige": 314
+  },
+  "B5.6": {
+   "page": 309,
+   "corrige": 314
+  },
+  "B5.7": {
+   "page": 310,
+   "corrige": 315
+  },
+  "B5.8": {
+   "page": 311,
+   "corrige": 315
+  },
+  "F1.1": {
+   "page": 322,
+   "corrige": 328
+  },
+  "F1.2": {
+   "page": 323,
+   "corrige": 328
+  },
+  "F1.3": {
+   "page": 324,
+   "corrige": 329
+  },
+  "F1.4": {
+   "page": 325,
+   "corrige": 329
+  },
+  "F1.5": {
+   "page": 326,
+   "corrige": 330
+  },
+  "F1.6": {
+   "page": 327,
+   "corrige": 330
+  },
+  "F2.1": {
+   "page": 335,
+   "corrige": 343
+  },
+  "F2.2": {
+   "page": 336,
+   "corrige": 343
+  },
+  "F2.3": {
+   "page": 337,
+   "corrige": 344
+  },
+  "F2.4": {
+   "page": 338,
+   "corrige": 344
+  },
+  "F2.5": {
+   "page": 339,
+   "corrige": 345
+  },
+  "F2.6": {
+   "page": 340,
+   "corrige": 345
+  },
+  "F2.7": {
+   "page": 341,
+   "corrige": 346
+  },
+  "F2.8": {
+   "page": 342,
+   "corrige": 346
+  },
+  "F3.1": {
+   "page": 351,
+   "corrige": 360
+  },
+  "F3.2": {
+   "page": 352,
+   "corrige": 360
+  },
+  "F3.3": {
+   "page": 353,
+   "corrige": 361
+  },
+  "F3.4": {
+   "page": 354,
+   "corrige": 361
+  },
+  "F3.5": {
+   "page": 355,
+   "corrige": 362
+  },
+  "F3.6": {
+   "page": 356,
+   "corrige": 362
+  },
+  "F3.7": {
+   "page": 357,
+   "corrige": 363
+  },
+  "F3.8": {
+   "page": 358,
+   "corrige": 363
+  },
+  "F3.9": {
+   "page": 359,
+   "corrige": 364
+  },
+  "F4.1": {
+   "page": 368,
+   "corrige": 375
+  },
+  "F4.2": {
+   "page": 369,
+   "corrige": 375
+  },
+  "F4.3": {
+   "page": 370,
+   "corrige": 376
+  },
+  "F4.4": {
+   "page": 371,
+   "corrige": 376
+  },
+  "F4.5": {
+   "page": 372,
+   "corrige": 377
+  },
+  "F4.6": {
+   "page": 373,
+   "corrige": 377
+  },
+  "F4.7": {
+   "page": 374,
+   "corrige": 378
+  },
+  "D1.1": {
+   "page": 383,
+   "corrige": 387
+  },
+  "D1.2": {
+   "page": 384,
+   "corrige": 387
+  },
+  "D1.3": {
+   "page": 385,
+   "corrige": 388
+  },
+  "D1.4": {
+   "page": 386,
+   "corrige": 388
+  },
+  "D2.1": {
+   "page": 392,
+   "corrige": 400
+  },
+  "D2.2": {
+   "page": 393,
+   "corrige": 400
+  },
+  "D2.3": {
+   "page": 394,
+   "corrige": 401
+  },
+  "D2.4": {
+   "page": 395,
+   "corrige": 401
+  },
+  "D2.5": {
+   "page": 396,
+   "corrige": 404
+  },
+  "D2.6": {
+   "page": 397,
+   "corrige": 402
+  },
+  "D2.7": {
+   "page": 398,
+   "corrige": 403
+  },
+  "D2.8": {
+   "page": 399,
+   "corrige": 403
+  },
+  "D3.1": {
+   "page": 407,
+   "corrige": 410
+  },
+  "D3.2": {
+   "page": 408,
+   "corrige": 410
+  },
+  "D3.3": {
+   "page": 409,
+   "corrige": 411
+  },
+  "E1.1": {
+   "page": 417,
+   "corrige": 420
+  },
+  "E1.2": {
+   "page": 417,
+   "corrige": 420
+  },
+  "E1.3": {
+   "page": 418,
+   "corrige": 421
+  },
+  "E1.4": {
+   "page": 418,
+   "corrige": 421
+  },
+  "E1.5": {
+   "page": 419,
+   "corrige": 421
+  },
+  "E1.6": {
+   "page": 419,
+   "corrige": 422
+  },
+  "E2.1": {
+   "page": 425,
+   "corrige": 428
+  },
+  "E2.2": {
+   "page": 425,
+   "corrige": 428
+  },
+  "E2.3": {
+   "page": 426,
+   "corrige": 429
+  },
+  "E2.4": {
+   "page": 426,
+   "corrige": 429
+  },
+  "E2.5": {
+   "page": 427,
+   "corrige": 429
+  },
+  "E3.1": {
+   "page": 433,
+   "corrige": 435
+  },
+  "E3.2": {
+   "page": 433,
+   "corrige": 435
+  },
+  "E3.3": {
+   "page": 434,
+   "corrige": 436
+  },
+  "E3.4": {
+   "page": 434,
+   "corrige": 436
+  },
+  "P1": {
+   "page": 443,
+   "corrige": 453
+  },
+  "P2": {
+   "page": 444,
+   "corrige": 453
+  },
+  "P3": {
+   "page": 445,
+   "corrige": 454
+  },
+  "P4": {
+   "page": 446,
+   "corrige": 454
+  },
+  "P5": {
+   "page": 447,
+   "corrige": 455
+  },
+  "P6": {
+   "page": 448,
+   "corrige": 455
+  },
+  "P7": {
+   "page": 449,
+   "corrige": 456
+  },
+  "P8": {
+   "page": 450,
+   "corrige": 456
+  },
+  "P9": {
+   "page": 451,
+   "corrige": 457
+  },
+  "P10": {
+   "page": 452,
+   "corrige": 457
+  }
+ }
+}

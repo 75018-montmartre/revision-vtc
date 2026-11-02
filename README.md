@@ -14,6 +14,7 @@ Site compagnon du livre *Machine à Réussite · Examen VTC 2027* (Benjamin Blon
 | `contenu/simulateur.json` | Les hypothèses du simulateur « coût de revient et revenu net » (`docs/simulateurs/`) : chaque valeur, ses sources et la date de vérification ; voir « Mettre à jour le simulateur » |
 | `contenu/indexnow.json` | La clé publique IndexNow (`cle`), servie à la racine du site sous `docs/<clé>.txt` |
 | `contenu/fiches.json` | Codes et titres des fiches du livre, pour les renvois « Dans le livre » |
+| `contenu/livre_pages.json` | Page de chaque fiche du livre imprimé et de son corrigé (encadrés de `mises-a-jour.html`) |
 | `contenu/contact.json` | La clé d'accès Web3Forms du formulaire de contact (`web3forms_cle`) ; vide, la page Contact affiche l'adresse e-mail à la place du formulaire |
 | `contenu/livre.json` | L'adresse de la page Amazon du livre (`amazon`) ; vide, le site affiche « Bientôt disponible sur Amazon ». Et l'adresse n8n qui reçoit les inscriptions des lecteurs (`inscription_url`) |
 | `outils/generer.py` | Génère tout le site dans `docs/` à partir de `contenu/` |
@@ -70,8 +71,15 @@ Rubriques possibles, dans cet ordre : « Textes officiels », « Examen », « R
 ### Format d'une correction du livre
 
 ```json
-{"date": "JJ mois AAAA", "fiche": "A3.6", "avant": "Ce que dit le livre", "apres": "Ce qu'il faut retenir", "texte": "Texte officiel qui fonde la nouvelle règle"}
+{"date": "JJ mois AAAA", "fiche": "A3.6", "avant": "Ce que dit le livre", "apres": "Ce qu'il faut retenir", "texte": "Texte officiel qui fonde la nouvelle règle", "url": "https://www.legifrance.gouv.fr/…"}
 ```
+
+La correction la plus récente se place **en tête** de `corrections`. Chacune devient un encadré sur `mises-a-jour.html` : titre de la fiche, date, **page du livre** (et page du corrigé), ce que dit le livre, ce qu'il faut retenir, texte officiel (cliquable si `url` est donné), exemplaires concernés.
+
+- La page vient toute seule de `contenu/livre_pages.json` (les 213 fiches, page de la fiche et de son corrigé, tirées du PDF du livre ; même pagination dans les versions 1.0 et 1.1). Ne pas l'écrire à la main. Seulement si la correction porte sur une autre page que celle de la fiche (corrigé, examen blanc, page « Ce qui change en 2027 »…), ajouter `"page": 72`.
+- `"corrigee_dans": "1.2"` : seulement quand une nouvelle version du livre, qui intègre la correction, a été envoyée sur KDP. Sans ce champ, l'encadré dit « Toutes les versions imprimées ».
+- Le générateur refuse une correction à laquelle il manque un champ, ou dont la fiche n'existe pas dans `contenu/livre_pages.json`.
+- Versions du livre : 1.0 (octobre 2026, page 2 blanche) ; 1.1 (novembre 2026, page 2 « Ce livre est tenu à jour », version écrite en bas de la page 2 et en page 4).
 
 ## Accès aux examens blancs
 
