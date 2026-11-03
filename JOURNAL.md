@@ -6,6 +6,13 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mardi 3 novembre 2026, 13 h 20 · Accueil : carte « Simulateur gratuit » refaite
+
+- https://revision-vtc.fr/ : la carte du simulateur est refaite. « Simulateur gratuit » devient un vrai titre (condensé, grand). Dessous, un petit relevé mensuel en trois lignes : versé par les plateformes (3 917 €), cotisations, voiture et frais (− 2 926 €), il vous reste avant impôt (991 €), sous un trait épais. Les trois montants ont la même taille et sont alignés à droite, dans la même unité (par mois) ; avant, un montant était par semaine et l'autre par mois, en deux tailles différentes. Lien « Faire ma simulation avec mes chiffres » avec la pastille fléchée des cartes.
+- Montants calculés par le générateur avec les valeurs par défaut du simulateur (1 000 € versés par semaine, 47 semaines par an) ; résultat net inchangé (991 € par mois).
+- Vérifié : axe en clair et en sombre à 320, 768 et 1366 px (seule remarque, antérieure : « landmark-complementary-is-top-level » sur le bloc Actualité), aucun débordement horizontal.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mardi 3 novembre 2026, 14 h 10 · Simulateur : prix des carburants mis à jour chaque jour
 
 - https://revision-vtc.fr/simulateurs/cout-revient-revenu-net-vtc.html : les prix du SP95-E10 et du gazole sont désormais ceux de la veille, mis à jour chaque matin par GitHub Actions (`.github/workflows/carburants.yml`, script `outils/carburants.py`), au lieu de la moyenne hebdomadaire de la DGEC reprise le lundi (qui s'arrêtait encore au 23 octobre).

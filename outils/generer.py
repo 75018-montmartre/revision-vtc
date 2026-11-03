@@ -146,6 +146,7 @@ def accueil(nums, qs=()):
     # exemple du simulateur (mêmes valeurs par défaut que la page du simulateur, base prudente)
     sim = lire_simulateur()
     ex = calcul_simulateur(sim, base="clients", **defauts_simulateur(sim))
+    ex_sem = defauts_simulateur(sim)["semaines"]
     n_wiki = len(lire_wiki()["articles"])
     # mois de la dernière vérification du wiki (« 25 octobre 2026 » -> « octobre 2026 ») : le surtitre reste vrai sans retouche
     verif = " ".join(lire_wiki()["verifie"].split()[-2:])
@@ -180,13 +181,14 @@ def accueil(nums, qs=()):
         </div>
         <div class="hero-cartes">
           <a class="carte-hero carte-simu" href="{simu}">
-            <span class="carte-surtitre">Simulateur gratuit, exemple</span>
+            <span class="carte-titre">Simulateur gratuit</span>
+            <span class="carte-texte">{ty(f"Exemple mensuel : 1 000 € versés par semaine, {ex_sem} semaines par an")}</span>
             <span class="carte-calcul">
-              <span><span class="carte-legende">Versé par les plateformes</span><span class="carte-verse">{_euros(1000)} <small>par semaine</small></span></span>
-              <span><span class="carte-legende">Il vous reste, avant impôt</span><span class="carte-net">{_euros(ex["net"] / 12)} <small>par mois</small></span></span>
+              <span class="ligne"><span>{ty("Versé par les plateformes")}</span><span class="montant">{_euros(ex["verse"] / 12)}</span></span>
+              <span class="ligne"><span>{ty("Cotisations, voiture et frais")}</span><span class="montant">− {_euros((ex["verse"] - ex["net"]) / 12)}</span></span>
+              <span class="ligne total"><span>{ty("Il vous reste, avant impôt")}</span><span class="montant">{_euros(ex["net"] / 12)}</span></span>
             </span>
-            <span class="carte-texte">{ty("Commission, cotisations, voiture et frais déduits. Faites le calcul avec vos propres chiffres.")}</span>
-            <span class="carte-lien">Faire ma simulation</span>
+            <span class="carte-lien">Faire ma simulation avec mes chiffres</span>
           </a>
           <a class="carte-hero carte-livre" href="le-livre.html">
             <img src="couverture-petite.jpg" width="68" height="88" alt="">

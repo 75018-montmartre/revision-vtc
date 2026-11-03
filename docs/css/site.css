@@ -333,19 +333,18 @@ main:has(.hero){padding-bottom:0}
 .carte-livre{align-items:center;background:var(--nuit-2);color:var(--sur-nuit);border:1.5px solid var(--jaune-ombre)}
 .carte-livre img{flex:none;display:block;border-radius:3px}
 .carte-livre > span{display:flex;flex-direction:column;gap:var(--e1);min-width:0}
-.carte-surtitre{font-size:.9375rem;font-weight:600;color:var(--gris)}
-.carte-simu{container-type:inline-size}
-.carte-calcul{display:grid;grid-template-columns:auto auto;grid-template-rows:auto auto;grid-auto-flow:column;justify-content:start;align-items:baseline;gap:var(--e1) var(--e6)}
-.carte-calcul > span{display:contents}
-@container (max-width:22rem){
-  .carte-calcul{grid-template-columns:auto;grid-template-rows:none;grid-auto-flow:row}
-  .carte-calcul > span + span .carte-legende{margin-top:var(--e3)}
-}
-.carte-legende{font-size:.9375rem;color:var(--gris)}
-.carte-verse,.carte-net{font-family:var(--cond);font-weight:700;line-height:1.05;color:var(--encre)}
-.carte-verse{font-size:2rem}
-.carte-net{font-size:2.75rem}
-.carte-verse small,.carte-net small{font-family:var(--sans);font-size:1rem;font-weight:600}
+/* carte du simulateur : titre, phrase d'exemple, puis un petit relevé (trois lignes, montants alignés à droite,
+   même taille ; la dernière, le reste, sous un trait épais) et un lien à pastille fléchée */
+.carte-simu{gap:var(--e4)}
+.carte-simu .carte-titre{font-size:1.75rem;color:var(--encre)}
+.carte-simu .carte-texte{margin-top:calc(-1 * var(--e3))}
+.carte-calcul{display:grid;margin:0;border-top:1px solid var(--filet)}
+.carte-calcul .ligne{display:flex;justify-content:space-between;align-items:baseline;gap:var(--e4);padding:var(--e2) 0;border-bottom:1px solid var(--filet);font-size:1rem;line-height:1.3;color:var(--gris)}
+.carte-calcul .montant{flex:none;font-family:var(--cond);font-weight:700;font-size:1.75rem;line-height:1.1;color:var(--encre);font-variant-numeric:tabular-nums;white-space:nowrap}
+.carte-calcul .total{border-bottom:0;border-top:2px solid var(--encre);margin-top:-1px;font-weight:700;color:var(--encre)}
+.carte-simu .carte-lien{display:flex;justify-content:space-between;align-items:center;gap:var(--e4);text-decoration:none}
+.carte-simu .carte-lien::after{content:"";flex:none;width:2.25rem;height:2.25rem;border-radius:50%;background:var(--pastille) var(--pastille-fleche) center/1.15rem no-repeat}
+.carte-simu:hover .carte-lien{text-decoration:underline;text-underline-offset:.2em}
 .carte-texte{font-size:1rem;line-height:1.45}
 .carte-simu .carte-texte{color:var(--gris)}
 .carte-livre .carte-texte{color:var(--sur-nuit-doux)}
@@ -530,7 +529,6 @@ html.avec-barre body{padding-bottom:5.5rem}
 @media (max-width:42rem){
   .nom-site .sous{font-size:.875rem}
   .hero .actions .bouton{flex:1 1 100%}
-  .carte-net{font-size:2.375rem}
 }
 @media (max-width:36rem){
   body{font-size:1.125rem}
