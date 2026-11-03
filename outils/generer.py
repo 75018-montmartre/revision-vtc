@@ -1178,8 +1178,8 @@ def lire_simulateur():
             assert i in ids, f"simulateur : source inconnue {i}"
     c = s["valeurs"]
     assert c["prix_e10"]["date"] == c["prix_gazole"]["date"], "simulateur : les deux prix des carburants doivent avoir la même date"
-    dgec = next(x for x in s["sources"] if x["id"] == "dgec")
-    assert c["prix_e10"]["date"] in dgec["nom"], "simulateur : la source DGEC doit citer la date des prix des carburants"
+    pc = next(x for x in s["sources"] if x["id"] == "prix_carburants")
+    assert c["prix_e10"]["date"] in pc["nom"], "simulateur : la source des prix des carburants doit citer leur date"
     assert 0.5 < c["prix_e10"]["valeur"] < 5 and 0.5 < c["prix_gazole"]["valeur"] < 5, "simulateur : prix des carburants invraisemblable"
     return s
 
@@ -1419,7 +1419,7 @@ def simulateur(ds, note=None):
     {tab_hyp}
     <h2 id="sources">Sources</h2>
     <ul class="source">{sources}</ul>
-    <p class="source">{ty("Simulation indicative pour un chauffeur VTC en micro-entreprise ; elle ne remplace pas un conseil comptable ou fiscal adapté à votre situation. Les prix des carburants sont mis à jour régulièrement ; la date de vérification figure en haut de la page.")}</p>'''
+    <p class="source">{ty("Simulation indicative pour un chauffeur VTC en micro-entreprise ; elle ne remplace pas un conseil comptable ou fiscal adapté à votre situation. Les prix moyens des carburants sont mis à jour chaque matin à partir des prix déclarés la veille par les stations-service ; les autres valeurs ont été vérifiées à la date indiquée en haut de la page.")}</p>'''
 
     donnees = json.dumps({"valeurs": s["valeurs"]}, ensure_ascii=False).replace("</", "<\\/")
     fin = f'<script id="simu-donnees" type="application/json">{donnees}</script>\n<script src="../js/simulateur.js"></script>\n'

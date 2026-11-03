@@ -6,6 +6,16 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mardi 3 novembre 2026, 14 h 10 · Simulateur : prix des carburants mis à jour chaque jour
+
+- https://revision-vtc.fr/simulateurs/cout-revient-revenu-net-vtc.html : les prix du SP95-E10 et du gazole sont désormais ceux de la veille, mis à jour chaque matin par GitHub Actions (`.github/workflows/carburants.yml`, script `outils/carburants.py`), au lieu de la moyenne hebdomadaire de la DGEC reprise le lundi (qui s'arrêtait encore au 23 octobre).
+- Nouvelle source : flux quotidien officiel de prix-carburants.gouv.fr (ministère de l'Économie, Licence Ouverte 2.0). Moyenne nationale TTC des prix relevés la veille, une valeur par station, prix à plus de 20 % de la médiane écartés (erreurs de saisie, par exemple du gazole à 1,25 €).
+- Méthode contrôlée sur le vendredi 23 octobre 2026 : SP95-E10 2,106 € et gazole 2,355 €, contre 2,116 € et 2,352 € pour la DGEC. Résultat identique sur le fichier du 2 novembre déposé par Benjamin.
+- Prix du lundi 2 novembre 2026 : SP95-E10 2,082 € (3 743 stations), gazole 2,232 € (5 413 stations), contre 2,116 € et 2,352 € au 23 octobre. L'exemple chiffré du simulateur et la carte de l'accueil sont recalculés.
+- La tâche du lundi (Actualité VTC) ne touche plus aux prix des carburants. Les mises à jour quotidiennes n'ajoutent pas d'entrée à ce journal (commits « Simulateur : prix des carburants du … »).
+- Vérifications : `node outils/test_simulateur.js` (tous les calculs justes), générateur sans erreur, axe en clair et en sombre à 320 et 1 280 px (aucune nouvelle alerte ; l'alerte « landmark-complementary-is-top-level » à 320 px existait déjà), aucun débordement ; seuls les prix, leur date, la source et le texte de bas de page changent sur la page.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mardi 3 novembre 2026, 10 h 47 · Article n° 5 (tâche tous les deux jours)
 
 - Titre : « Réussir l'examen VTC du premier coup : coefficients, notes éliminatoires et calendrier 2027 »
