@@ -1617,6 +1617,97 @@ Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A5.4 (Avertissemen
 
 ## Articles VTC
 
+### Réussir l'examen VTC du premier coup : coefficients, notes éliminatoires et calendrier 2027
+
+Page : https://revision-vtc.fr/dossiers/reussir-examen-vtc-premier-coup.html
+Publié le 3 novembre 2026, chiffres vérifiés le 3 novembre 2026.
+
+Près de deux ans après leur inscription, à peine un candidat VTC sur deux a réussi l'examen. Or le barème officiel ne récompense pas toutes les révisions de la même façon. Le voici décortiqué, question par question, avec ce que coûte un échec en 2027.
+Sofiane a 13,06 de moyenne aux épreuves écrites de l'examen VTC. Il n'est pas admissible : il a eu 3 sur 20 en anglais, sous la note éliminatoire de 4. Son voisin de table, avec 10,24 de moyenne et trois notes sous 10, est admissible.
+Pour réussir l'examen VTC du premier coup, il faut à l'écrit 10 sur 20 de moyenne pondérée sur sept épreuves (au moins 170 points sur 340), au moins 6 sur 20 à chaque épreuve sauf l'anglais (4 sur 20), puis 12 sur 20 à l'épreuve pratique. Les quatre épreuves de coefficient 3 font 70,6 % de la note : c'est là que se joue l'admissibilité.
+Le barème de l'examen VTC : 7 épreuves, 17 coefficients, 3 h 50 d'écrit
+L'examen VTC se passe en deux temps. D'abord, sept épreuves écrites d'admissibilité, faites de questions à choix multiples (QCM) et de questions à réponses courtes (QRC). Ensuite, pour les candidats admissibles, une épreuve pratique d'admission, au volant. Tout est fixé par l'arrêté du 6 avril 2017 (article 2 en vigueur depuis le 1er avril 2024), et l'examen est organisé par la chambre de métiers et de l'artisanat (CMA) de votre région.
+Chaque épreuve est notée sur 20, mais leur poids diffère. Le tableau ajoute une colonne que l'arrêté ne donne pas : le poids réel de chaque épreuve, soit son coefficient divisé par le total des coefficients (17).
+A · Réglementation du transport public particulier de personnes, discriminations et violences sexuelles et sexistes 45 min 5 QRC sur 2 points, 10 QCM sur 1 point 3 moins de 6 17,6 %
+B · Gestion 45 min 2 QRC sur 2 points, 16 QCM sur 1 point 2 moins de 6 11,8 %
+C · Sécurité routière 30 min 20 QCM sur 1 point 3 moins de 6 17,6 %
+D · Français (compréhension d'un texte de 15 à 20 lignes) 30 min 3 QRC sur 2 points, 7 QCM sur 2 points 2 moins de 6 11,8 %
+E · Anglais (niveau A2) 30 min 20 QCM sur 1 point 1 moins de 4 5,9 %
+F · Développement commercial et gestion propre au VTC 30 min 4 QRC sur 2 points, 12 QCM sur 1 point 3 moins de 6 17,6 %
+G · Réglementation nationale spécifique au VTC 20 min 2 QRC sur 4 points, 6 QCM sur 2 points 3 moins de 6 17,6 %
+Total 230 min (3 h 50) 16 QRC, 91 QCM 17  100 %
+Deux chiffres à garder en tête. Les épreuves A, C, F et G, de coefficient 3, font à elles seules 70,6 % de la moyenne. Et les deux épreuves propres au VTC, F et G, en font 35,3 % : plus d'un tiers de la note se joue sur 50 minutes d'examen.
+Dans l'épreuve de français (D), un point est retiré si vous faites plus de cinq fautes d'orthographe dans l'ensemble de vos réponses courtes. Un point en D, c'est 2 points pondérés, soit 0,12 point de moyenne : peu, mais assez pour faire passer une moyenne de 10,06 (171 points) à 9,94 (169 points).
+Les deux règles pour être admissible, et le piège de l'anglais
+Pour être déclaré admissible, il faut remplir deux conditions en même temps :
+Une moyenne d'au moins 10 sur 20, calculée sur les sept épreuves avec leurs coefficients. Comme le total des coefficients est 17, cela revient à réunir au moins 170 points pondérés sur 340.
+Aucune note éliminatoire : au moins 6 sur 20 aux épreuves A, B, C, D, F et G, et au moins 4 sur 20 à l'épreuve E (anglais).
+Reprenons Sofiane. Ses notes : 15 en réglementation, 14 en gestion, 15 en sécurité routière, 13 en français, 3 en anglais, 12 en développement commercial, 13 en réglementation VTC. Le calcul donne 222 points pondérés, soit 13,06 de moyenne. Mais 3 en anglais est sous le seuil de 4 : il n'est pas admissible, et doit tout repasser.
+À l'inverse, un candidat qui obtient 11, 8, 13, 10, 6, 9 et 11 (dans le même ordre) totalise 174 points, soit 10,24 de moyenne. Il a trois notes sous 10 (8 en gestion, 6 en anglais, 9 en développement commercial), mais aucune sous le seuil : il est admissible.
+L'anglais pèse 5,9 % de la note, mais il peut vous éliminer à lui seul. La bonne stratégie n'est pas de viser haut en anglais : c'est de vous assurer 5 ou 6 bonnes réponses sur 20 avec de la marge, puis de consacrer le reste du temps aux épreuves de coefficient 3.
+Autre calcul utile : avec exactement 4 en anglais, il vous faut en moyenne 10,375 sur 20 dans les six autres épreuves (pondérées) pour atteindre 170 points. Un anglais faible se compense ; un anglais sous 4, jamais.
+Vous voulez tester vos propres notes ? Notre calcul de la note de l'examen VTC applique ces règles et vous dit, épreuve par épreuve, ce qui vous manque.
+Toutes les questions ne valent pas la même chose
+Une question rapporte ses points multipliés par le coefficient de l'épreuve. Résultat : une question à réponse courte de l'épreuve G (4 points, coefficient 3) pèse 12 points pondérés. Une question de QCM d'anglais (1 point, coefficient 1) en pèse un seul.
+G · Réglementation VTC 6 points pondérés (+0,35 de moyenne) 12 points pondérés (+0,71 de moyenne) 2 min 30
+A · Réglementation T3P 3 points pondérés (+0,18) 6 points pondérés (+0,35) 3 min
+F · Développement commercial 3 points pondérés (+0,18) 6 points pondérés (+0,35) 1 min 53
+C · Sécurité routière 3 points pondérés (+0,18) pas de QRC 1 min 30
+D · Français 4 points pondérés (+0,24) 4 points pondérés (+0,24) 3 min
+B · Gestion 2 points pondérés (+0,12) 4 points pondérés (+0,24) 2 min 30
+E · Anglais 1 point pondéré (+0,06) pas de QRC 1 min 30
+Une seule réponse courte juste en réglementation VTC vaut autant que douze bonnes réponses en anglais. Les huit questions de l'épreuve G, en 20 minutes, pèsent autant dans la moyenne que les vingt questions de sécurité routière.
+Attention : la note éliminatoire de 6 vaut aussi en gestion et en français. Ce calcul dit où placer vos heures une fois ces seuils assurés.
+Les QRC demandent une réponse courte mais exacte : en A et en G, apprenez les chiffres, les délais et les montants exacts plutôt que l'idée générale. Les textes officiels utiles sont recopiés et expliqués dans nos Textes du métier.
+Taux de réussite : ce que disent les chiffres officiels
+L'Observatoire national des transports publics particuliers de personnes, dont le rapport est publié par le service statistique du ministère de la Transition écologique (SDES), suit les candidats à partir des données de CMA France. Ses chiffres sont sans appel :
+51 % des candidats inscrits à l'examen VTC en 2023 avaient réussi l'ensemble du parcours en janvier 2025, contre 75 % pour l'examen de taxi (rapport publié le 18 juin 2025).
+Parmi les candidats inscrits à l'examen VTC en 2022 qui ont passé les épreuves, 58 % ont réussi l'épreuve théorique dès le premier passage, et 68 % l'épreuve pratique dès le premier passage (rapport de mars 2024).
+En janvier 2024, 35 % des candidats VTC inscrits en 2022 attendaient encore de repasser l'épreuve théorique après au moins un échec, et 7 % l'épreuve pratique.
+Autrement dit, la première marche, l'écrit, est la plus haute : parmi les inscrits de 2022 qui se sont présentés à l'écrit, 42 % ne l'ont pas réussi au premier passage.
+Ce que coûte un échec : de l'argent et des mois
+Le règlement d'examen des CMA (version de décembre 2024) est clair sur ce qui se passe en cas d'échec :
+Échec à l'écrit : vous recevez votre relevé de notes et vous devez vous réinscrire à la totalité de l'examen et repasser les sept épreuves, y compris celles où vous aviez une bonne note.
+Échec à l'épreuve pratique (moins de 12 sur 20) : vous gardez votre admissibilité. Vous pouvez vous présenter trois fois au total à l'épreuve pratique, dans l'année qui suit la publication des résultats de l'écrit.
+Après trois échecs à la pratique, ou passé ce délai d'un an : il faut tout repasser, écrit compris.
+En 2027, les droits d'inscription augmentent légèrement. À partir du 1er janvier 2027, l'examen complet coûte 246 € (241 € en 2026), et l'épreuve pratique seule 120 € (118 € en 2026). Voici ce que cela donne selon le parcours, en ne comptant que les droits d'examen :
+Écrit et pratique réussis du premier coup 246 € 0 €
+Pratique ratée une fois 246 € + 120 € = 366 € + 120 €
+Pratique ratée deux fois 246 € + 2 × 120 € = 486 € + 240 €
+Écrit raté une fois 2 × 246 € = 492 € + 246 €
+Écrit raté une fois, puis pratique ratée une fois 2 × 246 € + 120 € = 612 € + 366 €
+S'y ajoutent la voiture à double commande pour la pratique (fournie par le candidat) et, surtout, les semaines sans revenu : le vrai coût d'un échec est le temps.
+En Hauts-de-France par exemple, la CMA a publié six sessions d'écrit pour 2027 : le 26 janvier, le 30 mars, le 25 mai, le 29 juin, le 28 septembre et le 16 novembre. Le dossier complet, paiement compris, doit être validé de 25 à 39 jours avant chaque session (le 18 décembre 2026 pour la session du 26 janvier). Or les résultats de l'écrit peuvent être publiés jusqu'à un mois après la session. Exemple : un candidat qui échoue le 26 janvier 2027 ne pourra repasser au plus tôt que le 30 mars, si son nouveau dossier est complet et validé au plus tard le vendredi 26 février à midi ; si ses résultats arrivent tard, ce délai devient presque impossible à tenir, et ce sera le 25 mai. Et entre la session du 29 juin et la suivante, il y a trois mois d'écart. Les calendriers varient d'une région à l'autre : consultez celui de votre CMA.
+Le budget de démarrage complet est détaillé dans notre article « Combien coûte vraiment le lancement en VTC ? ».
+L'épreuve pratique : 12 sur 20, et un geste qui arrête tout
+L'épreuve d'admission est une mise en situation : vous réalisez une mission de transport comme avec un vrai client, avec au moins 20 minutes de conduite en circulation. Elle est notée sur 20, en quatre groupes de compétences :
+Préparation et réalisation du parcours : 3 points.
+Sécurité et souplesse de la conduite, respect du Code de la route : 10 points.
+Prise en charge et relation client, y compris les informations touristiques : 5 points.
+Facturation : 2 points.
+Il faut 12 sur 20 pour être reçu. Vous avez donc droit à 8 points de pertes au plus, sur l'ensemble des quatre groupes. Et une règle ne pardonne pas : si l'examinateur intervient sur la double commande ou sur le volant, l'épreuve s'arrête et vous êtes ajourné, quelle que soit la qualité du reste.
+Quelques règles du règlement d'examen des CMA :
+C'est vous qui fournissez la voiture. Elle doit être assurée, à jour du contrôle technique, équipée d'une double commande, de doubles rétroviseurs intérieurs et extérieurs, et avoir quatre portières. Elle n'a pas besoin de respecter les normes des véhicules VTC.
+Les papiers : votre convocation, l'original de votre pièce d'identité et de votre permis B, le certificat d'immatriculation et, en cas de location, l'attestation d'assurance du loueur et le contrat à votre nom (ou la facture acquittée).
+Le GPS : celui de votre choix ou votre téléphone, fixé sur un support. L'adresse est saisie ou dictée sur place, jamais préenregistrée, et vous ne touchez pas au GPS en roulant.
+Les chaussures : conduire avec « des chaussures ouvertes, sans attache derrière le pied, ou pieds nus » est proscrit.
+Vous êtes convoqué à l'épreuve pratique dans les deux mois qui suivent les résultats de l'écrit.
+Une méthode en quatre temps pour réussir du premier coup
+Une façon de s'organiser, à adapter à votre niveau :
+1. Sécuriser les seuils. Faites un premier examen blanc complet, en temps réel (3 h 50 d'épreuves). Repérez toute épreuve sous 8 sur 20, et l'anglais sous 6 : ce sont vos urgences, parce qu'une seule note éliminatoire annule tout le reste.
+2. Travailler les coefficients 3. Une fois les seuils assurés, consacrez l'essentiel de vos heures à A, C, F et G (70,6 % de la note). En G et en A, apprenez les chiffres, les délais et les sanctions au mot près, pour les réponses courtes.
+3. S'entraîner au rythme de l'examen. En sécurité routière et en anglais, vous avez en moyenne 1 min 30 par question ; en réglementation VTC, 2 min 30 pour des questions qui valent bien plus. Chronométrez-vous.
+4. Préparer la pratique en parallèle. N'attendez pas les résultats de l'écrit : relisez la grille de l'épreuve pratique, pratiquez la conduite souple, l'accueil du client et la facturation, et prévoyez la voiture à double commande.
+Et avant de vous inscrire, vérifiez les conditions : votre permis ne doit plus être probatoire (voir notre question « Peut-on devenir chauffeur VTC avec un permis probatoire ? »), et le dossier doit être complet et payé avant la date limite de la session visée.
+Le jour de l'écrit, le téléphone, la montre connectée et les oreillettes sont interdits pendant les épreuves : les utiliser est une fraude. L'examen est annulé, et une exclusion pour fraude interdit de se réinscrire pendant cinq ans (article R3120-7 du Code des transports). Suivez à la lettre la liste du matériel autorisé indiquée sur votre convocation.
+L'écrit de l'examen VTC compte sept épreuves (A à G), 3 h 50 au total ; il faut 10 sur 20 de moyenne pondérée, soit 170 points sur 340.
+Une note sous 6 sur 20 (sous 4 en anglais) élimine, même avec une excellente moyenne.
+Les épreuves de coefficient 3 (A, C, F, G) font 70,6 % de la note ; une réponse courte juste en réglementation VTC vaut douze bonnes réponses en anglais.
+En janvier 2025, 51 % des candidats inscrits à l'examen VTC en 2023 avaient réussi l'ensemble du parcours, selon l'Observatoire national du T3P.
+Un échec à l'écrit oblige à tout repasser ; à la pratique, on a trois essais en un an. En 2027, l'examen complet coûte 246 € et la pratique seule 120 €.
+
+Sources : Arrêté du 6 avril 2017 relatif aux programmes et à l'évaluation des épreuves des examens d'accès aux professions de conducteur de taxi et de conducteur de voiture de transport avec chauffeur, articles 2 (en vigueur depuis le 1er avril 2024) et 3, Légifrance (https://www.legifrance.gouv.fr/loda/id/JORFTEXT000034379046/) ; Code des transports, article R3120-7 (conditions d'inscription à l'examen), texte recopié dans nos Textes du métier, vérifié le 25 octobre 2026 (https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043177694) ; CMA France, règlement d'examen taxi et VTC (version de décembre 2024), publié sur exament3p.fr (https://www.exament3p.fr/media/pdf/cma_reglement_examen_taxi.pdf) ; CMA Hauts-de-France, « Examen Taxi et VTC » (droits d'inscription 2026 et 2027, calendrier des sessions d'admissibilité 2027, épreuve pratique) (https://www.cma-hautsdefrance.fr/examen-taxi-et-vtc/) ; Exament3p.fr (plateforme d'inscription des CMA), page « Informations » (tarifs 2026 et 2027) (https://www.exament3p.fr/informations) ; SDES, Observatoire national des transports publics particuliers de personnes, « Les taxis et VTC : accès à la profession, offre de transport, équipement », rapport 2025 (publié le 18 juin 2025) (https://www.statistiques.developpement-durable.gouv.fr/les-taxis-et-vtc-acces-la-profession-offre-de-transport-equipement-rapport-2025-de-lobservatoire) ; SDES, Observatoire national des transports publics particuliers de personnes, « Les taxis et VTC : accès à la profession, offre de transport, équipement », rapport 2024 (mars 2024), pages 15 et 16, copie publiée par l'ARPE (https://www.arpe.gouv.fr/wp-content/uploads/2024/03/etudes_2_taxi_vtc_mars2024.pdf).
+
 ### Chauffeur VTC salarié ou indépendant : que choisir pour débuter ?
 
 Page : https://revision-vtc.fr/dossiers/chauffeur-vtc-salarie-ou-independant.html

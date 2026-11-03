@@ -6,6 +6,19 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mardi 3 novembre 2026, 10 h 47 · Article n° 5 (tâche tous les deux jours)
+
+- Titre : « Réussir l'examen VTC du premier coup : coefficients, notes éliminatoires et calendrier 2027 »
+- Page publiée : https://revision-vtc.fr/dossiers/reussir-examen-vtc-premier-coup.html (2 491 mots, sans photo)
+- En bref : à l'écrit, 10 sur 20 de moyenne pondérée sur sept épreuves (170 points sur 340), au moins 6 sur 20 à chaque épreuve sauf l'anglais (4 sur 20), puis 12 sur 20 à la pratique. Les épreuves de coefficient 3 (A, C, F, G) font 70,6 % de la note.
+- Apport : poids réel de chaque épreuve, valeur pondérée de chaque question (une réponse courte en G vaut douze QCM d'anglais), temps par question, taux de réussite officiels (SDES : 51 % des inscrits VTC de 2023 admis en janvier 2025 ; 58 % à l'écrit et 68 % à la pratique au premier passage pour les inscrits de 2022), règles en cas d'échec (règlement CMA de décembre 2024), coût d'un échec aux tarifs 2027 (246 €, 120 €), calendrier 2027 des Hauts-de-France, règles pratiques de l'épreuve de conduite.
+- Sources lues le 3 novembre 2026 : arrêté du 6 avril 2017 (Légifrance), règlement d'examen des CMA, CMA Hauts-de-France, exament3p.fr, rapports 2025 et 2024 de l'Observatoire national du T3P (SDES). R3120-7 d'après le wiki (vérifié le 25 octobre 2026), concordant avec le règlement CMA. Relecture indépendante : 46 points contrôlés, 7 corrigés (dont un nombre de notes sous 10 faux), calculs refaits.
+- Doublons évités : simulateur « calcul de la note » (outil, mêmes règles ; l'article a des exemples différents et le relie), article n° 1 (seul le prix de l'examen), question « permis probatoire » (reliée).
+- Accessibilité : axe sans erreur en clair et en sombre, à 320 et 1 280 px, sur la page et l'index des articles ; l'accueil garde l'alerte « landmark-complementary-is-top-level » déjà signalée.
+- À noter : la mention de bas de page commune aux articles parle de « fourchettes » de formation, d'assurance et de véhicule, absentes de cet article (texte du générateur, non modifié).
+- Règles du livre touchées : aucune (la fiche A2.4 cite le tarif 2026 de 241 €, déjà signalé le 2 novembre).
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mardi 3 novembre 2026, 9 h 05 · Question VTC du jour
 
 - Question : « Vignette VTC : où la coller sur la voiture ? »
