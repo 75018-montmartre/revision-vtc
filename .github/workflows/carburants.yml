@@ -1,0 +1,47 @@
+# Met à jour chaque matin les prix moyens du SP95-E10 et du gazole du simulateur, à partir du flux quotidien
+# officiel de prix-carburants.gouv.fr (fichier de la veille), puis régénère le site et publie sur main.
+# Aucun secret. Si le fichier est absent ou incomplet, la tâche échoue sans rien modifier (GitHub prévient par e-mail)
+# et le simulateur garde les prix précédents avec leur date.
+# Lancement à la main (onglet Actions) : « jour » au format AAAA-MM-JJ, « essai » pour calculer sans publier.
+name: Prix des carburants (simulateur)
+on:
+  schedule:
+    - cron: "17 5 * * *"   # 6 h 17 à Paris l'hiver, 7 h 17 l'été
+  workflow_dispatch:
+    inputs:
+      jour:
+        description: "Jour des prix (AAAA-MM-JJ), vide = la veille"
+        type: string
+        default: ""
+      essai:
+        description: "Calculer sans publier"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: carburants
+  cancel-in-progress: false
+jobs:
+  carburants:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Calculer les prix moyens
+        run: python3 outils/carburants.py ${{ inputs.jour && format('--jour {0}', inputs.jour) || '' }} ${{ inputs.essai && '--essai' || '' }}
+      - name: Régénérer le site et vérifier le calcul
+        if: ${{ !inputs.essai }}
+        run: |
+          python3 outils/generer.py
+          node outils/test_simulateur.js
+      - name: Publier
+        if: ${{ !inputs.essai }}
+        run: |
+          git diff --quiet && { echo "Aucun changement."; exit 0; }
+          git config user.name "revision-vtc (prix des carburants)"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add contenu/simulateur.json docs
+          git commit -q -m "Simulateur : prix des carburants du $(python3 -c 'import json;print(json.load(open("contenu/simulateur.json"))["valeurs"]["prix_e10"]["date"])')"
+          git pull -q --rebase origin main
+          git push -q origin HEAD:main
