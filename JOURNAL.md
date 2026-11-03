@@ -6,6 +6,18 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mardi 3 novembre 2026, 9 h 05 · Question VTC du jour
+
+- Question : « Vignette VTC : où la coller sur la voiture ? »
+- Page publiée : https://revision-vtc.fr/questions/2026-11-03-vignette-vtc-ou-la-coller.html
+- Réponse courte : en bas à gauche du pare-brise avant, côté conducteur, et en bas à droite de la lunette arrière, à l'opposé du conducteur. Depuis le 2 août 2025, les deux vignettes doivent être « collées de manière inamovible » : une vignette simplement posée ou glissée dans un support amovible ne suffit plus.
+- Apport : emplacement exact des deux vignettes, changement du 2 août 2025 (arrêté du 24 juillet 2025 : « apposées » devient « collées de manière inamovible »), vignette temporaire (une seule, 30 jours ouvrés au plus), quatre informations propres au véhicule, trois cas de fin de validité, sanction (4e classe, 750 € au plus pour une personne physique). L'article sur le budget ne citait que le prix des vignettes ; il est relié depuis la page.
+- Sources lues le 3 novembre 2026 : arrêté du 6 avril 2017 (articles 1 à 4 et annexe) et arrêté du 24 juillet 2025 sur Légifrance ; R3122-8 et R3124-6 sur Légifrance ; Code pénal 131-13 (service-public.fr F32803 et Juritravail) ; L'Officiel des métiers. Relecture indépendante : 32 affirmations confirmées, 1 retirée (définition de l'exploitant), 2 attributions précisées.
+- Accessibilité : axe sans erreur en clair et en sombre, à 320 et 1 280 px, sur la page. À noter : l'accueil signale une alerte axe « landmark-complementary-is-top-level » (déjà présente avant cette publication, règle de bonne pratique).
+- Script du réel : `reseaux/reels/2026-11-03-vignette-vtc-ou-la-coller.txt`.
+- Règles du livre touchées : aucune modifiée ; à vérifier par Benjamin : la fiche G3.1 mentionne-t-elle le collage inamovible exigé depuis le 2 août 2025 ?.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Lundi 2 novembre 2026, 14 h 45 · Mises à jour du livre : un encadré par correction, avec la page du livre
 
 - https://revision-vtc.fr/mises-a-jour.html : chaque correction du livre s'affiche désormais dans un encadré (titre de la fiche, date, **page du livre et page du corrigé**, ce que dit le livre, ce qu'il faut retenir, texte officiel cliquable, exemplaires concernés), au lieu d'un tableau. La page n'a encore aucune correction : rien ne change pour le lecteur tant qu'il n'y en a pas.

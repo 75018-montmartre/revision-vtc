@@ -1,0 +1,67 @@
+{
+ "date": "2026-11-03",
+ "slug": "vignette-vtc-ou-la-coller",
+ "question": "Vignette VTC : où la coller sur la voiture ?",
+ "reponse_courte": "En bas à gauche du pare-brise avant, côté conducteur, et en bas à droite de la lunette arrière, à l'opposé du conducteur. Depuis le 2 août 2025, les deux vignettes doivent être « collées de manière inamovible » : une vignette simplement posée ou glissée dans un support amovible ne suffit plus.",
+ "sections": [
+  {
+   "titre": "La règle : deux vignettes, deux angles opposés",
+   "texte": [
+    "L'article R3122-8 du Code des transports impose aux voitures de transport avec chauffeur une signalétique distinctive, définie par arrêté et délivrée par l'Imprimerie nationale. Cet arrêté est celui du 6 avril 2017 relatif à la signalétique des VTC.",
+    "La signalétique définitive comprend deux vignettes autocollantes (article 1 de l'arrêté). Son article 4 fixe leur place :",
+    "1. Vignette avant : dans l'angle du pare-brise avant situé en bas à gauche de la place du conducteur.",
+    "2. Vignette arrière : dans l'angle du pare-brise arrière (la lunette arrière) situé en bas à droite, à l'opposé de la place du conducteur.",
+    "Sur la voiture, la vignette avant se trouve donc du côté du conducteur et la vignette arrière du côté du passager avant. Ce sont deux angles opposés : la vignette arrière ne se colle pas derrière le conducteur."
+   ]
+  },
+  {
+   "titre": "Depuis le 2 août 2025 : collées, et de manière inamovible",
+   "texte": [
+    "Avant le 2 août 2025, l'article 4 demandait que les deux vignettes soient « apposées ». Un arrêté du 24 juillet 2025, publié au Journal officiel du 1er août 2025, a remplacé ce mot : les deux vignettes de la signalétique définitive sont désormais « collées de manière inamovible sans détruire les vignettes ». Cette version de l'article 4 est en vigueur depuis le 2 août 2025.",
+    "**Erreur à éviter** : laisser la vignette sur le tableau de bord, dans une pochette ou dans un porte-vignette qu'on retire à la fin de la journée. Une vignette qui n'est pas collée sur la vitre de façon inamovible ne répond pas à l'article 4."
+   ]
+  },
+  {
+   "titre": "La vignette temporaire, en attendant les définitives",
+   "texte": [
+    "En attendant la signalétique définitive, l'exploitant reçoit une vignette temporaire, délivrée dès réception du paiement (article 2 de l'arrêté). C'est le cas après l'inscription au registre des VTC, après une mise à jour du registre (par exemple un changement de voiture), après un renouvellement d'inscription ou après une déclaration de recours à des véhicules dans les conditions du III de l'article R3122-1.",
+    "Il n'y a qu'une vignette temporaire. Elle est imprimée sur papier libre à partir d'un exemplaire envoyé par voie électronique par l'Imprimerie nationale (article 1), et elle se place dans l'angle du pare-brise avant situé en bas à gauche de la place du conducteur (article 4).",
+    "Sa validité ne peut pas dépasser trente jours ouvrés à compter de l'envoi électronique par l'Imprimerie nationale (article 3)."
+   ]
+  },
+  {
+   "titre": "Une vignette par voiture, et pas pour toujours",
+   "texte": [
+    "La vignette n'est pas un macaron générique. L'annexe de l'arrêté y prévoit quatre informations propres à chaque véhicule : le numéro d'inscription de l'exploitant au registre, le numéro d'immatriculation du véhicule, un code-barres bidimensionnel et le numéro de référence de la vignette. La signalétique définitive est d'ailleurs délivrée « pour chaque véhicule validé sur le registre » (article 2).",
+    "D'après l'article 3, la signalétique définitive cesse d'être valide dans trois cas :",
+    "1. le véhicule n'est plus conforme aux caractéristiques techniques exigées des VTC (article R3122-6 du Code des transports et ses textes d'application) ;",
+    "2. l'inscription de l'exploitant au registre arrive à échéance, et au plus tard au bout de cinq ans ;",
+    "3. la durée du recours à des véhicules prévu au III de l'article R3122-1 est expirée.",
+    "Le prix des vignettes et les autres frais de démarrage sont détaillés dans notre article sur [le budget complet du lancement en VTC](../dossiers/cout-pour-devenir-chauffeur-vtc.html)."
+   ]
+  },
+  {
+   "titre": "Ce que prévoit le Code des transports en cas d'oubli",
+   "texte": [
+    "L'article R3124-6 du Code des transports punit de l'amende prévue pour les contraventions de quatrième classe l'utilisation, par l'exploitant de VTC, de véhicules sans la signalétique prévue à l'article R3122-8, ou avec une signalétique utilisée dans des conditions non conformes.",
+    "Pour une personne physique, l'amende d'une contravention de quatrième classe va jusqu'à 750 € (article 131-13 du Code pénal)."
+   ]
+  }
+ ],
+ "a_retenir": [
+  "La vignette VTC avant se colle en bas à gauche du pare-brise avant, côté conducteur, et la vignette arrière en bas à droite de la lunette arrière, à l'opposé du conducteur.",
+  "Depuis le 2 août 2025, les deux vignettes définitives doivent être collées de manière inamovible : un porte-vignette ou une vignette posée sur le tableau de bord ne suffit pas.",
+  "La vignette temporaire, unique et imprimée sur papier, se place en bas à gauche du pare-brise avant et vaut trente jours ouvrés au plus."
+ ],
+ "wiki": ["r3122-8", "arrete-6-avril-2017-signaletique", "r3124-6", "r3122-6", "l3122-3"],
+ "fiches": [["G3.1", "Les deux vignettes : où, quoi, comment"], ["G3.3", "Quand la vignette cesse de valoir"]],
+ "sources": [
+  {"nom": "Arrêté du 6 avril 2017 relatif à la signalétique des voitures de transport avec chauffeur, articles 1 à 4 et annexe (Légifrance, lu le 3 novembre 2026)", "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000034379025/", "date": "article 4 en vigueur depuis le 2 août 2025, articles 1 à 3 depuis le 8 avril 2017"},
+  {"nom": "Arrêté du 24 juillet 2025 modifiant l'arrêté du 6 avril 2017 relatif à la signalétique des voitures de transport avec chauffeur, JORF n° 177 du 1er août 2025 (Légifrance, lu le 3 novembre 2026)", "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000052019590", "date": "3 novembre 2026"},
+  {"nom": "Code des transports, article R3122-8 (Légifrance, lu le 3 novembre 2026)", "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389549", "date": "version en vigueur depuis le 1er juillet 2017"},
+  {"nom": "Code des transports, article R3124-6 (Légifrance, lu le 3 novembre 2026 ; texte également recopié dans le wiki du site, vérifié le 25 octobre 2026)", "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000034389616/2017-08-08", "date": "version en vigueur depuis le 1er juillet 2017"},
+  {"nom": "Code pénal, article 131-13 (montant des contraventions), d'après le guide des démarches de service-public.fr (fiche F32803) et Juritravail, lus le 3 novembre 2026", "url": "https://sites.service-information-publique.fr/vias/guide-professionnels/F32803.html", "date": "3 novembre 2026"},
+  {"nom": "L'Officiel des métiers, « VTC : vos vignettes doivent désormais être collées directement sur le pare-brise », 1er août 2025 (lu le 3 novembre 2026)", "url": "https://www.lofficieldesmetiers.fr/vtc-vos-vignettes-doivent-desormais-etre-collees-directement-sur-le-pare-brise/", "date": "3 novembre 2026"}
+ ],
+ "verifie": "3 novembre 2026"
+}

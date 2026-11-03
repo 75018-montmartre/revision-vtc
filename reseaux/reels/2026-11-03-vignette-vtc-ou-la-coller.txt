@@ -1,0 +1,57 @@
+RÉEL · Vignette VTC : où la coller sur la voiture ?
+Page : https://revision-vtc.fr/questions/2026-11-03-vignette-vtc-ou-la-coller.html
+Durée visée : 35 à 40 secondes
+
+ACCROCHE (0 à 3 s)
+  Texte à l'écran : Vignette VTC : où la coller ?
+  Voix : Votre vignette VTC, vous la collez où, exactement ?
+
+DÉROULÉ
+  Plan 1 (3 à 10 s)
+    Texte à l'écran : Avant : en bas à gauche
+    Voix : Devant, dans l'angle en bas à gauche du pare-brise, côté
+    conducteur.
+  Plan 2 (10 à 17 s)
+    Texte à l'écran : Arrière : en bas à droite
+    Voix : Derrière, dans l'angle en bas à droite de la lunette arrière,
+    à l'opposé du conducteur. Pas derrière le conducteur.
+  Plan 3 (17 à 25 s)
+    Texte à l'écran : Depuis août 2025 : collée, inamovible
+    Voix : Depuis le 2 août 2025, l'arrêté exige des vignettes « collées
+    de manière inamovible ». Un porte-vignette ou le tableau de bord ne
+    suffit pas.
+  Plan 4 (25 à 31 s)
+    Texte à l'écran : Temporaire : une seule, 30 jours ouvrés
+    Voix : En attendant les définitives, une seule vignette temporaire,
+    en papier, en bas à gauche du pare-brise. Trente jours ouvrés au
+    plus.
+  Plan 5 (31 à 37 s)
+    Texte à l'écran : Sans vignette : jusqu'à 750 €
+    Voix : Sans vignette, c'est une contravention de quatrième classe
+    pour l'exploitant : jusqu'à 750 euros pour une personne physique.
+
+CHUTE (37 à 41 s)
+  Texte à l'écran : Avant gauche, arrière droite
+  Voix : Avant gauche, arrière droite, et bien collée. Réponse complète
+  et sources sur revision-vtc.fr.
+
+LÉGENDE
+  Vignette VTC : en bas à gauche du pare-brise avant, côté conducteur,
+  et en bas à droite de la lunette arrière. Depuis le 2 août 2025, les
+  deux vignettes doivent être collées de manière inamovible. Vignette
+  temporaire, durée de validité et sanction : tout est sur la page.
+  #chauffeurvtc #vtc #examenvtc #vignettevtc #macaronvtc #reglementationvtc
+  https://revision-vtc.fr/questions/2026-11-03-vignette-vtc-ou-la-coller.html
+
+SOURCES
+  - Arrêté du 6 avril 2017 relatif à la signalétique des voitures de
+    transport avec chauffeur (Légifrance), articles 1 à 4 et annexe,
+    lu le 3 novembre 2026
+    https://www.legifrance.gouv.fr/loda/id/JORFTEXT000034379025/
+  - Arrêté du 24 juillet 2025 (JORF n° 177 du 1er août 2025), lu le
+    3 novembre 2026
+    https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000052019590
+  - Code des transports, articles R3122-8 et R3124-6 (Légifrance), lus
+    le 3 novembre 2026
+  - Code pénal, article 131-13 (service-public.fr, fiche F32803, et
+    Juritravail), lu le 3 novembre 2026
