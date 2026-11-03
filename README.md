@@ -189,10 +189,10 @@ Direction « signalétique en relief », en place depuis le 31 octobre 2026 : ba
 - **Sur téléphone** (sous 52rem) : nom du site sur une ligne, sous-titre masqué (le nom suffit) ; fil d'Ariane avec une zone cliquable de 44 px sans changer son aspect.
 - **Structure d'une page intérieure** (automatique) : en-tête quadrillé avec fil d'Ariane, surtitre, titre, chapeau ; puis la colonne de lecture (46rem). Chaque page commence par `<p class="surtitre">` (facultatif), `<h1>`, puis `<p class="chapeau">` ou `<p class="meta">`.
 - **Trois mises en page** : une colonne ; colonne + encadré à droite (`.deux-col`, wiki et Questions VTC) ; pages d'index avec grilles de cartes.
-- **Titres** : surtitres en casse normale, jamais en capitales ni espacés. En-tête de bloc (`.tete-bloc`) : surtitre gris, grand titre condensé posé sur la page, trait épais dessous, lien « Tous les… » en pilule en relief. Intertitre de contenu (`h2`) : petit carré jaune devant.
+- **Titres** : surtitres en casse normale, jamais en capitales ni espacés. En-tête de bloc (`.tete-bloc`) : surtitre gris, grand titre condensé posé sur la page, trait épais dessous, lien « Tous les… » en rectangle sobre à plat (bord 1,5 px, flèche à droite, rempli de bleu nuit au survol). Intertitre de contenu (`h2`) : petit carré jaune devant.
 - **Éléments cliquables, en relief** (bord 1,5 px nuit + relief plein décalé en bas à droite) :
-  - grandes cartes (`.questions`, `.numeros`, `.une-actu`, `.actu-precedents`) : coins de 12 px, relief de 7 px, pastille ronde fléchée en bas à droite, toute la carte est le lien ;
-  - petites cartes-liens (`.essentiel-liens`, `.wiki-liste`, et les lois d'origine du wiki, `.wiki-liste.textes-ref`) : coins de 10 px, relief de 4 px, petite pastille à droite, toute la carte est le lien ;
+  - grandes cartes (`.questions`, `.numeros`, `.une-actu`, `.actu-precedents`) : coins de 4 px, relief de 7 px, pastille ronde fléchée en bas à droite, toute la carte est le lien ;
+  - petites cartes-liens (`.essentiel-liens`, `.wiki-liste`, et les lois d'origine du wiki, `.wiki-liste.textes-ref`) : coins de 4 px, relief de 4 px, petite pastille à droite, toute la carte est le lien ;
   - liens de l'encadré latéral (`.cote-bloc .voir-aussi` : sommaire, voir aussi, autres questions) : relief de 3 px, sans pastille, 44 px de haut au moins ;
   - navigation entre numéros de l'Actualité VTC (précédent, suivant, tous les numéros) : boutons secondaires (`.bouton.second`) ;
   - boutons (`.bouton`, `.second`, `.petit`) : relief de 4 px ; touches (`.sommaire`, choix du simulateur `.choix label`) : relief de 3 à 4 px, la touche choisie est enfoncée (et jaune pour les choix).

@@ -55,7 +55,7 @@
   /* espacements */
   --e1:.25rem; --e2:.5rem; --e3:.75rem; --e4:1rem; --e5:1.5rem; --e6:2rem; --e7:3rem; --e8:4.5rem;
   /* formes */
-  --rayon:4px; --rayon-p:3px; --rayon-carte:12px; --rayon-lien:10px; --pilule:999px;
+  --rayon:4px; --rayon-p:3px; --rayon-carte:4px; --rayon-lien:4px; --pilule:999px;
   --ombre-h:0 2px 4px rgba(17,22,30,.06),0 14px 30px -14px rgba(17,22,30,.28); /* menu déroulant seulement */
 }
 @media (prefers-color-scheme: dark){
@@ -287,7 +287,7 @@ h1 .num-art{display:block;font-size:1rem;letter-spacing:.02em;margin-bottom:var(
 .sommaire{background:var(--doux);border-radius:var(--rayon);padding:var(--e4) var(--e5);margin:var(--e5) 0 0}
 .sommaire ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:var(--e2);font-family:var(--sans);font-size:.9375rem}
 .sommaire li{margin:0}
-.sommaire a{display:inline-flex;align-items:center;min-height:44px;padding:0 .9rem;border-radius:var(--pilule);background:var(--carte);border:1px solid var(--filet);color:var(--encre);text-decoration:none}
+.sommaire a{display:inline-flex;align-items:center;min-height:44px;padding:0 .9rem;border-radius:var(--rayon);background:var(--carte);border:1px solid var(--filet);color:var(--encre);text-decoration:none}
 .sommaire a:hover{border-color:var(--accent-trait);color:var(--accent)}
 
 /* formulaires */
@@ -498,7 +498,7 @@ html.avec-barre body{padding-bottom:5.5rem}
 .chiffres dt{color:var(--gris)}
 .chiffres dd{margin:0;font-weight:700}
 /* barre « où vont 100 € versés » : quatre parts, toujours doublées d'une phrase (jamais la couleur seule) */
-.repartition{display:flex;height:.875rem;border-radius:var(--pilule);overflow:hidden;background:var(--doux);margin:var(--e3) 0 var(--e2)}
+.repartition{display:flex;height:.875rem;border-radius:2px;overflow:hidden;background:var(--doux);margin:var(--e3) 0 var(--e2)}
 .repartition span{flex:0 0 0;min-width:0}
 .part-social{background:var(--gris)}
 .part-voiture{background:var(--accent-trait)}
@@ -684,21 +684,21 @@ input[type=text],input[type=search],textarea,select,.contact input[type=email]{b
 .bloc-doux,.tete-page{background-color:var(--doux);background-image:linear-gradient(var(--quadrille) 1px,transparent 1px),linear-gradient(90deg,var(--quadrille) 1px,transparent 1px);background-size:56px 56px;background-position:-1px -1px}
 
 /* --- cartes cliquables, grandes --- */
-.questions li,.numeros > li,.une-actu,.actu-precedents li{position:relative;background:var(--carte);border:1.5px solid var(--relief);border-radius:12px;box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief),7px 7px 0 0 var(--relief);transition:transform .18s ease,box-shadow .18s ease}
+.questions li,.numeros > li,.une-actu,.actu-precedents li{position:relative;background:var(--carte);border:1.5px solid var(--relief);border-radius:var(--rayon-carte);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief),7px 7px 0 0 var(--relief);transition:transform .18s ease,box-shadow .18s ease}
 .questions li{padding:var(--e5) var(--e5) 5rem}
 .une-actu{padding:var(--e5) var(--e5) 5rem}
 .actu-precedents li{padding:var(--e4) 5rem var(--e4) var(--e4);flex:1}
 .questions li,.numeros > li,.une-actu,.actu-precedents li{--hover:0}
 /* --- liens en liste, petites cartes --- */
-.essentiel-liens li,.wiki-liste li,.voir-aussi li{position:relative;background:var(--carte);border:1.5px solid var(--relief);border-radius:10px;box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief);transition:transform .15s ease,box-shadow .15s ease}
+.essentiel-liens li,.wiki-liste li,.voir-aussi li{position:relative;background:var(--carte);border:1.5px solid var(--relief);border-radius:var(--rayon-lien);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief);transition:transform .15s ease,box-shadow .15s ease}
 .essentiel-liens li,.wiki-liste li{padding:.85rem 3.5rem .85rem 1.15rem}
 .essentiel-liens li::after,.wiki-liste li::after,.voir-aussi li::after{content:"";position:absolute;right:.75rem;top:50%;margin-top:-1rem;width:2rem;height:2rem;border-radius:50%;background:var(--pastille) var(--pastille-fleche) center/1.05rem no-repeat;pointer-events:none}
 .cote-bloc .voir-aussi{list-style:none;padding:0;margin:0;display:grid;gap:var(--e3)}
 .cote-bloc .voir-aussi li{border-top:1.5px solid var(--relief);padding:.7rem 3.25rem .7rem .9rem;margin:0;font-size:1rem;line-height:1.35}
-.cote-bloc .voir-aussi a::before{content:"";position:absolute;inset:0;border-radius:10px}
+.cote-bloc .voir-aussi a::before{content:"";position:absolute;inset:0;border-radius:var(--rayon-lien)}
 .cote-bloc .voir-aussi a:hover{text-decoration:none;color:var(--encre)}
 /* lien étendu à toute la carte (accueil : actualité) */
-.une-actu h3 a::before,.actu-precedents a::before{content:"";position:absolute;inset:0;border-radius:12px;z-index:1}
+.une-actu h3 a::before,.actu-precedents a::before{content:"";position:absolute;inset:0;border-radius:var(--rayon-carte);z-index:1}
 .une-actu h3 a:hover,.actu-precedents a:hover{text-decoration:none;color:var(--encre)}
 /* survol : la carte se soulève, la flèche file */
 :is(.questions li,.numeros > li,.une-actu,.actu-precedents li):hover,:is(.questions li,.numeros > li,.une-actu,.actu-precedents li):focus-within{transform:translate(-3px,-3px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief),7px 7px 0 0 var(--relief),8px 8px 0 0 var(--relief),9px 9px 0 0 var(--relief),10px 10px 0 0 var(--relief);border-color:var(--relief)}
@@ -727,7 +727,7 @@ input[type=text],input[type=search],textarea,select,.contact input[type=email]{b
 .carte-hero:hover .carte-lien{text-decoration-thickness:2px}
 
 /* --- simulateur : les choix sont des touches ; la touche choisie est enfoncée --- */
-.choix label{background:var(--carte);border:1.5px solid var(--relief) !important;border-radius:10px;box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief);transition:transform .12s ease,box-shadow .12s ease}
+.choix label{background:var(--carte);border:1.5px solid var(--relief) !important;border-radius:var(--rayon-lien);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief);transition:transform .12s ease,box-shadow .12s ease}
 .choix label:hover{transform:translate(-1px,-1px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief)}
 .choix label:has(input:checked){transform:translate(4px,4px);box-shadow:0 0 0 0 var(--relief);background:var(--jaune);color:var(--nuit);border-color:var(--nuit) !important}
 .choix label:has(input:focus-visible){outline:3px solid var(--focus);outline-offset:3px}
@@ -737,9 +737,11 @@ input[type=text],input[type=search],textarea,select,.contact input[type=email]{b
 .tete-bloc{background:transparent;color:var(--encre);padding:0 0 var(--e3);border-radius:0;border-bottom:3px solid var(--encre)}
 .tete-bloc h2{color:var(--encre);font-size:clamp(1.75rem,3.4vw,2.5rem)}
 .tete-bloc .surtitre{color:var(--gris)}
-:is(.tete-bloc) .lien-fleche{color:var(--encre) !important;border:1.5px solid var(--relief) !important;border-radius:999px;padding:.55rem 1.1rem !important;background:var(--carte);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief);transition:transform .15s,box-shadow .15s}
-.tete-bloc .lien-fleche:hover{transform:translate(-1px,-1px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief)}
-.tete-bloc .lien-fleche:active{transform:translate(3px,3px);box-shadow:none}
+:is(.tete-bloc) .lien-fleche{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;color:var(--encre) !important;border:1.5px solid var(--encre) !important;border-radius:0;padding:0 1rem !important;background:var(--carte);transition:background .15s,color .15s}
+/* « Tous les… » : rectangle sobre, à plat, flèche à droite ; au survol, il se remplit de bleu nuit */
+:is(.tete-bloc) .lien-fleche::after{content:"\2192";font-weight:700;transition:transform .15s}
+.tete-bloc .lien-fleche:hover{background:var(--encre);color:var(--fond) !important}
+.tete-bloc .lien-fleche:hover::after{transform:translateX(3px)}
 .actu-une{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:var(--e6);align-items:stretch}
 .actu-precedents{display:flex;flex-direction:column}
 .actu-precedents h3{font-family:var(--cond);font-size:1.25rem;margin:0 0 var(--e3)}

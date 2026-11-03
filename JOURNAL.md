@@ -6,6 +6,13 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mardi 3 novembre 2026, 23 h 15 · Moins d'arrondis, liens « Tous les… » en rectangle
+
+- Toutes les pages : coins des cartes, des cartes-liens et des touches ramenés à 4 px (au lieu de 10 et 12 px) ; sommaire du wiki et barre de répartition du simulateur moins arrondis.
+- https://revision-vtc.fr/ : les liens « Tous les textes expliqués », « Toutes les questions » et « Tous les numéros » deviennent des rectangles sobres, à plat, avec une flèche, remplis de bleu nuit au survol (au lieu de pilules en relief).
+- Vérifié : axe en clair et en sombre à 320 et 1366 px, aucun débordement. README (charte) mis à jour.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mardi 3 novembre 2026, 23 h 05 · En-tête collant, jauge de lecture et menu animé
 
 - Toutes les pages (https://revision-vtc.fr/ et les autres) : l'en-tête reste collé en haut de l'écran au défilement. Il se resserre dès qu'on quitte le haut de la page, une jauge jaune en bas montre la part de la page déjà lue, et sur téléphone il se range quand on descend et revient dès qu'on remonte. Au survol du menu, un trait jaune s'étire sous la rubrique.
