@@ -585,6 +585,24 @@ body{font-size:1.125rem;line-height:1.6}
 .menu-livre a{min-height:44px}
 .menu-livre a[aria-current="page"]{box-shadow:inset 4px 0 0 0 var(--jaune)}
 .entete :focus-visible{outline-color:var(--jaune)}
+/* en-tête collant : reste visible au défilement (js/site.js pose les classes sur <html>).
+   « defile » : il se resserre (sous-titre masqué) ; la jauge jaune en bas montre la part de la page déjà lue.
+   Sur téléphone, « entete-cachee » le range quand on descend et le rappelle dès qu'on remonte. */
+.entete{position:sticky;top:0;z-index:50;transition:transform .25s ease}
+.entete .page{transition:padding .2s ease}
+.entete::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--jaune);transform-origin:0 50%;transform:scaleX(var(--lu,0));pointer-events:none}
+html.defile .entete .page{padding-top:.375rem;padding-bottom:.375rem}
+html.defile .nom-site .sous{display:none}
+html.entete-cachee .entete{transform:translateY(-100%)}
+html{scroll-padding-top:calc(var(--haut-entete,5rem) + 1rem)}
+/* menu : un trait jaune s'étire sous la rubrique survolée ; la rubrique en cours garde le trait plein */
+.nav a{position:relative;border-bottom-color:transparent}
+.nav a::after{content:"";position:absolute;left:.75rem;right:.75rem;bottom:-4px;height:4px;background:var(--jaune);transform:scaleX(0);transition:transform .2s ease}
+.nav a:hover::after,.nav a:focus-visible::after{transform:scaleX(1)}
+.nav a[aria-current="page"]{border-bottom-color:transparent}
+.nav a[aria-current="page"]::after{transform:scaleX(1)}
+@media (prefers-reduced-motion: reduce){.entete,.entete .page,.nav a::after{transition:none}}
+@media print{.entete{position:static}.entete::after{display:none}}
 
 /* titres : condensés, serrés, forts */
 h1,h2,h3{font-family:var(--cond);letter-spacing:0;line-height:1.08}

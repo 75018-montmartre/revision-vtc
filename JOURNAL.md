@@ -6,6 +6,14 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mardi 3 novembre 2026, 23 h 05 · En-tête collant, jauge de lecture et menu animé
+
+- Toutes les pages (https://revision-vtc.fr/ et les autres) : l'en-tête reste collé en haut de l'écran au défilement. Il se resserre dès qu'on quitte le haut de la page, une jauge jaune en bas montre la part de la page déjà lue, et sur téléphone il se range quand on descend et revient dès qu'on remonte. Au survol du menu, un trait jaune s'étire sous la rubrique.
+- Les liens vers un titre de la page (sommaires, « Aller au résultat ») tiennent compte de la hauteur de l'en-tête.
+- Fichiers : `docs/css/site.css` (partie 8), `docs/js/site.js`, README (charte, en-tête).
+- Vérifié : ordinateur et téléphone (390 px), axe en clair et en sombre à 320 et 1366 px sur l'accueil, le simulateur et le wiki, aucun débordement, aucune erreur JavaScript ; mouvements coupés si l'appareil demande moins d'animations.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mardi 3 novembre 2026, 22 h 50 · Simulateur : corrections de l'audit, Acre et CFE
 
 - https://revision-vtc.fr/simulateurs/cout-revient-revenu-net-vtc.html, suite à l'audit des outils du 3 novembre 2026 (rapport dans Notion, « QUESTION A CLAUDE » > « Audit des outils, 3 novembre 2026 ») :
