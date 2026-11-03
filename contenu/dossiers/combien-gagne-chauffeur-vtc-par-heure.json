@@ -23,7 +23,7 @@
  "chapeau": "Les chiffres publiés sur les plateformes donnent le tournis : plus de 40 € de l'heure. Ils sont exacts, mais ils ne mesurent qu'une chose : le temps où un client est à bord. Voici, étape par étape, comment passer de ce chiffre affiché à ce qui reste vraiment dans votre poche.",
  "en_bref": [
   "Selon l'ARPE, l'autorité qui suit les plateformes, une course Uber rapportait en moyenne 17,30 € au chauffeur en 2025, pour 21,8 minutes de trajet : c'est 47,60 € de l'heure… si les courses s'enchaînaient sans aucune pause.",
-  "En ajoutant les 7,5 minutes d'attente moyenne avant la proposition suivante, on tombe à 35,40 € par heure. Et après la voiture et les cotisations, l'exemple de notre simulateur laisse entre 8,90 € et 11,50 € par heure passée au volant, avant impôt."
+  "En ajoutant les 7,5 minutes d'attente moyenne avant la proposition suivante, on tombe à 35,40 € par heure. Et après la voiture et les cotisations, l'exemple de notre simulateur laisse entre 8,20 € et 11,63 € par heure passée au volant, avant impôt."
  ],
  "sections": [
   {
@@ -149,8 +149,8 @@
    "blocs": [
     "Les sommes versées par la plateforme ne sont pas un salaire : c'est le chiffre d'affaires d'une entreprise. Il faut encore en retirer deux grosses dépenses.",
     "**Les cotisations sociales.** En micro-entreprise, elles représentent près de 22 % du chiffre d'affaires en 2026 : 21,2 % de cotisations, 0,3 % pour la formation professionnelle et 0,48 % de taxe pour la chambre de métiers (hors Alsace-Moselle). Elles se calculent sur le chiffre d'affaires, pas sur le bénéfice : même un mois à perte, elles sont dues. Le détail est dans notre réponse [« Quelles cotisations paie un chauffeur VTC en micro-entreprise ? »](../questions/2026-10-28-cotisations-vtc-micro-entreprise.html).",
-    "**La voiture.** Location, carburant ou électricité, assurance, entretien, pneus : c'est la plus grosse dépense du métier. Avec une hybride louée 280 € par semaine, roulant 60 000 km par an, notre simulateur arrive à 0,36 € par kilomètre, carburant et assurance compris.",
-    "Prenons l'exemple par défaut du [simulateur de coût de revient et de revenu net](../simulateurs/cout-revient-revenu-net-vtc.html) : 1 000 € versés par les plateformes chaque semaine, pendant 47 semaines (le reste étant pris en congés, sans revenu). Il reste au chauffeur 983 € par mois avant impôt si ses cotisations sont calculées sur le prix payé par les clients, et 1 270 € si elles le sont sur le montant versé après commission. Les deux lectures existent : aucun texte officiel ne tranche clairement la question pour les chauffeurs de plateforme, et le simulateur montre les deux.",
+    "**La voiture.** Location, carburant ou électricité, assurance, entretien, pneus : c'est la plus grosse dépense du métier. Avec une hybride louée 280 € par semaine, roulant 60 000 km par an, notre simulateur arrive à 0,35 € par kilomètre, carburant et assurance compris.",
+    "Prenons l'exemple par défaut du [simulateur de coût de revient et de revenu net](../simulateurs/cout-revient-revenu-net-vtc.html) : 1 000 € versés par les plateformes chaque semaine, pendant 47 semaines (le reste étant pris en congés, sans revenu). Il reste au chauffeur 908 € par mois avant impôt si ses cotisations sont calculées sur le prix payé par les clients, et 1 287 € si elles le sont sur le montant versé après commission. Ce calcul compte la TVA : avec plus de 41 250 € de chiffre d'affaires par an, le chauffeur n'est plus en franchise et reverse la TVA de 10 % comprise dans le prix des courses, moins celle qu'il récupère sur la location et le carburant. Les deux lectures existent : aucun texte officiel ne tranche clairement la question pour les chauffeurs de plateforme, et le simulateur montre les deux.",
     "Combien d'heures faut-il pour gagner ces 1 000 € ? Au rythme de 35,40 € par heure calculé plus haut, environ 28 heures par semaine, soit 1 328 heures sur l'année.",
     {
      "tableau": {
@@ -172,12 +172,12 @@
         "35,40 €"
        ],
        [
-        "Ce qui reste après voiture et cotisations, si les cotisations portent sur le prix payé par le client",
-        "8,90 €"
+        "Ce qui reste après voiture, cotisations et TVA, si les cotisations portent sur le prix payé par le client",
+        "8,20 €"
        ],
        [
         "Même calcul si les cotisations portent sur le montant versé",
-        "11,50 €"
+        "11,63 €"
        ]
       ]
      }
@@ -205,7 +205,7 @@
     {
      "liste": [
       "**Mesurez vos propres chiffres** chaque semaine : sommes versées, heures connectées, kilomètres au compteur. Vos statistiques valent mieux que n'importe quelle moyenne.",
-      "**Surveillez vos kilomètres à vide.** Ils coûtent autant que les autres (0,36 € dans notre exemple) et ne sont couverts par aucune garantie.",
+      "**Surveillez vos kilomètres à vide.** Ils coûtent autant que les autres (0,35 € dans notre exemple) et ne sont couverts par aucune garantie.",
       "**Regardez la distance et le prix avant d'accepter.** La plateforme doit vous les indiquer, et vous avez le droit de refuser une course ([article L1326-2](../wiki/l1326-2.html)).",
       "**Méfiez-vous des longues attentes** en gare ou à l'aéroport : une course à 60 € obtenue après deux heures d'attente rapporte moins qu'elle n'en a l'air. Le stationnement y est d'ailleurs limité à une heure ([article D3120-3](../wiki/d3120-3.html)).",
       "**Vérifiez le complément de garantie** sur vos relevés mensuels si votre activité a été faible.",
@@ -219,7 +219,7 @@
   "Le revenu horaire « en course » publié par l'ARPE (47,60 € chez Uber en 2025) suppose un chauffeur toujours en course, sans attente : ce n'est pas un salaire.",
   "Avec le temps d'attente moyen avant la proposition suivante, on tombe à environ 35 € par heure chez Uber et Bolt, 27 € chez Heetch (chiffres 2025).",
   "Le minimum de 30 € (32 € en octobre et novembre 2026) porte sur l'heure d'activité, de l'acceptation de la course à la dépose du client, pas sur le temps de connexion.",
-  "Les cotisations (près de 22 % du chiffre d'affaires en micro-entreprise) et la voiture absorbent une grande partie de ce qui est versé : dans l'exemple du simulateur, il reste entre 8,90 € et 11,50 € par heure avant impôt.",
+  "Les cotisations (près de 22 % du chiffre d'affaires en micro-entreprise) et la voiture absorbent une grande partie de ce qui est versé : dans l'exemple du simulateur, il reste entre 8,20 € et 11,63 € par heure avant impôt.",
   "Pour connaître votre vrai revenu, suivez chaque semaine vos sommes versées, vos heures connectées et vos kilomètres, et faites le calcul dans le simulateur."
  ],
  "wiki": [

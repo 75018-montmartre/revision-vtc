@@ -35,6 +35,7 @@ jobs:
         run: |
           python3 outils/generer.py
           node outils/test_simulateur.js
+          python3 outils/test_coherence_simulateur.py
       - name: Publier
         if: ${{ !inputs.essai }}
         run: |

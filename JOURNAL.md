@@ -6,6 +6,21 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mardi 3 novembre 2026, 19 h 45 · Simulateur : la TVA est désormais calculée
+
+- https://revision-vtc.fr/simulateurs/cout-revient-revenu-net-vtc.html : le simulateur calcule la TVA au lieu de seulement la signaler.
+  - Au-delà de 41 250 € de chiffre d'affaires par an (seuil majoré de la franchise) : TVA de 10 % comprise dans le prix des courses, à reverser, moins la TVA de 20 % récupérable sur le loyer, l'achat, l'entretien et le carburant d'une voiture affectée au VTC ; cotisations calculées sur le hors taxe ; année complète.
+  - En franchise : TVA de 20 % sur la commission facturée depuis l'étranger (Uber, Bolt), due même en franchise et sans déduction. Nouvelle case « Ma plateforme facture sa commission depuis l'étranger », cochée par défaut.
+  - Entre 37 500 € et 41 250 € : année en franchise, alerte « TVA due l'année suivante ».
+  - Seuil de rentabilité recalculé pas à pas ; alerte quand il tombe sur la sortie de la franchise.
+- Exemple par défaut (1 000 € versés par semaine, 62 667 € de chiffre d'affaires) : 908 € par mois au lieu de 991 € (1 287 € au lieu de 1 278 € avec les cotisations sur le montant versé).
+- Mis à jour avec ces chiffres : accueil (carte « Simulateur gratuit »), https://revision-vtc.fr/dossiers/combien-gagne-chauffeur-vtc-par-heure.html (8,20 € et 11,63 € par heure au lieu de 8,90 € et 11,50 €, 0,35 € par km), https://revision-vtc.fr/dossiers/chauffeur-vtc-salarie-ou-independant.html, https://revision-vtc.fr/dossiers/erreurs-chauffeur-vtc-debutant.html (ces trois articles citaient encore 983 € et 1 270 €, chiffres d'un ancien prix du carburant).
+- Sources : BOFiP BOI-TVA-LIQ-20 (taux normal), BOI-TVA-LIQ-30-20-60 (10 %), BOI-TVA-DECLA-10-10-20 § 130 et 140 (autoliquidation même en franchise ; version du 11 mars 2020 lue, la version du 9 septembre 2026 n'a pas pu être ouverte), BOI-TVA-DED-30-30-20 § 120 à 140 (véhicules VTC), BOI-TVA-DED-30-30-40 (carburants), BOI-TVA-DECLA-40-10-20 § 160 (fin de franchise au jour du dépassement) ; Dhraagi Conseil et Hayot Expertise (commissions facturées depuis l'étranger). La fiche F21746 de service-public.fr n'a pas pu être relue aujourd'hui (seuils inchangés, déjà vérifiés le 28 octobre).
+- Nouveau contrôle : `outils/test_coherence_simulateur.py` compare le calcul Python des exemples au calcul JavaScript de la page sur 401 cas (lancé aussi chaque matin avec la mise à jour des carburants).
+- À trancher : la TVA sur la commission en franchise est un coût de 20 % de la commission (131 € par mois pour 500 € versés par semaine) que beaucoup de chauffeurs ignorent ; un article ou une Question VTC sur ce sujet serait utile.
+- Vérifié : tests du calcul, axe en clair et en sombre à 320 et 1366 px (accueil, simulateur, article), aucun débordement horizontal, aucune erreur JavaScript.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mardi 3 novembre 2026, 13 h 20 · Accueil : carte « Simulateur gratuit » refaite
 
 - https://revision-vtc.fr/ : la carte du simulateur est refaite. « Simulateur gratuit » devient un vrai titre (condensé, grand). Dessous, un petit relevé mensuel en trois lignes : versé par les plateformes (3 917 €), cotisations, voiture et frais (− 2 926 €), il vous reste avant impôt (991 €), sous un trait épais. Les trois montants ont la même taille et sont alignés à droite, dans la même unité (par mois) ; avant, un montant était par semaine et l'autre par mois, en deux tailles différentes. Lien « Faire ma simulation avec mes chiffres » avec la pastille fléchée des cartes.

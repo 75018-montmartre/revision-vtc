@@ -5,12 +5,23 @@
   'use strict';
 
   /* ---------- le calcul (aussi utilisé par les tests) ---------- */
-  function calculer(e, d) {
+  /* TVA (régime de croisière, année complète) :
+     - chiffre d'affaires au-delà du seuil majoré (41 250 €) : plus de franchise ; TVA de 10 % comprise dans le prix des courses,
+       à reverser, moins la TVA récupérable (20 %) sur le loyer, l'achat, l'entretien et le carburant d'un véhicule affecté au VTC ;
+       cotisations et abattement sur le chiffre d'affaires hors taxe ; la TVA autoliquidée sur la commission est collectée et déduite ;
+     - entre 37 500 € et 41 250 € : franchise cette année, TVA due l'année suivante (alerte seulement) ;
+     - en franchise : rien à facturer, mais la TVA de 20 % sur une commission facturée depuis l'étranger (Uber, Bolt) est due sans déduction. */
+  function calculer(e, d, sansSeuil) {
     var v = d.valeurs, semaines = e.semaines, c = e.commission / 100;
     var verse = e.verse_semaine * semaines;                 // montant versé par les plateformes sur l'année
     var prixClients = c < 1 ? verse / (1 - c) : verse;      // prix payé par les clients, commission comprise
     var commission = prixClients - verse;
-    var ca = e.base === 'verse' ? verse : prixClients;       // chiffre d'affaires retenu pour les cotisations
+    var caBrut = e.base === 'verse' ? verse : prixClients;   // chiffre d'affaires retenu, taxes comprises
+    var redevable = caBrut > v.seuil_tva.majore;
+    var tN = v.taux_tva_normal.valeur / 100, tT = v.taux_tva_transport.valeur / 100;
+    var tvaCollectee = redevable ? caBrut * tT / (1 + tT) : 0;
+    var ca = caBrut - tvaCollectee;                          // chiffre d'affaires hors taxe : base des cotisations
+    var etranger = e.etranger !== false;
     var tauxCma = e.cma === 'moselle' ? v.taux_cma.moselle : e.cma === 'rhin' ? v.taux_cma.bas_haut_rhin : v.taux_cma.valeur;
     var tauxSocial = v.taux_cotisations.valeur + v.taux_formation.valeur + tauxCma;
     var social = ca * tauxSocial / 100;
@@ -24,26 +35,46 @@
     var energie = e.km_an * (electrique ? e.conso_elec : e.conso_thermique) / 100 * e.prix_energie;
     var assurance = e.assurance;
     var entretien = e.entretien_mois * 12;
-    var voiture = loyer + amortissement + energie + assurance + entretien;
+    var voiture = loyer + amortissement + energie + assurance + entretien;   // montants payés, TVA comprise
     var reglementaire = v.reglementaire_5ans.valeur / 5;
     var autres = e.autres_mois * 12;
     var frais = voiture + reglementaire + autres;
-    var net = verse - social - vl - frais;
 
-    // seuil de rentabilité : montant versé qui couvre juste les frais et les prélèvements
-    var parEuroVerse = (e.base === 'verse' ? 1 : (c < 1 ? 1 / (1 - c) : 1)) * (tauxSocial + (e.vl ? v.taux_vl.valeur : 0)) / 100;
-    var seuil = parEuroVerse < 1 ? frais / (1 - parEuroVerse) : Infinity;
+    // TVA récupérable (redevable seulement) : loyer, achat (et TVA due à la revente, d'où le prix net), entretien, carburant ;
+    // pas l'électricité rechargée à domicile (facture au nom du particulier), ni l'assurance (sans TVA), ni les autres frais (inconnus)
+    var tvaRecuperee = 0, tvaCommission = 0;
+    if (redevable) {
+      tvaRecuperee = (loyer + amortissement + entretien + (electrique ? 0 : energie)) * tN / (1 + tN);
+      if (!etranger) tvaRecuperee += commission * tN / (1 + tN);     // commission d'une plateforme française, TVA facturée
+    } else if (etranger) {
+      tvaCommission = commission * tN;                                // autoliquidée, sans droit à déduction en franchise
+    }
+    var tva = tvaCollectee - tvaRecuperee + tvaCommission;
+    var net = verse - social - vl - tva - frais;
+
+    // seuil de rentabilité : plus petit montant versé par semaine qui donne un revenu net positif (calcul pas à pas)
+    var seuilSemaine = Infinity, seuilSaut = false;   // seuilSaut : le revenu passe d'un coup sous zéro juste en dessous du seuil
+    if (!sansSeuil && semaines > 0) {
+      var essai = function (x) { var o = {}; for (var k in e) o[k] = e[k]; o.verse_semaine = x; return calculer(o, d, true).net; };
+      for (var bas = 0, haut = 10; haut <= 20000; bas = haut, haut += 10) {
+        if (essai(haut) >= 0) {
+          for (var i = 0; i < 40; i++) { var m = (bas + haut) / 2; if (essai(m) >= 0) haut = m; else bas = m; }
+          seuilSemaine = haut; seuilSaut = essai(haut - 0.5) < -100; break;
+        }
+      }
+    }
     var abattement = Math.max(ca * v.abattement.valeur / 100, Math.min(305, ca));
 
     return {
-      verse: verse, prixClients: prixClients, commission: commission, ca: ca, tauxSocial: tauxSocial,
-      social: social, vl: vl, loyer: loyer, amortissement: amortissement, energie: energie, assurance: assurance,
+      verse: verse, prixClients: prixClients, commission: commission, caBrut: caBrut, ca: ca, tauxSocial: tauxSocial,
+      social: social, vl: vl, tvaCollectee: tvaCollectee, tvaRecuperee: tvaRecuperee, tvaCommission: tvaCommission, tvaNette: tva,
+      loyer: loyer, amortissement: amortissement, energie: energie, assurance: assurance,
       entretien: entretien, voiture: voiture, reglementaire: reglementaire, autres: autres, frais: frais, net: net,
       netMois: net / 12, voitureKm: e.km_an > 0 ? voiture / e.km_an : 0, voitureMois: voiture / 12,
       netHeure: e.heures > 0 && semaines > 0 ? net / (e.heures * semaines) : null,
-      seuilSemaine: semaines > 0 ? seuil / semaines : Infinity,
+      seuilSemaine: seuilSemaine, seuilSaut: seuilSaut,
       imposable: e.vl ? null : Math.max(ca - abattement, 0),
-      tva: ca > v.seuil_tva.majore ? 'majore' : ca > v.seuil_tva.valeur ? 'base' : null,
+      tva: redevable ? 'redevable' : caBrut > v.seuil_tva.valeur ? 'base' : null,
       horsMicro: ca > v.seuil_micro.valeur
     };
   }
@@ -114,6 +145,7 @@
     });
     CHOIX.forEach(function (n) { e[n] = choix(n); });
     e.vl = $('vl').checked;
+    e.etranger = $('etranger').checked;
     if (!valide) { $('simu-etat').textContent = 'Corrigez les champs signalés pour voir le résultat.'; return; }
     var r = calculer(e, D), mois = function (x) { return euro.format(x / 12); };
 
@@ -124,7 +156,9 @@
     if (e.base !== 'verse') ligne(corps, 'Prix payé par les clients', mois(r.prixClients));
     ligne(corps, 'Commission des plateformes', '\u2212\u00A0' + mois(r.commission));
     ligne(corps, 'Versé par les plateformes', mois(r.verse), 'sous-total');
-    ligne(corps, 'Cotisations et contributions (' + nombre.format(r.tauxSocial) + ' %)', '\u2212\u00A0' + mois(r.social));
+    if (r.tva === 'redevable') ligne(corps, 'TVA à reverser (10 % des courses, moins la TVA récupérée)', '\u2212\u00A0' + mois(r.tvaNette));
+    else if (r.tvaCommission) ligne(corps, 'TVA sur la commission (autoliquidée, 20 %)', '\u2212\u00A0' + mois(r.tvaCommission));
+    ligne(corps, 'Cotisations et contributions (' + nombre.format(r.tauxSocial) + ' %' + (r.tva === 'redevable' ? ' du hors taxe' : '') + ')', '\u2212\u00A0' + mois(r.social));
     if (e.vl) ligne(corps, 'Impôt : versement libératoire', '\u2212\u00A0' + mois(r.vl));
     if (r.loyer) ligne(corps, e.mode === 'location' ? 'Location de la voiture' : 'Loyer LLD ou LOA', '\u2212\u00A0' + mois(r.loyer));
     if (r.amortissement) ligne(corps, 'Achat de la voiture (étalé)', '\u2212\u00A0' + mois(r.amortissement));
@@ -142,19 +176,20 @@
     if (r.netHeure !== null) $('res-heure').textContent = euroCts.format(r.netHeure);
 
     // où vont 100 € versés par les plateformes (barre empilée, doublée d'un texte)
-    var parts = [['social', r.social + r.vl], ['voiture', r.voiture], ['autres', r.reglementaire + r.autres]], reste = Math.max(r.net, 0);
+    var parts = [['social', r.social + r.vl + r.tvaNette], ['voiture', r.voiture], ['autres', r.reglementaire + r.autres]], reste = Math.max(r.net, 0);
     var total = Math.max(r.verse, 1);
     parts.forEach(function (p) { $('barre-' + p[0]).style.flexBasis = Math.min(p[1] / total * 100, 100) + '%'; });
     $('barre-net').style.flexBasis = (reste / total * 100) + '%';
     var pc = function (x) { return Math.round(x / total * 100); };
-    $('barre-texte').textContent = 'Sur 100 € versés par les plateformes : ' + pc(r.social + r.vl) + ' € de prélèvements, ' + pc(r.voiture) +
+    $('barre-texte').textContent = 'Sur 100 € versés par les plateformes : ' + pc(r.social + r.vl + r.tvaNette) + ' € de prélèvements (cotisations' + (r.tvaNette ? ' et TVA' : '') + '), ' + pc(r.voiture) +
       ' € pour la voiture, ' + pc(r.reglementaire + r.autres) + ' € d’autres frais, ' + (r.net > 0 ? pc(r.net) + ' € de revenu net.' : 'rien ne reste : les frais dépassent les recettes.');
 
     // alertes
     var al = [];
     if (r.net < 0) al.push('Avec ces chiffres, l’activité perd de l’argent : les frais dépassent ce que versent les plateformes.');
-    if (r.tva === 'majore') al.push('Votre chiffre d’affaires annuel (' + euro.format(r.ca) + ') dépasse 41 250 € : la franchise de TVA s’arrête le jour du dépassement et la TVA est due sur vos courses. Ce résultat ne la déduit pas : il est donc surestimé.');
-    else if (r.tva === 'base') al.push('Votre chiffre d’affaires annuel (' + euro.format(r.ca) + ') dépasse 37 500 € : la TVA sera due à partir du 1er janvier de l’année suivante. Ce résultat ne la calcule pas.');
+    if (r.tva === 'redevable') al.push('Votre chiffre d’affaires annuel (' + euro.format(r.caBrut) + ') dépasse 41 250 € : vous n’êtes plus en franchise de TVA. Le résultat, calculé pour une année complète, déduit la TVA de 10 % comprise dans le prix des courses et compte la TVA récupérable sur la voiture et le carburant. La première année, la TVA n’est due qu’à partir du jour du dépassement.');
+    else if (r.tva === 'base') al.push('Votre chiffre d’affaires annuel (' + euro.format(r.caBrut) + ') dépasse 37 500 € : vous restez en franchise de TVA cette année, mais la TVA sera due l’année suivante. Ce résultat est celui d’une année en franchise.');
+    if (r.seuilSaut) al.push('Le seuil de rentabilité tombe sur la sortie de la franchise de TVA : juste en dessous, la TVA sur la commission, qui ne se récupère pas en franchise, fait passer le revenu sous zéro.');
     if (r.horsMicro) al.push('Au-delà de 83 600 € de chiffre d’affaires, le régime micro ne s’applique plus après deux années de dépassement : demandez conseil à un expert-comptable.');
     if (e.mode !== 'location' && !e.entretien_mois) al.push('L’entretien et les pneus ne sont pas comptés : indiquez un montant mensuel pour un résultat complet.');
     var zone = $('res-alertes'); zone.textContent = '';
@@ -175,12 +210,14 @@
     var p = new URLSearchParams();
     CHAMPS.concat(CHOIX).forEach(function (k) { if (!caches[k] && e[k] !== null && e[k] !== undefined) p.set(k, e[k]); });
     if (e.vl) p.set('vl', '1');
+    if (!e.etranger) p.set('etranger', '0');
     return p.toString();
   }
   function lireAdresse() {
     var p = new URLSearchParams(location.search);
     CHOIX.forEach(function (n) { var r = form.querySelector('input[name="' + n + '"][value="' + p.get(n) + '"]'); if (r) r.checked = true; });
     if (p.get('vl') === '1') $('vl').checked = true;
+    if (p.get('etranger') === '0') $('etranger').checked = false;
     CHAMPS.forEach(function (id) { if (p.has(id) && isFinite(Number(p.get(id)))) { $(id).value = String(p.get(id)).replace('.', ','); touche[id] = true; } });
   }
 

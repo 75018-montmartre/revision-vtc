@@ -145,7 +145,7 @@ def accueil(nums, qs=()):
     </section>'''
     # exemple du simulateur (mêmes valeurs par défaut que la page du simulateur, base prudente)
     sim = lire_simulateur()
-    ex = calcul_simulateur(sim, base="clients", **defauts_simulateur(sim))
+    ex = calcul_simulateur(sim)
     ex_sem = defauts_simulateur(sim)["semaines"]
     n_wiki = len(lire_wiki()["articles"])
     # mois de la dernière vérification du wiki (« 25 octobre 2026 » -> « octobre 2026 ») : le surtitre reste vrai sans retouche
@@ -185,7 +185,7 @@ def accueil(nums, qs=()):
             <span class="carte-texte">{ty(f"Exemple mensuel : 1 000 € versés par semaine, {ex_sem} semaines par an")}</span>
             <span class="carte-calcul">
               <span class="ligne"><span>{ty("Versé par les plateformes")}</span><span class="montant">{_euros(ex["verse"] / 12)}</span></span>
-              <span class="ligne"><span>{ty("Cotisations, voiture et frais")}</span><span class="montant">− {_euros((ex["verse"] - ex["net"]) / 12)}</span></span>
+              <span class="ligne"><span>{ty("TVA, cotisations, voiture et frais")}</span><span class="montant">− {_euros((ex["verse"] - ex["net"]) / 12)}</span></span>
               <span class="ligne total"><span>{ty("Il vous reste, avant impôt")}</span><span class="montant">{_euros(ex["net"] / 12)}</span></span>
             </span>
             <span class="carte-lien">Faire ma simulation avec mes chiffres</span>
@@ -1187,28 +1187,61 @@ def lire_simulateur():
 
 
 def calcul_simulateur(s, **e):
-    """Même calcul que docs/js/simulateur.js (vérifié par outils/test_simulateur.js) : sert à l'exemple chiffré de la page."""
+    """Même calcul que docs/js/simulateur.js (comparé à lui par outils/test_coherence_simulateur.py) : sert aux exemples chiffrés.
+    Entrées : les mêmes noms que dans la page (verse_semaine, commission, semaines, km_an, mode, loyer_semaine, energie, prix_energie…)."""
     v = {k: x["valeur"] for k, x in s["valeurs"].items()}
+    V = s["valeurs"]
+    e = {**defauts_simulateur(s), **e}
     verse = e["verse_semaine"] * e["semaines"]
-    prix = verse / (1 - e["commission"] / 100)
-    ca = verse if e["base"] == "verse" else prix
-    taux = v["taux_cotisations"] + v["taux_formation"] + v["taux_cma"]
+    c = e["commission"] / 100
+    prix = verse / (1 - c) if c < 1 else verse
+    commission = prix - verse
+    ca_brut = verse if e["base"] == "verse" else prix
+    redevable = ca_brut > V["seuil_tva"]["majore"]
+    tn, tt = v["taux_tva_normal"] / 100, v["taux_tva_transport"] / 100
+    tva_collectee = ca_brut * tt / (1 + tt) if redevable else 0
+    ca = ca_brut - tva_collectee
+    cma = {"moselle": V["taux_cma"]["moselle"], "rhin": V["taux_cma"]["bas_haut_rhin"]}.get(e["cma"], v["taux_cma"])
+    taux = v["taux_cotisations"] + v["taux_formation"] + cma
     social = ca * taux / 100
-    loyer = e["loyer_semaine"] * 52
-    energie = e["km_an"] * e["conso"] / 100 * e["prix_energie"]
-    voiture = loyer + energie + e["assurance"]
+    vl = ca * v["taux_vl"] / 100 if e["vl"] else 0
+    loyer = amort = 0
+    if e["mode"] == "location":
+        loyer = e["loyer_semaine"] * 52
+    elif e["mode"] == "lld":
+        loyer = e["loyer_mois"] * 12
+    else:
+        amort = max(e["prix_achat"] - e["revente"], 0) / e["duree_ans"] if e["duree_ans"] > 0 else 0
+    elec = e["energie"] == "electricite"
+    energie = e["km_an"] * (e["conso_elec"] if elec else e["conso_thermique"]) / 100 * e["prix_energie"]
+    entretien = e["entretien_mois"] * 12
+    voiture = loyer + amort + energie + e["assurance"] + entretien
     regl = v["reglementaire_5ans"] / 5
-    net = verse - social - voiture - regl
-    return {"verse": verse, "prix": prix, "commission": prix - verse, "ca": ca, "taux": taux, "social": social, "loyer": loyer,
-            "energie": energie, "assurance": e["assurance"], "voiture": voiture, "regl": regl, "net": net, "km": voiture / e["km_an"]}
+    autres = e["autres_mois"] * 12
+    tva_recuperee = tva_commission = 0
+    if redevable:
+        tva_recuperee = (loyer + amort + entretien + (0 if elec else energie)) * tn / (1 + tn)
+        if not e["etranger"]:
+            tva_recuperee += commission * tn / (1 + tn)
+    elif e["etranger"]:
+        tva_commission = commission * tn
+    tva = tva_collectee - tva_recuperee + tva_commission
+    net = verse - social - vl - tva - voiture - regl - autres
+    return {"verse": verse, "prix": prix, "commission": commission, "ca_brut": ca_brut, "ca": ca, "taux": taux, "social": social, "vl": vl,
+            "tva_collectee": tva_collectee, "tva_recuperee": tva_recuperee, "tva_commission": tva_commission, "tva": tva,
+            "regime": "redevable" if redevable else ("base" if ca_brut > V["seuil_tva"]["valeur"] else None),
+            "loyer": loyer, "amortissement": amort, "energie": energie, "assurance": e["assurance"], "entretien": entretien,
+            "voiture": voiture, "regl": regl, "autres": autres, "net": net, "km": voiture / e["km_an"] if e["km_an"] else 0}
 
 
 def defauts_simulateur(s):
-    """Valeurs par défaut de l'exemple (location à la semaine, hybride essence), reprises par la page du simulateur et l'accueil."""
+    """Valeurs par défaut de la page (location à la semaine, hybride essence, cotisations sur le prix payé par les clients,
+    commission facturée depuis l'étranger), reprises par la page du simulateur, l'accueil et les tests."""
     V = s["valeurs"]
-    return dict(verse_semaine=V["verse_semaine"]["valeur"], semaines=V["semaines"]["valeur"], commission=V["commission"]["valeur"],
-                loyer_semaine=V["loyer_semaine"]["valeur"], km_an=V["km_an"]["valeur"], conso=V["conso_thermique"]["valeur"],
-                prix_energie=V["prix_e10"]["valeur"], assurance=V["assurance_rc"]["valeur"])
+    d = {k: V[k]["valeur"] for k in ("verse_semaine", "commission", "semaines", "heures", "km_an", "loyer_semaine", "loyer_mois", "prix_achat",
+                                     "duree_ans", "revente", "entretien_mois", "autres_mois", "conso_thermique", "conso_elec")}
+    return {**d, "prix_energie": V["prix_e10"]["valeur"], "assurance": V["assurance_rc"]["valeur"], "base": "clients", "mode": "location",
+            "energie": "essence", "cma": "france", "vl": False, "etranger": True}
 
 
 def _euros(x, cts=False):
@@ -1254,6 +1287,8 @@ def simulateur(ds, note=None):
         </div>
         {radios("base", "Sur quel montant calculer les cotisations ?", [("clients", "Le prix payé par les clients, commission comprise (prudent)"), ("verse", "Le montant versé par les plateformes")],
                 ty("Aucun texte officiel ne tranche ce point : voir plus bas « Ce que le simulateur ne tranche pas »."))}
+        <p class="option-chrono"><input type="checkbox" id="etranger" name="etranger" checked aria-describedby="aide-etranger"><label for="etranger">{ty("Ma plateforme facture sa commission depuis l'étranger (Uber, Bolt)")}</label></p>
+        <p class="aide" id="aide-etranger">{ty("Uber et Bolt facturent leur commission depuis les Pays-Bas et l'Estonie, sans TVA : c'est au chauffeur de déclarer et payer la TVA française de 20 % sur cette commission, même en franchise de TVA, et dans ce cas sans pouvoir la récupérer. Décochez si votre plateforme est française et vous facture sa TVA.")}</p>
       </fieldset>
       <fieldset class="bloc-simu"><legend>2. Votre voiture</legend>
         {radios("mode", "Comment disposez-vous de la voiture ?", [("location", "Location à la semaine (assurance du véhicule et entretien compris)"), ("lld", "Location longue durée ou avec option d'achat"), ("achat", "Achat")])}
@@ -1313,15 +1348,16 @@ def simulateur(ds, note=None):
 
     # exemple chiffré avec les valeurs par défaut (location à la semaine, hybride essence)
     defaut = defauts_simulateur(s)
-    a = calcul_simulateur(s, base="clients", **defaut)
-    b = calcul_simulateur(s, base="verse", **defaut)
+    a = calcul_simulateur(s)
+    b = calcul_simulateur(s, base="verse")
     m = lambda x: _euros(x / 12)
     exemple = {"tableau": {"legende": "Exemple : 1 000 € versés par semaine, 47 semaines, voiture hybride louée à la semaine, en euros par mois",
                            "colonnes": ["Poste", "Cotisations sur le prix payé par les clients", "Cotisations sur le montant versé"], "nombres": [1, 2],
                            "lignes": [["Prix payé par les clients", m(a["prix"]), m(b["prix"])],
                                       ["Commission (25 %)", "− " + m(a["commission"]), "− " + m(b["commission"])],
                                       ["Versé par les plateformes", m(a["verse"]), m(b["verse"])],
-                                      [f'Cotisations et contributions ({num(round(a["taux"], 2))} %)', "− " + m(a["social"]), "− " + m(b["social"])],
+                                      ["TVA à reverser (10 % des courses, moins la TVA récupérée sur la location et le carburant)", "− " + m(a["tva"]), "− " + m(b["tva"])],
+                                      [f'Cotisations et contributions ({num(round(a["taux"], 2))} % du chiffre d\'affaires hors taxe)', "− " + m(a["social"]), "− " + m(b["social"])],
                                       ["Location (280 € × 52 semaines)", "− " + m(a["loyer"]), "− " + m(b["loyer"])],
                                       [f"Carburant (60 000 km, 4,9 L/100 km, {num(V['prix_e10']['valeur'])} €/L)", "− " + m(a["energie"]), "− " + m(b["energie"])],
                                       ["Assurance (responsabilité civile professionnelle)", "− " + m(a["assurance"]), "− " + m(b["assurance"])],
@@ -1346,6 +1382,9 @@ def simulateur(ds, note=None):
         ("Versement libératoire / abattement fiscal", "1,7 % / 50 %", "taux_vl"),
         ("Carte, registre, visite médicale", "263,60 € tous les 5 ans (hors envoi et vignettes)", "reglementaire_5ans"),
         ("Franchise de TVA", "37 500 € (seuil majoré 41 250 €)", "seuil_tva"),
+        ("TVA sur les courses de VTC", "10 % (taux des transports de voyageurs)", "taux_tva_transport"),
+        ("TVA sur la commission facturée depuis l'étranger", "20 %, à payer par le chauffeur, même en franchise", "tva_commission"),
+        ("TVA récupérable si la TVA est due", "loyer, achat, entretien et carburant d'une voiture affectée au VTC", "tva_deductible_voiture"),
         ("Plafond de la micro-entreprise", "83 600 €", "seuil_micro")]
     hyp = {"tableau": {"legende": f"Les hypothèses par défaut, vérifiées le {s['verifie']}", "colonnes": ["Hypothèse", "Valeur", "Source"],
                        "lignes": [[l, v, "__REF__" + c] for l, v, c in lignes_hyp]}}
@@ -1359,14 +1398,14 @@ def simulateur(ds, note=None):
     <p class="surtitre">Simulateur gratuit</p>
     <h1>{ty("Simulateur VTC : coût de revient de la voiture et revenu net")}</h1>
     <p class="chapeau">{ty("Les plateformes vous versent de l'argent chaque semaine, mais ce n'est pas votre salaire : il faut encore payer la voiture, le carburant, l'assurance et les cotisations. Ce simulateur gratuit fait toutes ces soustractions pour vous et vous montre ce qui vous reste vraiment, en euros par mois.")}</p>
-    <p class="meta">{ty("Pour les chauffeurs VTC en micro-entreprise. Hypothèses vérifiées le " + s["verifie"] + ". Calcul fait dans votre navigateur : rien n'est envoyé.")}</p>
+    <p class="meta">{ty("Pour les chauffeurs VTC en micro-entreprise, TVA comprise. Hypothèses vérifiées le " + s["verifie"] + ". Calcul fait dans votre navigateur : rien n'est envoyé.")}</p>
     <div class="deux-col"><div class="col-texte">
     <section aria-labelledby="mode-emploi">
       <h2 id="mode-emploi">{ty("Comment ça marche")}</h2>
       <ol class="etapes">
         <li><b>{ty("Vous décrivez votre activité")}</b>{ty("Ce que les plateformes vous versent par semaine, le nombre de semaines où vous travaillez dans l'année et les kilomètres que vous parcourez.")}</li>
         <li><b>{ty("Vous décrivez votre voiture et vos frais")}</b>{ty("Louée à la semaine, en location longue durée ou achetée ; essence, gazole ou électrique ; votre assurance et vos autres dépenses (téléphone, lavage, péages…).")}</li>
-        <li><b>{ty("Le simulateur fait le calcul et vous répond")}</b>{ty("Il retire les cotisations, le coût de la voiture et les frais obligatoires du métier (carte professionnelle, registre, visite médicale), puis affiche :")}
+        <li><b>{ty("Le simulateur fait le calcul et vous répond")}</b>{ty("Il retire les cotisations, la TVA, le coût de la voiture et les frais obligatoires du métier (carte professionnelle, registre, visite médicale), puis affiche :")}
           <ul>
             <li>{ty("votre revenu net, par mois et par an ;")}</li>
             <li>{ty("ce que vous coûte la voiture à chaque kilomètre ;")}</li>
@@ -1395,24 +1434,28 @@ def simulateur(ds, note=None):
     <h2 id="calcul">Comment le simulateur calcule</h2>
     <ol>
       <li>{ty("Montant versé sur l'année = montant versé par semaine × semaines travaillées. Prix payé par les clients = montant versé ÷ (1 − commission).")}</li>
-      <li>{ty("Cotisations et contributions = chiffre d'affaires × 21,98 % (21,2 % de cotisations sociales, 0,3 % de formation professionnelle, 0,48 % de taxe de chambre de métiers hors Alsace-Moselle), plus 1,7 % si vous avez choisi le versement libératoire.")}</li>
+      <li>{ty("Cotisations et contributions = chiffre d'affaires (hors taxe si la TVA est due) × 21,98 % (21,2 % de cotisations sociales, 0,3 % de formation professionnelle, 0,48 % de taxe de chambre de métiers hors Alsace-Moselle), plus 1,7 % si vous avez choisi le versement libératoire.")}</li>
       <li>{ty("Voiture = loyer (ou prix d'achat moins revente, divisé par la durée de détention) + énergie (kilomètres × consommation × prix) + assurance + entretien. Divisé par les kilomètres, c'est le coût de revient au kilomètre.")}</li>
-      <li>{ty("Revenu net = montant versé − cotisations − voiture − carte, registre et visite médicale − autres frais. La commission est déjà retirée du montant versé.")}</li>
+      <li>{ty("TVA, au-delà de 41 250 € de chiffre d'affaires par an : le prix des courses comprend 10 % de TVA, soit 1/11 du montant, à reverser. On en retire la TVA de 20 % comprise dans le loyer, l'achat, l'entretien et le carburant (1/6 du montant payé), récupérable parce que la voiture sert au transport de personnes. Les cotisations portent alors sur le chiffre d'affaires hors taxe. Le calcul vaut pour une année complète.")}</li>
+      <li>{ty("TVA, en franchise : rien à facturer, mais si la commission est facturée depuis l'étranger, la TVA de 20 % sur cette commission est due et ne se récupère pas.")}</li>
+      <li>{ty("Revenu net = montant versé − cotisations − TVA − voiture − carte, registre et visite médicale − autres frais. La commission est déjà retirée du montant versé.")}</li>
       <li>{ty("Seuil de rentabilité = montant versé par semaine à partir duquel le revenu net devient positif.")}</li>
     </ol>
     {_bloc_dossier(exemple)}
-    <p>{ty(f"Dans cet exemple, le choix de la base des cotisations change le revenu net de {_euros(ecart / 12)} par mois. Le chiffre d'affaires annuel dépasse aussi le seuil de la franchise de TVA : la TVA due n'est pas déduite, le revenu réel est donc plus bas.")}</p>
+    <p>{ty(f"Dans cet exemple, le chiffre d'affaires ({_euros(a['ca_brut'])} par an) dépasse le seuil majoré de la franchise de TVA : le chauffeur doit reverser {_euros(a['tva_collectee'] / 12)} de TVA par mois, et en récupère {_euros(a['tva_recuperee'] / 12)} sur la location et le carburant. Le choix de la base des cotisations change le revenu net de {_euros(ecart / 12)} par mois.")}</p>
     <h2 id="non-tranche">Ce que le simulateur ne tranche pas</h2>
     <h3>{ty("Les cotisations : sur le prix payé par les clients ou sur le montant versé ?")}</h3>
     <p>{ty("En micro-entreprise, les cotisations sont un pourcentage du chiffre d'affaires, sans déduction des frais. Pour un chauffeur de plateforme, le chiffre d'affaires est-il le prix payé par le client, ou ce que la plateforme reverse après sa commission ? Aucun texte officiel ne le dit. Des experts-comptables recommandent de déclarer le prix avant commission, par prudence ; la même source rapporte qu'Uber invite à déclarer le montant après commission. Le simulateur calcule les deux : choisissez, et en cas de doute, faites le point avec un expert-comptable ou l'Urssaf.")}</p>
-    <h3>{ty("La TVA au-delà de 41 250 € de chiffre d'affaires")}</h3>
-    <p>{ty("Un chauffeur en micro-entreprise ne facture pas la TVA tant que son chiffre d'affaires ne dépasse pas 37 500 € sur l'année précédente et 41 250 € sur l'année en cours (seuils 2026). Au-delà, la TVA est due au taux réduit des transports de voyageurs, et une partie de la TVA payée sur les frais devient récupérable. Ce calcul dépend de chaque situation : le simulateur le signale mais ne le fait pas.")}</p>
+    <h3>{ty("La TVA : l'année du dépassement et l'option")}</h3>
+    <p>{ty("Un chauffeur en micro-entreprise ne facture pas la TVA tant que son chiffre d'affaires ne dépasse pas 37 500 € sur l'année précédente et 41 250 € sur l'année en cours (seuils 2026). Le simulateur calcule une année complète au même rythme : au-delà de 41 250 €, toute l'année avec la TVA ; entre 37 500 € et 41 250 €, l'année en franchise, la TVA n'étant due que l'année suivante. L'année où le seuil de 41 250 € est franchi, la TVA n'est due qu'à partir du jour du dépassement : le résultat réel se situe entre les deux.")}</p>
+    <p>{ty("Avec une commission facturée depuis l'étranger, la franchise n'est pas toujours la solution la moins chère : la TVA sur la commission y est due sans être récupérable, alors qu'un chauffeur qui paie la TVA la récupère, comme celle de la voiture. Il est possible de renoncer à la franchise sur option : faites le calcul avec un expert-comptable avant de choisir.")}</p>
     <h3>{ty("Les aides et les changements de 2027")}</h3>
     <p>{ty("L'Acre réduit les cotisations sociales au début de l'activité (15,9 % au lieu de 21,2 % pour une micro-entreprise créée depuis le 1er juillet 2026, sous conditions) : elle n'est pas comptée ici. Le précompte des cotisations par les plateformes, prévu au 1er janvier 2027, change la façon de payer, pas les taux. Le détail des taux est dans la question")} <a href="../questions/2026-10-28-cotisations-vtc-micro-entreprise.html">{ty("« Quelles cotisations paie un chauffeur VTC en micro-entreprise ? »")}</a>.</p>
     <h2 id="non-compte">Ce que le simulateur ne compte pas</h2>
     <ul>
       <li>{ty("l'impôt sur le revenu sans versement libératoire : il dépend de votre foyer ; le simulateur donne seulement le revenu imposable après l'abattement de 50 % ;")}</li>
       <li>{ty("la cotisation foncière des entreprises (CFE), dont le montant dépend de la commune ;")}</li>
+      <li>{ty("la TVA récupérable sur l'électricité et sur les autres frais : elle ne l'est que sur facture au nom de l'entreprise, ce qui est rare pour la recharge à domicile ; le calcul reste donc prudent ;")}</li>
       <li>{ty("le stage de formation continue et le contrôle technique annuel, à prix libres ; les intérêts d'un crédit ;")}</li>
       <li>{ty("les dépenses de lancement (examen, formation, caution du loueur) : elles sont détaillées dans l'article")} {dossier1}.</li>
     </ul>
