@@ -7,7 +7,7 @@ const { calculer } = globalThis.SimuVTC;
 
 const base = { verse_semaine: 1000, commission: 25, semaines: 47, heures: 0, km_an: 60000, loyer_semaine: 280, loyer_mois: 800,
   prix_achat: 34200, duree_ans: 5, revente: 0, assurance: 600, entretien_mois: 0, conso_thermique: 4.9, conso_elec: 13.6,
-  prix_energie: 2.116, autres_mois: 0, base: 'clients', mode: 'location', energie: 'essence', cma: 'france', vl: false, etranger: true };
+  prix_energie: 2.116, autres_mois: 0, base: 'clients', mode: 'location', energie: 'essence', cma: 'france', vl: false, etranger: true, acre: false, cfe: 0 };
 const proche = (a, b, m) => assert.ok(Math.abs(a - b) < 0.01, `${m} : ${a} au lieu de ${b}`);
 
 // 1. Valeurs par défaut : 62 667 € de chiffre d'affaires, au-delà de 41 250 € : TVA due, année complète
@@ -64,5 +64,17 @@ proche(r.netHeure, r.net / (45 * 47), 'net par heure');
 r = calculer({ ...base, verse_semaine: 10, semaines: 40, base: 'verse' }, D);
 proche(r.imposable, 400 - 305, 'abattement minimal');
 assert.strictEqual(r.tva, null);
+
+// 5. Acre (cotisations sociales à 15,9 %, formation et chambre de métiers inchangées) et CFE
+r = calculer({ ...base, acre: true, cfe: 300 }, D);
+proche(r.tauxSocial, 15.9 + 0.3 + 0.48, 'taux avec l\'Acre');
+proche(r.social, 62666.6667 * 10 / 11 * (15.9 + 0.3 + 0.48) / 100, 'cotisations avec l\'Acre');
+proche(r.cfe, 300, 'CFE');
+proche(r.net, calculer(base, D).net + 62666.6667 * 10 / 11 * (21.2 - 15.9) / 100 - 300, 'net avec Acre et CFE');
+// 6. Seuil de rentabilité : au montant affiché (arrondi au-dessus), le revenu est positif
+r = calculer(base, D);
+assert.ok(calculer({ ...base, verse_semaine: Math.ceil(r.seuilSemaine) }, D).net >= 0, 'seuil arrondi au-dessus');
+// 7. 0 km : pas de coût au kilomètre
+assert.strictEqual(calculer({ ...base, km_an: 0 }, D).voitureKm, null);
 
 console.log('Simulateur : tous les calculs sont justes.');

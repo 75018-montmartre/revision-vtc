@@ -18,7 +18,8 @@ for _ in range(400):
              base=random.choice(["clients", "verse"]), cma=random.choice(["france", "rhin", "moselle"]), vl=random.random() < .5,
              etranger=random.random() < .7, entretien_mois=random.choice([0, 150]), autres_mois=random.choice([0, 80]),
              revente=random.choice([0, 6000]), duree_ans=random.randint(1, 8), loyer_mois=random.choice([400, 800]),
-             prix_energie=random.choice([0.2, 1.9, 2.3]), assurance=random.choice([600, 4100]))
+             prix_energie=random.choice([0.2, 1.9, 2.3]), assurance=random.choice([600, 4100]),
+             acre=random.random() < .3, cfe=random.choice([0, 250]))
     cas.append(e)
 
 js = r"""

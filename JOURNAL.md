@@ -6,6 +6,21 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mardi 3 novembre 2026, 22 h 50 · Simulateur : corrections de l'audit, Acre et CFE
+
+- https://revision-vtc.fr/simulateurs/cout-revient-revenu-net-vtc.html, suite à l'audit des outils du 3 novembre 2026 (rapport dans Notion, « QUESTION A CLAUDE » > « Audit des outils, 3 novembre 2026 ») :
+  - seuil de rentabilité arrondi à l'euro supérieur (659 € au lieu de 658 €, montant auquel le revenu était encore négatif) ;
+  - une saisie fausse remplace le résultat par « — » au lieu de laisser l'ancien chiffre affiché ;
+  - « 1e3 » et les signes ne sont plus acceptés comme nombres ;
+  - coût au kilomètre « — » quand les kilomètres sont à 0 ;
+  - mention « montants arrondis » sous le détail et l'exemple chiffré (les lignes peuvent différer du total de 1 €) ;
+  - alerte tant que les autres frais sont à 0 € ;
+  - nouvelle case « Première année avec l'Acre » (15,9 % au lieu de 21,2 % pour une micro-entreprise créée depuis le 1er juillet 2026 ; sources : Bpifrance Création, juillet 2026, et L'Essentiel de l'Éco, 20 février 2026, décret n° 2026-69) et nouveau champ facultatif CFE.
+- Résultat par défaut inchangé : 908 € par mois. Accueil et articles inchangés.
+- Vérifié : tests du calcul (cas Acre, CFE, seuil, 0 km ajoutés), calculs Python et JavaScript identiques sur 401 cas, recalcul indépendant de l'audit sur 2 008 cas sans écart, axe en clair et en sombre à 320 et 1366 px, aucune erreur JavaScript.
+- À trancher : chauffeur VTC artisan ou commerçant (taux de formation 0,3 % et taxe de chambre de métiers 0,48 % comptés aujourd'hui), à vérifier sur une fiche officielle.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mardi 3 novembre 2026, 19 h 45 · Simulateur : la TVA est désormais calculée
 
 - https://revision-vtc.fr/simulateurs/cout-revient-revenu-net-vtc.html : le simulateur calcule la TVA au lieu de seulement la signaler.

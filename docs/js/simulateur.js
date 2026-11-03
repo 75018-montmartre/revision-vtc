@@ -23,7 +23,8 @@
     var ca = caBrut - tvaCollectee;                          // chiffre d'affaires hors taxe : base des cotisations
     var etranger = e.etranger !== false;
     var tauxCma = e.cma === 'moselle' ? v.taux_cma.moselle : e.cma === 'rhin' ? v.taux_cma.bas_haut_rhin : v.taux_cma.valeur;
-    var tauxSocial = v.taux_cotisations.valeur + v.taux_formation.valeur + tauxCma;
+    var tauxCotis = e.acre ? v.taux_acre.valeur : v.taux_cotisations.valeur;   // Acre : cotisations sociales seulement
+    var tauxSocial = tauxCotis + v.taux_formation.valeur + tauxCma;
     var social = ca * tauxSocial / 100;
     var vl = e.vl ? ca * v.taux_vl.valeur / 100 : 0;
 
@@ -38,7 +39,8 @@
     var voiture = loyer + amortissement + energie + assurance + entretien;   // montants payés, TVA comprise
     var reglementaire = v.reglementaire_5ans.valeur / 5;
     var autres = e.autres_mois * 12;
-    var frais = voiture + reglementaire + autres;
+    var cfe = e.cfe || 0;
+    var frais = voiture + reglementaire + autres + cfe;
 
     // TVA récupérable (redevable seulement) : loyer, achat (et TVA due à la revente, d'où le prix net), entretien, carburant ;
     // pas l'électricité rechargée à domicile (facture au nom du particulier), ni l'assurance (sans TVA), ni les autres frais (inconnus)
@@ -69,8 +71,8 @@
       verse: verse, prixClients: prixClients, commission: commission, caBrut: caBrut, ca: ca, tauxSocial: tauxSocial,
       social: social, vl: vl, tvaCollectee: tvaCollectee, tvaRecuperee: tvaRecuperee, tvaCommission: tvaCommission, tvaNette: tva,
       loyer: loyer, amortissement: amortissement, energie: energie, assurance: assurance,
-      entretien: entretien, voiture: voiture, reglementaire: reglementaire, autres: autres, frais: frais, net: net,
-      netMois: net / 12, voitureKm: e.km_an > 0 ? voiture / e.km_an : 0, voitureMois: voiture / 12,
+      entretien: entretien, voiture: voiture, reglementaire: reglementaire, autres: autres, cfe: cfe, frais: frais, net: net,
+      netMois: net / 12, voitureKm: e.km_an > 0 ? voiture / e.km_an : null, voitureMois: voiture / 12,
       netHeure: e.heures > 0 && semaines > 0 ? net / (e.heures * semaines) : null,
       seuilSemaine: seuilSemaine, seuilSaut: seuilSaut,
       imposable: e.vl ? null : Math.max(ca - abattement, 0),
@@ -96,13 +98,13 @@
   var nombre = { format: function (x) { return fr(x, 2).replace(/,00$/, '').replace(/(,\d)0$/, '$1'); } };
   var $ = function (id) { return document.getElementById(id); };
   var CHAMPS = ['verse_semaine', 'commission', 'semaines', 'heures', 'km_an', 'loyer_semaine', 'loyer_mois', 'prix_achat', 'duree_ans',
-                'revente', 'assurance', 'entretien_mois', 'conso_thermique', 'conso_elec', 'prix_energie', 'autres_mois'];
+                'revente', 'assurance', 'entretien_mois', 'conso_thermique', 'conso_elec', 'prix_energie', 'autres_mois', 'cfe'];
   var CHOIX = ['base', 'mode', 'energie', 'cma'];
   var touche = {};   // champs modifiés par la personne : on ne les remplace plus par une valeur par défaut
 
   function lireNombre(id) {
     var c = $(id), brut = c.value.replace(/\s| | |€|%/g, '').replace(',', '.');
-    var n = brut === '' ? 0 : Number(brut), err = $('err-' + id);
+    var n = brut === '' ? 0 : /^\d+(\.\d+)?$/.test(brut) ? Number(brut) : NaN, err = $('err-' + id);   // pas de « 1e3 » ni de signe
     var min = Number(c.dataset.min || 0), max = Number(c.dataset.max || 1e9);
     var ok = isFinite(n) && n >= min && n <= max;
     err.textContent = ok ? '' : 'Indiquez un nombre entre ' + nombre.format(min) + ' et ' + nombre.format(max) + '.';
@@ -146,7 +148,14 @@
     CHOIX.forEach(function (n) { e[n] = choix(n); });
     e.vl = $('vl').checked;
     e.etranger = $('etranger').checked;
-    if (!valide) { $('simu-etat').textContent = 'Corrigez les champs signalés pour voir le résultat.'; return; }
+    e.acre = $('acre').checked;
+    if (!valide) {   // jamais d'ancien résultat à côté d'une saisie fausse
+      $('simu-etat').textContent = 'Corrigez les champs signalés pour voir le résultat.';
+      ['res-net', 'barre-res-net', 'res-km', 'res-voiture-mois', 'res-seuil'].forEach(function (id) { $(id).textContent = '\u2014'; });
+      ['res-net-an', 'barre-texte', 'res-impot'].forEach(function (id) { $(id).textContent = ''; });
+      $('res-detail').textContent = ''; $('res-alertes').textContent = ''; $('res-heure-bloc').hidden = true;
+      return;
+    }
     var r = calculer(e, D), mois = function (x) { return euro.format(x / 12); };
 
     $('res-net').textContent = euro.format(r.netMois);
@@ -158,7 +167,7 @@
     ligne(corps, 'Versé par les plateformes', mois(r.verse), 'sous-total');
     if (r.tva === 'redevable') ligne(corps, 'TVA à reverser (10 % des courses, moins la TVA récupérée)', '\u2212\u00A0' + mois(r.tvaNette));
     else if (r.tvaCommission) ligne(corps, 'TVA sur la commission (autoliquidée, 20 %)', '\u2212\u00A0' + mois(r.tvaCommission));
-    ligne(corps, 'Cotisations et contributions (' + nombre.format(r.tauxSocial) + ' %' + (r.tva === 'redevable' ? ' du hors taxe' : '') + ')', '\u2212\u00A0' + mois(r.social));
+    ligne(corps, 'Cotisations et contributions (' + nombre.format(r.tauxSocial) + ' %' + (r.tva === 'redevable' ? ' du hors taxe' : '') + (e.acre ? ', avec l’Acre' : '') + ')', '\u2212\u00A0' + mois(r.social));
     if (e.vl) ligne(corps, 'Impôt : versement libératoire', '\u2212\u00A0' + mois(r.vl));
     if (r.loyer) ligne(corps, e.mode === 'location' ? 'Location de la voiture' : 'Loyer LLD ou LOA', '\u2212\u00A0' + mois(r.loyer));
     if (r.amortissement) ligne(corps, 'Achat de la voiture (étalé)', '\u2212\u00A0' + mois(r.amortissement));
@@ -167,11 +176,12 @@
     if (r.entretien) ligne(corps, 'Entretien et pneus', '\u2212\u00A0' + mois(r.entretien));
     ligne(corps, 'Carte, registre, visite médicale', '\u2212\u00A0' + mois(r.reglementaire));
     if (r.autres) ligne(corps, 'Autres frais', '\u2212\u00A0' + mois(r.autres));
+    if (r.cfe) ligne(corps, 'Cotisation foncière des entreprises (CFE)', '\u2212\u00A0' + mois(r.cfe));
     ligne(corps, 'Revenu net', mois(r.net), 'total');
 
-    $('res-km').textContent = euroCts.format(r.voitureKm);
+    $('res-km').textContent = r.voitureKm === null ? '\u2014' : euroCts.format(r.voitureKm);
     $('res-voiture-mois').textContent = euro.format(r.voitureMois);
-    $('res-seuil').textContent = isFinite(r.seuilSemaine) ? euro.format(r.seuilSemaine) : '–';
+    $('res-seuil').textContent = isFinite(r.seuilSemaine) ? euro.format(Math.ceil(r.seuilSemaine)) : '\u2013';   // arrondi au-dessus : au seuil affiché, le revenu est positif
     $('res-heure-bloc').hidden = r.netHeure === null;
     if (r.netHeure !== null) $('res-heure').textContent = euroCts.format(r.netHeure);
 
@@ -191,6 +201,8 @@
     else if (r.tva === 'base') al.push('Votre chiffre d’affaires annuel (' + euro.format(r.caBrut) + ') dépasse 37 500 € : vous restez en franchise de TVA cette année, mais la TVA sera due l’année suivante. Ce résultat est celui d’une année en franchise.');
     if (r.seuilSaut) al.push('Le seuil de rentabilité tombe sur la sortie de la franchise de TVA : juste en dessous, la TVA sur la commission, qui ne se récupère pas en franchise, fait passer le revenu sous zéro.');
     if (r.horsMicro) al.push('Au-delà de 83 600 € de chiffre d’affaires, le régime micro ne s’applique plus après deux années de dépassement : demandez conseil à un expert-comptable.');
+    if (!e.autres_mois) al.push('Les autres frais (téléphone, banque, lavage, péages, comptable…) sont à 0 € : indiquez-les pour un résultat complet, le revenu réel est plus bas.');
+    if (e.acre) al.push('Avec l’Acre, le taux réduit ne dure que jusqu’à la fin du 3e trimestre civil qui suit le début d’activité : le résultat, calculé sur une année entière au taux réduit, est un maximum.');
     if (e.mode !== 'location' && !e.entretien_mois) al.push('L’entretien et les pneus ne sont pas comptés : indiquez un montant mensuel pour un résultat complet.');
     var zone = $('res-alertes'); zone.textContent = '';
     al.forEach(function (t) { var p = document.createElement('p'); p.className = 'note'; p.textContent = t; zone.appendChild(p); });
@@ -211,6 +223,7 @@
     CHAMPS.concat(CHOIX).forEach(function (k) { if (!caches[k] && e[k] !== null && e[k] !== undefined) p.set(k, e[k]); });
     if (e.vl) p.set('vl', '1');
     if (!e.etranger) p.set('etranger', '0');
+    if (e.acre) p.set('acre', '1');
     return p.toString();
   }
   function lireAdresse() {
@@ -218,6 +231,7 @@
     CHOIX.forEach(function (n) { var r = form.querySelector('input[name="' + n + '"][value="' + p.get(n) + '"]'); if (r) r.checked = true; });
     if (p.get('vl') === '1') $('vl').checked = true;
     if (p.get('etranger') === '0') $('etranger').checked = false;
+    if (p.get('acre') === '1') $('acre').checked = true;
     CHAMPS.forEach(function (id) { if (p.has(id) && isFinite(Number(p.get(id)))) { $(id).value = String(p.get(id)).replace('.', ','); touche[id] = true; } });
   }
 
