@@ -6,6 +6,15 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 4 novembre 2026, 12 h 00 · Accueil : carreaux estompés sur un voile de jaune
+
+- https://revision-vtc.fr/ : les bandes quadrillées de l'accueil changent d'aspect. Le quadrillage est net en haut de la bande et s'estompe progressivement vers le bas, au lieu de couvrir toute la bande. Le fond derrière les carreaux n'est plus gris bleuté : c'est un voile très clair du jaune signal de la charte (nouveau jeton `--lavis`, #FEF9EC en clair, #181B1C en sombre). Les bandes blanches n'ont plus de filet.
+- Alternance inversée : sous la bande des preuves, « Par où commencer ? » est maintenant blanc, puis « Réglementation VTC : l'essentiel » quadrillé, Questions VTC blanc et Actualité VTC quadrillé.
+- L'en-tête quadrillé des pages intérieures ne change pas.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px, aucun débordement ; quadrillage masqué à l'impression.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 4 novembre 2026, 11 h 50 · Simulateur : champs côte à côte alignés
 
 - https://revision-vtc.fr/simulateurs/cout-revient-revenu-net-vtc.html : quand deux champs sont côte à côte (commission et semaines travaillées, kilomètres et heures de travail, etc.), les deux cases de saisie sont maintenant à la même hauteur, même si leurs textes d'aide n'ont pas le même nombre de lignes. Avant, la case dont l'aide était plus courte remontait.

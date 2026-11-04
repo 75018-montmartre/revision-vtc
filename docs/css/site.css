@@ -19,7 +19,8 @@
   /* couleurs */
   --fond:#FFFFFF;      /* fond général, blanc */
   --carte:#FFFFFF;     /* cartes et bandes blanches */
-  --doux:#EEF1F4;      /* bandes claires (quadrillées) et encarts */
+  --doux:#EEF1F4;      /* encarts, en-tête quadrillé des pages intérieures */
+  --lavis:#FEF9EC;     /* fond des bandes quadrillées de l'accueil : un voile du jaune signal (9 %) sur le blanc */
   --encre:#11161E;     /* texte principal */
   --gris:#4E5663;      /* texte secondaire (contraste AA) */
   --filet:#CDD3DB;     /* bordures */
@@ -59,7 +60,7 @@
   --ombre-h:0 2px 4px rgba(17,22,30,.06),0 14px 30px -14px rgba(17,22,30,.28); /* menu déroulant seulement */
 }
 @media (prefers-color-scheme: dark){
-  :root{--fond:#0F141C;--carte:#151C27;--doux:#1C2532;--encre:#E9EDF2;--gris:#AAB3C0;--filet:#2E3A4B;--rouge:#A52C15;
+  :root{--fond:#0F141C;--carte:#151C27;--doux:#1C2532;--lavis:#181B1C;--encre:#E9EDF2;--gris:#AAB3C0;--filet:#2E3A4B;--rouge:#A52C15;
         --nuit:#0A0E14;--nuit-2:#151C27;
         --accent:#8DB4F2;--accent-trait:#E9EDF2;--ok:#8FD39C;--ok-fond:#1C2A1F;--ko:#F49A86;--ko-fond:#2E1D19;--focus:#8DB0FF;
         --ombre-h:0 10px 26px -12px rgba(0,0,0,.7);
@@ -561,7 +562,7 @@ html.avec-barre body{padding-bottom:5.5rem}
   .numeros > li{grid-template-columns:1fr;gap:var(--e2)}
 }
 @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto !important;transition:none !important}.bouton:hover,.nom-site .marque,.questions li:hover,.wiki-liste li:hover,.essentiel-liens li:hover,.numeros > li:hover{transform:none !important}}
-@media print{.entete .nav,.pied,.barre,.actions{display:none}
+@media print{.bloc-doux::before{display:none}.entete .nav,.pied,.barre,.actions{display:none}
   .essentiel-liens li,.wiki-liste li,.questions li,.numeros > li,.en-clair,.retenir,.officiel,.breve,.cherche{box-shadow:none}}
 
 /* formulaire de contact (composant « formulaire ») */
@@ -704,7 +705,12 @@ input[type=text],input[type=search],textarea,select,.contact input[type=email]{b
 }
 
 
-.bloc-doux,.tete-page{background-color:var(--doux);background-image:linear-gradient(var(--quadrille) 1px,transparent 1px),linear-gradient(90deg,var(--quadrille) 1px,transparent 1px);background-size:56px 56px;background-position:-1px -1px}
+.tete-page{background-color:var(--doux);background-image:linear-gradient(var(--quadrille) 1px,transparent 1px),linear-gradient(90deg,var(--quadrille) 1px,transparent 1px);background-size:56px 56px;background-position:-1px -1px}
+/* bandes quadrillées de l'accueil : voile de jaune très clair, quadrillage net en haut de la bande qui s'estompe vers le bas */
+.bloc-doux{position:relative;background-color:var(--lavis);background-image:none}
+.bloc-doux::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(var(--quadrille) 1px,transparent 1px),linear-gradient(90deg,var(--quadrille) 1px,transparent 1px);background-size:56px 56px;background-position:-1px -1px;-webkit-mask-image:linear-gradient(180deg,#000 0,rgba(0,0,0,.8) 40%,rgba(0,0,0,.25) 80%,transparent 100%);mask-image:linear-gradient(180deg,#000 0,rgba(0,0,0,.8) 40%,rgba(0,0,0,.25) 80%,transparent 100%)}
+.bloc-doux > .page{position:relative}
+.bloc-blanc{border-top:0;border-bottom:0}
 
 /* --- cartes cliquables, grandes --- */
 .questions li,.numeros > li,.une-actu,.actu-precedents li{position:relative;background:var(--carte);border:1.5px solid var(--relief);border-radius:var(--rayon-carte);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief),7px 7px 0 0 var(--relief);transition:transform .18s ease,box-shadow .18s ease}

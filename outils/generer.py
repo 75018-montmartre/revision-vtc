@@ -131,7 +131,7 @@ def accueil(nums, qs=()):
                       '\n            <h3 id="titre-precedents">Numéros précédents</h3>'
                       f'\n            <ol>{prec}</ol>\n          </aside>') if prec else ""
         dernier = f'''
-    <section class="bloc" aria-labelledby="titre-dernier">
+    <section class="bloc bloc-doux" aria-labelledby="titre-dernier">
       <div class="page large">
         {tete_bloc("titre-dernier-rubrique", "Chaque lundi", "Le dernier numéro de l'Actualité VTC", "actualite/index.html", "Tous les numéros")}
         <div class="actu-une">
@@ -220,14 +220,14 @@ def accueil(nums, qs=()):
         <li><b>{ty("Mis à jour chaque semaine")}</b> {ty(": actualité le lundi, question-réponse le jeudi")}</li>
       </ul>
     </section>
-    <section class="bloc bloc-doux" aria-labelledby="titre-commencer">
+    <section class="bloc bloc-blanc" aria-labelledby="titre-commencer">
       <div class="page large">
         {tete_bloc("titre-commencer", "Selon votre situation", "Par où commencer ?")}
         <ul class="parcours">{cartes_parcours}
         </ul>
       </div>
     </section>
-    <section class="bloc bloc-blanc" aria-labelledby="titre-essentiel">
+    <section class="bloc bloc-doux" aria-labelledby="titre-essentiel">
       <div class="page large">
         {tete_bloc("titre-essentiel", "Textes du métier", "Réglementation VTC : l'essentiel", "wiki/index.html", "Tous les textes expliqués",
                    "Les règles les plus utiles au quotidien, avec le texte officiel et une explication en clair.")}
@@ -251,7 +251,7 @@ def bloc_questions(qs):
         return ""
     li = "".join(f'<li><a href="questions/{q["date"]}-{q["slug"]}.html">{ty(q["question"])}</a><p>{ty(q["reponse_courte"])}</p></li>' for q in list(qs)[:4])
     return f'''
-    <section class="bloc bloc-doux" aria-labelledby="titre-questions">
+    <section class="bloc bloc-blanc" aria-labelledby="titre-questions">
       <div class="page large">
         {tete_bloc("titre-questions", "Chaque jeudi", "Questions VTC : une question, une réponse sourcée", "questions/index.html", "Toutes les questions")}
         <ul class="questions questions-grille">{li}</ul>
