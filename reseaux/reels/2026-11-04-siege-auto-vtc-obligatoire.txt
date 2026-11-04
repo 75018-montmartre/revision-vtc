@@ -1,0 +1,56 @@
+RÉEL · Siège auto en VTC : est-il obligatoire pour un enfant ?
+Page : https://revision-vtc.fr/questions/2026-11-04-siege-auto-vtc-obligatoire.html
+Durée visée : 35 à 40 secondes
+
+ACCROCHE (0 à 3 s)
+  Texte à l'écran : En VTC, pas besoin de siège auto ?
+  Voix : En VTC, l'enfant peut voyager sans siège auto ? Faux.
+
+DÉROULÉ
+  Plan 1 (3 à 10 s)
+    Texte à l'écran : Moins de 10 ans : siège homologué
+    Voix : Moins de dix ans : siège homologué, adapté à sa morphologie
+    et à son poids. Sauf morphologie adaptée à la ceinture, ou
+    certificat médical.
+  Plan 2 (10 à 18 s)
+    Texte à l'écran : Dispense : taxi et transports en commun
+    Voix : La dispense vise le taxi et les transports en commun. Le
+    texte ne cite pas le VTC : elle ne s'applique pas à lui.
+  Plan 3 (18 à 25 s)
+    Texte à l'écran : Moins de 10 ans : à l'arrière
+    Voix : Et en principe à l'arrière. L'avant n'est permis que dans
+    trois cas, par exemple dos à la route, airbag désactivé.
+  Plan 4 (25 à 32 s)
+    Texte à l'écran : Moins de 18 ans : le conducteur vérifie
+    Voix : Pour un passager de moins de dix-huit ans, c'est le
+    conducteur qui doit s'assurer qu'il est attaché. Contravention de
+    quatrième classe.
+  Plan 5 (32 à 37 s)
+    Texte à l'écran : Ceinture : le chauffeur VTC aussi
+    Voix : Et la dispense de ceinture du chauffeur de taxi en service ne
+    vaut pas non plus pour le chauffeur VTC.
+
+CHUTE (37 à 41 s)
+  Texte à l'écran : VTC n'est pas taxi
+  Voix : Un VTC n'est pas un taxi : siège auto obligatoire, sauf
+  exceptions. Réponse
+  complète et sources sur revision-vtc.fr.
+
+LÉGENDE
+  Siège auto en VTC : un enfant de moins de 10 ans doit être attaché
+  dans un siège homologué adapté. La dispense du Code de la route vise
+  le taxi et les transports en commun, pas le VTC. Exceptions, place à
+  l'avant et amende : tout est sur la page.
+  #chauffeurvtc #vtc #examenvtc #siegeauto #securiteroutiere #reglementationvtc #codedelaroute
+  https://revision-vtc.fr/questions/2026-11-04-siege-auto-vtc-obligatoire.html
+
+SOURCES
+  - Code de la route, articles R412-1, R412-2 et R412-3 (Légifrance,
+    version en vigueur au 31 octobre 2026), lus le 4 novembre 2026
+    https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074228/LEGISCTA000006159599/
+  - Service-public.fr, fiche F628, version anglaise (vérifiée le 2 novembre 2026), lue le
+    4 novembre 2026
+    https://www.service-public.gouv.fr/particuliers/vosdroits/F628?lang=en
+  - Code des transports, article R3120-1 (Légifrance), lu le
+    4 novembre 2026
+    https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000023086525/LEGISCTA000030048381/2016-03-23

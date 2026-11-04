@@ -6,6 +6,16 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 4 novembre 2026, 9 h 06 · Question VTC du jour
+
+- Question : « Siège auto en VTC : est-il obligatoire pour un enfant ? »
+- Page : https://revision-vtc.fr/questions/2026-11-04-siege-auto-vtc-obligatoire.html
+- Réponse courte : Oui. Un enfant de moins de 10 ans doit être attaché dans un siège auto homologué adapté à sa morphologie et à son poids, en VTC comme dans une voiture particulière. La dispense prévue par le Code de la route vise seulement le taxi et les transports en commun : elle ne s'applique pas au VTC.
+- Sources lues le jour même : Code de la route R412-1, R412-2, R412-3 (Légifrance, page de section, version au 31 octobre 2026) ; service-public.fr F628 (vérifiée le 2 novembre 2026) ; Code des transports R3120-1 (Légifrance). Relecture indépendante : 32 affirmations confirmées, 0 contredite ; 3 nuances apportées (passager mineur, chute du réel, intitulés de sources).
+- Script du réel : `reseaux/reels/2026-11-04-siege-auto-vtc-obligatoire.txt`.
+- À noter : l'accueil signale une alerte axe déjà présente avant cette publication (« landmark-complementary-is-top-level », un élément `aside` imbriqué), relevée avec axe-core 4.10.2.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 4 novembre 2026, 7 h 57 · Veille du wiki (tâche du mercredi)
 
 - **PROBLÈME : Légifrance n'a laissé lire que 9 articles sur 78.** La connexion directe reste refusée (403) et la lecture par l'outil web a échoué 15 fois sur 18 (refus du site), même en espaçant les essais de 4 minutes.
