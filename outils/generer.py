@@ -191,8 +191,8 @@ def accueil(nums, qs=()):
             <p class="carte-titre">Simulateur gratuit</p>
             <p class="carte-texte" id="cs-texte">{ty(f"Exemple mensuel : 1 000 € versés par semaine, {ex_sem} semaines par an")}</p>
             <div class="carte-curseurs" hidden>
-              <div class="curseur"><label for="cs-verse">{ty("Versé par les plateformes, par semaine")}</label><output id="cs-verse-val" for="cs-verse">{_euros(dsim["verse_semaine"])}</output><input type="range" id="cs-verse" min="200" max="2500" step="50" value="{dsim["verse_semaine"]}"></div>
-              <div class="curseur"><label for="cs-loyer">{ty("Location de la voiture, par semaine")}</label><output id="cs-loyer-val" for="cs-loyer">{_euros(dsim["loyer_semaine"])}</output><input type="range" id="cs-loyer" min="0" max="600" step="10" value="{dsim["loyer_semaine"]}"></div>
+              <div class="curseur"><label for="cs-verse">{ty("Versé par semaine")}</label><output id="cs-verse-val" for="cs-verse">{_euros(dsim["verse_semaine"])}</output><input type="range" id="cs-verse" min="200" max="2500" step="50" value="{dsim["verse_semaine"]}"></div>
+              <div class="curseur"><label for="cs-loyer">{ty("Location par semaine")}</label><output id="cs-loyer-val" for="cs-loyer">{_euros(dsim["loyer_semaine"])}</output><input type="range" id="cs-loyer" min="0" max="600" step="10" value="{dsim["loyer_semaine"]}"></div>
             </div>
             <div class="carte-calcul">
               <p class="ligne"><span>{ty("Versé par les plateformes")}</span><span class="montant" id="cs-m-verse">{_euros(ex["verse"] / 12)}</span></p>
