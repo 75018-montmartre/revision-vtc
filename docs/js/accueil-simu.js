@@ -36,7 +36,7 @@
     minuterie = setTimeout(function () { $('cs-annonce').textContent = 'Il vous reste ' + euros(r.netMois) + ' par mois, avant impôt.'; }, 900);
   }
 
-  $('cs-texte').textContent = 'Par mois, pour ' + base.semaines + ' semaines travaillées par an, voiture louée à la semaine.';
+  $('cs-texte').textContent = 'Par mois, sur ' + base.semaines + ' semaines par an, voiture louée.';
   carte.querySelector('.carte-curseurs').hidden = false;
   verse.addEventListener('input', maj);
   loyer.addEventListener('input', maj);

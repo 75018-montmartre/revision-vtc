@@ -6,6 +6,14 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 4 novembre 2026, 11 h 00 · Accueil : carte du simulateur resserrée
+
+- https://revision-vtc.fr/ : la carte « Simulateur gratuit » passe de 531 à 403 px de haut (marges, espacement des curseurs, taille des montants, phrase d'hypothèses raccourcie : « Par mois, sur 47 semaines par an, voiture louée. »), et le premier écran commence un peu plus haut. La carte du livre est de nouveau visible sans faire défiler : entièrement à partir de 1 536 × 730, et en grande partie sur un écran de 1 366 × 657.
+- Les curseurs gardent une zone tactile de 44 px. Calcul inchangé.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px, aucun débordement horizontal, 1 500 € versés et 200 € de location donnent toujours 2 398 € par mois, comme la page du simulateur.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 4 novembre 2026, 10 h 40 · Accueil : simulateur à curseurs et premier écran aligné
 
 - https://revision-vtc.fr/ : le texte du premier écran et la carte « Simulateur gratuit » commencent maintenant à la même hauteur ; avant, le texte était centré face aux deux cartes et descendait plus bas que le simulateur.

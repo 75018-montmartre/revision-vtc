@@ -320,14 +320,14 @@ main:has(.hero){padding-bottom:0}
 .fond-nuit :is(h1,h2,h3,.chapeau){color:var(--sur-nuit)}
 .fond-nuit .surtitre{color:var(--jaune)}
 .fond-nuit :focus-visible{outline-color:var(--jaune)}
-.hero-grille{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:var(--e7) 3.5rem;align-items:start;padding-top:4.5rem;padding-bottom:5rem}
+.hero-grille{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:var(--e7) 3.5rem;align-items:start;padding-top:3rem;padding-bottom:4rem}
 .hero-texte{min-width:0}
 .hero .surtitre{margin:0 0 var(--e4)}
 .hero h1{margin:0 0 var(--e5);max-width:22ch}
 .hero .chapeau{margin:0;max-width:36rem;color:var(--sur-nuit-doux)}
 .hero .actions{margin:var(--e6) 0 var(--e4)}
 .hero-mention{margin:0;font-family:var(--sans);font-size:.9375rem;color:var(--sur-nuit-doux)}
-.hero-cartes{display:grid;gap:var(--e5);min-width:0}
+.hero-cartes{display:grid;gap:var(--e4);min-width:0}
 .carte-hero{display:flex;gap:var(--e4);padding:var(--e5);border-radius:var(--rayon-lien);font-family:var(--sans);text-decoration:none}
 .carte-simu{flex-direction:column;gap:var(--e3);background:var(--carte);color:var(--encre);border:1.5px solid var(--nuit)}
 .carte-livre{align-items:center;background:var(--nuit-2);color:var(--sur-nuit);border:1.5px solid var(--jaune-ombre)}
@@ -335,12 +335,12 @@ main:has(.hero){padding-bottom:0}
 .carte-livre > span{display:flex;flex-direction:column;gap:var(--e1);min-width:0}
 /* carte du simulateur : titre, phrase d'exemple, puis un petit relevé (trois lignes, montants alignés à droite,
    même taille ; la dernière, le reste, sous un trait épais) et un lien à pastille fléchée */
-.carte-simu{gap:var(--e4)}
-.carte-simu .carte-titre{font-size:1.75rem;color:var(--encre)}
-.carte-simu .carte-texte{margin-top:calc(-1 * var(--e3))}
+.carte-simu{gap:var(--e3);padding:var(--e4) var(--e5)}
+.carte-simu .carte-titre{font-size:1.5rem;color:var(--encre)}
+.carte-simu .carte-texte{margin-top:calc(-1 * var(--e2));font-size:.9375rem}
 .carte-calcul{display:grid;margin:0;border-top:1px solid var(--filet)}
-.carte-calcul .ligne{margin:0;display:flex;justify-content:space-between;align-items:baseline;gap:var(--e4);padding:var(--e2) 0;border-bottom:1px solid var(--filet);font-size:1rem;line-height:1.3;color:var(--gris)}
-.carte-calcul .montant{flex:none;font-family:var(--cond);font-weight:700;font-size:1.75rem;line-height:1.1;color:var(--encre);font-variant-numeric:tabular-nums;white-space:nowrap}
+.carte-calcul .ligne{margin:0;display:flex;justify-content:space-between;align-items:baseline;gap:var(--e4);padding:.3rem 0;border-bottom:1px solid var(--filet);font-size:1rem;line-height:1.3;color:var(--gris)}
+.carte-calcul .montant{flex:none;font-family:var(--cond);font-weight:700;font-size:1.5rem;line-height:1.1;color:var(--encre);font-variant-numeric:tabular-nums;white-space:nowrap}
 .carte-calcul .total{border-bottom:0;border-top:2px solid var(--encre);margin-top:-1px;font-weight:700;color:var(--encre)}
 .carte-simu .carte-lien{display:flex;justify-content:space-between;align-items:center;gap:var(--e4);min-height:44px;color:var(--encre);text-decoration:none}
 .carte-simu .carte-lien::after{content:"";flex:none;width:2.25rem;height:2.25rem;border-radius:50%;background:var(--pastille) var(--pastille-fleche) center/1.15rem no-repeat}
@@ -348,10 +348,11 @@ main:has(.hero){padding-bottom:0}
 /* carte du simulateur interactive (avec JavaScript) : deux curseurs, le relevé suit. La carte n'est plus un lien,
    elle reste donc à plat ; seul « Faire ma simulation avec mes chiffres » se clique. */
 .carte-simu p{margin:0}
-.carte-curseurs{display:grid;gap:var(--e2)}
-.curseur{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:0 var(--e3);font-size:1rem;line-height:1.3;color:var(--gris)}
-.curseur output{font-family:var(--cond);font-weight:700;font-size:1.375rem;color:var(--encre);font-variant-numeric:tabular-nums;white-space:nowrap}
-.curseur input[type=range]{grid-column:1/-1;width:100%;min-height:44px;margin:0;accent-color:var(--accent);cursor:pointer}
+.carte-curseurs{display:grid;gap:0}
+.curseur{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:0 var(--e3);font-size:.9375rem;line-height:1.3;color:var(--gris)}
+.curseur output{font-family:var(--cond);font-weight:700;font-size:1.25rem;color:var(--encre);font-variant-numeric:tabular-nums;white-space:nowrap}
+/* la zone tactile du curseur garde 44 px de haut ; elle déborde un peu sur la ligne du dessus et celle du dessous */
+.curseur input[type=range]{grid-column:1/-1;width:100%;min-height:44px;margin:-.5rem 0 -.375rem;accent-color:var(--accent);cursor:pointer}
 .carte-texte{font-size:1rem;line-height:1.45}
 .carte-simu .carte-texte{color:var(--gris)}
 .carte-livre .carte-texte{color:var(--sur-nuit-doux)}
