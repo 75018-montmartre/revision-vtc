@@ -569,6 +569,10 @@ html.avec-barre body{padding-bottom:5.5rem}
 .contact .champ{margin-bottom:var(--e4)}
 .contact .champ .aide{margin-top:0}
 .champs-2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 var(--e4)}
+/* deux champs côte à côte : la case de saisie descend en bas de sa cellule, pour que les deux cases restent alignées
+   même quand les textes d'aide n'ont pas le même nombre de lignes */
+.champs-2 > .champ{display:flex;flex-direction:column}
+.champs-2 > .champ > :is(input,select,textarea){margin-top:auto}
 @media (max-width:36rem){.champs-2{grid-template-columns:minmax(0,1fr)}}
 .contact input[type=email]{width:100%;font-family:var(--sans);font-size:1rem;padding:.7rem .9rem;border:1.5px solid var(--gris);border-radius:var(--rayon-p);background:var(--fond);color:var(--encre)}
 .contact [aria-invalid="true"]{border-color:var(--ko)}

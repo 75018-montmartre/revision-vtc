@@ -6,6 +6,14 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 4 novembre 2026, 11 h 50 · Simulateur : champs côte à côte alignés
+
+- https://revision-vtc.fr/simulateurs/cout-revient-revenu-net-vtc.html : quand deux champs sont côte à côte (commission et semaines travaillées, kilomètres et heures de travail, etc.), les deux cases de saisie sont maintenant à la même hauteur, même si leurs textes d'aide n'ont pas le même nombre de lignes. Avant, la case dont l'aide était plus courte remontait.
+- Règle commune `.champs-2` dans `docs/css/site.css` (s'applique aussi aux formulaires du contact et de la page du livre, sans changement visible quand les aides ont la même longueur). Calcul inchangé.
+- Vérifié : écart nul entre les cases de chaque rangée à 1 366 px, axe sans erreur en clair et en sombre à 320 et 1 366 px, aucun débordement.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 4 novembre 2026, 11 h 15 · Accueil : simulateur en format horizontal
 
 - https://revision-vtc.fr/ : la carte « Simulateur gratuit » est plus large et moins haute (311 px au lieu de 403) : les deux curseurs sont côte à côte (« Versé par semaine », « Location par semaine ») et le relevé mensuel tient sur une ligne de trois colonnes (versé, TVA-cotisations-voiture-frais, reste avant impôt). La colonne de droite du premier écran est un peu plus large. La carte du livre est entièrement visible sans défiler, même sur un écran de 1 366 × 657.
