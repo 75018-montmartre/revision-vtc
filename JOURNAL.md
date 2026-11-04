@@ -6,6 +6,14 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 4 novembre 2026, 12 h 10 · Accueil : fond des carreaux ramené aux neutres de la charte
+
+- https://revision-vtc.fr/ : le voile de jaune sous les carreaux est retiré (jeton `--lavis` supprimé), pour ne pas ajouter de couleur à la charte. Le fond des bandes quadrillées est maintenant le gris bleuté des bandes (`--doux`) éclairci de moitié par le blanc du fond (`--fond`), avec `color-mix()` : le même gris, plus léger, sans couleur nouvelle. En sombre, le même mélange des deux jetons sombres.
+- Quadrillage estompé et alternance des bandes inchangés.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px, aucun débordement.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 4 novembre 2026, 12 h 00 · Accueil : carreaux estompés sur un voile de jaune
 
 - https://revision-vtc.fr/ : les bandes quadrillées de l'accueil changent d'aspect. Le quadrillage est net en haut de la bande et s'estompe progressivement vers le bas, au lieu de couvrir toute la bande. Le fond derrière les carreaux n'est plus gris bleuté : c'est un voile très clair du jaune signal de la charte (nouveau jeton `--lavis`, #FEF9EC en clair, #181B1C en sombre). Les bandes blanches n'ont plus de filet.

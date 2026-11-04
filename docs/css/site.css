@@ -19,8 +19,7 @@
   /* couleurs */
   --fond:#FFFFFF;      /* fond général, blanc */
   --carte:#FFFFFF;     /* cartes et bandes blanches */
-  --doux:#EEF1F4;      /* encarts, en-tête quadrillé des pages intérieures */
-  --lavis:#FEF9EC;     /* fond des bandes quadrillées de l'accueil : un voile du jaune signal (9 %) sur le blanc */
+  --doux:#EEF1F4;      /* bandes claires (quadrillées) et encarts */
   --encre:#11161E;     /* texte principal */
   --gris:#4E5663;      /* texte secondaire (contraste AA) */
   --filet:#CDD3DB;     /* bordures */
@@ -60,7 +59,7 @@
   --ombre-h:0 2px 4px rgba(17,22,30,.06),0 14px 30px -14px rgba(17,22,30,.28); /* menu déroulant seulement */
 }
 @media (prefers-color-scheme: dark){
-  :root{--fond:#0F141C;--carte:#151C27;--doux:#1C2532;--lavis:#181B1C;--encre:#E9EDF2;--gris:#AAB3C0;--filet:#2E3A4B;--rouge:#A52C15;
+  :root{--fond:#0F141C;--carte:#151C27;--doux:#1C2532;--encre:#E9EDF2;--gris:#AAB3C0;--filet:#2E3A4B;--rouge:#A52C15;
         --nuit:#0A0E14;--nuit-2:#151C27;
         --accent:#8DB4F2;--accent-trait:#E9EDF2;--ok:#8FD39C;--ok-fond:#1C2A1F;--ko:#F49A86;--ko-fond:#2E1D19;--focus:#8DB0FF;
         --ombre-h:0 10px 26px -12px rgba(0,0,0,.7);
@@ -706,8 +705,9 @@ input[type=text],input[type=search],textarea,select,.contact input[type=email]{b
 
 
 .tete-page{background-color:var(--doux);background-image:linear-gradient(var(--quadrille) 1px,transparent 1px),linear-gradient(90deg,var(--quadrille) 1px,transparent 1px);background-size:56px 56px;background-position:-1px -1px}
-/* bandes quadrillées de l'accueil : voile de jaune très clair, quadrillage net en haut de la bande qui s'estompe vers le bas */
-.bloc-doux{position:relative;background-color:var(--lavis);background-image:none}
+/* bandes quadrillées de l'accueil : le gris bleuté des bandes (--doux) éclairci de moitié par le fond, aucune couleur nouvelle ;
+   quadrillage net en haut de la bande, qui s'estompe vers le bas */
+.bloc-doux{position:relative;background-color:var(--doux);background-color:color-mix(in srgb,var(--doux) 50%,var(--fond));background-image:none}
 .bloc-doux::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(var(--quadrille) 1px,transparent 1px),linear-gradient(90deg,var(--quadrille) 1px,transparent 1px);background-size:56px 56px;background-position:-1px -1px;-webkit-mask-image:linear-gradient(180deg,#000 0,rgba(0,0,0,.8) 40%,rgba(0,0,0,.25) 80%,transparent 100%);mask-image:linear-gradient(180deg,#000 0,rgba(0,0,0,.8) 40%,rgba(0,0,0,.25) 80%,transparent 100%)}
 .bloc-doux > .page{position:relative}
 .bloc-blanc{border-top:0;border-bottom:0}
