@@ -6,6 +6,19 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 4 novembre 2026, 7 h 57 · Veille du wiki (tâche du mercredi)
+
+- **PROBLÈME : Légifrance n'a laissé lire que 9 articles sur 78.** La connexion directe reste refusée (403) et la lecture par l'outil web a échoué 15 fois sur 18 (refus du site), même en espaçant les essais de 4 minutes.
+- Articles vérifiés : 9 sur 78, tous identiques au texte officiel : L3120-1, L3120-2, L3120-2-1, L3120-2-2, L3120-4, L3120-5, L3120-7 (page Légifrance en vigueur au 30 octobre 2026), R3122-2 (en vigueur au 4 novembre 2026), L3142-2 (copie Légifrance du 19 août 2026, version en vigueur depuis le 31 décembre 2016).
+- Articles non lus : les 69 autres (dont les 5 arrêtés). Aucun texte modifié. Date « vérifié » laissée au 25 octobre 2026.
+- Explications améliorées (première phrase plus directe, reprise telle quelle par Google, 158 caractères au plus) :
+  - https://revision-vtc.fr/wiki/l3120-1.html : « Le T3P (transport public particulier de personnes) : transport payant de personnes en véhicule de moins de dix places, hors bus, cars et transport privé. »
+  - https://revision-vtc.fr/wiki/l3120-2-2.html : ajout du mot « carte VTC ».
+  - https://revision-vtc.fr/wiki/l3120-2.html : ajout du mot « maraude » dans la première phrase.
+- Contrôle technique : génération réussie, sitemap complet (79 adresses du wiki), descriptions et données structurées présentes, aucun lien interne cassé, axe sans erreur en clair et en sombre à 320 et 1366 px.
+- À faire : autoriser legifrance.gouv.fr dans les accès réseau de la tâche, ou la faire tourner depuis l'ordinateur (option « Exiger cet ordinateur », navigateur intégré).
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mardi 3 novembre 2026, 23 h 15 · Moins d'arrondis, liens « Tous les… » en rectangle
 
 - Toutes les pages : coins des cartes, des cartes-liens et des touches ramenés à 4 px (au lieu de 10 et 12 px) ; sommaire du wiki et barre de répartition du simulateur moins arrondis.

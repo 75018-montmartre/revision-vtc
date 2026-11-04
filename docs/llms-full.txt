@@ -9,7 +9,7 @@ Textes officiels recopiés de Légifrance, version en vigueur au 25 octobre 2026
 Page : https://revision-vtc.fr/wiki/l3120-1.html
 Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000029530535
 
-En clair : Cet article délimite le T3P : le transport de personnes payant, avec un véhicule de moins de dix places. Les bus et cars (transport collectif) et le transport privé en sont exclus.
+En clair : Le T3P (transport public particulier de personnes) : transport payant de personnes en véhicule de moins de dix places, hors bus, cars et transport privé.
 
 Concrètement : Un VTC, un taxi ou une moto-taxi entrent dans ce cadre ; un minibus de 12 places ou une navette d'entreprise gratuite, non.
 
@@ -134,7 +134,7 @@ Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A2.1 (Les conditio
 Page : https://revision-vtc.fr/wiki/l3120-2-2.html
 Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039784441
 
-En clair : Tout conducteur de taxi, de VTC ou de deux-roues motorisé doit être titulaire d'une carte professionnelle délivrée par l'administration.
+En clair : Taxi, VTC ou deux-roues motorisé : tout conducteur doit détenir une carte professionnelle (« carte VTC » pour un chauffeur VTC) délivrée par l'administration.
 
 Concrètement : Conduire un client sans carte est un délit (voir L3124-12).
 
@@ -792,7 +792,7 @@ Dans le livre Machine à Réussite · Examen VTC 2027 : fiche G3.1 (Les deux vig
 Page : https://revision-vtc.fr/wiki/l3120-2.html
 Source officielle : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033745346
 
-En clair : Un VTC ne peut prendre un client que sur réservation préalable. Il ne peut ni chercher des clients en circulant ou en stationnant sur la voie publique, ni attendre devant une gare ou un aéroport au-delà d'une durée fixée. Il est aussi interdit d'indiquer à un client la position et la disponibilité d'un VTC avant sa réservation, de démarcher un client sur la voie publique ou de vendre une telle prise en charge.
+En clair : Un VTC ne peut prendre un client que sur réservation préalable : la maraude lui est interdite. Il ne peut ni chercher des clients en circulant ou en stationnant sur la voie publique, ni attendre devant une gare ou un aéroport au-delà d'une durée fixée. Il est aussi interdit d'indiquer à un client la position et la disponibilité d'un VTC avant sa réservation, de démarcher un client sur la voie publique ou de vendre une telle prise en charge.
 
 Concrètement : Prendre un passant qui vous fait signe sans réservation est un délit (trois ans de prison, 45 000 € d'amende, L3124-12). Circuler en quête de clients ou attendre trop tôt devant une gare est une contravention de 5e classe (R3124-11).
 
