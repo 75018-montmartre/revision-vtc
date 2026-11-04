@@ -6,6 +6,16 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 4 novembre 2026, 10 h 40 · Accueil : simulateur à curseurs et premier écran aligné
+
+- https://revision-vtc.fr/ : le texte du premier écran et la carte « Simulateur gratuit » commencent maintenant à la même hauteur ; avant, le texte était centré face aux deux cartes et descendait plus bas que le simulateur.
+- La carte « Simulateur gratuit » a deux curseurs : montant versé par les plateformes par semaine (200 à 2 500 €) et location de la voiture par semaine (0 à 600 €). Le relevé mensuel (versé, TVA, cotisations, voiture et frais, reste avant impôt) se recalcule à chaque cran avec le calcul du simulateur complet et ses valeurs par défaut (47 semaines, hybride essence, cotisations sur le prix payé par les clients). Exemple contrôlé : 1 500 € versés et 200 € de location par semaine donnent 2 398 € par mois, comme la page du simulateur avec les mêmes valeurs. Le lien « Faire ma simulation avec mes chiffres » ouvre le simulateur avec ces deux valeurs.
+- La carte n'est plus un lien entier : elle est à plat, seul le lien du bas se clique (charte : ce qui ne se clique pas reste à plat). Sans JavaScript, l'exemple pour 1 000 € par semaine reste affiché.
+- Nouveau script `docs/js/accueil-simu.js` ; `outils/generer.py` (accueil), `docs/css/site.css` (curseurs, alignement, relief réservé aux cartes-liens), README (accueil).
+- Vérifié : tests du simulateur (calculs justes, Python et JavaScript identiques sur 401 cas), axe sans erreur en clair et en sombre à 320 et 1 366 px, aucun débordement horizontal.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 4 novembre 2026, 9 h 06 · Question VTC du jour
 
 - Question : « Siège auto en VTC : est-il obligatoire pour un enfant ? »

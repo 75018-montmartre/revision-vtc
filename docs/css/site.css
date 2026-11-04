@@ -320,7 +320,7 @@ main:has(.hero){padding-bottom:0}
 .fond-nuit :is(h1,h2,h3,.chapeau){color:var(--sur-nuit)}
 .fond-nuit .surtitre{color:var(--jaune)}
 .fond-nuit :focus-visible{outline-color:var(--jaune)}
-.hero-grille{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:var(--e7) 3.5rem;align-items:center;padding-top:4.5rem;padding-bottom:5rem}
+.hero-grille{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:var(--e7) 3.5rem;align-items:start;padding-top:4.5rem;padding-bottom:5rem}
 .hero-texte{min-width:0}
 .hero .surtitre{margin:0 0 var(--e4)}
 .hero h1{margin:0 0 var(--e5);max-width:22ch}
@@ -339,12 +339,19 @@ main:has(.hero){padding-bottom:0}
 .carte-simu .carte-titre{font-size:1.75rem;color:var(--encre)}
 .carte-simu .carte-texte{margin-top:calc(-1 * var(--e3))}
 .carte-calcul{display:grid;margin:0;border-top:1px solid var(--filet)}
-.carte-calcul .ligne{display:flex;justify-content:space-between;align-items:baseline;gap:var(--e4);padding:var(--e2) 0;border-bottom:1px solid var(--filet);font-size:1rem;line-height:1.3;color:var(--gris)}
+.carte-calcul .ligne{margin:0;display:flex;justify-content:space-between;align-items:baseline;gap:var(--e4);padding:var(--e2) 0;border-bottom:1px solid var(--filet);font-size:1rem;line-height:1.3;color:var(--gris)}
 .carte-calcul .montant{flex:none;font-family:var(--cond);font-weight:700;font-size:1.75rem;line-height:1.1;color:var(--encre);font-variant-numeric:tabular-nums;white-space:nowrap}
 .carte-calcul .total{border-bottom:0;border-top:2px solid var(--encre);margin-top:-1px;font-weight:700;color:var(--encre)}
-.carte-simu .carte-lien{display:flex;justify-content:space-between;align-items:center;gap:var(--e4);text-decoration:none}
+.carte-simu .carte-lien{display:flex;justify-content:space-between;align-items:center;gap:var(--e4);min-height:44px;color:var(--encre);text-decoration:none}
 .carte-simu .carte-lien::after{content:"";flex:none;width:2.25rem;height:2.25rem;border-radius:50%;background:var(--pastille) var(--pastille-fleche) center/1.15rem no-repeat}
-.carte-simu:hover .carte-lien{text-decoration:underline;text-underline-offset:.2em}
+.carte-simu .carte-lien:hover{text-decoration:underline;text-underline-offset:.2em}
+/* carte du simulateur interactive (avec JavaScript) : deux curseurs, le relevé suit. La carte n'est plus un lien,
+   elle reste donc à plat ; seul « Faire ma simulation avec mes chiffres » se clique. */
+.carte-simu p{margin:0}
+.carte-curseurs{display:grid;gap:var(--e2)}
+.curseur{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:0 var(--e3);font-size:1rem;line-height:1.3;color:var(--gris)}
+.curseur output{font-family:var(--cond);font-weight:700;font-size:1.375rem;color:var(--encre);font-variant-numeric:tabular-nums;white-space:nowrap}
+.curseur input[type=range]{grid-column:1/-1;width:100%;min-height:44px;margin:0;accent-color:var(--accent);cursor:pointer}
 .carte-texte{font-size:1rem;line-height:1.45}
 .carte-simu .carte-texte{color:var(--gris)}
 .carte-livre .carte-texte{color:var(--sur-nuit-doux)}
@@ -721,10 +728,10 @@ input[type=text],input[type=search],textarea,select,.contact input[type=email]{b
    sauf le bouton à contour, en --nuit-2 pour rester second. Mêmes mouvements qu'ailleurs. --- */
 .fond-nuit .bouton.clair,.carte-hero,.menu-livre summary{--relief:var(--jaune-ombre)}
 .fond-nuit .bouton.contour{--relief:var(--nuit-2)}
-.carte-hero{box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief);transition:transform .15s ease,box-shadow .15s ease}
-.carte-hero:hover,.carte-hero:focus-visible{transform:translate(-2px,-2px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief),7px 7px 0 0 var(--relief),8px 8px 0 0 var(--relief)}
-.carte-hero:active{transform:translate(6px,6px);box-shadow:0 0 0 0 var(--relief)}
-.carte-hero:hover .carte-lien{text-decoration-thickness:2px}
+a.carte-hero{box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief);transition:transform .15s ease,box-shadow .15s ease}
+a.carte-hero:hover,a.carte-hero:focus-visible{transform:translate(-2px,-2px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief),7px 7px 0 0 var(--relief),8px 8px 0 0 var(--relief)}
+a.carte-hero:active{transform:translate(6px,6px);box-shadow:0 0 0 0 var(--relief)}
+a.carte-hero:hover .carte-lien{text-decoration-thickness:2px}
 
 /* --- simulateur : les choix sont des touches ; la touche choisie est enfoncée --- */
 .choix label{background:var(--carte);border:1.5px solid var(--relief) !important;border-radius:var(--rayon-lien);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief);transition:transform .12s ease,box-shadow .12s ease}

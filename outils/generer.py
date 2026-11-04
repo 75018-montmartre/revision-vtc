@@ -146,7 +146,14 @@ def accueil(nums, qs=()):
     # exemple du simulateur (mêmes valeurs par défaut que la page du simulateur, base prudente)
     sim = lire_simulateur()
     ex = calcul_simulateur(sim)
-    ex_sem = defauts_simulateur(sim)["semaines"]
+    dsim = defauts_simulateur(sim)
+    ex_sem = dsim["semaines"]
+    # carte interactive : le calcul de js/simulateur.js (SimuVTC.calculer), avec les valeurs par défaut de la page du simulateur
+    donnees_simu = json.dumps({"valeurs": sim["valeurs"]}, ensure_ascii=False).replace("</", "<\\/")
+    defauts_simu = json.dumps(dsim, ensure_ascii=False).replace("</", "<\\/")
+    fin_accueil = (f'<script id="simu-donnees" type="application/json">{donnees_simu}</script>\n'
+                   f'<script id="simu-defauts" type="application/json">{defauts_simu}</script>\n'
+                   '<script src="js/simulateur.js"></script>\n<script src="js/accueil-simu.js"></script>\n')
     n_wiki = len(lire_wiki()["articles"])
     # mois de la dernière vérification du wiki (« 25 octobre 2026 » -> « octobre 2026 ») : le surtitre reste vrai sans retouche
     verif = " ".join(lire_wiki()["verifie"].split()[-2:])
@@ -180,16 +187,21 @@ def accueil(nums, qs=()):
           <p class="hero-mention">Gratuit, sans inscription, sans publicité.</p>
         </div>
         <div class="hero-cartes">
-          <a class="carte-hero carte-simu" href="{simu}">
-            <span class="carte-titre">Simulateur gratuit</span>
-            <span class="carte-texte">{ty(f"Exemple mensuel : 1 000 € versés par semaine, {ex_sem} semaines par an")}</span>
-            <span class="carte-calcul">
-              <span class="ligne"><span>{ty("Versé par les plateformes")}</span><span class="montant">{_euros(ex["verse"] / 12)}</span></span>
-              <span class="ligne"><span>{ty("TVA, cotisations, voiture et frais")}</span><span class="montant">− {_euros((ex["verse"] - ex["net"]) / 12)}</span></span>
-              <span class="ligne total"><span>{ty("Il vous reste, avant impôt")}</span><span class="montant">{_euros(ex["net"] / 12)}</span></span>
-            </span>
-            <span class="carte-lien">Faire ma simulation avec mes chiffres</span>
-          </a>
+          <div class="carte-hero carte-simu" id="carte-simu">
+            <p class="carte-titre">Simulateur gratuit</p>
+            <p class="carte-texte" id="cs-texte">{ty(f"Exemple mensuel : 1 000 € versés par semaine, {ex_sem} semaines par an")}</p>
+            <div class="carte-curseurs" hidden>
+              <div class="curseur"><label for="cs-verse">{ty("Versé par les plateformes, par semaine")}</label><output id="cs-verse-val" for="cs-verse">{_euros(dsim["verse_semaine"])}</output><input type="range" id="cs-verse" min="200" max="2500" step="50" value="{dsim["verse_semaine"]}"></div>
+              <div class="curseur"><label for="cs-loyer">{ty("Location de la voiture, par semaine")}</label><output id="cs-loyer-val" for="cs-loyer">{_euros(dsim["loyer_semaine"])}</output><input type="range" id="cs-loyer" min="0" max="600" step="10" value="{dsim["loyer_semaine"]}"></div>
+            </div>
+            <div class="carte-calcul">
+              <p class="ligne"><span>{ty("Versé par les plateformes")}</span><span class="montant" id="cs-m-verse">{_euros(ex["verse"] / 12)}</span></p>
+              <p class="ligne"><span>{ty("TVA, cotisations, voiture et frais")}</span><span class="montant" id="cs-m-retenues">− {_euros((ex["verse"] - ex["net"]) / 12)}</span></p>
+              <p class="ligne total"><span>{ty("Il vous reste, avant impôt")}</span><span class="montant" id="cs-m-net">{_euros(ex["net"] / 12)}</span></p>
+            </div>
+            <p class="visuellement-cache" id="cs-annonce" aria-live="polite"></p>
+            <a class="carte-lien" id="cs-lien" href="{simu}">Faire ma simulation avec mes chiffres</a>
+          </div>
           <a class="carte-hero carte-livre" href="le-livre.html">
             <img src="couverture-petite.jpg" width="68" height="88" alt="">
             <span>
@@ -224,7 +236,7 @@ def accueil(nums, qs=()):
     </section>{bloc_questions(qs)}{dernier}'''
     ecrire("index.html", page("Examen VTC 2027 et réglementation VTC expliquée · Révision VTC", corps, "accueil", "",
                               "Réussir l'examen VTC 2027 : la réglementation VTC expliquée article par article, l'actualité du métier chaque semaine et deux examens blancs corrigés. Sources officielles citées.",
-                              brut=True, jsonld=[{"@context": "https://schema.org", "@graph": [SITE_LD, LIVRE_LD]}]))
+                              brut=True, scripts_fin=fin_accueil, jsonld=[{"@context": "https://schema.org", "@graph": [SITE_LD, LIVRE_LD]}]))
 
 
 ESSENTIELS = [("l3120-2", "Réservation préalable et maraude : ce qui est interdit"), ("d3120-3", "Attente devant les gares et aéroports : une heure maximum"),
