@@ -6,6 +6,13 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 4 novembre 2026, 12 h 20 · Toutes les pages : carreaux estompés dans l'en-tête
+
+- Les en-têtes quadrillés des pages intérieures (Questions VTC, Textes du métier, Articles, Actualité VTC, Simulateurs, le livre, pages fixes) prennent le même traitement que les bandes de l'accueil : fond `--doux` éclairci de moitié par `--fond`, quadrillage net en haut qui s'estompe vers le bas. Une seule règle pour tous les fonds quadrillés du site (`.bloc-doux,.tete-page` dans `docs/css/site.css`).
+- Vérifié sur l'accueil, la liste et une page des Questions VTC, un texte du wiki, un article, le simulateur, l'Actualité VTC et la page du livre : axe sans erreur en clair et en sombre, aucun débordement à 320 et 1 366 px.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 4 novembre 2026, 12 h 10 · Accueil : fond des carreaux ramené aux neutres de la charte
 
 - https://revision-vtc.fr/ : le voile de jaune sous les carreaux est retiré (jeton `--lavis` supprimé), pour ne pas ajouter de couleur à la charte. Le fond des bandes quadrillées est maintenant le gris bleuté des bandes (`--doux`) éclairci de moitié par le blanc du fond (`--fond`), avec `color-mix()` : le même gris, plus léger, sans couleur nouvelle. En sombre, le même mélange des deux jetons sombres.

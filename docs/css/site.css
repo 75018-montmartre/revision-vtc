@@ -561,7 +561,7 @@ html.avec-barre body{padding-bottom:5.5rem}
   .numeros > li{grid-template-columns:1fr;gap:var(--e2)}
 }
 @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto !important;transition:none !important}.bouton:hover,.nom-site .marque,.questions li:hover,.wiki-liste li:hover,.essentiel-liens li:hover,.numeros > li:hover{transform:none !important}}
-@media print{.bloc-doux::before{display:none}.entete .nav,.pied,.barre,.actions{display:none}
+@media print{.bloc-doux::before,.tete-page::before{display:none}.entete .nav,.pied,.barre,.actions{display:none}
   .essentiel-liens li,.wiki-liste li,.questions li,.numeros > li,.en-clair,.retenir,.officiel,.breve,.cherche{box-shadow:none}}
 
 /* formulaire de contact (composant « formulaire ») */
@@ -704,12 +704,11 @@ input[type=text],input[type=search],textarea,select,.contact input[type=email]{b
 }
 
 
-.tete-page{background-color:var(--doux);background-image:linear-gradient(var(--quadrille) 1px,transparent 1px),linear-gradient(90deg,var(--quadrille) 1px,transparent 1px);background-size:56px 56px;background-position:-1px -1px}
-/* bandes quadrillées de l'accueil : le gris bleuté des bandes (--doux) éclairci de moitié par le fond, aucune couleur nouvelle ;
-   quadrillage net en haut de la bande, qui s'estompe vers le bas */
-.bloc-doux{position:relative;background-color:var(--doux);background-color:color-mix(in srgb,var(--doux) 50%,var(--fond));background-image:none}
-.bloc-doux::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(var(--quadrille) 1px,transparent 1px),linear-gradient(90deg,var(--quadrille) 1px,transparent 1px);background-size:56px 56px;background-position:-1px -1px;-webkit-mask-image:linear-gradient(180deg,#000 0,rgba(0,0,0,.8) 40%,rgba(0,0,0,.25) 80%,transparent 100%);mask-image:linear-gradient(180deg,#000 0,rgba(0,0,0,.8) 40%,rgba(0,0,0,.25) 80%,transparent 100%)}
-.bloc-doux > .page{position:relative}
+/* fonds quadrillés (bandes de l'accueil et en-tête des pages intérieures) : le gris bleuté des bandes (--doux) éclairci de moitié
+   par le fond, aucune couleur nouvelle ; quadrillage net en haut, qui s'estompe vers le bas */
+.bloc-doux,.tete-page{position:relative;background-color:var(--doux);background-color:color-mix(in srgb,var(--doux) 50%,var(--fond));background-image:none}
+.bloc-doux::before,.tete-page::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(var(--quadrille) 1px,transparent 1px),linear-gradient(90deg,var(--quadrille) 1px,transparent 1px);background-size:56px 56px;background-position:-1px -1px;-webkit-mask-image:linear-gradient(180deg,#000 0,rgba(0,0,0,.8) 40%,rgba(0,0,0,.25) 80%,transparent 100%);mask-image:linear-gradient(180deg,#000 0,rgba(0,0,0,.8) 40%,rgba(0,0,0,.25) 80%,transparent 100%)}
+.bloc-doux > .page,.tete-page > .page{position:relative}
 .bloc-blanc{border-top:0;border-bottom:0}
 
 /* --- cartes cliquables, grandes --- */
