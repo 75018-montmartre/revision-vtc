@@ -6,6 +6,13 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 7 novembre 2026, 22 h 10 · Pictogrammes des épreuves en panneaux
+
+- Tout le site : les pictogrammes des épreuves (cartes de la FAQ VTC et des guides, légende des épreuves) passent en panneaux : plaque bleu nuit, liseré blanc, dessin jaune, sans lettre. Mêmes dessins qu'avant.
+- Vérifié : axe sans nouvelle erreur en clair et en sombre à 320 et 1 366 px (FAQ VTC, guides, accueil).
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 7 novembre 2026, 22 h 30 · Encadrés « À retenir » en panneau, situation des fiches en bon de course
 
 - Tout le site : les encadrés « À retenir » (FAQ VTC, guides, Actualité VTC, fiches) deviennent un panneau jaune à double filet bleu nuit, titre en onglet. Texte inchangé.
