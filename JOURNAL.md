@@ -6,6 +6,15 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 7 novembre 2026, 19 h 10 · Menu renommé : Simulateurs, Réglementation VTC, FAQ VTC, Guides VTC
+
+- Menu de toutes les pages : « Simulateur » devient « Simulateurs », « Textes réglementaires » devient « Réglementation VTC », « Questions VTC » devient « FAQ VTC », « Articles » devient « Guides VTC » ; « Actualité VTC » inchangé. Adresses inchangées (`simulateurs/`, `wiki/`, `questions/`, `dossiers/`).
+- Repris partout : titres `h1` et `<title>`, fils d'Ariane (pages et données structurées), surtitres (« Textes officiels expliqués », « Guides pratiques », « Guide n° … »), liens dans les textes (accueil, contact, à propos, simulateur, deux guides), llms.txt.
+- https://revision-vtc.fr/questions/ a pour titre « FAQ VTC : les questions des chauffeurs et des candidats à l'examen, réponses sourcées ».
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px, menu lisible et sans débordement.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 7 novembre 2026, 19 h 30 · Menu « Textes réglementaires », index des Questions VTC et des Articles refaits
 
 - Menu et toutes les pages : la rubrique « Textes du métier » s'appelle désormais « Textes réglementaires » (menu, titre de https://revision-vtc.fr/wiki/, liens dans les textes, accueil, llms.txt). Adresses inchangées (`wiki/`).
