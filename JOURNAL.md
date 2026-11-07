@@ -6,6 +6,18 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 7 novembre 2026, 19 h 21 · Actualité VTC n° 5 (tâche du lundi)
+
+- Page : https://revision-vtc.fr/actualite/2026-11-07.html
+- Titre : « Chauffeurs VTC : 10 heures par jour selon l'ARPE, aucun nouveau texte officiel » (période du 3 au 7 novembre 2026).
+- Textes officiels : aucun nouveau texte VTC au Journal officiel du 3 au 7 novembre 2026 (sommaires des JO n° 257 à 261 lus sur Légifrance).
+- Examen : aucune nouveauté ; tarifs 2027 inchangés sur exament3p.fr ; résultats de la session d'admission d'octobre 2026 publiés le 5 novembre 2026 par la CMA Hauts-de-France.
+- Rémunération et plateformes : enquête de l'ARPE publiée le 6 novembre 2026 (593 chauffeurs VTC, 10 heures par jour travaillé, 2 736 € de revenus bruts déclarés par mois avant charges, 1 563 € de charges, 65 % ont augmenté leur temps de travail).
+- Simulateur : prix des carburants à jour (6 novembre 2026, mise à jour automatique).
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px, aucun débordement ; sitemap.xml et llms.txt contiennent le numéro.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 7 novembre 2026, 19 h 10 · Menu renommé : Simulateurs, Réglementation VTC, FAQ VTC, Guides VTC
 
 - Menu de toutes les pages : « Simulateur » devient « Simulateurs », « Textes réglementaires » devient « Réglementation VTC », « Questions VTC » devient « FAQ VTC », « Articles » devient « Guides VTC » ; « Actualité VTC » inchangé. Adresses inchangées (`simulateurs/`, `wiki/`, `questions/`, `dossiers/`).
