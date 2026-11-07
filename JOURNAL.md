@@ -6,6 +6,14 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 7 novembre 2026, 10 h 25 · Article n° 6 (tâche tous les deux jours)
+
+- **PROBLÈME : aucun article publié, faute de pouvoir lire une seule source officielle.** Le réseau de la tâche refuse la connexion directe (refus 403 du proxy) à legifrance.gouv.fr, service-public.fr, entreprendre.service-public.fr, urssaf.fr, impots.gouv.fr, bofip.impots.gouv.fr, ecologie.gouv.fr, data.gouv.fr, insee.fr, senat.fr, assemblee-nationale.fr et pixabay.com. La lecture par l'outil web a été refusée pour 4 pages sur 4 (« PROVENANCE_REQUIRED » : demande d'autorisation restée sans réponse, la tâche tournant sans personne pour l'accepter). La recherche web ne renvoie que des titres et des liens, sans le texte des pages : rien n'a pu être vérifié, donc rien n'est publié.
+- Contrôle des doublons fait (5 articles publiés, aucun brouillon, 8 questions). Sujet retenu pour le prochain passage, non rédigé : « Taxi ou VTC en 2027 : ce qui change vraiment » (thème réglementation, après l'article n° 5 sur l'examen). Sujet de repli : le précompte des cotisations sociales par les plateformes (à ne pas confondre avec le prélèvement à la source de l'impôt).
+- Même blocage que la Question VTC de ce matin et la veille du wiki du 4 novembre.
+- À faire : autoriser legifrance.gouv.fr, service-public.fr, urssaf.fr, impots.gouv.fr, ecologie.gouv.fr et pixabay.com dans les accès réseau des tâches (claude.ai, Paramètres > Capacités), ou accepter les lectures web des tâches, ou les faire tourner depuis l'ordinateur (« Exiger cet ordinateur »).
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 7 novembre 2026, 9 h 05 · Question VTC du jour
 
 - **PROBLÈME : aucune question publiée, faute de pouvoir lire une source officielle.** Le réseau de la tâche refuse la connexion directe à legifrance.gouv.fr et à service-public.fr (refus 403 du proxy). La lecture par l'outil web a été refusée trois fois (« PROVENANCE_REQUIRED » : demande d'autorisation restée sans réponse, la tâche tournant sans personne pour l'accepter) ; un livret de préfecture (bas-rhin.gouv.fr) a renvoyé une erreur du serveur.
