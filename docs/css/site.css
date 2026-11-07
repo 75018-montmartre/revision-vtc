@@ -136,19 +136,9 @@ main{padding:0 0 var(--e8)}
 .nav a{display:inline-flex;align-items:center;min-height:40px;padding:0 .7rem;border-radius:var(--pilule);color:var(--encre);text-decoration:none;white-space:nowrap;transition:background .15s}
 .nav a:hover{background:var(--doux)}
 .nav a[aria-current="page"]{background:var(--encre);color:var(--fond);font-weight:600}
-/* menu « Le livre » : pilule à contour rouge, liste déroulante en carte */
-.menu-livre{grid-area:livre;position:relative;font-family:var(--sans);font-size:.9375rem}
-.menu-livre summary{display:inline-flex;align-items:center;gap:.5rem;min-height:40px;padding:0 1rem;border:1.5px solid var(--accent-trait);border-radius:var(--pilule);color:var(--accent);font-weight:600;cursor:pointer;list-style:none;white-space:nowrap;transition:background .15s}
-.menu-livre summary::-webkit-details-marker{display:none}
-.menu-livre summary::after{content:"";width:.45rem;height:.45rem;border:solid currentColor;border-width:0 2px 2px 0;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
-.menu-livre[open] summary::after{transform:translateY(1px) rotate(-135deg)}
-.menu-livre summary:hover,.menu-livre[open] summary{background:var(--doux)}
-.menu-livre.actif summary{background:var(--encre);border-color:var(--encre);color:var(--fond)}
-.menu-livre ul{position:absolute;right:0;top:calc(100% + .5rem);z-index:10;width:max-content;min-width:15rem;max-width:calc(100vw - 2.5rem);list-style:none;margin:0;padding:var(--e2);background:var(--carte);border:1px solid var(--filet);border-radius:var(--rayon);box-shadow:var(--ombre-h)}
-.menu-livre li{margin:0}
-.menu-livre a{display:flex;align-items:center;min-height:40px;padding:0 .75rem;border-radius:var(--rayon-p);color:var(--encre);text-decoration:none}
-.menu-livre a:hover{background:var(--doux);color:var(--accent)}
-.menu-livre a[aria-current="page"]{background:var(--doux);font-weight:600}
+/* bouton « Le livre » : lien direct vers la page du livre (depuis le 7 novembre 2026 ; avant, un menu déroulant) */
+.menu-livre{grid-area:livre;display:inline-flex;align-items:center;min-height:40px;padding:0 1rem;border:1.5px solid var(--accent-trait);border-radius:var(--pilule);color:var(--accent);font-family:var(--sans);font-size:.9375rem;font-weight:600;text-decoration:none;white-space:nowrap;transition:background .15s}
+.menu-livre:hover{background:var(--doux)}
 @media (max-width:76rem){
   .entete .page{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"marque livre" "nav nav"}
   .nav{justify-self:start}
@@ -538,6 +528,78 @@ html.avec-barre body{padding-bottom:5.5rem}
 .part-autres{background:var(--filet)}
 .part-net{background:var(--ok)}
 
+/* fiches d'entraînement tirées du livre (page du livre ; outils/generer.py, fiche_entrainement ; js/fiche.js).
+   Cadre à filet épais, comme une page du livre ; les choix réutilisent .choix (examens blancs) ;
+   sans JavaScript tout est visible, avec lui les étapes s'ouvrent une à une (.fiche-js, .ouvert). */
+.choix.en-ligne{flex-direction:row;flex-wrap:wrap}
+.fiche-essai{display:grid;gap:var(--e5);margin:var(--e4) 0 var(--e7);padding:var(--e5);border:2px solid var(--encre);border-radius:var(--rayon);background:var(--carte)}
+.fiche-essai > *,.fiche-essai fieldset{margin:0}
+.fiche-essai fieldset{border:0;padding:0;min-width:0}
+.fiche-essai legend{padding:0;margin:0 0 var(--e3);font-family:var(--sans);font-weight:700;font-size:1.0625rem;line-height:1.4}
+.fiche-tete{display:flex;flex-wrap:wrap;align-items:center;gap:var(--e2) var(--e3);font-family:var(--sans);font-size:.9375rem;line-height:1.4;color:var(--gris)}
+.fiche-code{font:700 1.25rem/1.4 var(--cond);background:var(--jaune);color:var(--nuit);padding:0 .55rem;border-radius:var(--rayon-p)}
+.corps-page .fiche-essai h3{margin:0;font-size:1.875rem}
+.fiche-essai h4{margin:0 0 var(--e2);font-family:var(--sans);font-size:1rem;font-weight:700;line-height:1.4}
+.fiche-etiquette{display:inline-block;margin-right:var(--e2);font-family:var(--sans);font-size:.875rem;font-weight:700;color:var(--gris)}
+.fiche-situation{padding:var(--e4) var(--e5);background:var(--doux);border-left:5px solid var(--encre);border-radius:var(--rayon-p)}
+.fiche-situation p,.fiche-corrige p,.fiche-essai .note p,.fiche-essai .retenir p{margin:0 0 var(--e3)}
+.fiche-situation p:last-child,.fiche-essai .note p:last-child,.fiche-essai .retenir p:last-child{margin-bottom:0}
+.fiche-corrige{padding-top:var(--e4);border-top:1px solid var(--filet)}
+.fiche-corrige > :last-child{margin-bottom:0}
+.fiche-essai .retenir,.fiche-essai .note{margin:0 0 var(--e4)}
+.fiche-essai .retenir{padding-top:var(--e4)}
+.fiche-verdict{font:700 1.375rem/1.2 var(--cond)}
+.fiche-js [data-etape]:not(.ouvert){display:none}
+.fiche-essai .verdict:not(:empty){display:block;margin-top:var(--e1);font-weight:700;font-size:.9375rem}
+.choix .rep.juste .verdict{color:var(--ok)}
+.choix .rep.faux .verdict{color:var(--ko)}
+.choix label:has(input:disabled){cursor:default}
+.fiche-essai textarea{width:100%;min-height:6.5rem;padding:.6rem .75rem;border:2px solid var(--filet);border-radius:4px;background:var(--carte);color:var(--encre);font-family:var(--sans);font-size:1.0625rem;line-height:1.5;resize:vertical}
+.fiche-essai textarea:focus{border-color:var(--encre)}
+.fiche-essai .bouton + *,.fiche-essai p:has(> .bouton){margin:var(--e3) 0 0}
+.fiche-score{margin:var(--e3) 0 var(--e4);font:700 1.5rem var(--cond)}
+.fiche-bilan{margin:0 0 var(--e4);padding:var(--e5);background:var(--nuit);color:var(--sur-nuit);border-radius:var(--rayon);font-family:var(--sans)}
+.fiche-bilan h4{color:var(--jaune);font-family:var(--cond);font-size:1.375rem}
+.fiche-bilan .fiche-etiquette{color:var(--sur-nuit-doux);margin-top:var(--e2)}
+.fiche-revisions{list-style:none;margin:var(--e2) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--e2)}
+.fiche-revisions li{margin:0;padding:var(--e2);background:var(--nuit-2);border-radius:var(--rayon-p);text-align:center;font-size:.9375rem;line-height:1.35}
+.fiche-revisions b{display:block;font:700 1.375rem var(--cond);color:var(--jaune)}
+.fiche-sources{font-family:var(--sans);font-size:.9375rem;color:var(--gris)}
+p.fiche-sources{margin:0 0 var(--e1)}
+ul.fiche-sources{margin:0;padding-left:1.25rem}
+@media (max-width:36rem){.fiche-essai{padding:var(--e4)}.fiche-revisions{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* schémas des règles (infographies en SVG dessinées par le générateur) : couleurs des jetons, lisibles en clair et en sombre ;
+   l'interdit est hachuré et le permis à plat, pour ne pas reposer sur la couleur seule ; trop étroit, le schéma défile */
+.schema{margin:var(--e4) 0;padding:var(--e4);border:1px solid var(--filet);border-radius:var(--rayon);background:var(--carte)}
+.schema-defile{overflow-x:auto}
+.schema svg{display:block;width:100%;min-width:32rem;height:auto}
+.schema text{font-family:var(--sans);font-size:14px;font-weight:600;fill:var(--encre)}
+.schema .petit{font-size:13px;font-weight:400;fill:var(--gris)}
+.schema .axe{stroke:var(--encre);stroke-width:2}
+.schema .graduation{stroke:var(--gris);stroke-width:1}
+.schema .zone-ko{stroke:var(--ko);stroke-width:1.5}
+.schema .hach-fond{fill:var(--ko-fond)}
+.schema .hach-trait{stroke:var(--ko);stroke-width:2;opacity:.45}
+.schema .zone-ok{fill:var(--ok-fond);stroke:var(--ok);stroke-width:1.5}
+.schema .trait-ok{stroke:var(--ok);stroke-width:2.5;stroke-dasharray:6 4}
+.schema .point{fill:var(--encre)}
+.schema .point-ko{fill:var(--ko)}
+.schema .repere,.schema rect{transition:transform 1s cubic-bezier(.6,.05,.25,1),x 1s cubic-bezier(.6,.05,.25,1),width 1s cubic-bezier(.6,.05,.25,1)}
+.schema figcaption{margin-top:var(--e3);font-family:var(--sans);font-size:.9375rem;line-height:1.45;color:var(--gris)}
+.schema-legende{display:flex;flex-wrap:wrap;gap:var(--e1) var(--e4);margin-top:var(--e2)}
+.cle-ko::before,.cle-ok::before{content:"";display:inline-block;width:.9rem;height:.9rem;margin-right:.4rem;vertical-align:-.1rem;border:1.5px solid}
+.cle-ko::before{border-color:var(--ko);background:repeating-linear-gradient(45deg,var(--ko) 0 2px,var(--ko-fond) 2px 6px)}
+.cle-ok::before{border-color:var(--ok);background:var(--ok-fond)}
+/* page du livre : vraies pages du livre, en grand, l'une sous l'autre */
+.pages-livre{display:grid;gap:var(--e6);margin:var(--e4) 0 var(--e7)}
+.pages-livre figure{margin:0}
+.pages-livre img{display:block;width:100%;height:auto;border:1px solid var(--filet);border-radius:var(--rayon)}
+.pages-livre figcaption{margin-top:var(--e2);font-family:var(--sans);font-size:1.0625rem;font-weight:600;line-height:1.4}
+/* page du livre : questions des lecteurs, en liste de définitions */
+.faq-lecteurs dt{margin-top:var(--e4);font-family:var(--sans);font-weight:700}
+.faq-lecteurs dd{margin:var(--e1) 0 0}
+@media (prefers-reduced-motion: reduce){.schema .repere,.schema rect{transition:none}}
+
 /* 7. Adaptations ----------------------------------------------------------- */
 @media (max-width:64rem){.actu-une{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:52rem){
@@ -545,8 +607,7 @@ html.avec-barre body{padding-bottom:5.5rem}
   .nom-site{padding-left:1.25rem;font-size:1.1875rem;white-space:nowrap;min-height:44px}
   .nom-site .sous{display:none} /* le nom suffit sur téléphone : l'en-tête passe de 6 lignes à 1 */
   .nom-site .marque{width:2.5rem;height:2.5rem;font-size:1.375rem}
-  .menu-livre{padding-right:1.25rem}
-  .menu-livre ul{right:1.25rem}
+  .menu-livre{margin-right:1.25rem}
   .nav{position:relative;width:100%;min-width:0}
   .nav ul{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:none;scroll-padding-inline:1.25rem;padding:0 1.25rem .15rem;max-width:100%}
   .nav ul::-webkit-scrollbar{display:none}
@@ -614,13 +675,11 @@ body{font-size:1.125rem;line-height:1.6}
 .nav a{color:var(--sur-nuit);border-radius:0;padding:0 .75rem;border-bottom:4px solid transparent;min-height:48px}
 .nav a:hover{background:var(--nuit-2)}
 .nav a[aria-current="page"]{background:transparent;color:var(--sur-nuit);border-bottom-color:var(--jaune)}
-/* « Le livre » : bouton jaune plein en relief sur toutes les pages ; la page du livre en cours est marquée dans la liste */
-.menu-livre summary{border-radius:4px;border-color:var(--jaune);background:var(--jaune);color:var(--nuit);min-height:44px;
+/* « Le livre » : bouton jaune plein en relief sur toutes les pages ; sur la page du livre, il reste enfoncé (aria-current) */
+.menu-livre{border-radius:4px;border-color:var(--jaune);background:var(--jaune);color:var(--nuit);min-height:44px;
   box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief);transition:transform .15s ease,box-shadow .15s ease}
-.menu-livre summary:hover{background:var(--jaune);transform:translate(-1px,-1px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief)}
-.menu-livre[open] summary,.menu-livre summary:active{background:var(--jaune);transform:translate(4px,4px);box-shadow:0 0 0 0 var(--relief)}
-.menu-livre a{min-height:44px}
-.menu-livre a[aria-current="page"]{box-shadow:inset 4px 0 0 0 var(--jaune)}
+.menu-livre:hover{background:var(--jaune);transform:translate(-1px,-1px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief)}
+.menu-livre:active,.menu-livre[aria-current="page"]{background:var(--jaune);transform:translate(4px,4px);box-shadow:0 0 0 0 var(--relief)}
 .entete :focus-visible{outline-color:var(--jaune)}
 /* en-tête collant : reste visible au défilement (js/site.js pose les classes sur <html>).
    « defile » : il se resserre (sous-titre masqué) ; la jauge jaune en bas montre la part de la page déjà lue.
@@ -761,7 +820,7 @@ input[type=text],input[type=search],textarea,select,.contact input[type=email]{b
 .bouton:not(.bientot):active{transform:translate(4px,4px) !important;box-shadow:0 0 0 0 var(--relief)}
 /* --- relief sur fond nuit : un relief bleu nuit y serait invisible ; le relief y est jaune foncé (--jaune-ombre),
    sauf le bouton à contour, en --nuit-2 pour rester second. Mêmes mouvements qu'ailleurs. --- */
-.fond-nuit .bouton.clair,.carte-hero,.menu-livre summary{--relief:var(--jaune-ombre)}
+.fond-nuit .bouton.clair,.carte-hero,.menu-livre{--relief:var(--jaune-ombre)}
 .fond-nuit .bouton.contour{--relief:var(--nuit-2)}
 a.carte-hero{box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief);transition:transform .15s ease,box-shadow .15s ease}
 a.carte-hero:hover,a.carte-hero:focus-visible{transform:translate(-2px,-2px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief),7px 7px 0 0 var(--relief),8px 8px 0 0 var(--relief)}
@@ -815,6 +874,6 @@ a.carte-hero:hover .carte-lien{text-decoration-thickness:2px}
 .sommaire a{border:1.5px solid var(--relief) !important;background:var(--carte);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief);transition:transform .12s ease,box-shadow .12s ease}
 .sommaire a:hover{transform:translate(-1px,-1px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief)}
 .sommaire a:active{transform:translate(3px,3px);box-shadow:0 0 0 0 var(--relief)}
-@media (prefers-reduced-motion: reduce){.cote-bloc .voir-aussi li,.sommaire a,.carte-hero,.menu-livre summary{transition:none}}
+@media (prefers-reduced-motion: reduce){.cote-bloc .voir-aussi li,.sommaire a,.carte-hero,.menu-livre{transition:none}}
 @media print{.sommaire a,.cote-bloc .voir-aussi li,.carte-hero{box-shadow:none}}
 .sommaire a:hover{color:var(--encre)}

@@ -457,7 +457,7 @@ def mises_a_jour():
     <h2>Les corrections</h2>
     {tableau}
     <p class="meta">Dernière vérification : {ty(m["derniere_verification"])}.</p>
-    <p>{ty("Lecteur du livre ? Recevez chaque correction par e-mail, avec la page corrigée en PDF, et signalez une erreur depuis la page")} <a href="le-livre.html">Le livre tenu à jour</a>.</p>
+    <p>{ty("Lecteur du livre ? Recevez chaque correction par e-mail, avec la page corrigée en PDF, et signalez une erreur depuis")} <a href="le-livre.html#lecteurs">{ty("l'espace lecteurs de la page du livre")}</a>.</p>
     <h2>Quelle version du livre avez-vous ?</h2>
     <p>{ty("Ouvrez le livre à la page 2. Si elle est blanche, vous avez la version 1.0 (octobre 2026). Si elle s'intitule « Ce livre est tenu à jour », la version est écrite en bas de cette page. Les numéros de page sont les mêmes dans toutes les versions : la page indiquée dans chaque encadré est la bonne.")}</p>
     <h2>À surveiller en 2027</h2>
@@ -467,10 +467,121 @@ def mises_a_jour():
                                      "Les règles du livre Machine à Réussite · Examen VTC 2027 qui ont changé depuis l'impression."))
 
 
+# ------------------------------------------------------------------ fiches d'entraînement tirées du livre (contenu/entrainement/)
+def _minutes(hhmm):
+    h, m = hhmm.split(":")
+    return int(h) * 60 + int(m)
+
+
+def _heure(mn):
+    """1060 -> « 17 h 40 » ; 1080 -> « 18 h »."""
+    return f"{mn // 60} h" + (f" {mn % 60:02d}" if mn % 60 else "")
+
+
+def schema_frise_attente(sc, ident):
+    """Frise horaire en SVG (aux couleurs du site, lisible en clair et en sombre) : heure d'arrivée du chauffeur,
+    heure de prise en charge et début du stationnement permis ; js/fiche.js la décale pour « Pour aller plus loin »."""
+    d, f = _minutes(sc["debut"]), _minutes(sc["fin"])
+    x0, x1 = 40, 600
+    x = lambda mn: round(x0 + (mn - d) * (x1 - x0) / (f - d), 1)
+    arr, prise = _minutes(sc["arrivee"]), _minutes(sc["prise"])
+    lim = prise - sc["avance_max"]
+    grad = ""
+    for t in range(d, f + 1, 30):
+        grad += f'<line class="graduation" x1="{x(t)}" x2="{x(t)}" y1="102" y2="{114 if t % 60 == 0 else 108}"/>'
+        if t % 60 == 0:
+            grad += f'<text class="petit" x="{x(t)}" y="130" text-anchor="middle">{_heure(t)}</text>'
+    return f"""<figure class="schema" id="{ident}">
+          <div class="schema-defile" tabindex="0" role="region" aria-label="{ty("Frise horaire, à faire défiler")}">
+          <svg class="frise" viewBox="0 0 640 170" aria-hidden="true" data-debut="{d}" data-fin="{f}" data-x0="{x0}" data-x1="{x1}" data-avance="{sc["avance_max"]}" data-prise="{prise}" data-retard="{sc.get("retard_plus_loin", 0)}">
+            <defs><pattern id="{ident}-hach" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect class="hach-fond" width="8" height="8"/><line class="hach-trait" x1="0" y1="0" x2="0" y2="8"/></pattern></defs>
+            <rect class="zone-ko" fill="url(#{ident}-hach)" data-role="interdit" x="{x0}" y="58" width="{round(x(lim) - x0, 1)}" height="44"/>
+            <rect class="zone-ok" data-role="permis" x="{x(lim)}" y="58" width="{round(x(prise) - x(lim), 1)}" height="44"/>
+            <line class="axe" x1="{x0}" y1="102" x2="{x1}" y2="102"/>
+            {grad}
+            <g class="repere" data-role="limite" style="transform:translateX({x(lim)}px)"><line class="trait-ok" x1="0" y1="40" x2="0" y2="106"/><text x="0" y="32" text-anchor="middle">au plus tôt <tspan data-role="t-limite">{_heure(lim)}</tspan></text></g>
+            <g class="repere" data-role="prise" style="transform:translateX({x(prise)}px)"><circle class="point" cx="0" cy="80" r="9"/><text x="0" y="152" text-anchor="middle">prise en charge <tspan data-role="t-prise">{_heure(prise)}</tspan></text></g>
+            <g style="transform:translateX({x(arr)}px)"><circle class="point-ko" cx="0" cy="80" r="9"/><text x="0" y="152" text-anchor="middle">{ty(sc["libelle_arrivee"])}, {_heure(arr)}</text></g>
+          </svg>
+          </div>
+          <figcaption>{ty(sc["legende"])}<span class="schema-legende"><span class="cle-ko">{ty("Hachures rouges : stationnement interdit aux abords.")}</span> <span class="cle-ok">{ty("Vert : permis avec la réservation, une heure au plus.")}</span></span></figcaption>
+        </figure>"""
+
+
+def fiche_entrainement(slug, racine=""):
+    """Une fiche du livre, jouable : situation, confiance, QCM corrigé au clic, réponse rédigée comparée au corrigé type,
+    règle à retenir, piège, « pour aller plus loin » et bilan avec les dates de révision (js/fiche.js).
+    Sans JavaScript, toute la fiche et son corrigé restent lisibles (et indexés)."""
+    with open(os.path.join(CONTENU, "entrainement", slug + ".json"), encoding="utf-8") as h:
+        f = json.load(h)
+    fid = "fiche-" + slug
+    assert f["qcm"]["juste"] in [l for l, _ in f["qcm"]["options"]], "réponse juste absente des options"
+    situation = "".join(f"<p>{ty(p)}</p>" for p in f["situation"])
+    options = "".join(f'<label><input type="radio" name="{fid}-qcm" value="{l}"><span><b>{l}.</b> {ty(t)}<span class="verdict"></span></span></label>' for l, t in f["qcm"]["options"])
+    corrige_qcm = "".join(f"<p>{ty(p)}</p>" for p in f["qcm"]["corrige"])
+    schema = schema_frise_attente(f["schema"], fid + "-frise") if f.get("schema", {}).get("type") == "frise-attente" else ""
+    points = "".join(f'<label><input type="checkbox" name="{fid}-pt"><span>{ty(p)}</span></label>' for p in f["qrc"]["points"])
+    src = "".join(f'<li><a href="{racine}{u}">{ty(n)}</a></li>' if u else f"<li>{ty(n)}</li>" for n, u in f["sources"])
+    nbp = len(f["qrc"]["points"])
+    return f"""<section class="fiche-essai" id="{fid}" aria-labelledby="{fid}-titre" data-juste="{f["qcm"]["juste"]}" data-code="{f["code"]}">
+      <p class="fiche-tete"><span class="fiche-code">{f["code"]}</span> {ty("Épreuve " + f["epreuve"] + ", " + f["epreuve_nom"].lower() + ", page " + str(f["page"]) + " du livre")}</p>
+      <h3 id="{fid}-titre">{ty(f["titre"])}</h3>
+
+      <div class="fiche-bloc fiche-situation"><h4>Situation</h4>{situation}</div>
+
+      <fieldset class="fiche-bloc" data-js hidden><legend>{ty("Avant de répondre : ma confiance")}</legend>
+        <div class="choix en-ligne"><label><input type="radio" name="{fid}-conf" value="sur"><span>Sûr</span></label><label><input type="radio" name="{fid}-conf" value="hesitant"><span>Hésitant</span></label><label><input type="radio" name="{fid}-conf" value="hasard"><span>Au hasard</span></label></div>
+      </fieldset>
+
+      <fieldset class="fiche-bloc"><legend><span class="fiche-etiquette">QCM</span> {ty(f["qcm"]["question"])}</legend>
+        <div class="choix fiche-qcm">{options}</div>
+      </fieldset>
+      <div class="fiche-corrige" data-etape="qcm">
+        <p class="fiche-verdict" data-role="verdict" aria-live="polite">{ty("Réponse " + f["qcm"]["juste"])}</p>
+        {corrige_qcm}
+        {schema}
+      </div>
+
+      <div class="fiche-bloc" data-etape="qrc-question">
+        <h4><label for="{fid}-qrc">{ty("Je rédige ma réponse : " + f["qrc"]["question"])}</label></h4>
+        <textarea id="{fid}-qrc" rows="4" data-js hidden placeholder="{ty("Écrivez votre réponse comme le jour de l'examen.")}"></textarea>
+        <p data-js hidden><button type="button" class="bouton second" data-action="qrc">{ty("Comparer avec le corrigé type")}</button></p>
+      </div>
+      <div class="fiche-corrige" data-etape="qrc">
+        <p class="fiche-verdict">{ty("Corrigé type")}</p>
+        <p>{ty(f["qrc"]["corrige"])}</p>
+        <fieldset data-js hidden><legend>{ty("Comptez vos points : un point par élément")}</legend>
+          <div class="choix">{points}</div>
+          <p class="fiche-score" aria-live="polite"><span data-role="score">0</span> / {nbp}</p>
+        </fieldset>
+        <p data-js hidden><button type="button" class="bouton" data-action="bilan">{ty("Voir mon bilan")}</button></p>
+      </div>
+
+      <div class="fiche-corrige" data-etape="bilan">
+        <div class="retenir"><h4>{ty("La règle à retenir")}</h4><p>{ty(f["retenir"])}</p></div>
+        <div class="note"><h4>{ty("Le piège")}</h4><p>{ty(f["piege"])}</p></div>
+        <div class="note"><h4>{ty("Pour aller plus loin")}</h4><p>{ty(f["plus_loin"]["question"])}</p>
+          <p data-js hidden><button type="button" class="bouton second petit" data-action="plus-loin">{ty("Voir la réponse")}</button></p>
+          <p data-role="plus-loin">{ty(f["plus_loin"]["reponse"])}</p></div>
+        <div class="fiche-bilan" data-js hidden>
+          <h4>Mon bilan</h4>
+          <p data-role="resume" aria-live="polite"></p>
+          <p data-role="conseil"></p>
+          <p class="fiche-etiquette">{ty("Mes révisions, comptées à partir d'aujourd'hui")}</p>
+          <ul class="fiche-revisions" data-role="revisions"></ul>
+        </div>
+        <p class="fiche-sources">{ty("Sources du corrigé, vérifiées en " + f["verifie"] + " : ")}</p>
+        <ul class="fiche-sources">{src}</ul>
+      </div>
+    </section>"""
+
+
 # ------------------------------------------------------------------ le livre tenu à jour (inscription des lecteurs, signalements)
 def livre_vivant():
-    """Page « Le livre tenu à jour » : engagements, inscription aux mises à jour (n8n, double confirmation),
-    signalement d'une erreur (Web3Forms), méthode de vérification ; et les deux pages de retour des liens envoyés par e-mail."""
+    """Page « Le livre » (présentation, depuis le 7 novembre 2026) : présentation et achat, une fiche du livre à essayer
+    (fiche_entrainement), les vraies pages, la méthode, les engagements de vérification, les questions des acheteurs ;
+    puis l'espace lecteurs : inscription aux mises à jour (n8n, double confirmation), signalement d'une erreur (Web3Forms),
+    questions des lecteurs. Et les deux pages de retour des liens envoyés par e-mail."""
     with open(os.path.join(CONTENU, "livre.json"), encoding="utf-8") as h:
         conf = json.load(h)
     with open(os.path.join(CONTENU, "contact.json"), encoding="utf-8") as h:
@@ -483,8 +594,18 @@ def livre_vivant():
     nb = len(m["corrections"])
     etat = ("Aucune correction à ce jour : toutes les règles du livre sont à jour." if nb == 0 else
             f"{nb} correction{'s' if nb > 1 else ''} publiée{'s' if nb > 1 else ''} depuis l'impression.")
+    faq_achat = [
+        ("Le livre couvre-t-il toutes les épreuves de l'examen VTC ?",
+         "Oui. Ses 35 chapitres couvrent les sept épreuves écrites d'admissibilité (A à G) et l'épreuve pratique d'admission : 213 fiches de cours, dont 10 pour l'épreuve pratique."),
+        ("Le livre est-il à jour pour l'examen 2027 ?",
+         "Ses règles ont été vérifiées en octobre 2026 et il est à jour de la loi du 25 juin 2026. Les changements de 2026 et 2027 (précompte des cotisations par les plateformes au 1er janvier 2027, fin de l'accès par l'expérience, facturation électronique) sont signalés dans les fiches concernées. Si une règle change après l'impression, la correction est publiée sur la page Mises à jour du livre et envoyée aux lecteurs inscrits."),
+        ("Puis-je essayer avant d'acheter ?",
+         "Oui. La fiche A3.4 de cette page est reproduite telle qu'elle figure dans le livre, avec son corrigé. Les questions et les guides du site indiquent aussi les fiches du livre qui traitent chaque règle."),
+        ("Comment faire les deux examens blancs en ligne ?",
+         "Ils sont sur la page Examens blancs n° 4 et 5 de ce site, à faire à l'écran, chronométrés et corrigés, ou à imprimer. Ils sont réservés aux lecteurs : une question dont la réponse se trouve dans le livre en ouvre l'accès."),
+    ]
     faq = [
-        ("Faut-il avoir acheté le livre pour s'inscrire ?",
+        ("Faut-il avoir acheté le livre pour s'inscrire aux mises à jour ?",
          "Oui. Les pages corrigées sont réservées aux lecteurs : l'inscription demande un mot qui se trouve dans le livre. La liste des corrections reste publique sur la page Mises à jour du livre."),
         ("Combien d'e-mails vais-je recevoir ?",
          "Un e-mail seulement quand une règle du livre change ou qu'une erreur est corrigée. Pas de lettre d'information régulière, pas de publicité."),
@@ -493,15 +614,27 @@ def livre_vivant():
         ("J'ai trouvé une erreur : que se passe-t-il ensuite ?",
          "Elle est vérifiée sur le texte officiel. Si elle est confirmée, elle est corrigée, inscrite sur la page Mises à jour du livre et envoyée à tous les lecteurs inscrits. Si vous avez laissé votre adresse, vous recevez la réponse, même quand le livre était juste."),
     ]
+    pages_livre = [
+        ("fiche", "Une fiche, une règle : on part d'une situation réelle de chauffeur",
+         "Page du livre : une fiche commence par une situation concrète, puis un QCM et une question à réponse courte, comme à l'examen, et une case pour suivre ses révisions."),
+        ("corrige", "Chaque corrigé explique le raisonnement, la règle et le piège",
+         "Page de corrigés du livre : pour chaque question, le raisonnement, la règle à retenir, le texte officiel qui la fonde et le piège dans lequel tombent les candidats."),
+        ("a-jour", "Une carte des règles ouvre chaque chapitre",
+         "Une carte des règles et la première page d'un examen blanc : chaque règle a été contrôlée sur le Code des transports, le Code de la route et les textes officiels de l'examen."),
+    ]
+    figures = "".join(f'''
+      <figure>
+        <picture><source srcset="images/livre/{n}.webp" type="image/webp"><img src="images/livre/{n}.jpg" width="970" height="600" loading="lazy" decoding="async" alt="{ty(alt)}"></picture>
+        <figcaption>{ty(leg)}</figcaption>
+      </figure>''' for n, leg, alt in pages_livre)
     corps = f'''    <p class="surtitre">Le livre</p>
-    <h1>Un livre tenu à jour après son impression</h1>
-    <p class="chapeau">{ty("Les règles de l'examen VTC et du métier changent : décrets, arrêtés, cotisations, plateformes. Machine à Réussite – Examen VTC 2027 ne s'arrête pas à la date d'impression. Chaque règle repose sur un texte officiel, chaque règle est revérifiée régulièrement, et chaque correction est envoyée aux lecteurs.")}</p>
+    <h1>{ty("Machine à Réussite – Examen VTC 2027")}</h1>
+    <p class="chapeau">{ty("Le cours et l'entraînement pour réussir l'examen VTC 2027 : les sept épreuves écrites et l'épreuve pratique, une règle par fiche, et chaque règle vérifiée sur son texte officiel.")}</p>
 
     <section class="presentation-livre" aria-labelledby="titre-presentation">
       <img src="couverture.jpg" width="408" height="528" alt="{ty("Couverture du livre Machine à Réussite – Examen VTC 2027, de Benjamin Blondin")}">
       <div>
-        <h2 id="titre-presentation">{ty("Le livre pour préparer l'examen VTC 2027")}</h2>
-        <p>{ty("Le cours et l'entraînement pour les sept épreuves écrites (A à G) et l'épreuve pratique, en 540 pages.")}</p>
+        <h2 id="titre-presentation">{ty("Tout pour préparer l'examen, en 540 pages")}</h2>
         <ul class="liste-coches">
           <li><b>{ty("213 fiches de cours")}</b>{ty(", une règle par fiche, dans 35 chapitres")}</li>
           <li><b>{ty("1 191 questions corrigées")}</b>{ty(" : QCM et questions à réponse courte, chaque corrigé cite son texte officiel")}</li>
@@ -509,21 +642,49 @@ def livre_vivant():
           <li><b>{ty("3 examens blancs dans le livre")}</b>{ty(", plus 2 sur ce site, réservés aux lecteurs")}</li>
           <li><b>{ty("À jour de la loi du 25 juin 2026")}</b>{ty(", règles vérifiées en octobre 2026")}</li>
         </ul>
-        <div class="actions">{achat("bouton achat", "Acheter le livre sur Amazon")}<a class="bouton second" href="#inscription">{ty("Déjà lecteur : recevoir les mises à jour")}</a></div>
+        <div class="actions">{achat("bouton achat", "Acheter le livre sur Amazon")}<a class="bouton second" href="#essayer">{ty("Essayer une fiche gratuitement")}</a></div>
+        <p class="meta">{ty("Déjà lecteur ?")} <a href="#lecteurs">{ty("Recevoir les mises à jour ou signaler une erreur")}</a></p>
       </div>
     </section>
 
-    <h2 id="engagements">Ce que l’auteur s’engage à faire</h2>
+    <h2 id="essayer">{ty("Essayez une fiche du livre")}</h2>
+    <p>{ty("Voici la fiche A3.4, telle qu'elle figure dans le livre. Répondez comme le jour de l'examen : le corrigé s'affiche après votre réponse.")}</p>
+    {fiche_entrainement("a3-4")}
+
+    <h2 id="pages">{ty("À quoi ressemblent les pages")}</h2>
+    <div class="pages-livre">{figures}
+    </div>
+
+    <h2 id="methode">{ty("La méthode : apprendre, se tester, réviser au bon moment")}</h2>
     <ol class="etapes">
-      <li><b>{ty("Vérifier chaque règle sur sa source")}</b>{ty("Chaque corrigé du livre cite le texte officiel qui le fonde (Code des transports, Code de la route, arrêtés de l'examen, Urssaf, BOFiP) et le mois de sa vérification. Une règle qui ne repose pas sur un texte officiel, ou sur deux sources indépendantes qui concordent, n'est pas enseignée.")}</li>
-      <li><b>{ty("Revérifier le livre entier toutes les trois semaines")}</b>{ty("Les règles du livre sont recontrôlées sur les textes en vigueur, en plus de la veille du Journal officiel faite chaque semaine pour le site. Une règle adoptée mais pas encore applicable est signalée comme telle, jamais présentée comme en vigueur.")}</li>
-      <li><b>{ty("Publier chaque correction")}</b>{ty("Toute correction est inscrite sur la page")} <a href="mises-a-jour.html">Mises à jour du livre</a> {ty(": la date, la fiche et sa page dans le livre, ce que dit le livre, ce qu'il faut retenir et le texte qui fonde la nouvelle règle.")}</li>
+      <li><b>{ty("Savoir d'où vous partez")}</b>{ty("Un test diagnostic de 40 questions mesure votre niveau. Selon votre score, vous suivez un planning sur 4, 8 ou 12 semaines, qui vous dit quoi faire chaque jour.")}</li>
+      <li><b>{ty("Se tester avant de lire")}</b>{ty("Chaque chapitre commence par un pré-test de 5 questions, puis une carte des règles avec tableaux et schémas.")}</li>
+      <li><b>{ty("Apprendre sur des cas concrets")}</b>{ty("Chaque fiche part d'une situation de chauffeur, puis vous fait répondre à un QCM et rédiger une réponse courte, comme à l'examen. La réponse n'est jamais sur la page de la question.")}</li>
+      <li><b>{ty("Comprendre ses erreurs")}</b>{ty("Chaque corrigé donne le raisonnement complet, la règle à retenir, le texte officiel qui la fonde et le piège à éviter.")}</li>
+      <li><b>{ty("Réviser au bon moment")}</b>{ty("Des cases J+1, J+3, J+7 et J+21 sur chaque corrigé : les révisions espacées font retenir durablement.")}</li>
+      <li><b>{ty("S'entraîner en conditions réelles")}</b>{ty("Trois examens blancs complets dans le livre, deux de plus sur ce site, au format de l'examen, chronométrés et notés selon le barème.")}</li>
+    </ol>
+    <div class="actions">{achat("bouton achat", "Acheter le livre sur Amazon")}</div>
+
+    <h2 id="engagements">{ty("Un livre vérifié, et tenu à jour après son impression")}</h2>
+    <p>{ty("Les règles de l'examen VTC et du métier changent : décrets, arrêtés, cotisations, plateformes. Le livre ne s'arrête pas à sa date d'impression. Voici ce que l'auteur s'engage à faire.")}</p>
+    <ol class="etapes">
+      <li><b>{ty("Vérifier chaque règle sur sa source")}</b>{ty("Chaque corrigé du livre cite le texte officiel qui le fonde (Code des transports, Code de la route, arrêtés de l'examen, Urssaf, BOFiP) et le mois de sa vérification. Une règle qui ne repose pas sur un texte officiel, ou sur deux sources indépendantes qui concordent, n'est pas enseignée. En vigueur, adopté mais pas encore applicable, simple projet : les trois états sont toujours distingués.")}</li>
+      <li><b>{ty("Revérifier le livre entier toutes les trois semaines")}</b>{ty("Les règles du livre sont recontrôlées sur les textes en vigueur, en plus de la veille du Journal officiel faite chaque semaine pour le site. Les articles de loi utiles au métier sont recopiés et expliqués dans la rubrique")} <a href="wiki/index.html">{ty("Réglementation VTC")}</a>.</li>
+      <li><b>{ty("Publier chaque correction")}</b>{ty("Toute correction est inscrite sur la page")} <a href="mises-a-jour.html">{ty("Mises à jour du livre")}</a> {ty(": la date, la fiche et sa page dans le livre, ce que dit le livre, ce qu'il faut retenir et le texte qui fonde la nouvelle règle.")}</li>
       <li><b>{ty("Vous l'envoyer")}</b>{ty("Les lecteurs inscrits reçoivent la correction par e-mail, avec la page corrigée en PDF, à imprimer ou à garder sur leur téléphone.")}</li>
-      <li><b>{ty("Répondre à chaque signalement")}</b>{ty("Une erreur, une règle qui a changé, un passage pas clair : chaque signalement est vérifié et reçoit une réponse. Une erreur confirmée est corrigée pour tous, même si c'est vous qui l'avez trouvée.")}</li>
+      <li><b>{ty("Répondre à chaque signalement")}</b>{ty("Une erreur, une règle qui a changé, un passage pas clair : chaque signalement est vérifié et reçoit une réponse. Une erreur confirmée est corrigée pour tous.")}</li>
     </ol>
     <p class="meta">{ty("Dernière vérification complète des règles : " + m["derniere_verification"] + ". " + etat)}</p>
 
-    <h2 id="inscription">Recevoir les mises à jour du livre</h2>
+    <h2 id="questions">Questions fréquentes</h2>
+    {"".join(f"<h3>{ty(q)}</h3>\n    <p>{ty(r)}</p>\n    " for q, r in faq_achat)}
+    <div class="actions">{achat("bouton achat", "Acheter le livre sur Amazon")}</div>
+
+    <h2 id="lecteurs">{ty("Espace lecteurs")}</h2>
+    <p>{ty("Vous avez le livre : recevez ses mises à jour, faites les")} <a href="examens.html">{ty("examens blancs n° 4 et 5")}</a>{ty(", ou signalez une erreur.")}</p>
+
+    <h3 id="inscription">Recevoir les mises à jour du livre</h3>
     <p>{ty("Un e-mail seulement quand une règle change ou qu'une erreur est corrigée, avec la page corrigée en PDF. Vous confirmez votre inscription en cliquant sur le lien reçu par e-mail ; un lien dans chaque message permet de se désinscrire.")}</p>
     <form id="form-inscription" class="contact" action="{url_inscription}" method="POST" novalidate>
       <p class="piege" aria-hidden="true"><label>Ne pas remplir <input type="text" name="piege" tabindex="-1"></label></p>
@@ -536,7 +697,7 @@ def livre_vivant():
       <div id="ins-etat" role="status" aria-live="polite"></div>
     </form>
 
-    <h2 id="signaler">Signaler une erreur ou faire une critique</h2>
+    <h3 id="signaler">Signaler une erreur ou faire une critique</h3>
     <p>{ty("Vous avez repéré une règle qui a changé, une erreur, une réponse qui vous semble fausse, un passage pas clair ? Dites-le : chaque signalement est vérifié sur le texte officiel. Le livre doit être juste, pas seulement avoir raison.")}</p>
     <form id="form-signalement" class="contact" action="https://api.web3forms.com/submit" method="POST" novalidate>
       <input type="hidden" name="access_key" value="{cle}">
@@ -556,17 +717,8 @@ def livre_vivant():
       <div id="sig-etat" role="status" aria-live="polite"></div>
     </form>
 
-    <h2 id="methode">Comment le livre est vérifié</h2>
-    <ul>
-      <li>{ty("Les sources d'abord : Légifrance pour les codes, décrets et arrêtés ; service-public.fr, l'Urssaf et le BOFiP pour les démarches, les cotisations et les impôts ; les textes officiels de l'examen pour les épreuves et le barème.")}</li>
-      <li>{ty("Une règle non vérifiée n'est pas publiée. Une information qui ne vient pas d'un texte officiel doit être confirmée par deux sources indépendantes.")}</li>
-      <li>{ty("Trois états sont toujours distingués : en vigueur, adopté mais pas encore applicable, simple projet.")}</li>
-      <li>{ty("Les articles de loi utiles au métier sont recopiés et expliqués dans la rubrique")} <a href="wiki/index.html">Réglementation VTC</a>{ty(", et leur version est comparée chaque semaine à celle de Légifrance.")}</li>
-    </ul>
-
-    <h2 id="questions">Questions fréquentes</h2>
-    {"".join(f"<h3>{ty(q)}</h3>\n    <p>{ty(r)}</p>\n    " for q, r in faq)}
-    <p>{achat("bouton achat", "Voir le livre sur Amazon")}</p>'''
+    <h3 id="questions-lecteurs">{ty("Questions des lecteurs")}</h3>
+    <dl class="faq-lecteurs">{"".join(f"<dt>{ty(q)}</dt><dd>{ty(r)}</dd>" for q, r in faq)}</dl>'''
     fin = '''<script src="js/acces.js"></script>
 <script>
 (function(){
@@ -621,16 +773,16 @@ def livre_vivant():
 })();
 </script>
 '''
-    titre = "Mises à jour du livre Examen VTC 2027 : inscription et signalement d'erreur"
-    desc = ("Machine à Réussite – Examen VTC 2027 est tenu à jour après son impression : chaque règle est vérifiée sur les textes officiels, "
-            "revérifiée toutes les trois semaines, et chaque correction est envoyée aux lecteurs inscrits.")
+    titre = "Livre examen VTC 2027 : cours, 1 191 questions corrigées et examens blancs"
+    desc = ("Le livre pour réussir l'examen VTC 2027 : 213 fiches, 1 191 questions corrigées, 3 examens blancs, "
+            "règles à jour de la loi du 25 juin 2026. Essayez une fiche gratuitement.")
     ld_page = {"@context": "https://schema.org", "@type": "WebPage", "name": titre, "url": SITE + "le-livre.html", "description": desc,
                "inLanguage": "fr", "isPartOf": {"@id": SITE + "#site"}, "about": {"@id": SITE + "#livre"}, "author": AUTEUR}
     ld_faq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
-        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": r}} for q, r in faq]}
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": r}} for q, r in faq_achat + faq]}
     ld_livre = dict(LIVRE_LD, **{"@context": "https://schema.org"})
     ecrire("le-livre.html", page(html.escape(titre + " · Révision VTC", quote=False), corps, "livre", "", html.escape(desc),
-                                 scripts_fin=fin, jsonld=[ld_page, ld_livre, ld_faq, fil(("Accueil", ""), ("Le livre tenu à jour", "le-livre.html"))]))
+                                 scripts_fin='<script src="js/fiche.js" defer></script>\n' + fin, jsonld=[ld_page, ld_livre, ld_faq, fil(("Accueil", ""), ("Le livre", "le-livre.html"))]))
 
     corps_ok = f'''    <p class="surtitre">Le livre</p>
     <h1 id="titre-retour">Inscription confirmée</h1>
@@ -640,7 +792,7 @@ def livre_vivant():
 (function(){
   if (new URLSearchParams(location.search).get('lien') !== 'invalide') return;
   document.getElementById('titre-retour').textContent = 'Ce lien ne fonctionne plus';
-  document.getElementById('texte-retour').innerHTML = 'Le lien de confirmation est incomplet ou a déjà servi. Si vous n’êtes pas encore inscrit, recommencez depuis la page <a href="le-livre.html#inscription">Le livre tenu à jour</a>.';
+  document.getElementById('texte-retour').innerHTML = 'Le lien de confirmation est incomplet ou a déjà servi. Si vous n’êtes pas encore inscrit, recommencez depuis <a href="le-livre.html#inscription">l’espace lecteurs de la page du livre</a>.';
   document.title = 'Ce lien ne fonctionne plus · Révision VTC';
 })();
 </script>
@@ -907,7 +1059,7 @@ def legales():
     <h3>Formulaire de contact</h3>
     <p>{ty("Les informations saisies (prénom, nom, adresse e-mail, message) servent uniquement à répondre à votre message. Elles sont transmises par le service Web3Forms, qui les achemine par e-mail sans conserver les messages, puis conservées dans la boîte de réception de l'éditeur le temps de l'échange, et au plus un an. Elles ne sont ni cédées, ni utilisées pour de la prospection. Base légale : votre demande. Vous pouvez demander leur consultation, leur rectification ou leur effacement en écrivant à")} <a href="mailto:benjamin@revision-vtc.fr">benjamin@revision-vtc.fr</a>{ty(", et saisir la CNIL (cnil.fr) en cas de difficulté.")}</p>
     <h3 id="lecteurs">Inscription aux mises à jour du livre</h3>
-    <p>{ty("L'adresse e-mail saisie sur la page Le livre tenu à jour sert uniquement à envoyer aux lecteurs les mises à jour et les pages corrigées du livre. Base légale : votre consentement, donné en cochant la case puis confirmé par le lien reçu par e-mail ; sans confirmation, l'adresse ne reçoit rien d'autre que ce lien. Sont conservés : l'adresse, les dates d'inscription et de confirmation, et le texte de la case cochée, pour prouver le consentement. Les données sont enregistrées dans l'outil d'automatisation n8n installé sur un serveur loué par l'éditeur à Hostinger, et les e-mails partent de la boîte benjamin@revision-vtc.fr, hébergée par Gandi. Elles ne sont ni vendues, ni prêtées, ni utilisées pour de la prospection. Le lien de désinscription présent dans chaque e-mail efface l'adresse ; une adresse jamais confirmée est effacée au bout de trois mois. Vous pouvez aussi demander leur consultation, leur rectification ou leur effacement en écrivant à")} <a href="mailto:benjamin@revision-vtc.fr">benjamin@revision-vtc.fr</a>{ty(", et saisir la CNIL (cnil.fr) en cas de difficulté.")}</p>
+    <p>{ty("L'adresse e-mail saisie dans l'espace lecteurs de la page Le livre sert uniquement à envoyer aux lecteurs les mises à jour et les pages corrigées du livre. Base légale : votre consentement, donné en cochant la case puis confirmé par le lien reçu par e-mail ; sans confirmation, l'adresse ne reçoit rien d'autre que ce lien. Sont conservés : l'adresse, les dates d'inscription et de confirmation, et le texte de la case cochée, pour prouver le consentement. Les données sont enregistrées dans l'outil d'automatisation n8n installé sur un serveur loué par l'éditeur à Hostinger, et les e-mails partent de la boîte benjamin@revision-vtc.fr, hébergée par Gandi. Elles ne sont ni vendues, ni prêtées, ni utilisées pour de la prospection. Le lien de désinscription présent dans chaque e-mail efface l'adresse ; une adresse jamais confirmée est effacée au bout de trois mois. Vous pouvez aussi demander leur consultation, leur rectification ou leur effacement en écrivant à")} <a href="mailto:benjamin@revision-vtc.fr">benjamin@revision-vtc.fr</a>{ty(", et saisir la CNIL (cnil.fr) en cas de difficulté.")}</p>
     <h3 id="signalements">Signalement d'une erreur dans le livre</h3>
     <p>{ty("Les informations saisies dans le formulaire de signalement (type, fiche, message, source et, si vous la donnez, votre adresse e-mail) servent uniquement à vérifier le signalement et à vous répondre. Elles sont transmises par le service Web3Forms, qui les achemine par e-mail sans conserver les messages, puis conservées dans la boîte de réception de l'éditeur le temps de l'échange, et au plus un an. Base légale : votre demande. Mêmes droits que pour le formulaire de contact.")}</p>
     <h2>Propriété intellectuelle</h2>

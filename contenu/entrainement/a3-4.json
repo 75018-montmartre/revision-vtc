@@ -1,0 +1,80 @@
+{
+ "code": "A3.4",
+ "titre": "Gares et aéroports",
+ "epreuve": "A",
+ "epreuve_nom": "Réglementation du transport public particulier de personnes",
+ "chapitre": "A3 · Utiliser la voie publique",
+ "page": 66,
+ "page_corrige": 72,
+ "situation": [
+  "Mme Ohana a réservé Julie pour 18 h 40 à la sortie du terminal 2 de l'aéroport. Pour ne pas rater l'arrivée de son vol, Julie se gare sur le trottoir aménagé devant le terminal dès 17 h 15.",
+  "Un agent s'approche. Julie montre aussitôt sa réservation sur son téléphone : « J'ai un client, regardez ! »"
+ ],
+ "qcm": {
+  "question": "Julie est-elle en règle ?",
+  "options": [
+   [
+    "A",
+    "Oui, puisqu'elle a une réservation."
+   ],
+   [
+    "B",
+    "Non : elle ne peut stationner aux abords qu'une heure au plus avant la prise en charge."
+   ],
+   [
+    "C",
+    "Oui, si elle reste dans son véhicule."
+   ],
+   [
+    "D",
+    "Non : un VTC ne peut jamais prendre de client dans un aéroport."
+   ]
+  ],
+  "juste": "B",
+  "corrige": [
+   "Aux abords des gares et des aéroports, la loi limite le stationnement des VTC sur la voie publique : même avec une réservation, le chauffeur ne peut pas stationner plus d'une heure avant l'heure de prise en charge.",
+   "Julie arrive près d'une heure et demie trop tôt : la réservation ne la couvre pas (A est faux), et rester dans le véhicule ne change rien (C est faux). Le VTC a bien le droit de prendre un client qui a réservé dans une gare ou un aéroport (D est faux), souvent dans une zone prévue à cet effet.",
+   "Julie aurait dû attendre ailleurs, hors de la chaussée, et revenir à 17 h 40 au plus tôt."
+  ]
+ },
+ "qrc": {
+  "question": "Énoncez la règle de stationnement d'un VTC aux abords d'une gare ou d'un aéroport.",
+  "corrige": "Aux abords d'une gare ou d'un aéroport, le VTC ne stationne sur la voie publique que s'il a une réservation ; et au plus une heure avant l'heure de prise en charge du client.",
+  "points": [
+   "J'ai écrit qu'il faut une réservation",
+   "J'ai écrit la limite d'une heure avant la prise en charge"
+  ]
+ },
+ "retenir": "Aux abords des gares et des aéroports : réservation obligatoire, et stationnement au plus une heure avant la prise en charge.",
+ "piege": "Croire que la réservation autorise tout. Elle autorise à prendre le client, pas à occuper les abords pendant des heures.",
+ "plus_loin": {
+  "question": "Le vol de Mme Ohana a deux heures de retard. Julie peut-elle rester à l'aéroport ?",
+  "reponse": "Elle garde sa réservation, mais pas le droit de stationner aux abords : l'heure limite se calcule sur la nouvelle heure de prise en charge. Elle attend ailleurs, hors de la chaussée, et revient au plus une heure avant."
+ },
+ "schema": {
+  "type": "frise-attente",
+  "arrivee": "17:15",
+  "prise": "18:40",
+  "avance_max": 60,
+  "retard_plus_loin": 120,
+  "debut": "17:00",
+  "fin": "21:00",
+  "legende": "Frise de la situation : Julie se gare à 17 h 15 ; avec une prise en charge à 18 h 40, le stationnement aux abords n'est permis qu'à partir de 17 h 40.",
+  "libelle_arrivee": "Julie se gare"
+ },
+ "sources": [
+  [
+   "Code des transports, art. L3120-2, II, 3°",
+   "wiki/l3120-2.html"
+  ],
+  [
+   "Code des transports, art. D3120-3",
+   "wiki/d3120-3.html"
+  ],
+  [
+   "Bpifrance Création, fiche VTC (2024)",
+   ""
+  ]
+ ],
+ "verifie": "octobre 2026"
+}

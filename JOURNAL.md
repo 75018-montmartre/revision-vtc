@@ -6,6 +6,16 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 7 novembre 2026, 21 h 20 · Nouvelle page du livre, avec une fiche à essayer
+
+- https://revision-vtc.fr/le-livre.html devient une vraie page de présentation du livre : présentation et achat, la fiche A3.4 « Gares et aéroports » à essayer (situation, confiance, QCM corrigé au clic, réponse rédigée comparée au corrigé type, bilan et dates de révision), trois visuels des pages du livre, la méthode, les engagements de vérification, les questions des acheteurs. L'inscription aux mises à jour et le signalement d'erreurs sont regroupés en bas, dans l'« Espace lecteurs » (mêmes ancres `#inscription` et `#signaler`).
+- Premier schéma de règle : frise horaire de la fiche A3.4 (stationnement au plus une heure avant la prise en charge), qui se décale de deux heures dans « Pour aller plus loin ».
+- En-tête : le bouton jaune « Le livre » mène directement à cette page (plus de menu déroulant). Pied de page : liens « Le livre », « Mises à jour du livre », « Examens blancs n° 4 et 5 ».
+- Texte de la fiche recopié du livre (page 66, corrigé page 72) ; aucune règle nouvelle. Titre de la page pour la recherche : « Livre examen VTC 2027 ».
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px, avant et après avoir joué la fiche ; aucun débordement ; page lisible sans JavaScript.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 7 novembre 2026, 19 h 25 · Article n° 6 (tâche tous les deux jours)
 
 - Titre : « Taxi ou VTC : quelles différences pour devenir chauffeur en 2027 ? » (épreuve A, réglementation T3P).
