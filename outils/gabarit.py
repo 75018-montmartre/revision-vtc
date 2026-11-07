@@ -15,12 +15,12 @@ def achat(classe="bouton achat", texte="Acheter le livre sur Amazon"):
 # menu principal : les cinq rubriques du site, l'outil le plus demandé en premier ; le livre a son propre menu, à droite (MENU_LIVRE),
 # bouton jaune plein sur toutes les pages : la page du livre en cours est marquée dans le menu déroulant (aria-current).
 # L'accueil n'est plus dans le menu : le logo y mène (et le fil d'Ariane de chaque page).
-NAV = [("simulateurs/index.html", "Simulateur", "simulateurs"), ("wiki/index.html", "Textes du métier", "textes"), ("questions/index.html", "Questions VTC", "questions"),
+NAV = [("simulateurs/index.html", "Simulateur", "simulateurs"), ("wiki/index.html", "Textes réglementaires", "textes"), ("questions/index.html", "Questions VTC", "questions"),
        ("dossiers/index.html", "Articles", "dossiers"), ("actualite/index.html", "Actualité VTC", "actualite")]
 MENU_LIVRE = [("le-livre.html", "Le livre tenu à jour", "livre"), ("mises-a-jour.html", "Mises à jour du livre", "maj"), ("examens.html", "Examens blancs n° 4 et 5", "examens")]
 
 
-SURTITRES = {"actualite": "Chaque lundi", "questions": "Chaque jeudi", "dossiers": "Articles VTC", "simulateurs": "Simulateur gratuit", "textes": "Réglementation VTC",
+SURTITRES = {"actualite": "Chaque lundi", "questions": "Réponses sourcées", "dossiers": "Articles VTC", "simulateurs": "Simulateur gratuit", "textes": "Réglementation VTC",
              "maj": "Le livre", "livre": "Le livre", "examens": "Réservé aux lecteurs"}
 
 

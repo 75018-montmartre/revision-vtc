@@ -6,7 +6,7 @@ Règles éditoriales : chaque information repose sur un texte officiel ou sur de
 
 ## Pages principales
 
-- [Réglementation VTC, les textes du métier](https://revision-vtc.fr/wiki/): index de tous les articles par thème
+- [Réglementation VTC, les textes réglementaires](https://revision-vtc.fr/wiki/): index de tous les articles par thème
 - [Actualité VTC](https://revision-vtc.fr/actualite/): un numéro par semaine, sources citées
 - [Questions VTC](https://revision-vtc.fr/questions/): une question concrète par semaine, réponse courte et sources officielles
 - [Articles VTC](https://revision-vtc.fr/dossiers/): articles de fond chiffrés (coût du lancement, revenus, statut, véhicule), sources datées

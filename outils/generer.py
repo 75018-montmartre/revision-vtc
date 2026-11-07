@@ -43,6 +43,68 @@ def date_fr(iso):
     return f"{j} {MOIS[d.month - 1]} {d.year}"
 
 
+def mois_annee(iso):
+    """« 2026-11-02 » -> « novembre 2026 » : les pages n'affichent plus le jour de publication (depuis le 7 novembre 2026)."""
+    d = datetime.date.fromisoformat(iso)
+    return f"{MOIS[d.month - 1]} {d.year}"
+
+
+# Domaine d'une Question VTC ou d'un article : l'épreuve de l'examen qu'il prépare (A à G, intitulés de contenu/calcul_note.json),
+# ou « X » pour l'examen lui-même (méthode, inscription). Par défaut, la lettre de la première fiche du livre citée ;
+# le champ "domaine" du fichier JSON la remplace. Pictogrammes au trait, 24 × 24, couleur du texte (currentColor), décoratifs.
+_PICTOS = {
+    "A": '<path d="M12 3v17M8 20h8M5 7h14M5 7l-3 6a3 3 0 0 0 6 0zM19 7l-3 6a3 3 0 0 0 6 0z"/>',                       # balance : la loi
+    "B": '<rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h4"/>',  # calculatrice
+    "C": '<path d="M12 3 2 20h20z"/><path d="M12 9v5M12 17h.01"/>',                                                     # panneau de danger
+    "D": '<path d="M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z"/><path d="M8 8h9M8 12h6"/>',          # bulle de texte
+    "E": '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',             # globe
+    "F": '<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>',                                                           # courbe qui monte
+    "G": '<path d="M5 17H3v-5l2-5h14l2 5v5h-2M3 12h18M9 17h6"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/>',  # voiture
+    "X": '<rect x="5" y="4" width="14" height="18" rx="2"/><path d="M9 4V2h6v2M9 13l2 2 4-4"/>',                        # liste cochée
+}
+
+
+def _domaines():
+    with open(os.path.join(CONTENU, "calcul_note.json"), encoding="utf-8") as h:
+        d = {e["code"]: (f'Épreuve {e["code"]}', e["court"]) for e in json.load(h)["epreuves"]}
+    d["X"] = ("Examen", "Méthode et inscription")
+    assert set(d) == set(_PICTOS), "un pictogramme par domaine"
+    return d
+
+
+DOMAINES = _domaines()
+
+
+def domaine_de(x, nom):
+    """Code du domaine d'une question ou d'un article (voir DOMAINES)."""
+    code = x.get("domaine") or (x["fiches"][0][0][0] if x.get("fiches") else "")
+    assert code in DOMAINES, f"{nom} : domaine inconnu ({code!r}) ; ajouter \"domaine\" ou une fiche du livre"
+    return code
+
+
+def picto(code):
+    return (f'<svg class="picto" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" '
+            f'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">{_PICTOS[code]}</svg>')
+
+
+def ligne_domaine(code):
+    """Sous le titre d'une carte : pictogramme + épreuve concernée."""
+    e, court = DOMAINES[code]
+    return f'<p class="domaine">{picto(code)}<span>{ty(e)} : {ty(court.lower() if code == "X" else court)}</span></p>'
+
+
+def legende_domaines():
+    """Légende des pictogrammes (pages d'index des Questions VTC et des articles)."""
+    return '<ul class="legende-domaines">' + "".join(
+        f'<li>{picto(c)}<span><b>{ty(e)}</b> {ty(court)}</span></li>' for c, (e, court) in DOMAINES.items() if c != "X") + "</ul>"
+
+
+def carte(numero, iso, lien, titre, code, texte, titre_num="Question"):
+    """Carte des index Questions VTC et Articles : numéro, mois, titre (le lien), épreuve, résumé."""
+    return (f'<li><p class="carte-tete"><span class="num-art"><span class="visuellement-cache">{titre_num} </span>n° {numero}</span>'
+            f'<span class="meta">{mois_annee(iso).capitalize()}</span></p><a href="{lien}">{titre}</a>{ligne_domaine(code)}<p>{texte}</p></li>')
+
+
 AUTEUR = {"@type": "Person", "name": "Benjamin Blondin", "url": SITE + "a-propos.html"}
 LIVRE_LD = {"@type": "Book", "@id": SITE + "#livre", "name": "Machine à Réussite · Examen VTC 2027", "author": AUTEUR,
             "isbn": "9798165280795", "bookFormat": "https://schema.org/Paperback", "numberOfPages": 540, "inLanguage": "fr",
@@ -229,7 +291,7 @@ def accueil(nums, qs=()):
     </section>
     <section class="bloc bloc-doux" aria-labelledby="titre-essentiel">
       <div class="page large">
-        {tete_bloc("titre-essentiel", "Textes du métier", "Réglementation VTC : l'essentiel", "wiki/index.html", "Tous les textes expliqués",
+        {tete_bloc("titre-essentiel", "Textes réglementaires", "Réglementation VTC : l'essentiel", "wiki/index.html", "Tous les textes expliqués",
                    "Les règles les plus utiles au quotidien, avec le texte officiel et une explication en clair.")}
         <ul class="essentiel-liens">{liens_essentiels()}</ul>
       </div>
@@ -249,11 +311,11 @@ ESSENTIELS = [("l3120-2", "Réservation préalable et maraude : ce qui est inter
 def bloc_questions(qs):
     if not qs:
         return ""
-    li = "".join(f'<li><a href="questions/{q["date"]}-{q["slug"]}.html">{ty(q["question"])}</a><p>{ty(q["reponse_courte"])}</p></li>' for q in list(qs)[:4])
+    li = "".join(carte(q["numero"], q["date"], f'questions/{q["date"]}-{q["slug"]}.html', ty(q["question"]), q["code_domaine"], ty(q["reponse_courte"])) for q in list(qs)[:4])
     return f'''
     <section class="bloc bloc-blanc" aria-labelledby="titre-questions">
       <div class="page large">
-        {tete_bloc("titre-questions", "Chaque jeudi", "Questions VTC : une question, une réponse sourcée", "questions/index.html", "Toutes les questions")}
+        {tete_bloc("titre-questions", "Réponses sourcées", "Questions VTC : une question, une réponse sourcée", "questions/index.html", "Toutes les questions")}
         <ul class="questions questions-grille">{li}</ul>
       </div>
     </section>'''
@@ -499,7 +561,7 @@ def livre_vivant():
       <li>{ty("Les sources d'abord : Légifrance pour les codes, décrets et arrêtés ; service-public.fr, l'Urssaf et le BOFiP pour les démarches, les cotisations et les impôts ; les textes officiels de l'examen pour les épreuves et le barème.")}</li>
       <li>{ty("Une règle non vérifiée n'est pas publiée. Une information qui ne vient pas d'un texte officiel doit être confirmée par deux sources indépendantes.")}</li>
       <li>{ty("Trois états sont toujours distingués : en vigueur, adopté mais pas encore applicable, simple projet.")}</li>
-      <li>{ty("Les articles de loi utiles au métier sont recopiés et expliqués dans les")} <a href="wiki/index.html">Textes du métier</a>{ty(", et leur version est comparée chaque semaine à celle de Légifrance.")}</li>
+      <li>{ty("Les articles de loi utiles au métier sont recopiés et expliqués dans les")} <a href="wiki/index.html">Textes réglementaires</a>{ty(", et leur version est comparée chaque semaine à celle de Légifrance.")}</li>
     </ul>
 
     <h2 id="questions">Questions fréquentes</h2>
@@ -592,7 +654,7 @@ def livre_vivant():
     ecrire("le-livre-desinscription.html", page("Désinscription · Révision VTC", corps_fin, "livre", "", noindex=True))
 
 
-# ------------------------------------------------------------------ wiki des textes du métier
+# ------------------------------------------------------------------ wiki des textes réglementaires
 def lire_wiki():
     with open(os.path.join(CONTENU, "wiki.json"), encoding="utf-8") as h:
         w = json.load(h)
@@ -658,7 +720,7 @@ def wiki():
         <p class="pied-achat">{achat("bouton achat petit", "Le livre sur Amazon")}</p>
       </section>'''
         th = themes[a["theme"]]
-        corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Textes du métier</a></li><li><a href="index.html#{a["theme"]}">{ty(th["titre"])}</a></li></ol></nav>
+        corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Textes réglementaires</a></li><li><a href="index.html#{a["theme"]}">{ty(th["titre"])}</a></li></ol></nav>
     {entete}
     <div class="deux-col"><div class="col-texte">
     <section class="en-clair" aria-labelledby="clair">
@@ -697,7 +759,7 @@ def wiki():
               "image": SITE + "partage.jpg", "mainEntityOfPage": SITE + f'wiki/{a["slug"]}.html', "about": loi,
               "isBasedOn": a["url"], "license": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/"}
         ecrire(f'wiki/{a["slug"]}.html', page(html.escape(titre_page, quote=False), corps, "textes", "../", html.escape(desc),
-                                             jsonld=[ld, fil(("Accueil", ""), ("Textes du métier", "wiki/"), (th["titre"], f'wiki/#{a["theme"]}'), (titre_page, f'wiki/{a["slug"]}.html'))]))
+                                             jsonld=[ld, fil(("Accueil", ""), ("Textes réglementaires", "wiki/"), (th["titre"], f'wiki/#{a["theme"]}'), (titre_page, f'wiki/{a["slug"]}.html'))]))
 
     # index
     sections, sommaire = [], []
@@ -716,7 +778,7 @@ def wiki():
         autres += f'<h3>{ty(g["titre"])}</h3><ul class="wiki-liste textes-ref">' + "".join(
             f'<li><a href="{html.escape(x["url"])}">{ty(x["nom"])}</a><span class="texte-ref">{ty(x["ref"])}</span><span class="objet">{ty(x["objet"])}</span></li>'
             for x in g["textes"]) + "</ul>"
-    corps = f'''    <h1>Textes du métier</h1>
+    corps = f'''    <h1>Textes réglementaires</h1>
     <p class="chapeau">{ty("Les articles de loi, décrets et arrêtés qui encadrent le métier de conducteur VTC, chacun expliqué en clair avec un exemple, puis reproduit dans sa version officielle.")}</p>
     <div class="cherche">
       <label for="q">Chercher un article ou un mot</label>
@@ -741,17 +803,17 @@ s.hidden=vis===0;total+=vis;});
 r.textContent=v?(total?total+(total>1?" articles trouvés":" article trouvé"):"Aucun article ne correspond."):"";});})();
 </script>
 '''
-    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Réglementation VTC : les textes du métier expliqués",
+    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Réglementation VTC : les textes réglementaires expliqués",
           "url": SITE + "wiki/", "inLanguage": "fr", "dateModified": iso_fr(source_date), "author": AUTEUR, "isPartOf": {"@id": SITE + "#site"},
           "hasPart": [{"@type": "Article", "headline": a["titre"], "url": SITE + f'wiki/{a["slug"]}.html'} for a in arts]}
-    ecrire("wiki/index.html", page("Réglementation VTC : les textes du métier expliqués en clair · Révision VTC", corps, "textes", "../",
+    ecrire("wiki/index.html", page("Réglementation VTC : les textes réglementaires expliqués en clair · Révision VTC", corps, "textes", "../",
                                    "La réglementation VTC article par article : réservation préalable, maraude, carte professionnelle, registre, véhicule, plateformes, sanctions. Texte officiel en vigueur et explication en clair.",
-                                   scripts_fin=script, jsonld=[ld, fil(("Accueil", ""), ("Textes du métier", "wiki/"))]))
+                                   scripts_fin=script, jsonld=[ld, fil(("Accueil", ""), ("Textes réglementaires", "wiki/"))]))
     # l'ancienne page renvoie vers le wiki
     ecrire("textes.html", f'''<!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><title>Textes du métier · Révision VTC</title>
+<html lang="fr"><head><meta charset="utf-8"><title>Textes réglementaires · Révision VTC</title>
 <link rel="canonical" href="{SITE}wiki/"><meta http-equiv="refresh" content="0; url=wiki/index.html"></head>
-<body><p><a href="wiki/index.html">Les textes du métier ont déménagé : cliquez ici.</a></p></body></html>
+<body><p><a href="wiki/index.html">Les textes réglementaires ont déménagé : cliquez ici.</a></p></body></html>
 ''')
     return arts
 
@@ -850,7 +912,7 @@ def legales():
     <p>{ty("Les informations saisies dans le formulaire de signalement (type, fiche, message, source et, si vous la donnez, votre adresse e-mail) servent uniquement à vérifier le signalement et à vous répondre. Elles sont transmises par le service Web3Forms, qui les achemine par e-mail sans conserver les messages, puis conservées dans la boîte de réception de l'éditeur le temps de l'échange, et au plus un an. Base légale : votre demande. Mêmes droits que pour le formulaire de contact.")}</p>
     <h2>Propriété intellectuelle</h2>
     <p>{ty("Les textes, questions et corrigés de ce site sont la propriété de Benjamin Blondin. Toute reproduction sans autorisation est interdite (Code de la propriété intellectuelle, art. L122-4). Les brèves de l'Actualité VTC citent leurs sources, qui restent la propriété de leurs auteurs.")}</p>
-    <p>{ty("Les textes officiels reproduits dans la rubrique Textes du métier proviennent de Légifrance (DILA). Ils sont réutilisés sous Licence Ouverte 2.0, avec mention de la source et de la date de version. Seule la version publiée sur Légifrance fait foi.")}</p>
+    <p>{ty("Les textes officiels reproduits dans la rubrique Textes réglementaires proviennent de Légifrance (DILA). Ils sont réutilisés sous Licence Ouverte 2.0, avec mention de la source et de la date de version. Seule la version publiée sur Légifrance fait foi.")}</p>
     <h2>Avertissement</h2>
     <p>{ty("Ce site et le livre sont des ouvrages indépendants : ils ne sont édités ni par les chambres de métiers et de l'artisanat ni par l'État. Ils préparent à l'examen et ne remplacent pas un conseil juridique, comptable ou fiscal adapté à votre situation.")}</p>'''
     ecrire("mentions-legales.html", page("Mentions légales · Révision VTC", corps, None, "",
@@ -885,7 +947,10 @@ def lire_questions(slugs_wiki):
         assert q["question"].endswith("?") and 50 <= len(q["reponse_courte"]) <= 400, f"{f} : question ou réponse courte"
         for w in q.get("wiki", []):
             assert w in slugs_wiki, f"{f} : page du wiki inconnue {w}"
+        q["code_domaine"] = domaine_de(q, f)
         qs.append(q)
+    for i, q in enumerate(qs):
+        q["numero"] = len(qs) - i   # numéro d'ordre de publication : la plus ancienne est la n° 1
     slugs = [q["slug"] for q in qs]
     assert len(slugs) == len(set(slugs)), "deux questions ont la même adresse"
     return qs
@@ -900,9 +965,9 @@ def questions(qs, w):
         src = "".join(f'<li><a href="{html.escape(x["url"])}">{ty(x["nom"])}</a>' + (f", {ty(x['date'])}" if x.get("date") else "") + "</li>" for x in q["sources"])
         autres = "".join(f'<li><a href="{x["date"]}-{x["slug"]}.html">{ty(x["question"])}</a></li>' for x in qs if x is not q)[:4000]
         corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Questions VTC</a></li></ol></nav>
-    <p class="surtitre">Question VTC</p>
+    <p class="surtitre">Question VTC n° {q["numero"]}</p>
     <h1>{ty(q["question"])}</h1>
-    <p class="meta">Publié le {date_fr(q["date"])}, vérifié le {ty(q["verifie"])}</p>
+    <p class="meta">{DOMAINES[q["code_domaine"]][0]} : {ty(DOMAINES[q["code_domaine"]][1].lower() if q["code_domaine"] == "X" else DOMAINES[q["code_domaine"]][1])}. Publiée en {mois_annee(q["date"])}, vérifiée en {mois_annee(iso_fr(q["verifie"]))}.</p>
     <div class="deux-col"><div class="col-texte">
     <section class="en-clair" aria-labelledby="courte">
       <h2 id="courte">La réponse courte</h2>
@@ -927,15 +992,26 @@ def questions(qs, w):
         ecrire(chemin, page(html.escape(q["question"] + " · Révision VTC", quote=False), corps, "questions", "../",
                             html.escape(q["reponse_courte"] if len(q["reponse_courte"]) <= 158 else q["reponse_courte"][:155].rsplit(" ", 1)[0] + "…"),
                             jsonld=[ld, fil(("Accueil", ""), ("Questions VTC", "questions/"), (q["question"], chemin))]))
-    liste = "".join(f'''<li><span class="meta">{date_fr(q["date"])}</span><a href="{q["date"]}-{q["slug"]}.html">{ty(q["question"])}</a><p>{ty(q["reponse_courte"])}</p></li>''' for q in qs)
+    liste = "".join(carte(q["numero"], q["date"], f'{q["date"]}-{q["slug"]}.html', ty(q["question"]), q["code_domaine"], ty(q["reponse_courte"])) for q in qs)
     corps = f'''    <h1>Questions VTC</h1>
     <p class="chapeau">{ty("Les questions concrètes que se posent les chauffeurs VTC et les candidats à l'examen, avec une réponse courte, les textes qui la fondent et leurs sources.")}</p>
-    <p>{ty("Une nouvelle question chaque semaine. Les règles citées sont expliquées article par article dans les")} <a href="../wiki/index.html">textes du métier</a>.</p>
+    <p>{ty("Combien de temps peut-on attendre un client devant une gare ? Faut-il un siège auto pour transporter un enfant ? Quand repasser la visite médicale ? Chaque page part d'une question que l'on se pose vraiment, au volant ou en préparant l'examen, et y répond sans détour, texte officiel à l'appui.")}</p>
+    <h2>{ty("Comment se lit une réponse")}</h2>
+    <ol class="etapes">
+      <li><b>{ty("La réponse courte, tout de suite")}</b>{ty("En deux ou trois phrases, l'essentiel à retenir, avec les chiffres et les délais exacts.")}</li>
+      <li><b>{ty("L'explication pas à pas")}</b>{ty("La règle détaillée, un exemple concret quand il aide à comprendre, et l'erreur à éviter.")}</li>
+      <li><b>{ty("Les textes et les sources")}</b>{ty("L'article du Code des transports ou l'arrêté qui fonde la réponse, expliqué dans nos")} <a href="../wiki/index.html">textes réglementaires</a>{ty(", puis la liste des sources consultées et la fiche du livre qui traite le sujet.")}</li>
+    </ol>
+    <h2>{ty("Repérez l'épreuve concernée")}</h2>
+    <p>{ty("Chaque question est rattachée à l'épreuve de l'examen VTC qu'elle aide à préparer, signalée par un pictogramme. Pratique pour réviser une matière d'un coup :")}</p>
+    {legende_domaines()}
+    <p>{ty("De nouvelles questions sont ajoutées régulièrement. Vous ne trouvez pas la vôtre ?")} <a href="../contact.html">{ty("Posez-la")}</a>.</p>
+    <h2>{ty("Toutes les questions")}</h2>
     <ul class="questions">{liste}</ul>'''
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Questions VTC", "url": SITE + "questions/", "inLanguage": "fr",
           "hasPart": [{"@type": "Article", "headline": q["question"], "url": SITE + f'questions/{q["date"]}-{q["slug"]}.html'} for q in qs]}
     ecrire("questions/index.html", page("Questions VTC : réponses courtes et sourcées sur le métier et l'examen · Révision VTC", corps, "questions", "../",
-                                        "Les questions concrètes des chauffeurs VTC et des candidats à l'examen : une réponse courte, les textes officiels qui la fondent et leurs sources. Une nouvelle question chaque semaine.",
+                                        "Les questions concrètes des chauffeurs VTC et des candidats à l'examen : une réponse courte, les textes officiels qui la fondent et leurs sources, classées par épreuve de l'examen.",
                                         jsonld=[ld, fil(("Accueil", ""), ("Questions VTC", "questions/"))]))
 
 
@@ -1009,7 +1085,7 @@ def contact():
     {formulaire}
     <h2>Avant d'écrire</h2>
     <ul>
-      <li>{ty("Pour une question de réglementation, la réponse est peut-être déjà dans les")} <a href="wiki/index.html">textes du métier</a> {ty("ou les")} <a href="questions/index.html">Questions VTC</a>.</li>
+      <li>{ty("Pour une question de réglementation, la réponse est peut-être déjà dans les")} <a href="wiki/index.html">textes réglementaires</a> {ty("ou les")} <a href="questions/index.html">Questions VTC</a>.</li>
       <li>{ty("Ce site ne donne pas de conseil juridique, comptable ou fiscal personnalisé.")}</li>
     </ul>'''
     ld = {"@context": "https://schema.org", "@type": "ContactPage", "name": "Contact", "url": SITE + "contact.html", "inLanguage": "fr",
@@ -1103,6 +1179,7 @@ def lire_dossiers(slugs_wiki):
             assert w in slugs_wiki, f"{f} : page du wiki inconnue {w}"
         for s in d["sections"]:
             assert re.fullmatch(r"[a-z0-9-]+", s["id"]), f"{f} : identifiant de section {s['id']}"
+        d["code_domaine"] = domaine_de(d, f)
         d["mots"] = len(re.findall(r"\w+", _texte_dossier(d)))
         assert d.get("brouillon") or 1200 <= d["mots"] <= 3000, f"{f} : {d['mots']} mots (article : 1 500 à 2 500 mots)"
         if d.get("brouillon") and not APERCU:
@@ -1122,12 +1199,12 @@ def dossiers(ds, w, qs=()):
         livre = "".join(f"<li><b>Fiche {ty(c)}</b> · {ty(t)}</li>" for c, t in d.get("fiches", []))
         autres = "".join(f'<li><a href="{x["slug"]}.html">{ty(x["titre"])}</a></li>' for x in ds if x is not d)
         src = "".join(f'<li><a href="{html.escape(x["url"])}">{ty(x["nom"])}</a>' + (f", {ty(x['date'])}" if x.get("date") else "") + "</li>" for x in d["sources"])
-        maj = f', mis à jour le {ty(d["mis_a_jour"])}' if d.get("mis_a_jour") else ""
+        maj = f', mis à jour en {mois_annee(iso_fr(d["mis_a_jour"]))}' if d.get("mis_a_jour") else ""
         corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Articles</a></li></ol></nav>
     <p class="surtitre">Article n° {d["numero"]}</p>
     <h1>{ty(d["titre"])}</h1>
     <p class="chapeau">{ty(d["chapeau"])}</p>
-    <p class="meta">Publié le {date_fr(d["date"])}{maj}, chiffres vérifiés le {ty(d["verifie"])}. Lecture : {d["mots"] // 230 + 1} min.</p>
+    <p class="meta">{DOMAINES[d["code_domaine"]][0]} : {ty(DOMAINES[d["code_domaine"]][1].lower() if d["code_domaine"] == "X" else DOMAINES[d["code_domaine"]][1])}. Publié en {mois_annee(d["date"])}{maj}, chiffres vérifiés en {mois_annee(iso_fr(d["verifie"]))}. Lecture : {d["mots"] // 230 + 1} min.</p>
     <div class="deux-col"><div class="col-texte">
     {illustration(d["image"], premiere=True) if d.get("image") else ""}
     <section class="en-clair" aria-labelledby="en-bref">
@@ -1137,7 +1214,7 @@ def dossiers(ds, w, qs=()):
     <section class="retenir" aria-labelledby="retenir"><h2 id="retenir">À retenir</h2><ul>{"".join(f"<li>{liens(ty(x))}</li>" for x in d["a_retenir"])}</ul></section>
     <h2 id="sources">Sources</h2>
     <ul class="source">{src}</ul>
-    <p class="source">{ty("Montants vérifiés le " + d["verifie"] + " sur les sites officiels cités ; les tarifs non réglementés (formation, assurance, véhicule) sont des fourchettes publiées, à comparer avec vos propres devis. Cet article ne remplace pas un conseil juridique, comptable ou financier adapté à votre situation.")}</p>
+    <p class="source">{ty("Montants vérifiés en " + mois_annee(iso_fr(d["verifie"])) + " sur les sites officiels cités ; les tarifs non réglementés (formation, assurance, véhicule) sont des fourchettes publiées, à comparer avec vos propres devis. Cet article ne remplace pas un conseil juridique, comptable ou financier adapté à votre situation.")}</p>
     </div>
     <aside class="col-cote" aria-label="Sommaire et pour aller plus loin">
     <nav class="cote-bloc" aria-labelledby="titre-sommaire"><h2 id="titre-sommaire">Sommaire</h2><ul class="voir-aussi">{sommaire}</ul></nav>
@@ -1163,13 +1240,21 @@ def dossiers(ds, w, qs=()):
                             noindex=bool(d.get("brouillon")), scripts_tete=partage,
                             jsonld=[ld, fil(("Accueil", ""), ("Articles", "dossiers/"), (d["titre"], chemin))]))
     if ds:
-        liste = "".join(f'''<li><span class="meta">Article n° {d["numero"]}, {date_fr(d["date"])}</span><a href="{d["slug"]}.html">{ty(d["titre"])}</a><p>{ty(d["description"])}</p></li>''' for d in ds)
+        liste = "".join(carte(d["numero"], d["date"], f'{d["slug"]}.html', ty(d["titre"]), d["code_domaine"], ty(d["description"]), "Article") for d in ds)
         liste = f'<ul class="questions">{liste}</ul>'
     else:
         liste = f'<p class="note">{ty("Le premier article sera publié très prochainement.")}</p>'
     corps = f'''    <h1>Articles VTC</h1>
-    <p class="chapeau">{ty("Les grandes questions du métier de chauffeur VTC, traitées à fond : coûts, revenus, statut, véhicule, cotisations. Chaque chiffre est daté et relié à sa source.")}</p>
-    <p>{ty("Un nouvel article chaque semaine. Pour une réponse rapide à une question précise, voyez les")} <a href="../questions/index.html">Questions VTC</a> {ty("; pour le texte exact d'une règle, les")} <a href="../wiki/index.html">textes du métier</a>. {ty("Pour chiffrer votre propre activité :")} <a href="../simulateurs/cout-revient-revenu-net-vtc.html">{ty("le simulateur de coût de revient et de revenu net")}</a>.</p>
+    <p class="chapeau">{ty("Les grandes questions du métier de chauffeur VTC, traitées à fond : ce que coûte le lancement, ce que l'on gagne vraiment, le statut à choisir, la voiture, les cotisations. Chaque chiffre est daté et relié à sa source.")}</p>
+    <p>{ty("Avant de vous lancer, vous voulez savoir si le métier tient ses promesses, et à quel prix. Ici, pas de chiffres ronds repris d'une publicité : chaque article part d'une situation réelle, fait le calcul sous vos yeux et montre d'où vient chaque montant. De quoi décider en connaissance de cause, et réviser au passage les épreuves de gestion de l'examen.")}</p>
+    <h2>{ty("Ce que vous trouvez dans chaque article")}</h2>
+    <ol class="etapes">
+      <li><b>{ty("Un exemple pour commencer")}</b>{ty("Un chauffeur, une situation, des montants concrets : on part du terrain avant d'entrer dans les règles.")}</li>
+      <li><b>{ty("Le détail, poste par poste")}</b>{ty("Les règles officielles, les tarifs publiés et les calculs, avec leurs sources et la date de vérification.")}</li>
+      <li><b>{ty("De quoi passer à l'action")}</b>{ty("Refaire le calcul avec vos propres chiffres dans")} <a href="../simulateurs/cout-revient-revenu-net-vtc.html">{ty("le simulateur de coût de revient et de revenu net")}</a>{ty(", lire les textes qui s'appliquent, retrouver les fiches du livre.")}</li>
+    </ol>
+    <p>{ty("De nouveaux articles sont mis en ligne régulièrement, et ceux déjà publiés sont mis à jour quand un montant ou une règle change. Le pictogramme de chaque article indique l'épreuve de l'examen qu'il aide à préparer. Pour une réponse rapide à une question précise, voyez les")} <a href="../questions/index.html">Questions VTC</a> {ty("; pour le texte exact d'une règle, les")} <a href="../wiki/index.html">textes réglementaires</a>.</p>
+    <h2>{ty("Tous les articles")}</h2>
     {liste}'''
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Articles VTC", "url": SITE + "dossiers/", "inLanguage": "fr",
           "isPartOf": {"@id": SITE + "#site"},
@@ -1499,7 +1584,7 @@ def simulateur(ds, note=None):
     liste = f'''<ul class="questions"><li><span class="meta">{ty("Mis à jour le " + s["verifie"])}</span><a href="{s["slug"]}.html">{ty(titre)}</a><p>{ty("Le coût de revient de votre voiture au kilomètre et ce qu'il vous reste chaque mois, après commission, cotisations, location, carburant et assurance.")}</p></li>{note_li}</ul>'''
     corps = f'''    <h1>Simulateurs VTC</h1>
     <p class="chapeau">{ty("Calculez votre note à l'examen VTC, ou ce que votre activité de chauffeur vous rapporte vraiment. Vous saisissez vos propres chiffres ; chaque règle et chaque valeur proposée par défaut est sourcée et datée, et le calcul se fait dans votre navigateur.")}</p>
-    <p>{ty("Pour comprendre les montants avant de les saisir, lisez les")} <a href="../dossiers/index.html">articles</a> {ty("; pour les règles du métier, les")} <a href="../wiki/index.html">textes du métier</a>.</p>
+    <p>{ty("Pour comprendre les montants avant de les saisir, lisez les")} <a href="../dossiers/index.html">articles</a> {ty("; pour les règles du métier, les")} <a href="../wiki/index.html">textes réglementaires</a>.</p>
     {liste}'''
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Simulateurs VTC", "url": SITE + "simulateurs/", "inLanguage": "fr",
           "isPartOf": {"@id": SITE + "#site"}, "hasPart": [{"@type": "WebApplication", "name": titre, "url": SITE + chemin}]
@@ -1710,7 +1795,7 @@ def a_propos():
     <p>{ty("Le site est publié à titre non professionnel par Benjamin Blondin, auteur du livre Machine à Réussite · Examen VTC 2027 (540 pages, ISBN 979-8-1652-8079-5). Il ne contient aucune publicité et ne vend aucune formation. Il n'est édité ni par l'État, ni par les chambres de métiers et de l'artisanat, ni par une plateforme de VTC.")}</p>
     <h2>Ce que vous y trouvez</h2>
     <ul>
-      <li><a href="wiki/index.html">{ty("Les textes du métier")}</a> {ty(": chaque article utile du Code des transports et chaque arrêté, avec le texte officiel en vigueur, une explication en clair et un exemple concret.")}</li>
+      <li><a href="wiki/index.html">{ty("Les textes réglementaires")}</a> {ty(": chaque article utile du Code des transports et chaque arrêté, avec le texte officiel en vigueur, une explication en clair et un exemple concret.")}</li>
       <li><a href="actualite/index.html">{ty("L'Actualité VTC")}</a> {ty(": chaque semaine, ce qui change pour les chauffeurs et les candidats, avec ses sources.")}</li>
       <li><a href="mises-a-jour.html">{ty("Les mises à jour du livre")}</a> {ty(": chaque règle qui a changé depuis l'impression, avec le texte qui la fonde.")}</li>
       <li><a href="examens.html">{ty("Deux examens blancs")}</a> {ty("corrigés, en plus des trois du livre.")}</li>
@@ -1790,7 +1875,7 @@ def llms(nums, w, qs=(), ds=(), simu=None):
          f"Les textes du wiki sont comparés chaque semaine à la version en vigueur sur Légifrance (dernière vérification : {w['verifie']}). "
          "Seule la version publiée sur Légifrance fait foi.", "",
          "## Pages principales", "",
-         f"- [Réglementation VTC, les textes du métier]({SITE}wiki/): index de tous les articles par thème",
+         f"- [Réglementation VTC, les textes réglementaires]({SITE}wiki/): index de tous les articles par thème",
          f"- [Actualité VTC]({SITE}actualite/): un numéro par semaine, sources citées",
          f"- [Questions VTC]({SITE}questions/): une question concrète par semaine, réponse courte et sources officielles",
          f"- [Articles VTC]({SITE}dossiers/): articles de fond chiffrés (coût du lancement, revenus, statut, véhicule), sources datées",

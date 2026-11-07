@@ -311,6 +311,20 @@ th,td{border-bottom:1px solid var(--filet);padding:.625rem .5rem;text-align:left
 thead th{border-bottom:2px solid var(--encre);font-weight:700}
 td.nombre,th.nombre{text-align:right;font-variant-numeric:tabular-nums}
 
+/* cartes des index Questions VTC et Articles (depuis le 7 novembre 2026) : en tête, numéro en pastille jaune et mois de publication ;
+   sous le titre, l'épreuve de l'examen concernée avec son pictogramme (outils/generer.py, carte() et ligne_domaine()) */
+.carte-tete{display:flex;flex-wrap:wrap;align-items:center;gap:var(--e2) var(--e3);margin:0 0 var(--e3)}
+.carte-tete .num-art{margin:0}
+.questions .carte-tete .meta{display:inline;margin:0}
+.picto{flex:none;width:1.25rem;height:1.25rem}
+.domaine,.legende-domaines li{display:flex;align-items:center;gap:.6rem}
+.domaine .picto,.legende-domaines .picto{box-sizing:content-box;padding:.3rem;border-radius:var(--rayon);background:var(--doux);color:var(--encre)}
+.questions .domaine{margin:0 0 var(--e3);font-family:var(--sans);font-size:.9375rem;font-weight:600;color:var(--gris)}
+/* légende des pictogrammes : à plat, non cliquable */
+.legende-domaines{list-style:none;margin:0 0 var(--e5);padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(15rem,100%),1fr));gap:var(--e3) var(--e5)}
+.legende-domaines li{margin:0;font-size:1rem;line-height:1.35}
+.legende-domaines b{display:block;font-family:var(--sans)}
+
 /* 6. Pages ----------------------------------------------------------------- */
 /* accueil : un premier écran fixe sur fond nuit (« hero ») : titre, chapeau, deux actions, et à droite
    (dessous sur téléphone) deux cartes-liens, l'exemple du simulateur et le livre. Puis une bande de trois preuves,

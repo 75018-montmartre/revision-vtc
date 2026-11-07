@@ -6,6 +6,17 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 7 novembre 2026, 19 h 30 · Menu « Textes réglementaires », index des Questions VTC et des Articles refaits
+
+- Menu et toutes les pages : la rubrique « Textes du métier » s'appelle désormais « Textes réglementaires » (menu, titre de https://revision-vtc.fr/wiki/, liens dans les textes, accueil, llms.txt). Adresses inchangées (`wiki/`).
+- https://revision-vtc.fr/questions/ : introduction plus pédagogique (exemples de questions, « Comment se lit une réponse » en trois étapes, légende des sept épreuves avec leurs pictogrammes, lien « Posez-la » vers le contact) ; plus de promesse « une question chaque semaine ». Cartes numérotées (n° 1 = la plus ancienne), mois et année seulement, épreuve concernée avec pictogramme sous le titre. Mêmes cartes sur l'accueil (surtitre « Réponses sourcées » au lieu de « Chaque jeudi »).
+- https://revision-vtc.fr/dossiers/ : introduction plus vivante, « Ce que vous trouvez dans chaque article » en trois étapes, « De nouveaux articles sont mis en ligne régulièrement » au lieu de « Un nouvel article chaque semaine » ; cartes numérotées, mois et année, épreuve avec pictogramme.
+- Pages des questions et des articles : « Publiée en novembre 2026, vérifiée en novembre 2026 » (plus le jour), précédé de l'épreuve. Les dates exactes restent dans les données structurées.
+- Épreuve rattachée : lettre de la première fiche du livre citée (questions) ; champ `domaine` ajouté aux cinq articles (B, F, B, B, X). README mis à jour.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px (index questions, articles, accueil, textes, une question, un article), aucun débordement horizontal.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 7 novembre 2026, 14 h 30 · Question VTC du jour (relance avec la nouvelle méthode de lecture)
 
 - Question : « Contrôle technique VTC : tous les combien ? »
