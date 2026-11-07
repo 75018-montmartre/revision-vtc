@@ -43,7 +43,8 @@
   --quadrille:rgba(24,33,47,.12);        /* lignes du fond quadrillé (plan de ville) */
   --pastille:var(--nuit);                /* pastille ronde fléchée des cartes */
   --pastille-fleche:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F5B820' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E");
-  --chevron-nav:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l6 6-6 6'/%3E%3C/svg%3E"); /* flèche « le menu continue » (téléphone), sur le bandeau nuit */
+  --chevron-nav:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2311161E' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l6 6-6 6'/%3E%3C/svg%3E"); /* flèche « le menu continue » (téléphone), couleur du texte */
+  --fleche-bouton:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17L17 7M9 7h8v8'/%3E%3C/svg%3E"); /* flèche ↗ des boutons (masque : prend la couleur du texte) */
   /* typographie */
   --sans:"Barlow",Arial,sans-serif;                          /* interface et texte de lecture */
   --serif:"Barlow",Arial,sans-serif;                         /* texte de lecture (même famille) */
@@ -65,7 +66,8 @@
         --ombre-h:0 10px 26px -12px rgba(0,0,0,.7);
         --fonce:#0A0E14;
         --relief:#3A4A63;--quadrille:rgba(201,209,220,.07);--pastille:var(--jaune);
-        --pastille-fleche:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2318212F' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E")}
+        --pastille-fleche:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2318212F' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E");
+        --chevron-nav:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E9EDF2' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l6 6-6 6'/%3E%3C/svg%3E")}
 }
 
 /* 2. Base ------------------------------------------------------------------ */
@@ -392,6 +394,9 @@ main:has(.hero){padding-bottom:0}
 .presentation-livre p{margin:0 0 var(--e3)}
 .liste-coches{list-style:none;margin:0 0 var(--e4);padding:0;font-family:var(--sans);font-size:1.0625rem;line-height:1.45;display:grid;gap:var(--e2)}
 .presentation-livre .actions{margin:var(--e4) 0 0}
+/* « Déjà lecteur ? » : ligne à part sous les boutons, séparée par un filet */
+.presentation-livre .lecteurs-lien{margin:var(--e5) 0 0;padding-top:var(--e4);border-top:1px solid var(--filet);font-family:var(--sans);font-size:1rem;line-height:1.5;color:var(--gris)}
+.presentation-livre .lecteurs-lien b{color:var(--encre);font-weight:600}
 @media (max-width:36rem){.presentation-livre{grid-template-columns:minmax(0,1fr)}.presentation-livre img{width:9rem}}
 /* accueil, quatre dernières Questions VTC : 2 × 2 (jamais de tuile orpheline), une colonne sur téléphone */
 .questions-grille{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -877,3 +882,36 @@ a.carte-hero:hover .carte-lien{text-decoration-thickness:2px}
 @media (prefers-reduced-motion: reduce){.cote-bloc .voir-aussi li,.sommaire a,.carte-hero,.menu-livre{transition:none}}
 @media print{.sommaire a,.cote-bloc .voir-aussi li,.carte-hero{box-shadow:none}}
 .sommaire a:hover{color:var(--encre)}
+
+/* 9. Barre de navigation et boutons (depuis le 7 novembre 2026, modèle « propal ») -------------
+   Dernière couche, elle aussi à garder en fin de fichier : en-tête blanc (fond des cartes en sombre),
+   nom en capitales condensées, liens sobres soulignés de jaune, « Le livre » en bouton à contour ;
+   tous les boutons du site à plat, coins de 6 px, flèche ↗ intégrée (jeton --fleche-bouton). */
+.entete{background:var(--carte);border-bottom:1px solid var(--filet)}
+.entete .page{padding-top:1rem;padding-bottom:1rem}
+.nom-site{gap:.75rem;color:var(--encre)}
+.nom-site .marque{width:2.625rem;height:2.625rem;border-radius:8px;font-size:1.625rem}
+.nom-site .nom{line-height:1.1;font-family:var(--cond);font-weight:700;font-size:1.375rem;letter-spacing:.02em;text-transform:uppercase}
+.nom-site .sous{margin-top:.2rem;font-family:var(--sans);font-weight:400;font-size:.6875rem;letter-spacing:.12em;color:var(--gris)}
+.nav ul{gap:.25rem 1.5rem;font-size:.9375rem;font-weight:400}
+.nav a{min-height:44px;padding:0;color:var(--encre);border-bottom:0}
+.nav a:hover{background:transparent;color:var(--encre)}
+.nav a::after{left:0;right:0;bottom:6px;height:2px}
+.nav a[aria-current="page"]{color:var(--encre);font-weight:600}
+.entete :focus-visible{outline-color:var(--focus)}
+@media (max-width:52rem){
+  .nav ul{gap:.375rem}
+  .nav a,.nav a[aria-current="page"]{padding:0 .85rem;border-radius:6px;background:var(--doux)}
+  .nav a::after{left:.85rem;right:.85rem;bottom:5px}
+  .nav::after{background:var(--chevron-nav) right .5rem center/1.1rem no-repeat,linear-gradient(90deg,transparent,var(--carte) 65%)}
+}
+/* boutons : à plat, flèche ↗ ; les couleurs restent celles de la partie 8 (nuit, jaune pour l'achat), le bouton second passe à contour fin */
+.bouton,.menu-livre{gap:.875rem;min-height:46px;padding:.5rem 1.25rem;border-width:1px;border-radius:6px;font-family:var(--sans);font-weight:600;font-size:.9375rem;line-height:1.25;text-align:center}
+.bouton.petit{min-height:44px;padding:.375rem 1rem}
+.bouton:not(.bientot),.bouton:not(.bientot):hover,.bouton:not(.bientot):active,.menu-livre,.menu-livre:hover,.menu-livre:active,.menu-livre[aria-current="page"]{box-shadow:none;transform:none !important}
+.bouton:not(.bientot)::after,.menu-livre::after{content:"";flex:none;width:1rem;height:1rem;background:currentColor;-webkit-mask:var(--fleche-bouton) center/contain no-repeat;mask:var(--fleche-bouton) center/contain no-repeat;transition:transform .15s ease}
+.bouton:not(.bientot):hover::after,.menu-livre:hover::after{transform:translate(2px,-2px)}
+.bouton.second,.menu-livre{background:var(--carte);color:var(--encre);border-color:var(--filet)}
+.bouton.second:hover,.menu-livre:hover{background:var(--carte);color:var(--encre);border-color:var(--encre)}
+.menu-livre[aria-current="page"]{border-color:var(--encre);background:var(--doux)}
+@media (prefers-reduced-motion: reduce){.bouton::after,.menu-livre::after{transition:none}}

@@ -6,6 +6,15 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 7 novembre 2026, 22 h 10 · Nouvelle barre de navigation, boutons à flèche, corrections de la page du livre
+
+- Tout le site : nouvelle barre de navigation d'après la maquette « propal » (fond blanc, nom en capitales condensées, liens sobres soulignés de jaune, « Le livre » en bouton à contour avec flèche ↗). Libellés inchangés. En-tête toujours collé en haut, jauge de lecture et menu défilant sur téléphone conservés.
+- Tout le site : boutons à plat, coins de 6 px, flèche ↗ intégrée ; couleurs inchangées (jaune pour l'achat).
+- https://revision-vtc.fr/le-livre.html : « Déjà lecteur ? » sur une ligne à part, sous un filet, avec deux liens (mises à jour, signalement) ; formulaire de signalement : les deux champs du haut sont alignés (aide placée au-dessus du champ) ; exemple corrigé « A3.4, page 66 ».
+- Vérifié : axe sans nouvelle erreur en clair et en sombre à 320 et 1 366 px (accueil, page du livre, contact, simulateur, wiki) ; aucun débordement.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 7 novembre 2026, 21 h 20 · Nouvelle page du livre, avec une fiche à essayer
 
 - https://revision-vtc.fr/le-livre.html devient une vraie page de présentation du livre : présentation et achat, la fiche A3.4 « Gares et aéroports » à essayer (situation, confiance, QCM corrigé au clic, réponse rédigée comparée au corrigé type, bilan et dates de révision), trois visuels des pages du livre, la méthode, les engagements de vérification, les questions des acheteurs. L'inscription aux mises à jour et le signalement d'erreurs sont regroupés en bas, dans l'« Espace lecteurs » (mêmes ancres `#inscription` et `#signaler`).

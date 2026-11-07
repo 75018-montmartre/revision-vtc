@@ -643,7 +643,7 @@ def livre_vivant():
           <li><b>{ty("À jour de la loi du 25 juin 2026")}</b>{ty(", règles vérifiées en octobre 2026")}</li>
         </ul>
         <div class="actions">{achat("bouton achat", "Acheter le livre sur Amazon")}<a class="bouton second" href="#essayer">{ty("Essayer une fiche gratuitement")}</a></div>
-        <p class="meta">{ty("Déjà lecteur ?")} <a href="#lecteurs">{ty("Recevoir les mises à jour ou signaler une erreur")}</a></p>
+        <p class="lecteurs-lien"><b>{ty("Déjà lecteur ?")}</b> <a href="#inscription">{ty("Recevoir les mises à jour")}</a> {ty("ou")} <a href="#signaler">{ty("signaler une erreur")}</a></p>
       </div>
     </section>
 
@@ -707,7 +707,7 @@ def livre_vivant():
       <div class="champs-2">
         <div class="champ"><label for="sig-type">Type de signalement</label><select id="sig-type" name="type">
           <option>Une erreur dans le livre</option><option>Une règle qui a changé</option><option>Un passage pas clair</option><option>Une autre critique ou une suggestion</option></select></div>
-        <div class="champ"><label for="sig-fiche">Fiche ou page</label><input type="text" id="sig-fiche" name="fiche" maxlength="60" aria-describedby="aide-sig-fiche"><p class="aide" id="aide-sig-fiche">{ty("Exemple : A3.4, page 65")}</p></div>
+        <div class="champ"><label for="sig-fiche">Fiche ou page</label><p class="aide" id="aide-sig-fiche">{ty("Exemple : A3.4, page 66")}</p><input type="text" id="sig-fiche" name="fiche" maxlength="60" aria-describedby="aide-sig-fiche"></div>
       </div>
       <div class="champ"><label for="sig-message">Ce qui pose problème</label><p class="aide" id="aide-sig-message">1&#8239;000 caractères au maximum.</p><textarea id="sig-message" name="message" required maxlength="1000" rows="6" aria-describedby="aide-sig-message err-sig-message"></textarea><p class="erreur" id="err-sig-message"></p></div>
       <div class="champ"><label for="sig-source">Votre source, si vous en avez une (facultatif)</label><p class="aide" id="aide-sig-source">Exemple : un lien vers Légifrance, service-public.fr ou l'Urssaf</p><input type="text" id="sig-source" name="source" maxlength="300" aria-describedby="aide-sig-source"></div>
