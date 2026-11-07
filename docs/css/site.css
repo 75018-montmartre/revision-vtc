@@ -949,3 +949,9 @@ a.carte-hero:hover .carte-lien{text-decoration-thickness:2px}
 .domaine .picto,.legende-domaines .picto{box-sizing:content-box;width:1.05rem;height:1.05rem;padding:.5rem;border-radius:7px;background:var(--nuit);color:var(--jaune);box-shadow:inset 0 0 0 2.5px var(--nuit),inset 0 0 0 4px var(--sur-nuit)}
 .domaine,.legende-domaines li{gap:.85rem}
 .questions .domaine{margin:var(--e2) 0 var(--e4)}
+/* rythme vertical commun (depuis le 7 novembre 2026) : même écart entre un titre de bloc et ce qui le suit, quel que soit le contenu.
+   Le contenu qui suit un titre ne garde aucune marge haute ; les étapes numérotées (pastilles sans interligne) sont décalées
+   de la demi-interligne d'un paragraphe, pour que la première ligne tombe au même endroit qu'un texte. */
+.corps-page h2 + *{margin-top:0}
+.corps-page h2 + .etapes{padding-top:.15rem}
+.corps-page h2 + h3{padding-top:.3rem}

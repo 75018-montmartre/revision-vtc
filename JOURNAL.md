@@ -6,6 +6,13 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 7 novembre 2026, 22 h 45 · Rythme vertical harmonisé sous les titres de bloc
+
+- Tout le site : le premier texte d'un bloc tombe toujours à la même distance de son titre (19 px entre le bas du titre et la première ligne), qu'il s'agisse d'un paragraphe, d'étapes numérotées ou d'une liste de questions ; les encadrés (cartes, texte officiel, brèves) commencent tous à 16 px ; 48 px entre deux blocs partout.
+- Vérifié par mesure sur les pages d'index, la page du livre, une question, un article du wiki et une Actualité ; axe sans erreur en clair et en sombre à 320 et 1 366 px.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 7 novembre 2026, 22 h 35 · Pages d'index : blocs les uns sous les autres, sur toute la largeur
 
 - https://revision-vtc.fr/questions/, https://revision-vtc.fr/dossiers/, https://revision-vtc.fr/actualite/, https://revision-vtc.fr/wiki/, https://revision-vtc.fr/simulateurs/ : l'en-tête, les paragraphes et les blocs prennent toute la largeur de la grille de cartes (fini la colonne étroite collée à gauche). FAQ VTC et Guides VTC : blocs les uns sous les autres (présentation dans l'en-tête, étapes de lecture côte à côte, légende des épreuves sur toute la largeur), et non plus en deux colonnes. Guides VTC : le bloc des épreuves explique d'abord les pictogrammes, puis les mises à jour.

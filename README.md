@@ -213,6 +213,7 @@ Direction « signalétique en relief », en place depuis le 31 octobre 2026 : ba
 - **Mentions** (`.meta`) : en phrase, avec des virgules ou des points, jamais une suite séparée par des points médians « · » (sauf la ligne Légifrance du wiki et les `<title>`).
 - **Grilles** : panneaux « Par où commencer ? » 3 / 1 colonnes, questions de l'accueil 2 / 1 ; cartes-liens en grille automatique ; jamais de tuile orpheline.
 - **Accessibilité** : contraste AA minimum dans les deux thèmes, cibles tactiles de 44 px au moins (menu, menus déroulants, cartes-liens, liens du pied de page compris), focus visible (`--focus`, jaune dans l'en-tête), aucune information portée par la couleur seule, animations coupées si l'appareil le demande. Avant chaque publication : validateur W3C (HTML et CSS), axe en clair et en sombre à 320 et 1366 px, aucun débordement horizontal.
+- **Rythme vertical** (partie 9 de `site.css`) : le contenu qui suit un titre de bloc n'a pas de marge haute ; première ligne de texte à 19 px du titre (étapes et sous-titres compensés), encadrés à 16 px, 48 px entre deux blocs. Le vérifier en mesurant avant chaque publication d'une nouvelle mise en page.
 - Avant d'ajouter une règle CSS, chercher un composant existant. Toute nouvelle règle va dans la bonne partie du fichier, avec un commentaire.
 
 ## Récapitulatif par e-mail
