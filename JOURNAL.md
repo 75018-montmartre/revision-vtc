@@ -6,6 +6,14 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 7 novembre 2026, 9 h 05 · Question VTC du jour
+
+- **PROBLÈME : aucune question publiée, faute de pouvoir lire une source officielle.** Le réseau de la tâche refuse la connexion directe à legifrance.gouv.fr et à service-public.fr (refus 403 du proxy). La lecture par l'outil web a été refusée trois fois (« PROVENANCE_REQUIRED » : demande d'autorisation restée sans réponse, la tâche tournant sans personne pour l'accepter) ; un livret de préfecture (bas-rhin.gouv.fr) a renvoyé une erreur du serveur.
+- Sujet préparé, non rédigé : « Contrôle technique VTC : tous les combien ? » (famille Véhicule). Contrôle des doublons fait : proche du wiki R3120-10 et d'une ligne de l'article « Combien coûte vraiment le lancement en VTC ? », mais aucune question ne donne le calendrier du premier contrôle d'une voiture neuve utilisée en VTC. Sources à lire : Code de la route R323-24 et R323-26, Code des transports R3120-10, service-public.fr F33801.
+- Aucune question préparée et restée non publiée lors des passages précédents.
+- À faire : autoriser legifrance.gouv.fr et service-public.fr dans les accès réseau de la tâche (claude.ai, Paramètres > Capacités), ou accepter les lectures web de la tâche, ou la faire tourner depuis l'ordinateur (« Exiger cet ordinateur »).
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 4 novembre 2026, 12 h 20 · Toutes les pages : carreaux estompés dans l'en-tête
 
 - Les en-têtes quadrillés des pages intérieures (Questions VTC, Textes du métier, Articles, Actualité VTC, Simulateurs, le livre, pages fixes) prennent le même traitement que les bandes de l'accueil : fond `--doux` éclairci de moitié par `--fond`, quadrillage net en haut qui s'estompe vers le bas. Une seule règle pour tous les fonds quadrillés du site (`.bloc-doux,.tete-page` dans `docs/css/site.css`).
