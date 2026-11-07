@@ -516,7 +516,13 @@ def fiche_entrainement(slug, racine=""):
         f = json.load(h)
     fid = "fiche-" + slug
     assert f["qcm"]["juste"] in [l for l, _ in f["qcm"]["options"]], "réponse juste absente des options"
-    situation = "".join(f"<p>{ty(p)}</p>" for p in f["situation"])
+    def heures(t):  # « 18 h 40 », « 17 h » : en étiquettes, ce sont elles qui décident souvent de la réponse
+        return re.sub(r"\b(\d{1,2} h(?: \d{2})?)\b", r'<span class="heure">\1</span>', t)
+    situation = ""
+    for p in f["situation"]:
+        m = re.match(r"^(.*?)\s*:\s*(«.*»)$", p)   # réplique finale entre guillemets : dans une bulle
+        situation += (f'<p>{heures(ty(m.group(1) + " :"))}</p><p class="bulle">{ty(m.group(2))}</p>' if m else f"<p>{heures(ty(p))}</p>")
+    pin = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>'
     options = "".join(f'<label><input type="radio" name="{fid}-qcm" value="{l}"><span><b>{l}.</b> {ty(t)}<span class="verdict"></span></span></label>' for l, t in f["qcm"]["options"])
     corrige_qcm = "".join(f"<p>{ty(p)}</p>" for p in f["qcm"]["corrige"])
     schema = schema_frise_attente(f["schema"], fid + "-frise") if f.get("schema", {}).get("type") == "frise-attente" else ""
@@ -527,7 +533,10 @@ def fiche_entrainement(slug, racine=""):
       <p class="fiche-tete"><span class="fiche-code">{f["code"]}</span> {ty("Épreuve " + f["epreuve"] + ", " + f["epreuve_nom"].lower() + ", page " + str(f["page"]) + " du livre")}</p>
       <h3 id="{fid}-titre">{ty(f["titre"])}</h3>
 
-      <div class="fiche-bloc fiche-situation"><h4>Situation</h4>{situation}</div>
+      <div class="bon-course">
+        <div class="bon-tete"><h4>{pin}Situation</h4><span class="bon-ref">{ty("Fiche " + f["code"] + ", page " + str(f["page"]))}</span></div>
+        <div class="bon-corps">{situation}</div>
+      </div>
 
       <fieldset class="fiche-bloc" data-js hidden><legend>{ty("Avant de répondre : ma confiance")}</legend>
         <div class="choix en-ligne"><label><input type="radio" name="{fid}-conf" value="sur"><span>Sûr</span></label><label><input type="radio" name="{fid}-conf" value="hesitant"><span>Hésitant</span></label><label><input type="radio" name="{fid}-conf" value="hasard"><span>Au hasard</span></label></div>

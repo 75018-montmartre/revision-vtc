@@ -6,6 +6,14 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 7 novembre 2026, 22 h 30 · Encadrés « À retenir » en panneau, situation des fiches en bon de course
+
+- Tout le site : les encadrés « À retenir » (FAQ VTC, guides, Actualité VTC, fiches) deviennent un panneau jaune à double filet bleu nuit, titre en onglet. Texte inchangé.
+- https://revision-vtc.fr/le-livre.html : la situation de la fiche A3.4 passe en « bon de course » clair (en-tête gris, horaires en étiquettes, réplique dans une bulle) ; fin de la barre noire à gauche.
+- Vérifié : axe sans nouvelle erreur en clair et en sombre à 320 et 1 366 px (page du livre, une question, un guide, une Actualité) ; aucun débordement.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 7 novembre 2026, 22 h 10 · Nouvelle barre de navigation, boutons à flèche, corrections de la page du livre
 
 - Tout le site : nouvelle barre de navigation d'après la maquette « propal » (fond blanc, nom en capitales condensées, liens sobres soulignés de jaune, « Le livre » en bouton à contour avec flèche ↗). Libellés inchangés. En-tête toujours collé en haut, jauge de lecture et menu défilant sur téléphone conservés.

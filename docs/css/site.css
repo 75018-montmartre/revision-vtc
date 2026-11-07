@@ -546,13 +546,12 @@ html.avec-barre body{padding-bottom:5.5rem}
 .corps-page .fiche-essai h3{margin:0;font-size:1.875rem}
 .fiche-essai h4{margin:0 0 var(--e2);font-family:var(--sans);font-size:1rem;font-weight:700;line-height:1.4}
 .fiche-etiquette{display:inline-block;margin-right:var(--e2);font-family:var(--sans);font-size:.875rem;font-weight:700;color:var(--gris)}
-.fiche-situation{padding:var(--e4) var(--e5);background:var(--doux);border-left:5px solid var(--encre);border-radius:var(--rayon-p)}
-.fiche-situation p,.fiche-corrige p,.fiche-essai .note p,.fiche-essai .retenir p{margin:0 0 var(--e3)}
-.fiche-situation p:last-child,.fiche-essai .note p:last-child,.fiche-essai .retenir p:last-child{margin-bottom:0}
+.bon-corps p,.fiche-corrige p,.fiche-essai .note p,.fiche-essai .retenir p{margin:0 0 var(--e3)}
+.bon-corps p:last-child,.fiche-essai .note p:last-child,.fiche-essai .retenir p:last-child{margin-bottom:0}
 .fiche-corrige{padding-top:var(--e4);border-top:1px solid var(--filet)}
 .fiche-corrige > :last-child{margin-bottom:0}
-.fiche-essai .retenir,.fiche-essai .note{margin:0 0 var(--e4)}
-.fiche-essai .retenir{padding-top:var(--e4)}
+.fiche-essai .note{margin:0 0 var(--e4)}
+.fiche-essai .retenir{margin:var(--e5) 0 var(--e5)}
 .fiche-verdict{font:700 1.375rem/1.2 var(--cond)}
 .fiche-js [data-etape]:not(.ouvert){display:none}
 .fiche-essai .verdict:not(:empty){display:block;margin-top:var(--e1);font-weight:700;font-size:.9375rem}
@@ -573,6 +572,15 @@ html.avec-barre body{padding-bottom:5.5rem}
 p.fiche-sources{margin:0 0 var(--e1)}
 ul.fiche-sources{margin:0;padding-left:1.25rem}
 @media (max-width:36rem){.fiche-essai{padding:var(--e4)}.fiche-revisions{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* situation d'une fiche : « bon de course » clair (en-tête gris, filet), horaires en étiquettes, réplique en bulle */
+.bon-course{background:var(--carte);border:1px solid var(--filet);border-radius:8px;overflow:hidden}
+.bon-tete{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--e1) var(--e4);padding:.65rem 1.25rem;background:var(--doux);border-bottom:1px solid var(--filet)}
+.fiche-essai .bon-tete h4{display:flex;align-items:center;gap:.55rem;margin:0;font-size:.8125rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.bon-tete svg{width:18px;height:18px;flex:none;color:var(--rouge)}
+.bon-ref{font-family:var(--sans);font-size:.875rem;color:var(--gris)}
+.bon-corps{padding:var(--e4) 1.25rem}
+.heure{display:inline-block;padding:0 .4rem;border:1px solid var(--filet);border-radius:4px;background:var(--doux);font-family:var(--cond);font-weight:700;font-size:1.125rem;line-height:1.35;font-variant-numeric:tabular-nums;white-space:nowrap}
+.bon-corps .bulle{display:table;padding:.55rem .9rem;border:1px solid var(--filet);border-radius:12px 12px 12px 2px;background:var(--doux);font-family:var(--sans);font-weight:600}
 /* schémas des règles (infographies en SVG dessinées par le générateur) : couleurs des jetons, lisibles en clair et en sombre ;
    l'interdit est hachuré et le permis à plat, pour ne pas reposer sur la couleur seule ; trop étroit, le schéma défile */
 .schema{margin:var(--e4) 0;padding:var(--e4);border:1px solid var(--filet);border-radius:var(--rayon);background:var(--carte)}
@@ -915,3 +923,14 @@ a.carte-hero:hover .carte-lien{text-decoration-thickness:2px}
 .bouton.second:hover,.menu-livre:hover{background:var(--carte);color:var(--encre);border-color:var(--encre)}
 .menu-livre[aria-current="page"]{border-color:var(--encre);background:var(--doux)}
 @media (prefers-reduced-motion: reduce){.bouton::after,.menu-livre::after{transition:none}}
+/* « À retenir » : panneau jaune à double filet, comme un panneau routier, titre en onglet (depuis le 7 novembre 2026) */
+.retenir{position:relative;margin:var(--e7) 0 var(--e6);padding:1.5rem 1.4rem 1.2rem;background:var(--jaune);color:var(--nuit);border:2px solid var(--nuit);border-radius:8px;box-shadow:inset 0 0 0 4px var(--jaune),inset 0 0 0 6px var(--nuit)}
+.retenir h2,.retenir h3,.retenir h4,.corps-page .retenir h2{position:absolute;top:-.85rem;left:1rem;margin:0;padding:.2rem .65rem;background:var(--nuit);color:var(--jaune);border-radius:4px;font-family:var(--sans);font-size:.75rem;font-weight:700;line-height:1.4;letter-spacing:.14em;text-transform:uppercase}
+.retenir p{font-family:var(--cond);font-weight:700;font-size:1.375rem;line-height:1.25}
+.retenir ul{margin:0;padding-left:1.25rem;font-family:var(--sans);font-weight:600;font-size:1.0625rem;line-height:1.45}
+.retenir li{margin:0 0 var(--e2)}
+.retenir li:last-child{margin-bottom:0}
+.retenir li::marker{color:var(--nuit)}
+.retenir a{color:var(--nuit);text-decoration-thickness:2px}
+@media (max-width:36rem){.retenir{padding:1.4rem 1.1rem 1.1rem}}
+@media print{.retenir{box-shadow:none}}
