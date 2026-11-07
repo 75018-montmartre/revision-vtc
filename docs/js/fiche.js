@@ -1,7 +1,8 @@
-/* revision-vtc.fr : fiches d'entraînement tirées du livre (page du livre ; bientôt la rubrique « S'entraîner »).
+/* revision-vtc.fr : fiches d'entraînement tirées du livre (rubrique QCM VTC et page du livre).
    Sans ce script, la fiche et tout son corrigé restent lisibles (et indexés par les moteurs).
-   Avec lui, la fiche se joue comme dans le livre : confiance, QCM corrigé au clic, réponse rédigée comparée
-   au corrigé type (l'élève compte ses points), puis bilan et dates de révision J+1, J+3, J+7, J+21.
+   Avec lui, la fiche se joue comme dans le livre : confiance, un ou plusieurs QCM corrigés au clic,
+   réponse rédigée comparée au corrigé type (l'élève compte ses points) quand la fiche en a une,
+   puis bilan et dates de révision J+1, J+3, J+7, J+21.
    « Pour aller plus loin » décale la frise horaire du corrigé (schéma « frise-attente »).
    Rien n'est enregistré : la fiche repart de zéro à chaque visite. */
 (function () {
@@ -13,12 +14,15 @@
     return d.toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" });
   }
   var CONF = { sur: "sûr", hesitant: "hésitant", hasard: "au hasard" };
+  var reduit = function () { return matchMedia("(prefers-reduced-motion: reduce)").matches; };
 
   document.querySelectorAll(".fiche-essai").forEach(function (fiche) {
-    var juste = fiche.dataset.juste, code = fiche.dataset.code, etat = { qcm: null, conf: null, pts: 0 };
+    var code = fiche.dataset.code, etat = { conf: null, rep: {}, pts: 0 };
     var q = function (sel) { return fiche.querySelector(sel); };
     var ouvrir = function (nom) { var e = q('[data-etape="' + nom + '"]'); if (e) e.classList.add("ouvert"); return e; };
-    var amener = function (el) { if (!el) return; el.setAttribute("tabindex", "-1"); el.focus({ preventScroll: true }); el.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }); };
+    var amener = function (el) { if (!el) return; el.setAttribute("tabindex", "-1"); el.focus({ preventScroll: true }); el.scrollIntoView({ behavior: reduit() ? "auto" : "smooth", block: "start" }); };
+    var groupes = fiche.querySelectorAll("fieldset[data-qcm]");
+    var aQrc = !!q('[data-etape="qrc"]');
 
     fiche.classList.add("fiche-js");
     fiche.querySelectorAll("[data-js]").forEach(function (e) { e.hidden = false; });
@@ -28,28 +32,31 @@
       r.addEventListener("change", function () { etat.conf = r.value; });
     });
 
-    var options = fiche.querySelectorAll('input[name$="-qcm"]');
-    options.forEach(function (r) {
-      r.addEventListener("change", function () {
-        if (etat.qcm) return;
-        etat.qcm = r.value;
-        options.forEach(function (o) {
-          var lab = o.closest("label"), v = lab.querySelector(".verdict");
-          o.disabled = true;
-          if (o.value === juste) { lab.classList.add("rep", "juste"); v.textContent = o === r ? "Votre réponse : juste" : "La bonne réponse"; }
-          else if (o === r) { lab.classList.add("rep", "faux"); v.textContent = "Votre réponse : fausse"; }
+    groupes.forEach(function (g) {
+      var i = g.dataset.qcm, juste = g.dataset.juste, options = g.querySelectorAll('input[type="radio"]');
+      options.forEach(function (r) {
+        r.addEventListener("change", function () {
+          if (etat.rep[i]) return;
+          etat.rep[i] = r.value;
+          options.forEach(function (o) {
+            var lab = o.closest("label"), v = lab.querySelector(".verdict");
+            o.disabled = true;
+            if (o.value === juste) { lab.classList.add("rep", "juste"); v.textContent = o === r ? "Votre réponse : juste" : "La bonne réponse"; }
+            else if (o === r) { lab.classList.add("rep", "faux"); v.textContent = "Votre réponse : fausse"; }
+          });
+          var bloc = ouvrir("qcm-" + i), verdict = bloc.querySelector('[data-role="verdict"]');
+          verdict.textContent = (r.value === juste ? "Juste. " : "Pas cette fois. ") + verdict.textContent.replace(/^(Juste|Pas cette fois)\. /, "");
+          if (Object.keys(etat.rep).length === groupes.length) ouvrir(aQrc ? "qrc-question" : "suite");
+          amener(verdict);
         });
-        var verdict = q('[data-role="verdict"]');
-        verdict.textContent = (r.value === juste ? "Juste. " : "Pas cette fois. ") + "Réponse " + juste;
-        ouvrir("qcm"); ouvrir("qrc-question");
-        amener(verdict);
       });
     });
 
     var cases = fiche.querySelectorAll('input[name$="-pt"]'), score = q('[data-role="score"]');
     cases.forEach(function (c) {
       c.addEventListener("change", function () {
-        etat.pts = Array.prototype.filter.call(cases, function (x) { return x.checked; }).length;
+        etat.pts = 0;
+        cases.forEach(function (x) { if (x.checked) etat.pts += +(x.dataset.valeur || 1); });
         score.textContent = etat.pts;
       });
     });
@@ -60,13 +67,19 @@
       if (action === "qrc") { amener(ouvrir("qrc").querySelector(".fiche-verdict")); }
       if (action === "bilan") {
         ouvrir("bilan");
-        var nb = cases.length, ok = etat.qcm === juste, conseil;
-        q('[data-role="resume"]').textContent = "QCM : " + (ok ? "juste" : "faux") + ". Réponse rédigée : " + etat.pts + " / " + nb + ". Confiance : " + (etat.conf ? CONF[etat.conf] : "non indiquée") + ".";
-        if (ok && etat.conf === "sur" && etat.pts === nb) conseil = "Règle acquise. Les révisions espacées servent à la garder jusqu'au jour de l'examen.";
-        else if (!ok && etat.conf === "sur") conseil = "Vous étiez sûr, et c'était faux : c'est la fiche à revoir en priorité, car ce genre d'erreur se répète le jour de l'examen.";
-        else if (ok && etat.conf !== "sur") conseil = "Bonne réponse, mais sans certitude : relisez la règle à retenir jusqu'à ce qu'elle devienne un réflexe.";
-        else if (etat.pts < nb) conseil = "Il manque un élément à votre réponse rédigée : à l'examen, chaque élément de la règle rapporte un point.";
-        else conseil = "Relisez le corrigé du QCM et la règle à retenir, puis refaites la fiche demain.";
+        var nbQ = groupes.length, justes = 0;
+        groupes.forEach(function (g) { if (etat.rep[g.dataset.qcm] === g.dataset.juste) justes++; });
+        var tousJustes = justes === nbQ, total = aQrc ? +q('[data-etape="qrc"]').dataset.total : 0, qrcOk = !aQrc || etat.pts === total;
+        var resume = (nbQ > 1 ? "QCM : " + justes + " sur " + nbQ + " justes." : "QCM : " + (tousJustes ? "juste." : "faux."));
+        if (aQrc) resume += " Réponse rédigée : " + etat.pts + " / " + total + ".";
+        resume += " Confiance : " + (etat.conf ? CONF[etat.conf] : "non indiquée") + ".";
+        q('[data-role="resume"]').textContent = resume;
+        var conseil;
+        if (tousJustes && etat.conf === "sur" && qrcOk) conseil = "Règle acquise. Les révisions espacées servent à la garder jusqu'au jour de l'examen.";
+        else if (!tousJustes && etat.conf === "sur") conseil = "Vous étiez sûr, et ce n'était pas juste : c'est la fiche à revoir en priorité, car ce genre d'erreur se répète le jour de l'examen.";
+        else if (tousJustes && etat.conf !== "sur") conseil = "Bonne réponse, mais sans certitude : relisez la règle à retenir jusqu'à ce qu'elle devienne un réflexe.";
+        else if (!qrcOk) conseil = "Il manque un élément à votre réponse rédigée : à l'examen, chaque élément de la règle rapporte des points.";
+        else conseil = "Relisez le corrigé et la règle à retenir, puis refaites la fiche demain.";
         q('[data-role="conseil"]').textContent = conseil;
         var ul = q('[data-role="revisions"]'); ul.textContent = "";
         [1, 3, 7, 21].forEach(function (n) {

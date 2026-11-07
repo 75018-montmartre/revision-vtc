@@ -1,0 +1,84 @@
+{
+ "code": "C6.1",
+ "titre": "Protéger, alerter, secourir",
+ "epreuve": "C",
+ "epreuve_nom": "Sécurité routière",
+ "page": 238,
+ "page_corrige": 240,
+ "situation": [
+  "De nuit, sur une départementale, Inès arrive la première sur un accident : une voiture dans le fossé, un conducteur blessé qui parle à peine. Elle a un client à bord."
+ ],
+ "retenir": "Protéger (détresse, gilet, abri, balisage), alerter (112 ou 15), secourir sans déplacer le blessé, sauf danger.",
+ "qcm": [
+  {
+   "question": "Que fait Inès en premier ?",
+   "options": [
+    [
+     "A",
+     "Elle sort aussitôt le blessé de sa voiture."
+    ],
+    [
+     "B",
+     "Elle protège : feux de détresse, gilet, client à l’abri."
+    ],
+    [
+     "C",
+     "Elle prévient d’abord sa plateforme."
+    ],
+    [
+     "D",
+     "Elle continue sa route : son client attend."
+    ]
+   ],
+   "juste": "B",
+   "corrige": [
+    "L’ordre est : protéger, alerter, secourir. Protéger d’abord, pour éviter un suraccident : feux de détresse, gilet, client et témoins à l’abri hors de la chaussée, balisage (B). On ne déplace pas un blessé, sauf danger immédiat comme un incendie (A est faux). Passer son chemin quand on peut aider sans risque, c’est la non-assistance à personne en danger (D est faux)."
+   ]
+  },
+  {
+   "question": "Pour alerter les secours, elle compose :",
+   "options": [
+    [
+     "A",
+     "le 3919 (écoute)"
+    ],
+    [
+     "B",
+     "le 3237 (pharmacies)"
+    ],
+    [
+     "C",
+     "le 115 (hébergement)"
+    ],
+    [
+     "D",
+     "le 112 ou le 15"
+    ]
+   ],
+   "juste": "D",
+   "corrige": [
+    "Le 112, numéro d’urgence européen, ou le 15 pour le SAMU ; le 17 pour la police, le 18 pour les pompiers (D). On donne le lieu précis, le nombre de blessés et leur état, et on ne raccroche que lorsque l’opérateur le dit."
+   ]
+  }
+ ],
+ "piege": "Sortir un blessé de sa voiture par réflexe. On ne le déplace qu’en cas de danger immédiat.",
+ "plus_loin": {
+  "question": "Le blessé ne répond plus mais respire. Que faire en attendant les secours ?",
+  "reponse": "Le placer en position latérale de sécurité et surveiller sa respiration ; un motard garde son casque."
+ },
+ "sources": [
+  [
+   "Code pénal, art. 223-6 (non-assistance à personne en danger)",
+   ""
+  ],
+  [
+   "Code de la route, art. R416-19 (gilet et triangle)",
+   ""
+  ]
+ ],
+ "verifie": "octobre 2026",
+ "url": "c6-1-proteger-alerter-secourir",
+ "titre_page": "QCM VTC : accident, protéger, alerter, secourir (fiche C6.1)",
+ "description": "QCM VTC : accident, protéger, alerter, secourir. Épreuve C : une situation, deux QCM, avec le corrigé sourcé.",
+ "liens": []
+}

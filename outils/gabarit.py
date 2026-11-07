@@ -16,12 +16,12 @@ def achat(classe="bouton achat", texte="Acheter le livre sur Amazon"):
 # (depuis le 7 novembre 2026, un lien direct vers la page de présentation du livre, plus un menu déroulant) ;
 # les pages des lecteurs (mises à jour, examens n° 4 et 5) sont reliées depuis cette page et depuis le pied de page (PIED_LIVRE).
 # L'accueil n'est plus dans le menu : le logo y mène (et le fil d'Ariane de chaque page).
-NAV = [("simulateurs/index.html", "Simulateurs", "simulateurs"), ("wiki/index.html", "Réglementation VTC", "textes"), ("questions/index.html", "FAQ VTC", "questions"),
+NAV = [("simulateurs/index.html", "Simulateurs", "simulateurs"), ("qcm/index.html", "QCM VTC", "qcm"), ("wiki/index.html", "Réglementation VTC", "textes"), ("questions/index.html", "FAQ VTC", "questions"),
        ("dossiers/index.html", "Guides VTC", "dossiers"), ("actualite/index.html", "Actualité VTC", "actualite")]
 PIED_LIVRE = [("le-livre.html", "Le livre"), ("mises-a-jour.html", "Mises à jour du livre"), ("examens.html", "Examens blancs n° 4 et 5")]
 
 
-SURTITRES = {"actualite": "Chaque lundi", "questions": "Réponses sourcées", "dossiers": "Guides pratiques", "simulateurs": "Simulateur gratuit", "textes": "Textes officiels expliqués",
+SURTITRES = {"qcm": "Entraînement gratuit", "actualite": "Chaque lundi", "questions": "Réponses sourcées", "dossiers": "Guides pratiques", "simulateurs": "Simulateur gratuit", "textes": "Textes officiels expliqués",
              "maj": "Le livre", "livre": "Le livre", "examens": "Réservé aux lecteurs"}
 
 
@@ -47,7 +47,7 @@ def _tete_page(corps, actif, racine):
         avant = avant.replace("<ol>", "<ol>" + accueil, 1)
     if 'class="deux-col"' in apres:
         mp = "mp-cote"
-    elif any(c in apres for c in ('class="wiki-theme"', 'class="questions', 'class="numeros"', 'class="dossiers')):
+    elif any(c in apres for c in ('class="wiki-theme"', 'class="questions', 'class="numeros"', 'class="dossiers', 'class="page-fiche"')):
         mp = "mp-grille"
     else:
         mp = "mp-colonne"

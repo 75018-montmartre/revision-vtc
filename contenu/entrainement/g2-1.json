@@ -1,0 +1,101 @@
+{
+ "code": "G2.1",
+ "titre": "Taille et puissance : lire la carte grise",
+ "epreuve": "G",
+ "epreuve_nom": "Réglementation nationale des VTC",
+ "page": 155,
+ "page_corrige": 161,
+ "situation": [
+  "Kevin veut acheter une berline thermique d’occasion pour démarrer. L’annonce indique : 4,42 m de long, 1,80 m de large, 4 portes, 5 places, deux ans d’âge.",
+  "Sur la carte grise, il lit 96 kW à la case P.2 et 7 CV à la case P.6. « 96, c’est bon, et 7 chevaux, c’est puissant », se dit-il."
+ ],
+ "qrc": {
+  "question": "Citez les critères de taille et de puissance d’une voiture thermique de VTC, et la case de la carte grise où lire la puissance.",
+  "corrige": [
+   "au moins 4,50 m de long et 1,70 m de large, avec au moins 4 portes ;",
+   "une puissance nette d’au moins 84 kW (environ 114 ch) ;",
+   "la puissance nette se lit à la case P.2 de la carte grise, en kW."
+  ],
+  "bareme": "Un point pour les dimensions, un pour les portes, un pour les 84 kW, un pour la case P.2.",
+  "points": [
+   [
+    "J'ai cité les dimensions : 4,50 m de long et 1,70 m de large",
+    1
+   ],
+   [
+    "J'ai cité les 4 portes",
+    1
+   ],
+   [
+    "J'ai cité les 84 kW de puissance nette",
+    1
+   ],
+   [
+    "J'ai cité la case P.2",
+    1
+   ]
+  ]
+ },
+ "retenir": "Voiture thermique : 4 portes, 4,50 m × 1,70 m et 84 kW nets au moins (case P.2).",
+ "qcm": [
+  {
+   "question": "Cette berline peut-elle servir de VTC ?",
+   "options": [
+    [
+     "A",
+     "Oui : ses 96 kW dépassent largement les 84 kW exigés."
+    ],
+    [
+     "B",
+     "Non : 7 CV fiscaux restent sous le minimum de 84 kW."
+    ],
+    [
+     "C",
+     "Non : avec 4,42 m, elle n’atteint pas les 4,50 m exigés."
+    ],
+    [
+     "D",
+     "Oui : la longueur ne compte qu’à partir de sept places."
+    ]
+   ],
+   "juste": "C",
+   "corrige": [
+    "Une voiture thermique de VTC doit remplir toutes les conditions à la fois : au moins 4 portes, 4,50 m de long, 1,70 m de large et une puissance nette d’au moins 84 kW. La puissance de 96 kW suffit, mais la longueur manque : la berline est refusée (A est faux). Aucune exception ne dépend du nombre de places (D est faux).",
+    "Les 7 CV de la case P.6 sont des chevaux fiscaux, qui servent à calculer le prix de la carte grise : ils ne se comparent pas aux kW (B est faux). La puissance nette se lit à la case P.2."
+   ]
+  }
+ ],
+ "piege": "Comparer les 84 kW aux chevaux fiscaux de la case P.6. Seule la case P.2, en kW, compte.",
+ "plus_loin": {
+  "question": "Kevin trouve la même berline en version longue (4,60 m) mais avec 81 kW. Convient-elle ?",
+  "reponse": "Non : les deux conditions sont exigées à la fois. Il manque 3 kW pour atteindre les 84 kW."
+ },
+ "sources": [
+  [
+   "Arrêté du 26 mars 2015 sur les caractéristiques des véhicules de VTC",
+   ""
+  ],
+  [
+   "Bpifrance Création, fiche VTC",
+   ""
+  ],
+  [
+   "Matmut, « Savoir lire un certificat d’immatriculation »",
+   ""
+  ]
+ ],
+ "verifie": "octobre 2026",
+ "url": "g2-1-taille-puissance-lire-carte-grise",
+ "titre_page": "QCM VTC : taille et puissance de la voiture VTC (fiche G2.1)",
+ "description": "QCM VTC : taille et puissance de la voiture VTC. Épreuve G : une situation, un QCM et une réponse à rédiger, avec le corrigé sourcé.",
+ "liens": [
+  [
+   "",
+   "wiki/arrete-26-mars-2015-vehicules.html"
+  ],
+  [
+   "",
+   "questions/2026-10-31-voitures-hybrides-vtc-moins-cheres.html"
+  ]
+ ]
+}

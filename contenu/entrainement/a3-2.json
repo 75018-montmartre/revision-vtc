@@ -1,0 +1,100 @@
+{
+ "code": "A3.2",
+ "titre": "La maraude, réservée au taxi",
+ "epreuve": "A",
+ "epreuve_nom": "Réglementation du transport public particulier de personnes",
+ "page": 64,
+ "page_corrige": 71,
+ "situation": [
+  "Il est 2 heures du matin, et Nora, chauffeur VTC à Lille, n’a plus de course. Plutôt que de rentrer, elle tourne lentement dans les rues animées du centre, l’application ouverte, en espérant une réservation ou un passant qui lui ferait signe.",
+  "Une patrouille l’arrête : « Vous cherchez des clients ? »"
+ ],
+ "qrc": {
+  "question": "Quelle différence de sanction y a-t-il entre circuler en quête de clients et prendre en charge un client sans réservation ?",
+  "corrige": [
+   "circuler, s’arrêter ou stationner en quête de clients : contravention de 5e classe, jusqu’à 1 500 € d’amende ;",
+   "prendre en charge un client sans réservation : délit, jugé par le tribunal correctionnel, avec des peines complémentaires (suspension du permis, immobilisation du véhicule)."
+  ],
+  "bareme": "Un point par sanction juste.",
+  "points": [
+   [
+    "J'ai donné la sanction de la recherche de clients : contravention de 5e classe",
+    1
+   ],
+   [
+    "J'ai donné la sanction de la prise en charge sans réservation : un délit",
+    1
+   ]
+  ]
+ },
+ "retenir": "La maraude est réservée au taxi. Le VTC ne circule, ne s’arrête et ne stationne jamais sur la voie publique pour trouver des clients.",
+ "qcm": [
+  {
+   "question": "Que reproche-t-on à Nora ?",
+   "options": [
+    [
+     "A",
+     "De circuler en quête de clients, interdit au VTC."
+    ],
+    [
+     "B",
+     "Rien, tant qu’elle n’a pris personne."
+    ],
+    [
+     "C",
+     "D’avoir laissé l’application ouverte la nuit."
+    ],
+    [
+     "D",
+     "De rouler trop lentement en centre-ville."
+    ]
+   ],
+   "juste": "A",
+   "corrige": [
+    "Seul le taxi, titulaire d’une autorisation de stationnement, peut chercher ses clients dans la rue : c’est la maraude. Au VTC, la loi interdit de s’arrêter, de stationner ou de circuler sur la voie publique en quête de clients, même sans en avoir pris aucun (B est faux).",
+    "Avoir l’application ouverte n’est pas interdit en soi (C est faux) ; c’est le fait de tourner pour trouver des clients qui l’est. Nora aurait dû retourner à sa base ou dans un parking hors de la chaussée. Si elle avait pris un passant, elle aurait commis un délit, beaucoup plus grave."
+   ]
+  }
+ ],
+ "piege": "Penser qu’on ne risque rien tant qu’on n’a pris personne. Chercher le client est déjà une infraction.",
+ "plus_loin": {
+  "question": "Pourquoi la loi interdit-elle la maraude au VTC et pas au taxi ?",
+  "reponse": "Parce que le taxi exerce sous une autorisation de stationnement délivrée par l’autorité publique et à des tarifs fixés par l’État : en contrepartie, il a l’usage de la voie publique pour trouver ses clients. Le VTC, lui, vend ses courses à l’avance."
+ },
+ "sources": [
+  [
+   "Code des transports, art. L3120-2, II",
+   "wiki/l3120-2.html"
+  ],
+  [
+   "Code des transports, art. R3124-11 et L3124-12",
+   "wiki/r3124-11.html"
+  ],
+  [
+   "Sénat, réponse ministérielle du 22 mai 2025 (question n° 03905)",
+   ""
+  ]
+ ],
+ "verifie": "octobre 2026",
+ "url": "a3-2-maraude-reservee-taxi",
+ "titre_page": "QCM VTC : la maraude, interdite au VTC (fiche A3.2)",
+ "description": "QCM VTC : la maraude, interdite au VTC. Épreuve A : une situation, un QCM et une réponse à rédiger, avec le corrigé sourcé.",
+ "liens": [
+  [
+   "",
+   "wiki/l3120-2.html"
+  ],
+  [
+   "",
+   "wiki/r3124-11.html"
+  ],
+  [
+   "",
+   "wiki/l3124-12.html"
+  ],
+  [
+   "",
+   "dossiers/taxi-ou-vtc-differences.html"
+  ]
+ ]
+}

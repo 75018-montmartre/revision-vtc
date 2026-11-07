@@ -1,0 +1,96 @@
+{
+ "code": "G3.1",
+ "titre": "Les deux vignettes : où, quoi, comment",
+ "epreuve": "G",
+ "epreuve_nom": "Réglementation nationale des VTC",
+ "page": 167,
+ "page_corrige": 170,
+ "situation": [
+  "Hugo, exploitant inscrit au registre, reçoit les vignettes définitives de sa berline, envoyées par l’Imprimerie nationale.",
+  "Il a une idée : les poser sur des supports à ventouse, pour pouvoir les passer sur sa seconde voiture, non déclarée, les jours de forte demande."
+ ],
+ "qrc": {
+  "question": "Citez les quatre informations portées par chaque vignette, et dites à quoi elles servent.",
+  "corrige": [
+   "le numéro d’inscription de l’exploitant au registre et l’immatriculation du véhicule ;",
+   "un code-barres en deux dimensions et le numéro de référence de la vignette ;",
+   "elles permettent aux agents de vérifier que la voiture est un VTC validé, pour cet exploitant."
+  ],
+  "bareme": "Un point par paire d’informations, deux points pour leur utilité.",
+  "points": [
+   [
+    "J'ai cité le numéro d'inscription au registre et l'immatriculation",
+    1
+   ],
+   [
+    "J'ai cité le code-barres en deux dimensions et le numéro de référence",
+    1
+   ],
+   [
+    "J'ai dit à quoi elles servent",
+    2
+   ]
+  ]
+ },
+ "retenir": "Deux vignettes collées de manière inamovible : bas gauche du pare-brise, bas droit de la lunette arrière ; une paire par véhicule validé.",
+ "qcm": [
+  {
+   "question": "Que doit faire Hugo ?",
+   "options": [
+    [
+     "A",
+     "Les placer où il veut, pourvu qu’elles restent visibles de l’extérieur."
+    ],
+    [
+     "B",
+     "Les coller à demeure : bas gauche du pare-brise, bas droit de la lunette."
+    ],
+    [
+     "C",
+     "En coller une sur chaque portière avant, côté trottoir et côté route."
+    ],
+    [
+     "D",
+     "Garder les ventouses, mais seulement sur le pare-brise avant."
+    ]
+   ],
+   "juste": "B",
+   "corrige": [
+    "Les deux vignettes se collent en bas à gauche du pare-brise, côté conducteur, et en bas à droite de la lunette arrière (A et C sont faux). Depuis l’arrêté du 24 juillet 2025, elles sont « collées de manière inamovible » : un support à ventouse ne convient pas (D est faux). Elles sont délivrées pour chaque véhicule validé au registre et portent son immatriculation : elles ne passent pas d’une voiture à l’autre. Rouler sans vignette réglementaire est une contravention de 4e classe (voir A5)."
+   ]
+  }
+ ],
+ "piege": "Croire que la vignette suit le chauffeur. Elle suit le véhicule validé, et reste collée dessus.",
+ "plus_loin": {
+  "question": "Hugo attend ses vignettes définitives. Peut-il travailler en attendant ?",
+  "reponse": "Oui, avec la vignette temporaire, imprimée sur papier et posée en bas à gauche du pare-brise. Elle vaut 30 jours ouvrés au plus."
+ },
+ "sources": [
+  [
+   "Arrêté du 6 avril 2017 sur la signalétique des VTC (art. 1, 2, 4 et annexe)",
+   ""
+  ],
+  [
+   "Arrêté du 24 juillet 2025 modifiant l’article 4",
+   ""
+  ],
+  [
+   "Code des transports, art. R3122-8 et R3124-6",
+   "wiki/r3122-8.html"
+  ]
+ ],
+ "verifie": "octobre 2026",
+ "url": "g3-1-deux-vignettes-ou-quoi-comment",
+ "titre_page": "QCM VTC : les vignettes VTC, où et comment les coller (fiche G3.1)",
+ "description": "QCM VTC : les vignettes VTC, où et comment les coller. Épreuve G : une situation, un QCM et une réponse à rédiger, avec le corrigé sourcé.",
+ "liens": [
+  [
+   "",
+   "questions/2026-11-03-vignette-vtc-ou-la-coller.html"
+  ],
+  [
+   "",
+   "wiki/arrete-6-avril-2017-signaletique.html"
+  ]
+ ]
+}

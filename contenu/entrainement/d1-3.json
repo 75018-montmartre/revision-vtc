@@ -1,0 +1,83 @@
+{
+ "code": "D1.3",
+ "titre": "Les pièges des QCM de compréhension",
+ "epreuve": "D",
+ "epreuve_nom": "Français",
+ "page": 385,
+ "page_corrige": 388,
+ "situation": [
+  "Dans un texte sur les voitures électriques, Chloé lit : « Les chauffeurs apprécient leur silence et leur faible coût d’entretien. Pourtant, beaucoup hésitent encore à en acheter une, car l’autonomie les inquiète sur les longs trajets. »",
+  "La question lui demande ce qu’exprime le mot « pourtant » dans la deuxième phrase."
+ ],
+ "qrc": {
+  "question": "Dans la même phrase, quelles idées le mot « car » relie-t-il ? Répondez par une phrase.",
+  "corrige": [
+   "« Car » introduit la cause : beaucoup de chauffeurs hésitent parce que l’autonomie des voitures électriques les inquiète sur les longs trajets."
+  ],
+  "bareme": "Un point pour « la cause », un point pour la phrase qui relie les deux idées.",
+  "points": [
+   [
+    "J'ai écrit que « car » introduit la cause",
+    1
+   ],
+   [
+    "J'ai répondu par une phrase qui relie les deux idées",
+    1
+   ]
+  ]
+ },
+ "retenir": "Repérer les connecteurs : cause (car), conséquence (donc), opposition (pourtant), concession (même si), but (afin de).",
+ "qcm": [
+  {
+   "question": "Dans ce passage, « pourtant » introduit :",
+   "options": [
+    [
+     "A",
+     "une cause"
+    ],
+    [
+     "B",
+     "une conséquence"
+    ],
+    [
+     "C",
+     "un exemple"
+    ],
+    [
+     "D",
+     "une opposition"
+    ]
+   ],
+   "juste": "D",
+   "corrige": [
+    "« Pourtant » oppose deux idées : les chauffeurs apprécient ces voitures, et cependant ils hésitent à en acheter une. Il marque une opposition (D), comme « mais », « cependant » ou « toutefois ».",
+    "La cause s’annonce par « car », « parce que » ou « puisque » (A est faux) ; la conséquence par « donc » ou « c’est pourquoi » (B est faux) ; l’exemple par « par exemple » ou « notamment » (C est faux)."
+   ]
+  }
+ ],
+ "piege": "Lire « pourtant » comme « donc ». Pourtant, cependant, toutefois : ce qui suit va contre ce qui précède.",
+ "plus_loin": {
+  "question": "« Même si des aides existent » : cause, opposition ou concession ?",
+  "reponse": "Concession : on admet un fait, les aides, qui n’empêche pas l’idée principale, le coût."
+ },
+ "sources": [
+  [
+   "Dictionnaire de l’Académie française, « pourtant », « car »",
+   ""
+  ],
+  [
+   "Règlement de l’examen T3P des CMA : épreuve D, compréhension détaillée",
+   ""
+  ]
+ ],
+ "verifie": "octobre 2026",
+ "url": "d1-3-pieges-qcm-comprehension",
+ "titre_page": "QCM VTC de français : les connecteurs logiques (fiche D1.3)",
+ "description": "QCM VTC de français : les connecteurs logiques. Épreuve D : une situation, un QCM et une réponse à rédiger, avec le corrigé sourcé.",
+ "liens": [
+  [
+   "",
+   "dossiers/reussir-examen-vtc-premier-coup.html"
+  ]
+ ]
+}

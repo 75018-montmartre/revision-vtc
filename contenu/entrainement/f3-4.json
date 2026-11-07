@@ -1,0 +1,79 @@
+{
+ "code": "F3.4",
+ "titre": "Marge, taux de marge, taux de marque",
+ "epreuve": "F",
+ "epreuve_nom": "Développement commercial",
+ "page": 354,
+ "page_corrige": 361,
+ "situation": [
+  "Une course coûte 40 € à Inès, et elle la vend 50 € hors taxes. Un collègue lui affirme qu’elle fait « 25 % de marque » ; sa comptable parle de « 20 % ». Inès veut savoir qui a raison, car ces deux taux tombent souvent à l’examen."
+ ],
+ "qrc": {
+  "question": "Calculez la marge et le taux de marge, et expliquez la différence entre les deux taux.",
+  "corrige": [
+   "marge = 50 € – 40 € = 10 € ; taux de marge = marge ÷ coût de revient = 10 ÷ 40 = 25 % ;",
+   "les deux taux mesurent la même marge, mais l’un sur le coût, l’autre sur le prix de vente HT : le taux de marque est toujours le plus petit des deux."
+  ],
+  "bareme": "Un point pour les calculs, un point pour l’explication.",
+  "points": [
+   [
+    "J'ai fait les calculs : 10 € de marge, 25 % de taux de marge",
+    1
+   ],
+   [
+    "J'ai expliqué la différence entre les deux taux",
+    1
+   ]
+  ]
+ },
+ "retenir": "Marge = prix de vente HT – coût ; taux de marge = marge ÷ coût ; taux de marque = marge ÷ prix de vente HT.",
+ "qcm": [
+  {
+   "question": "Quel est son taux de marque ?",
+   "options": [
+    [
+     "A",
+     "25 %"
+    ],
+    [
+     "B",
+     "10 %"
+    ],
+    [
+     "C",
+     "80 %"
+    ],
+    [
+     "D",
+     "20 %"
+    ]
+   ],
+   "juste": "D",
+   "corrige": [
+    "La marge est la différence entre le prix de vente hors taxes et le coût de revient : 50 € – 40 € = 10 €. Le taux de marque rapporte cette marge au prix de vente HT : 10 ÷ 50 = 20 % (D).",
+    "25 % est le taux de marge, calculé sur le coût (A est faux) ; 10 % confond la marge en euros avec un taux (B est faux) ; 80 % est le coût rapporté au prix (C est faux)."
+   ]
+  }
+ ],
+ "piege": "Confondre les deux taux : marge ÷ coût (taux de marge) et marge ÷ prix de vente HT (taux de marque).",
+ "plus_loin": {
+  "question": "Une marge de 25 % du coût fait-elle toujours 20 % du prix ?",
+  "reponse": "Oui : 0,25 ÷ 1,25 = 0,20, quel que soit le coût."
+ },
+ "sources": [
+  [
+   "Arrêté du 6 avril 2017, programme de l’épreuve F (notion de marge)",
+   ""
+  ]
+ ],
+ "verifie": "octobre 2026",
+ "url": "f3-4-marge-taux-marge-taux-marque",
+ "titre_page": "QCM VTC : taux de marge et taux de marque (fiche F3.4)",
+ "description": "QCM VTC : taux de marge et taux de marque. Épreuve F : une situation, un QCM et une réponse à rédiger, avec le corrigé sourcé.",
+ "liens": [
+  [
+   "",
+   "simulateurs/cout-revient-revenu-net-vtc.html"
+  ]
+ ]
+}

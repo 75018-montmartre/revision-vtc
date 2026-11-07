@@ -1,0 +1,84 @@
+{
+ "code": "F3.1",
+ "titre": "La formule monôme du coût de revient",
+ "epreuve": "F",
+ "epreuve_nom": "Développement commercial",
+ "page": 351,
+ "page_corrige": 360,
+ "situation": [
+  "Sarah travaille avec une clientèle directe, sans plateforme. Sur l’année, ses charges fixes s’élèvent à 18 000 € et ses charges variables (carburant, entretien, péages) à 9 000 €. Elle a parcouru 50 000 km, approches et retours à vide compris.",
+  "Elle veut un chiffre simple pour estimer le coût d’une course."
+ ],
+ "qrc": {
+  "question": "Appliquez ce coût à une course qui fait parcourir 60 km au total, et citez une limite de la formule monôme.",
+  "corrige": [
+   "60 km × 0,54 € = 32,40 € de coût de revient pour cette course ;",
+   "limite : la formule ignore le temps ; une course lente, dans les bouchons ou avec de l’attente, coûte plus que ce que donne le seul kilométrage."
+  ],
+  "bareme": "Un point pour le calcul, un point pour la limite.",
+  "points": [
+   [
+    "J'ai fait le calcul : 32,40 €",
+    1
+   ],
+   [
+    "J'ai cité une limite de la formule",
+    1
+   ]
+  ]
+ },
+ "retenir": "Formule monôme : coût de revient annuel ÷ kilomètres parcourus = coût au kilomètre ; simple, mais elle ignore le temps.",
+ "qcm": [
+  {
+   "question": "Quel est son coût de revient au kilomètre ?",
+   "options": [
+    [
+     "A",
+     "0,36 €"
+    ],
+    [
+     "B",
+     "0,18 €"
+    ],
+    [
+     "C",
+     "0,54 €"
+    ],
+    [
+     "D",
+     "1,85 €"
+    ]
+   ],
+   "juste": "C",
+   "corrige": [
+    "La formule monôme ramène tout le coût de revient à une seule unité, ici le kilomètre. Pas à pas : coût de revient = 18 000 € + 9 000 € = 27 000 € ; coût au kilomètre = 27 000 € ÷ 50 000 km = 0,54 € (C).",
+    "0,36 € ne compte que les charges fixes (A est faux) ; 0,18 € que les charges variables (B est faux) ; 1,85 € inverse la division (D est faux)."
+   ]
+  }
+ ],
+ "piege": "Diviser par d’autres kilomètres que ceux sur lesquels les charges ont été comptées. Ici, tous les kilomètres de l’année.",
+ "plus_loin": {
+  "question": "Sarah ne compte que les 38 000 km faits avec un client. Quel coût par kilomètre en charge ?",
+  "reponse": "27 000 € ÷ 38 000 km ≈ 0,71 €, à appliquer alors aux seuls kilomètres avec le client."
+ },
+ "sources": [
+  [
+   "Arrêté du 6 avril 2017, programme de l’épreuve F (coût de revient en formule simple)",
+   ""
+  ],
+  [
+   "Voir B3.2 dans ce livre",
+   ""
+  ]
+ ],
+ "verifie": "octobre 2026",
+ "url": "f3-1-formule-monome-cout-revient",
+ "titre_page": "QCM VTC : coût au kilomètre, la formule monôme (fiche F3.1)",
+ "description": "QCM VTC : coût au kilomètre, la formule monôme. Épreuve F : une situation, un QCM et une réponse à rédiger, avec le corrigé sourcé.",
+ "liens": [
+  [
+   "",
+   "simulateurs/cout-revient-revenu-net-vtc.html"
+  ]
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "code": "D1.1",
+ "titre": "Lire un texte en quatre étapes",
+ "epreuve": "D",
+ "epreuve_nom": "Français",
+ "page": 383,
+ "page_corrige": 387,
+ "situation": [
+  "Le jour de l’examen, Samir découvre le texte de l’épreuve D. Il commence ainsi :",
+  "« Depuis quelques années, les grandes villes multiplient les zones à faibles émissions. Leur objectif est de réduire la pollution de l’air, responsable de nombreuses maladies respiratoires. Pour les professionnels du transport, ces règles imposent de renouveler plus vite leurs véhicules, ce qui représente un coût important, même si des aides existent. »"
+ ],
+ "qrc": {
+  "question": "Citez, dans l’ordre, les quatre étapes de lecture conseillées pour aborder le texte et ses questions.",
+  "corrige": [
+   "1. Survoler : titre, source, premières lignes des paragraphes, pour savoir de quoi parle le texte ;",
+   "2. Lire les dix questions, pour savoir ce que l’on cherche ;",
+   "3. Lire le texte en entier, crayon en main, en soulignant les passages utiles ;",
+   "4. Répondre en revenant chaque fois à la phrase précise, sans se fier à sa mémoire."
+  ],
+  "bareme": "Un point pour les quatre étapes, un point pour l’ordre.",
+  "points": [
+   [
+    "J'ai cité les quatre étapes",
+    1
+   ],
+   [
+    "Je les ai citées dans l'ordre",
+    1
+   ]
+  ]
+ },
+ "retenir": "Survoler, lire les questions, lire le texte en soulignant, puis répondre en revenant au passage précis.",
+ "qcm": [
+  {
+   "question": "Selon ce passage, pourquoi les professionnels doivent-ils changer plus vite de véhicule ?",
+   "options": [
+    [
+     "A",
+     "Parce que les aides publiques vont bientôt disparaître."
+    ],
+    [
+     "B",
+     "Parce que les clients préfèrent les voitures neuves."
+    ],
+    [
+     "C",
+     "Parce que les règles des zones à faibles émissions l’imposent."
+    ],
+    [
+     "D",
+     "Parce que les chauffeurs souffrent de maladies respiratoires."
+    ]
+   ],
+   "juste": "C",
+   "corrige": [
+    "La troisième phrase le dit : « ces règles imposent de renouveler plus vite leurs véhicules ». « Ces règles », ce sont les zones à faibles émissions de la première phrase (C).",
+    "Le texte dit que des aides existent, pas qu’elles vont disparaître (A est faux). Il ne parle pas des goûts des clients (B est faux). Les maladies respiratoires expliquent l’objectif des zones, pas le changement de véhicule, et le texte ne dit pas que les chauffeurs en souffrent (D est faux)."
+   ]
+  }
+ ],
+ "piege": "Répondre de mémoire après une seule lecture. Chaque réponse se vérifie dans la phrase du texte.",
+ "plus_loin": {
+  "question": "Le texte parle des « grandes villes ». Peut-on répondre qu’il s’agit de Paris et de Lyon ?",
+  "reponse": "Non : le texte ne les nomme pas. On ne répond qu’avec ce que le texte dit."
+ },
+ "sources": [
+  [
+   "Règlement de l’examen T3P des CMA : épreuve D, questions sur un texte de 15 à 20 lignes",
+   ""
+  ],
+  [
+   "Méthode de lecture proposée par ce livre",
+   ""
+  ]
+ ],
+ "verifie": "octobre 2026",
+ "url": "d1-1-lire-texte-quatre-etapes",
+ "titre_page": "QCM VTC de français : lire un texte en quatre étapes (fiche D1.1)",
+ "description": "QCM VTC de français : lire un texte en quatre étapes. Épreuve D : une situation, un QCM et une réponse à rédiger, avec le corrigé sourcé.",
+ "liens": [
+  [
+   "",
+   "dossiers/reussir-examen-vtc-premier-coup.html"
+  ],
+  [
+   "",
+   "simulateurs/calcul-note-examen-vtc.html"
+  ]
+ ]
+}

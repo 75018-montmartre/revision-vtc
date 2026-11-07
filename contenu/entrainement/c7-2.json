@@ -1,0 +1,97 @@
+{
+ "code": "C7.2",
+ "titre": "Période probatoire et activité VTC",
+ "epreuve": "C",
+ "epreuve_nom": "Sécurité routière",
+ "page": 244,
+ "page_corrige": 246,
+ "situation": [
+  "Lou a obtenu son permis il y a dix-huit mois, après la conduite accompagnée. Elle veut passer l’examen VTC et se demande quand elle pourra s’y inscrire, et à quelle vitesse rouler sur autoroute d’ici là."
+ ],
+ "retenir": "Examen et carte VTC : hors période probatoire (3 ans, 2 avec la conduite accompagnée). Probatoire : 6 points au départ, 110 km/h sur autoroute, 0,2 g/l.",
+ "qcm": [
+  {
+   "question": "Quand Lou pourra-t-elle s’inscrire à l’examen VTC ?",
+   "options": [
+    [
+     "A",
+     "Dès maintenant : le permis B suffit."
+    ],
+    [
+     "B",
+     "Hors période probatoire : 2 ans après son permis."
+    ],
+    [
+     "C",
+     "Après 5 ans de permis."
+    ],
+    [
+     "D",
+     "Pas avant l’âge de 25 ans."
+    ]
+   ],
+   "juste": "B",
+   "corrige": [
+    "L’inscription à l’examen, puis la carte, exigent un permis sorti de la période probatoire (voir A2.1). Avec la conduite accompagnée, cette période dure 2 ans au lieu de 3 (B). Le permis B seul ne suffit pas, et ni 5 ans de permis ni un âge minimal ne sont exigés (A, C et D sont faux)."
+   ]
+  },
+  {
+   "question": "En période probatoire, sur autoroute par temps sec, elle roule au plus à :",
+   "options": [
+    [
+     "A",
+     "130 km/h"
+    ],
+    [
+     "B",
+     "120 km/h"
+    ],
+    [
+     "C",
+     "100 km/h"
+    ],
+    [
+     "D",
+     "110 km/h"
+    ]
+   ],
+   "juste": "D",
+   "corrige": [
+    "En période probatoire : 110 km/h sur autoroute, 100 km/h sur route à chaussées séparées, 80 km/h sur les autres routes (D). Le permis part de 6 points et monte jusqu’à 12 sans infraction ; le taux d’alcool autorisé est de 0,2 g/l."
+   ]
+  }
+ ],
+ "piege": "Croire qu’on peut s’inscrire à l’examen pendant la période probatoire. Il faut en être sorti.",
+ "plus_loin": {
+  "question": "Sans infraction, combien de points Lou aura-t-elle en fin de période probatoire ?",
+  "reponse": "12 : elle part de 6 et en gagne chaque année, ici 3 par an sur 2 ans."
+ },
+ "sources": [
+  [
+   "Code de la route, art. L223-1",
+   ""
+  ],
+  [
+   "Code des transports, art. R3120-7",
+   "wiki/r3120-7.html"
+  ],
+  [
+   "En Voiture Simone (2026) ; Matmut (2026)",
+   ""
+  ]
+ ],
+ "verifie": "octobre 2026",
+ "url": "c7-2-periode-probatoire-activite-vtc",
+ "titre_page": "QCM VTC : permis probatoire et examen VTC (fiche C7.2)",
+ "description": "QCM VTC : permis probatoire et examen VTC. Épreuve C : une situation, deux QCM, avec le corrigé sourcé.",
+ "liens": [
+  [
+   "",
+   "questions/2026-10-29-vtc-permis-probatoire.html"
+  ],
+  [
+   "",
+   "wiki/r3120-7.html"
+  ]
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "code": "A8.2",
+ "titre": "Revenu minimal et désactivation",
+ "epreuve": "A",
+ "epreuve_nom": "Réglementation du transport public particulier de personnes",
+ "page": 132,
+ "page_corrige": 134,
+ "situation": [
+  "Karim reçoit une proposition : 6 kilomètres, 15 minutes, 7 € nets pour lui. La semaine dernière, son compte a aussi été suspendu deux jours, sans explication.",
+  "« Le marché est libre, c’est à prendre ou à laisser », lui dit un collègue."
+ ],
+ "qrc": {
+  "question": "Indiquez ce que prévoit l’accord de secteur en cas de suspension ou de désactivation du compte d’un chauffeur.",
+  "corrige": [
+   "une suspension ou une désactivation repose sur un manquement du chauffeur à une obligation légale, réglementaire ou contractuelle ;",
+   "le chauffeur est informé à l’avance des motifs possibles, peut présenter ses observations, et la décision est examinée par un humain."
+  ],
+  "bareme": "Un point pour le motif, un point pour la procédure.",
+  "points": [
+   [
+    "J'ai indiqué le motif : un manquement du chauffeur à une obligation",
+    1
+   ],
+   [
+    "J'ai indiqué la procédure : information, observations, examen par un humain",
+    1
+   ]
+  ]
+ },
+ "retenir": "Accords de secteur homologués : au moins 9 € nets par course, 30 € par heure et 1 € par kilomètre ; pas de désactivation sans motif ni procédure.",
+ "qcm": [
+  {
+   "question": "Que penser de la proposition à 7 € nets ?",
+   "options": [
+    [
+     "A",
+     "Elle est sous le minimum de 9 € nets par course : elle n’est pas permise."
+    ],
+    [
+     "B",
+     "Elle est légale, puisque Karim reste libre de la refuser."
+    ],
+    [
+     "C",
+     "Elle est légale : le minimum fixé par les accords est de 7 €."
+    ],
+    [
+     "D",
+     "Elle est légale : aucun minimum n’existe pour un indépendant."
+    ]
+   ],
+   "juste": "A",
+   "corrige": [
+    "Les plateformes et les représentants des chauffeurs négocient des accords de secteur. Une fois homologués par l’ARPE, ils s’imposent à toutes les plateformes VTC. Ils fixent un revenu minimal de 9 € nets par course, de 30 € par heure d’activité et de 1 € par kilomètre parcouru (C et D sont faux).",
+    "Le droit de refuser ne permet pas de proposer moins que ce minimum (B est faux). Pour la suspension, Karim aurait dû être informé des motifs possibles et pouvoir s’expliquer."
+   ]
+  }
+ ],
+ "piege": "Penser que la liberté de refuser autorise n’importe quel prix. Les minimums homologués s’appliquent à toute proposition.",
+ "plus_loin": {
+  "question": "Karim estime qu’une suspension était injustifiée. L’ARPE peut-elle trancher son litige ?",
+  "reponse": "Non : l’ARPE organise le dialogue social et homologue les accords ; un litige individuel se porte devant le juge."
+ },
+ "sources": [
+  [
+   "ARPE, accords VTC du 18 janvier 2023, du 19 septembre 2023 et du 19 décembre 2023",
+   ""
+  ],
+  [
+   "LégiSocial, « Plateformes VTC : les accords sur les revenus sont homologués » (2024)",
+   ""
+  ],
+  [
+   "CMS, « Droit social des plateformes » (2024)",
+   ""
+  ]
+ ],
+ "verifie": "octobre 2026",
+ "url": "a8-2-revenu-minimal-desactivation",
+ "titre_page": "QCM VTC : revenu minimal des plateformes et désactivation (fiche A8.2)",
+ "description": "QCM VTC : revenu minimal des plateformes et désactivation. Épreuve A : une situation, un QCM et une réponse à rédiger, avec le corrigé sourcé.",
+ "liens": [
+  [
+   "",
+   "dossiers/combien-gagne-chauffeur-vtc-par-heure.html"
+  ]
+ ]
+}

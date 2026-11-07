@@ -1,0 +1,88 @@
+{
+ "code": "B3.2",
+ "titre": "Le coût de revient",
+ "epreuve": "B",
+ "epreuve_nom": "Gestion",
+ "page": 280,
+ "page_corrige": 284,
+ "situation": [
+  "Karim veut savoir combien lui coûte vraiment son activité. Sur l’année, ses charges fixes (location longue durée, assurance, téléphone, expert-comptable) s’élèvent à 18 000 €. Ses charges variables (carburant, entretien, péages, commission) atteignent 24 000 €.",
+  "Il a parcouru 60 000 km dans l’année."
+ ],
+ "qrc": {
+  "question": "Calculez son coût de revient par kilomètre, et dites à quoi il lui sert.",
+  "corrige": [
+   "coût de revient par kilomètre : 42 000 € ÷ 60 000 km = 0,70 € ;",
+   "il sert à fixer ses prix : une course rapportant moins de 0,70 € par kilomètre parcouru lui fait perdre de l’argent (voir F3.3)."
+  ],
+  "bareme": "Un point pour le calcul, un point pour l’usage.",
+  "points": [
+   [
+    "J'ai fait le calcul : 0,70 € par kilomètre",
+    1
+   ],
+   [
+    "J'ai dit à quoi il sert : fixer ses prix",
+    1
+   ]
+  ]
+ },
+ "retenir": "Coût de revient = charges fixes + charges variables, sur une période ; ramené au kilomètre, il sert à fixer ses prix.",
+ "qcm": [
+  {
+   "question": "Quel est son coût de revient de l’année ?",
+   "options": [
+    [
+     "A",
+     "42 000 €"
+    ],
+    [
+     "B",
+     "18 000 €"
+    ],
+    [
+     "C",
+     "24 000 €"
+    ],
+    [
+     "D",
+     "60 000 €"
+    ]
+   ],
+   "juste": "A",
+   "corrige": [
+    "Le coût de revient est la somme de toutes les charges engagées pour produire le service, sur une période : charges fixes + charges variables. Pas à pas : 18 000 € + 24 000 € = 42 000 € (A).",
+    "18 000 € et 24 000 € n’en sont que des parties (B et C sont faux). 60 000 est un nombre de kilomètres, pas un coût (D est faux)."
+   ]
+  }
+ ],
+ "piege": "Oublier les charges fixes dans le coût de revient. Elles sont dues même sans course et doivent être couvertes par les prix.",
+ "plus_loin": {
+  "question": "Seuls 45 000 km ont été faits en course. Quel coût par kilomètre en course ?",
+  "reponse": "42 000 € ÷ 45 000 km ≈ 0,93 € : les kilomètres à vide renchérissent chaque course."
+ },
+ "sources": [
+  [
+   "Arrêté du 6 avril 2017, programme de l’épreuve B",
+   ""
+  ],
+  [
+   "Bpifrance Création, « Le seuil de rentabilité » (2026)",
+   ""
+  ]
+ ],
+ "verifie": "octobre 2026",
+ "url": "b3-2-cout-revient",
+ "titre_page": "QCM VTC : calculer le coût de revient (fiche B3.2)",
+ "description": "QCM VTC : calculer le coût de revient. Épreuve B : une situation, un QCM et une réponse à rédiger, avec le corrigé sourcé.",
+ "liens": [
+  [
+   "",
+   "simulateurs/cout-revient-revenu-net-vtc.html"
+  ],
+  [
+   "",
+   "dossiers/combien-gagne-chauffeur-vtc-par-heure.html"
+  ]
+ ]
+}

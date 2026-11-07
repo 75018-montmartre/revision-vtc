@@ -34,7 +34,7 @@
 <header class="entete">
   <div class="page">
     <a class="nom-site" href="index.html"><span class="marque" aria-hidden="true">R</span><span class="nom">Révision VTC<span class="sous">Examen, réglementation et métier de chauffeur VTC</span></span></a>
-    <nav class="nav" aria-label="Menu principal"><ul><li><a href="simulateurs/index.html">Simulateurs</a></li><li><a href="wiki/index.html">Réglementation VTC</a></li><li><a href="questions/index.html">FAQ VTC</a></li><li><a href="dossiers/index.html">Guides VTC</a></li><li><a href="actualite/index.html">Actualité VTC</a></li></ul></nav>
+    <nav class="nav" aria-label="Menu principal"><ul><li><a href="simulateurs/index.html">Simulateurs</a></li><li><a href="qcm/index.html">QCM VTC</a></li><li><a href="wiki/index.html">Réglementation VTC</a></li><li><a href="questions/index.html">FAQ VTC</a></li><li><a href="dossiers/index.html">Guides VTC</a></li><li><a href="actualite/index.html">Actualité VTC</a></li></ul></nav>
     <a class="menu-livre" href="le-livre.html" aria-current="page">Le livre</a>
   </div>
 </header>
@@ -67,7 +67,7 @@
 
     <h2 id="essayer">Essayez une fiche du livre</h2>
     <p>Voici la fiche A3.4, telle qu’elle figure dans le livre. Répondez comme le jour de l’examen : le corrigé s’affiche après votre réponse.</p>
-    <section class="fiche-essai" id="fiche-a3-4" aria-labelledby="fiche-a3-4-titre" data-juste="B" data-code="A3.4">
+    <section class="fiche-essai" id="fiche-a3-4" aria-labelledby="fiche-a3-4-titre" data-code="A3.4" data-nb-qcm="1">
       <p class="fiche-tete"><span class="fiche-code">A3.4</span> Épreuve A, réglementation du transport public particulier de personnes, page 66 du livre</p>
       <h3 id="fiche-a3-4-titre">Gares et aéroports</h3>
 
@@ -80,12 +80,12 @@
         <div class="choix en-ligne"><label><input type="radio" name="fiche-a3-4-conf" value="sur"><span>Sûr</span></label><label><input type="radio" name="fiche-a3-4-conf" value="hesitant"><span>Hésitant</span></label><label><input type="radio" name="fiche-a3-4-conf" value="hasard"><span>Au hasard</span></label></div>
       </fieldset>
 
-      <fieldset class="fiche-bloc"><legend><span class="fiche-etiquette">QCM</span> Julie est-elle en règle ?</legend>
-        <div class="choix fiche-qcm"><label><input type="radio" name="fiche-a3-4-qcm" value="A"><span><b>A.</b> Oui, puisqu’elle a une réservation.<span class="verdict"></span></span></label><label><input type="radio" name="fiche-a3-4-qcm" value="B"><span><b>B.</b> Non : elle ne peut stationner aux abords qu’une heure au plus avant la prise en charge.<span class="verdict"></span></span></label><label><input type="radio" name="fiche-a3-4-qcm" value="C"><span><b>C.</b> Oui, si elle reste dans son véhicule.<span class="verdict"></span></span></label><label><input type="radio" name="fiche-a3-4-qcm" value="D"><span><b>D.</b> Non : un VTC ne peut jamais prendre de client dans un aéroport.<span class="verdict"></span></span></label></div>
+      <fieldset class="fiche-bloc" data-qcm="1" data-juste="B"><legend><span class="fiche-etiquette">QCM</span> Julie est-elle en règle ?</legend>
+        <div class="choix fiche-qcm"><label><input type="radio" name="fiche-a3-4-qcm1" value="A"><span><b>A.</b> Oui, puisqu’elle a une réservation.<span class="verdict"></span></span></label><label><input type="radio" name="fiche-a3-4-qcm1" value="B"><span><b>B.</b> Non : elle ne peut stationner aux abords qu’une heure au plus avant la prise en charge.<span class="verdict"></span></span></label><label><input type="radio" name="fiche-a3-4-qcm1" value="C"><span><b>C.</b> Oui, si elle reste dans son véhicule.<span class="verdict"></span></span></label><label><input type="radio" name="fiche-a3-4-qcm1" value="D"><span><b>D.</b> Non : un VTC ne peut jamais prendre de client dans un aéroport.<span class="verdict"></span></span></label></div>
       </fieldset>
-      <div class="fiche-corrige" data-etape="qcm">
+      <div class="fiche-corrige" data-etape="qcm-1">
         <p class="fiche-verdict" data-role="verdict" aria-live="polite">Réponse B</p>
-        <p>Aux abords des gares et des aéroports, la loi limite le stationnement des VTC sur la voie publique : même avec une réservation, le chauffeur ne peut pas stationner plus d’une heure avant l’heure de prise en charge.</p><p>Julie arrive près d’une heure et demie trop tôt : la réservation ne la couvre pas (A est faux), et rester dans le véhicule ne change rien (C est faux). Le VTC a bien le droit de prendre un client qui a réservé dans une gare ou un aéroport (D est faux), souvent dans une zone prévue à cet effet.</p><p>Julie aurait dû attendre ailleurs, hors de la chaussée, et revenir à 17 h 40 au plus tôt.</p>
+        <p>Aux abords des gares et des aéroports, la loi limite le stationnement des VTC sur la voie publique : même avec une réservation, le chauffeur ne peut pas stationner plus d’une heure avant l’heure de prise en charge. Julie arrive près d’une heure et demie trop tôt : la réservation ne la couvre pas (A est faux), et rester dans le véhicule ne change rien (C est faux). Le VTC a bien le droit de prendre un client qui a réservé dans une gare ou un aéroport (D est faux), souvent dans une zone prévue à cet effet. Julie aurait dû attendre ailleurs, hors de la chaussée, et revenir à 17 h 40 au plus tôt.</p>
         <figure class="schema" id="fiche-a3-4-frise">
           <div class="schema-defile" tabindex="0" role="region" aria-label="Frise horaire, à faire défiler">
           <svg class="frise" viewBox="0 0 640 170" aria-hidden="true" data-debut="1020" data-fin="1260" data-x0="40" data-x1="600" data-avance="60" data-prise="1120" data-retard="120">
@@ -106,16 +106,16 @@
       <div class="fiche-bloc" data-etape="qrc-question">
         <h4><label for="fiche-a3-4-qrc">Je rédige ma réponse : Énoncez la règle de stationnement d’un VTC aux abords d’une gare ou d’un aéroport.</label></h4>
         <textarea id="fiche-a3-4-qrc" rows="4" data-js hidden placeholder="Écrivez votre réponse comme le jour de l’examen."></textarea>
-        <p data-js hidden><button type="button" class="bouton second" data-action="qrc">Comparer avec le corrigé type</button></p>
+        <p class="fiche-action" data-js hidden><button type="button" class="bouton second" data-action="qrc">Comparer avec le corrigé type</button></p>
       </div>
-      <div class="fiche-corrige" data-etape="qrc">
+      <div class="fiche-corrige" data-etape="qrc" data-total="2">
         <p class="fiche-verdict">Corrigé type</p>
-        <p>Aux abords d’une gare ou d’un aéroport, le VTC ne stationne sur la voie publique que s’il a une réservation ; et au plus une heure avant l’heure de prise en charge du client.</p>
-        <fieldset data-js hidden><legend>Comptez vos points : un point par élément</legend>
-          <div class="choix"><label><input type="checkbox" name="fiche-a3-4-pt"><span>J’ai écrit qu’il faut une réservation</span></label><label><input type="checkbox" name="fiche-a3-4-pt"><span>J’ai écrit la limite d’une heure avant la prise en charge</span></label></div>
-          <p class="fiche-score" aria-live="polite"><span data-role="score">0</span> / 2</p>
+        <p>aux abords d’une gare ou d’un aéroport, le VTC ne stationne sur la voie publique que s’il a une réservation ;</p><p>et au plus une heure avant l’heure de prise en charge du client.</p>
+        <fieldset data-js hidden><legend>Comptez vos points. Un point pour la réservation, un point pour la limite d’une heure.</legend>
+          <div class="choix"><label><input type="checkbox" name="fiche-a3-4-pt" data-valeur="1"><span>J’ai écrit qu’il faut une réservation</span></label><label><input type="checkbox" name="fiche-a3-4-pt" data-valeur="1"><span>J’ai écrit la limite d’une heure avant la prise en charge</span></label></div>
+          <p class="fiche-score" aria-live="polite">Votre score : <b><span data-role="score">0</span> / 2</b></p>
         </fieldset>
-        <p data-js hidden><button type="button" class="bouton" data-action="bilan">Voir mon bilan</button></p>
+        <p class="fiche-action" data-js hidden><button type="button" class="bouton second" data-action="bilan">Voir mon bilan</button></p>
       </div>
 
       <div class="fiche-corrige" data-etape="bilan">
@@ -132,9 +132,10 @@
           <ul class="fiche-revisions" data-role="revisions"></ul>
         </div>
         <p class="fiche-sources">Sources du corrigé, vérifiées en octobre 2026 : </p>
-        <ul class="fiche-sources"><li><a href="wiki/l3120-2.html">Code des transports, art. L3120-2, II, 3°</a></li><li><a href="wiki/d3120-3.html">Code des transports, art. D3120-3</a></li><li>Bpifrance Création, fiche VTC (2024)</li></ul>
+        <ul class="fiche-sources"><li><a href="wiki/l3120-2.html">Code des transports, art. L3120-2, II, 3°, et D3120-3</a></li><li>Bpifrance Création, fiche VTC (2024)</li></ul>
       </div>
     </section>
+    <p>Envie d’en faire d’autres ? 21 fiches du livre, trois par épreuve écrite, sont en accès libre dans la rubrique <a href="qcm/index.html">QCM VTC</a>.</p>
 
     <h2 id="pages">À quoi ressemblent les pages</h2>
     <div class="pages-livre">

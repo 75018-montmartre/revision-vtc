@@ -102,7 +102,8 @@ def legende_domaines():
 def carte(numero, iso, lien, titre, code, texte, titre_num="Question"):
     """Carte des index Questions VTC et Articles : numéro, mois, titre (le lien), épreuve, résumé."""
     return (f'<li><p class="carte-tete"><span class="num-art"><span class="visuellement-cache">{titre_num} </span>n° {numero}</span>'
-            f'<span class="meta">{mois_annee(iso).capitalize()}</span></p><a href="{lien}">{titre}</a>{ligne_domaine(code)}<p>{texte}</p></li>')
+            f'<span class="meta">{mois_annee(iso).capitalize()}</span></p><a href="{lien}">{titre}</a>{ligne_domaine(code)}<p>{texte}</p>'
+            f'<p class="carte-action" aria-hidden="true">{"Lire le guide" if titre_num == "Guide" else "Lire la réponse"}</p></li>')
 
 
 AUTEUR = {"@type": "Person", "name": "Benjamin Blondin", "url": SITE + "a-propos.html"}
@@ -223,8 +224,8 @@ def accueil(nums, qs=()):
     # « Par où commencer ? » : trois profils, trois liens chacun (petites cartes-liens)
     parcours = [
         ("Je prépare l'examen", "Les épreuves, le barème et de quoi réviser.",
-         [("simulateurs/calcul-note-examen-vtc.html", "Calculer ma note à l'examen"),
-          ("wiki/arrete-6-avril-2017-examen.html", "Les épreuves et les notes éliminatoires"),
+         [("qcm/index.html", f"S'entraîner : {len(FICHES)} QCM corrigés"),
+          ("simulateurs/calcul-note-examen-vtc.html", "Calculer ma note à l'examen"),
           ("le-livre.html", "Le livre pour préparer l'examen 2027")]),
         ("Je me lance", "Ce que coûte le démarrage et ce qu'il rapporte.",
          [("dossiers/cout-pour-devenir-chauffeur-vtc.html", "Combien coûte le lancement en VTC"),
@@ -508,30 +509,98 @@ def schema_frise_attente(sc, ident):
         </figure>"""
 
 
-def fiche_entrainement(slug, racine=""):
-    """Une fiche du livre, jouable : situation, confiance, QCM corrigé au clic, réponse rédigée comparée au corrigé type,
-    règle à retenir, piège, « pour aller plus loin » et bilan avec les dates de révision (js/fiche.js).
-    Sans JavaScript, toute la fiche et son corrigé restent lisibles (et indexés)."""
+def lire_fiche(slug):
     with open(os.path.join(CONTENU, "entrainement", slug + ".json"), encoding="utf-8") as h:
         f = json.load(h)
+    f["slug"] = slug
+    f["qcms"] = f["qcm"] if isinstance(f["qcm"], list) else [f["qcm"]]
+    for q in f["qcms"]:
+        assert q["juste"] in [l for l, _ in q["options"]], f"{slug} : réponse juste absente des options"
+    for _, u in f.get("sources", []) + f.get("liens", []):
+        assert not u or os.path.exists(os.path.join(DOCS, u)) or u.startswith(("questions/", "dossiers/", "simulateurs/", "wiki/")), f"{slug} : lien inconnu {u}"
+    return f
+
+
+FICHES = []   # fiches d'entraînement, chargées au début de la génération (encadrés « Testez-vous »)
+
+
+def lire_fiches():
+    """Fiches d'entraînement (rubrique QCM VTC), dans l'ordre des épreuves puis des codes."""
+    dossier = os.path.join(CONTENU, "entrainement")
+    fs = [lire_fiche(n[:-5]) for n in os.listdir(dossier) if n.endswith(".json")]
+    cle = lambda f: [int(x) if x.isdigit() else x for x in re.split(r"(\d+)", f["code"])]
+    return sorted(fs, key=cle)
+
+
+def fiche_entrainement(slug, racine="", entete=True):
+    """Une fiche du livre, jouable : situation, confiance, un ou plusieurs QCM corrigés au clic, réponse rédigée
+    (si la fiche en a une) comparée au corrigé type, règle à retenir, piège, « pour aller plus loin », bilan et dates
+    de révision (js/fiche.js). Sans JavaScript, toute la fiche et son corrigé restent lisibles (et indexés)."""
+    f = lire_fiche(slug)
     fid = "fiche-" + slug
-    assert f["qcm"]["juste"] in [l for l, _ in f["qcm"]["options"]], "réponse juste absente des options"
+    qcms = f["qcms"]
+    n = len(qcms)
+
     def heures(t):  # « 18 h 40 », « 17 h » : en étiquettes, ce sont elles qui décident souvent de la réponse
         return re.sub(r"\b(\d{1,2} h(?: \d{2})?)\b", r'<span class="heure">\1</span>', t)
+    lang = f' lang="{f["langue_replique"]}"' if f.get("langue_replique") else ""
     situation = ""
     for p in f["situation"]:
-        m = re.match(r"^(.*?)\s*:\s*(«.*»)$", p)   # réplique finale entre guillemets : dans une bulle
-        situation += (f'<p>{heures(ty(m.group(1) + " :"))}</p><p class="bulle">{ty(m.group(2))}</p>' if m else f"<p>{heures(ty(p))}</p>")
+        m = re.match(r"^(.*?)\s*:\s*(«[^«]*»)$", p)   # réplique finale entre guillemets : dans une bulle
+        if re.fullmatch(r"«[^«]*»", p):                # paragraphe entier entre guillemets (texte lu, réponse écrite)
+            situation += f'<p class="bulle"{lang}>{ty(p)}</p>'
+        elif m:
+            situation += f'<p>{heures(ty(m.group(1) + " :"))}</p><p class="bulle"{lang}>{ty(m.group(2))}</p>'
+        else:
+            situation += f"<p>{heures(ty(p))}</p>"
     pin = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>'
-    options = "".join(f'<label><input type="radio" name="{fid}-qcm" value="{l}"><span><b>{l}.</b> {ty(t)}<span class="verdict"></span></span></label>' for l, t in f["qcm"]["options"])
-    corrige_qcm = "".join(f"<p>{ty(p)}</p>" for p in f["qcm"]["corrige"])
     schema = schema_frise_attente(f["schema"], fid + "-frise") if f.get("schema", {}).get("type") == "frise-attente" else ""
-    points = "".join(f'<label><input type="checkbox" name="{fid}-pt"><span>{ty(p)}</span></label>' for p in f["qrc"]["points"])
-    src = "".join(f'<li><a href="{racine}{u}">{ty(n)}</a></li>' if u else f"<li>{ty(n)}</li>" for n, u in f["sources"])
-    nbp = len(f["qrc"]["points"])
-    return f"""<section class="fiche-essai" id="{fid}" aria-labelledby="{fid}-titre" data-juste="{f["qcm"]["juste"]}" data-code="{f["code"]}">
-      <p class="fiche-tete"><span class="fiche-code">{f["code"]}</span> {ty("Épreuve " + f["epreuve"] + ", " + f["epreuve_nom"].lower() + ", page " + str(f["page"]) + " du livre")}</p>
-      <h3 id="{fid}-titre">{ty(f["titre"])}</h3>
+
+    blocs_qcm = ""
+    for i, q in enumerate(qcms, 1):
+        etiquette = "QCM" + (f" {i}" if n > 1 else "")
+        options = "".join(f'<label><input type="radio" name="{fid}-qcm{i}" value="{l}"><span><b>{l}.</b> {ty(t)}<span class="verdict"></span></span></label>' for l, t in q["options"])
+        corrige = "".join(f"<p>{ty(p)}</p>" for p in q["corrige"])
+        blocs_qcm += f'''
+      <fieldset class="fiche-bloc" data-qcm="{i}" data-juste="{q["juste"]}"><legend><span class="fiche-etiquette">{etiquette}</span> {ty(q["question"])}</legend>
+        <div class="choix fiche-qcm">{options}</div>
+      </fieldset>
+      <div class="fiche-corrige" data-etape="qcm-{i}">
+        <p class="fiche-verdict" data-role="verdict" aria-live="polite">{ty(("Réponse " if n == 1 else f"QCM {i} : réponse ") + q["juste"])}</p>
+        {corrige}
+        {schema if i == 1 else ""}
+      </div>'''
+
+    if f.get("qrc"):
+        pts = [(p, 1) if isinstance(p, str) else (p[0], p[1]) for p in f["qrc"]["points"]]
+        total = sum(v for _, v in pts)
+        points = "".join(f'<label><input type="checkbox" name="{fid}-pt" data-valeur="{v}"><span>{ty(p)}{ty(f" ({v} points)") if v > 1 else ""}</span></label>' for p, v in pts)
+        bareme = "Comptez vos points. " + f["qrc"].get("bareme", "Un point par élément.")
+        suite = f'''
+      <div class="fiche-bloc" data-etape="qrc-question">
+        <h4><label for="{fid}-qrc">{ty("Je rédige ma réponse : " + f["qrc"]["question"])}</label></h4>
+        <textarea id="{fid}-qrc" rows="4" data-js hidden placeholder="{ty("Écrivez votre réponse comme le jour de l'examen.")}"></textarea>
+        <p class="fiche-action" data-js hidden><button type="button" class="bouton second" data-action="qrc">{ty("Comparer avec le corrigé type")}</button></p>
+      </div>
+      <div class="fiche-corrige" data-etape="qrc" data-total="{total}">
+        <p class="fiche-verdict">{ty("Corrigé type")}</p>
+        {"".join(f"<p>{ty(x)}</p>" for x in (f["qrc"]["corrige"] if isinstance(f["qrc"]["corrige"], list) else [f["qrc"]["corrige"]]))}
+        <fieldset data-js hidden><legend>{ty(bareme)}</legend>
+          <div class="choix">{points}</div>
+          <p class="fiche-score" aria-live="polite">{ty("Votre score :")} <b><span data-role="score">0</span> / {total}</b></p>
+        </fieldset>
+        <p class="fiche-action" data-js hidden><button type="button" class="bouton second" data-action="bilan">{ty("Voir mon bilan")}</button></p>
+      </div>'''
+    else:
+        suite = f'''
+      <div data-etape="suite" data-js hidden><p class="fiche-action"><button type="button" class="bouton second" data-action="bilan">{ty("Voir mon bilan")}</button></p></div>'''
+
+    src = "".join(f'<li><a href="{racine}{u}">{ty(t)}</a></li>' if u else f"<li>{ty(t)}</li>" for t, u in f["sources"])
+    tete = (f'''<p class="fiche-tete"><span class="fiche-code">{f["code"]}</span> {ty("Épreuve " + f["epreuve"] + ", " + (f["epreuve_nom"] if f["epreuve"] in "DE" else f["epreuve_nom"][0].lower() + f["epreuve_nom"][1:]) + ", page " + str(f["page"]) + " du livre")}</p>
+      <h3 id="{fid}-titre">{ty(f["titre"])}</h3>''' if entete else f'<h2 class="visuellement-cache">{ty("La fiche " + f["code"])}</h2><h3 class="visuellement-cache" id="{fid}-titre">{ty(f["titre"])}</h3>')
+    etiq = f'aria-labelledby="{fid}-titre"'
+    sortie = f"""<section class="fiche-essai" id="{fid}" {etiq} data-code="{f["code"]}" data-nb-qcm="{n}">
+      {tete}
 
       <div class="bon-course">
         <div class="bon-tete"><h4>{pin}Situation</h4><span class="bon-ref">{ty("Fiche " + f["code"] + ", page " + str(f["page"]))}</span></div>
@@ -541,30 +610,8 @@ def fiche_entrainement(slug, racine=""):
       <fieldset class="fiche-bloc" data-js hidden><legend>{ty("Avant de répondre : ma confiance")}</legend>
         <div class="choix en-ligne"><label><input type="radio" name="{fid}-conf" value="sur"><span>Sûr</span></label><label><input type="radio" name="{fid}-conf" value="hesitant"><span>Hésitant</span></label><label><input type="radio" name="{fid}-conf" value="hasard"><span>Au hasard</span></label></div>
       </fieldset>
-
-      <fieldset class="fiche-bloc"><legend><span class="fiche-etiquette">QCM</span> {ty(f["qcm"]["question"])}</legend>
-        <div class="choix fiche-qcm">{options}</div>
-      </fieldset>
-      <div class="fiche-corrige" data-etape="qcm">
-        <p class="fiche-verdict" data-role="verdict" aria-live="polite">{ty("Réponse " + f["qcm"]["juste"])}</p>
-        {corrige_qcm}
-        {schema}
-      </div>
-
-      <div class="fiche-bloc" data-etape="qrc-question">
-        <h4><label for="{fid}-qrc">{ty("Je rédige ma réponse : " + f["qrc"]["question"])}</label></h4>
-        <textarea id="{fid}-qrc" rows="4" data-js hidden placeholder="{ty("Écrivez votre réponse comme le jour de l'examen.")}"></textarea>
-        <p data-js hidden><button type="button" class="bouton second" data-action="qrc">{ty("Comparer avec le corrigé type")}</button></p>
-      </div>
-      <div class="fiche-corrige" data-etape="qrc">
-        <p class="fiche-verdict">{ty("Corrigé type")}</p>
-        <p>{ty(f["qrc"]["corrige"])}</p>
-        <fieldset data-js hidden><legend>{ty("Comptez vos points : un point par élément")}</legend>
-          <div class="choix">{points}</div>
-          <p class="fiche-score" aria-live="polite"><span data-role="score">0</span> / {nbp}</p>
-        </fieldset>
-        <p data-js hidden><button type="button" class="bouton" data-action="bilan">{ty("Voir mon bilan")}</button></p>
-      </div>
+{blocs_qcm}
+{suite}
 
       <div class="fiche-corrige" data-etape="bilan">
         <div class="retenir"><h4>{ty("La règle à retenir")}</h4><p>{ty(f["retenir"])}</p></div>
@@ -583,6 +630,110 @@ def fiche_entrainement(slug, racine=""):
         <ul class="fiche-sources">{src}</ul>
       </div>
     </section>"""
+    return sortie
+
+
+# ------------------------------------------------------------------ rubrique QCM VTC (fiches d'entraînement tirées du livre)
+def renvoi_qcm(fs, lien, racine="../"):
+    """Encadré latéral « Testez-vous » pour une question, un guide ou un article du wiki : les fiches qui portent sur la même règle."""
+    lies = [f for f in fs if lien in [u for _, u in f.get("liens", [])]]
+    if not lies:
+        return ""
+    li = "".join(f'<li><a href="{racine}qcm/{f["url"]}.html">{ty(f["code"] + " · " + f["titre"])}</a></li>' for f in lies)
+    return f'<section class="cote-bloc"><h2>Testez-vous</h2><p>{ty("Un QCM corrigé, tiré du livre, sur cette règle :" if len(lies) == 1 else "Des QCM corrigés, tirés du livre, sur ces règles :")}</p><ul class="voir-aussi">{li}</ul></section>'
+
+
+def titre_de(u):
+    """Titre (h1) d'une page déjà générée du site, pour nommer un lien."""
+    with open(os.path.join(DOCS, u), encoding="utf-8") as h:
+        m = re.search(r"<h1[^>]*>(.*?)</h1>", h.read(), re.S)
+    return html.unescape(re.sub(r"<[^>]+>", " ", m.group(1))).split("  ")[-1].strip() if m else u
+
+
+def accroche(f):
+    """Première phrase de la situation, pour la carte de la fiche (coupée proprement si elle est longue)."""
+    t = " ".join(f["situation"])
+    m = re.match(r"(.+?[.?!»])(\s|$)", t)
+    p = m.group(1) if m else t
+    return p if len(p) <= 170 else p[:165].rsplit(" ", 1)[0] + "…"
+
+
+def qcm(fs):
+    """Rubrique QCM VTC : page d'index (fiches regroupées par épreuve) et une page par fiche."""
+    if not fs:
+        return
+    WIKI = {a["slug"]: a for a in lire_wiki()["articles"]}
+    par_ep = {}
+    for f in fs:
+        par_ep.setdefault(f["epreuve"], []).append(f)
+    for i, f in enumerate(fs):
+        meme = par_ep[f["epreuve"]]
+        k = meme.index(f)
+        suivante = meme[k + 1] if k + 1 < len(meme) else (fs[(i + 1) % len(fs)] if len(fs) > 1 else None)
+        vus = [u for _, u in f.get("liens", [])] + [u for _, u in f["sources"] if u.startswith("wiki/")]
+        vus = list(dict.fromkeys(vus))
+        def nom(u):
+            a = WIKI.get(u[5:-5]) if u.startswith("wiki/") else None
+            return ((a["num"] if not a.get("arrete") else "Arrêté") + " · " + a["titre"]) if a else re.sub(" +", " ", titre_de(u))
+        lies = "".join(f'<li><a href="../{u}">{ty(nom(u))}</a></li>' for u in vus)
+        nb = len(f["qcms"])
+        chapeau = ("Deux QCM" if nb > 1 else "Un QCM") + (" et une réponse à rédiger" if f.get("qrc") else "") + \
+                  ", corrigés et sourcés, tirés du livre Machine à Réussite · Examen VTC 2027. Répondez comme le jour de l'examen : le corrigé s'affiche après votre réponse."
+        nav = f'<a class="bouton second" href="index.html">{ty("Toutes les fiches")}</a>'
+        if suivante:
+            nav = f'<a class="bouton" href="{suivante["url"]}.html">{ty("Fiche suivante : " + suivante["code"])}</a>' + nav
+        corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">QCM VTC</a></li></ol></nav>
+    <p class="surtitre">{ty(DOMAINES[f["epreuve"]][0] + " : " + DOMAINES[f["epreuve"]][1])}</p>
+    <h1>{ty("QCM VTC : " + f["titre"])}</h1>
+    <p class="chapeau">{ty(chapeau)}</p>
+    <div class="page-fiche">
+    {fiche_entrainement(f["slug"], "../", entete=False)}
+    <div class="{"tuiles-2" if lies else "tuiles-1"}">
+    {f'<section class="tuile" aria-labelledby="titre-regle"><h2 id="titre-regle">{ty("Pour réviser la règle")}</h2><ul class="voir-aussi">{lies}</ul></section>' if lies else ""}
+    <section class="tuile" aria-labelledby="titre-livre"><h2 id="titre-livre">Dans le livre</h2><p>{ty(f"Cette fiche est l'une des 213 du livre (page {f['page']}, corrigé page {f['page_corrige']}), avec 1 191 questions corrigées et 3 examens blancs.")}</p><p>{achat("bouton achat", "Le livre sur Amazon")}</p></section>
+    </div>
+    <nav class="navigation-fiches" aria-label="{ty("Autres fiches")}">{nav}</nav>
+    </div>'''
+        chemin = f'qcm/{f["url"]}.html'
+        ld = {"@context": "https://schema.org", "@type": "Quiz", "name": f["titre_page"], "url": SITE + chemin, "inLanguage": "fr",
+              "educationalLevel": "Examen VTC", "about": f["titre"], "author": AUTEUR, "isPartOf": {"@id": SITE + "#site"},
+              "hasPart": [{"@type": "Question", "name": q["question"], "eduQuestionType": "Multiple choice",
+                           "suggestedAnswer": [{"@type": "Answer", "text": t} for l, t in q["options"] if l != q["juste"]],
+                           "acceptedAnswer": {"@type": "Answer", "text": dict(q["options"])[q["juste"]]}} for q in f["qcms"]]}
+        ecrire(chemin, page(html.escape(f["titre_page"] + " · Révision VTC", quote=False), corps, "qcm", "../", html.escape(f["description"]),
+                            scripts_fin='<script src="../js/fiche.js" defer></script>\n',
+                            jsonld=[ld, fil(("Accueil", ""), ("QCM VTC", "qcm/"), (f["titre"], chemin))]))
+    blocs = ""
+    for code, (e, court) in DOMAINES.items():
+        if code not in par_ep:
+            continue
+        cartes = "".join(f'''<li><p class="carte-tete"><span class="num-art">{f["code"]}</span><span class="meta">{ty(("Deux QCM" if len(f["qcms"]) > 1 else "QCM") + (" et réponse rédigée" if f.get("qrc") else ""))}</span></p><a href="{f["url"]}.html">{ty(f["titre"])}</a><p>{ty(" ".join(f["situation"]))}</p><p class="carte-action" aria-hidden="true">{ty("Faire la fiche")}</p></li>''' for f in par_ep[code])
+        blocs += f'''
+    <section class="bloc-index" aria-labelledby="ep-{code}">
+    <h2 id="ep-{code}" class="titre-epreuve">{picto(code)}{ty(e + " : " + court)}</h2>
+    <ul class="questions trois">{cartes}</ul>
+    </section>'''
+    corps = f'''    <h1>QCM VTC</h1>
+    <p class="chapeau">{ty(f"{len(fs)} fiches d'entraînement à l'examen VTC, tirées du livre Machine à Réussite · Examen VTC 2027 : une situation de chauffeur, un ou deux QCM, souvent une réponse à rédiger, et le corrigé complet avec ses sources. Gratuites, sans inscription.")}</p>
+    <p class="intro">{ty("Chaque fiche est reproduite telle qu'elle figure dans le livre. Les fiches sont classées par épreuve de l'examen ; de nouvelles fiches sont ajoutées régulièrement.")}</p>
+    <section class="bloc-index" aria-label="Comment se fait une fiche">
+    <h2>{ty("Comment se fait une fiche")}</h2>
+    <ol class="etapes etapes-ligne">
+      <li><b>{ty("Lisez la situation")}</b>{ty("Un cas de chauffeur, comme à l'examen. Avant de répondre, dites si vous êtes sûr, hésitant ou si vous répondez au hasard.")}</li>
+      <li><b>{ty("Répondez au QCM, puis rédigez")}</b>{ty("Le corrigé s'affiche après votre choix. Rédigez ensuite la réponse courte et comparez-la au corrigé type, point par point.")}</li>
+      <li><b>{ty("Lisez votre bilan")}</b>{ty("La règle à retenir, le piège à éviter, un conseil selon vos réponses, et vos dates de révision à J+1, J+3, J+7 et J+21.")}</li>
+    </ol>
+    </section>{blocs}
+    <section class="bloc-index" aria-labelledby="livre-qcm">
+    <h2 id="livre-qcm">{ty("Toutes les fiches sont dans le livre")}</h2>
+    <p>{ty("Le livre en compte 213, avec 1 191 questions corrigées, un test diagnostic, des plannings de révision et 3 examens blancs, plus 2 sur ce site.")}</p>
+    <div class="actions">{achat("bouton achat", "Acheter le livre sur Amazon")}<a class="bouton second" href="../le-livre.html">{ty("Découvrir le livre")}</a></div>
+    </section>'''
+    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "QCM VTC", "url": SITE + "qcm/", "inLanguage": "fr", "isPartOf": {"@id": SITE + "#site"},
+          "hasPart": [{"@type": "Quiz", "name": f["titre_page"], "url": SITE + f'qcm/{f["url"]}.html'} for f in fs]}
+    ecrire("qcm/index.html", page("QCM VTC gratuits : fiches d'entraînement corrigées de l'examen VTC 2027 · Révision VTC", corps, "qcm", "../",
+                                  html.escape(f"QCM VTC gratuits pour l'examen 2027 : {len(fs)} fiches corrigées et sourcées, classées par épreuve (A à G), tirées du livre Machine à Réussite. Sans inscription."),
+                                  jsonld=[ld, fil(("Accueil", ""), ("QCM VTC", "qcm/"))]))
 
 
 # ------------------------------------------------------------------ le livre tenu à jour (inscription des lecteurs, signalements)
@@ -659,6 +810,7 @@ def livre_vivant():
     <h2 id="essayer">{ty("Essayez une fiche du livre")}</h2>
     <p>{ty("Voici la fiche A3.4, telle qu'elle figure dans le livre. Répondez comme le jour de l'examen : le corrigé s'affiche après votre réponse.")}</p>
     {fiche_entrainement("a3-4")}
+    <p>{ty(f"Envie d'en faire d'autres ? {len(FICHES)} fiches du livre, trois par épreuve écrite, sont en accès libre dans la rubrique")} <a href="qcm/index.html">{ty("QCM VTC")}</a>.</p>
 
     <h2 id="pages">{ty("À quoi ressemblent les pages")}</h2>
     <div class="pages-livre">{figures}
@@ -899,6 +1051,7 @@ def wiki():
     </div>
     <aside class="col-cote" aria-label="Pour aller plus loin">
     {livre}
+    {renvoi_qcm(FICHES, f'wiki/{a["slug"]}.html')}
     <section class="cote-bloc" aria-labelledby="voir">
       <h2 id="voir">Voir aussi</h2>
       <ul class="voir-aussi">{voir}</ul>
@@ -1142,6 +1295,7 @@ def questions(qs, w):
     </div>
     <aside class="col-cote" aria-label="Pour aller plus loin">
     {f'<section class="cote-bloc"><h2>Les textes expliqués</h2><ul class="voir-aussi">{wiki}</ul></section>' if wiki else ""}
+    {renvoi_qcm(FICHES, f'questions/{q["date"]}-{q["slug"]}.html')}
     {f'<section class="cote-bloc wiki-livre"><h2>Dans le livre</h2><ul>{livre}</ul><p class="pied-achat">{achat("bouton achat petit", "Le livre sur Amazon")}</p></section>' if livre else ""}
     {f'<section class="cote-bloc"><h2>Autres questions</h2><ul class="voir-aussi">{autres}</ul></section>' if autres else ""}
     </aside></div>'''
@@ -1172,7 +1326,7 @@ def questions(qs, w):
     <p>{ty("De nouvelles questions sont ajoutées régulièrement. Vous ne trouvez pas la vôtre ?")} <a href="../contact.html">{ty("Posez-la")}</a>.</p>
     </section>
     <h2>{ty("Toutes les questions")}</h2>
-    <ul class="questions">{liste}</ul>'''
+    <ul class="questions trois">{liste}</ul>'''
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "FAQ VTC", "url": SITE + "questions/", "inLanguage": "fr",
           "hasPart": [{"@type": "Article", "headline": q["question"], "url": SITE + f'questions/{q["date"]}-{q["slug"]}.html'} for q in qs]}
     ecrire("questions/index.html", page("FAQ VTC : les questions des chauffeurs et des candidats à l'examen, réponses sourcées · Révision VTC", corps, "questions", "../",
@@ -1384,6 +1538,7 @@ def dossiers(ds, w, qs=()):
     <aside class="col-cote" aria-label="Sommaire et pour aller plus loin">
     <nav class="cote-bloc" aria-labelledby="titre-sommaire"><h2 id="titre-sommaire">Sommaire</h2><ul class="voir-aussi">{sommaire}</ul></nav>
     {f'<section class="cote-bloc" aria-labelledby="titre-textes"><h2 id="titre-textes">Les textes expliqués</h2><ul class="voir-aussi">{wiki}</ul></section>' if wiki else ""}
+    {renvoi_qcm(FICHES, f'dossiers/{d["slug"]}.html')}
     {f'<section class="cote-bloc wiki-livre" aria-labelledby="titre-livre"><h2 id="titre-livre">Dans le livre</h2><ul>{livre}</ul><p class="pied-achat">{achat("bouton achat petit", "Le livre sur Amazon")}</p></section>' if livre else ""}
     <section class="cote-bloc" aria-labelledby="titre-simu"><h2 id="titre-simu">Simulateur gratuit</h2><ul class="voir-aussi"><li><a href="../simulateurs/cout-revient-revenu-net-vtc.html">{ty("Coût de revient de la voiture et revenu net : faites le calcul avec vos chiffres")}</a></li></ul></section>
     {f'<section class="cote-bloc" aria-labelledby="titre-autres"><h2 id="titre-autres">Autres guides</h2><ul class="voir-aussi">{autres}</ul></section>' if autres else ""}
@@ -1406,7 +1561,7 @@ def dossiers(ds, w, qs=()):
                             jsonld=[ld, fil(("Accueil", ""), ("Guides VTC", "dossiers/"), (d["titre"], chemin))]))
     if ds:
         liste = "".join(carte(d["numero"], d["date"], f'{d["slug"]}.html', ty(d["titre"]), d["code_domaine"], ty(d["description"]), "Guide") for d in ds)
-        liste = f'<ul class="questions">{liste}</ul>'
+        liste = f'<ul class="questions trois">{liste}</ul>'
     else:
         liste = f'<p class="note">{ty("Le premier guide sera publié très prochainement.")}</p>'
     corps = f'''    <h1>Guides VTC</h1>
@@ -2009,7 +2164,7 @@ ROBOTS_IA = ["Googlebot", "Bingbot", "Google-Extended", "GPTBot", "OAI-SearchBot
              "Claude-User", "PerplexityBot", "Perplexity-User", "Applebot", "Applebot-Extended", "DuckAssistBot", "MistralAI-User", "CCBot"]
 
 
-def plan(nums, arts, wiki_date, qs=(), ds=(), simu=None, note=None):
+def plan(nums, arts, wiki_date, qs=(), ds=(), simu=None, note=None, fs=()):
     der = nums[0]["date"] if nums else wiki_date
     urls = [("", max(der, wiki_date)), ("actualite/", der), ("wiki/", wiki_date), ("a-propos.html", None), ("contact.html", None), ("le-livre.html", None), ("mises-a-jour.html", None),
             ("examens.html", None), ("mentions-legales.html", None), ("accessibilite.html", None)]
@@ -2027,6 +2182,9 @@ def plan(nums, arts, wiki_date, qs=(), ds=(), simu=None, note=None):
         urls.append((f'simulateurs/{simu["slug"]}.html', iso_fr(simu["verifie"])))
     if note:
         urls.append((f'simulateurs/{note["slug"]}.html', iso_fr(note["verifie"])))
+    if fs:
+        urls.insert(6, ("qcm/", None))
+        urls += [(f'qcm/{f["url"]}.html', None) for f in fs]
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     xml += "".join(f"  <url><loc>{SITE}{u}</loc>" + (f"<lastmod>{d}</lastmod>" if d else "") + "</url>\n" for u, d in urls) + "</urlset>\n"
     ecrire("sitemap.xml", xml)
@@ -2053,6 +2211,7 @@ def llms(nums, w, qs=(), ds=(), simu=None):
          f"- [Guides VTC]({SITE}dossiers/): guides de fond chiffrés (coût du lancement, revenus, statut, véhicule), sources datées",
          f"- [Simulateur VTC : coût de revient de la voiture et revenu net]({SITE}simulateurs/cout-revient-revenu-net-vtc.html): calcul gratuit pour un chauffeur VTC en micro-entreprise (commission, cotisations, location ou achat, carburant, assurance), hypothèses sourcées et datées",
          f"- [Calcul de la note de l'examen VTC]({SITE}simulateurs/calcul-note-examen-vtc.html): admissibilité selon l'arrêté du 6 avril 2017 (moyenne pondérée sur 17 coefficients, au moins 10/20, notes éliminatoires sous 6/20 et sous 4/20 en anglais), et ce qu'il manque aux épreuves restantes",
+         f"- [QCM VTC]({SITE}qcm/): fiches d'entraînement gratuites tirées du livre, classées par épreuve (A à G) : situation, QCM, réponse à rédiger, corrigé sourcé",
          f"- [Mises à jour du livre]({SITE}mises-a-jour.html): règles qui ont changé depuis l'impression",
          f"- [Examens blancs]({SITE}examens.html): deux examens blancs corrigés, réservés aux lecteurs du livre",
          f"- [À propos et méthode]({SITE}a-propos.html): qui écrit, comment les informations sont vérifiées",
@@ -2064,6 +2223,10 @@ def llms(nums, w, qs=(), ds=(), simu=None):
     if ds:
         l += ["## Guides VTC", ""]
         l += [f"- [{d['titre']}]({SITE}dossiers/{d['slug']}.html): {' '.join(d['en_bref'])}" for d in ds]
+        l.append("")
+    if FICHES:
+        l += ["## QCM VTC (fiches d'entraînement)", ""]
+        l += [f"- [{f['titre_page']}]({SITE}qcm/{f['url']}.html): {f['retenir']}" for f in FICHES]
         l.append("")
     if qs:
         l += ["## FAQ VTC", ""]
@@ -2107,6 +2270,7 @@ if __name__ == "__main__":
         shutil.rmtree(os.path.join(RACINE, "apercu"), ignore_errors=True)
         shutil.copytree(DOCS, os.path.join(RACINE, "apercu"))
         DOCS = os.path.join(RACINE, "apercu")
+    FICHES[:] = lire_fiches()
     nums = lire_numeros()
     accueil(nums, lire_questions({a["slug"] for a in lire_wiki()["articles"]}))
     for i, n in enumerate(nums):
@@ -2123,6 +2287,8 @@ if __name__ == "__main__":
     simu = simulateur(ds, note)
     indexnow()
     mises_a_jour()
+    fs = FICHES
+    qcm(fs)
     livre_vivant()
     examens()
     legales()
@@ -2130,5 +2296,5 @@ if __name__ == "__main__":
     contact()
     page_404()
     llms(nums, w, qs, [d for d in ds if not d.get("brouillon")], simu)
-    plan(nums, arts, iso_fr(w["verifie"]), qs, [d for d in ds if not d.get("brouillon")], simu, note)
+    plan(nums, arts, iso_fr(w["verifie"]), qs, [d for d in ds if not d.get("brouillon")], simu, note, fs)
     print(f"Site généré dans docs/ : {len(nums)} numéro(s) de l'Actualité VTC.")

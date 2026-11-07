@@ -1,0 +1,90 @@
+{
+ "code": "E3.4",
+ "titre": "Faux amis et pièges des QCM",
+ "epreuve": "E",
+ "epreuve_nom": "Anglais",
+ "page": 434,
+ "page_corrige": 436,
+ "situation": [
+  "Un client dit : « Actually, I’d like to stop at the library first. I need to rest a little after this long journey. » Le chauffeur comprend « actuellement », « librairie » et « journée » : il se trompe trois fois."
+ ],
+ "retenir": "Actually : en fait ; library : bibliothèque ; journey : trajet ; to rest : se reposer ; eventually : finalement ; sensible : raisonnable.",
+ "qcm": [
+  {
+   "question": "« Actually » signifie :",
+   "options": [
+    [
+     "A",
+     "en fait"
+    ],
+    [
+     "B",
+     "actuellement"
+    ],
+    [
+     "C",
+     "activement"
+    ],
+    [
+     "D",
+     "évidemment"
+    ]
+   ],
+   "juste": "A",
+   "corrige": [
+    "Actually : en fait, en réalité (A). Actuellement se dit currently ou at the moment (B est faux) ; activement, actively (C est faux) ; évidemment, obviously (D est faux)."
+   ]
+  },
+  {
+   "question": "« Library » et « journey » signifient :",
+   "options": [
+    [
+     "A",
+     "librairie et journée"
+    ],
+    [
+     "B",
+     "bibliothèque et journée"
+    ],
+    [
+     "C",
+     "bibliothèque et voyage"
+    ],
+    [
+     "D",
+     "librairie et voyage"
+    ]
+   ],
+   "juste": "C",
+   "corrige": [
+    "Library : bibliothèque ; journey : voyage, trajet (C). Une librairie se dit bookshop (US : bookstore) ; une journée, a day (A, B et D sont faux). To rest : se reposer, pas « rester »."
+   ]
+  }
+ ],
+ "piege": "Se fier à la ressemblance avec le français. Les faux amis sont précisément les mots qui ressemblent.",
+ "plus_loin": {
+  "question": "« Eventually » veut-il dire « éventuellement » ?",
+  "reponse": "Non : finalement, au bout du compte."
+ },
+ "sources": [
+  [
+   "Cambridge Dictionary, « actually », « library », « journey »",
+   ""
+  ],
+  [
+   "Oxford Learner’s Dictionaries, « eventually », « sensible »",
+   ""
+  ]
+ ],
+ "verifie": "octobre 2026",
+ "url": "e3-4-faux-amis-pieges-qcm",
+ "titre_page": "QCM VTC d'anglais : les faux amis (fiche E3.4)",
+ "description": "QCM VTC d'anglais : les faux amis. Épreuve E : une situation, deux QCM, avec le corrigé sourcé.",
+ "liens": [
+  [
+   "",
+   "simulateurs/calcul-note-examen-vtc.html"
+  ]
+ ],
+ "langue_replique": "en"
+}

@@ -1,0 +1,93 @@
+{
+ "code": "C4.2",
+ "titre": "Enfants : siège et place",
+ "epreuve": "C",
+ "epreuve_nom": "Sécurité routière",
+ "page": 221,
+ "page_corrige": 223,
+ "situation": [
+  "Une mère réserve un VTC pour elle et sa fille de 4 ans, sans préciser l’âge. À l’arrivée, aucun siège enfant n’est prévu. « Dans les taxis, on n’en met jamais », dit-elle au chauffeur."
+ ],
+ "retenir": "Moins de 10 ans : siège homologué adapté, à l’arrière en principe ; pas de dispense en VTC ; 135 € pour le conducteur.",
+ "qcm": [
+  {
+   "question": "Sans dispositif adapté, le chauffeur peut-il transporter l’enfant ?",
+   "options": [
+    [
+     "A",
+     "Oui, comme le ferait un taxi."
+    ],
+    [
+     "B",
+     "Non : la dispense des taxis ne vaut pas en VTC."
+    ],
+    [
+     "C",
+     "Oui, sur les genoux de sa mère."
+    ],
+    [
+     "D",
+     "Oui, si le trajet est court."
+    ]
+   ],
+   "juste": "B",
+   "corrige": [
+    "Un enfant de moins de 10 ans voyage dans un système de retenue homologué, adapté à sa taille et à son poids. La dispense prévue pour les taxis ne s’étend pas au VTC (B ; A est faux). Les genoux d’un adulte ne protègent pas, même sur un trajet court (C et D sont faux)."
+   ]
+  },
+  {
+   "question": "Un enfant de moins de 10 ans peut voyager à l’avant :",
+   "options": [
+    [
+     "A",
+     "toujours, ceinture bouclée"
+    ],
+    [
+     "B",
+     "jamais, sans aucune exception"
+    ],
+    [
+     "C",
+     "dès l’âge de 6 ans"
+    ],
+    [
+     "D",
+     "dos à la route, airbag désactivé"
+    ]
+   ],
+   "juste": "D",
+   "corrige": [
+    "Avant 10 ans, l’enfant voyage en principe à l’arrière. Exceptions : siège dos à la route avec l’airbag frontal désactivé, véhicule sans place arrière utilisable, ou places arrière occupées par d’autres enfants de moins de 10 ans (D ; A, B et C sont faux). L’amende de 135 € est pour le conducteur."
+   ]
+  }
+ ],
+ "piege": "Croire que la dispense de siège enfant des taxis vaut pour le VTC.",
+ "plus_loin": {
+  "question": "Comment éviter cette situation ?",
+  "reponse": "Demander l’âge des enfants à la réservation, prévoir un siège adapté, ou refuser la course faute de dispositif."
+ },
+ "sources": [
+  [
+   "Code de la route, art. R412-2 et R412-3",
+   ""
+  ],
+  [
+   "Kohen Avocats, « Siège auto et dispositif de retenue » (2026)",
+   ""
+  ],
+  [
+   "Auto-doc, « Siège auto en taxi ou VTC » (2026)",
+   ""
+  ]
+ ],
+ "verifie": "octobre 2026",
+ "url": "c4-2-enfants-siege-place",
+ "titre_page": "QCM VTC : siège auto et enfants en VTC (fiche C4.2)",
+ "description": "QCM VTC : siège auto et enfants en VTC. Épreuve C : une situation, deux QCM, avec le corrigé sourcé.",
+ "liens": [
+  [
+   "",
+   "questions/2026-11-04-siege-auto-vtc-obligatoire.html"
+  ]
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "code": "D3.1",
+ "titre": "Les fautes d’orthographe qui coûtent des points",
+ "epreuve": "D",
+ "epreuve_nom": "Français",
+ "page": 407,
+ "page_corrige": 410,
+ "situation": [
+  "Après un examen blanc, Julie relit sa réponse à une QRC :",
+  "« Les clients que j’ai accompagné à la gare était pressés. Si j’avais su, je serai parti plus tôt. »",
+  "Son formateur a souligné trois fautes. Julie ne comprend pas : elle connaît pourtant ces mots."
+ ],
+ "qrc": {
+  "question": "Corrigez la deuxième phrase de Julie et expliquez la règle en une phrase.",
+  "corrige": [
+   "« Si j’avais su, je serais parti plus tôt. » Après « si » suivi du plus-que-parfait, le verbe principal se met au conditionnel passé : « serais », avec un s ; « serai » est un futur."
+  ],
+  "bareme": "Un point pour la phrase corrigée, un point pour la règle.",
+  "points": [
+   [
+    "J'ai corrigé la phrase : « je serais parti »",
+    1
+   ],
+   [
+    "J'ai expliqué la règle",
+    1
+   ]
+  ]
+ },
+ "retenir": "Avec avoir, le participe s’accorde avec le COD placé avant le verbe ; « si » + plus-que-parfait appelle le conditionnel passé.",
+ "qcm": [
+  {
+   "question": "Quelle phrase est correctement écrite ?",
+   "options": [
+    [
+     "A",
+     "Les clients que j’ai accompagné étaient pressés."
+    ],
+    [
+     "B",
+     "Les clients que j’ai accompagnés était pressés."
+    ],
+    [
+     "C",
+     "Les clients que j’ai accompagnés étaient pressés."
+    ],
+    [
+     "D",
+     "Les clients que j’ai accompagnées étaient pressés."
+    ]
+   ],
+   "juste": "C",
+   "corrige": [
+    "Avec l’auxiliaire avoir, le participe passé s’accorde avec le complément d’objet direct placé avant le verbe. Ici, « que » reprend « les clients », masculin pluriel, placé avant : « accompagnés ». Le verbe « étaient » s’accorde avec son sujet, « les clients » (C).",
+    "A oublie l’accord du participe (A est faux) ; B, celui du verbe (B est faux) ; D accorde au féminin alors que « clients » est masculin (D est faux)."
+   ]
+  }
+ ],
+ "piege": "Accorder le participe avec le sujet quand l’auxiliaire est avoir. Avec avoir, on cherche le complément placé avant.",
+ "plus_loin": {
+  "question": "« Les courses qu’il a fallu annuler » : faut-il écrire « fallues » ?",
+  "reponse": "Non : « falloir » est impersonnel, son participe reste invariable : « fallu »."
+ },
+ "sources": [
+  [
+   "Académie française, « Questions de langue » : accord du participe passé",
+   ""
+  ],
+  [
+   "Règlement de l’examen T3P des CMA : un point retiré au-delà de cinq fautes dans les QRC",
+   ""
+  ]
+ ],
+ "verifie": "octobre 2026",
+ "url": "d3-1-fautes-orthographe-coutent-points",
+ "titre_page": "QCM VTC de français : les fautes qui coûtent des points (fiche D3.1)",
+ "description": "QCM VTC de français : les fautes qui coûtent des points. Épreuve D : une situation, un QCM et une réponse à rédiger, avec le corrigé sourcé.",
+ "liens": [
+  [
+   "",
+   "dossiers/reussir-examen-vtc-premier-coup.html"
+  ],
+  [
+   "",
+   "simulateurs/calcul-note-examen-vtc.html"
+  ]
+ ]
+}

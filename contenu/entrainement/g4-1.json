@@ -1,0 +1,88 @@
+{
+ "code": "G4.1",
+ "titre": "Le justificatif de réservation : sept mentions",
+ "epreuve": "G",
+ "epreuve_nom": "Réglementation nationale des VTC",
+ "page": 174,
+ "page_corrige": 178,
+ "situation": [
+  "Lucas travaille avec des clients directs, qui l’appellent ou lui écrivent. Il prépare un modèle de bon de réservation sur son téléphone.",
+  "Il y met son nom, son adresse, son numéro d’inscription au registre, le nom et le téléphone du client, la date, l’heure et le lieu de prise en charge, la destination et le prix."
+ ],
+ "qrc": {
+  "question": "Expliquez pourquoi le justificatif doit indiquer la date et l’heure de la réservation.",
+  "corrige": [
+   "elle prouve que le client a réservé avant d’être pris en charge, sans démarchage ;",
+   "l’agent la compare à l’heure du contrôle et à celle de la prise en charge."
+  ],
+  "bareme": "Deux points par idée juste.",
+  "points": [
+   [
+    "J'ai écrit qu'elle prouve que le client a réservé avant la prise en charge",
+    2
+   ],
+   [
+    "J'ai écrit que l'agent la compare à l'heure du contrôle et de la prise en charge",
+    2
+   ]
+  ]
+ },
+ "retenir": "Sept mentions : exploitant (nom, coordonnées, SIREN, registre), client (nom, téléphone), réservation (date, heure), prise en charge (date, heure, lieu).",
+ "qcm": [
+  {
+   "question": "Que manque-t-il au modèle de Lucas ?",
+   "options": [
+    [
+     "A",
+     "Rien : le prix et la destination complètent ce qui est exigé."
+    ],
+    [
+     "B",
+     "Le nom du chauffeur et le modèle de la voiture utilisée."
+    ],
+    [
+     "C",
+     "La date et l’heure de la réservation, et son numéro SIREN."
+    ],
+    [
+     "D",
+     "La signature du client et le mode de paiement choisi."
+    ]
+   ],
+   "juste": "C",
+   "corrige": [
+    "Depuis le 29 octobre 2025, l’arrêté du 6 août 2025 fixe sept mentions : le nom et les coordonnées de l’exploitant, son numéro unique d’identification (SIREN), son numéro d’inscription au registre, le nom et le téléphone du client, la date et l’heure de la réservation, la date et l’heure de prise en charge, et le lieu de prise en charge.",
+    "Il manque donc deux mentions à Lucas (A est faux). Le chauffeur, le véhicule, la signature et le mode de paiement ne sont pas exigés (B et D sont faux). Le prix et la destination sont utiles au client, mais ne font pas partie des sept mentions. Si le nom et le téléphone du client manquent, le conducteur donne sans délai à l’agent le moyen de le joindre."
+   ]
+  }
+ ],
+ "piege": "Croire que le prix et la destination sont obligatoires, et oublier la date et l’heure de la réservation, qui le sont.",
+ "plus_loin": {
+  "question": "Un client réserve par téléphone à 7 h 50 pour être pris en charge à 8 h. Est-ce trop court ?",
+  "reponse": "Non : aucun délai minimal n’est exigé. Le justificatif montre seulement que la réservation précède la prise en charge."
+ },
+ "sources": [
+  [
+   "Arrêté du 6 août 2025, art. 1 (JO du 29 août 2025), en vigueur le 29 octobre 2025",
+   ""
+  ],
+  [
+   "Code des transports, art. L3120-2 et R3120-2",
+   "wiki/l3120-2.html"
+  ]
+ ],
+ "verifie": "octobre 2026",
+ "url": "g4-1-justificatif-reservation-sept-mentions",
+ "titre_page": "QCM VTC : les sept mentions du justificatif de réservation (fiche G4.1)",
+ "description": "QCM VTC : les sept mentions du justificatif de réservation. Épreuve G : une situation, un QCM et une réponse à rédiger, avec le corrigé sourcé.",
+ "liens": [
+  [
+   "",
+   "wiki/arrete-6-aout-2025-reservation.html"
+  ],
+  [
+   "",
+   "wiki/r3120-2.html"
+  ]
+ ]
+}

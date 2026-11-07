@@ -1,0 +1,90 @@
+{
+ "code": "E1.5",
+ "titre": "Aéroport, gare, hôtel",
+ "epreuve": "E",
+ "epreuve_nom": "Anglais",
+ "page": 419,
+ "page_corrige": 421,
+ "situation": [
+  "Une cliente explique : « My flight leaves from Terminal 2E. Please drop me off at departures. Next week, could you pick me up at arrivals? » Le chauffeur note les deux courses."
+ ],
+ "retenir": "Pick up : prendre en charge ; drop off : déposer. Departures, arrivals, terminal ; platform : le quai d’une gare.",
+ "qcm": [
+  {
+   "question": "« Drop me off at departures » :",
+   "options": [
+    [
+     "A",
+     "venez me chercher aux arrivées"
+    ],
+    [
+     "B",
+     "déposez-moi aux départs"
+    ],
+    [
+     "C",
+     "déposez mes bagages à la consigne"
+    ],
+    [
+     "D",
+     "attendez-moi au parking"
+    ]
+   ],
+   "juste": "B",
+   "corrige": [
+    "To drop off : déposer quelqu’un ; departures : les départs (B). Aller chercher se dit to pick up (A est faux) ; la consigne et le parking ne sont pas cités (C et D sont faux)."
+   ]
+  },
+  {
+   "question": "« Could you pick me up at arrivals? » :",
+   "options": [
+    [
+     "A",
+     "Pouvez-vous me déposer aux départs ?"
+    ],
+    [
+     "B",
+     "Pouvez-vous porter mes bagages ?"
+    ],
+    [
+     "C",
+     "Pouvez-vous m’appeler à l’arrivée ?"
+    ],
+    [
+     "D",
+     "Pouvez-vous venir me chercher aux arrivées ?"
+    ]
+   ],
+   "juste": "D",
+   "corrige": [
+    "To pick up : aller chercher, prendre en charge ; arrivals : les arrivées (D). A inverse le sens ; ni bagages ni appel dans la phrase (A, B et C sont faux)."
+   ]
+  }
+ ],
+ "piege": "Confondre drop off (déposer) et pick up (aller chercher), ou departures (départs) et arrivals (arrivées).",
+ "plus_loin": {
+  "question": "« Platform 5 », à la gare, c’est :",
+  "reponse": "La voie, le quai n° 5."
+ },
+ "sources": [
+  [
+   "Cambridge Dictionary, « pick up », « drop off »",
+   ""
+  ],
+  [
+   "Oxford Learner’s Dictionaries, « departure », « arrival »",
+   ""
+  ]
+ ],
+ "verifie": "octobre 2026",
+ "url": "e1-5-aeroport-gare-hotel",
+ "titre_page": "QCM VTC d'anglais : aéroport, gare, hôtel (fiche E1.5)",
+ "description": "QCM VTC d'anglais : aéroport, gare, hôtel. Épreuve E : une situation, deux QCM, avec le corrigé sourcé.",
+ "liens": [
+  [
+   "",
+   "dossiers/reussir-examen-vtc-premier-coup.html"
+  ]
+ ],
+ "langue_replique": "en"
+}

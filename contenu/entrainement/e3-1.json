@@ -1,0 +1,90 @@
+{
+ "code": "E3.1",
+ "titre": "Nombres, prix, heures",
+ "epreuve": "E",
+ "epreuve_nom": "Anglais",
+ "page": 433,
+ "page_corrige": 435,
+ "situation": [
+  "Un client demande : « How much is it to Orly? What time will we arrive? » Le chauffeur annonce quarante-cinq euros et une arrivée vers 14 h 15, puis vérifie qu’il a été bien compris."
+ ],
+ "retenir": "-teen : 13 à 19 ; -ty : dizaines. Past : et ; to : moins ; a quarter : un quart ; half past : et demie ; a.m. (matin), p.m. (après-midi).",
+ "qcm": [
+  {
+   "question": "Comment dire 45 € ?",
+   "options": [
+    [
+     "A",
+     "It’s fourteen-five euros."
+    ],
+    [
+     "B",
+     "It’s four-five euros."
+    ],
+    [
+     "C",
+     "It’s fifty-four euros."
+    ],
+    [
+     "D",
+     "It’s forty-five euros."
+    ]
+   ],
+   "juste": "D",
+   "corrige": [
+    "Les dizaines finissent en -ty : forty, 40 ; forty-five, 45 (D). Fourteen, en -teen, c’est 14 (A est faux) ; « four-five » n’existe pas (B est faux) ; fifty-four, c’est 54 (C est faux)."
+   ]
+  },
+  {
+   "question": "Comment dire 14 h 15 ?",
+   "options": [
+    [
+     "A",
+     "A quarter to two p.m."
+    ],
+    [
+     "B",
+     "A quarter past two p.m."
+    ],
+    [
+     "C",
+     "Two fifteen a.m."
+    ],
+    [
+     "D",
+     "Fourteen and a quarter."
+    ]
+   ],
+   "juste": "B",
+   "corrige": [
+    "En anglais, on compte souvent sur 12 heures : 14 h 15, c’est two fifteen p.m., ou a quarter past two (B). A quarter to two, c’est 13 h 45 (A est faux) ; a.m. désigne le matin (C est faux) ; D calque le français (D est faux)."
+   ]
+  }
+ ],
+ "piege": "Confondre -teen et -ty : fourteen (14) et forty (40), fifteen (15) et fifty (50). L’accent tombe sur -teen.",
+ "plus_loin": {
+  "question": "Comment dire 18 h 30 ?",
+  "reponse": "« Half past six in the evening », ou « six thirty p.m. »"
+ },
+ "sources": [
+  [
+   "Cambridge Dictionary, « quarter », « past », « p.m. »",
+   ""
+  ],
+  [
+   "Oxford Learner’s Dictionaries, « forty », « fourteen »",
+   ""
+  ]
+ ],
+ "verifie": "octobre 2026",
+ "url": "e3-1-nombres-prix-heures",
+ "titre_page": "QCM VTC d'anglais : nombres, prix et heures (fiche E3.1)",
+ "description": "QCM VTC d'anglais : nombres, prix et heures. Épreuve E : une situation, deux QCM, avec le corrigé sourcé.",
+ "liens": [
+  [
+   "",
+   "dossiers/reussir-examen-vtc-premier-coup.html"
+  ]
+ ],
+ "langue_replique": "en"
+}

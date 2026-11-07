@@ -1,0 +1,84 @@
+{
+ "code": "B3.4",
+ "titre": "Le seuil de rentabilité et le point mort",
+ "epreuve": "B",
+ "epreuve_nom": "Gestion",
+ "page": 282,
+ "page_corrige": 285,
+ "situation": [
+  "Avec 60 000 € de chiffre d’affaires, 18 000 € de charges fixes et un taux de marge sur coûts variables de 60 %, Karim se demande à partir de quel chiffre d’affaires il commence à gagner de l’argent.",
+  "Son activité est régulière toute l’année."
+ ],
+ "qrc": {
+  "question": "Calculez son point mort : à quel moment de l’année atteint-il ce seuil ?",
+  "corrige": [
+   "point mort = seuil ÷ chiffre d’affaires × 12 mois = 30 000 ÷ 60 000 × 12 = 6 mois ;",
+   "avec une activité régulière, Karim atteint son seuil fin juin ; chaque euro encaissé ensuite dégage du bénéfice."
+  ],
+  "bareme": "Un point pour le calcul, un point pour la date.",
+  "points": [
+   [
+    "J'ai fait le calcul : 6 mois",
+    1
+   ],
+   [
+    "J'ai donné la date : fin juin",
+    1
+   ]
+  ]
+ },
+ "retenir": "Seuil de rentabilité = charges fixes ÷ taux de marge sur coûts variables ; point mort = seuil ÷ CA × 12 mois (ou × 360 jours).",
+ "qcm": [
+  {
+   "question": "Quel est son seuil de rentabilité ?",
+   "options": [
+    [
+     "A",
+     "18 000 €"
+    ],
+    [
+     "B",
+     "10 800 €"
+    ],
+    [
+     "C",
+     "36 000 €"
+    ],
+    [
+     "D",
+     "30 000 €"
+    ]
+   ],
+   "juste": "D",
+   "corrige": [
+    "Le seuil de rentabilité est le chiffre d’affaires pour lequel le résultat est nul : la marge couvre exactement les charges fixes. Charges fixes ÷ taux de marge sur coûts variables = 18 000 € ÷ 0,60 = 30 000 € (D).",
+    "Vérification : 30 000 € × 60 % = 18 000 €. 18 000 € oublie la marge (A est faux) ; 10 800 € multiplie au lieu de diviser (B est faux) ; 36 000 € est la marge de l’année (C est faux)."
+   ]
+  }
+ ],
+ "piege": "Multiplier les charges fixes par le taux de marge au lieu de les diviser. Vérifiez : seuil × taux = charges fixes.",
+ "plus_loin": {
+  "question": "Ses charges fixes passent à 21 000 €. Quel est le nouveau seuil ?",
+  "reponse": "21 000 € ÷ 0,60 = 35 000 € : chaque hausse des charges fixes recule le point mort."
+ },
+ "sources": [
+  [
+   "Bpifrance Création, « Le seuil de rentabilité » (2026)",
+   ""
+  ],
+  [
+   "Arrêté du 6 avril 2017, programme de l’épreuve B",
+   ""
+  ]
+ ],
+ "verifie": "octobre 2026",
+ "url": "b3-4-seuil-rentabilite-point-mort",
+ "titre_page": "QCM VTC : seuil de rentabilité et point mort (fiche B3.4)",
+ "description": "QCM VTC : seuil de rentabilité et point mort. Épreuve B : une situation, un QCM et une réponse à rédiger, avec le corrigé sourcé.",
+ "liens": [
+  [
+   "",
+   "simulateurs/cout-revient-revenu-net-vtc.html"
+  ]
+ ]
+}

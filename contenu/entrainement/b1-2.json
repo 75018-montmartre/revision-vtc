@@ -1,0 +1,95 @@
+{
+ "code": "B1.2",
+ "titre": "La micro-entreprise : un régime, pas une société",
+ "epreuve": "B",
+ "epreuve_nom": "Gestion",
+ "page": 254,
+ "page_corrige": 259,
+ "situation": [
+  "Léa démarre comme chauffeuse VTC. Son cousin lui conseille la micro-entreprise : « pas de comptabilité compliquée, des cotisations simples ». Elle prévoit 60 000 € de chiffre d’affaires la première année, puis 90 000 € par an ensuite, avec une seconde voiture et un chauffeur salarié."
+ ],
+ "qrc": {
+  "question": "Expliquez comment sont calculés les cotisations sociales et l’impôt d’un micro-entrepreneur.",
+  "corrige": [
+   "cotisations : un pourcentage du chiffre d’affaires encaissé, 21,2 % pour un VTC en 2026, même sans bénéfice ;",
+   "impôt : sur le chiffre d’affaires diminué d’un abattement forfaitaire de 50 %, ou par un versement libératoire de 1,7 % (voir B4.2) ; les frais réels ne se déduisent pas."
+  ],
+  "bareme": "Un point pour les cotisations, un point pour l’impôt.",
+  "points": [
+   [
+    "J'ai expliqué le calcul des cotisations",
+    1
+   ],
+   [
+    "J'ai expliqué le calcul de l'impôt",
+    1
+   ]
+  ]
+ },
+ "retenir": "Micro-entreprise : régime de l’entreprise individuelle ; services : 83 600 € en 2026 ; sortie après deux années de dépassement ; cotisations et impôt calculés sur le chiffre d’affaires.",
+ "qcm": [
+  {
+   "question": "Que doit savoir Léa ?",
+   "options": [
+    [
+     "A",
+     "La micro-entreprise est une société : il faut déposer un capital."
+    ],
+    [
+     "B",
+     "Elle reste micro-entrepreneuse quel que soit son chiffre d’affaires."
+    ],
+    [
+     "C",
+     "Ses cotisations seront calculées sur son bénéfice, après ses frais."
+    ],
+    [
+     "D",
+     "Si elle dépasse 83 600 € deux années de suite, elle quitte le régime."
+    ]
+   ],
+   "juste": "D",
+   "corrige": [
+    "La micro-entreprise n’est pas une forme juridique : c’est un régime simplifié de l’entreprise individuelle, sans capital ni statuts (A est faux). En 2026, il s’applique aux prestations de services tant que le chiffre d’affaires ne dépasse pas 83 600 € par an (B est faux).",
+    "Un seul dépassement ne fait pas perdre le régime. Deux années civiles de suite, et Léa passe au régime réel le 1er janvier suivant (D). Les cotisations portent sur le chiffre d’affaires encaissé, pas sur le bénéfice (C est faux)."
+   ]
+  }
+ ],
+ "piege": "Comparer le seuil au bénéfice. Il se compare au chiffre d’affaires, avant toute déduction de frais.",
+ "plus_loin": {
+  "question": "Léa dépasse 83 600 € une seule année, puis redescend. Que se passe-t-il ?",
+  "reponse": "Rien : il faut deux années civiles de dépassement consécutives pour quitter le régime micro."
+ },
+ "sources": [
+  [
+   "Code général des impôts, art. 50-0 ; CSS, art. L613-7",
+   ""
+  ],
+  [
+   "Entreprendre.service-public.gouv.fr, fiche F32353 (2026)",
+   ""
+  ],
+  [
+   "Economie.gouv.fr, cotisations des micro-entreprises (2026)",
+   ""
+  ]
+ ],
+ "verifie": "octobre 2026",
+ "url": "b1-2-micro-entreprise-regime-societe",
+ "titre_page": "QCM VTC : la micro-entreprise, régime et seuil (fiche B1.2)",
+ "description": "QCM VTC : la micro-entreprise, régime et seuil. Épreuve B : une situation, un QCM et une réponse à rédiger, avec le corrigé sourcé.",
+ "liens": [
+  [
+   "",
+   "questions/2026-10-28-cotisations-vtc-micro-entreprise.html"
+  ],
+  [
+   "",
+   "dossiers/chauffeur-vtc-salarie-ou-independant.html"
+  ],
+  [
+   "",
+   "simulateurs/cout-revient-revenu-net-vtc.html"
+  ]
+ ]
+}

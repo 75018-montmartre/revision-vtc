@@ -1,0 +1,88 @@
+{
+ "code": "F3.6",
+ "titre": "Forfaits aéroport et mises à disposition",
+ "epreuve": "F",
+ "epreuve_nom": "Développement commercial",
+ "page": 356,
+ "page_corrige": 362,
+ "situation": [
+  "Sarah (0,54 € par kilomètre, 18 € par heure) prépare deux offres. Un forfait aéroport : 40 km jusqu’au terminal, puis 40 km de retour à vide, car elle trouve rarement un client sur place. Et une mise à disposition de 5 heures pour un mariage, kilomètres compris."
+ ],
+ "qrc": {
+  "question": "Calculez le prix HT de la mise à disposition avec un taux de marge de 25 %, puis son prix TTC.",
+  "corrige": [
+   "coût : 5 h × 18 € = 90 € ; prix HT = 90 € × 1,25 = 112,50 € ;",
+   "prix TTC, si elle est redevable de la TVA : 112,50 € × 1,10 = 123,75 € ;",
+   "le contrat prévoit aussi le prix d’une heure en plus."
+  ],
+  "bareme": "Un point pour le prix HT, un point pour le prix TTC.",
+  "points": [
+   [
+    "J'ai trouvé le prix HT : 112,50 €",
+    1
+   ],
+   [
+    "J'ai trouvé le prix TTC : 123,75 €",
+    1
+   ]
+  ]
+ },
+ "retenir": "Forfait : tous les kilomètres, retour à vide compris, plus le risque de trafic. Mise à disposition : heures × coût horaire, puis marge.",
+ "qcm": [
+  {
+   "question": "Quel est le coût de revient du forfait aéroport ?",
+   "options": [
+    [
+     "A",
+     "21,60 €"
+    ],
+    [
+     "B",
+     "43,20 €"
+    ],
+    [
+     "C",
+     "54,00 €"
+    ],
+    [
+     "D",
+     "27,00 €"
+    ]
+   ],
+   "juste": "B",
+   "corrige": [
+    "Un forfait doit couvrir tous les kilomètres que la course fait parcourir, retour à vide compris : (40 + 40) km × 0,54 € = 43,20 € (B). 21,60 € oublie le retour (A est faux) ; 54 € et 27 € ne correspondent à aucun calcul juste (C et D sont faux).",
+    "Le forfait est convenu à l’avance : le risque des bouchons est pour le chauffeur, qui l’intègre à son prix. Pour une mise à disposition, l’unité naturelle est l’heure."
+   ]
+  }
+ ],
+ "piege": "Chiffrer un forfait aéroport sur le seul aller. Le retour à vide est un coût réel.",
+ "plus_loin": {
+  "question": "Le mariage dure 6 heures au lieu de 5. Combien facturer en plus ?",
+  "reponse": "Si le contrat prévoit 18 € × 1,25 = 22,50 € HT par heure en plus : 22,50 € HT."
+ },
+ "sources": [
+  [
+   "Code des transports, art. L3122-1 (conditions fixées à l’avance)",
+   "wiki/l3122-1.html"
+  ],
+  [
+   "Voir G4.3 dans ce livre",
+   ""
+  ]
+ ],
+ "verifie": "octobre 2026",
+ "url": "f3-6-forfaits-aeroport-mises-disposition",
+ "titre_page": "QCM VTC : chiffrer un forfait aéroport (fiche F3.6)",
+ "description": "QCM VTC : chiffrer un forfait aéroport. Épreuve F : une situation, un QCM et une réponse à rédiger, avec le corrigé sourcé.",
+ "liens": [
+  [
+   "",
+   "simulateurs/cout-revient-revenu-net-vtc.html"
+  ],
+  [
+   "",
+   "wiki/l3122-1.html"
+  ]
+ ]
+}

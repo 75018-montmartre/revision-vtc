@@ -6,6 +6,38 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Dimanche 8 novembre 2026, 0 h 45 · Nouvelle rubrique QCM VTC (21 fiches du livre) et tuiles arrondies sur tout le site
+
+- Nouvelle rubrique https://revision-vtc.fr/qcm/ (deuxième du menu) : 21 fiches d'entraînement tirées du livre, trois par épreuve écrite (A3.4, A3.2, A8.2 · B1.2, B3.2, B3.4 · C7.2, C4.2, C6.1 · D1.1, D1.3, D3.1 · E1.5, E3.1, E3.4 · F3.1, F3.4, F3.6 · G4.1, G3.1, G2.1), chacune jouable sur sa page (situation, confiance, QCM corrigé, réponse rédigée et barème, bilan, dates de révision). Texte recopié mot pour mot du livre et vérifié contre une seconde extraction : aucun écart. Fiches écartées faute de certitude aujourd'hui : B5.1, B5.2, B4.3 (chiffres 2027 à surveiller, sources en cours de correction), C5.6 (ZFE), D1.2 (dépend du texte d'une autre fiche), F4.2 (corrigé au passé pour une règle du 1er janvier 2027).
+- Encadré « Testez-vous » sur les questions, guides et articles du wiki liés à une fiche ; lien vers la rubrique sur l'accueil (« Par où commencer ? ») et sous la fiche de la page du livre.
+- Tout le site : tuiles arrondies à ombre douce à la place du relief noir, toutes de la même hauteur dans une liste, action en bas (« Lire la réponse », « Lire le guide », « Faire la fiche ») ; FAQ VTC et Guides VTC sur trois colonnes ; nouveau jaune #EDB321 ; pictogrammes en carré plein sans liseré ; menu à six rubriques sur une ligne.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px sur 21 pages ; aucun débordement ; deux fiches jouées jusqu'au bilan sans erreur de script.
+- Règles du livre touchées : aucune.
+- URL à indexer :
+  https://revision-vtc.fr/qcm/
+  https://revision-vtc.fr/qcm/a3-2-maraude-reservee-taxi.html
+  https://revision-vtc.fr/qcm/a3-4-gares-aeroports.html
+  https://revision-vtc.fr/qcm/a8-2-revenu-minimal-desactivation.html
+  https://revision-vtc.fr/qcm/b1-2-micro-entreprise-regime-societe.html
+  https://revision-vtc.fr/qcm/b3-2-cout-revient.html
+  https://revision-vtc.fr/qcm/b3-4-seuil-rentabilite-point-mort.html
+  https://revision-vtc.fr/qcm/c4-2-enfants-siege-place.html
+  https://revision-vtc.fr/qcm/c6-1-proteger-alerter-secourir.html
+  https://revision-vtc.fr/qcm/c7-2-periode-probatoire-activite-vtc.html
+  https://revision-vtc.fr/qcm/d1-1-lire-texte-quatre-etapes.html
+  https://revision-vtc.fr/qcm/d1-3-pieges-qcm-comprehension.html
+  https://revision-vtc.fr/qcm/d3-1-fautes-orthographe-coutent-points.html
+  https://revision-vtc.fr/qcm/e1-5-aeroport-gare-hotel.html
+  https://revision-vtc.fr/qcm/e3-1-nombres-prix-heures.html
+  https://revision-vtc.fr/qcm/e3-4-faux-amis-pieges-qcm.html
+  https://revision-vtc.fr/qcm/f3-1-formule-monome-cout-revient.html
+  https://revision-vtc.fr/qcm/f3-4-marge-taux-marge-taux-marque.html
+  https://revision-vtc.fr/qcm/f3-6-forfaits-aeroport-mises-disposition.html
+  https://revision-vtc.fr/qcm/g2-1-taille-puissance-lire-carte-grise.html
+  https://revision-vtc.fr/qcm/g3-1-deux-vignettes-ou-quoi-comment.html
+  https://revision-vtc.fr/qcm/g4-1-justificatif-reservation-sept-mentions.html
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 7 novembre 2026, 22 h 45 · Rythme vertical harmonisé sous les titres de bloc
 
 - Tout le site : le premier texte d'un bloc tombe toujours à la même distance de son titre (19 px entre le bas du titre et la première ligne), qu'il s'agisse d'un paragraphe, d'étapes numérotées ou d'une liste de questions ; les encadrés (cartes, texte officiel, brèves) commencent tous à 16 px ; 48 px entre deux blocs partout.

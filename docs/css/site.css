@@ -25,9 +25,9 @@
   --filet:#CDD3DB;     /* bordures */
   --nuit:#18212F;      /* bleu nuit : en-tête du site, bandeaux, relief, pastilles */
   --nuit-2:#243042;    /* bleu nuit clair : survol sur fond nuit, encarts dans un bandeau */
-  --jaune:#F5B820;     /* jaune signal : numéros d'article, étapes, choix actif, soulignement du menu */
-  --jaune-ombre:#B98500; /* relief des boutons jaunes */
-  --jaune-survol:#FFCB45; /* survol des boutons jaunes */
+  --jaune:#EDB321;     /* jaune signal : numéros d'article, étapes, choix actif, soulignement du menu */
+  --jaune-ombre:#B3850F; /* relief des boutons jaunes */
+  --jaune-survol:#F2C24F; /* survol des boutons jaunes */
   --lien-sur-nuit:#FFD766; /* liens dans un bandeau nuit (« En clair ») */
   --focus-sur-nuit:#9DBBFF; /* contour de focus sur le pied de page */
   --sur-nuit:#FFFFFF; --sur-nuit-doux:#C9D1DC;
@@ -42,7 +42,7 @@
   --relief:var(--nuit);                  /* épaisseur des éléments cliquables */
   --quadrille:rgba(24,33,47,.12);        /* lignes du fond quadrillé (plan de ville) */
   --pastille:var(--nuit);                /* pastille ronde fléchée des cartes */
-  --pastille-fleche:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F5B820' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E");
+  --pastille-fleche:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23EDB321' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E");
   --chevron-nav:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2311161E' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l6 6-6 6'/%3E%3C/svg%3E"); /* flèche « le menu continue » (téléphone), couleur du texte */
   --fleche-bouton:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17L17 7M9 7h8v8'/%3E%3C/svg%3E"); /* flèche ↗ des boutons (masque : prend la couleur du texte) */
   /* typographie */
@@ -57,6 +57,8 @@
   --e1:.25rem; --e2:.5rem; --e3:.75rem; --e4:1rem; --e5:1.5rem; --e6:2rem; --e7:3rem; --e8:4.5rem;
   /* formes */
   --rayon:4px; --rayon-p:3px; --rayon-carte:4px; --rayon-lien:4px; --pilule:999px;
+  --ombre-tuile:0 1px 2px rgba(17,22,30,.04),0 14px 34px -16px rgba(17,22,30,.24); /* tuiles arrondies : ombre douce, jamais noire */
+  --ombre-tuile-survol:0 2px 4px rgba(17,22,30,.05),0 20px 40px -16px rgba(17,22,30,.30);
   --ombre-h:0 2px 4px rgba(17,22,30,.06),0 14px 30px -14px rgba(17,22,30,.28); /* menu déroulant seulement */
 }
 @media (prefers-color-scheme: dark){
@@ -67,7 +69,8 @@
         --fonce:#0A0E14;
         --relief:#3A4A63;--quadrille:rgba(201,209,220,.07);--pastille:var(--jaune);
         --pastille-fleche:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2318212F' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E");
-        --chevron-nav:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E9EDF2' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l6 6-6 6'/%3E%3C/svg%3E")}
+        --chevron-nav:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E9EDF2' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l6 6-6 6'/%3E%3C/svg%3E");
+        --ombre-tuile:0 14px 34px -16px rgba(0,0,0,.7);--ombre-tuile-survol:0 20px 40px -16px rgba(0,0,0,.85)}
 }
 
 /* 2. Base ------------------------------------------------------------------ */
@@ -910,8 +913,10 @@ a.carte-hero:hover .carte-lien{text-decoration-thickness:2px}
 .nom-site{gap:.75rem;color:var(--encre)}
 .nom-site .marque{width:2.625rem;height:2.625rem;border-radius:8px;font-size:1.625rem}
 .nom-site .nom{line-height:1.1;font-family:var(--cond);font-weight:700;font-size:1.375rem;letter-spacing:.02em;text-transform:uppercase}
-.nom-site .sous{margin-top:.2rem;font-family:var(--sans);font-weight:400;font-size:.6875rem;letter-spacing:.12em;color:var(--gris)}
-.nav ul{gap:.25rem 1.5rem;font-size:.9375rem;font-weight:400}
+.nom-site .sous{margin-top:.2rem;font-family:var(--sans);font-weight:400;font-size:.6875rem;letter-spacing:.1em;color:var(--gris)}
+.nav ul{gap:.25rem 1.1rem;font-size:.9375rem;font-weight:400}
+/* six rubriques sur une ligne à côté du nom et du bouton (depuis l'ajout de « QCM VTC ») */
+@media (min-width:76.01rem){.entete .page{column-gap:var(--e4)}}
 .nav a{min-height:44px;padding:0;color:var(--encre);border-bottom:0}
 .nav a:hover{background:transparent;color:var(--encre)}
 .nav a::after{left:0;right:0;bottom:6px;height:2px}
@@ -946,7 +951,7 @@ a.carte-hero:hover .carte-lien{text-decoration-thickness:2px}
 @media print{.retenir{box-shadow:none}}
 /* pictogrammes des épreuves en panneaux (depuis le 7 novembre 2026) : plaque bleu nuit, liseré intérieur blanc, dessin jaune ;
    pas de lettre, et de l'air autour (dessin réduit dans la plaque, écart avec le texte) */
-.domaine .picto,.legende-domaines .picto{box-sizing:content-box;width:1.05rem;height:1.05rem;padding:.5rem;border-radius:7px;background:var(--nuit);color:var(--jaune);box-shadow:inset 0 0 0 2.5px var(--nuit),inset 0 0 0 4px var(--sur-nuit)}
+.domaine .picto,.legende-domaines .picto{box-sizing:content-box;width:1.05rem;height:1.05rem;padding:.5rem;border-radius:7px;background:var(--nuit);color:var(--jaune);box-shadow:none}
 .domaine,.legende-domaines li{gap:.85rem}
 .questions .domaine{margin:var(--e2) 0 var(--e4)}
 /* rythme vertical commun (depuis le 7 novembre 2026) : même écart entre un titre de bloc et ce qui le suit, quel que soit le contenu.
@@ -955,3 +960,94 @@ a.carte-hero:hover .carte-lien{text-decoration-thickness:2px}
 .corps-page h2 + *{margin-top:0}
 .corps-page h2 + .etapes{padding-top:.15rem}
 .corps-page h2 + h3{padding-top:.3rem}
+/* rubrique QCM VTC (depuis le 7 novembre 2026) : un bloc par épreuve, son panneau en titre, trois cartes sur une ligne
+   (une colonne sous 64rem, jamais de carte orpheline) ; le barème d'une réponse rédigée reprend le texte du livre */
+.corps-page h2.titre-epreuve{display:flex;align-items:center;gap:.85rem}
+.corps-page section > h2.titre-epreuve::before{display:none !important}
+.titre-epreuve .picto{box-sizing:content-box;flex:none;width:1.25rem;height:1.25rem;padding:.55rem;border-radius:7px;background:var(--nuit);color:var(--jaune);box-shadow:none}
+.questions.trois{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:64rem){.questions.trois{grid-template-columns:minmax(0,1fr)}}
+
+/* 10. Tuiles arrondies et fiches (depuis le 8 novembre 2026, rubrique QCM VTC) ------------------
+   Tuiles blanches à coins de 14 px, filet clair, ombre douce (--ombre-tuile), jamais de relief noir ;
+   toutes de la même hauteur (titre sur 2 lignes, texte sur 3 lignes au plus), contenu réparti dans la hauteur,
+   action en bas. La fiche jouable reprend la même tuile. */
+.questions.trois{gap:var(--e5)}
+.questions li{display:flex;flex-direction:column;gap:var(--e3);min-height:19rem;padding:2rem 2rem 1.75rem;border:1px solid var(--filet);border-radius:14px;box-shadow:var(--ombre-tuile);transition:transform .2s ease,box-shadow .2s ease}
+.questions.trois li::after{display:none}
+.questions.trois li:hover,.questions.trois li:focus-within{transform:translateY(-3px);box-shadow:var(--ombre-tuile-survol);border-color:var(--filet)}
+.questions.trois li:active{transform:none;box-shadow:var(--ombre-tuile)}
+.questions .carte-tete{margin:0}
+.questions li > .domaine{margin:0}
+.questions li > a{margin:0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.questions.trois a::before{content:"";position:absolute;inset:0;border-radius:14px}
+.questions li > p:not(.carte-tete):not(.carte-action):not(.domaine){display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;line-height:1.6}
+.questions .carte-action{margin:auto 0 0;padding-top:var(--e3);display:inline-flex;align-items:center;gap:.6rem;font-family:var(--sans);font-weight:600;font-size:1rem;color:var(--accent)}
+.carte-action::after{content:"";width:1rem;height:1rem;background:currentColor;-webkit-mask:var(--fleche-bouton) center/contain no-repeat;mask:var(--fleche-bouton) center/contain no-repeat;transition:transform .15s ease}
+.questions li:hover .carte-action::after{transform:translate(2px,-2px)}
+.questions.trois li:hover a{color:var(--encre)}
+/* fiche jouable : même tuile, plus d'air ; choix à plat (pas de relief noir), sur deux colonnes quand la place le permet */
+.fiche-essai{gap:var(--e6);padding:2.5rem;border:1px solid var(--filet);border-radius:14px;box-shadow:var(--ombre-tuile)}
+.fiche-essai .choix label{border:1px solid var(--filet) !important;border-radius:10px;box-shadow:none !important;transform:none !important;min-height:52px;align-items:center}
+.fiche-essai .choix label:hover{border-color:var(--encre) !important}
+.page-fiche .fiche-qcm{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--e3)}
+@media (max-width:52rem){.page-fiche .fiche-qcm{grid-template-columns:minmax(0,1fr)}.fiche-essai{padding:1.5rem}}
+.fiche-action{display:flex;justify-content:center;margin:var(--e5) 0 0}
+.fiche-essai .fiche-action .bouton{min-width:16rem}
+.fiche-score{display:flex;justify-content:center;align-items:baseline;gap:.6rem;margin:var(--e5) 0 0;padding:var(--e3) var(--e4);background:var(--doux);border-radius:10px;font:600 1rem var(--sans);color:var(--gris)}
+.fiche-score b{font:700 1.75rem var(--cond);color:var(--encre);font-variant-numeric:tabular-nums}
+/* page d'une fiche : la fiche sur toute la largeur, puis deux tuiles côte à côte, puis la navigation centrée */
+.page-fiche{display:grid;gap:var(--e6)}
+.tuiles-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--e5)}
+.tuiles-1{display:grid}
+@media (max-width:52rem){.tuiles-2{grid-template-columns:minmax(0,1fr)}}
+.tuile{padding:2rem;background:var(--carte);border:1px solid var(--filet);border-radius:14px;box-shadow:var(--ombre-tuile)}
+.tuile h2{margin:0 0 var(--e4)}
+.tuile h2::before{display:none !important}
+.tuile p{margin:0 0 var(--e4)}
+.tuile .voir-aussi{list-style:none;margin:0;padding:0;display:grid;gap:var(--e3)}
+.tuile .voir-aussi li{position:relative;margin:0;padding:.85rem 3rem .85rem 1rem;border:1px solid var(--filet);border-radius:10px;box-shadow:none;font-size:1rem;line-height:1.4}
+.tuile .voir-aussi li::after{content:"";position:absolute;right:1rem;top:50%;width:1rem;height:1rem;margin-top:-.5rem;background:var(--accent);-webkit-mask:var(--fleche-bouton) center/contain no-repeat;mask:var(--fleche-bouton) center/contain no-repeat;border-radius:0;animation:none}
+.tuile .voir-aussi li:hover{border-color:var(--encre);transform:none;box-shadow:none}
+.tuile .voir-aussi a::before{content:"";position:absolute;inset:0;border-radius:10px}
+.tuile .voir-aussi a{text-decoration:none;color:var(--encre)}
+.navigation-fiches{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--e3)}
+@media (prefers-reduced-motion: reduce){.questions.trois li,.carte-action::after{transition:none}}
+@media print{.questions.trois li,.fiche-essai,.tuile{box-shadow:none}}
+
+/* 11. Tuiles arrondies sur tout le site (depuis le 8 novembre 2026) --------------------------------
+   Plus aucun relief noir : grandes cartes et encadrés en tuiles (coins de 14 px, filet clair, ombre douce --ombre-tuile),
+   petites cartes-liens et choix à plat (coins de 10 px, filet clair, flèche ↗ bleue), survol : la tuile monte de 3 px. */
+:is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.parcours > li,.cote-bloc,.carte-simu,.presentation-livre,.officiel,.breve,.cherche,.impact,.schema){border-radius:14px}
+:is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.parcours > li,.cote-bloc,.carte-simu,.officiel,.breve){border:1px solid var(--filet) !important;box-shadow:var(--ombre-tuile) !important}
+:is(.questions li,.numeros > li,.une-actu,.actu-precedents li){transition:transform .2s ease,box-shadow .2s ease}
+:is(.questions li,.numeros > li,.une-actu,.actu-precedents li):hover,:is(.questions li,.numeros > li,.une-actu,.actu-precedents li):focus-within{transform:translateY(-3px) !important;box-shadow:var(--ombre-tuile-survol) !important}
+:is(.questions li,.numeros > li,.une-actu,.actu-precedents li):active{transform:none !important}
+:is(.questions li,.numeros > li,.une-actu,.actu-precedents li)::after{display:none}
+:is(.questions li,.numeros > li,.une-actu,.actu-precedents li):hover a{color:var(--encre)}
+.questions li{padding:2rem}
+.une-actu{padding:2rem}
+.actu-precedents li{padding:var(--e4) var(--e5)}
+/* lien étendu à toute la tuile (cartes des questions et des guides, numéros de l'Actualité) */
+:is(.questions li,.numeros > li) a::before{content:"";position:absolute;inset:0;border-radius:14px}
+/* petites cartes-liens, liens de l'encadré latéral, sommaire : à plat, flèche ↗ */
+:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li){border:1px solid var(--filet) !important;border-radius:10px;box-shadow:none !important;transform:none !important;transition:border-color .15s ease}
+:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover,:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li):focus-within{border-color:var(--encre) !important}
+:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li)::after{display:block !important;content:"";position:absolute;right:1rem;top:50%;width:1rem;height:1rem;margin-top:-.5rem;border-radius:0;background:var(--accent);-webkit-mask:var(--fleche-bouton) center/contain no-repeat;mask:var(--fleche-bouton) center/contain no-repeat;animation:none !important;transition:transform .15s ease}
+:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover::after{transform:translate(2px,-2px)}
+.essentiel-liens li,.wiki-liste li{padding:.9rem 3rem .9rem 1.15rem}
+.cote-bloc .voir-aussi li{padding:.7rem 2.75rem .7rem .9rem}
+.sommaire a{border:1px solid var(--filet) !important;border-radius:999px;box-shadow:none !important;transform:none !important}
+.sommaire a:hover{border-color:var(--encre) !important}
+/* choix (simulateur, examens blancs, fiches) : à plat */
+.choix label{border:1px solid var(--filet) !important;border-radius:10px;box-shadow:none !important;transform:none !important}
+.choix label:hover{border-color:var(--encre) !important}
+.choix label:has(input:checked){background:var(--jaune);color:var(--nuit);border-color:var(--jaune) !important}
+/* carte du livre sur fond nuit (accueil) : arrondie, sans relief */
+a.carte-hero{border-radius:14px;box-shadow:none !important;transform:none !important;transition:transform .2s ease}
+a.carte-hero:hover,a.carte-hero:focus-visible{transform:translateY(-3px) !important}
+.carte-simu .carte-lien::after{background:var(--accent);-webkit-mask:var(--fleche-bouton) center/1.1rem no-repeat;mask:var(--fleche-bouton) center/1.1rem no-repeat;border-radius:0;width:1.1rem;height:1.1rem}
+.en-clair{border-radius:14px}
+@media (prefers-reduced-motion: reduce){:is(.questions li,.numeros > li,.une-actu,.actu-precedents li,a.carte-hero){transition:none}:is(.questions li,.numeros > li,.une-actu,.actu-precedents li,a.carte-hero):hover{transform:none !important}}
+@media print{:is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.parcours > li,.cote-bloc,.carte-simu,.officiel,.breve){box-shadow:none !important}}
+.questions{grid-auto-rows:1fr} /* toutes les tuiles d'une liste à la même hauteur */
