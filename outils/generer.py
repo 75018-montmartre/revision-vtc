@@ -695,11 +695,22 @@ def qcm(fs):
     <nav class="navigation-fiches" aria-label="{ty("Autres fiches")}">{nav}</nav>
     </div>'''
         chemin = f'qcm/{f["url"]}.html'
+        ep, court = DOMAINES[f["epreuve"]]
+        aligne = [{"@type": "AlignmentObject", "alignmentType": "educationalSubject", "targetName": f"Examen VTC, {ep} : {court}"},
+                  {"@type": "AlignmentObject", "alignmentType": "educationalLevel", "targetName": "Examen d'accès à la profession de conducteur VTC"}]
+        def question(q):
+            ordre = [l for l, _ in q["options"]]
+            rep = lambda l, t: {"@type": "Answer", "position": ordre.index(l), "encodingFormat": "text/html", "text": f"{l}. {t}"}
+            return {"@type": "Question", "eduQuestionType": "Multiple choice", "learningResourceType": "Practice problem",
+                    "name": q["question"], "text": " ".join(f["situation"]) + " " + q["question"], "encodingFormat": "text/html",
+                    "typicalAgeRange": "18-", "assesses": f["retenir"], "educationalAlignment": aligne,
+                    "comment": {"@type": "Comment", "text": " ".join(q["corrige"])},
+                    "suggestedAnswer": [rep(l, t) for l, t in q["options"] if l != q["juste"]],
+                    "acceptedAnswer": rep(q["juste"], dict(q["options"])[q["juste"]])}
         ld = {"@context": "https://schema.org", "@type": "Quiz", "name": f["titre_page"], "url": SITE + chemin, "inLanguage": "fr",
-              "educationalLevel": "Examen VTC", "about": f["titre"], "author": AUTEUR, "isPartOf": {"@id": SITE + "#site"},
-              "hasPart": [{"@type": "Question", "name": q["question"], "eduQuestionType": "Multiple choice",
-                           "suggestedAnswer": [{"@type": "Answer", "text": t} for l, t in q["options"] if l != q["juste"]],
-                           "acceptedAnswer": {"@type": "Answer", "text": dict(q["options"])[q["juste"]]}} for q in f["qcms"]]}
+              "about": {"@type": "Thing", "name": f["titre"]}, "educationalAlignment": aligne, "learningResourceType": "Practice problem",
+              "typicalAgeRange": "18-", "educationalLevel": "Examen VTC", "author": AUTEUR, "isPartOf": {"@id": SITE + "#site"},
+              "hasPart": [question(q) for q in f["qcms"]]}
         ecrire(chemin, page(html.escape(f["titre_page"] + " · Révision VTC", quote=False), corps, "qcm", "../", html.escape(f["description"]),
                             scripts_fin='<script src="../js/fiche.js" defer></script>\n',
                             jsonld=[ld, fil(("Accueil", ""), ("QCM VTC", "qcm/"), (f["titre"], chemin))]))

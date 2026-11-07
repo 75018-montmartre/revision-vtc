@@ -6,6 +6,12 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Dimanche 8 novembre 2026, 0 h 55 · QCM VTC : données structurées complétées
+
+- Les 21 pages https://revision-vtc.fr/qcm/… : données structurées « Quiz » complétées (texte complet de chaque question avec sa situation, réponses numérotées, corrigé en commentaire, règle évaluée, alignement sur l'épreuve), après l'alerte « Champ text manquant » de Google Search Console. Contenu visible inchangé.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Dimanche 8 novembre 2026, 0 h 45 · Nouvelle rubrique QCM VTC (21 fiches du livre) et tuiles arrondies sur tout le site
 
 - Nouvelle rubrique https://revision-vtc.fr/qcm/ (deuxième du menu) : 21 fiches d'entraînement tirées du livre, trois par épreuve écrite (A3.4, A3.2, A8.2 · B1.2, B3.2, B3.4 · C7.2, C4.2, C6.1 · D1.1, D1.3, D3.1 · E1.5, E3.1, E3.4 · F3.1, F3.4, F3.6 · G4.1, G3.1, G2.1), chacune jouable sur sa page (situation, confiance, QCM corrigé, réponse rédigée et barème, bilan, dates de révision). Texte recopié mot pour mot du livre et vérifié contre une seconde extraction : aucun écart. Fiches écartées faute de certitude aujourd'hui : B5.1, B5.2, B4.3 (chiffres 2027 à surveiller, sources en cours de correction), C5.6 (ZFE), D1.2 (dépend du texte d'une autre fiche), F4.2 (corrigé au passé pour une règle du 1er janvier 2027).
