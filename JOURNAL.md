@@ -6,6 +6,16 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 7 novembre 2026, 19 h 25 · Article n° 6 (tâche tous les deux jours)
+
+- Titre : « Taxi ou VTC : quelles différences pour devenir chauffeur en 2027 ? » (épreuve A, réglementation T3P).
+- Page : https://revision-vtc.fr/dossiers/taxi-ou-vtc-differences.html (2 500 mots, sans photo).
+- En bref : seul le taxi, titulaire d'une autorisation de stationnement (licence), peut prendre un client sans réservation et chercher des clients sur la voie publique ; en échange, ses prix sont plafonnés (2026 : 4,48 € de prise en charge, 1,30 € du kilomètre au plus, 8 € minimum) et sa voiture porte compteur et lumineux. La licence est gratuite en mairie après une longue attente, ou achetée de 30 000 € à 300 000 €. Le VTC travaille uniquement sur réservation, à prix libres. Les deux examens ont cinq épreuves écrites communes ; un admissible depuis moins de 3 ans ne passe que les deux épreuves propres à l'autre métier, puis la pratique.
+- Sources lues le jour même (recherche web puis lecture) : fiches Entreprendre Service Public F21907, F22127, F31027, actualité A15396, arrêté du 6 avril 2017 (Légifrance). Textes du wiki (L3120-2, R3122-7, R3120-8-2, arrêtés du 26 mars 2015 et du 11 août 2017) recoupés avec ces fiches. Légifrance a refusé les pages du chapitre « Les taxis » (L3121-1 et suivants) : rien n'en est cité directement.
+- Relecture indépendante : tout confirmé, calculs justes ; 9 précisions apportées (carte de taxi départementale et carte VTC nationale, 4 à 9 places attribué à la fiche officielle, formation continue attribuée à l'arrêté du 11 août 2017, secourisme PSC1 exigé pour le taxi, forfaits aéroports « taxis parisiens, course directe », nuances du revenu minimum des plateformes, frais VTC chiffrés).
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px, aucun débordement.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 7 novembre 2026, 19 h 21 · Actualité VTC n° 5 (tâche du lundi)
 
 - Page : https://revision-vtc.fr/actualite/2026-11-07.html

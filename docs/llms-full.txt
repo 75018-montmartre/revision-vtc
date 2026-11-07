@@ -1617,6 +1617,90 @@ Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A5.4 (Avertissemen
 
 ## Guides VTC
 
+### Taxi ou VTC : quelles différences pour devenir chauffeur en 2027 ?
+
+Page : https://revision-vtc.fr/dossiers/taxi-ou-vtc-differences.html
+Publié le 7 novembre 2026, chiffres vérifiés le 7 novembre 2026.
+
+Même examen ou presque, une carte professionnelle délivrée par la préfecture dans les deux cas, même métier au volant : et pourtant, le taxi et le VTC ne jouent pas avec les mêmes règles. Voici, texte officiel à l'appui, tout ce qui les sépare et le chemin pour passer de l'un à l'autre.
+Yanis vient d'être déclaré admissible à l'examen VTC. Un ami chauffeur de taxi lui dit : « Fais plutôt taxi, tu prendras les clients dans la rue. » C'est vrai. Mais pour cela, il lui faudrait une licence, gratuite après des années d'attente en mairie ou achetée entre 30 000 € et 300 000 €.
+La différence tient en une règle : seul le taxi, titulaire d'une autorisation de stationnement (la « licence »), peut prendre un client sans réservation et chercher des clients sur la voie publique. En échange, ses prix sont plafonnés (en 2026 : 4,48 € de prise en charge, 1,30 € du kilomètre au plus) et sa voiture porte compteur et lumineux. Le VTC travaille uniquement sur réservation, à prix libres, avec une voiture d'un gabarit minimum. Les deux examens ont cinq épreuves écrites communes sur sept : un admissible VTC depuis moins de 3 ans ne passe que les deux épreuves écrites propres au taxi, puis la pratique.
+La vraie différence : prendre un client dans la rue
+Un passant lève la main sur le trottoir. Le taxi peut s'arrêter et le prendre. Le VTC, non : il ne peut prendre en charge un client sur la voie publique que s'il justifie d'une réservation préalable. C'est l'article L3120-2 du Code des transports qui trace cette frontière, et il le fait d'une façon précise : ces interdictions s'appliquent à tout conducteur « à moins de justifier de l'autorisation de stationnement », c'est-à-dire la licence de taxi.
+Concrètement, sans licence de taxi, un conducteur ne peut pas :
+prendre en charge un client sur la voie publique sans réservation préalable ;
+s'arrêter, stationner ou circuler sur la voie publique en quête de clients ;
+stationner aux abords des gares et des aéroports au-delà d'une durée fixée par décret avant la prise en charge du client qui a réservé : une heure au plus, comme l'explique notre réponse sur l'attente en gare et à l'aéroport.
+La fiche officielle « Devenir chauffeur de VTC » le résume ainsi : la maraude est interdite au VTC, elle est réservée aux taxis, et la maraude électronique aussi.
+Pour un chauffeur, cette règle change la journée de travail. Le taxi peut stationner ou circuler sur la voie publique pour trouver des clients. Le VTC dépend des réservations : celles de ses applications, de sa propre clientèle ou d'une centrale. Entre deux courses, il ne doit pas stationner sur la voie publique en attendant le client suivant.
+La licence de taxi : gratuite mais rare, ou très chère
+Pour rouler en taxi, il ne suffit pas d'avoir la carte professionnelle. Selon la fiche officielle « Devenir chauffeur de taxi » (vérifiée le 13 juillet 2026), tout taxi doit détenir une autorisation de stationnement (ADS) associée à son véhicule, souvent appelée « licence » ou « plaque ». Il y a trois façons de l'obtenir, et la carte professionnelle est exigée pour l'obtenir gratuitement ou la louer.
+Demande gratuite à la mairie (à Paris, à la préfecture de police) 0 € Inscription sur une liste d'attente, à renouveler chaque année ; délai souvent de plusieurs années dans les grandes villes ; licence valable 5 ans, renouvelable, qui ne se vend pas
+Achat à un autre taxi de 30 000 € à 300 000 € (environ 190 000 € à Paris, 250 000 € à Nice) Licence obtenue gratuitement avant le 1er octobre 2014 : revente possible après 15 ans d'activité sans interruption ; licence achetée : revente après 5 ans d'utilisation sans interruption
+Location à une entreprise spécialisée (location-gérance) environ 3 500 € par mois à Paris Contrat d'un an au minimum, loyer mensuel
+Ces prix d'achat et de location sont des ordres de grandeur publiés par l'administration, pas des tarifs : ils varient selon la ville et le moment. À titre d'illustration, la location à Paris représente 42 000 € par an (3 500 € × 12 mois). Une licence obtenue gratuitement après le 1er octobre 2014 ne peut pas être achetée : elle ne se revend pas.
+Côté VTC, il n'y a pas de licence. L'exploitant s'inscrit au registre des VTC : 170 €, inscription à renouveler tous les 5 ans, et achète une vignette d'environ 35 €. Le détail figure dans notre budget complet du lancement en VTC.
+Les prix : plafonnés pour le taxi, libres pour le VTC
+Le taxi applique un tarif encadré, affiché par son compteur. La fiche officielle sur les tarifs des taxis (vérifiée le 13 août 2026) donne les maximums en vigueur pour 2026, fixés par l'arrêté du 24 décembre 2025 et appliqués au plus tard le 1er février 2026 :
+prise en charge : 4,48 € au maximum ;
+kilomètre parcouru : 1,30 € au maximum ;
+heure d'attente ou de marche lente : 42,15 € au maximum ;
+course minimum : 8 €, pour tous les taxis, parisiens ou non.
+Nous avons appliqué ces plafonds à quelques distances, pour une course sans attente ni ralentissement, sans supplément ni majoration. Ce sont donc des prix maximums théoriques, pas des prix observés.
+2 km 4,48 € + 2 × 1,30 € = 7,08 €, sous le minimum 8,00 €
+5 km 4,48 € + 5 × 1,30 € 10,98 €
+10 km 4,48 € + 10 × 1,30 € 17,48 €
+20 km 4,48 € + 20 × 1,30 € 30,48 €
+Certains trajets ont un prix fixe, dans les deux sens. Pour les taxis parisiens en 2026, en course directe : 56 € entre Roissy-Charles-de-Gaulle et Paris rive droite, 65 € pour la rive gauche, 45 € entre Orly et la rive droite, 36 € pour la rive gauche. Le taxi doit aussi accepter la carte bancaire quel que soit le montant, et remettre une note dès que la course atteint 25 € TTC.
+Le VTC, lui, n'a ni compteur ni tarif réglementé : « Les prix sont libres et ne sont pas réglementés, contrairement aux taxis », dit la fiche officielle. Quand le chauffeur passe par une plateforme, les règles en vigueur lui garantissent en revanche un revenu minimum, selon la fiche officielle : 9 € par course après déduction de la commission, 30 € par heure travaillée et 1 € par kilomètre parcouru pendant une course. Notre article sur ce que gagne vraiment un chauffeur VTC de l'heure détaille ces minimums.
+La voiture : compteur et lumineux d'un côté, gabarit minimum de l'autre
+Un taxi se reconnaît à ses équipements. Selon la fiche officielle sur les taxis, il a 9 places assises au maximum, chauffeur compris, et porte obligatoirement :
+un lumineux de toit avec la mention « taxi » et le nom de la commune, vert quand il est libre, rouge quand il est occupé ;
+un taximètre (le compteur) et une imprimante reliée au compteur pour la note ;
+un terminal de paiement par carte bancaire ;
+une plaque avec le numéro de la licence.
+Le taximètre et le lumineux sont contrôlés à chaque contrôle technique annuel.
+Le VTC, au contraire, n'a pas le droit de porter ces équipements quand ils peuvent créer une confusion avec un taxi (article R3122-7). En revanche, sa voiture doit respecter un gabarit. Elle compte de 4 à 9 places, chauffeur compris, selon la fiche officielle, et l'arrêté du 26 mars 2015 impose :
+moins de 7 ans, sauf véhicule de collection ;
+au moins 4 portes ;
+4,50 m de long et 1,70 m de large au minimum ;
+un moteur d'au moins 84 kW de puissance nette.
+Les voitures hybrides et électriques échappent à ces critères d'âge, de portes, de taille et de puissance. La voiture VTC porte aussi la vignette VTC, à l'avant et à l'arrière, et passe un contrôle technique chaque année.
+L'examen : cinq épreuves communes, deux différentes
+Les deux examens sont fixés par le même texte, l'arrêté du 6 avril 2017, et organisés par la chambre de métiers et de l'artisanat. Les cinq premières épreuves écrites sont identiques : réglementation du transport public particulier de personnes (A), gestion (B), sécurité routière (C), français (D) et anglais (E), soit 3 heures d'écrit. Seules les deux dernières changent.
+F Connaissance du territoire et réglementation locale : 20 min, coefficient 3 Développement commercial et gestion propre au VTC : 30 min, coefficient 3
+G Réglementation nationale de l'activité de taxi et gestion propre à cette activité : 30 min, coefficient 3 Réglementation nationale spécifique au VTC : 20 min, coefficient 3
+Les règles d'admissibilité sont les mêmes : 10 sur 20 de moyenne pondérée sur les sept épreuves, au moins 6 sur 20 à chacune, sauf l'anglais (4 sur 20). L'épreuve pratique aussi : au moins 20 minutes de conduite en circulation, notée sur 20, et il faut 12 sur 20. Seule la répartition des points diffère un peu : le futur taxi est noté sur 3 points pour « la facturation et l'utilisation des équipements spéciaux » (le compteur), le futur VTC sur 2 points pour la facturation, et 1 point de plus sur la préparation du parcours. Notre article Réussir l'examen VTC du premier coup détaille le barème.
+La passerelle. Un candidat déclaré admissible à l'un des deux examens depuis moins de 3 ans est réputé avoir réussi les cinq épreuves communes pour l'autre examen (article 5 de l'arrêté). Il ne passe que les deux épreuves propres à l'autre métier, soit 50 minutes d'écrit, et doit y obtenir 10 sur 20 de moyenne et au moins 6 sur 20 à chacune. Il peut ensuite se présenter à l'épreuve pratique.
+Exemple : Yanis, admissible à l'examen VTC, veut aussi pouvoir devenir taxi. Tant que son admissibilité VTC date de moins de 3 ans, il s'inscrit à l'examen de taxi et ne passe que F (T), connaissance du territoire, et G (T), réglementation des taxis, puis la pratique de taxi.
+Ce qui est pareil, et un piège pour le taxi
+Beaucoup de règles sont communes aux deux métiers. Les fiches officielles « Devenir chauffeur de taxi » et « Devenir chauffeur de VTC » posent en grande partie les mêmes conditions :
+le permis B depuis 3 ans au moins (2 ans après une conduite accompagnée) ;
+un avis médical positif donné par un médecin agréé, pas par votre médecin traitant : voir tous les combien revient la visite médicale ;
+la réussite à l'examen, puis une carte professionnelle demandée à la préfecture, payante (environ 60 €) ;
+une formation continue tous les 5 ans (article R3120-8-2), de 14 heures, dans des sessions séparées pour les taxis et pour les VTC (arrêté du 11 août 2017, article 1) : voir la formation continue VTC en détail.
+Une différence d'accès, toutefois : la fiche « Devenir chauffeur de taxi » demande une formation de prévention et de secours civiques de niveau 1 (PSC1) datant de moins de 2 ans, alors que la fiche VTC indique que le brevet de secourisme n'est plus obligatoire pour le VTC, même s'il reste conseillé.
+Autre point propre au VTC : depuis le 12 août 2026, selon la fiche officielle, l'expérience professionnelle ne permet plus d'accéder à la profession (les demandes déposées avant cette date ne sont pas concernées). L'examen est l'unique voie d'accès.
+Le piège concerne le taxi : sa carte professionnelle ne vaut que dans le département où il a réussi l'examen, selon la fiche officielle. Pour exercer ailleurs, il doit suivre un stage de mobilité de 14 heures (connaissance du territoire et réglementation locale), et de 35 heures pour la zone des taxis parisiens, selon l'arrêté du 11 août 2017.
+Taxi ou VTC en 2027 : ce qu'il faut savoir
+Pour l'examen, le barème en vigueur au 7 novembre 2026 est celui de l'arrêté du 6 avril 2017, dans sa version du 1er avril 2024 : c'est lui qui s'applique tant qu'il n'est pas modifié.
+Une échéance concerne les taxis conventionnés par l'Assurance maladie, qui transportent des patients : selon la fiche officielle sur les taxis, ils ont jusqu'au 1er janvier 2027 au plus tard pour équiper leurs véhicules d'un dispositif de géolocalisation certifié et d'un système électronique de facturation intégré (SEFI), dans le cadre de la convention applicable depuis le 1er octobre 2025.
+Côté VTC, les obligations d'exploitant se sont renforcées en 2026 : depuis le 27 juin 2026, l'exploitant déclare au registre ses conducteurs, leur numéro de carte et les plaques de ses voitures, selon la fiche officielle « Devenir chauffeur de VTC ».
+Comment choisir entre taxi et VTC
+Il n'y a pas de bon choix pour tout le monde : tout dépend de votre ville, de votre budget et de la façon dont vous voulez travailler. Quelques questions pour y voir clair :
+Pouvez-vous financer une licence ? Sans achat ni location, le taxi passe par une liste d'attente de plusieurs années dans les grandes villes. Pour le VTC, l'inscription au registre (170 €) et la vignette (environ 35 €) remplacent la licence ; la voiture reste la grosse dépense.
+Où voulez-vous travailler ? La carte de taxi ne vaut que dans le département de l'examen ; en changer demande un stage. La carte VTC est valable sur tout le territoire national, selon la fiche officielle.
+Comment trouver vos clients ? Le taxi peut aussi prendre des clients dans la rue ; le VTC uniquement sur des réservations.
+Quel prix voulez-vous pratiquer ? Le taxi applique un tarif plafonné ; le VTC fixe ses prix, ou accepte ceux de la plateforme, avec des minimums garantis.
+Rien n'oblige à trancher tout de suite : grâce à la passerelle, une admissibilité obtenue à l'un des deux examens permet, pendant 3 ans, de passer l'autre avec seulement deux épreuves écrites. Pour un cas précis, renseignez-vous auprès de votre mairie (licence) et de la chambre de métiers et de l'artisanat (examen).
+Seul le taxi, titulaire d'une autorisation de stationnement, peut prendre un client sans réservation et chercher des clients sur la voie publique ; le VTC travaille uniquement sur réservation préalable (Code des transports, article L3120-2).
+La licence de taxi est gratuite en mairie après une liste d'attente souvent de plusieurs années dans les grandes villes ; à l'achat, elle vaut de 30 000 € à 300 000 € selon la fiche officielle. Le VTC s'inscrit au registre pour 170 €.
+En 2026, un taxi facture au plus 4,48 € de prise en charge et 1,30 € par kilomètre, avec 8 € minimum par course ; les prix du VTC sont libres.
+Les examens de taxi et de VTC ont cinq épreuves écrites communes sur sept ; un admissible à l'un depuis moins de 3 ans ne passe que les deux épreuves écrites propres à l'autre, puis la pratique.
+La carte de taxi ne vaut que dans le département de l'examen ; en changer impose un stage de mobilité de 14 heures, 35 heures pour Paris.
+
+Sources : Entreprendre Service Public, fiche F21907 « Devenir chauffeur de taxi » (vérifiée le 13 juillet 2026) (https://entreprendre.service-public.gouv.fr/vosdroits/F21907) ; Entreprendre Service Public, fiche F22127 « Taxis : quels sont les tarifs, les dispositifs et les obligations d'affichage et commerciales ? » (vérifiée le 13 août 2026) (https://entreprendre.service-public.gouv.fr/vosdroits/F22127) ; Entreprendre Service Public, actualité « Taxis : les tarifs applicables en 2026 » (publiée le 16 janvier 2026) (https://entreprendre.service-public.gouv.fr/actualites/A15396) ; Entreprendre Service Public, fiche F31027 « Devenir chauffeur de VTC » (vérifiée le 12 août 2026) (https://entreprendre.service-public.gouv.fr/vosdroits/F31027) ; Arrêté du 6 avril 2017 relatif aux programmes et à l'évaluation des épreuves des examens d'accès aux professions de conducteur de taxi et de conducteur de voiture de transport avec chauffeur, articles 2 (en vigueur depuis le 1er avril 2024), 3 et 5, Légifrance (https://www.legifrance.gouv.fr/loda/id/JORFTEXT000034379046/) ; Code des transports, article L3120-2 (réservation préalable et maraude), texte recopié dans notre rubrique Réglementation VTC, vérifié le 25 octobre 2026 (https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033745346) ; Arrêté du 26 mars 2015 relatif aux caractéristiques des véhicules utilisés par les exploitants de VTC, articles 1 et 2, et Code des transports, article R3122-7, textes recopiés dans notre rubrique Réglementation VTC, vérifiés le 25 octobre 2026 (https://www.legifrance.gouv.fr/loda/id/JORFTEXT000030429911) ; Code des transports, article R3120-8-2, et arrêté du 11 août 2017 relatif à la formation continue des conducteurs de taxi et de VTC et à la mobilité des conducteurs de taxi, articles 1 et 2, textes recopiés dans notre rubrique Réglementation VTC, vérifiés le 25 octobre 2026 (https://www.legifrance.gouv.fr/loda/id/JORFTEXT000035484647).
+
 ### Réussir l'examen VTC du premier coup : coefficients, notes éliminatoires et calendrier 2027
 
 Page : https://revision-vtc.fr/dossiers/reussir-examen-vtc-premier-coup.html
