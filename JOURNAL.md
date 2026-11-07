@@ -6,6 +6,13 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 7 novembre 2026, 22 h 25 · FAQ VTC et Guides VTC : introduction alignée sur la grille
+
+- https://revision-vtc.fr/questions/ et https://revision-vtc.fr/dossiers/ : l'introduction occupait une colonne étroite collée à gauche au-dessus d'une grille pleine largeur. Elle passe sur deux colonnes calées exactement sur les deux colonnes de cartes (à gauche : présentation et mode de lecture ; à droite : légende des épreuves). Une colonne sur téléphone. La page des guides reçoit aussi la légende des épreuves.
+- Vérifié : bords des colonnes identiques à ceux des cartes (1 440 et 390 px) ; axe sans erreur en clair et en sombre à 320 et 1 366 px ; aucun débordement.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 7 novembre 2026, 22 h 10 · Pictogrammes des épreuves en panneaux
 
 - Tout le site : les pictogrammes des épreuves (cartes de la FAQ VTC et des guides, légende des épreuves) passent en panneaux : plaque bleu nuit, liseré blanc, dessin jaune, sans lettre. Mêmes dessins qu'avant.

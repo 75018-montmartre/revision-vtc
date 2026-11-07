@@ -1156,6 +1156,8 @@ def questions(qs, w):
     liste = "".join(carte(q["numero"], q["date"], f'{q["date"]}-{q["slug"]}.html', ty(q["question"]), q["code_domaine"], ty(q["reponse_courte"])) for q in qs)
     corps = f'''    <h1>FAQ VTC</h1>
     <p class="chapeau">{ty("Les questions concrètes que se posent les chauffeurs VTC et les candidats à l'examen, avec une réponse courte, les textes qui la fondent et leurs sources.")}</p>
+    <div class="intro-index">
+    <section>
     <p>{ty("Combien de temps peut-on attendre un client devant une gare ? Faut-il un siège auto pour transporter un enfant ? Quand repasser la visite médicale ? Chaque page part d'une question que l'on se pose vraiment, au volant ou en préparant l'examen, et y répond sans détour, texte officiel à l'appui.")}</p>
     <h2>{ty("Comment se lit une réponse")}</h2>
     <ol class="etapes">
@@ -1163,10 +1165,14 @@ def questions(qs, w):
       <li><b>{ty("L'explication pas à pas")}</b>{ty("La règle détaillée, un exemple concret quand il aide à comprendre, et l'erreur à éviter.")}</li>
       <li><b>{ty("Les textes et les sources")}</b>{ty("L'article du Code des transports ou l'arrêté qui fonde la réponse, expliqué dans nos")} <a href="../wiki/index.html">textes réglementaires</a>{ty(", puis la liste des sources consultées et la fiche du livre qui traite le sujet.")}</li>
     </ol>
+    </section>
+    <section>
     <h2>{ty("Repérez l'épreuve concernée")}</h2>
     <p>{ty("Chaque question est rattachée à l'épreuve de l'examen VTC qu'elle aide à préparer, signalée par un pictogramme. Pratique pour réviser une matière d'un coup :")}</p>
     {legende_domaines()}
     <p>{ty("De nouvelles questions sont ajoutées régulièrement. Vous ne trouvez pas la vôtre ?")} <a href="../contact.html">{ty("Posez-la")}</a>.</p>
+    </section>
+    </div>
     <h2>{ty("Toutes les questions")}</h2>
     <ul class="questions">{liste}</ul>'''
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "FAQ VTC", "url": SITE + "questions/", "inLanguage": "fr",
@@ -1407,6 +1413,8 @@ def dossiers(ds, w, qs=()):
         liste = f'<p class="note">{ty("Le premier guide sera publié très prochainement.")}</p>'
     corps = f'''    <h1>Guides VTC</h1>
     <p class="chapeau">{ty("Les grandes questions du métier de chauffeur VTC, traitées à fond : ce que coûte le lancement, ce que l'on gagne vraiment, le statut à choisir, la voiture, les cotisations. Chaque chiffre est daté et relié à sa source.")}</p>
+    <div class="intro-index">
+    <section>
     <p>{ty("Avant de vous lancer, vous voulez savoir si le métier tient ses promesses, et à quel prix. Ici, pas de chiffres ronds repris d'une publicité : chaque guide part d'une situation réelle, fait le calcul sous vos yeux et montre d'où vient chaque montant. De quoi décider en connaissance de cause, et réviser au passage les épreuves de gestion de l'examen.")}</p>
     <h2>{ty("Ce que vous trouvez dans chaque guide")}</h2>
     <ol class="etapes">
@@ -1414,7 +1422,13 @@ def dossiers(ds, w, qs=()):
       <li><b>{ty("Le détail, poste par poste")}</b>{ty("Les règles officielles, les tarifs publiés et les calculs, avec leurs sources et la date de vérification.")}</li>
       <li><b>{ty("De quoi passer à l'action")}</b>{ty("Refaire le calcul avec vos propres chiffres dans")} <a href="../simulateurs/cout-revient-revenu-net-vtc.html">{ty("le simulateur de coût de revient et de revenu net")}</a>{ty(", lire les textes qui s'appliquent, retrouver les fiches du livre.")}</li>
     </ol>
+    </section>
+    <section>
+    <h2>{ty("Repérez l'épreuve concernée")}</h2>
     <p>{ty("De nouveaux guides sont mis en ligne régulièrement, et ceux déjà publiés sont mis à jour quand un montant ou une règle change. Le pictogramme de chaque guide indique l'épreuve de l'examen qu'il aide à préparer. Pour une réponse rapide à une question précise, voyez la")} <a href="../questions/index.html">FAQ VTC</a> {ty("; pour le texte exact d'une règle, les")} <a href="../wiki/index.html">textes réglementaires</a>.</p>
+    {legende_domaines()}
+    </section>
+    </div>
     <h2>{ty("Tous les guides")}</h2>
     {liste}'''
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Guides VTC", "url": SITE + "dossiers/", "inLanguage": "fr",
