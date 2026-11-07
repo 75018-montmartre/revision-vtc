@@ -6,6 +6,13 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 7 novembre 2026, 22 h 35 · Pages d'index : blocs les uns sous les autres, sur toute la largeur
+
+- https://revision-vtc.fr/questions/, https://revision-vtc.fr/dossiers/, https://revision-vtc.fr/actualite/, https://revision-vtc.fr/wiki/, https://revision-vtc.fr/simulateurs/ : l'en-tête, les paragraphes et les blocs prennent toute la largeur de la grille de cartes (fini la colonne étroite collée à gauche). FAQ VTC et Guides VTC : blocs les uns sous les autres (présentation dans l'en-tête, étapes de lecture côte à côte, légende des épreuves sur toute la largeur), et non plus en deux colonnes. Guides VTC : le bloc des épreuves explique d'abord les pictogrammes, puis les mises à jour.
+- Vérifié : aucun bloc plus étroit que la grille à 1 440 px ; axe sans erreur en clair et en sombre à 320 et 1 366 px ; aucun débordement.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 7 novembre 2026, 22 h 25 · FAQ VTC et Guides VTC : introduction alignée sur la grille
 
 - https://revision-vtc.fr/questions/ et https://revision-vtc.fr/dossiers/ : l'introduction occupait une colonne étroite collée à gauche au-dessus d'une grille pleine largeur. Elle passe sur deux colonnes calées exactement sur les deux colonnes de cartes (à gauche : présentation et mode de lecture ; à droite : légende des épreuves). Une colonne sur téléphone. La page des guides reçoit aussi la légende des épreuves.

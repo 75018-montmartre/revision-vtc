@@ -35,7 +35,7 @@ def _tete_page(corps, actif, racine):
     avant, h1, apres = corps[:m.start()], m.group(0), corps[m.end():]
     suite = ""
     while True:
-        n = _re.match(r'\s*<p class="(?:chapeau|meta|texte-ref)">.*?</p>', apres, _re.S)
+        n = _re.match(r'\s*<p class="(?:chapeau|meta|texte-ref|intro)">.*?</p>', apres, _re.S)
         if not n:
             break
         suite += n.group(0)

@@ -103,13 +103,17 @@ main{padding:0 0 var(--e8)}
 .mp-colonne.corps-page,.tete-page.mp-colonne .page{max-width:calc(var(--lecture) + 2 * var(--e5))}
 .mp-cote.corps-page,.tete-page.mp-cote .page,.mp-grille.corps-page,.tete-page.mp-grille .page{max-width:calc(var(--lecture) + var(--cote) + var(--e7) + 2 * var(--e5))}
 .corps-page > *{max-width:var(--lecture)}
-.corps-page > :is(.deux-col,.wiki-theme,.questions,.numeros,.essentiel-liens,.sommaire,.autres-textes,.intro-index){max-width:none}
-/* introduction des pages d'index (FAQ VTC, Guides VTC) : deux colonnes calées sur les deux colonnes de cartes de la grille,
-   pour que le haut de page et la grille aient les mêmes bords ; une colonne sur téléphone */
-.intro-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--e4) var(--e6);align-items:start;margin-bottom:var(--e6)}
-.intro-index > section > :first-child{margin-top:0}
-.intro-index .legende-domaines{grid-template-columns:repeat(auto-fill,minmax(min(13rem,100%),1fr))}
-@media (max-width:52rem){.intro-index{grid-template-columns:minmax(0,1fr)}}
+.corps-page > :is(.deux-col,.wiki-theme,.questions,.numeros,.essentiel-liens,.sommaire,.autres-textes,.bloc-index){max-width:none}
+/* pages d'index (FAQ VTC, Guides VTC) : blocs les uns sous les autres, chacun sur toute la largeur de la grille de cartes ;
+   titres et phrases gardent la largeur de lecture, les étapes et la légende des épreuves s'étalent sur la largeur */
+.bloc-index{margin:0 0 var(--e6)}
+.corps-page > .bloc-index:first-child > h2:first-child{margin-top:0}
+/* paragraphes et en-tête de ces pages sur toute la largeur de la grille, comme les cartes */
+.bloc-index > *,.tete-page.mp-grille .page > *,.mp-grille.corps-page > *{max-width:none}
+.etapes.etapes-ligne{grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--e5) var(--e6)}
+.bloc-index .legende-domaines{grid-template-columns:repeat(auto-fill,minmax(min(14rem,100%),1fr));margin:var(--e4) 0 var(--e5)}
+.tete-page .intro{margin:var(--e3) 0 0;font-size:1.0625rem;line-height:1.6;color:var(--gris)}
+@media (max-width:52rem){.etapes.etapes-ligne{grid-template-columns:minmax(0,1fr)}}
 .deux-col{display:grid;grid-template-columns:minmax(0,var(--lecture)) var(--cote);gap:var(--e7);align-items:start}
 .col-texte > :first-child{margin-top:0}
 .col-cote{position:sticky;top:var(--e5);display:grid;gap:var(--e4)}
