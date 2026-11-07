@@ -6,6 +6,13 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 7 novembre 2026, 13 h 40 · Question VTC du jour (second passage)
+
+- **PROBLÈME : aucune question publiée, même blocage que ce matin.** Le réseau de la tâche refuse toujours la connexion directe (refus 403 du proxy) à legifrance.gouv.fr, service-public.fr, urssaf.fr et ecologie.gouv.fr. La lecture par l'outil web a été refusée pour 3 pages sur 3 (service-public.fr F33801 et deux pages Légifrance du Code de la route : « PROVENANCE_REQUIRED », demande d'autorisation restée sans réponse). Aucune source officielle lue le jour même : rien n'est publié.
+- Sujet toujours en attente, non rédigé : « Contrôle technique VTC : tous les combien ? » (famille Véhicule ; contrôle des doublons fait ce matin). Aucune question préparée et restée non publiée.
+- À faire : autoriser legifrance.gouv.fr et service-public.fr dans les accès réseau de la tâche (claude.ai, Paramètres > Capacités), ou accepter les lectures web de la tâche, ou la faire tourner depuis l'ordinateur (« Exiger cet ordinateur »).
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 7 novembre 2026, 10 h 25 · Article n° 6 (tâche tous les deux jours)
 
 - **PROBLÈME : aucun article publié, faute de pouvoir lire une seule source officielle.** Le réseau de la tâche refuse la connexion directe (refus 403 du proxy) à legifrance.gouv.fr, service-public.fr, entreprendre.service-public.fr, urssaf.fr, impots.gouv.fr, bofip.impots.gouv.fr, ecologie.gouv.fr, data.gouv.fr, insee.fr, senat.fr, assemblee-nationale.fr et pixabay.com. La lecture par l'outil web a été refusée pour 4 pages sur 4 (« PROVENANCE_REQUIRED » : demande d'autorisation restée sans réponse, la tâche tournant sans personne pour l'accepter). La recherche web ne renvoie que des titres et des liens, sans le texte des pages : rien n'a pu être vérifié, donc rien n'est publié.
