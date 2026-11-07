@@ -6,6 +6,17 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 7 novembre 2026, 14 h 30 · Question VTC du jour (relance avec la nouvelle méthode de lecture)
+
+- Question : « Contrôle technique VTC : tous les combien ? »
+- Page : https://revision-vtc.fr/questions/2026-11-07-controle-technique-vtc-tous-les-combien.html
+- Réponse courte : Tous les ans. Une voiture de VTC passe son premier contrôle technique au plus tard un an après sa première mise en circulation, puis chaque année (article R323-24 du Code de la route), au lieu de quatre ans puis tous les deux ans pour une voiture particulière.
+- Méthode testée à la demande de Benjamin : chaque page est d'abord trouvée par une recherche web, puis lue à l'adresse donnée dans les résultats (l'outil de lecture refuse désormais les adresses tapées directement). Résultat : Légifrance (Code de la route, R323-22 à R323-26, version en vigueur au 7 novembre 2026) et entreprendre.service-public.fr (F22299) lus en entier.
+- Relecture indépendante : toutes les affirmations confirmées, aucune contredite ; 2 formulations précisées (« véhicule léger », exemple compté « d'ici le 15 mars 2032 »).
+- Script du réel : `reseaux/reels/2026-11-07-controle-technique-vtc-tous-les-combien.txt`.
+- Les deux entrées PROBLÈME de ce jour (9 h 05 et 13 h 40) sont levées pour la Question VTC.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 7 novembre 2026, 13 h 40 · Question VTC du jour (second passage)
 
 - **PROBLÈME : aucune question publiée, même blocage que ce matin.** Le réseau de la tâche refuse toujours la connexion directe (refus 403 du proxy) à legifrance.gouv.fr, service-public.fr, urssaf.fr et ecologie.gouv.fr. La lecture par l'outil web a été refusée pour 3 pages sur 3 (service-public.fr F33801 et deux pages Légifrance du Code de la route : « PROVENANCE_REQUIRED », demande d'autorisation restée sans réponse). Aucune source officielle lue le jour même : rien n'est publié.

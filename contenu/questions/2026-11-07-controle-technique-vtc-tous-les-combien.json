@@ -1,0 +1,78 @@
+{
+ "date": "2026-11-07",
+ "slug": "controle-technique-vtc-tous-les-combien",
+ "question": "Contrôle technique VTC : tous les combien ?",
+ "reponse_courte": "Tous les ans. Une voiture de VTC passe son premier contrôle technique au plus tard un an après sa première mise en circulation, puis chaque année (article R323-24 du Code de la route), au lieu de quatre ans puis tous les deux ans pour une voiture particulière.",
+ "sections": [
+  {
+   "titre": "La règle : un premier contrôle à un an, puis chaque année",
+   "texte": [
+    "Le Code des transports renvoie au Code de la route : les véhicules de transport public particulier de personnes, donc les VTC, passent le contrôle technique dans les conditions de l'article R323-24 du Code de la route ou, le cas échéant, de l'article R323-26 ([article R3120-10](../wiki/r3120-10.html)).",
+    "L'article R323-24 vise « tout véhicule de moins de dix places, conducteur compris, affecté au transport public de personnes ».",
+    "Le premier contrôle a lieu **au plus tard un an après la date de la première mise en circulation**. L'article ajoute : « Ce contrôle technique doit ensuite être renouvelé tous les ans. »"
+   ]
+  },
+  {
+   "titre": "Ce qui change par rapport à une voiture particulière",
+   "texte": [
+    "Pour une voiture particulière (un véhicule léger au sens du Code de la route), l'article R323-22 du Code de la route prévoit un premier contrôle dans les six mois qui précèdent les quatre ans de la première mise en circulation, puis un contrôle tous les deux ans.",
+    "Ce même article exclut de ce calendrier les véhicules de moins de dix places, conducteur compris, affectés au transport public, collectif ou particulier, de personnes. Une VTC ne profite donc pas du délai de quatre ans.",
+    "Exemple pour une voiture neuve mise en circulation le 15 mars 2027 :",
+    "1. **Utilisée en VTC** : premier contrôle au plus tard le 15 mars 2028, puis un contrôle chaque année, soit cinq contrôles d'ici le 15 mars 2032.",
+    "2. **Voiture particulière** : premier contrôle entre le 15 septembre 2030 et le 15 mars 2031, soit un seul contrôle obligatoire d'ici le 15 mars 2032."
+   ]
+  },
+  {
+   "titre": "Une voiture d'occasion qui devient une VTC",
+   "texte": [
+    "L'article R323-24 prévoit aussi le cas d'une voiture affectée au transport public de personnes plus d'un an après sa première mise en circulation : elle doit passer le contrôle technique avant d'être utilisée pour ce transport.",
+    "Concrètement, si vous achetez une voiture de trois ans pour en faire une VTC, faites le contrôle technique avant la première course. Ensuite, le contrôle revient chaque année."
+   ]
+  },
+  {
+   "titre": "Erreur fréquente : confondre avec les six mois des cars et des bus",
+   "texte": [
+    "Le Code de la route prévoit un contrôle **tous les six mois** pour les véhicules de transport en commun de personnes (article R323-23). Service-public.fr précise que le transport en commun concerne les véhicules de plus de 9 places assises et que les VTC et les taxis ne sont pas concernés : pour eux, le contrôle technique a lieu une fois par an.",
+    "La règle à retenir pour une VTC est donc un an, pas six mois. Pour prévoir ce coût dans votre budget, voyez [le coût total pour se lancer en VTC](../dossiers/cout-pour-devenir-chauffeur-vtc.html). Pour l'âge et le nombre de places exigés du véhicule, voyez [l'article R3122-6](../wiki/r3122-6.html)."
+   ]
+  }
+ ],
+ "a_retenir": [
+  "Une voiture utilisée en VTC passe son premier contrôle technique au plus tard un an après sa première mise en circulation, puis tous les ans (article R323-24 du Code de la route).",
+  "Le calendrier des voitures particulières, quatre ans puis tous les deux ans (article R323-22), ne s'applique pas aux véhicules de moins de dix places affectés au transport public particulier de personnes.",
+  "Une voiture de plus d'un an qui devient une VTC doit passer le contrôle technique avant d'être utilisée pour transporter des clients."
+ ],
+ "wiki": [
+  "r3120-10",
+  "r3122-6",
+  "l3122-4"
+ ],
+ "fiches": [
+  [
+   "A4.1",
+   "Le contrôle technique du véhicule"
+  ],
+  [
+   "G2.2",
+   "Places, portes et âge du véhicule"
+  ]
+ ],
+ "sources": [
+  {
+   "nom": "Code de la route, articles R323-22 à R323-26, chapitre III « Contrôle technique » (Légifrance, version en vigueur au 7 novembre 2026, lue le 7 novembre 2026)",
+   "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074228/LEGISCTA000006159587/",
+   "date": "R323-24 en vigueur depuis le 19 juin 2004 ; R323-22 depuis le 24 février 2017 ; R323-23 depuis le 1er décembre 2018"
+  },
+  {
+   "nom": "Entreprendre.service-public.fr, fiche F22299 « Contrôle technique des véhicules de transports de marchandises (TRM) et de personnes » (vérifiée le 20 août 2025, lue le 7 novembre 2026)",
+   "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F22299",
+   "date": "7 novembre 2026"
+  },
+  {
+   "nom": "Code des transports, article R3120-10 (texte recopié de Légifrance dans le wiki du site, vérifié le 25 octobre 2026, en vigueur depuis le 1er janvier 2015)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048413",
+   "date": "25 octobre 2026"
+  }
+ ],
+ "verifie": "7 novembre 2026"
+}

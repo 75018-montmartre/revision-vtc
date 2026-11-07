@@ -1,0 +1,50 @@
+RÉEL · Contrôle technique VTC : tous les combien ?
+Page : https://revision-vtc.fr/questions/2026-11-07-controle-technique-vtc-tous-les-combien.html
+Durée visée : 35 à 40 secondes
+
+ACCROCHE (0 à 3 s)
+  Texte à l'écran : VTC neuve : contrôle technique à 4 ans ?
+  Voix : Voiture neuve en VTC, contrôle technique dans quatre ans ? Faux.
+
+DÉROULÉ
+  Plan 1 (3 à 10 s)
+    Texte à l'écran : Premier contrôle : un an au plus
+    Voix : En VTC, le premier contrôle technique a lieu au plus tard un
+    an après la première mise en circulation.
+  Plan 2 (10 à 17 s)
+    Texte à l'écran : Ensuite : tous les ans
+    Voix : Ensuite, il revient tous les ans. C'est l'article R323-24 du
+    Code de la route.
+  Plan 3 (17 à 25 s)
+    Texte à l'écran : Voiture particulière : 4 ans, puis 2 ans
+    Voix : Le calendrier quatre ans, puis tous les deux ans, c'est pour
+    la voiture particulière. Il exclut le transport public de personnes.
+  Plan 4 (25 à 32 s)
+    Texte à l'écran : Occasion : contrôle avant la première course
+    Voix : Une voiture de plus d'un an qui devient une VTC passe le
+    contrôle avant d'être utilisée pour le transport.
+  Plan 5 (32 à 37 s)
+    Texte à l'écran : Six mois ? Non, c'est pour les cars
+    Voix : Et les six mois, c'est le transport en commun, plus de neuf
+    places assises. Pas les VTC.
+
+CHUTE (37 à 41 s)
+  Texte à l'écran : VTC : un an, puis chaque année
+  Voix : En VTC : un an, puis chaque année. Réponse complète et sources
+  sur revision-vtc.fr.
+
+LÉGENDE
+  Contrôle technique VTC : premier contrôle au plus tard un an après la
+  première mise en circulation, puis tous les ans (article R323-24 du Code
+  de la route). Le calendrier quatre ans puis deux ans ne vaut pas pour
+  une VTC. Exemple chiffré et cas de la voiture d'occasion sur la page.
+  #chauffeurvtc #vtc #examenvtc #controletechnique #reglementationvtc #codedelaroute
+  https://revision-vtc.fr/questions/2026-11-07-controle-technique-vtc-tous-les-combien.html
+
+SOURCES
+  - Code de la route, articles R323-22 à R323-26 (Légifrance, version en
+    vigueur au 7 novembre 2026), lus le 7 novembre 2026
+  - Entreprendre.service-public.fr, fiche F22299 (vérifiée le 20 août
+    2025), lue le 7 novembre 2026
+  - Code des transports, article R3120-10 (wiki du site, vérifié le
+    25 octobre 2026)
