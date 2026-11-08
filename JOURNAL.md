@@ -6,6 +6,18 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Dimanche 8 novembre 2026, 9 h 30 · Question VTC du jour
+
+- Question : « Chien guide d'aveugle en VTC : le chauffeur peut-il refuser ? »
+- Page : https://revision-vtc.fr/questions/2026-11-08-chien-guide-vtc-refus.html
+- Réponse courte : Non. La loi autorise l'accès aux transports des chiens guides d'aveugle et des chiens d'assistance qui accompagnent une personne handicapée titulaire de la carte prévue par la loi, et leur présence ne doit pas entraîner de facturation supplémentaire (article 88 de la loi n° 87-588 du 30 juillet 1987).
+- Sources lues le jour même : loi n° 87-588, article 88 (version en vigueur depuis le 19 août 2026) ; CASF R241-23 ; Code rural L211-30 ; service-public.fr F35787 ; guide ministériel de mai 2025. R3120-1 recoupé avec Légifrance par la relecture.
+- Relecture indépendante : toutes les affirmations confirmées, aucune contredite ; 2 précisions (auteur du guide, mention de la carte dans l'accroche du réel).
+- Écarté faute de certitude : un montant d'amende présenté comme certain pour un VTC (le texte de sanction vise les « lieux ouverts au public » sans nommer les transports) ; la page le dit.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px sur la page et l'index FAQ VTC ; aucun débordement. Accueil : 1 alerte axe déjà présente avant cette publication (landmark-complementary-is-top-level).
+- Script du réel : reseaux/reels/2026-11-08-chien-guide-vtc-refus.txt
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Dimanche 8 novembre 2026, 0 h 55 · QCM VTC : données structurées complétées
 
 - Les 21 pages https://revision-vtc.fr/qcm/… : données structurées « Quiz » complétées (texte complet de chaque question avec sa situation, réponses numérotées, corrigé en commentaire, règle évaluée, alignement sur l'épreuve), après l'alerte « Champ text manquant » de Google Search Console. Contenu visible inchangé.
