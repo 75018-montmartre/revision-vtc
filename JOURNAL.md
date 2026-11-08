@@ -6,7 +6,7 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
-## Dimanche 8 novembre 2026, 9 h 30 · Question VTC du jour
+## Dimanche 8 novembre 2026, 8 h 55 · Question VTC du jour
 
 - Question : « Chien guide d'aveugle en VTC : le chauffeur peut-il refuser ? »
 - Page : https://revision-vtc.fr/questions/2026-11-08-chien-guide-vtc-refus.html
