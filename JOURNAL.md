@@ -6,6 +6,18 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Lundi 9 novembre 2026, 10 h 30 · Article n° 7 (tâche tous les deux jours)
+
+- Titre : « Précompte des cotisations au 1er janvier 2027 : ce que les plateformes VTC prélèveront à votre place »
+- Page : https://revision-vtc.fr/dossiers/precompte-cotisations-vtc-plateformes-2027.html (2 248 mots, épreuve B, sans photo)
+- En bref : à partir du 1er janvier 2027, les plateformes retiennent les cotisations sociales des chauffeurs VTC en micro-entreprise sur les sommes qu'elles leur versent et les reversent à l'Urssaf (article L613-6-1 du Code de la sécurité sociale) ; ce n'est pas le prélèvement à la source de l'impôt, seul le versement libératoire est retenu en plus ; clients directs et CFE restent à la charge du chauffeur.
+- Sources lues le jour même : Légifrance L613-6-1 et section L613-1 à L613-11 (notes d'entrée en vigueur) ; Entreprendre.Service-Public.fr A18550 (15 septembre 2026) et F36232 ; collectivites-locales.gouv.fr (CFE).
+- Relecture indépendante : aucune affirmation contredite ; 9 précisions apportées (date du 1er janvier 2027 attribuée à la loi n° 2023-1250 art. 6, montants « hors petites taxes », réserve sur les plateformes volontaires, destinataire des données, sûretés).
+- Écarté faute de certitude : délai exact pour un nouvel inscrit (arrêté non lu), traitement de l'Acre, taux 2027, contenu des pages Urssaf (refusées aux robots).
+- Page modifiée : https://revision-vtc.fr/dossiers/cout-pour-devenir-chauffeur-vtc.html (l'annonce « un prochain article » devient un lien).
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px (article et index des guides), aucun débordement ; sitemap.xml et llms.txt contiennent la page.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Lundi 9 novembre 2026, 8 h 57 · Question VTC du jour
 
 - Question : « Carte VTC : où la placer dans la voiture ? »

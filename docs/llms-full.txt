@@ -1617,6 +1617,80 @@ Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A5.4 (Avertissemen
 
 ## Guides VTC
 
+### Précompte des cotisations au 1er janvier 2027 : ce que les plateformes VTC prélèveront à votre place
+
+Page : https://revision-vtc.fr/dossiers/precompte-cotisations-vtc-plateformes-2027.html
+Publié le 9 novembre 2026, chiffres vérifiés le 9 novembre 2026.
+
+À partir du 1er janvier 2027, ce n'est plus vous qui calculez et payez les cotisations sur les courses des applications : la plateforme les retient avant de vous verser votre argent, et les reverse à l'Urssaf. Voici ce que dit la loi, ce qui change sur votre compte en banque, et ce qui reste à votre charge.
+Sofiane est chauffeur VTC en micro-entreprise. En janvier 2027, il réalise 4 000 € de chiffre d'affaires par une application, et 600 € avec ses clients directs. Jusqu'ici, il encaissait tout et payait ensuite l'Urssaf. Désormais, la plateforme retient elle-même ses cotisations, soit 848 € au taux de 2026 (21,2 %, hors petites taxes), et les reverse à l'Urssaf. Sofiane ne déclare plus que ses 600 € de clients directs.
+C'est le précompte des cotisations, prévu par l'article L613-6-1 du Code de la sécurité sociale. Selon la loi de financement de la sécurité sociale pour 2024 (article 6), il s'applique au chiffre d'affaires réalisé à compter du 1er janvier 2027 ; Entreprendre.Service-Public.fr précise qu'à cette date l'ensemble des plateformes numériques devront l'appliquer. Ce n'est pas le prélèvement à la source de l'impôt sur le revenu : seul le versement libératoire, si vous l'avez choisi, est retenu en plus.
+Le précompte en une phrase : la plateforme paie l'Urssaf à votre place
+Aujourd'hui, un chauffeur VTC en micro-entreprise reçoit de l'application le prix de ses courses. Il déclare ensuite lui-même son chiffre d'affaires à l'Urssaf, chaque mois ou chaque trimestre, et paie ses cotisations à ce moment-là.
+Le précompte inverse l'ordre. L'article L613-6-1 du Code de la sécurité sociale prévoit que les cotisations et contributions sociales dues sur le chiffre d'affaires réalisé par l'intermédiaire d'une plateforme sont prélevées par l'opérateur de la plateforme sur les sommes qu'il vous verse. Il les déclare et les reverse ensuite à l'Urssaf.
+Trois points du texte méritent d'être connus :
+Ce que la plateforme retient compte comme payé par vous. La loi dit que ce prélèvement « vaut acquit » des cotisations pour le travailleur concerné.
+La plateforme déclare chaque mois. Elle transmet le chiffre d'affaires réalisé par chacun de ses chauffeurs, puis déclare et verse les sommes retenues. Selon Entreprendre.Service-Public.fr, c'est aussi le cas si vous aviez choisi la déclaration trimestrielle.
+Le coût du dispositif est pour la plateforme. Le texte met à la charge des opérateurs les frais liés aux prélèvements, aux déclarations et aux versements.
+Pour vous, la différence se voit surtout sur le virement : le montant reçu de l'application sera déjà diminué des cotisations. Vous n'aurez plus à mettre de côté vous-même la part de l'Urssaf sur ces courses.
+Ce n'est pas le prélèvement à la source de l'impôt
+Le mot « prélèvement à la source » prête à confusion. L'administration l'emploie pour ce dispositif (« prélèvement à la source des cotisations sociales par les plateformes »), mais il s'agit des cotisations sociales du micro-entrepreneur, pas de l'impôt sur le revenu.
+Une seule exception touche l'impôt : le versement libératoire. Si vous avez choisi cette option, vous payez votre impôt sur le revenu en même temps que vos cotisations, en pourcentage du chiffre d'affaires. L'article L613-6-1 l'inclut dans ce que la plateforme prélève. Pour une prestation de services BIC, le taux global passe alors de 21,2 % à 22,9 % en 2026, soit 1,7 point de plus.
+Sans versement libératoire, le précompte ne touche pas à votre impôt sur le revenu : l'article L613-6-1 ne vise que les cotisations, les contributions sociales, certaines taxes et ce versement.
+Le taux de 21,2 % est celui de 2026 pour les prestations de services commerciales ou artisanales (BIC), catégorie du chauffeur VTC. Le Code de la sécurité sociale renvoie à un décret pour fixer ce taux : vérifiez celui de 2027 en début d'année. Le détail des taux et des petites taxes qui s'y ajoutent est dans la question « Quelles cotisations paie un chauffeur VTC en micro-entreprise ? ».
+Le calendrier : 2026 pour les volontaires, 1er janvier 2027 pour tous
+Le dispositif a été préparé en deux temps.
+2026 : des plateformes volontaires. Selon la note de Légifrance sous l'article L613-8, les obligations du précompte sont « progressivement applicables à compter du 1er janvier 2026 aux opérateurs de plateforme volontaires, selon des modalités prévues par décret ». Entreprendre.Service-Public.fr cite celles qui l'appliquent à partir d'octobre 2026 : Extracadabra, Les Sherpas et Sherpadom, Mon Spécialiste Auto, Student pop, Truckrs, Uber Eats, Wecasa et Wecasa Care. Aucune application de VTC ne figure dans cette liste.
+1er janvier 2027 : toutes les plateformes. Selon la note de Légifrance sous les articles L613-6 et L613-8, qui renvoie à l'article 6 de la loi n° 2023-1250 du 26 décembre 2023, ces dispositions s'appliquent « aux chiffres d'affaires et aux recettes réalisés à compter du 1er janvier 2027 ». Entreprendre.Service-Public.fr précise qu'à cette date l'ensemble des plateformes numériques devront calculer et prélever directement les cotisations des micro-entrepreneurs, puis les reverser à l'Urssaf.
+Conséquence pratique : le chiffre d'affaires de décembre 2026 reste à déclarer par vous, même si vous le déclarez en janvier 2027, sauf si votre application applique déjà le dispositif à titre volontaire (ce n'était le cas d'aucune application de VTC à la mise à jour du 15 septembre 2026). Pour toutes, le précompte porte sur les courses réalisées à partir du 1er janvier 2027.
+Jusqu'au 31 décembre 2026 Vous, chaque mois ou chaque trimestre Vous, au moment de la déclaration
+À partir du 1er janvier 2027 La plateforme, chaque mois La plateforme, sur les sommes qu'elle vous verse
+Vous débutez ou reprenez votre activité ? Le texte prévoit que le précompte ne s'applique qu'à l'expiration d'un délai compté à partir du début ou de la reprise d'activité sur une plateforme. Ce délai est fixé par arrêté du ministre chargé de la sécurité sociale. Pendant ce délai, le précompte ne s'applique pas : renseignez-vous auprès de l'Urssaf, au moment de votre inscription, sur ce que vous devez déclarer.
+Qui est concerné : les chauffeurs en micro-entreprise
+Le précompte vise notamment les travailleurs indépendants qui relèvent du régime micro-social, celui de l'article L613-7 du Code de la sécurité sociale : leurs cotisations sont calculées en appliquant un taux global à leur chiffre d'affaires du mois ou du trimestre. C'est le cas du chauffeur VTC en micro-entreprise (auto-entrepreneur).
+Il porte sur le chiffre d'affaires réalisé par l'intermédiaire d'une plateforme. Entreprendre.Service-Public.fr parle de l'ensemble des plateformes numériques au 1er janvier 2027, sans exception pour le transport : les applications de VTC qui vous transmettent des courses et vous en versent le prix sont des plateformes numériques. En cas de doute sur la vôtre, posez-lui la question avant janvier.
+N'est pas concerné par cet article :
+le chauffeur salarié d'une entreprise de VTC : ses cotisations sont déjà retenues sur son salaire par l'employeur.
+Si vous exercez sous une autre forme que la micro-entreprise, vos cotisations suivent les règles de votre statut : l'article L613-6-1 vise le régime micro-social (et un cas prévu au 35° de l'article L311-3), pas les autres statuts d'indépendant.
+Pour comparer ces façons d'exercer, voyez l'article « Chauffeur VTC salarié ou indépendant : que choisir pour débuter ? ».
+Exemple chiffré : un mois de janvier 2027
+Reprenons Sofiane. Hypothèses : micro-entrepreneur hors Acre, taux de cotisations sociales de 2026 (21,2 %), le taux de 2027 étant fixé par décret. En janvier 2027, il réalise 4 000 € de chiffre d'affaires par une application et 600 € avec des clients qui le réservent directement (hôtel, entreprise, clients fidèles).
+Courses par l'application 4 000 € 848,00 € 916,00 € La plateforme (précompte)
+Clients directs 600 € 127,20 € 137,40 € Sofiane (déclaration Urssaf)
+Total 4 600 € 975,20 € 1 053,40 € 
+Le précompte ne change pas le taux : les cotisations du mois restent de 975,20 €, hors petites taxes, avec ou sans précompte. Ce qui change, c'est qui paie et quand. Les 848 € sont retenus par la plateforme avant le virement. Sofiane ne déclare plus lui-même que les 600 € de clients directs et ne paie que 127,20 € à l'Urssaf.
+Attention à la lecture du virement : les sommes reçues de l'application seront déjà diminuées des cotisations retenues. Comparer un relevé de 2027 avec un relevé de 2026 sans en tenir compte donnerait l'impression d'une baisse de revenu qui n'en est pas une.
+Les cotisations ne sont qu'une partie des charges. Pour savoir ce qui vous reste vraiment après la voiture, le carburant et l'assurance, faites le calcul avec le simulateur de coût de revient et de revenu net, et lisez l'article « Combien gagne-t-on vraiment de l'heure ? ».
+Ce qui reste à faire vous-même
+Le précompte simplifie la vie, mais il ne fait pas tout. Plusieurs choses restent à votre charge.
+Déclarer le chiffre d'affaires réalisé hors plateforme. Le texte ne vise que les recettes réalisées par l'intermédiaire de la plateforme. Vos clients directs, vos courses réservées par téléphone ou par votre site restent à déclarer à l'Urssaf, avec le paiement des cotisations correspondantes.
+Payer la cotisation foncière des entreprises (CFE). L'article L613-6-1 exclut expressément l'article 1447 du Code général des impôts, celui de la CFE. Elle reste donc à payer par vous, comme avant.
+Transmettre vos données d'identification à la plateforme. La loi oblige les chauffeurs à fournir aux plateformes les informations qui permettent de les identifier, que celles-ci transmettent ensuite à l'organisme désigné par la loi (article L225-1-1 du Code de la sécurité sociale).
+Vérifier ce qui a été retenu. Comparez chaque mois le chiffre d'affaires déclaré par la plateforme avec vos propres relevés de courses, et le montant retenu avec le taux qui s'applique à vous.
+Si vous travaillez avec plusieurs applications, chacune ne retient les cotisations que sur le chiffre d'affaires réalisé par son intermédiaire. Pour ne pas dépendre d'une seule, voyez l'erreur n° 7 de l'article « 10 erreurs qui coûtent cher au chauffeur VTC débutant ».
+Les sanctions prévues par la loi
+Le texte prévoit des pénalités pour les deux côtés.
+Ne pas transmettre ses données d'identification Le chauffeur (vendeur ou prestataire) 3 250 €
+Manquement à l'obligation de transmission des données La plateforme 15 000 € par chauffeur concerné
+Ne pas précompter les cotisations La plateforme 5 % du chiffre d'affaires concerné
+En cas de manquement réitéré, les pénalités liées aux données peuvent être prononcées de nouveau au moins six mois après un précédent constat. Côté plateforme, sur 4 000 € de chiffre d'affaires non précomptés, la pénalité pourrait aller jusqu'à 200 € (5 %).
+Les sommes précomptées sont par ailleurs recouvrées sous les mêmes garanties, sûretés et sanctions que les cotisations précomptées sur les salaires.
+Comment se préparer d'ici au 1er janvier 2027
+Quelques gestes simples évitent les mauvaises surprises en janvier.
+Vérifiez que vos informations sont à jour dans chaque application que vous utilisez : la loi vous oblige à transmettre aux plateformes les données qui permettent de vous identifier, et c'est avec elles que la plateforme déclarera pour vous.
+Déclarez normalement votre chiffre d'affaires de 2026, y compris celui de décembre, même si la déclaration tombe en janvier 2027.
+Séparez vos recettes : courses par application d'un côté, clients directs de l'autre. Seules les secondes resteront à déclarer.
+Revoyez votre épargne de précaution. La part des cotisations sur les courses par application ne sera plus sur votre compte : gardez de côté celle des clients directs, la CFE et, sans versement libératoire, l'impôt.
+Gardez vos relevés mensuels des plateformes pour vérifier les montants retenus.
+Pour un cas particulier (Acre, changement d'option, début d'activité en cours d'année), renseignez-vous auprès de l'Urssaf ou d'un expert-comptable : les règles d'application précises dépendent de votre situation.
+Le précompte ne change pas le calcul de fond : les cotisations du micro-entrepreneur restent un pourcentage du chiffre d'affaires, et non du bénéfice. Le livre consacre au précompte ses fiches B5.2 à B5.4 ; pour le budget complet, voyez l'article « Combien coûte vraiment le lancement en VTC ? ». Pour les autres questions sur le métier, consultez la FAQ VTC.
+À partir du 1er janvier 2027, les plateformes retiennent les cotisations sociales des chauffeurs VTC en micro-entreprise sur les sommes qu'elles leur versent, puis les reversent à l'Urssaf (article L613-6-1 du Code de la sécurité sociale).
+Le précompte porte sur le chiffre d'affaires réalisé par l'intermédiaire de la plateforme à compter du 1er janvier 2027 ; les clients directs, et décembre 2026 sauf plateforme volontaire, restent à déclarer par le chauffeur.
+Ce n'est pas le prélèvement à la source de l'impôt : seul le versement libératoire, pour ceux qui l'ont choisi, est retenu avec les cotisations (21,2 % ou 22,9 % en 2026 pour une prestation de services BIC).
+La CFE reste à payer par le chauffeur ; un chauffeur salarié n'est pas concerné par cet article.
+
+Sources : Légifrance, Code de la sécurité sociale, article L613-6-1 (version en vigueur depuis le 31 décembre 2025, loi n° 2025-1403 du 30 décembre 2025, art. 42 et 45) (https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053282877) ; Légifrance, Code de la sécurité sociale, articles L613-1 à L613-11 (dont L613-6, L613-7, L613-8 et leurs notes d'entrée en vigueur), version en vigueur au 8 novembre 2026 (https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006073189/LEGISCTA000006156202/) ; Entreprendre.Service-Public.fr, « Prélèvement à la source des cotisations sociales par les plateformes : quel calendrier ? » (actualité A18550, mise à jour le 15 septembre 2026) (https://entreprendre.service-public.gouv.fr/actualites/A18550) ; Entreprendre.Service-Public.fr, « Cotisations sociales d'un micro-entrepreneur : ce qu'il faut savoir » (fiche F36232, vérifiée le 1er janvier 2026) (https://entreprendre.service-public.gouv.fr/vosdroits/F36232) ; Collectivites-locales.gouv.fr, « Cotisation foncière des entreprises » (champ d'application, article 1447 du CGI) (https://www.collectivites-locales.gouv.fr/cotisation-fonciere-des-entreprises).
+
 ### Taxi ou VTC : quelles différences pour devenir chauffeur en 2027 ?
 
 Page : https://revision-vtc.fr/dossiers/taxi-ou-vtc-differences.html
@@ -2020,7 +2094,7 @@ tous les ans : le contrôle technique du véhicule, obligatoire chaque année po
 tous les cinq ans : la carte professionnelle (57,60 € plus l'envoi), le stage de formation continue de 14 heures et l'inscription au registre (170 €) ;
 tous les cinq ans jusqu'à 55 ans, puis plus souvent : la visite médicale (36 €) ;
 à chaque changement de véhicule : de nouvelles vignettes (35 € environ), et une voiture thermique à remplacer au plus tard à sept ans.
-Les cotisations sociales, elles, se calculent sur le chiffre d'affaires et ne s'ajoutent pas au budget de départ : la Question VTC « Quelles cotisations paie un chauffeur VTC en micro-entreprise ? » donne les taux de 2026. Un prochain article sera consacré au précompte des cotisations par les plateformes, prévu au 1er janvier 2027 : qui est concerné, et ce qui change (ce n'est pas le prélèvement à la source de l'impôt). Pour une réponse rapide sur une règle du métier, consultez la FAQ VTC.
+Les cotisations sociales, elles, se calculent sur le chiffre d'affaires et ne s'ajoutent pas au budget de départ : la Question VTC « Quelles cotisations paie un chauffeur VTC en micro-entreprise ? » donne les taux de 2026. Le précompte des cotisations par les plateformes, au 1er janvier 2027, est expliqué dans l'article « Précompte des cotisations au 1er janvier 2027 » : qui est concerné, et ce qui change (ce n'est pas le prélèvement à la source de l'impôt). Pour une réponse rapide sur une règle du métier, consultez la FAQ VTC.
 Les frais obligatoires pour devenir chauffeur VTC s'élèvent à 539,60 € en 2026, plus l'envoi de la carte : examen 241 €, visite médicale 36 €, carte 57,60 €, registre 170 €, vignette 35 € environ.
 La formation n'est pas obligatoire ; en centre agréé, elle coûte de 400 € à 3 000 € environ.
 Les voitures hybrides et électriques échappent aux critères de taille, de puissance et d'âge imposés aux voitures thermiques.
