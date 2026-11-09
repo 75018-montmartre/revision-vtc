@@ -6,6 +6,18 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Lundi 9 novembre 2026, 8 h 57 · Question VTC du jour
+
+- Question : « Carte VTC : où la placer dans la voiture ? »
+- Page : https://revision-vtc.fr/questions/2026-11-09-carte-vtc-ou-la-placer.html
+- Réponse courte : Sur le pare-brise ou, à défaut, sur le véhicule, de telle façon que la photographie soit facilement visible de l'extérieur, dès que le chauffeur utilise la voiture à titre professionnel (article R3120-6 du Code des transports). Quand il n'exerce pas son activité, il peut l'enlever.
+- Sources lues le jour même : Code des transports R3120-6 (Légifrance, version en vigueur depuis le 12 août 2026, décret n° 2026-764) ; Entreprendre.Service-Public.fr F31027 (vérifiée le 12 août 2026) ; pages VTC des préfectures de l'Ardèche et des Hautes-Pyrénées.
+- Relecture indépendante : 26 affirmations confirmées ; 1 corrigée (le délai de trois mois vaut pour toute demande, pas seulement la première) ; 2 précisions (« en substance » pour les préfectures, « Hors service ? » au lieu de « En week-end ? » dans le réel) ; la nature de la vignette, non relue aujourd'hui, est renvoyée à la question du 3 novembre.
+- Écarté faute de certitude : les classes de contravention de l'article R3124-12 (Légifrance refusé aujourd'hui pour cet article) ; la page renvoie à l'article du wiki sans les citer.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px sur la page et l'index FAQ VTC ; aucun débordement. Accueil : 1 alerte axe déjà présente avant (landmark-complementary-is-top-level).
+- Script du réel : reseaux/reels/2026-11-09-carte-vtc-ou-la-placer.txt
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Lundi 9 novembre 2026, 7 h 47 · Actualité VTC n° 6 (tâche du lundi)
 
 - Page : https://revision-vtc.fr/actualite/2026-11-09.html

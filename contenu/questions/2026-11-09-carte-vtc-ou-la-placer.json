@@ -1,0 +1,96 @@
+{
+ "date": "2026-11-09",
+ "slug": "carte-vtc-ou-la-placer",
+ "question": "Carte VTC : où la placer dans la voiture ?",
+ "reponse_courte": "Sur le pare-brise ou, à défaut, sur le véhicule, de telle façon que la photographie soit facilement visible de l'extérieur, dès que le chauffeur utilise la voiture à titre professionnel (article R3120-6 du Code des transports). Quand il n'exerce pas son activité, il peut l'enlever.",
+ "sections": [
+  {
+   "titre": "La règle : sur le pare-brise, photo visible de l'extérieur",
+   "texte": [
+    "L'article R3120-6 du Code des transports, dans sa version en vigueur depuis le 12 août 2026, pose la règle en une phrase : lorsque le conducteur d'un véhicule de transport public particulier utilise ce dernier à titre professionnel, « il appose sa carte professionnelle sur le pare-brise ou, à défaut, sur le véhicule de telle façon que la photographie soit facilement visible de l'extérieur ».",
+    "Le chauffeur VTC est concerné : la fiche officielle « Devenir chauffeur de VTC » d'Entreprendre.Service-Public.fr indique que la carte « doit être placée en évidence sur le pare-brise de votre véhicule et visible de l'extérieur ». Les pages VTC des préfectures de l'Ardèche et des Hautes-Pyrénées disent la même chose en substance : la carte est apposée sur le pare-brise ou sur le véhicule, photographie visible de l'extérieur.",
+    "Trois mots comptent dans le texte :",
+    "1. **Apposer** : la carte est posée sur le pare-brise, pas rangée dans un portefeuille ou dans la boîte à gants.",
+    "2. **Pare-brise d'abord** : le texte ne prévoit un autre emplacement sur le véhicule qu'« à défaut ».",
+    "3. **Photographie facilement visible de l'extérieur** : une carte posée à l'envers, cachée par un pare-soleil ou un support de téléphone ne remplit pas cette condition."
+   ]
+  },
+  {
+   "titre": "Seulement pendant le travail",
+   "texte": [
+    "L'obligation vaut « lorsque le conducteur [...] utilise ce dernier à titre professionnel ». La fiche d'Entreprendre.Service-Public.fr le précise : « Vous pouvez l'enlever quand vous n'exercez pas votre activité. »",
+    "**Un exemple.** Samir travaille avec sa propre voiture de 6 h à 14 h. Pendant ses courses, et entre deux courses, sa carte est sur le pare-brise, photo tournée vers l'extérieur. Le dimanche, il emmène sa famille en week-end avec la même voiture : il ne travaille pas, il peut retirer sa carte."
+   ]
+  },
+  {
+   "titre": "Erreur fréquente : confondre la carte et la vignette",
+   "texte": [
+    "La carte professionnelle et la vignette VTC sont deux choses différentes, avec deux règles différentes.",
+    "1. **La carte professionnelle** identifie le conducteur : elle porte sa photographie. Sa place est fixée par l'article R3120-6 du Code des transports : sur le pare-brise ou, à défaut, sur le véhicule, photographie visible de l'extérieur.",
+    "2. **La vignette VTC** est une autre obligation, avec ses propres règles d'emplacement, fixées par un autre texte et expliquées dans notre question [Vignette VTC : où la coller sur la voiture ?](../questions/2026-11-03-vignette-vtc-ou-la-coller.html).",
+    "Avoir collé ses vignettes ne dispense pas d'apposer sa carte, et l'inverse non plus."
+   ]
+  },
+  {
+   "titre": "Une carte à renouveler tous les cinq ans",
+   "texte": [
+    "D'après la fiche officielle « Devenir chauffeur de VTC », la carte professionnelle « doit être renouvelée tous les 5 ans ». Pour obtenir le renouvellement, il faut effectuer un stage de formation continue, qui dure 2 jours (14 heures), et la fiche précise que cette démarche « doit être réalisée 3 mois avant la fin de validité ». Le détail du stage est dans notre question sur [la formation continue VTC](../questions/2026-11-02-formation-continue-vtc-duree.html).",
+    "L'article R3120-6 prévoit aussi que l'administration remet la carte professionnelle dans un délai maximum de trois mois suivant la date de la demande."
+   ]
+  },
+  {
+   "titre": "Quand faut-il rendre sa carte ?",
+   "texte": [
+    "L'article R3120-6 prévoit deux cas :",
+    "1. **Arrêt définitif de l'activité** : le conducteur restitue sa carte. À défaut, elle lui est retirée par l'autorité administrative.",
+    "2. **Une condition de délivrance n'est plus remplie** (par exemple le permis, l'aptitude ou l'honorabilité) : il la restitue également. À défaut, elle lui est retirée, après qu'il a été mis à même de présenter ses observations écrites.",
+    "Pour les sanctions, voir la page [Les sanctions liées à la carte professionnelle](../wiki/r3124-12.html) de la rubrique Réglementation VTC."
+   ]
+  }
+ ],
+ "a_retenir": [
+  "Pendant le travail, la carte VTC s'appose sur le pare-brise ou, à défaut, sur le véhicule, photographie facilement visible de l'extérieur (article R3120-6 du Code des transports).",
+  "Le chauffeur peut enlever sa carte quand il n'exerce pas son activité, par exemple pour un trajet personnel.",
+  "La carte professionnelle, qui porte la photographie du conducteur, ne se confond pas avec la vignette VTC, dont l'emplacement est fixé par un autre texte."
+ ],
+ "wiki": [
+  "r3120-6",
+  "l3120-2-2",
+  "r3124-12",
+  "r3122-8",
+  "r3120-8-2"
+ ],
+ "fiches": [
+  [
+   "A2.6",
+   "La carte professionnelle au quotidien"
+  ],
+  [
+   "A2.8",
+   "Carte expirée, oubliée ou prêtée"
+  ]
+ ],
+ "sources": [
+  {
+   "nom": "Code des transports, article R3120-6, modifié par le décret n° 2026-764 du 5 août 2026 (Légifrance, lu le 9 novembre 2026)",
+   "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000023086525&idArticle=LEGIARTI000030048403",
+   "date": "version en vigueur depuis le 12 août 2026"
+  },
+  {
+   "nom": "Entreprendre.Service-Public.fr, « Devenir chauffeur de VTC » (fiche F31027, vérifiée le 12 août 2026)",
+   "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F31027",
+   "date": "consultée le 9 novembre 2026"
+  },
+  {
+   "nom": "Préfecture de l'Ardèche, « VTC » (page mise à jour le 9 octobre 2025)",
+   "url": "https://www.ardeche.gouv.fr/Demarches/Professions-et-activites-reglementees/Professions-reglementees/Professions-de-la-route-taxi.-VTC.-VMDTR/VTC",
+   "date": "consultée le 9 novembre 2026"
+  },
+  {
+   "nom": "Préfecture des Hautes-Pyrénées, « VTC »",
+   "url": "https://www.hautes-pyrenees.gouv.fr/Demarches/Professions-reglementees/VTC",
+   "date": "consultée le 9 novembre 2026"
+  }
+ ],
+ "verifie": "9 novembre 2026"
+}

@@ -1,0 +1,47 @@
+RÉEL · Carte VTC : où la placer dans la voiture ?
+Page : https://revision-vtc.fr/questions/2026-11-09-carte-vtc-ou-la-placer.html
+Durée visée : 35 à 40 secondes
+
+ACCROCHE (0 à 3 s)
+  Texte à l'écran : Ta carte VTC, elle est où ?
+  Voix : En course, ta carte VTC dans le portefeuille ? Mauvaise place.
+
+DÉROULÉ
+  Plan 1 (3 à 11 s)
+    Texte à l'écran : Sur le pare-brise
+    Voix : Quand tu travailles, la carte professionnelle s'appose sur le
+    pare-brise. C'est l'article R3120-6 du Code des transports.
+  Plan 2 (11 à 18 s)
+    Texte à l'écran : Photo visible de l'extérieur
+    Voix : La photo doit être facilement visible de l'extérieur. Pas
+    cachée par le pare-soleil ou le support du téléphone.
+  Plan 3 (18 à 25 s)
+    Texte à l'écran : Hors service ? Tu peux l'enlever
+    Voix : En dehors du travail, tu peux l'enlever. L'obligation vaut
+    quand la voiture sert à titre professionnel.
+  Plan 4 (25 à 32 s)
+    Texte à l'écran : Carte et vignette : deux règles
+    Voix : Et ne confonds pas : la carte porte ta photo, la vignette
+    obéit à un autre texte. Deux règles différentes.
+
+CHUTE (32 à 38 s)
+  Texte à l'écran : Au travail : carte sur le pare-brise
+  Voix : Au travail, carte sur le pare-brise, photo vers l'extérieur.
+  Réponse complète et sources sur revision-vtc.fr.
+
+LÉGENDE
+  Pendant le travail, la carte professionnelle VTC s'appose sur le
+  pare-brise ou, à défaut, sur le véhicule, photo visible de l'extérieur
+  (article R3120-6 du Code des transports). Hors activité, elle peut être
+  retirée. Renouvellement et restitution : tout est sur la page.
+  #chauffeurvtc #vtc #examenvtc #cartevtc #cartepro #reglementationvtc
+  https://revision-vtc.fr/questions/2026-11-09-carte-vtc-ou-la-placer.html
+
+SOURCES
+  - Code des transports, article R3120-6 (Légifrance, version en vigueur
+    depuis le 12 août 2026), lu le 9 novembre 2026
+  - Entreprendre.Service-Public.fr, « Devenir chauffeur de VTC » (fiche
+    F31027, vérifiée le 12 août 2026), lue le 9 novembre 2026
+  - Préfecture de l'Ardèche, page « VTC » (mise à jour le 9 octobre
+    2025), lue le 9 novembre 2026
+  - Préfecture des Hautes-Pyrénées, page « VTC », lue le 9 novembre 2026
