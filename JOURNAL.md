@@ -6,6 +6,18 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Lundi 9 novembre 2026, 7 h 47 · Actualité VTC n° 6 (tâche du lundi)
+
+- Page : https://revision-vtc.fr/actualite/2026-11-09.html
+- Titre : « Accidents du travail des plateformes : projet au Sénat, examen VTC inchangé » (période du 8 au 9 novembre 2026).
+- Textes officiels : aucun nouveau texte VTC repéré au Journal officiel n° 262 du 8 novembre 2026 (sommaire complet non lisible sur Légifrance ; deux textes lus et recherches par mots-clés). La page le dit.
+- Examen : aucune nouveauté ; tarifs 2027 inchangés sur exament3p.fr (246 €, 171 €, 120 €) et sur la page de la CMA Île-de-France.
+- Cotisations et statut : PLFSS 2027, la commission des affaires sociales du Sénat (4 novembre 2026) propose d'affilier les travailleurs des plateformes à la branche AT-MP au 1er janvier 2029, avec une contribution des plateformes (projet ; séance publique du 9 au 18 novembre 2026).
+- Simulateur : prix des carburants à jour (7 novembre 2026, mise à jour automatique).
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px, aucun débordement ; sitemap.xml et llms.txt contiennent le numéro.
+- Règles du livre touchées : aucune.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Dimanche 8 novembre 2026, 8 h 55 · Question VTC du jour
 
 - Question : « Chien guide d'aveugle en VTC : le chauffeur peut-il refuser ? »
