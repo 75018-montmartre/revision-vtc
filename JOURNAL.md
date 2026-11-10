@@ -6,6 +6,18 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mardi 10 novembre 2026, 8 h 56 · Question VTC du jour
+
+- Question : « Micro-entreprise VTC : quel est le plafond de chiffre d'affaires ? »
+- Page : https://revision-vtc.fr/questions/2026-11-10-plafond-micro-entreprise-vtc.html
+- Réponse courte : 83 600 € hors taxes par an, le seuil des prestations de services, fixé pour 2026, 2027 et 2028. Le dépasser une seule année ne fait pas sortir de la micro-entreprise : il faut le dépasser deux années civiles de suite, et la sortie a lieu le 1er janvier suivant.
+- Sources lues le jour même : Entreprendre.Service-Public.fr F31027 (12 août 2026), F32353 (21 février 2026), A18813 (26 février 2026), F32887 (1er septembre 2024) ; CCI Paris Île-de-France (9 mars 2026) ; Bpifrance Création (février 2026).
+- Relecture indépendante : 36 affirmations confirmées, aucune contredite ; 1 non trouvée retirée (cotisations « en pourcentage », remplacée par un simple renvoi) ; 1 nuance retirée (TVA non récupérable, vraie seulement en franchise).
+- Écarté faute de certitude : article 50-0 du CGI et arrêté du 27 janvier 2026 non lus sur Légifrance (montants confirmés par service-public.fr et deux sources publiques concordantes) ; quel montant compte comme chiffre d'affaires pour les courses via plateforme.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px sur la page et l'index FAQ VTC ; aucun débordement ; page dans sitemap.xml et llms.txt.
+- Script du réel : reseaux/reels/2026-11-10-plafond-micro-entreprise-vtc.txt
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Lundi 9 novembre 2026, 10 h 30 · Article n° 7 (tâche tous les deux jours)
 
 - Titre : « Précompte des cotisations au 1er janvier 2027 : ce que les plateformes VTC prélèveront à votre place »

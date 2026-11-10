@@ -1,0 +1,53 @@
+RÉEL · Micro-entreprise VTC : quel est le plafond de chiffre d'affaires ?
+Page : https://revision-vtc.fr/questions/2026-11-10-plafond-micro-entreprise-vtc.html
+Durée visée : 35 à 42 secondes
+
+ACCROCHE (0 à 3 s)
+  Texte à l'écran : Micro-entreprise VTC : le plafond ?
+  Voix : Chauffeur VTC en micro-entreprise : jusqu'où tu peux facturer ?
+
+DÉROULÉ
+  Plan 1 (3 à 11 s)
+    Texte à l'écran : 83 600 € hors taxes par an
+    Voix : Le plafond, c'est 83 600 euros hors taxes par an. Le seuil des
+    prestations de services, fixé pour 2026, 2027 et 2028.
+  Plan 2 (11 à 19 s)
+    Texte à l'écran : Un dépassement : tu restes
+    Voix : Tu le dépasses une année ? Tu restes en micro-entreprise
+    l'année suivante.
+  Plan 3 (19 à 27 s)
+    Texte à l'écran : Deux années de suite : régime réel
+    Voix : Deux années civiles de suite au-dessus ? Tu passes au régime
+    réel le 1er janvier suivant.
+  Plan 4 (27 à 35 s)
+    Texte à l'écran : Création : seuil au prorata
+    Voix : Piège : l'année de création, le seuil est réduit. Créé le
+    1er septembre 2026 ? Ton seuil 2026, c'est 27 943 euros.
+
+CHUTE (35 à 41 s)
+  Texte à l'écran : 83 600 € HT, un dépassement toléré
+  Voix : 83 600 euros hors taxes, et une seule année de dépassement
+  tolérée. Réponse complète et sources sur revision-vtc.fr.
+
+LÉGENDE
+  Le plafond de la micro-entreprise pour un chauffeur VTC est de 83 600 €
+  de chiffre d'affaires hors taxes par an en 2026, 2027 et 2028. On passe
+  au régime réel après deux années civiles consécutives de dépassement.
+  L'année de création, le seuil se calcule au prorata : exemple sur la page.
+  #chauffeurvtc #vtc #examenvtc #microentreprise #autoentrepreneur
+  #gestionvtc #devenirvtc
+  https://revision-vtc.fr/questions/2026-11-10-plafond-micro-entreprise-vtc.html
+
+SOURCES
+  - Entreprendre.Service-Public.fr, « Devenir chauffeur de VTC » (fiche
+    F31027, vérifiée le 12 août 2026), lue le 10 novembre 2026
+  - Entreprendre.Service-Public.fr, fiche F32353 (dépassement des seuils,
+    vérifiée le 21 février 2026), lue le 10 novembre 2026
+  - Entreprendre.Service-Public.fr, actualité A18813 (26 février 2026),
+    lue le 10 novembre 2026
+  - Entreprendre.Service-Public.fr, fiche F32887 (nature de l'activité,
+    vérifiée le 1er septembre 2024), lue le 10 novembre 2026
+  - CCI Paris Île-de-France, « Micro-entrepreneur : revalorisation des
+    seuils pour 2026-2028 » (9 mars 2026), lue le 10 novembre 2026
+  - Bpifrance Création, « Les seuils du régime micro-entrepreneur »
+    (février 2026), lue le 10 novembre 2026
