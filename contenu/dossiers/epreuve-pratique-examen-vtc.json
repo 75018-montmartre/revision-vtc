@@ -1,0 +1,317 @@
+{
+ "numero": 8,
+ "slug": "epreuve-pratique-examen-vtc",
+ "date": "2026-11-11",
+ "domaine": "X",
+ "titre": "Épreuve pratique de l'examen VTC : déroulé étape par étape, grille sur 20 et causes d'ajournement",
+ "titre_page": "Épreuve pratique VTC 2027 : déroulé, grille de notation sur 20, ajournement",
+ "description": "Épreuve pratique VTC : 45 minutes au plus, 20 minutes de conduite, 6 minutes pour le GPS et le devis, 12 sur 20 pour réussir. Grille, pièges et coûts 2027.",
+ "mots_cles": [
+  "épreuve pratique VTC",
+  "examen pratique VTC",
+  "grille de notation épreuve pratique VTC",
+  "épreuve d'admission VTC",
+  "déroulement examen pratique VTC",
+  "ajournement examen VTC",
+  "repasser épreuve pratique VTC",
+  "devis facture examen VTC"
+ ],
+ "chapeau": "Vous avez réussi l'écrit : il reste une course, avec un examinateur à l'avant et un sujet tiré au sort. L'épreuve pratique se joue autant dans les six premières minutes, à l'arrêt, que pendant la conduite. Voici son déroulé, sa grille officielle et les erreurs qui l'arrêtent net.",
+ "en_bref": [
+  "Nadia monte dans sa voiture d'examen. Elle tire un sujet : une adresse, lue au plus deux fois, sans être épelée. Elle a 6 minutes pour programmer son GPS, montrer le départ et l'arrivée sur un plan et établir un devis. Puis elle roule au moins 20 minutes, dépose son « client », remet une facture et encaisse. Elle est reçue si elle obtient 12 sur 20.",
+  "L'épreuve pratique de l'examen VTC (épreuve d'admission) est une mission de transport réalisée en conditions réelles, de 45 minutes au plus dont 20 minutes au moins de conduite en circulation. Elle est notée sur 20 : **parcours 3 points, conduite 10 points, prise en charge et relation client 5 points, facturation 2 points** (arrêté du 6 avril 2017, article 3). Il faut **12 sur 20**. Toute intervention de l'examinateur sur la double commande ou le volant arrête l'épreuve. Après l'écrit, vous avez **trois essais en un an** ; en 2027, chaque nouveau passage coûte 120 €."
+ ],
+ "sections": [
+  {
+   "id": "textes",
+   "titre": "Ce que disent les textes : une course notée sur 20",
+   "blocs": [
+    "L'examen VTC se passe en deux temps. D'abord les sept épreuves écrites d'admissibilité, que nous avons détaillées dans l'article [« Réussir l'examen VTC du premier coup »](reussir-examen-vtc-premier-coup.html). Ensuite, pour les candidats admissibles, l'**épreuve pratique d'admission**.",
+    "Elle est définie par l'article 3 de l'[arrêté du 6 avril 2017](../wiki/arrete-6-avril-2017-examen.html), dans sa version en vigueur depuis le 2 septembre 2017. C'est une « mise en situation pratique » : vous réalisez une mission de transport en VTC, comme avec un vrai client. Le but est double : vérifier que vous assurez par votre conduite **la sécurité des passagers et des autres usagers**, et que vous proposez **un service commercial de qualité**.",
+    "Trois règles du texte sont à connaître par cœur :",
+    {
+     "liste": [
+      "**Au moins 20 minutes de conduite** en circulation.",
+      "**Une note sur 20**, répartie en quatre groupes de compétences.",
+      "**Reçu à partir de 12 sur 20.** En dessous, vous êtes ajourné."
+     ]
+    },
+    "Le règlement d'examen des chambres de métiers et de l'artisanat (CMA), qui organisent l'examen, complète l'arrêté. Sa version de décembre 2024 est celle qu'affichent aujourd'hui les CMA d'Île-de-France et des Hauts-de-France. Il fixe une **durée totale de 45 minutes au maximum**, dont au moins 20 minutes de conduite."
+   ]
+  },
+  {
+   "id": "grille",
+   "titre": "La grille de notation : 3 + 10 + 5 + 2 points",
+   "blocs": [
+    "L'arrêté répartit les 20 points entre quatre groupes de compétences. Le référentiel de la certification « Habilitation pour l'accès à la profession de conducteur de VTC », publié par France compétences, détaille ce que l'examinateur observe dans chacun.",
+    {
+     "tableau": {
+      "legende": "Épreuve pratique VTC : les quatre groupes de compétences et ce qui est observé",
+      "colonnes": [
+       "Compétence",
+       "Points",
+       "Part de la note",
+       "Ce que regarde l'examinateur"
+      ],
+      "nombres": [
+       1,
+       2
+      ],
+      "lignes": [
+       [
+        "Préparer et réaliser le parcours",
+        "3",
+        "15 %",
+        "Choix du parcours le plus adapté et bonne utilisation du GPS ; rapidité ; capacité à situer le départ et l'arrivée sur un plan"
+       ],
+       [
+        "Conduire en souplesse et en sécurité, respecter le Code de la route",
+        "10",
+        "50 %",
+        "Signalisation et limitations de vitesse ; allure adaptée ; distances de sécurité ; vigilance envers les usagers vulnérables ; écoconduite"
+       ],
+       [
+        "Prise en charge et relation client, informations touristiques",
+        "5",
+        "25 %",
+        "État du véhicule ; premier contact et prise de congé ; installation et descente des clients ; comportement neutre et discret ; réponse à une question sur un site touristique"
+       ],
+       [
+        "Savoir facturer",
+        "2",
+        "10 %",
+        "Devis bien rédigé et conforme à la demande ; facture conforme à la prestation et aux exigences formelles"
+       ]
+      ],
+      "total": [
+       [
+        "Total",
+        "20",
+        "100 %",
+        "Reçu à partir de 12 sur 20"
+       ]
+      ]
+     }
+    },
+    "Ce barème s'applique depuis le 2 septembre 2017 : un arrêté du 11 août 2017 a fait passer le parcours de 2 à 3 points et la relation client de 6 à 5 points.",
+    "La conduite pèse **la moitié de la note**. Mais 12 sur 20 laisse **8 points de marge** au total : on peut perdre des points partout, pourvu que la somme reste à 12 ou plus. Deux exemples, calculés sur la grille :",
+    {
+     "liste": [
+      "**Candidat A** : il perd 1 point sur le parcours, 4 sur la conduite, 2 sur la relation client et 1 sur la facturation. Il obtient 2 + 6 + 3 + 1 = **12 sur 20 : reçu**, de justesse.",
+      "**Candidat B** : même épreuve, mais une facture incomplète et une conduite moins souple lui coûtent 2 points de plus (1 sur la conduite, 1 sur la facturation). Il obtient 2 + 5 + 3 + 0 = **10 sur 20 : ajourné**."
+     ]
+    },
+    "La leçon : les 10 points « hors conduite » (parcours, relation client, facturation) se préparent en grande partie à la maison, avec un plan, un modèle de devis et un modèle de facture. Ce sont les points les plus faciles à sécuriser.",
+    {
+     "note": "Pour comparaison, l'épreuve pratique taxi a la même structure, mais le parcours y vaut 2 points et la facturation, qui comprend l'utilisation des équipements spéciaux du taxi, 3 points."
+    }
+   ]
+  },
+  {
+   "id": "deroule",
+   "titre": "Le déroulé, étape par étape",
+   "blocs": [
+    "Voici comment se passe l'épreuve selon le règlement d'examen des CMA (version de décembre 2024).",
+    "**1. L'accueil et le sujet.** Vous tirez au sort un sujet parmi plusieurs. Le membre du jury vous énonce l'adresse de destination à l'oral, **deux fois au maximum, sans l'épeler**. Vous pouvez prendre des notes sur un support vierge.",
+    "**2. Les 6 minutes de préparation.** Vous disposez de **6 minutes** pour élaborer le parcours et préparer la prestation : mettre en route et programmer le GPS, situer le départ et l'arrivée sur un plan, et établir le devis. Pour le devis, c'est **le prix qui est évalué**, pas les mentions obligatoires. Le support du devis peut être apporté par vous ou fourni par le jury, mais aucun tarif ne doit y être déjà inscrit. **Si vous n'avez pas démarré la prestation au bout des 6 minutes, vous êtes ajourné.**",
+    "**3. La conduite.** Au moins 20 minutes en circulation. La ceinture de sécurité est obligatoire. Les couloirs de bus sont interdits, sauf cas prévus par la réglementation locale, dont vous êtes alors informé avant le départ.",
+    "**4. L'arrivée.** La facturation se fait à la dépose finale du client : vous **remettez une facture** de la prestation au jury et vous **encaissez le montant**.",
+    "Les délibérations ont lieu dès la fin de l'épreuve, après votre départ, et elles sont confidentielles.",
+    {
+     "note": "Le GPS : celui de votre choix ou votre téléphone, avec l'application de votre choix, fixé sur un support adapté. Vous saisissez ou dictez vous-même l'adresse : choisir une adresse préenregistrée dans l'appareil est interdit. Le GPS est programmé pour tout le trajet, et aucune manipulation n'est autorisée en roulant."
+    }
+   ]
+  },
+  {
+   "id": "ajournement",
+   "titre": "Les cinq situations qui arrêtent tout",
+   "blocs": [
+    "La grille sanctionne les erreurs par des points perdus. Mais certaines situations mettent fin à l'épreuve ou exposent à l'ajournement, quelle que soit la qualité du reste :",
+    {
+     "liste": [
+      "**L'examinateur intervient sur la double commande ou sur le volant.** C'est l'arrêté lui-même qui le prévoit (article 3) : arrêt de l'épreuve et ajournement, sans note.",
+      "**Vous empruntez un couloir de bus sans autorisation.** Le règlement prévoit que l'examinateur assis à l'avant intervient alors sur la double commande : vous êtes ajourné.",
+      "**Vous n'avez pas démarré au bout des 6 minutes** de préparation.",
+      "**Vous n'arrivez pas à atteindre la destination.** Le président du jury met fin à l'épreuve et vous demande de rentrer au point de départ.",
+      "**Les conditions de l'épreuve ne sont pas remplies** : véhicule non conforme, documents non présentés, signes manifestes d'alcool ou de stupéfiants, chaussures non adaptées. Le règlement dit que le jury « se réserve le droit » d'ajourner le candidat dans ces cas."
+     ]
+    },
+    "Attention aux chaussures. Le règlement renvoie à l'article R412-6 du Code de la route : il faut être chaussé de façon à pouvoir faire les manœuvres. Conduire **pieds nus, ou avec des chaussures ouvertes sans attache derrière le pied** (tongs, mules), est proscrit : le candidat est considéré comme ne pouvant pas se présenter, et il est ajourné.",
+    "Une nuance utile : dans ce dernier groupe de cas (conditions non remplies), le règlement précise que le candidat qui se représente paie de nouveau les frais, mais que **ce passage ne lui est pas décompté** de ses trois essais."
+   ]
+  },
+  {
+   "id": "voiture-papiers",
+   "titre": "La voiture et les papiers : c'est vous qui les apportez",
+   "blocs": [
+    "Contrairement à l'écrit, l'épreuve pratique se passe dans **une voiture que vous fournissez**. Selon le règlement d'examen, elle doit être :",
+    {
+     "liste": [
+      "**assurée** et **à jour du contrôle technique** ;",
+      "équipée d'une **double commande** ;",
+      "équipée de **doubles rétroviseurs**, intérieurs et extérieurs ;",
+      "munie de **quatre portières**."
+     ]
+    },
+    "En revanche, elle **n'a pas besoin de respecter les normes des voitures VTC** fixées par l'[arrêté du 26 mars 2015](../wiki/arrete-26-mars-2015-vehicules.html) (taille, puissance, âge). Si votre centre de formation met sa voiture à double commande à votre disposition, prévoyez l'attestation du centre de formation qui certifie la mise à disposition du véhicule. Pour une voiture louée, il faut l'attestation d'assurance au nom du loueur, avec l'immatriculation, et le contrat de location à votre nom ou la facture acquittée.",
+    "Le jour de l'épreuve, présentez :",
+    {
+     "liste": [
+      "votre **convocation**, sur papier ou sur votre téléphone ;",
+      "l'**original** d'une pièce d'identité ou d'un titre de séjour en cours de validité ;",
+      "l'**original de votre permis B**, en bon état ;",
+      "le **certificat d'immatriculation** (carte grise) du véhicule."
+     ]
+    },
+    "En cas de perte ou de vol, le règlement accepte une attestation de police ou de gendarmerie accompagnée d'un autre document officiel avec photo, et, pour le permis, une attestation de droit à conduire de l'ANTS."
+   ]
+  },
+  {
+   "id": "jury",
+   "titre": "Qui vous évalue",
+   "blocs": [
+    "Le jury de l'épreuve pratique compte **au moins deux évaluateurs**. Le président est un agent de la CMA, titulaire d'un diplôme ou d'un titre de niveau 4 au moins (niveau du baccalauréat). Le second est une personne qui exerce ou a exercé le métier de chauffeur de taxi ou de VTC, avec au moins cinq ans d'expérience sur les dix dernières années, selon le règlement.",
+    "Autrement dit, l'un des deux connaît le métier de l'intérieur. Il sera attentif à ce qu'un client remarquerait : l'accueil, la propreté de la voiture, la souplesse au freinage, la discrétion. Le référentiel le dit en toutes lettres : « comportement neutre et discret »."
+   ]
+  },
+  {
+   "id": "calendrier-cout",
+   "titre": "Calendrier et coût : trois essais en un an",
+   "blocs": [
+    "Après la publication des résultats de l'écrit, la CMA vous convoque à l'épreuve pratique **dans les deux mois**. Le délai d'un an pour vos essais court, lui, à partir de la publication des résultats d'admissibilité (arrêté du 6 avril 2017, article 2).",
+    "En cas d'échec, vous vous réinscrivez à l'épreuve pratique seule ; le règlement prévoit une nouvelle convocation dans les deux mois au plus après la réinscription et le paiement. Après trois échecs, ou une fois l'année écoulée, il faut **tout recommencer, écrit compris**.",
+    {
+     "tableau": {
+      "legende": "Ce que coûte l'examen VTC selon le nombre de passages à l'épreuve pratique (droits d'inscription des CMA)",
+      "colonnes": [
+       "Situation",
+       "En 2026",
+       "En 2027"
+      ],
+      "nombres": [
+       1,
+       2
+      ],
+      "lignes": [
+       [
+        "Examen complet (écrit + premier passage de la pratique)",
+        "241 €",
+        "246 €"
+       ],
+       [
+        "Avec un deuxième passage de la pratique",
+        "359 €",
+        "366 €"
+       ],
+       [
+        "Avec un troisième passage de la pratique",
+        "477 €",
+        "486 €"
+       ],
+       [
+        "Trois échecs : tout recommencer (nouvel examen complet)",
+        "718 €",
+        "732 €"
+       ]
+      ]
+     }
+    },
+    "Hypothèses du tableau : tarifs publiés par les CMA (examen complet 241 € en 2026 et 246 € à partir du 1er janvier 2027 ; épreuve pratique seule 118 € puis 120 €), tous les passages la même année. La dernière ligne ajoute un nouvel examen complet aux trois passages. Ces sommes ne comprennent ni la location de la voiture à double commande, ni la formation.",
+    "À ces frais s'ajoute le temps : jusqu'à deux mois d'attente entre deux passages. Un échec à la pratique retarde donc d'autant la demande de carte professionnelle. Pour calculer votre note de l'écrit avant de vous lancer, utilisez le [calcul de la note de l'examen](../simulateurs/calcul-note-examen-vtc.html)."
+   ]
+  },
+  {
+   "id": "preparer",
+   "titre": "Comment se préparer : les 10 points qui se travaillent à la maison",
+   "blocs": [
+    "La grille donne la stratégie. Les 10 points de conduite demandent de l'entraînement au volant. Les 10 autres se préparent en grande partie à la maison.",
+    {
+     "liste": [
+      "**Le parcours (3 points)** : entraînez-vous à programmer votre GPS en dictée et en saisie, chronomètre en main. Visez moins de 2 minutes, pour garder du temps pour le plan et le devis. Apprenez à lire un plan de votre ville et à y pointer un départ et une arrivée.",
+      "**La facturation (2 points)** : préparez un modèle de devis vierge et un modèle de facture avec toutes les mentions obligatoires. Entraînez-vous à chiffrer une course en une minute.",
+      "**La relation client (5 points)** : une voiture propre ; une formule d'accueil et une de prise de congé ; ouvrir la porte, aider aux bagages ; ne parler ni de politique ni de sa vie. Préparez une ou deux phrases sur les principaux sites touristiques de votre département : selon le règlement, le jury peut vous poser des questions d'ordre touristique et pratique.",
+      "**La conduite (10 points)** : prenez des heures sur la voiture à double commande que vous utiliserez le jour J. Insistez sur la souplesse (freinages, virages), les distances de sécurité et les piétons et cyclistes. L'écoconduite fait partie de la grille.",
+      "**Le jour J** : chaussures fermées, papiers originaux, téléphone chargé et fixé sur son support, et repérage des couloirs de bus de la zone d'examen."
+     ]
+    },
+    "Les fiches du livre listées ci-dessous traitent ces sujets : itinéraire, écoconduite, accueil des touristes, devis et facture."
+   ]
+  }
+ ],
+ "a_retenir": [
+  "L'épreuve pratique de l'examen VTC dure 45 minutes au plus, dont 20 minutes au moins de conduite en circulation ; il faut 12 sur 20 pour être reçu.",
+  "La note se répartit en quatre groupes : parcours 3 points, conduite 10 points, prise en charge et relation client 5 points, facturation 2 points (arrêté du 6 avril 2017, article 3).",
+  "Vous avez 6 minutes pour programmer le GPS, situer le trajet sur un plan et établir le devis ; sans départ au bout de 6 minutes, vous êtes ajourné.",
+  "Une intervention de l'examinateur sur la double commande ou le volant, un couloir de bus emprunté sans autorisation ou des chaussures ouvertes entraînent l'ajournement.",
+  "Un candidat admissible a trois essais en un an ; en 2027, l'examen complet coûte 246 € et chaque nouveau passage de la pratique 120 €."
+ ],
+ "wiki": [
+  "arrete-6-avril-2017-examen",
+  "r3120-7",
+  "arrete-26-mars-2015-vehicules"
+ ],
+ "fiches": [
+  [
+   "A2.4",
+   "L'examen, seule porte d'entrée"
+  ],
+  [
+   "E1.2",
+   "Destination et itinéraire"
+  ],
+  [
+   "C5.5",
+   "L'écoconduite"
+  ],
+  [
+   "D2.3",
+   "Tourisme : accueillir les visiteurs"
+  ],
+  [
+   "F4.1",
+   "Rédiger un devis"
+  ],
+  [
+   "F4.2",
+   "Les mentions obligatoires d'une facture"
+  ]
+ ],
+ "sources": [
+  {
+   "nom": "Arrêté du 6 avril 2017 relatif aux programmes et à l'évaluation des épreuves des examens d'accès aux professions de conducteur de taxi et de conducteur de voiture de transport avec chauffeur, articles 1, 2 (III) et 3, Légifrance",
+   "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000034379046/",
+   "date": "consulté le 11 novembre 2026"
+  },
+  {
+   "nom": "Arrêté du 11 août 2017 modifiant l'arrêté du 6 avril 2017 (barème de l'épreuve pratique), JORF du 1er septembre 2017, copie publiée par la CMA Provence-Alpes-Côte d'Azur",
+   "url": "https://www.cmar-paca.fr/galerie/380a2070c99e2bfce18243a8fc628859.pdf",
+   "date": "consulté le 11 novembre 2026"
+  },
+  {
+   "nom": "Règlement de l'examen d'accès aux professions de chauffeur de taxi, VTC et VMDTR (CMA, version de décembre 2024), copie publiée par la CMA Alsace",
+   "url": "https://cfa-colmar.cm-alsace.fr/file/8486/download",
+   "date": "consulté le 11 novembre 2026"
+  },
+  {
+   "nom": "France compétences, référentiel de compétences et d'évaluation de l'habilitation pour l'accès à la profession de conducteur de VTC",
+   "url": "https://certifpro.francecompetences.fr/api/fiches/refActivity/21884/310110",
+   "date": "consulté le 11 novembre 2026"
+  },
+  {
+   "nom": "Exament3p.fr (plateforme d'inscription des CMA), page « Informations » (tarifs 2026 et 2027)",
+   "url": "https://www.exament3p.fr/informations",
+   "date": "consulté le 11 novembre 2026"
+  },
+  {
+   "nom": "CMA Hauts-de-France, « Examen Taxi et VTC » (épreuve pratique, convocation, trois passages en un an, tarifs)",
+   "url": "https://www.cma-hautsdefrance.fr/examen-taxi-et-vtc/",
+   "date": "consulté le 11 novembre 2026"
+  },
+  {
+   "nom": "CMA Île-de-France, « Examen T3P - Taxi / VTC / VMDTR » (mise à jour du 30 octobre 2026 : tarifs, convocation, trois essais)",
+   "url": "https://www.cma-idf.fr/outils/examen-t3p-taxi-vtc-vmdtr",
+   "date": "consulté le 11 novembre 2026"
+  }
+ ],
+ "verifie": "11 novembre 2026"
+}

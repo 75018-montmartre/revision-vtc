@@ -6,6 +6,18 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 11 novembre 2026, 10 h 40 · Article n° 8 (tâche tous les deux jours)
+
+- Titre : « Épreuve pratique de l'examen VTC : déroulé étape par étape, grille sur 20 et causes d'ajournement »
+- Page : https://revision-vtc.fr/dossiers/epreuve-pratique-examen-vtc.html (2 378 mots, épreuve X, sans photo)
+- En bref : l'épreuve pratique est une mission de transport de 45 minutes au plus, dont 20 minutes au moins de conduite ; notée sur 20 (parcours 3, conduite 10, prise en charge et relation client 5, facturation 2, arrêté du 6 avril 2017, article 3) ; reçu à 12 sur 20 ; 6 minutes pour le GPS, le plan et le devis ; une intervention sur la double commande ou le volant arrête l'épreuve ; trois essais en un an, 120 € par nouveau passage en 2027.
+- Sources lues le jour même : Légifrance, arrêté du 6 avril 2017 (articles 1, 2 et 3 ; annexes II et III bis non lisibles, publiées en image) ; arrêté du 11 août 2017 (copie CMA PACA) ; règlement d'examen des CMA de décembre 2024 (copie CMA Alsace) ; référentiel VTC de France compétences ; exament3p.fr, CMA Hauts-de-France, CMA Île-de-France (mise à jour du 30 octobre 2026).
+- Relecture indépendante : 44 affirmations confirmées, aucune contredite, calculs refaits exacts ; 1 non trouvée reformulée (question touristique « sans doute posée » devient « le jury peut poser ») ; 3 formulations précisées (adresse lue « au plus » deux fois, ajournement « possible » pour les conditions non remplies, « minute par minute » retiré du titre).
+- Écarté faute de certitude : la grille officielle détaillée de l'annexe III bis (image non lisible) ; le terminal de paiement (le référentiel le cite, le règlement ne l'impose pas au VTC) ; l'avis motivé sous quinze jours et la communication du jury trois jours ouvrés avant (décret n° 2021-202, version en vigueur non vérifiée).
+- Page modifiée (lien seulement) : article n° 5, la section sur l'épreuve pratique renvoie au nouvel article.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px (article, index des guides, article n° 5), aucun débordement ; sitemap.xml et llms.txt contiennent la page.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 11 novembre 2026, 9 h 03 · Question VTC du jour
 
 - Question : « Justificatif de réservation VTC : quelles sont les mentions obligatoires ? »
