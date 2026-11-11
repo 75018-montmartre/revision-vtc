@@ -144,7 +144,7 @@
    "source": "Code des transports",
    "theme": "cadre",
    "titre": "Ce qu'est un exploitant de VTC",
-   "en_clair": "Le chapitre sur les VTC s'applique aux exploitants qui mettent à disposition de leurs clients une ou plusieurs voitures avec chauffeur, à des conditions fixées à l'avance entre les parties.",
+   "en_clair": "Exploitant VTC : celui qui met à la disposition de ses clients une ou plusieurs voitures avec chauffeur, à des conditions fixées à l'avance entre les parties. C'est à lui que s'applique le chapitre du Code des transports sur les VTC, dont un décret en Conseil d'État fixe les modalités.",
    "concretement": "Le prix et les conditions de la course sont convenus avant la prise en charge, jamais au compteur comme un taxi.",
    "fiches": [
     [
@@ -303,7 +303,7 @@
    "source": "Code des transports",
    "theme": "conducteur",
    "titre": "L'honorabilité : les condamnations qui interdisent d'exercer",
-   "en_clair": "On ne peut pas être conducteur si le bulletin n° 2 du casier judiciaire porte certaines condamnations : un délit routier sanctionné par la perte de la moitié des points, une conduite sans permis ou malgré une annulation, ou au moins six mois de prison pour vol, escroquerie, abus de confiance, violences volontaires, agression sexuelle, trafic d'armes ou de stupéfiants, extorsion.",
+   "en_clair": "Casier judiciaire : certaines condamnations inscrites au bulletin n° 2 interdisent d'exercer comme chauffeur VTC, taxi ou de deux-roues motorisé. Ce sont les condamnations définitives pour un délit routier sanctionné par la perte de la moitié des points, pour une conduite sans permis, malgré une annulation ou une interdiction, ou un refus de restituer le permis, et les peines criminelles ou d'au moins six mois de prison, en France ou à l'étranger, pour vol, escroquerie, abus de confiance, violences volontaires, agression sexuelle, trafic d'armes, extorsion de fonds ou stupéfiants.",
    "concretement": "Une condamnation pour conduite après annulation du permis ferme l'accès à la profession.",
    "fiches": [
     [
@@ -743,7 +743,10 @@
    ],
    "texte": [
     "La condition de capacités financières prévue à l'article L. 3122-4 est satisfaite lorsque l'exploitant de voitures de transport avec chauffeur, pour chaque véhicule utilisé de façon régulière, démontre :",
-    "-soit qu'il est propriétaire du véhicule ;-soit qu'il justifie d'un contrat de location d'une durée d'au moins six mois ;-soit qu'il présente une garantie financière, d'un montant égal à 1 500 euros par véhicule, accordée soit par un ou plusieurs organismes financiers agréés par l'Autorité de contrôle prudentiel et de résolution se portant caution de l'entreprise pour le montant exigible, soit par tout établissement de crédit fournissant des prestations ou disposant de succursales en France conformément aux articles L. 511-22 et L. 511-23 du code monétaire et financier, qui est habilité à fournir ce type de service ;-soit qu'une justification de capacités financières a déjà été produite pour le véhicule conformément à l'un des trois alinéas précédents en application d'autres dispositions, notamment celles de l'article R. 3113-31."
+    "-soit qu'il est propriétaire du véhicule ;",
+    "-soit qu'il justifie d'un contrat de location d'une durée d'au moins six mois ;",
+    "-soit qu'il présente une garantie financière, d'un montant égal à 1 500 euros par véhicule, accordée soit par un ou plusieurs organismes financiers agréés par l'Autorité de contrôle prudentiel et de résolution se portant caution de l'entreprise pour le montant exigible, soit par tout établissement de crédit fournissant des prestations ou disposant de succursales en France conformément aux articles L. 511-22 et L. 511-23 du code monétaire et financier, qui est habilité à fournir ce type de service ;",
+    "-soit qu'une justification de capacités financières a déjà été produite pour le véhicule conformément à l'un des trois alinéas précédents en application d'autres dispositions, notamment celles de l'article R. 3113-31."
    ],
    "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389540"
   },
@@ -1602,7 +1605,7 @@
    "source": "Code des transports",
    "theme": "sanctions",
    "titre": "Les délits : maraude, démarchage, conduite sans carte",
-   "en_clair": "Est puni de trois ans de prison et 45 000 € d'amende le fait de louer un VTC à la place ou de prendre en charge un client sans réservation préalable, de démarcher un client pour une telle prise en charge, de la proposer à la vente ou de la promouvoir, ou de faire réaliser des courses par un conducteur sans carte professionnelle. S'y ajoutent les mêmes peines complémentaires (permis, véhicule, interdiction de paraître) ; une amende forfaitaire de 500 € peut éteindre l'action.",
+   "en_clair": "Maraude, client pris sans réservation, démarchage ou conducteur sans carte VTC : c'est un délit puni de trois ans de prison et 45 000 € d'amende. Sont visés : louer un VTC à la place ou prendre en charge un client sans réservation préalable, démarcher un client pour une telle prise en charge, la proposer à la vente ou la promouvoir, ou faire réaliser des courses par un conducteur sans carte professionnelle. S'y ajoutent les mêmes peines complémentaires (permis, véhicule, interdiction de paraître) ; une amende forfaitaire de 500 € peut éteindre l'action.",
    "concretement": "Racoler des voyageurs à la sortie d'une gare est un délit, même si un prix est annoncé.",
    "fiches": [
     [

@@ -6,6 +6,21 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 11 novembre 2026, 7 h 55 · Veille du wiki (tâche du mercredi)
+
+- **PROBLÈME : 50 articles sur 78 confirmés dans leur version en vigueur au 11 novembre 2026.** Légifrance a encore refusé de nombreuses pages (client_error) et l'outil de lecture ne recopie que 125 caractères à la fois (textes relus par morceaux puis recollés). Date « vérifié » laissée au 25 octobre 2026.
+- Confirmés, texte identique : L3120-1, L3120-2, L3120-2-1, L3120-2-2, L3120-4, L3120-5, L3120-7, L3122-1, L3122-3, L3122-4, L3122-4-1, L3122-9, R3120-1, R3120-2, R3120-4, R3120-6, R3120-7, R3120-8, R3120-8-1, R3120-8-2, R3120-9, R3120-10, D3120-3, D3120-5, D3120-38, R3122-1, R3122-2, R3122-3, R*3122-5, R3122-6, R3122-7, R3122-8, R3122-9, R3122-12, L1326-1 à L1326-4, L3124-7, L3124-11, L3124-12, L3124-13, R3124-5, L3141-1, L3141-2, L3142-3, L3143-1, L3143-2, L3143-4, R3141-1.
+- Texte identique, mais lu seulement sur une version datée (non confirmé au jour) : L3142-1, L3142-2, L3142-4 (17 juillet 2026), R3124-6, R3124-7 (26 juin 2025), R3124-1 (23 avril 2022), R3141-2 à R3141-7 (20 août 2022), R3124-4, R3124-11, R3124-12, R3124-13 (1er mai 2020), R3122-4, R3122-10 (3 octobre 2020), R3122-5-1 (décret de création de 2021).
+- Non lus : D3120-21, D3120-32, L3143-3, L3143-5 (pages introuvables ou refusées) ; les 5 arrêtés n'ont pas pu être recopiés mot à mot (4 comparés par l'outil, sans écart de fond ni de date ; arrêté du 6 août 2025 non lu).
+- Texte corrigé (découpage seulement, mots inchangés) : https://revision-vtc.fr/wiki/r3122-9.html, les quatre « -soit » deviennent quatre alinéas, comme sur Légifrance.
+- Explications améliorées (première phrase reprise par Google) :
+  - https://revision-vtc.fr/wiki/l3124-12.html : « Maraude, client pris sans réservation, démarchage ou conducteur sans carte VTC : c'est un délit puni de trois ans de prison et 45 000 € d'amende. »
+  - https://revision-vtc.fr/wiki/r3120-8.html : « Casier judiciaire : certaines condamnations inscrites au bulletin n° 2 interdisent d'exercer… » ; ajout des peines criminelles, des condamnations étrangères et du refus de restituer le permis, oubliés jusqu'ici.
+  - https://revision-vtc.fr/wiki/l3122-1.html : première phrase en forme de définition (« Exploitant VTC : celui qui met à la disposition de ses clients… »).
+- Repéré sur Légifrance, hors wiki : R3122-11 abrogé par le décret n° 2026-764 du 5 août 2026 (depuis le 12 août 2026) ; L3142-5 en vigueur mais sans page ; L3141-3 et L3141-4 créés par la loi n° 2026-534 du 25 juin 2026, pas encore applicables.
+- Contrôle technique : génération réussie, pages présentes dans le sitemap avec description et données structurées, llms.txt et llms-full.txt à jour, aucun lien interne cassé, axe sans erreur en clair et en sombre à 320 et 1366 px.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mardi 10 novembre 2026, 8 h 56 · Question VTC du jour
 
 - Question : « Micro-entreprise VTC : quel est le plafond de chiffre d'affaires ? »
