@@ -1,0 +1,55 @@
+RÉEL · Justificatif de réservation VTC : quelles sont les mentions obligatoires ?
+Page : https://revision-vtc.fr/questions/2026-11-11-justificatif-reservation-vtc-mentions.html
+Durée visée : 38 à 44 secondes
+
+ACCROCHE (0 à 3 s)
+  Texte à l'écran : Ton bon de réservation est-il complet ?
+  Voix : Contrôle VTC : ton justificatif de réservation a-t-il les sept
+  mentions ?
+
+DÉROULÉ
+  Plan 1 (3 à 11 s)
+    Texte à l'écran : 7 mentions, arrêté du 6 août 2025
+    Voix : L'arrêté du 6 août 2025 fixe sept mentions obligatoires
+    sur le justificatif de réservation. Papier ou écran.
+  Plan 2 (11 à 19 s)
+    Texte à l'écran : 3 sur l'exploitant
+    Voix : Trois sur l'exploitant : nom et coordonnées, numéro au
+    registre des VTC, et numéro Siren.
+  Plan 3 (19 à 28 s)
+    Texte à l'écran : 4 sur la course
+    Voix : Quatre sur la course : nom et téléphone du client, date et
+    heure de la réservation, date et heure de prise en charge, lieu.
+  Plan 4 (28 à 35 s)
+    Texte à l'écran : REVTC au lieu d'Atout France
+    Voix : Le numéro du registre des VTC figure au lieu du numéro Atout
+    France. Vieux modèle de bon ? À mettre à jour.
+  Plan 5 (35 à 40 s)
+    Texte à l'écran : Client sans téléphone ? Sans délai
+    Voix : Nom ou téléphone du client absent ? Tu donnes sans délai à
+    l'agent le moyen de le contacter.
+
+CHUTE (40 à 44 s)
+  Texte à l'écran : 7 mentions, à montrer à tout contrôle
+  Voix : Sept mentions, à présenter à toute demande des agents.
+  Réponse complète et sources sur revision-vtc.fr.
+
+LÉGENDE
+  Le justificatif de réservation VTC comporte sept mentions fixées par
+  l'arrêté du 6 août 2025 : trois sur l'exploitant, quatre sur la course.
+  Papier ou écran, il se présente à toute demande des agents de contrôle.
+  La liste complète et un cas concret devant une gare sont sur la page.
+  #chauffeurvtc #vtc #examenvtc #reservationvtc #reglementationvtc #controlevtc
+  https://revision-vtc.fr/questions/2026-11-11-justificatif-reservation-vtc-mentions.html
+
+SOURCES
+  - Arrêté du 6 août 2025 relatif au justificatif de la réservation
+    préalable applicable aux VTC et aux VMDTR (Légifrance, JORF n° 200 du
+    29 août 2025), article 1er recopié dans le wiki le 25 octobre 2026,
+    article 3 lu le 11 novembre 2026
+  - Entreprendre.Service-Public.fr, « Devenir chauffeur de VTC » (fiche
+    F31027, vérifiée le 12 août 2026), lue le 11 novembre 2026
+  - Code des transports, articles L3120-2, R3120-2, D3120-3, L3124-12 et
+    R3122-12 (Légifrance), confirmés le 11 novembre 2026
+  - Ministère de la Transition écologique, page « Taxi, VTC, VMDTR et
+    CPA » (mise à jour le 3 février 2026), lue le 11 novembre 2026

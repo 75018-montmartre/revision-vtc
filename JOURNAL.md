@@ -6,6 +6,18 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 11 novembre 2026, 9 h 03 · Question VTC du jour
+
+- Question : « Justificatif de réservation VTC : quelles sont les mentions obligatoires ? »
+- Page : https://revision-vtc.fr/questions/2026-11-11-justificatif-reservation-vtc-mentions.html
+- Réponse courte : Sept mentions, fixées par l'arrêté du 6 août 2025 : nom et coordonnées de l'exploitant, son numéro d'inscription au registre des VTC, son numéro unique d'identification (Siren), nom et téléphone du client, date et heure de la réservation, date et heure de prise en charge souhaitées, lieu de prise en charge. Le justificatif peut être sur papier ou sur écran.
+- Sources lues le jour même : Entreprendre.Service-Public.fr F31027 (vérifiée le 12 août 2026) ; Légifrance : article 3 de l'arrêté du 6 août 2025, sommaire du JORF n° 200 du 29 août 2025, R3120-2, R3122-12, L3120-2, L3122-1, L3124-12, D3120-3 ; page du ministère « Taxi, VTC, VMDTR et CPA » (3 février 2026). Article 1er de l'arrêté : Légifrance refusé, texte du wiki (25 octobre 2026) concordant avec service-public.fr et deux sources secondaires.
+- Relecture indépendante : 27 affirmations confirmées, aucune contredite ; 3 non trouvées, retirées ou reformulées (précision « délivré à l'immatriculation », phrase sur la carte professionnelle ; « désormais » nuancé pour Atout France).
+- Écarté faute de certitude : date d'application de l'arrêté (29 octobre 2025 selon trois sources secondaires, « 30 août 2025 » dans le wiki, article 2 non lu) ; comparaison avec le justificatif des taxis (arrêté taxis non lu).
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px sur la page et l'index FAQ VTC ; aucun débordement ; page dans sitemap.xml, llms.txt, l'index FAQ VTC et l'accueil.
+- Script du réel : reseaux/reels/2026-11-11-justificatif-reservation-vtc-mentions.txt
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 11 novembre 2026, 7 h 55 · Veille du wiki (tâche du mercredi)
 
 - **PROBLÈME : 50 articles sur 78 confirmés dans leur version en vigueur au 11 novembre 2026.** Légifrance a encore refusé de nombreuses pages (client_error) et l'outil de lecture ne recopie que 125 caractères à la fois (textes relus par morceaux puis recollés). Date « vérifié » laissée au 25 octobre 2026.

@@ -1,0 +1,103 @@
+{
+ "date": "2026-11-11",
+ "slug": "justificatif-reservation-vtc-mentions",
+ "question": "Justificatif de réservation VTC : quelles sont les mentions obligatoires ?",
+ "reponse_courte": "Sept mentions, fixées par l'arrêté du 6 août 2025 : nom et coordonnées de l'exploitant, son numéro d'inscription au registre des VTC, son numéro unique d'identification (Siren), nom et téléphone du client, date et heure de la réservation, date et heure de prise en charge souhaitées, lieu de prise en charge. Le justificatif peut être sur papier ou sur écran.",
+ "sections": [
+  {
+   "titre": "La règle : sept mentions, sur papier ou sur écran",
+   "texte": [
+    "Un chauffeur VTC ne peut prendre en charge un client sur la voie publique que s'il justifie d'une réservation préalable (article L3120-2 du Code des transports). Cette preuve peut être apportée par un document écrit, sur papier ou sur support électronique, que le conducteur présente à toute demande des agents de contrôle (article R3120-2).",
+    "Le contenu de ce document est fixé par l'[arrêté du 6 août 2025](../wiki/arrete-6-aout-2025-reservation.html), publié au Journal officiel du 29 août 2025. Son article 1er impose sept informations, reprises par la fiche officielle « Devenir chauffeur de VTC » d'Entreprendre.Service-Public.fr :",
+    "1. **Le nom ou la dénomination sociale et les coordonnées** de la société qui exerce l'activité d'exploitant de VTC.",
+    "2. **Le numéro d'inscription de l'exploitant au registre des VTC** (REVTC).",
+    "3. **Le numéro unique d'identification de l'exploitant** : le numéro Siren de l'exploitant.",
+    "4. **Le nom et les coordonnées téléphoniques du client.**",
+    "5. **La date et l'heure de la réservation** effectuée par le client.",
+    "6. **La date et l'heure de prise en charge** souhaitées par le client.",
+    "7. **Le lieu de prise en charge** indiqué par le client.",
+    "Un justificatif électronique, affiché par exemple sur un téléphone, est donc valable s'il comporte ces sept informations."
+   ]
+  },
+  {
+   "titre": "Trois mentions sur l'exploitant, quatre sur la course",
+   "texte": [
+    "Les trois premières mentions identifient l'**exploitant**, c'est-à-dire l'entreprise qui met la voiture avec chauffeur à la disposition du client (article L3122-1 du Code des transports). Les quatre suivantes décrivent **la course** : qui l'a demandée, quand, pour quelle heure et à quel endroit.",
+    "Aucune des sept mentions ne porte sur le conducteur lui-même.",
+    "La fiche d'Entreprendre.Service-Public.fr précise que c'est le numéro d'inscription au registre des VTC qui figure sur le justificatif, **au lieu du numéro Atout France**. Un modèle de bon de réservation qui porte encore le numéro Atout France à sa place est à mettre à jour."
+   ]
+  },
+  {
+   "titre": "Si le nom ou le téléphone du client manque",
+   "texte": [
+    "L'arrêté prévoit un seul cas d'information manquante : le nom et les coordonnées téléphoniques du client (mention n° 4). S'ils ne figurent pas sur le justificatif, le conducteur fournit **sans délai** à l'agent de contrôle les moyens de prendre contact avec le client.",
+    "Concrètement, l'agent doit pouvoir joindre tout de suite la personne qui a réservé. Le texte ne prévoit pas cette solution de repli pour les six autres mentions."
+   ]
+  },
+  {
+   "titre": "Un cas concret : le contrôle devant une gare",
+   "texte": [
+    "Mercredi à 18 h 05, une cliente réserve un VTC pour le lendemain, 7 h 40, à la gare de Lyon à Paris. Le chauffeur arrive à 7 h 00 et stationne aux abords de la gare. À 7 h 10, un agent le contrôle.",
+    "Le justificatif affiche la date et l'heure de la réservation (mercredi, 18 h 05) et l'heure de prise en charge souhaitée (jeudi, 7 h 40). L'agent peut vérifier deux choses : la réservation existait bien avant la prise en charge, et le chauffeur attend depuis moins d'une heure avant l'horaire de prise en charge, la durée maximale fixée par l'article D3120-3 du Code des transports.",
+    "Calcul : 7 h 40 moins une heure donne 6 h 40. Un chauffeur stationné devant la gare depuis 6 h 30 pour cette course dépasserait la durée autorisée. Les règles de l'attente sont détaillées dans notre question [Combien de temps un VTC peut-il attendre devant une gare ou un aéroport ?](../questions/2026-10-25-vtc-attente-gare-aeroport.html)."
+   ]
+  },
+  {
+   "titre": "Pourquoi ce document compte",
+   "texte": [
+    "Le justificatif est la preuve de la réservation préalable. Or prendre en charge un client sans réservation préalable est un délit puni de **trois ans d'emprisonnement et de 45 000 € d'amende** (article L3124-12 du Code des transports). Entreprendre.Service-Public.fr indique que ces sanctions ont été renforcées depuis le 27 juin 2026.",
+    "À ne pas confondre : le Code des transports prévoit un document distinct pour justifier d'un contrat avec un client final, qui peut être une entreprise. C'est un écrit qui précise sa durée, sa date d'effet, la nature des prestations couvertes, le ou les lieux de prise en charge et la qualité des bénéficiaires. De simples conditions générales de vente ne suffisent pas (article R3122-12)."
+   ]
+  }
+ ],
+ "a_retenir": [
+  "Le justificatif de réservation VTC comporte sept mentions fixées par l'arrêté du 6 août 2025 : trois sur l'exploitant (nom et coordonnées, numéro au registre des VTC, Siren) et quatre sur la course (client, date et heure de réservation, date et heure de prise en charge, lieu).",
+  "Il peut être sur papier ou sur écran, et le conducteur le présente à toute demande des agents de contrôle (article R3120-2 du Code des transports).",
+  "Si le nom ou le téléphone du client manque, le conducteur doit donner sans délai à l'agent les moyens de contacter le client."
+ ],
+ "wiki": [
+  "arrete-6-aout-2025-reservation",
+  "r3120-2",
+  "l3120-2",
+  "d3120-3",
+  "l3124-12",
+  "r3122-12"
+ ],
+ "fiches": [
+  [
+   "G4.1",
+   "Le justificatif de réservation : sept mentions"
+  ],
+  [
+   "A3.1",
+   "La réservation préalable et sa preuve"
+  ],
+  [
+   "G4.2",
+   "Présenter ses documents sur-le-champ"
+  ]
+ ],
+ "sources": [
+  {
+   "nom": "Arrêté du 6 août 2025 relatif au justificatif de la réservation préalable applicable aux VTC et aux véhicules motorisés à deux ou trois roues (Légifrance, JORF n° 200 du 29 août 2025 ; article 1er recopié dans le wiki du site le 25 octobre 2026, article 3 lu le 11 novembre 2026)",
+   "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000052153206",
+   "date": "11 novembre 2026"
+  },
+  {
+   "nom": "Entreprendre.Service-Public.fr, « Devenir chauffeur de VTC » (fiche F31027, vérifiée le 12 août 2026), rubrique « Réservation préalable obligatoire »",
+   "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F31027",
+   "date": "11 novembre 2026"
+  },
+  {
+   "nom": "Code des transports, articles L3120-2, R3120-2, D3120-3, L3124-12 et R3122-12 (Légifrance, texte du wiki confirmé identique à la version en vigueur le 11 novembre 2026)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038954680",
+   "date": "11 novembre 2026"
+  },
+  {
+   "nom": "Ministère de la Transition écologique, « Taxi, VTC, VMDTR et CPA : réglementation des transports publics particuliers de personnes » (mise à jour le 3 février 2026)",
+   "url": "https://www.ecologie.gouv.fr/politiques-publiques/taxi-vtc-vmdtr-cpa-reglementation-transports-publics-particuliers-personnes",
+   "date": "11 novembre 2026"
+  }
+ ],
+ "verifie": "11 novembre 2026"
+}
