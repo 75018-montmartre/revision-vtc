@@ -6,6 +6,19 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Jeudi 12 novembre 2026, 9 h 05 · Question VTC du jour
+
+- Question : « Casier judiciaire VTC : quelles condamnations empêchent d'être chauffeur ? »
+- Page : https://revision-vtc.fr/questions/2026-11-12-casier-judiciaire-vtc-condamnations.html
+- Réponse courte : Trois familles de condamnations inscrites au bulletin n° 2 du casier judiciaire (article R3120-8 du Code des transports) : un délit routier puni de la perte de 6 points, la conduite sans permis ou malgré son annulation, et une peine criminelle ou d'au moins six mois de prison pour vol, escroquerie, violences, stupéfiants ou quelques autres infractions.
+- Apport : la distinction délit / contravention (l'alcool sous 0,8 g/l coûte aussi 6 points mais n'est pas visé, les contraventions ne figurent pas au bulletin n° 2), quatre cas comparés, qui voit le bulletin n° 2, restitution de la carte en cours de carrière.
+- Sources lues le jour même : Légifrance (R3120-8, R3120-6, L3120-2-1) ; Entreprendre.Service-Public.fr F31027 (vérifiée le 12 août 2026) ; Service-Public.fr F2881 « Alcool au volant » (27 août 2026) ; Justice.fr : « Devenir chauffeur VTC » (1er janvier 2026), « Casier judiciaire : présentation des trois bulletins » (20 octobre 2025), « barème des points retirés » (27 février 2026).
+- Relecture indépendante : 24 affirmations confirmées, aucune retirée ; 1 contredite corrigée (mention « Légifrance non lisible » dans les sources : le relecteur l'a lu) ; 3 formulations précisées (conditions de la carte complétées par l'avis médical, « notamment » pour les professions visées, atteinte volontaire à la personne).
+- Écarté faute de certitude : les délits routiers autres que l'alcool (stupéfiants, refus d'obtempérer, grand excès de vitesse : une seule source lue) ; l'effet du sursis sur le seuil de six mois ; les délais d'effacement du bulletin n° 2.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px sur la page et l'index FAQ VTC, aucun débordement ; page dans sitemap.xml, llms.txt, l'index FAQ VTC et l'accueil. Remarque : l'accueil garde une alerte axe « landmark-complementary-is-top-level » (règle de bonne pratique, déjà présente avant cette publication).
+- Script du réel : reseaux/reels/2026-11-12-casier-judiciaire-vtc-condamnations.txt
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 11 novembre 2026, 10 h 40 · Article n° 8 (tâche tous les deux jours)
 
 - Titre : « Épreuve pratique de l'examen VTC : déroulé étape par étape, grille sur 20 et causes d'ajournement »

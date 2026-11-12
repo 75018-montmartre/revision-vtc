@@ -1,0 +1,111 @@
+{
+ "date": "2026-11-12",
+ "slug": "casier-judiciaire-vtc-condamnations",
+ "question": "Casier judiciaire VTC : quelles condamnations empêchent d'être chauffeur ?",
+ "reponse_courte": "Trois familles de condamnations inscrites au bulletin n° 2 du casier judiciaire (article R3120-8 du Code des transports) : un délit routier puni de la perte de 6 points, la conduite sans permis ou malgré son annulation, et une peine criminelle ou d'au moins six mois de prison pour vol, escroquerie, violences, stupéfiants ou quelques autres infractions.",
+ "sections": [
+  {
+   "titre": "La règle : une liste fermée, au bulletin n° 2",
+   "texte": [
+    "L'article L3120-2-1 du Code des transports soumet notamment les conducteurs de taxi, de VTC et de deux ou trois-roues motorisés à une condition d'honorabilité professionnelle. L'article R3120-8 la précise : nul ne peut exercer ce métier si l'une des condamnations qu'il énumère figure au **bulletin n° 2** de son casier judiciaire, ou à son équivalent pour les personnes qui ne sont pas de nationalité française.",
+    "Un casier judiciaire non vide n'interdit donc pas, à lui seul, de devenir chauffeur VTC. Seules les condamnations de la liste comptent, et seulement si elles figurent au bulletin n° 2.",
+    "Cette condition d'honorabilité fait partie des conditions de délivrance de la carte professionnelle fixées par l'article R3120-6, avec le permis de conduire et l'aptitude professionnelle, constatée par l'examen. Il faut aussi un avis médical favorable : voir [la question sur la visite médicale](../questions/2026-11-02-visite-medicale-vtc-tous-les-combien.html)."
+   ]
+  },
+  {
+   "titre": "Les trois familles de condamnations",
+   "texte": [
+    "1. **Un délit routier à 6 points** : une condamnation définitive pour un délit sanctionné, en vertu du Code de la route, par une réduction de la moitié du nombre maximal de points du permis. Le permis compte au plus 12 points : ce sont donc les délits qui coûtent 6 points.",
+    "2. **La conduite sans permis valable** : une condamnation définitive pour conduite sans le permis de la catégorie du véhicule, pour conduite malgré l'annulation du permis ou malgré l'interdiction de l'obtenir, ou pour refus de restituer son permis après son invalidation ou son annulation.",
+    "3. **Une peine lourde pour certaines infractions** : une condamnation définitive, par une juridiction française ou étrangère, à une peine criminelle ou à une peine correctionnelle d'au moins six mois d'emprisonnement pour vol, escroquerie, abus de confiance, atteinte volontaire à l'intégrité de la personne, agression sexuelle, trafic d'armes, extorsion de fonds ou infraction à la législation sur les stupéfiants."
+   ]
+  },
+  {
+   "titre": "Alcool au volant : délit ou contravention, tout change",
+   "texte": [
+    "L'erreur fréquente consiste à croire que toute perte de 6 points ferme l'accès au métier. Le texte vise un **délit**. Or, selon Service-Public.fr, conduire avec un taux d'alcool égal ou supérieur à 0,8 g/l de sang est un délit, et un taux interdit mais inférieur à 0,8 g/l est une contravention. Dans les deux cas, 6 points sont retirés du permis.",
+    "Le refus de se soumettre aux vérifications d'alcoolémie et la conduite en état d'ivresse manifeste sont aussi des délits qui coûtent 6 points.",
+    "Le ministère de la Justice précise en outre que les contraventions ne figurent pas au bulletin n° 2. Une amende pour un taux inférieur à 0,8 g/l ne fait donc pas partie des condamnations visées par l'article R3120-8, même si elle coûte autant de points."
+   ]
+  },
+  {
+   "titre": "Quatre cas comparés",
+   "texte": [
+    "**Cas 1.** Condamnation pour conduite avec 0,9 g/l d'alcool dans le sang : c'est un délit à 6 points. S'il figure au bulletin n° 2, il interdit d'exercer (1re famille).",
+    "**Cas 2.** Amende pour conduite avec un taux interdit inférieur à 0,8 g/l : c'est une contravention, même à 6 points. Elle n'est pas dans la liste.",
+    "**Cas 3.** Condamnation pour conduite malgré l'annulation du permis : elle interdit d'exercer, quel que soit le nombre de points en jeu (2e famille).",
+    "**Cas 4.** Condamnation pour vol : elle interdit d'exercer si la peine est criminelle ou d'au moins six mois d'emprisonnement (3e famille). Une peine plus courte n'entre pas dans la liste de l'article R3120-8.",
+    "Attention aux points restants : les conditions de la carte n'exigent pas un nombre minimal de points, mais elles exigent d'être titulaire du permis. Un permis invalidé faute de points ne remplit plus cette condition. Pour la durée de permis exigée, voir [la question sur le permis probatoire](../questions/2026-10-29-vtc-permis-probatoire.html)."
+   ]
+  },
+  {
+   "titre": "Qui voit le bulletin n° 2, et en cours de carrière ?",
+   "texte": [
+    "Selon le ministère de la Justice, le bulletin n° 2 peut être délivré aux autorités administratives, par exemple les mairies et les préfectures. La personne condamnée ne peut pas en obtenir une copie ; elle peut le consulter après une demande au procureur de la République de son domicile.",
+    "La condition vaut pendant toute la carrière, pas seulement à l'entrée. L'article R3120-6 prévoit que le conducteur restitue sa carte professionnelle lorsqu'une des conditions de sa délivrance cesse d'être remplie. À défaut, elle lui est retirée, après qu'il a pu présenter ses observations écrites."
+   ]
+  }
+ ],
+ "a_retenir": [
+  "Seules les condamnations énumérées par l'article R3120-8 du Code des transports, inscrites au bulletin n° 2 du casier judiciaire, interdisent d'être chauffeur VTC.",
+  "Un délit routier sanctionné par la perte de 6 points est visé, mais pas une contravention, même si elle coûte aussi 6 points.",
+  "Une condamnation de la liste survenue en cours de carrière oblige à restituer la carte professionnelle."
+ ],
+ "wiki": [
+  "r3120-8",
+  "l3120-2-1",
+  "r3120-6"
+ ],
+ "fiches": [
+  [
+   "A2.2",
+   "Honorabilité et bulletin n° 2"
+  ],
+  [
+   "A2.1",
+   "Les conditions d'accès à la profession"
+  ],
+  [
+   "C7.1",
+   "Le permis à points"
+  ]
+ ],
+ "sources": [
+  {
+   "nom": "Code des transports, article R3120-8, en vigueur depuis le 8 avril 2017 (Légifrance, lu le 12 novembre 2026, texte identique à celui du wiki du site)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389382",
+   "date": "12 novembre 2026"
+  },
+  {
+   "nom": "Code des transports, articles R3120-6 (en vigueur depuis le 12 août 2026) et L3120-2-1 (en vigueur depuis le 27 décembre 2019) (Légifrance, lus le 12 novembre 2026)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054659832",
+   "date": "12 novembre 2026"
+  },
+  {
+   "nom": "Entreprendre.Service-Public.fr, « Devenir chauffeur de VTC » (fiche F31027, vérifiée le 12 août 2026) : liste des condamnations au bulletin n° 2",
+   "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F31027",
+   "date": "12 novembre 2026"
+  },
+  {
+   "nom": "Justice.fr (ministère de la Justice), « Devenir chauffeur VTC » (mise à jour le 1er janvier 2026)",
+   "url": "https://www.justice.fr/fiche/devenir-chauffeur-vtc",
+   "date": "12 novembre 2026"
+  },
+  {
+   "nom": "Justice.fr (ministère de la Justice), « Casier judiciaire : présentation des trois bulletins » (mise à jour le 20 octobre 2025)",
+   "url": "https://www.justice.fr/fiche/casier-judiciaire-presentation-trois-bulletins",
+   "date": "12 novembre 2026"
+  },
+  {
+   "nom": "Service-Public.fr, « Alcool au volant » (fiche F2881, vérifiée le 27 août 2026)",
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2881",
+   "date": "12 novembre 2026"
+  },
+  {
+   "nom": "Justice.fr (ministère de la Justice), « Permis de conduire : barème des points retirés par infraction » (mise à jour le 27 février 2026)",
+   "url": "https://www.justice.fr/fiche/permis-conduire-bareme-points-retires-infraction",
+   "date": "12 novembre 2026"
+  }
+ ],
+ "verifie": "12 novembre 2026"
+}

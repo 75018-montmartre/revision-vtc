@@ -1,0 +1,42 @@
+SCRIPT DU RÉEL · Casier judiciaire VTC : quelles condamnations empêchent d'être chauffeur ?
+Page : https://revision-vtc.fr/questions/2026-11-12-casier-judiciaire-vtc-condamnations.html
+Durée visée : 35 à 40 secondes
+
+ACCROCHE (0 à 3 s)
+  Écran : Un casier judiciaire interdit-il le VTC ?
+  Voix : Un casier judiciaire, est-ce que ça interdit de devenir chauffeur VTC ?
+
+DÉROULÉ
+  Plan 1
+    Écran : Pas tout le casier : une liste
+    Voix : Non, pas à lui seul. Le Code des transports fixe une liste de condamnations, au bulletin numéro 2 du casier.
+  Plan 2
+    Écran : 1. Délit routier à 6 points
+    Voix : Un : un délit routier sanctionné par la perte de six points, la moitié du maximum.
+  Plan 3
+    Écran : 2. Conduite sans permis
+    Voix : Deux : la conduite sans permis, ou malgré l'annulation du permis.
+  Plan 4
+    Écran : 3. Six mois de prison ou plus
+    Voix : Trois : une peine criminelle, ou au moins six mois de prison, pour vol, escroquerie, violences ou autres atteintes volontaires à la personne, stupéfiants et quelques autres infractions.
+  Plan 5
+    Écran : Sous 0,8 g/l : contravention
+    Voix : Le piège : un taux d'alcool interdit mais sous 0,8 gramme par litre de sang, c'est une contravention. Six points en moins, mais pas dans la liste.
+
+CHUTE
+  Écran : Seule la liste de l'article R3120-8 compte
+  Voix : À retenir : seules les condamnations de l'article R3120-8, inscrites au bulletin numéro 2, ferment l'accès. Réponse complète et sources sur revision-vtc.fr.
+
+LÉGENDE
+  Un casier judiciaire n'interdit pas, à lui seul, de devenir chauffeur VTC. L'article R3120-8 du Code des transports fixe trois familles de condamnations, inscrites au bulletin n° 2. Attention : un délit à 6 points est visé, pas une contravention.
+  #examenvtc #chauffeurvtc #vtc #casierjudiciaire #cartevtc #permisdeconduire #devenirvtc
+  https://revision-vtc.fr/questions/2026-11-12-casier-judiciaire-vtc-condamnations.html
+
+SOURCES
+  - Code des transports, article R3120-8 (Légifrance) : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389382
+  - Code des transports, article R3120-6 (Légifrance) : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054659832
+  - Entreprendre.Service-Public.fr, fiche F31027 : https://entreprendre.service-public.gouv.fr/vosdroits/F31027
+  - Justice.fr, « Devenir chauffeur VTC » : https://www.justice.fr/fiche/devenir-chauffeur-vtc
+  - Justice.fr, « Casier judiciaire : présentation des trois bulletins » : https://www.justice.fr/fiche/casier-judiciaire-presentation-trois-bulletins
+  - Service-Public.fr, « Alcool au volant » (F2881) : https://www.service-public.gouv.fr/particuliers/vosdroits/F2881
+  - Justice.fr, barème des points retirés : https://www.justice.fr/fiche/permis-conduire-bareme-points-retires-infraction
