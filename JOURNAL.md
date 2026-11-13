@@ -6,6 +6,19 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Vendredi 13 novembre 2026, 9 h 00 · Question VTC du jour
+
+- Question : « TVA VTC : quel taux sur une course ? »
+- Page : https://revision-vtc.fr/questions/2026-11-13-tva-vtc-taux-course.html
+- Réponse courte : 10 %, le taux réduit que l'article 279 du Code général des impôts (point b quater) applique aux transports de voyageurs. Ce taux ne concerne que le chauffeur redevable de la TVA : en franchise en base, la course est facturée sans TVA.
+- Apport : calcul de la TVA comprise (prix TTC divisé par 11, erreur des 10 % du TTC chiffrée), formules à l'heure soumises au taux normal selon le BOFiP, mention de facture en franchise et passage au CIBS au 1er janvier 2027.
+- Sources lues le jour même : Légifrance, CGI articles 279 (version du 1er mars 2026) et 278 ; BOFiP BOI-TVA-LIQ-30-20-60 et ACTU-2026-00126 (7 octobre 2026) ; impots.gouv.fr (page modifiée le 14 octobre 2026) ; WebLex (9 septembre 2026) et LégiFiscal (26 août 2026). L3120-1 : texte du wiki, concordant avec le recueil T3P du ministère.
+- Relecture indépendante : 33 affirmations confirmées, aucune retirée ; 1 citation corrigée (« de véritables contrats de transports », au pluriel) ; 5 formulations précisées (titre BOFiP, mention L.233-3 « peut aussi s'écrire », date du 30 juin 2028 attribuée au BOFiP, L3120-1, perte de la franchise).
+- Écarté faute de certitude : le numéro de l'article du CIBS qui reprendra le taux de 10 % au 1er janvier 2027 (non trouvé) ; l'amendement du PLF 2027 sur la TVA à 5,5 % des transports publics (projet, texte non lu, taxis et VTC non mentionnés) ; l'arrêt de la CAA de Lyon du 26 mars 2026 (lu seulement via WebLex).
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px sur la page et l'index FAQ VTC, aucun débordement ; page dans sitemap.xml, llms.txt, l'index FAQ VTC et l'accueil. Accueil : alerte axe « landmark-complementary-is-top-level » déjà présente avant.
+- Script du réel : reseaux/reels/2026-11-13-tva-vtc-taux-course.txt
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Vendredi 13 novembre 2026, 2 h 10 · Audit visuel, lot 3 (relief unique, accueil, badge d'article)
 
 - 3.a Relief : choix tranché par Benjamin, suivre l'audit. Tout ce qui se clique a désormais le même relief bleu nuit de 4 px (nouvelle partie 12 de `site.css`, jeton `--ombre-relief`) : boutons, bouton « Le livre », cartes des questions, guides, fiches et numéros, cartes-liens, sommaire du wiki, liens « Tous les… », carte du livre de l'accueil. Survol : +1 px ; clic : enfoncé ; immobile si l'appareil demande moins d'animations. L'ombre douce ne reste que sur les encadrés non cliquables. Les choix des formulaires restent sans relief. Remplace les décisions du 7 novembre (boutons à plat) et du 8 novembre (tuiles sans relief noir).

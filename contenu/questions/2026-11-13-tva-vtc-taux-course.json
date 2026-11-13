@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-13",
+ "slug": "tva-vtc-taux-course",
+ "question": "TVA VTC : quel taux sur une course ?",
+ "reponse_courte": "10 %, le taux réduit que l'article 279 du Code général des impôts (point b quater) applique aux transports de voyageurs. Ce taux ne concerne que le chauffeur redevable de la TVA : en franchise en base, la course est facturée sans TVA.",
+ "sections": [
+  {
+   "titre": "La règle : 10 % pour le transport de voyageurs",
+   "texte": [
+    "L'article 279 du Code général des impôts commence ainsi : « La taxe sur la valeur ajoutée est perçue au taux réduit de 10 % en ce qui concerne : ». Son point b quater vise « les transports de voyageurs ».",
+    "Une course VTC est un transport de personnes : le VTC relève du titre du Code des transports qui s'applique aux « prestations de transport routier de personnes effectuées à titre onéreux avec des véhicules de moins de dix places » ([article L3120-1](../wiki/l3120-1.html)).",
+    "La doctrine de l'administration fiscale (BOFiP) précise que ce taux s'applique quel que soit le mode de transport, et cite les transports de personnes réalisés par les exploitants de taxis. Elle soumet au même taux les suppléments pour bagages accompagnés.",
+    "Le taux normal, lui, est fixé à 20 % (article 278 du même code)."
+   ]
+  },
+  {
+   "titre": "Calculer la TVA comprise dans le prix",
+   "texte": [
+    "Le client paie un prix TTC (toutes taxes comprises). Pour retrouver la TVA qu'il contient, on ne prend pas 10 % du prix TTC : on divise le prix TTC par 1,10 pour obtenir le prix hors taxes (HT), puis on fait la différence. Cela revient à diviser le prix TTC par 11.",
+    "**Course de 22 € TTC** : 20 € HT et 2 € de TVA.",
+    "**Course de 33 € TTC** : 30 € HT et 3 € de TVA.",
+    "**Course de 55 € TTC** : 50 € HT et 5 € de TVA.",
+    "**Course de 110 € TTC** : 100 € HT et 10 € de TVA.",
+    "Erreur fréquente : calculer 10 % du prix TTC. Sur une course de 33 €, on trouverait 3,30 € au lieu de 3 €. Sur un mois de 4 400 € TTC encaissés, l'écart atteint 40 € : 440 € au lieu de 400 € de TVA réellement comprise."
+   ]
+  },
+  {
+   "titre": "Mise à disposition à l'heure : attention au taux",
+   "texte": [
+    "Le taux de 10 % suppose un vrai transport. Pour les mises à disposition d'un véhicule avec chauffeur, le BOFiP n'accepte le taux réduit que si ces opérations s'analysent en « de véritables contrats de transports ». Il s'appuie notamment sur l'assurance, la responsabilité du propriétaire du véhicule et les conditions concrètes d'exploitation.",
+    "Dans un rescrit de 2008 sur les prestations dites de « grande remise » (mises à disposition avec chauffeur), repris au BOFiP, l'administration retient le taux réduit quand le prix dépend de la distance ou quand la destination finale est fixée à l'avance : transferts vers un hôtel, une gare ou un aéroport, déplacements facturés au kilomètre.",
+    "Elle applique en revanche le taux normal aux formules facturées à l'heure dont le prix ne dépend pas de la distance, comme les formules « à disposition » avec kilométrage illimité. Avant de proposer ce type d'offre, faites valider le taux par un expert-comptable ou par le service des impôts des entreprises."
+   ]
+  },
+  {
+   "titre": "En franchise en base : pas de TVA sur la facture",
+   "texte": [
+    "Un chauffeur en franchise en base de TVA ne facture pas la TVA à ses clients et ne récupère pas celle de ses achats. Pour les prestations de services, la franchise s'applique tant que le chiffre d'affaires reste sous les seuils publiés par l'administration fiscale : 37 500 € hors taxes, ou 41 250 € pour le seuil majoré. Elle se perd au 1er janvier si le chiffre d'affaires de l'année précédente a dépassé 37 500 €, et dès le jour du dépassement si 41 250 € sont dépassés en cours d'année. Leur fonctionnement est détaillé dans notre guide [« Chauffeur VTC débutant : 10 erreurs qui coûtent cher »](../dossiers/erreurs-chauffeur-vtc-debutant.html).",
+    "Ses factures portent la mention « TVA non applicable, art. 293 B du Code général des impôts (CGI) ».",
+    "Dès qu'il devient redevable de la TVA, il facture ses courses au taux de 10 %."
+   ]
+  },
+  {
+   "titre": "Au 1er janvier 2027, les articles changent de code",
+   "texte": [
+    "Les règles de la TVA quittent le Code général des impôts pour le Code des impositions sur les biens et services (CIBS). Ce transfert, prévu par l'ordonnance n° 2025-1247 du 17 décembre 2025, a été reporté du 1er septembre 2026 au 1er janvier 2027 par l'ordonnance n° 2026-671 du 27 juillet 2026.",
+    "Conséquence pratique pour la facture en franchise : la mention peut aussi s'écrire « TVA non applicable, article L.233-3 du Code des impositions des biens et des services (CIBS) », et les anciennes références au Code général des impôts restent utilisables jusqu'au 30 juin 2028.",
+    "Les numéros d'articles cités dans cette page sont ceux du Code général des impôts, en vigueur au 13 novembre 2026. Cette page sera mise à jour avec les nouveaux numéros."
+   ]
+  }
+ ],
+ "a_retenir": [
+  "Une course VTC est soumise à la TVA au taux réduit de 10 %, celui des transports de voyageurs (article 279 b quater du Code général des impôts).",
+  "La TVA comprise dans un prix TTC se calcule en divisant ce prix par 11 : 3 € sur une course de 33 €, et non 3,30 €.",
+  "Un chauffeur en franchise en base ne facture pas de TVA et l'indique sur ses factures par la mention « TVA non applicable, art. 293 B du Code général des impôts (CGI) »."
+ ],
+ "wiki": ["l3120-1"],
+ "fiches": [
+  ["B4.5", "La TVA d'une course et de la commission"],
+  ["B4.3", "La franchise en base de TVA"],
+  ["F4.2", "Les mentions obligatoires d'une facture"]
+ ],
+ "sources": [
+  {"nom": "Légifrance, Code général des impôts, article 279 (version en vigueur depuis le 1er mars 2026), point b quater « les transports de voyageurs »", "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053562872", "date": "consulté le 13 novembre 2026"},
+  {"nom": "Légifrance, Code général des impôts, article 278 : taux normal de 20 %", "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000026950057", "date": "consulté le 13 novembre 2026"},
+  {"nom": "BOFiP, BOI-TVA-LIQ-30-20-60, taux réduit des transports de voyageurs (§ 1, 10, 20, 30 et 220)", "url": "https://bofip.impots.gouv.fr/bofip/477-PGP.html", "date": "consulté le 13 novembre 2026"},
+  {"nom": "Légifrance, Code des transports, article L3120-1 (texte recopié dans le wiki du site, confirmé le 11 novembre 2026)", "url": "https://revision-vtc.fr/wiki/l3120-1.html", "date": "consulté le 13 novembre 2026"},
+  {"nom": "Impots.gouv.fr, « En tant que micro-entrepreneur, puis-je être redevable de la TVA ? » (modifié le 14 octobre 2026) : franchise, seuils, mentions de facture", "url": "https://www.impots.gouv.fr/professionnel/questions/en-tant-que-micro-entrepreneur-puis-je-etre-redevable-de-la-tva", "date": "consulté le 13 novembre 2026"},
+  {"nom": "BOFiP, actualité ACTU-2026-00126 du 7 octobre 2026 : report au 1er janvier 2027 de la recodification de la TVA dans le CIBS, anciennes références au CGI utilisables jusqu'au 30 juin 2028", "url": "https://bofip.impots.gouv.fr/node/383792", "date": "consulté le 13 novembre 2026"},
+  {"nom": "WebLex, « TVA et CIBS : rendez-vous en 2027 » (9 septembre 2026) et LégiFiscal, changement d'article de la mention d'exonération (26 août 2026) : mention L.233-3 et période de transition jusqu'au 30 juin 2028", "url": "https://www.weblex.fr/weblex-actualite/tva-et-cibs-rendez-vous-en-2027", "date": "consultés le 13 novembre 2026"}
+ ],
+ "verifie": "13 novembre 2026"
+}

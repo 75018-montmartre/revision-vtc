@@ -1,0 +1,55 @@
+RÉEL · TVA VTC : quel taux sur une course ?
+Page : https://revision-vtc.fr/questions/2026-11-13-tva-vtc-taux-course.html
+Durée visée : 35 à 42 secondes
+
+ACCROCHE (0 à 3 s)
+  Texte à l'écran : Course de 33 € : combien de TVA ?
+  Voix : Course VTC à 33 euros : combien de TVA dedans ?
+
+DÉROULÉ
+  Plan 1 (3 à 11 s)
+    Texte à l'écran : 10 % : transport de voyageurs
+    Voix : Le taux, c'est 10 %. Le taux réduit des transports de
+    voyageurs, article 279 du Code général des impôts.
+  Plan 2 (11 à 19 s)
+    Texte à l'écran : 3 €, pas 3,30 €
+    Voix : Piège : ce n'est pas 10 % de 33 euros. On divise par 11 :
+    3 euros de TVA, 30 euros hors taxes.
+  Plan 3 (19 à 27 s)
+    Texte à l'écran : En franchise : pas de TVA
+    Voix : En franchise en base, tu ne factures pas de TVA. Ta facture
+    porte la mention « TVA non applicable, art. 293 B du CGI ».
+  Plan 4 (27 à 35 s)
+    Texte à l'écran : À l'heure : attention, 20 % possible
+    Voix : Mise à disposition à l'heure, prix sans lien avec la distance ?
+    L'administration y applique le taux normal de 20 %.
+
+CHUTE (35 à 41 s)
+  Texte à l'écran : 10 %, et on divise par 11
+  Voix : 10 % sur la course, et la TVA comprise, c'est le prix divisé
+  par 11. Réponse complète et sources sur revision-vtc.fr.
+
+LÉGENDE
+  Une course VTC est soumise à la TVA au taux réduit de 10 %, celui des
+  transports de voyageurs. La TVA comprise dans un prix TTC se calcule en
+  divisant ce prix par 11 : 3 € sur une course de 33 €. En franchise en
+  base, pas de TVA sur la facture.
+  #chauffeurvtc #vtc #examenvtc #tva #microentreprise #gestionvtc
+  #devenirvtc
+  https://revision-vtc.fr/questions/2026-11-13-tva-vtc-taux-course.html
+
+SOURCES
+  - Légifrance, Code général des impôts, article 279 b quater (version en
+    vigueur depuis le 1er mars 2026), lu le 13 novembre 2026
+  - Légifrance, Code général des impôts, article 278, lu le 13 novembre 2026
+  - BOFiP, BOI-TVA-LIQ-30-20-60 (transports de voyageurs), lu le
+    13 novembre 2026
+  - Code des transports, article L3120-1 (wiki du site, confirmé le
+    11 novembre 2026)
+  - Impots.gouv.fr, « En tant que micro-entrepreneur, puis-je être
+    redevable de la TVA ? » (modifié le 14 octobre 2026), lu le
+    13 novembre 2026
+  - BOFiP, actualité ACTU-2026-00126 (7 octobre 2026), lue le
+    13 novembre 2026
+  - WebLex (9 septembre 2026) et LégiFiscal (26 août 2026), lus le
+    13 novembre 2026
