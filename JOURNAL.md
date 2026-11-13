@@ -6,6 +6,15 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Vendredi 13 novembre 2026, 18 h 50 · Visuels, étape 2 : schéma du précompte 2027
+
+- Nouveau schéma « qui verse quoi à qui » (bloc `flux` des guides, composant `.schema-flux`), validé par Benjamin sur captures.
+- Guide du précompte : schéma « Qui paie l'Urssaf, avant et après le 1er janvier 2027 », en ouverture du guide. Deux cartes : courses jusqu'au 31 décembre 2026 (l'application vous verse le prix des courses, vous déclarez et payez l'Urssaf) ; courses à partir du 1er janvier 2027 (l'application retient vos cotisations et les verse à l'Urssaf, vous recevez le prix déjà diminué des cotisations). Encadré « Attention » : ce n'est pas le prélèvement à la source de l'impôt sur le revenu, seul le versement libératoire est retenu en plus. Exemple de Sofiane (4 000 € de courses, 848 € retenus). Phrases reprises du guide, aucun chiffre ni texte modifié ailleurs.
+  - https://revision-vtc.fr/dossiers/precompte-cotisations-vtc-plateformes-2027.html
+- Le contrôle « aucun chiffre inventé » couvre aussi les schémas (tout montant en € ou en %).
+- Vérifié : axe sans erreur sur 14 pages à 320, 768 et 1 366 px, en clair et en sombre, aucun débordement ; chaque flèche annoncée une seule fois par les lecteurs d'écran ; tests du site passés.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Vendredi 13 novembre 2026, 17 h 50 · Visuels, étape 1 : chiffres clés et graphiques (page pilote)
 
 - Nouveau composant pour les guides, validé par Benjamin sur captures : chiffres clés (`chiffres`) et graphiques (`graphique` : colonnes, barres, parts), dessinés en HTML et CSS par le générateur, sans bibliothèque (partie 13 « Visuels » de `site.css`, format dans le README).

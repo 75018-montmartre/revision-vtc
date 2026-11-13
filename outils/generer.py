@@ -1516,10 +1516,39 @@ def _graphique(g):
             f'<p class="source">Source : {liens(ty(g["source"]))}</p>{tableau}</figure>')
 
 
+def _flux(f):
+    """Schéma « qui verse quoi à qui » (charte, « Visuels ») : un ou plusieurs scénarios (par exemple avant / après une
+    réforme), chacun fait de liens « acteur → acteur » avec une légende sur la flèche. L'acteur « vous » est mis en avant.
+    Tout est du texte : un lecteur d'écran lit « Application, vers Vous : verse le prix des courses »."""
+    _graphique.n = getattr(_graphique, "n", 0) + 1
+    ident = f"graphique-{_graphique.n}"
+    assert f.get("titre") and f.get("lecture") and f.get("source") and f.get("etats"), "schéma : titre, lecture, source et scénarios obligatoires"
+    def acteur(nom, cache=False):   # l'acteur d'arrivée est déjà annoncé (« vers … ») : caché aux lecteurs d'écran
+        return (f'<span class="f-acteur{" f-vous" if nom.lower() in ("vous", "le chauffeur") else ""}"'
+                f'{" aria-hidden=\"true\"" if cache else ""}>{ty(nom)}</span>')
+    etats = ""
+    for e in f["etats"]:
+        liens_ = "".join(f'<li>{acteur(de)}<span class="f-fleche"><span class="visuellement-cache">, vers {ty(vers)} : </span>'
+                         f'<span class="f-libelle">{liens(ty(lib))}</span></span>{acteur(vers, True)}</li>' for de, vers, lib in e["liens"])
+        etats += (f'<div class="f-etat{" f-nouveau" if e.get("nouveau") else ""}"><p class="f-quand">{ty(e["quand"])}</p>'
+                  f'<ul class="f-liens">{liens_}</ul></div>')
+    alerte = f'<p class="f-alerte"><span class="f-attention">Attention</span> {liens(ty(f["alerte"]))}</p>' if f.get("alerte") else ""
+    return (f'<figure class="graphique schema-flux" aria-labelledby="{ident}">'
+            f'<figcaption><span class="g-titre" id="{ident}">{ty(f["titre"])}</span> <span class="g-lecture">{liens(ty(f["lecture"]))}</span></figcaption>'
+            f'<div class="f-etats">{etats}</div>{alerte}<p class="source">Source : {liens(ty(f["source"]))}</p></figure>')
+
+
+_MONTANT = re.compile(r"\d[\d\s\u00a0\u202f]*(?:,\d+)?\s?(?:€|%)")
+
+
 def _valeurs_affichees(b):
     """Les chiffres qu'un bloc visuel affiche (contrôle : chacun doit être écrit ailleurs dans la page)."""
     if "chiffres" in b:
         return [i["valeur"] for i in b["chiffres"]["items"]]
+    if "flux" in b:   # tout montant en € ou en % écrit dans le schéma
+        f = b["flux"]
+        textes = [f["lecture"], f.get("alerte", "")] + [lib for e in f["etats"] for _, _, lib in e["liens"]]
+        return [m.group(0).strip() for t in textes for m in _MONTANT.finditer(t)]
     g = b["graphique"]
     if g["type"] == "colonnes":
         return [v["affiche"] for v in g["valeurs"]]
@@ -1529,13 +1558,15 @@ def _valeurs_affichees(b):
 
 
 def _bloc_dossier(b):
-    """Un bloc d'une section : paragraphe (texte), liste, tableau chiffré, encart, photo, chiffres clés ou graphique."""
+    """Un bloc d'une section : paragraphe (texte), liste, tableau chiffré, encart, photo, chiffres clés, graphique ou schéma."""
     if isinstance(b, str):
         return f"<p>{liens(ty(b))}</p>"
     if "chiffres" in b:
         return _chiffres_cles(b["chiffres"])
     if "graphique" in b:
         return _graphique(b["graphique"])
+    if "flux" in b:
+        return _flux(b["flux"])
     if "liste" in b:
         return "<ul>" + "".join(f"<li>{liens(ty(x))}</li>" for x in b["liste"]) + "</ul>"
     if "note" in b:
@@ -1576,6 +1607,10 @@ def _texte_dossier(d, visuels=True):
             elif "chiffres" in b:
                 if visuels:
                     morceaux += [f'{i["valeur"]} {i["texte"]}' for i in b["chiffres"]["items"]]
+            elif "flux" in b:
+                f = b["flux"]
+                if visuels:
+                    morceaux += [f["titre"], f["lecture"], f.get("alerte", "")] + [f"{de} vers {vers} : {lib}" for e in f["etats"] for de, vers, lib in e["liens"]]
             elif "graphique" in b:
                 g = b["graphique"]
                 if visuels:
@@ -1595,7 +1630,7 @@ def _controle_visuels(d):
     texte = plat(_texte_dossier(d, visuels=False))
     for s in d["sections"]:
         for b in s["blocs"]:
-            if isinstance(b, dict) and ("chiffres" in b or "graphique" in b):
+            if isinstance(b, dict) and ("chiffres" in b or "graphique" in b or "flux" in b):
                 for v in _valeurs_affichees(b):
                     assert plat(v) in texte, f"{d['slug']} : « {v} » est affiché dans un visuel mais écrit nulle part ailleurs dans la page"
 

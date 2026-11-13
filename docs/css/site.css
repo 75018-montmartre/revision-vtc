@@ -1171,4 +1171,34 @@ li:has(> a[href^="http"]:not([href*="revision-vtc.fr"])){--fleche:var(--fleche-b
   .graphique-colonnes .g-donnees > li{min-width:0}
   .graphique-colonnes .g-valeur{margin-bottom:calc(var(--v) * .09rem - 9rem);font-size:1.0625rem;white-space:normal;text-align:center}   /* « environ » passe au-dessus du nombre sur petit écran */
 }
-@media print{.chiffres-cles li,.graphique{box-shadow:none}}
+/* schéma « qui verse quoi à qui » (.schema-flux, bloc « flux » des guides) : un scénario par carte, chaque ligne
+   « acteur → acteur » avec la légende sur la flèche ; « Vous » en jaune ; la flèche reprend --fleche-interne.
+   Sur téléphone, la ligne se lit de haut en bas (flèche vers le bas). */
+.f-etats{display:flex;flex-direction:column;gap:var(--e4)}
+.f-etat{padding:var(--e4);border:1px solid var(--filet);border-radius:10px;background:var(--fond)}
+.f-quand{display:inline-flex;margin:0 0 var(--e3);padding:.2rem .6rem;border-radius:4px;background:var(--doux);color:var(--encre);
+  font-family:var(--cond);font-weight:700;font-size:1rem;line-height:1.3}
+.f-nouveau .f-quand{background:var(--jaune);color:var(--nuit)}
+.f-liens{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:var(--e3)}
+.f-liens > li{margin:0;display:grid;grid-template-columns:8.5rem minmax(0,1fr) 8.5rem;align-items:center;gap:var(--e3)}
+.f-acteur{display:flex;align-items:center;justify-content:center;min-height:2.75rem;padding:.3rem .5rem;text-align:center;
+  border:1.5px solid var(--encre);border-radius:6px;background:var(--carte);color:var(--encre);font-family:var(--cond);font-weight:700;font-size:1.0625rem;line-height:1.15}
+.f-vous{background:var(--jaune);color:var(--nuit)}
+.f-fleche{position:relative;display:flex;flex-direction:column;align-items:center;gap:.25rem;padding-bottom:1rem}
+.f-libelle{font-family:var(--sans);font-size:.9375rem;line-height:1.35;color:var(--encre);text-align:center}
+.f-fleche::after{content:"";position:absolute;left:0;right:0;bottom:.3rem;height:0;border-top:2px solid var(--encre)}
+.f-fleche::before{content:"";position:absolute;right:-.35rem;bottom:-.2rem;width:1.1rem;height:1.1rem;background:var(--encre);
+  -webkit-mask:var(--fleche-interne) center/contain no-repeat;mask:var(--fleche-interne) center/contain no-repeat}
+.f-alerte{margin:var(--e4) 0 0;font-family:var(--sans);font-size:1rem;line-height:1.5;color:var(--encre)}
+.f-attention{display:inline-block;margin-right:.4rem;padding:.05rem .5rem;border-radius:4px;background:var(--nuit);color:var(--jaune);
+  font-family:var(--cond);font-weight:700;font-size:.9375rem;letter-spacing:.02em;text-transform:uppercase}
+@media (prefers-color-scheme: dark){.f-attention{background:var(--jaune);color:var(--nuit)}}
+@media (max-width:36rem){
+  .f-liens{gap:var(--e4)}
+  .f-liens > li{grid-template-columns:minmax(0,1fr);justify-items:center;gap:var(--e1)}
+  .f-acteur{min-width:9rem}
+  .f-fleche{justify-self:stretch;padding:2.1rem 0 0}   /* flèche verticale centrée sous l'acteur, légende dessous */
+  .f-fleche::after{left:50%;right:auto;top:.1rem;bottom:auto;height:1.6rem;border-top:0;border-left:2px solid var(--encre)}
+  .f-fleche::before{left:calc(50% - .5rem);right:auto;top:1rem;bottom:auto;transform:rotate(90deg)}
+}
+@media print{.chiffres-cles li,.graphique,.f-etat{box-shadow:none}}

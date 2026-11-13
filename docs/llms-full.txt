@@ -1821,6 +1821,13 @@ C'est le précompte des cotisations, prévu par l'article L613-6-1 du Code de la
 Le précompte en une phrase : la plateforme paie l'Urssaf à votre place
 Aujourd'hui, un chauffeur VTC en micro-entreprise reçoit de l'application le prix de ses courses. Il déclare ensuite lui-même son chiffre d'affaires à l'Urssaf, chaque mois ou chaque trimestre, et paie ses cotisations à ce moment-là.
 Le précompte inverse l'ordre. L'article L613-6-1 du Code de la sécurité sociale prévoit que les cotisations et contributions sociales dues sur le chiffre d'affaires réalisé par l'intermédiaire d'une plateforme sont prélevées par l'opérateur de la plateforme sur les sommes qu'il vous verse. Il les déclare et les reverse ensuite à l'Urssaf.
+Qui paie l'Urssaf, avant et après le 1er janvier 2027
+La plateforme paie l'Urssaf à votre place. Exemple : sur 4 000 € de courses en janvier 2027, l'application retient 848 € de cotisations (taux de 2026, 21,2 %) avant de payer Sofiane.
+Ce n'est pas le prélèvement à la source de l'impôt sur le revenu : seul le versement libératoire, si vous l'avez choisi, est retenu en plus.
+L'application vers Vous : vous verse le prix des courses
+Vous vers Urssaf : vous déclarez votre chiffre d'affaires et payez vos cotisations, chaque mois ou chaque trimestre
+L'application vers Urssaf : retient vos cotisations, les déclare et les verse chaque mois
+L'application vers Vous : vous verse le prix des courses, déjà diminué des cotisations
 Trois points du texte méritent d'être connus :
 Ce que la plateforme retient compte comme payé par vous. La loi dit que ce prélèvement « vaut acquit » des cotisations pour le travailleur concerné.
 La plateforme déclare chaque mois. Elle transmet le chiffre d'affaires réalisé par chacun de ses chauffeurs, puis déclare et verse les sommes retenues. Selon Entreprendre.Service-Public.fr, c'est aussi le cas si vous aviez choisi la déclaration trimestrielle.
