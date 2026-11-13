@@ -10,6 +10,8 @@
    5. Composants : boutons, cartes, listes de cartes, encadrés, formulaires
    6. Pages : accueil, wiki, actualité, questions, examens
    7. Adaptations : petits écrans, mouvement réduit, impression
+   8. Habillage « signalétique en relief » ; 9. Barre de navigation et boutons ; 10-11. Tuiles arrondies ;
+   12. Relief unique de tout ce qui se clique (dernière couche)
    ========================================================================== */
 
 /* 1. Jetons ---------------------------------------------------------------- */
@@ -62,7 +64,6 @@
   /* formes */
   --rayon:4px; --rayon-p:3px; --rayon-carte:4px; --rayon-lien:4px; --pilule:999px;
   --ombre-tuile:0 1px 2px rgba(17,22,30,.04),0 14px 34px -16px rgba(17,22,30,.24); /* tuiles arrondies : ombre douce, jamais noire */
-  --ombre-tuile-survol:0 2px 4px rgba(17,22,30,.05),0 20px 40px -16px rgba(17,22,30,.30);
   --ombre-h:0 2px 4px rgba(17,22,30,.06),0 14px 30px -14px rgba(17,22,30,.28); /* menu déroulant seulement */
 }
 @media (prefers-color-scheme: dark){
@@ -74,7 +75,7 @@
         --relief:#3A4A63;--quadrille:rgba(201,209,220,.07);--pastille:var(--jaune);
         --pastille-fleche:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2318212F' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E");
         --chevron-nav:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E9EDF2' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l6 6-6 6'/%3E%3C/svg%3E");
-        --ombre-tuile:0 14px 34px -16px rgba(0,0,0,.7);--ombre-tuile-survol:0 20px 40px -16px rgba(0,0,0,.85)}
+        --ombre-tuile:0 14px 34px -16px rgba(0,0,0,.7)}
 }
 
 /* 2. Base ------------------------------------------------------------------ */
@@ -214,7 +215,6 @@ h1 .num-art{display:block;font-size:1rem;letter-spacing:.02em;margin-bottom:var(
 .actions{display:flex;flex-wrap:wrap;gap:var(--e3);margin:var(--e5) 0}
 .bouton{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.55rem 1.35rem;border:1.5px solid var(--encre);border-radius:var(--pilule);background:var(--encre);color:var(--fond);font-family:var(--sans);font-weight:600;font-size:1rem;text-decoration:none;cursor:pointer;transition:background .15s,color .15s,transform .15s}
 .bouton:hover{background:var(--fond);color:var(--encre)}
-.bouton:not(.bientot):hover{transform:translateY(-1px)}
 .bouton.second{background:transparent;color:var(--encre)}
 .bouton.second:hover{background:var(--doux)}
 .bouton.petit{min-height:44px;padding:.375rem .95rem;font-size:.9375rem}
@@ -401,7 +401,28 @@ main:has(.hero){padding-bottom:0}
 .parcours > li{margin:0;padding:var(--e5);background:var(--carte);border:1px solid var(--filet);border-radius:var(--rayon)}
 .parcours h3{margin:0 0 var(--e1)}
 .parcours > li > p{margin:0 0 var(--e4);color:var(--gris);font-size:1.0625rem}
-.parcours .essentiel-liens{grid-template-columns:minmax(0,1fr);gap:var(--e3)}
+/* liste de liens simples (accueil : « Par où commencer ? », « Réglementation VTC : l'essentiel » ; depuis le 13 novembre 2026) :
+   une ligne par lien, séparée par un filet, flèche → à droite, toute la ligne cliquable (44 px au moins) ; pas de tuile autour de chaque lien */
+.liste-liens{list-style:none;margin:0;padding:0}
+.liste-liens li{margin:0;border-bottom:1px solid var(--filet)}
+.liste-liens li:first-child{border-top:1px solid var(--filet)}
+.liste-liens a{display:flex;align-items:center;gap:var(--e3);min-height:44px;padding:.7rem 0;color:var(--encre);text-decoration:none;font-family:var(--sans);font-weight:600;font-size:1rem;line-height:1.4}
+.liste-liens a::after{content:"";flex:none;margin-left:auto;width:1rem;height:1rem;background:var(--accent);-webkit-mask:var(--fleche) center/contain no-repeat;mask:var(--fleche) center/contain no-repeat;transition:transform .15s ease}
+.liste-liens a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:.2em}
+.liste-liens a:hover::after{transform:var(--fleche-glisse)}
+/* « l'essentiel » : deux colonnes (une sur téléphone), numéro d'article en pastille jaune de largeur fixe, puis le titre */
+.liste-articles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--e6)}
+.liste-articles li:nth-child(2){border-top:1px solid var(--filet)}
+.liste-articles .num-art{flex:none;justify-content:center;min-width:9.25rem;margin:0 !important;font-size:.9375rem !important}
+@media (max-width:52rem){
+  .liste-articles{grid-template-columns:minmax(0,1fr)}
+  .liste-articles li:nth-child(2){border-top:0}
+  /* téléphone : pastille en début de ligne, le titre s'enroule à la suite ; flèche calée à droite */
+  .liste-articles a{display:block;position:relative;padding:.55rem 2rem .55rem 0;line-height:1.5}
+  .liste-articles .num-art{min-width:0;margin:0 .45rem 0 0 !important;padding:0 .45rem;vertical-align:.08em;font-size:.875rem !important}
+  .liste-articles a::after{position:absolute;right:0;top:50%;margin-top:-.5rem}
+}
+@media (prefers-reduced-motion: reduce){.liste-liens a::after{transition:none}}
 /* page du livre : présentation en tête (couverture, chiffres du livre, achat), à plat sauf les boutons */
 .presentation-livre{display:grid;grid-template-columns:11rem minmax(0,1fr);gap:var(--e6);align-items:start;margin:0 0 var(--e7);padding:var(--e5);background:var(--doux);border-radius:var(--rayon)}
 .presentation-livre img{display:block;width:100%;height:auto;border-radius:3px}
@@ -711,11 +732,8 @@ body{font-size:1.125rem;line-height:1.6}
 .nav a{color:var(--sur-nuit);border-radius:0;padding:0 .75rem;border-bottom:4px solid transparent;min-height:48px}
 .nav a:hover{background:var(--nuit-2)}
 .nav a[aria-current="page"]{background:transparent;color:var(--sur-nuit);border-bottom-color:var(--jaune)}
-/* « Le livre » : bouton jaune plein en relief sur toutes les pages ; sur la page du livre, il reste enfoncé (aria-current) */
-.menu-livre{border-radius:4px;border-color:var(--jaune);background:var(--jaune);color:var(--nuit);min-height:44px;
-  box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief);transition:transform .15s ease,box-shadow .15s ease}
-.menu-livre:hover{background:var(--jaune);transform:translate(-1px,-1px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief)}
-.menu-livre:active,.menu-livre[aria-current="page"]{background:var(--jaune);transform:translate(4px,4px);box-shadow:0 0 0 0 var(--relief)}
+/* « Le livre » : couleurs reprises par la partie 9, relief par la partie 12 ; sur la page du livre, il reste enfoncé (aria-current) */
+.menu-livre{border-radius:4px;border-color:var(--jaune);background:var(--jaune);color:var(--nuit);min-height:44px}
 .entete :focus-visible{outline-color:var(--jaune)}
 /* en-tête collant : reste visible au défilement (js/site.js pose les classes sur <html>).
    « defile » : il se resserre (sous-titre masqué) ; la jauge jaune en bas montre la part de la page déjà lue.
@@ -752,10 +770,13 @@ h3{font-size:1.375rem;font-weight:600}
 .fil a{color:var(--gris)}
 .num-art{display:inline-flex !important;align-items:center;background:var(--jaune);color:var(--nuit) !important;font-family:var(--cond);font-weight:700;font-size:1.125rem !important;letter-spacing:.01em !important;padding:.1rem .6rem;border-radius:3px;margin-bottom:var(--e3)}
 .wiki-liste .num-art{font-size:.9375rem !important;margin-bottom:.35rem}
+/* pages du wiki : le numéro d'article reste dans le titre (référencement) mais sur sa propre ligne, sous le surtitre ;
+   le titre commence ainsi toujours au bord gauche (depuis le 13 novembre 2026, audit visuel, lot 3) */
+.tete-page h1 > .num-art{display:flex !important;width:max-content;max-width:100%;margin:0 0 var(--e3)}
 
 /* boutons : jaune signal (principal), contour nuit (second) */
 .bouton{border-radius:4px;background:var(--nuit);border-color:var(--nuit);color:var(--sur-nuit);font-weight:600;min-height:48px}
-.bouton:hover{background:var(--nuit-2);color:var(--sur-nuit);transform:none !important}
+.bouton:hover{background:var(--nuit-2);color:var(--sur-nuit)}
 .bouton.second{background:transparent;color:var(--encre);border-color:var(--encre)}
 .bouton.second:hover{background:var(--doux)}
 .bouton.clair{background:var(--jaune);border-color:var(--jaune);color:var(--nuit)}
@@ -823,13 +844,12 @@ input[type=text],input[type=search],textarea,select,.contact input[type=email]{b
 .bloc-blanc{border-top:0;border-bottom:0}
 
 /* --- cartes cliquables, grandes --- */
-.questions li,.numeros > li,.une-actu,.actu-precedents li{position:relative;background:var(--carte);border:1.5px solid var(--relief);border-radius:var(--rayon-carte);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief),7px 7px 0 0 var(--relief);transition:transform .18s ease,box-shadow .18s ease}
+.questions li,.numeros > li,.une-actu,.actu-precedents li{position:relative;background:var(--carte);border:1.5px solid var(--relief);border-radius:var(--rayon-carte)}
 .questions li{padding:var(--e5) var(--e5) 5rem}
 .une-actu{padding:var(--e5) var(--e5) 5rem}
 .actu-precedents li{padding:var(--e4) 5rem var(--e4) var(--e4);flex:1}
-.questions li,.numeros > li,.une-actu,.actu-precedents li{--hover:0}
 /* --- liens en liste, petites cartes --- */
-.essentiel-liens li,.wiki-liste li,.voir-aussi li{position:relative;background:var(--carte);border:1.5px solid var(--relief);border-radius:var(--rayon-lien);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief);transition:transform .15s ease,box-shadow .15s ease}
+.essentiel-liens li,.wiki-liste li,.voir-aussi li{position:relative;background:var(--carte);border:1.5px solid var(--relief);border-radius:var(--rayon-lien)}
 .essentiel-liens li,.wiki-liste li{padding:.85rem 3.5rem .85rem 1.15rem}
 .essentiel-liens li::after,.wiki-liste li::after,.voir-aussi li::after{content:"";position:absolute;right:.75rem;top:50%;margin-top:-1rem;width:2rem;height:2rem;border-radius:50%;background:var(--pastille) var(--pastille-fleche) center/1.05rem no-repeat;pointer-events:none}
 .cote-bloc .voir-aussi{list-style:none;padding:0;margin:0;display:grid;gap:var(--e3)}
@@ -840,35 +860,20 @@ input[type=text],input[type=search],textarea,select,.contact input[type=email]{b
 .une-actu h3 a::before,.actu-precedents a::before{content:"";position:absolute;inset:0;border-radius:var(--rayon-carte);z-index:1}
 .une-actu h3 a:hover,.actu-precedents a:hover{text-decoration:none;color:var(--encre)}
 /* survol : la carte se soulève, la flèche file */
-:is(.questions li,.numeros > li,.une-actu,.actu-precedents li):hover,:is(.questions li,.numeros > li,.une-actu,.actu-precedents li):focus-within{transform:translate(-3px,-3px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief),7px 7px 0 0 var(--relief),8px 8px 0 0 var(--relief),9px 9px 0 0 var(--relief),10px 10px 0 0 var(--relief);border-color:var(--relief)}
-:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover,:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li):focus-within{transform:translate(-2px,-2px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief);border-color:var(--relief)}
 :is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover a{color:var(--encre)}
-:is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover::after{animation:fleche .45s cubic-bezier(.77,0,.175,1)}
-@keyframes fleche{0%{background-position:center}45%{background-position:200% center}46%{background-position:-100% center}100%{background-position:center}}
 /* clic : la carte s'enfonce */
-:is(.questions li,.numeros > li,.une-actu,.actu-precedents li):active{transform:translate(7px,7px);box-shadow:0 0 0 0 var(--relief)}
-:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li):active{transform:translate(4px,4px);box-shadow:0 0 0 0 var(--relief)}
 /* clavier : contour jaune autour de la carte entière */
 :is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li) a:focus-visible{outline:none}
 :is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):focus-within{outline:3px solid var(--focus);outline-offset:4px}
 
 /* --- boutons : même relief, en plus fin --- */
-.bouton:not(.bientot){box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief);transition:transform .15s ease,box-shadow .15s ease}
-.bouton:not(.bientot):hover{transform:translate(-1px,-1px) !important;box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief)}
-.bouton:not(.bientot):active{transform:translate(4px,4px) !important;box-shadow:0 0 0 0 var(--relief)}
 /* --- relief sur fond nuit : un relief bleu nuit y serait invisible ; le relief y est jaune foncé (--jaune-ombre),
    sauf le bouton à contour, en --nuit-2 pour rester second. Mêmes mouvements qu'ailleurs. --- */
-.fond-nuit .bouton.clair,.carte-hero,.menu-livre{--relief:var(--jaune-ombre)}
+.fond-nuit .bouton.clair,.carte-hero{--relief:var(--jaune-ombre)}
 .fond-nuit .bouton.contour{--relief:var(--nuit-2)}
-a.carte-hero{box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief);transition:transform .15s ease,box-shadow .15s ease}
-a.carte-hero:hover,a.carte-hero:focus-visible{transform:translate(-2px,-2px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief),6px 6px 0 0 var(--relief),7px 7px 0 0 var(--relief),8px 8px 0 0 var(--relief)}
-a.carte-hero:active{transform:translate(6px,6px);box-shadow:0 0 0 0 var(--relief)}
 a.carte-hero:hover .carte-lien{text-decoration-thickness:2px}
 
 /* --- simulateur : les choix sont des touches ; la touche choisie est enfoncée --- */
-.choix label{background:var(--carte);border:1.5px solid var(--relief) !important;border-radius:var(--rayon-lien);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief);transition:transform .12s ease,box-shadow .12s ease}
-.choix label:hover{transform:translate(-1px,-1px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief)}
-.choix label:has(input:checked){transform:translate(4px,4px);box-shadow:0 0 0 0 var(--relief);background:var(--jaune);color:var(--nuit);border-color:var(--nuit) !important}
 .choix label:has(input:focus-visible){outline:3px solid var(--focus);outline-offset:3px}
 @media (prefers-color-scheme: dark){.choix label:has(input:checked){color:var(--nuit)}}
 
@@ -890,28 +895,22 @@ a.carte-hero:hover .carte-lien{text-decoration-thickness:2px}
 
 @media (prefers-reduced-motion: reduce){
   :is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li,.bouton,.choix label,.tete-bloc .lien-fleche){transition:none}
-  :is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover::after{animation:none}
 }
 @media (max-width:64rem){.actu-une{grid-template-columns:minmax(0,1fr)}}
 @media print{:is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li,.bouton,.choix label){box-shadow:none !important}.bloc-doux,.tete-page{background-image:none}}
 .tete-bloc .tete-intro{color:var(--gris)}
 /* numéros de l'Actualité VTC : pastille jaune comme les étapes */
 .numeros .numero{display:flex;align-items:center;justify-content:center;width:3rem;height:3rem;border-radius:var(--rayon);background:var(--jaune);color:var(--nuit);font-family:var(--cond);font-size:1.75rem}
-.numeros > li{padding:var(--e5) var(--e5) 4.75rem}
+.numeros > li{padding:var(--e5) var(--e6) var(--e5) var(--e5)}   /* plus de place réservée à l'ancienne pastille fléchée */
 /* « À retenir » : bande jaune sur fond clair (« En clair » reste le bandeau nuit) */
 .retenir{border:0;border-left:6px solid var(--jaune);background:var(--doux);border-radius:var(--rayon)}
 .retenir h2{font-family:var(--cond);font-size:1.25rem}
 
 /* encadré latéral (sommaire, voir aussi, autres questions) : relief fin, sans pastille, pour rester léger */
-.cote-bloc .voir-aussi li{display:flex;align-items:center;min-height:44px;padding:.55rem .8rem;box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief);font-size:.9375rem}
+.cote-bloc .voir-aussi li{display:flex;align-items:center;min-height:44px;padding:.55rem .8rem;font-size:.9375rem}
 .cote-bloc .voir-aussi li::after{display:none}
-.cote-bloc .voir-aussi li:hover,.cote-bloc .voir-aussi li:focus-within{transform:translate(-1px,-1px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief)}
-.cote-bloc .voir-aussi li:active{transform:translate(3px,3px);box-shadow:0 0 0 0 var(--relief)}
 .cote-bloc .voir-aussi{gap:var(--e2)}
 /* sommaire des thèmes (wiki) : touches en relief */
-.sommaire a{border:1.5px solid var(--relief) !important;background:var(--carte);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief);transition:transform .12s ease,box-shadow .12s ease}
-.sommaire a:hover{transform:translate(-1px,-1px);box-shadow:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief)}
-.sommaire a:active{transform:translate(3px,3px);box-shadow:0 0 0 0 var(--relief)}
 @media (prefers-reduced-motion: reduce){.cote-bloc .voir-aussi li,.sommaire a,.carte-hero,.menu-livre{transition:none}}
 @media print{.sommaire a,.cote-bloc .voir-aussi li,.carte-hero{box-shadow:none}}
 .sommaire a:hover{color:var(--encre)}
@@ -949,7 +948,6 @@ li:has(> a[href^="http"]:not([href*="revision-vtc.fr"])){--fleche:var(--fleche-b
 /* boutons : à plat, flèche → (↗ vers un autre site) ; les couleurs restent celles de la partie 8 (nuit, jaune pour l'achat), le bouton second passe à contour fin */
 .bouton,.menu-livre{gap:.875rem;min-height:46px;padding:.5rem 1.25rem;border-width:1px;border-radius:6px;font-family:var(--sans);font-weight:600;font-size:.9375rem;line-height:1.25;text-align:center}
 .bouton.petit{min-height:44px;padding:.375rem 1rem}
-.bouton:not(.bientot),.bouton:not(.bientot):hover,.bouton:not(.bientot):active,.menu-livre,.menu-livre:hover,.menu-livre:active,.menu-livre[aria-current="page"]{box-shadow:none;transform:none !important}
 .bouton:not(.bientot)::after,.menu-livre::after{content:"";flex:none;width:1rem;height:1rem;background:currentColor;-webkit-mask:var(--fleche) center/contain no-repeat;mask:var(--fleche) center/contain no-repeat;transition:transform .15s ease}
 .bouton:not(.bientot):hover::after,.menu-livre:hover::after{transform:var(--fleche-glisse)}
 .bouton.second,.menu-livre{background:var(--carte);color:var(--encre);border-color:var(--filet)}
@@ -987,14 +985,12 @@ li:has(> a[href^="http"]:not([href*="revision-vtc.fr"])){--fleche:var(--fleche-b
 @media (max-width:64rem){.questions.trois{grid-template-columns:minmax(0,1fr)}}
 
 /* 10. Tuiles arrondies et fiches (depuis le 8 novembre 2026, rubrique QCM VTC) ------------------
-   Tuiles blanches à coins de 14 px, filet clair, ombre douce (--ombre-tuile), jamais de relief noir ;
+   Tuiles blanches à coins de 14 px ; relief des tuiles cliquables : partie 12 ; ombre douce seulement pour les encadrés non cliquables ;
    toutes de la même hauteur (titre sur 2 lignes, texte sur 3 lignes au plus), contenu réparti dans la hauteur,
    action en bas. La fiche jouable reprend la même tuile. */
 .questions.trois{gap:var(--e5)}
-.questions li{display:flex;flex-direction:column;gap:var(--e3);min-height:19rem;padding:2rem 2rem 1.75rem;border:1px solid var(--filet);border-radius:14px;box-shadow:var(--ombre-tuile);transition:transform .2s ease,box-shadow .2s ease}
+.questions li{display:flex;flex-direction:column;gap:var(--e3);min-height:19rem;padding:2rem 2rem 1.75rem;border-radius:14px;}
 .questions.trois li::after{display:none}
-.questions.trois li:hover,.questions.trois li:focus-within{transform:translateY(-3px);box-shadow:var(--ombre-tuile-survol);border-color:var(--filet)}
-.questions.trois li:active{transform:none;box-shadow:var(--ombre-tuile)}
 .questions .carte-tete{margin:0}
 .questions li > .domaine{margin:0}
 .questions li > a{margin:0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
@@ -1024,9 +1020,8 @@ li:has(> a[href^="http"]:not([href*="revision-vtc.fr"])){--fleche:var(--fleche-b
 .tuile h2::before{display:none !important}
 .tuile p{margin:0 0 var(--e4)}
 .tuile .voir-aussi{list-style:none;margin:0;padding:0;display:grid;gap:var(--e3)}
-.tuile .voir-aussi li{position:relative;margin:0;padding:.85rem 3rem .85rem 1rem;border:1px solid var(--filet);border-radius:10px;box-shadow:none;font-size:1rem;line-height:1.4}
+.tuile .voir-aussi li{position:relative;margin:0;padding:.85rem 3rem .85rem 1rem;border-radius:10px;font-size:1rem;line-height:1.4}
 .tuile .voir-aussi li::after{content:"";position:absolute;right:1rem;top:50%;width:1rem;height:1rem;margin-top:-.5rem;background:var(--accent);-webkit-mask:var(--fleche) center/contain no-repeat;mask:var(--fleche) center/contain no-repeat;border-radius:0;animation:none}
-.tuile .voir-aussi li:hover{border-color:var(--encre);transform:none;box-shadow:none}
 .tuile .voir-aussi a::before{content:"";position:absolute;inset:0;border-radius:10px}
 .tuile .voir-aussi a{text-decoration:none;color:var(--encre)}
 .navigation-fiches{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--e3)}
@@ -1034,13 +1029,11 @@ li:has(> a[href^="http"]:not([href*="revision-vtc.fr"])){--fleche:var(--fleche-b
 @media print{.questions.trois li,.fiche-essai,.tuile{box-shadow:none}}
 
 /* 11. Tuiles arrondies sur tout le site (depuis le 8 novembre 2026) --------------------------------
-   Plus aucun relief noir : grandes cartes et encadrés en tuiles (coins de 14 px, filet clair, ombre douce --ombre-tuile),
+   Grandes cartes et encadrés en tuiles (coins de 14 px) ; depuis le 13 novembre 2026, le relief des éléments cliquables est dans la partie 12,
+   l'ombre douce --ombre-tuile ne reste que sur les encadrés non cliquables ;
    petites cartes-liens et choix à plat (coins de 10 px, filet clair, flèche bleue → ou ↗), survol : la tuile monte de 3 px. */
 :is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.parcours > li,.cote-bloc,.carte-simu,.presentation-livre,.officiel,.breve,.cherche,.impact,.schema){border-radius:14px}
-:is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.parcours > li,.cote-bloc,.carte-simu,.officiel,.breve){border:1px solid var(--filet) !important;box-shadow:var(--ombre-tuile) !important}
-:is(.questions li,.numeros > li,.une-actu,.actu-precedents li){transition:transform .2s ease,box-shadow .2s ease}
-:is(.questions li,.numeros > li,.une-actu,.actu-precedents li):hover,:is(.questions li,.numeros > li,.une-actu,.actu-precedents li):focus-within{transform:translateY(-3px) !important;box-shadow:var(--ombre-tuile-survol) !important}
-:is(.questions li,.numeros > li,.une-actu,.actu-precedents li):active{transform:none !important}
+:is(.parcours > li,.cote-bloc,.carte-simu,.officiel,.breve){border:1px solid var(--filet) !important;box-shadow:var(--ombre-tuile) !important}   /* encadrés non cliquables : ombre douce, jamais de relief */
 :is(.questions li,.numeros > li,.une-actu,.actu-precedents li)::after{display:none}
 :is(.questions li,.numeros > li,.une-actu,.actu-precedents li):hover a{color:var(--encre)}
 .questions li{padding:2rem}
@@ -1049,14 +1042,11 @@ li:has(> a[href^="http"]:not([href*="revision-vtc.fr"])){--fleche:var(--fleche-b
 /* lien étendu à toute la tuile (cartes des questions et des guides, numéros de l'Actualité) */
 :is(.questions li,.numeros > li) a::before{content:"";position:absolute;inset:0;border-radius:14px}
 /* petites cartes-liens, liens de l'encadré latéral, sommaire : à plat, flèche → (↗ vers un autre site) */
-:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li){border:1px solid var(--filet) !important;border-radius:10px;box-shadow:none !important;transform:none !important;transition:border-color .15s ease}
-:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover,:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li):focus-within{border-color:var(--encre) !important}
-:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li)::after{display:block !important;content:"";position:absolute;right:1rem;top:50%;width:1rem;height:1rem;margin-top:-.5rem;border-radius:0;background:var(--accent);-webkit-mask:var(--fleche) center/contain no-repeat;mask:var(--fleche) center/contain no-repeat;animation:none !important;transition:transform .15s ease}
+:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li){border-radius:10px}
+:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li)::after{display:block !important;content:"";position:absolute;right:1rem;top:50%;width:1rem;height:1rem;margin-top:-.5rem;border-radius:0;background:var(--accent);-webkit-mask:var(--fleche) center/contain no-repeat;mask:var(--fleche) center/contain no-repeat;transition:transform .15s ease}
 :is(.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover::after{transform:var(--fleche-glisse)}
 .essentiel-liens li,.wiki-liste li{padding:.9rem 3rem .9rem 1.15rem}
 .cote-bloc .voir-aussi li{padding:.7rem 2.75rem .7rem .9rem}
-.sommaire a{border:1px solid var(--filet) !important;border-radius:999px;box-shadow:none !important;transform:none !important}
-.sommaire a:hover{border-color:var(--encre) !important}
 /* choix (simulateur, examens blancs, fiches) : à plat */
 .choix label{border:1px solid var(--filet) !important;border-radius:10px;box-shadow:none !important;transform:none !important}
 .choix label:hover{border-color:var(--encre) !important}
@@ -1064,10 +1054,43 @@ li:has(> a[href^="http"]:not([href*="revision-vtc.fr"])){--fleche:var(--fleche-b
    plus léger que le jaune plein quand plusieurs choix sont visibles (audit visuel, lot 2, 13 novembre 2026) ; le rond coché reste le repère principal */
 .choix label:has(input:checked){background:var(--jaune-pale);color:var(--encre);border-color:var(--jaune) !important;box-shadow:inset 0 0 0 1px var(--jaune) !important}
 /* carte du livre sur fond nuit (accueil) : arrondie, sans relief */
-a.carte-hero{border-radius:14px;box-shadow:none !important;transform:none !important;transition:transform .2s ease}
-a.carte-hero:hover,a.carte-hero:focus-visible{transform:translateY(-3px) !important}
 .carte-simu .carte-lien::after{background:var(--accent);-webkit-mask:var(--fleche) center/1.1rem no-repeat;mask:var(--fleche) center/1.1rem no-repeat;border-radius:0;width:1.1rem;height:1.1rem}
 .en-clair{border-radius:14px}
-@media (prefers-reduced-motion: reduce){:is(.questions li,.numeros > li,.une-actu,.actu-precedents li,a.carte-hero){transition:none}:is(.questions li,.numeros > li,.une-actu,.actu-precedents li,a.carte-hero):hover{transform:none !important}}
 @media print{:is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.parcours > li,.cote-bloc,.carte-simu,.officiel,.breve){box-shadow:none !important}}
 .questions{grid-auto-rows:1fr} /* toutes les tuiles d'une liste à la même hauteur */
+
+/* 12. Relief unique (depuis le 13 novembre 2026, audit visuel, lot 3) ---------------------------------
+   Tout ce qui se clique a la même épaisseur bleu nuit, décalée en bas à droite (le « relief », jeton --ombre-relief) ;
+   le reste est à plat ou, pour les encadrés non cliquables, garde l'ombre douce --ombre-tuile.
+   Boutons, bouton « Le livre », cartes et tuiles cliquables, cartes-liens, liens « Tous les… », sommaire, carte du livre de l'accueil.
+   Survol : l'élément monte de 1 px ; clic : il s'enfonce de 4 px et le relief disparaît ; clavier : contour --focus.
+   Les jetons sont posés sur chaque élément pour suivre son propre --relief (jaune foncé sur fond nuit, --nuit-2 pour le bouton à contour). */
+:is(
+  .bouton:not(.bientot),.menu-livre,a.carte-hero,.tete-bloc .lien-fleche,.sommaire a,
+  .questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li){
+  --ombre-relief:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief);
+  --ombre-relief-survol:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief);
+  box-shadow:var(--ombre-relief);transition:transform .15s ease,box-shadow .15s ease}
+:is(
+  .bouton:not(.bientot),.menu-livre,a.carte-hero,.tete-bloc .lien-fleche,.sommaire a,
+  .questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover,
+:is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):focus-within{transform:translate(-1px,-1px);box-shadow:var(--ombre-relief-survol)}
+:is(
+  .bouton:not(.bientot),.menu-livre,a.carte-hero,.tete-bloc .lien-fleche,.sommaire a,
+  .questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):active,
+.menu-livre[aria-current="page"]{transform:translate(4px,4px);box-shadow:0 0 0 0 var(--relief)}
+/* bord nuit (1,5 px) sur les éléments blancs en relief, comme un panneau ; les boutons pleins gardent leur couleur */
+:is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li),.bouton.second,.menu-livre,.sommaire a{border:1.5px solid var(--relief)}
+.bouton.second:hover,.menu-livre:hover{border-color:var(--relief)}
+@media (prefers-reduced-motion: reduce){
+  :is(
+  .bouton:not(.bientot),.menu-livre,a.carte-hero,.tete-bloc .lien-fleche,.sommaire a,
+  .questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li){transition:none}
+  :is(
+  .bouton:not(.bientot),.menu-livre,a.carte-hero,.tete-bloc .lien-fleche,.sommaire a,
+  .questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):is(:hover,:focus-within,:active),.menu-livre[aria-current="page"]{transform:none !important}
+}
+@media print{:is(
+  .bouton:not(.bientot),.menu-livre,a.carte-hero,.tete-bloc .lien-fleche,.sommaire a,
+  .questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li){box-shadow:none !important}}
+

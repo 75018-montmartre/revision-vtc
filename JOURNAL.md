@@ -6,6 +6,16 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Vendredi 13 novembre 2026, 2 h 10 · Audit visuel, lot 3 (relief unique, accueil, badge d'article)
+
+- 3.a Relief : choix tranché par Benjamin, suivre l'audit. Tout ce qui se clique a désormais le même relief bleu nuit de 4 px (nouvelle partie 12 de `site.css`, jeton `--ombre-relief`) : boutons, bouton « Le livre », cartes des questions, guides, fiches et numéros, cartes-liens, sommaire du wiki, liens « Tous les… », carte du livre de l'accueil. Survol : +1 px ; clic : enfoncé ; immobile si l'appareil demande moins d'animations. L'ombre douce ne reste que sur les encadrés non cliquables. Les choix des formulaires restent sans relief. Remplace les décisions du 7 novembre (boutons à plat) et du 8 novembre (tuiles sans relief noir).
+  - Nettoyage : anciennes règles de relief (partie 8), boutons à plat (partie 9), ombres douces et mouvements des tuiles cliquables (parties 10 et 11), animation de l'ancienne pastille fléchée, jeton `--ombre-tuile-survol`, variable `--hover` et espace vide réservé à la pastille sur les cartes de l'Actualité, tous retirés.
+- 3.b Accueil : « Par où commencer ? » n'a plus qu'un niveau de cadre (liens en liste simple, filet, flèche →) ; « Je roule déjà » renvoie au guide du précompte des cotisations au lieu d'un 4e « Calculer mon revenu net ». « Réglementation VTC : l'essentiel » devient une liste sur deux colonnes avec le numéro d'article en pastille jaune (section de 1 158 à 880 px sur téléphone).
+  - https://revision-vtc.fr/
+- 3.c Pages du wiki (73) : le badge « Article L… » passe sur sa propre ligne au-dessus du titre ; il reste dans le `h1` (référencement inchangé).
+- Vérifié : axe sans erreur sur 12 pages à 320, 768 et 1 366 px, en clair et en sombre, aucun débordement ; survol et clic mesurés, aucun déplacement en mouvement réduit ; contour clavier de 3 px sur les cartes.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Vendredi 13 novembre 2026, 1 h 30 · Audit visuel, lot 2 (simulateurs : formulaire en premier)
 
 - Ordre des deux simulateurs : titre, chapeau d'une phrase (raccourci, aucune information perdue : l'idée « l'argent versé n'est pas un salaire » reste dans l'exemple chiffré), mention « rien n'est envoyé », puis directement le formulaire. « Comment ça marche » (étapes et glossaire), l'exemple (renommé « Un exemple chiffré », il ne vient plus « pour commencer ») ; « Comment s'en servir » et « La règle en bref » sont déplacés après le résultat. Rien n'est supprimé.

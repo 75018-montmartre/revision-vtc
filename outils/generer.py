@@ -221,7 +221,7 @@ def accueil(nums, qs=()):
     # mois de la dernière vérification du wiki (« 25 octobre 2026 » -> « octobre 2026 ») : le surtitre reste vrai sans retouche
     verif = " ".join(lire_wiki()["verifie"].split()[-2:])
     simu = f'simulateurs/{sim["slug"]}.html'
-    # « Par où commencer ? » : trois profils, trois liens chacun (petites cartes-liens)
+    # « Par où commencer ? » : trois profils, trois liens chacun (liste de liens simples, un seul niveau de cadre ; audit visuel, lot 3)
     parcours = [
         ("Je prépare l'examen", "Les épreuves, le barème et de quoi réviser.",
          [("qcm/index.html", f"S'entraîner : {len(FICHES)} QCM corrigés"),
@@ -234,10 +234,10 @@ def accueil(nums, qs=()):
         ("Je roule déjà", "Ce qui change pour vous, chaque semaine.",
          [("actualite/index.html", "L'Actualité VTC du lundi"),
           ("questions/index.html", "La FAQ VTC : une question, une réponse sourcée"),
-          (simu, "Calculer mon revenu net")]),
+          ("dossiers/precompte-cotisations-vtc-plateformes-2027.html", "Le précompte des cotisations par les plateformes en 2027")]),
     ]
     cartes_parcours = "".join(
-        f'\n          <li><h3>{ty(t)}</h3><p>{ty(d)}</p><ul class="essentiel-liens">'
+        f'\n          <li><h3>{ty(t)}</h3><p>{ty(d)}</p><ul class="liste-liens">'
         + "".join(f'<li><a href="{h}">{ty(l)}</a></li>' for h, l in liens) + "</ul></li>"
         for t, d, liens in parcours)
     corps = f'''    <section class="hero fond-nuit" aria-labelledby="titre-hero">
@@ -294,7 +294,7 @@ def accueil(nums, qs=()):
       <div class="page large">
         {tete_bloc("titre-essentiel", "Textes officiels expliqués", "Réglementation VTC : l'essentiel", "wiki/index.html", "Tous les textes expliqués",
                    "Les règles les plus utiles au quotidien, avec le texte officiel et une explication en clair.")}
-        <ul class="essentiel-liens">{liens_essentiels()}</ul>
+        <ul class="liste-liens liste-articles">{liste_essentiels()}</ul>
       </div>
     </section>{bloc_questions(qs)}{dernier}'''
     ecrire("index.html", page("Examen VTC 2027 et réglementation VTC expliquée · Révision VTC", corps, "accueil", "",
@@ -322,8 +322,16 @@ def bloc_questions(qs):
     </section>'''
 
 
-def liens_essentiels():
-    return "".join(f'<li><a href="wiki/{s}.html">{ty(t)}</a></li>' for s, t in ESSENTIELS)
+def liste_essentiels():
+    """Accueil, « Réglementation VTC : l'essentiel » : une ligne par texte, numéro d'article en pastille jaune (comme en tête
+    des pages du wiki), puis le titre en clair ; liste sur deux colonnes (une sur téléphone), sans tuile (audit visuel, lot 3)."""
+    par_slug = {a["slug"]: a for a in lire_wiki()["articles"]}
+    lignes = []
+    for s, t in ESSENTIELS:
+        a = par_slug[s]
+        num = a["num"].replace("Arrêté du ", "Arrêté ") if a.get("arrete") else a["num"]
+        lignes.append(f'<li><a href="wiki/{s}.html"><span class="num-art">{ty(num)}</span><span>{ty(t)}</span></a></li>')
+    return "".join(lignes)
 
 
 # ------------------------------------------------------------------ actualité
