@@ -6,6 +6,16 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Vendredi 13 novembre 2026, 17 h 50 · Visuels, étape 1 : chiffres clés et graphiques (page pilote)
+
+- Nouveau composant pour les guides, validé par Benjamin sur captures : chiffres clés (`chiffres`) et graphiques (`graphique` : colonnes, barres, parts), dessinés en HTML et CSS par le générateur, sans bibliothèque (partie 13 « Visuels » de `site.css`, format dans le README).
+- Règle « aucun chiffre inventé » appliquée par le générateur : il s'arrête si une valeur affichée dans un visuel n'est pas écrite ailleurs dans la page.
+- Page pilote « Le VTC en chiffres » : 4 chiffres clés en tête (71 300 chauffeurs, +27 %, 38 € par heure de course, 45 % de réussite), évolution du nombre de chauffeurs 2022-2024 (2022 hachuré : notre calcul), répartition Île-de-France / reste de la France (VTC et taxis), réussite de l'examen VTC et taxi. Tableaux d'origine gardés, repliés sous les graphiques. Aucun chiffre ni texte modifié.
+  - https://revision-vtc.fr/dossiers/vtc-en-chiffres-nombre-chauffeurs-france.html
+- Vérifié : axe sans erreur sur 13 pages à 320, 768 et 1 366 px, en clair et en sombre, aucun débordement ; tableau dépliable au clavier ; tests du site passés.
+- Suite prévue (plan « moins de texte, plus de visuel ») : schéma du précompte 2027.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Vendredi 13 novembre 2026, 12 h 55 · Accueil : carte du livre remise dans le bandeau
 
 - La carte « Le livre Machine à Réussite » (couverture, contenu du livre, « Voir le livre » vers la page du livre) revient dans le bandeau d'accueil, sous le simulateur, avec le relief jaune du nouveau style. En thème sombre, elle prend le même fond que le simulateur.

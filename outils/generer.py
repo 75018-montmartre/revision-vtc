@@ -1457,10 +1457,85 @@ def illustration(img, premiere=False):
             f'<figcaption>{ty(img["legende"])} <span class="credit">Photo : {credit}, Pixabay.</span></figcaption></figure>')
 
 
+def _chiffres_cles(c):
+    """Bloc « chiffres clés » : 3 ou 4 grands chiffres, une ligne d'explication chacun, la source dessous (charte, « Visuels »)."""
+    assert 2 <= len(c["items"]) <= 4 and c.get("source"), "chiffres clés : 2 à 4 chiffres et une source"
+    items = "".join(f'<li><span class="cc-valeur">{ty(i["valeur"])}</span> <span class="cc-texte">{liens(ty(i["texte"]))}</span></li>'
+                    for i in c["items"])
+    return f'<div class="chiffres-cles"><ul>{items}</ul><p class="source">Source : {liens(ty(c["source"]))}</p></div>'
+
+
+def _graphique(g):
+    """Graphique dessiné en HTML et CSS à partir de chiffres déjà publiés sur la page (charte, « Visuels »).
+    Trois formes : « colonnes » (évolution sur quelques années), « barres » (comparaison, une ou deux séries),
+    « parts » (répartition en pourcentages, une barre par ligne). Les valeurs affichées sont du texte (lu par les
+    lecteurs d'écran, les moteurs et les assistants) ; la barre n'est qu'une longueur, cachée aux lecteurs d'écran.
+    Le tableau d'origine, s'il y en a un, reste dans la page, replié sous le graphique."""
+    _graphique.n = getattr(_graphique, "n", 0) + 1
+    ident = f"graphique-{_graphique.n}"
+    forme = g["type"]
+    assert forme in ("colonnes", "barres", "parts") and g.get("titre") and g.get("lecture") and g.get("source"), \
+        f"graphique « {g.get('titre')} » : type, titre, phrase de lecture et source obligatoires"
+    barre = '<span class="g-barre" aria-hidden="true"></span>'
+    sep = '<span class="visuellement-cache"> : </span>'
+    legende = ""
+    if forme == "colonnes":
+        vmax = max(v["valeur"] for v in g["valeurs"])
+        donnees = "".join(
+            f'<li{" class=\"estime\"" if v.get("estime") else ""} style="--v:{100 * v["valeur"] / vmax:.1f}">'
+            f'<span class="g-libelle">{ty(v["libelle"])}</span>{sep}<span class="g-valeur">{ty(v["affiche"])}</span>{barre}</li>'
+            for v in g["valeurs"])
+    elif forme == "barres":
+        series = g["series"]
+        vmax = g.get("max") or max(x for grp in g["groupes"] for x in grp["valeurs"])
+        def un(grp):
+            assert len(grp["valeurs"]) == len(series) == len(grp["affiche"]), f"graphique « {g['titre']} » : une valeur par série"
+            return (f'<li><span class="g-libelle">{ty(grp["libelle"])}</span><ul class="g-series">'
+                    + "".join(f'<li class="s{i + 1}" style="--v:{100 * v / vmax:.1f}"><span class="visuellement-cache">{ty(series[i])} : </span>'
+                              f'{barre}<span class="g-valeur">{ty(af)}</span></li>' for i, (v, af) in enumerate(zip(grp["valeurs"], grp["affiche"])))
+                    + "</ul></li>")
+        donnees = "".join(un(grp) for grp in g["groupes"])
+        if len(series) > 1:
+            legende = '<p class="g-legende" aria-hidden="true">' + "".join(f'<span class="s{i + 1}">{ty(x)}</span>' for i, x in enumerate(series)) + "</p>"
+    else:
+        series = g["series"]
+        def ligne(r):
+            assert len(r["parts"]) == len(series) and abs(sum(v for v, _ in r["parts"]) - 100) <= 1, f"graphique « {g['titre']} » : parts qui font 100 %"
+            return (f'<li><span class="g-libelle">{ty(r["libelle"])}</span><span class="g-parts">'
+                    + "".join(f'<span class="s{i + 1}" style="--v:{v}"><span class="visuellement-cache">{ty(series[i])} : </span>'
+                              f'<span class="g-valeur">{ty(af)}</span></span>' for i, (v, af) in enumerate(r["parts"]))
+                    + "</span></li>")
+        donnees = "".join(ligne(r) for r in g["lignes"])
+        legende = '<p class="g-legende" aria-hidden="true">' + "".join(f'<span class="s{i + 1}">{ty(x)}</span>' for i, x in enumerate(series)) + "</p>"
+    tableau = ""
+    if g.get("tableau"):
+        tableau = f'<details class="g-tableau"><summary>Voir les chiffres en tableau</summary>{_bloc_dossier({"tableau": g["tableau"]})}</details>'
+    return (f'<figure class="graphique graphique-{forme}" aria-labelledby="{ident}">'
+            f'<figcaption><span class="g-titre" id="{ident}">{ty(g["titre"])}</span> <span class="g-lecture">{liens(ty(g["lecture"]))}</span></figcaption>'
+            f'{legende}<ul class="g-donnees">{donnees}</ul>'
+            f'<p class="source">Source : {liens(ty(g["source"]))}</p>{tableau}</figure>')
+
+
+def _valeurs_affichees(b):
+    """Les chiffres qu'un bloc visuel affiche (contrôle : chacun doit être écrit ailleurs dans la page)."""
+    if "chiffres" in b:
+        return [i["valeur"] for i in b["chiffres"]["items"]]
+    g = b["graphique"]
+    if g["type"] == "colonnes":
+        return [v["affiche"] for v in g["valeurs"]]
+    if g["type"] == "barres":
+        return [a for grp in g["groupes"] for a in grp["affiche"]]
+    return [af for r in g["lignes"] for _, af in r["parts"]]
+
+
 def _bloc_dossier(b):
-    """Un bloc d'une section : paragraphe (texte), liste, tableau chiffré, encart ou photo."""
+    """Un bloc d'une section : paragraphe (texte), liste, tableau chiffré, encart, photo, chiffres clés ou graphique."""
     if isinstance(b, str):
         return f"<p>{liens(ty(b))}</p>"
+    if "chiffres" in b:
+        return _chiffres_cles(b["chiffres"])
+    if "graphique" in b:
+        return _graphique(b["graphique"])
     if "liste" in b:
         return "<ul>" + "".join(f"<li>{liens(ty(x))}</li>" for x in b["liste"]) + "</ul>"
     if "note" in b:
@@ -1484,8 +1559,8 @@ def _bloc_dossier(b):
             f'<tbody>{"".join(ligne(l) for l in t["lignes"])}</tbody>{pied}</table></div>')
 
 
-def _texte_dossier(d):
-    """Tout le texte d'un dossier, sans balises (comptage des mots, llms-full)."""
+def _texte_dossier(d, visuels=True):
+    """Tout le texte d'un dossier, sans balises (comptage des mots, llms-full) ; sans les visuels pour le contrôle des chiffres."""
     morceaux = [d["chapeau"], *d["en_bref"]]
     for s in d["sections"]:
         morceaux.append(s["titre"])
@@ -1498,10 +1573,31 @@ def _texte_dossier(d):
                 morceaux.append(b["note"])
             elif "image" in b:
                 continue
+            elif "chiffres" in b:
+                if visuels:
+                    morceaux += [f'{i["valeur"]} {i["texte"]}' for i in b["chiffres"]["items"]]
+            elif "graphique" in b:
+                g = b["graphique"]
+                if visuels:
+                    morceaux += [g["titre"], g["lecture"]]
+                if g.get("tableau"):   # le tableau replié sous le graphique est une source de la page
+                    morceaux += [" ".join(l) for l in g["tableau"]["lignes"] + g["tableau"].get("total", [])]
             else:
                 morceaux += [" ".join(l) for l in b["tableau"]["lignes"] + b["tableau"].get("total", [])]
     morceaux += d["a_retenir"]
     return re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", "\n".join(morceaux)).replace("**", "")
+
+
+def _controle_visuels(d):
+    """Règle « aucun chiffre inventé » : chaque valeur d'un graphique ou d'un chiffre clé doit être écrite, telle quelle,
+    dans le texte ou un tableau de la même page. Sinon la génération s'arrête."""
+    plat = lambda x: re.sub(r"[\s\u00a0\u202f]+", " ", x).strip()
+    texte = plat(_texte_dossier(d, visuels=False))
+    for s in d["sections"]:
+        for b in s["blocs"]:
+            if isinstance(b, dict) and ("chiffres" in b or "graphique" in b):
+                for v in _valeurs_affichees(b):
+                    assert plat(v) in texte, f"{d['slug']} : « {v} » est affiché dans un visuel mais écrit nulle part ailleurs dans la page"
 
 
 def lire_dossiers(slugs_wiki):
@@ -1518,6 +1614,7 @@ def lire_dossiers(slugs_wiki):
         for s in d["sections"]:
             assert re.fullmatch(r"[a-z0-9-]+", s["id"]), f"{f} : identifiant de section {s['id']}"
         d["code_domaine"] = domaine_de(d, f)
+        _controle_visuels(d)
         d["mots"] = len(re.findall(r"\w+", _texte_dossier(d)))
         assert d.get("brouillon") or 1200 <= d["mots"] <= 3000, f"{f} : {d['mots']} mots (article : 1 500 à 2 500 mots)"
         if d.get("brouillon") and not APERCU:

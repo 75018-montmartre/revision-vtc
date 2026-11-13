@@ -1107,3 +1107,68 @@ li:has(> a[href^="http"]:not([href*="revision-vtc.fr"])){--fleche:var(--fleche-b
   .bouton:not(.bientot),.menu-livre,a.carte-hero,.tete-bloc .lien-fleche,.sommaire a,
   .questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li){box-shadow:none !important}}
 
+
+/* 13. Visuels (depuis le 13 novembre 2026) : chiffres clés et graphiques des guides ---------------------------------
+   Dessinés en HTML et CSS par outils/generer.py, à partir de chiffres déjà écrits dans la page (contrôle automatique).
+   Couleurs de la charte uniquement : jaune bordé d'encre pour la série principale, --doux bordé d'encre pour la seconde ;
+   la valeur est toujours écrite en texte, la barre n'est qu'une longueur (--v : nombre de 0 à 100, posé par le générateur,
+   seule valeur écrite dans la page). Encadrés non cliquables : filet clair et ombre douce, comme .cote-bloc. */
+.chiffres-cles{margin:var(--e5) 0 var(--e6)}
+.chiffres-cles ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,8.5rem),1fr));gap:var(--e4)}
+.chiffres-cles li{margin:0;display:flex;flex-direction:column;gap:var(--e1);padding:var(--e4) var(--e4) var(--e4);background:var(--carte);
+  border:1px solid var(--filet);border-top:4px solid var(--jaune);border-radius:10px;box-shadow:var(--ombre-tuile)}
+.cc-valeur{font-family:var(--cond);font-weight:700;font-size:2.5rem;line-height:1;color:var(--encre);font-variant-numeric:tabular-nums}
+.cc-texte{font-family:var(--sans);font-size:.9375rem;line-height:1.4;color:var(--gris)}
+.chiffres-cles .source{margin:var(--e3) 0 0}
+
+.graphique{margin:var(--e6) 0;padding:var(--e5);background:var(--carte);border:1px solid var(--filet);border-radius:14px;box-shadow:var(--ombre-tuile)}
+.graphique figcaption{display:flex;flex-direction:column;gap:var(--e1);margin-bottom:var(--e5)}
+.g-titre{font-family:var(--cond);font-weight:700;font-size:1.375rem;line-height:1.15;color:var(--encre)}
+.g-lecture{font-family:var(--sans);font-size:1rem;line-height:1.45;color:var(--gris)}
+.graphique .source{margin:var(--e4) 0 0}
+.g-donnees,.g-series{list-style:none;margin:0;padding:0}
+.g-donnees li,.g-series li{margin:0}
+.g-valeur{font-family:var(--cond);font-weight:700;font-size:1.25rem;line-height:1;color:var(--encre);white-space:nowrap;font-variant-numeric:tabular-nums}
+.g-libelle{font-family:var(--sans);font-weight:600;font-size:.9375rem;line-height:1.35;color:var(--encre)}
+/* légende : une pastille par série */
+.g-legende{display:flex;flex-wrap:wrap;gap:var(--e1) var(--e5);margin:0 0 var(--e4);font-family:var(--sans);font-size:.9375rem;color:var(--encre)}
+.g-legende span{display:inline-flex;align-items:center;gap:var(--e2)}
+.g-legende span::before{content:"";width:.9rem;height:.9rem;border:1.5px solid var(--encre);border-radius:3px;background:var(--jaune)}
+.g-legende .s2::before{background:var(--doux)}
+/* colonnes : une colonne par année, valeur au-dessus, année dessous ; colonne hachurée = valeur calculée par le site */
+.graphique-colonnes .g-donnees{display:flex;justify-content:space-around;align-items:flex-end;gap:var(--e4);border-bottom:2px solid var(--encre);padding:0 var(--e2)}
+.graphique-colonnes .g-donnees > li{flex:1 1 0;max-width:7.5rem;display:grid;grid-template-rows:auto 11rem;justify-items:stretch;row-gap:var(--e2);position:relative}
+.graphique-colonnes .g-valeur{grid-row:1;justify-self:center;align-self:end;margin-bottom:calc(var(--v) * .11rem - 11rem)}
+.graphique-colonnes .g-barre{grid-row:2;align-self:end;height:calc(var(--v) * 1%);background:var(--jaune);border:1.5px solid var(--encre);border-bottom:0;border-radius:6px 6px 0 0}
+.graphique-colonnes .estime .g-barre{background:repeating-linear-gradient(135deg,var(--jaune) 0 6px,var(--carte) 6px 11px)}
+.graphique-colonnes .g-libelle{position:absolute;top:100%;left:0;right:0;margin-top:var(--e2);text-align:center}
+.graphique-colonnes .g-donnees{margin-bottom:calc(var(--e2) + 1.5rem)}
+/* barres : un groupe par ligne, une barre par série, valeur au bout */
+.graphique-barres .g-donnees{display:flex;flex-direction:column;gap:var(--e5)}
+.graphique-barres .g-series{display:flex;flex-direction:column;gap:var(--e2);margin-top:var(--e2)}
+.graphique-barres .g-series li{display:flex;align-items:center;gap:var(--e3)}
+.graphique-barres .g-barre{display:block;flex:none;width:calc((100% - 4.5rem) * var(--v) / 100);height:1.5rem;background:var(--jaune);border:1.5px solid var(--encre);border-radius:0 6px 6px 0}
+.graphique-barres .s2 .g-barre{background:var(--doux)}
+/* parts : une barre de 100 % par ligne, découpée en séries, valeur dans chaque morceau */
+.graphique-parts .g-donnees{display:flex;flex-direction:column;gap:var(--e5)}
+.g-parts{display:flex;margin-top:var(--e2);height:2.75rem;border:1.5px solid var(--encre);border-radius:6px;overflow:hidden}
+.g-parts > span{width:calc(var(--v) * 1%);display:flex;align-items:center;justify-content:center;background:var(--jaune);min-width:2.75rem}
+.g-parts > .s2{background:var(--doux);border-left:1.5px solid var(--encre)}
+.g-parts > .s1 .g-valeur{color:var(--nuit)}
+/* tableau d'origine, replié sous le graphique */
+.g-tableau{margin-top:var(--e4)}
+.g-tableau summary{cursor:pointer;font-family:var(--sans);font-weight:600;font-size:1rem;color:var(--accent);min-height:44px;display:flex;align-items:center;gap:var(--e2)}
+.g-tableau summary:hover{text-decoration:underline;text-underline-offset:.2em}
+.g-tableau[open] summary{margin-bottom:var(--e3)}
+@media (max-width:30rem){
+  .graphique{padding:var(--e4)}
+  .cc-valeur{font-size:2rem}
+  .chiffres-cles ul{gap:var(--e3)}
+  .chiffres-cles li{padding:var(--e3)}
+  .cc-texte{font-size:.875rem}
+  .graphique-colonnes .g-donnees > li{grid-template-rows:auto 9rem}
+  .graphique-colonnes .g-donnees{gap:var(--e2);padding:0}
+  .graphique-colonnes .g-donnees > li{min-width:0}
+  .graphique-colonnes .g-valeur{margin-bottom:calc(var(--v) * .09rem - 9rem);font-size:1.0625rem;white-space:normal;text-align:center}   /* « environ » passe au-dessus du nombre sur petit écran */
+}
+@media print{.chiffres-cles li,.graphique{box-shadow:none}}
