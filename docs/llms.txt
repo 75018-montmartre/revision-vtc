@@ -1,6 +1,6 @@
 # Révision VTC (revision-vtc.fr)
 
-> Site gratuit et indépendant sur le métier de chauffeur VTC en France et l'examen d'accès à la profession : la réglementation VTC expliquée article par article (texte officiel Légifrance en vigueur + explication en clair), l'actualité du métier chaque semaine avec ses sources, et des examens blancs. Tenu par Benjamin Blondin, auteur du livre « Machine à Réussite · Examen VTC 2027 » (ISBN 979-8-1652-8079-5).
+> Site gratuit et indépendant sur le métier de chauffeur VTC en France et l'examen d'accès à la profession : la réglementation VTC expliquée article par article (texte officiel Légifrance en vigueur + explication en clair), l'actualité du métier, régulièrement, avec ses sources, et des examens blancs. Tenu par Benjamin Blondin, auteur du livre « Machine à Réussite · Examen VTC 2027 » (ISBN 979-8-1652-8079-5).
 
 Règles éditoriales : chaque information repose sur un texte officiel ou sur deux sources concordantes, toujours citées. Les textes du wiki sont comparés chaque semaine à la version en vigueur sur Légifrance (dernière vérification : 25 octobre 2026). Seule la version publiée sur Légifrance fait foi.
 

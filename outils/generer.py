@@ -114,7 +114,7 @@ LIVRE_LD = {"@type": "Book", "@id": SITE + "#livre", "name": "Machine à Réussi
             "offers": {"@type": "Offer", "price": "24.90", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.fr/dp/B0HPCMRKDR"},
             "about": "Préparation à l'examen d'accès à la profession de conducteur de voiture de transport avec chauffeur (VTC)"}
 SITE_LD = {"@type": "WebSite", "@id": SITE + "#site", "name": "Révision VTC", "url": SITE, "inLanguage": "fr-FR",
-           "description": "Réglementation VTC expliquée article par article, actualité du métier chaque semaine et examens blancs, par l'auteur du livre Machine à Réussite · Examen VTC 2027.",
+           "description": "Réglementation VTC expliquée article par article, actualité du métier régulièrement et examens blancs, par l'auteur du livre Machine à Réussite · Examen VTC 2027.",
            "publisher": AUTEUR}
 
 
@@ -231,7 +231,7 @@ def accueil(nums, qs=()):
          [("dossiers/cout-pour-devenir-chauffeur-vtc.html", "Combien coûte le lancement en VTC"),
           (simu, "Calculer mon revenu net"),
           ("dossiers/chauffeur-vtc-salarie-ou-independant.html", "Salarié ou indépendant : que choisir")]),
-        ("Je roule déjà", "Ce qui change pour vous, chaque semaine.",
+        ("Je roule déjà", "Ce qui change pour vous, au fil des textes.",
          [("actualite/index.html", "L'Actualité VTC du lundi"),
           ("questions/index.html", "La FAQ VTC : une question, une réponse sourcée"),
           ("dossiers/precompte-cotisations-vtc-plateformes-2027.html", "Le précompte des cotisations par les plateformes en 2027")]),
@@ -290,7 +290,7 @@ def accueil(nums, qs=()):
       </div>
     </section>{bloc_questions(qs)}{dernier}'''
     ecrire("index.html", page("Examen VTC 2027 et réglementation VTC expliquée · Révision VTC", corps, "accueil", "",
-                              "Réussir l'examen VTC 2027 : la réglementation VTC expliquée article par article, l'actualité du métier chaque semaine et deux examens blancs corrigés. Sources officielles citées.",
+                              "Réussir l'examen VTC 2027 : la réglementation VTC expliquée article par article, l'actualité du métier mise à jour régulièrement et deux examens blancs corrigés. Sources officielles citées.",
                               brut=True, scripts_fin=fin_accueil, jsonld=[{"@context": "https://schema.org", "@graph": [SITE_LD, LIVRE_LD]}]))
 
 
@@ -384,8 +384,8 @@ def actualite(nums):
     <h2>Les numéros</h2>
     <ol class="numeros" reversed>{liste}
     </ol>'''
-    ecrire("actualite/index.html", page("Actualité VTC : l'info des chauffeurs VTC chaque semaine · Révision VTC", corps, "actualite", "../",
-                                        "L'actualité VTC chaque semaine : textes officiels, examen, plateformes, cotisations. Sources citées."))
+    ecrire("actualite/index.html", page("Actualité VTC : l'info des chauffeurs VTC, textes officiels à l'appui · Révision VTC", corps, "actualite", "../",
+                                        "L'actualité VTC, régulièrement : textes officiels, examen, plateformes, cotisations. Sources citées."))
 
 
 def flux(nums):
@@ -406,7 +406,7 @@ def flux(nums):
 <channel>
   <title>Actualité VTC · revision-vtc.fr</title>
   <link>{SITE}actualite/index.html</link>
-  <description>L'actualité VTC chaque semaine, par l'auteur du livre Machine à Réussite · Examen VTC 2027.</description>
+  <description>L'actualité VTC, régulièrement, par l'auteur du livre Machine à Réussite · Examen VTC 2027.</description>
   <language>fr-FR</language>{items}
 </channel>
 </rss>
@@ -2154,7 +2154,7 @@ def a_propos():
     <h2>Ce que vous y trouvez</h2>
     <ul>
       <li><a href="wiki/index.html">{ty("Les textes réglementaires")}</a> {ty(": chaque article utile du Code des transports et chaque arrêté, avec le texte officiel en vigueur, une explication en clair et un exemple concret.")}</li>
-      <li><a href="actualite/index.html">{ty("L'Actualité VTC")}</a> {ty(": chaque semaine, ce qui change pour les chauffeurs et les candidats, avec ses sources.")}</li>
+      <li><a href="actualite/index.html">{ty("L'Actualité VTC")}</a> {ty(": régulièrement, ce qui change pour les chauffeurs et les candidats, avec ses sources.")}</li>
       <li><a href="mises-a-jour.html">{ty("Les mises à jour du livre")}</a> {ty(": chaque règle qui a changé depuis l'impression, avec le texte qui la fonde.")}</li>
       <li><a href="examens.html">{ty("Deux examens blancs")}</a> {ty("corrigés, en plus des trois du livre.")}</li>
     </ul>
@@ -2230,7 +2230,7 @@ def llms(nums, w, qs=(), ds=(), simu=None):
     l = ["# Révision VTC (revision-vtc.fr)", "",
          "> Site gratuit et indépendant sur le métier de chauffeur VTC en France et l'examen d'accès à la profession : "
          "la réglementation VTC expliquée article par article (texte officiel Légifrance en vigueur + explication en clair), "
-         "l'actualité du métier chaque semaine avec ses sources, et des examens blancs. Tenu par Benjamin Blondin, auteur du livre "
+         "l'actualité du métier, régulièrement, avec ses sources, et des examens blancs. Tenu par Benjamin Blondin, auteur du livre "
          "« Machine à Réussite · Examen VTC 2027 » (ISBN 979-8-1652-8079-5).", "",
          f"Règles éditoriales : chaque information repose sur un texte officiel ou sur deux sources concordantes, toujours citées. "
          f"Les textes du wiki sont comparés chaque semaine à la version en vigueur sur Légifrance (dernière vérification : {w['verifie']}). "

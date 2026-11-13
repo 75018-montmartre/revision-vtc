@@ -6,6 +6,14 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Vendredi 13 novembre 2026, 12 h 45 · Plus de rythme de publication promis, sur tout le site
+
+- « Chaque semaine » retiré partout où il annonçait un rythme de publication : résumés de l'accueil et de la page À propos pour les moteurs de recherche, titre et résumé de l'Actualité VTC, flux RSS, page À propos, colonne « Je roule déjà » de l'accueil (« Ce qui change pour vous, au fil des textes »).
+  - https://revision-vtc.fr/actualite/index.html
+  - https://revision-vtc.fr/a-propos.html
+- Gardé, car exact et sans promesse de publication : la comparaison des textes avec Légifrance chaque semaine, la veille du Journal officiel, les conseils aux chauffeurs (« notez chaque semaine… »).
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Vendredi 13 novembre 2026, 12 h 40 · Accueil : plus de rythme de publication promis
 
 - Bandeau d'accueil : « tenu à jour chaque semaine » devient « tenu à jour régulièrement ».
