@@ -6,6 +6,14 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Vendredi 13 novembre 2026, 12 h 55 · Accueil : carte du livre remise dans le bandeau
+
+- La carte « Le livre Machine à Réussite » (couverture, contenu du livre, « Voir le livre » vers la page du livre) revient dans le bandeau d'accueil, sous le simulateur, avec le relief jaune du nouveau style. En thème sombre, elle prend le même fond que le simulateur.
+  - https://revision-vtc.fr/
+- Pourquoi : l'audit visuel (lot 4.c) l'avait fait retirer en disant le livre présent « en bas de page ». C'était faux pour l'accueil : il n'y apparaissait plus que dans le pied de page et derrière le bouton « Préparer l'examen 2027 », sans couverture. L'entrée du lot 4 ci-dessous reprenait cette erreur.
+- Vérifié : axe sans erreur sur 12 pages à 320, 768 et 1 366 px, en clair et en sombre.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Vendredi 13 novembre 2026, 12 h 45 · Plus de rythme de publication promis, sur tout le site
 
 - « Chaque semaine » retiré partout où il annonçait un rythme de publication : résumés de l'accueil et de la page À propos pour les moteurs de recherche, titre et résumé de l'Actualité VTC, flux RSS, page À propos, colonne « Je roule déjà » de l'accueil (« Ce qui change pour vous, au fil des textes »).

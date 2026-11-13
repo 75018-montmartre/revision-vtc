@@ -357,6 +357,9 @@ main:has(.hero){padding-bottom:0}
 .hero-cartes{display:grid;gap:var(--e4);min-width:0}
 .carte-hero{display:flex;gap:var(--e4);padding:var(--e5);border-radius:var(--rayon-lien);font-family:var(--sans);text-decoration:none}
 .carte-simu{flex-direction:column;gap:var(--e3);background:var(--carte);color:var(--encre);border:1.5px solid var(--nuit)}
+.carte-livre{align-items:center;background:var(--nuit-2);color:var(--sur-nuit);border:1.5px solid var(--jaune-ombre)}
+.carte-livre img{flex:none;display:block;border-radius:3px}
+.carte-livre > span{display:flex;flex-direction:column;gap:var(--e1);min-width:0}
 /* carte du simulateur : titre, phrase d'exemple, puis un petit relevé (trois lignes, montants alignés à droite,
    même taille ; la dernière, le reste, sous un trait épais) et un lien à pastille fléchée */
 .carte-simu{gap:var(--e3);padding:var(--e4) var(--e5)}
@@ -390,8 +393,10 @@ main:has(.hero){padding-bottom:0}
 }
 .carte-texte{font-size:1rem;line-height:1.45}
 .carte-simu .carte-texte{color:var(--gris)}
+.carte-livre .carte-texte{color:var(--sur-nuit-doux)}
 .carte-titre{font-family:var(--cond);font-weight:700;font-size:1.375rem;line-height:1.1}
 .carte-lien{font-weight:700;font-size:1rem;text-decoration:underline;text-underline-offset:.2em}
+.carte-livre .carte-lien{color:var(--jaune)}
 /* bande des preuves : à plat, coche jaune */
 .preuves{background:var(--carte);border-bottom:1px solid var(--filet)}
 .preuves ul{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--e4) var(--e6);padding-top:var(--e5);padding-bottom:var(--e5);margin:0 auto;font-family:var(--sans);font-size:1rem;line-height:1.45}
@@ -871,14 +876,15 @@ input[type=text],input[type=search],textarea,select,.contact input[type=email]{b
 /* --- relief sur fond nuit : un relief bleu nuit y serait invisible ; le relief y est jaune foncé (--jaune-ombre),
    sauf le bouton à contour, en --nuit-2 pour rester second. Mêmes mouvements qu'ailleurs. --- */
 .fond-nuit .bouton.clair,.carte-hero{--relief:var(--jaune-ombre)}
-/* thème sombre : le bandeau d'accueil (--nuit) se confondait avec le fond de page ; il passe sur --nuit-2, le simulateur du bandeau
-   sur --doux pour rester détaché, le relief du bouton à contour sur --filet pour rester visible (depuis le 13 novembre 2026) */
+.fond-nuit .bouton.contour{--relief:var(--nuit-2)}
+/* thème sombre : le bandeau d'accueil (--nuit) se confondait avec le fond de page ; il passe sur --nuit-2, le simulateur et la carte du livre
+   sur --doux pour rester détachés, le relief du bouton à contour sur --filet pour rester visible (depuis le 13 novembre 2026) */
 @media (prefers-color-scheme: dark){
   .hero.fond-nuit{background:var(--nuit-2)}
-  .hero .carte-simu{background:var(--doux)}
+  .hero :is(.carte-simu,.carte-livre){background:var(--doux)}
   .hero .bouton.contour{--relief:var(--filet)}
 }
-.fond-nuit .bouton.contour{--relief:var(--nuit-2)}
+a.carte-hero:hover .carte-lien{text-decoration-thickness:2px}
 
 /* --- simulateur : les choix sont des touches ; la touche choisie est enfoncée --- */
 .choix label:has(input:focus-visible){outline:3px solid var(--focus);outline-offset:3px}
@@ -1069,21 +1075,21 @@ li:has(> a[href^="http"]:not([href*="revision-vtc.fr"])){--fleche:var(--fleche-b
 /* 12. Relief unique (depuis le 13 novembre 2026, audit visuel, lot 3) ---------------------------------
    Tout ce qui se clique a la même épaisseur bleu nuit, décalée en bas à droite (le « relief », jeton --ombre-relief) ;
    le reste est à plat ou, pour les encadrés non cliquables, garde l'ombre douce --ombre-tuile.
-   Boutons, bouton « Le livre », cartes et tuiles cliquables, cartes-liens, liens « Tous les… », sommaire.
+   Boutons, bouton « Le livre », cartes et tuiles cliquables, cartes-liens, liens « Tous les… », sommaire, carte du livre de l'accueil.
    Survol : l'élément monte de 1 px ; clic : il s'enfonce de 4 px et le relief disparaît ; clavier : contour --focus.
    Les jetons sont posés sur chaque élément pour suivre son propre --relief (jaune foncé sur fond nuit, --nuit-2 pour le bouton à contour). */
 :is(
-  .bouton:not(.bientot),.menu-livre,.tete-bloc .lien-fleche,.sommaire a,
+  .bouton:not(.bientot),.menu-livre,a.carte-hero,.tete-bloc .lien-fleche,.sommaire a,
   .questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li){
   --ombre-relief:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief);
   --ombre-relief-survol:1px 1px 0 0 var(--relief),2px 2px 0 0 var(--relief),3px 3px 0 0 var(--relief),4px 4px 0 0 var(--relief),5px 5px 0 0 var(--relief);
   box-shadow:var(--ombre-relief);transition:transform .15s ease,box-shadow .15s ease}
 :is(
-  .bouton:not(.bientot),.menu-livre,.tete-bloc .lien-fleche,.sommaire a,
+  .bouton:not(.bientot),.menu-livre,a.carte-hero,.tete-bloc .lien-fleche,.sommaire a,
   .questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover,
 :is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):focus-within{transform:translate(-1px,-1px);box-shadow:var(--ombre-relief-survol)}
 :is(
-  .bouton:not(.bientot),.menu-livre,.tete-bloc .lien-fleche,.sommaire a,
+  .bouton:not(.bientot),.menu-livre,a.carte-hero,.tete-bloc .lien-fleche,.sommaire a,
   .questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):active,
 .menu-livre[aria-current="page"]{transform:translate(4px,4px);box-shadow:0 0 0 0 var(--relief)}
 /* bord nuit (1,5 px) sur les éléments blancs en relief, comme un panneau ; les boutons pleins gardent leur couleur */
@@ -1091,13 +1097,13 @@ li:has(> a[href^="http"]:not([href*="revision-vtc.fr"])){--fleche:var(--fleche-b
 .bouton.second:hover,.menu-livre:hover{border-color:var(--relief)}
 @media (prefers-reduced-motion: reduce){
   :is(
-  .bouton:not(.bientot),.menu-livre,.tete-bloc .lien-fleche,.sommaire a,
+  .bouton:not(.bientot),.menu-livre,a.carte-hero,.tete-bloc .lien-fleche,.sommaire a,
   .questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li){transition:none}
   :is(
-  .bouton:not(.bientot),.menu-livre,.tete-bloc .lien-fleche,.sommaire a,
+  .bouton:not(.bientot),.menu-livre,a.carte-hero,.tete-bloc .lien-fleche,.sommaire a,
   .questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li):is(:hover,:focus-within,:active),.menu-livre[aria-current="page"]{transform:none !important}
 }
 @media print{:is(
-  .bouton:not(.bientot),.menu-livre,.tete-bloc .lien-fleche,.sommaire a,
+  .bouton:not(.bientot),.menu-livre,a.carte-hero,.tete-bloc .lien-fleche,.sommaire a,
   .questions li,.numeros > li,.une-actu,.actu-precedents li,.essentiel-liens li,.wiki-liste li,.voir-aussi li){box-shadow:none !important}}
 
