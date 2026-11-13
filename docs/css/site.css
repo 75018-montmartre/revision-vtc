@@ -28,6 +28,7 @@
   --jaune:#EDB321;     /* jaune signal : numéros d'article, étapes, choix actif, soulignement du menu */
   --jaune-ombre:#B3850F; /* relief des boutons jaunes */
   --jaune-survol:#F2C24F; /* survol des boutons jaunes */
+  --jaune-pale:#FDF5DE;  /* fond du choix coché (simulateurs, fiches) : jaune très pâle, texte --encre */
   --lien-sur-nuit:#FFD766; /* liens dans un bandeau nuit (« En clair ») */
   --focus-sur-nuit:#9DBBFF; /* contour de focus sur le pied de page */
   --sur-nuit:#FFFFFF; --sur-nuit-doux:#C9D1DC;
@@ -66,7 +67,7 @@
 }
 @media (prefers-color-scheme: dark){
   :root{--fond:#0F141C;--carte:#151C27;--doux:#1C2532;--encre:#E9EDF2;--gris:#AAB3C0;--filet:#2E3A4B;--rouge:#A52C15;
-        --nuit:#0A0E14;--nuit-2:#151C27;
+        --nuit:#0A0E14;--nuit-2:#151C27;--jaune-pale:#2C2615;
         --accent:#8DB4F2;--accent-trait:#E9EDF2;--ok:#8FD39C;--ok-fond:#1C2A1F;--ko:#F49A86;--ko-fond:#2E1D19;--focus:#8DB0FF;
         --ombre-h:0 10px 26px -12px rgba(0,0,0,.7);
         --fonce:#0A0E14;
@@ -1059,7 +1060,9 @@ li:has(> a[href^="http"]:not([href*="revision-vtc.fr"])){--fleche:var(--fleche-b
 /* choix (simulateur, examens blancs, fiches) : à plat */
 .choix label{border:1px solid var(--filet) !important;border-radius:10px;box-shadow:none !important;transform:none !important}
 .choix label:hover{border-color:var(--encre) !important}
-.choix label:has(input:checked){background:var(--jaune);color:var(--nuit);border-color:var(--jaune) !important}
+/* choix coché : bordure jaune de 2 px (1 px de bord + 1 px d'ombre intérieure, sans décaler le texte) et fond jaune très pâle,
+   plus léger que le jaune plein quand plusieurs choix sont visibles (audit visuel, lot 2, 13 novembre 2026) ; le rond coché reste le repère principal */
+.choix label:has(input:checked){background:var(--jaune-pale);color:var(--encre);border-color:var(--jaune) !important;box-shadow:inset 0 0 0 1px var(--jaune) !important}
 /* carte du livre sur fond nuit (accueil) : arrondie, sans relief */
 a.carte-hero{border-radius:14px;box-shadow:none !important;transform:none !important;transition:transform .2s ease}
 a.carte-hero:hover,a.carte-hero:focus-visible{transform:translateY(-3px) !important}

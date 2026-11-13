@@ -115,6 +115,7 @@
       $('res-moyenne').textContent = ''; $('res-explication').textContent = ''; $('res-detail').innerHTML = '';
       $('res-conseil').hidden = true;
       $('note-annonce').textContent = 'Une note est invalide.';
+      $('barre-res-verdict').textContent = '\u2014';
       return;
     }
     var r = calculer(notes, m, D);
@@ -188,6 +189,7 @@
       corps.appendChild(tr);
     });
     $('note-annonce').textContent = v.textContent + '. ' + moy.textContent;
+    $('barre-res-verdict').textContent = v.textContent;   // barre de résultat collante (téléphone), gérée par js/site.js
   }
 
   form.addEventListener('input', afficher);

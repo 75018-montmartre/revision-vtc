@@ -6,6 +6,17 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Vendredi 13 novembre 2026, 1 h 30 · Audit visuel, lot 2 (simulateurs : formulaire en premier)
+
+- Ordre des deux simulateurs : titre, chapeau d'une phrase (raccourci, aucune information perdue : l'idée « l'argent versé n'est pas un salaire » reste dans l'exemple chiffré), mention « rien n'est envoyé », puis directement le formulaire. « Comment ça marche » (étapes et glossaire), l'exemple (renommé « Un exemple chiffré », il ne vient plus « pour commencer ») ; « Comment s'en servir » et « La règle en bref » sont déplacés après le résultat. Rien n'est supprimé.
+  - Premier champ du simulateur de revenu net : 763 px du haut sur ordinateur (environ 1 900 px avant), dans le premier écran sur téléphone.
+  - https://revision-vtc.fr/simulateurs/cout-revient-revenu-net-vtc.html
+  - https://revision-vtc.fr/simulateurs/calcul-note-examen-vtc.html
+- Barre de résultat collante sur téléphone : ajoutée au calcul de la note (verdict) ; reste affichée quand on coche un choix (avant, elle disparaissait dès qu'un bouton radio avait le focus) ; toujours effacée quand on tape (clavier ouvert). Logique déplacée de `js/simulateur.js` vers `js/site.js`, commune aux deux.
+- Choix coché (simulateurs, fiches et QCM) : bordure jaune de 2 px et fond jaune très pâle (nouveau jeton `--jaune-pale`, #FDF5DE en clair, #2C2615 en sombre) au lieu du jaune plein. Contraste du texte : 16,7:1 en clair, 12,8:1 en sombre.
+- Vérifié : axe sans erreur sur 12 pages à 320, 768 et 1 366 px, en clair et en sombre, aucun débordement ; tests du simulateur et de la note passés.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Vendredi 13 novembre 2026, 1 h 05 · Audit visuel, lot 1 (défauts visibles)
 
 - 1.a Panneau « Votre résultat » des deux simulateurs : il ne garde plus que l'essentiel et tient en entier à l'écran, sans barre de défilement interne (revenu net : 486 px de haut au lieu de 852 px coupés ; note : 467 px au plus au lieu de 1 395 px avec des notes faibles). Le détail (alertes TVA, seuil, autres frais à 0 €, tableau, impôt, « Copier le lien » ; conseils et tableau par épreuve) passe dans « Le détail de votre résultat », sous le formulaire. Le panneau collant s'arrête désormais sous l'en-tête collé (son titre passait dessous) et cesse d'être collant sous 38rem de hauteur d'écran.

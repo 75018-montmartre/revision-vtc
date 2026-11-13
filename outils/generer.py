@@ -1843,9 +1843,14 @@ def simulateur(ds, note=None):
     corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Simulateurs</a></li></ol></nav>
     <p class="surtitre">Simulateur gratuit</p>
     <h1>{ty("Simulateur VTC : coût de revient de la voiture et revenu net")}</h1>
-    <p class="chapeau">{ty("Les plateformes vous versent de l'argent chaque semaine, mais ce n'est pas votre salaire : il faut encore payer la voiture, le carburant, l'assurance et les cotisations. Ce simulateur gratuit fait toutes ces soustractions pour vous et vous montre ce qui vous reste vraiment, en euros par mois.")}</p>
+    <p class="chapeau">{ty("Ce que vous versent les plateformes, moins la voiture, le carburant, l'assurance et les cotisations : le simulateur calcule ce qui vous reste vraiment, en euros par mois.")}</p>
     <p class="meta">{ty("Pour les chauffeurs VTC en micro-entreprise, TVA comprise. Hypothèses vérifiées le " + s["verifie"] + ". Calcul fait dans votre navigateur : rien n'est envoyé.")}</p>
     <div class="deux-col"><div class="col-texte">
+    {formulaire}
+    </div>
+    <aside class="col-cote" aria-label="Résultat de la simulation">{resultat}
+    </aside>{detail}</div>
+    <!-- mode d'emploi et exemple : après le formulaire et le résultat (audit visuel, lot 2) -->
     <section aria-labelledby="mode-emploi">
       <h2 id="mode-emploi">{ty("Comment ça marche")}</h2>
       <ol class="etapes">
@@ -1869,14 +1874,10 @@ def simulateur(ds, note=None):
       </div>
     </section>
     <section class="en-clair" aria-labelledby="en-bref">
-      <h2 id="en-bref">Un exemple pour commencer</h2>
+      <h2 id="en-bref">Un exemple chiffré</h2>
       <p>{ty(f"Exemple : un chauffeur à qui les plateformes versent 1 000 € par semaine pendant 47 semaines, avec une hybride louée 280 € par semaine et 60 000 km par an, garde environ {_euros(a['net'] / 12)} par mois avant impôt si ses cotisations portent sur le prix payé par les clients, et {_euros(b['net'] / 12)} si elles portent sur le montant versé. Sa voiture lui coûte {_euros(a['km'], True)} par kilomètre, carburant et assurance compris.")}</p>
       <p>{ty("La location, le carburant et les cotisations pèsent le plus. Les sommes versées par les plateformes ne sont pas un revenu : elles doivent d'abord couvrir tous ces frais.")}</p>
     </section>
-    {formulaire}
-    </div>
-    <aside class="col-cote" aria-label="Résultat de la simulation">{resultat}
-    </aside>{detail}</div>
     <h2 id="calcul">Comment le simulateur calcule</h2>
     <ol>
       <li>{ty("Montant versé sur l'année = montant versé par semaine × semaines travaillées. Prix payé par les clients = montant versé ÷ (1 − commission).")}</li>
@@ -2020,7 +2021,11 @@ def calcul_note():
       <p id="res-explication"></p>
       <p class="meta"><a href="#detail-resultat">{ty("Le détail par épreuve")}</a></p>
       <p class="visuellement-cache" id="note-annonce" aria-live="polite"></p>
-    </section>'''
+    </section>
+    <aside class="barre-resultat cachee" id="barre-resultat" aria-label="Résultat en bref" hidden>
+      <p><span class="barre-legende">Votre résultat</span> <b id="barre-res-verdict"></b></p>
+      <a class="bouton clair petit" href="#resultat">Voir le détail</a>
+    </aside>'''
 
     # détail : sous le formulaire, dans la colonne principale (le panneau collant ne garde que l'essentiel)
     detail = f'''
@@ -2060,9 +2065,14 @@ def calcul_note():
     corps = f'''    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Simulateurs</a></li></ol></nav>
     <p class="surtitre">Outil gratuit</p>
     <h1>{ty("Calcul de la note de l'examen VTC : suis-je admissible ?")}</h1>
-    <p class="chapeau">{ty("Vous venez de faire un examen blanc ? Entrez vos notes : vous saurez si vous auriez été admissible, pourquoi, et quelle épreuve travailler en priorité. Le calcul applique le barème officiel, avec ses coefficients et ses notes éliminatoires.")}</p>
+    <p class="chapeau">{ty("Entrez vos notes d'examen blanc : vous saurez si vous seriez admissible au barème officiel (coefficients et notes éliminatoires), pourquoi, et quelle épreuve travailler en priorité.")}</p>
     <p class="meta">{ty("Barème de l'arrêté du 6 avril 2017, vérifié le " + n["verifie"] + " sur Légifrance. Calcul fait dans votre navigateur : rien n'est envoyé.")}</p>
     <div class="deux-col"><div class="col-texte">
+    {formulaire}
+    </div>
+    <aside class="col-cote" aria-label="Résultat du calcul">{resultat}
+    </aside>{detail}</div>
+    <!-- mode d'emploi et exemple : après le formulaire et le résultat (audit visuel, lot 2) -->
     <section aria-labelledby="mode-emploi">
       <h2 id="mode-emploi">{ty("Comment s'en servir")}</h2>
       <ol class="etapes">
@@ -2082,10 +2092,6 @@ def calcul_note():
       </ul>
       <p>{ty("Une seule note sous le seuil suffit à être recalé, même avec 15 de moyenne. Les épreuves A, C, F et G comptent triple : à elles quatre, elles pèsent 12 coefficients sur 17.")}</p>
     </section>
-    {formulaire}
-    </div>
-    <aside class="col-cote" aria-label="Résultat du calcul">{resultat}
-    </aside>{detail}</div>
     <h2 id="bareme">{ty("Le barème officiel des sept épreuves")}</h2>
     <p>{ty("Les épreuves A à E sont communes aux examens de taxi et de VTC ; F et G sont propres au VTC. Toutes sont notées sur 20, avec des questions à choix multiples (QCM) et des questions à réponse courte (QRC).")}</p>
     {_bloc_dossier(bareme)}

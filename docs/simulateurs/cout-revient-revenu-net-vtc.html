@@ -42,40 +42,13 @@
 <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="../index.html">Accueil</a></li><li><a href="index.html">Simulateurs</a></li></ol></nav>
     <p class="surtitre">Simulateur gratuit</p>
     <h1>Simulateur VTC : coût de revient de la voiture et revenu net</h1>
-    <p class="chapeau">Les plateformes vous versent de l’argent chaque semaine, mais ce n’est pas votre salaire : il faut encore payer la voiture, le carburant, l’assurance et les cotisations. Ce simulateur gratuit fait toutes ces soustractions pour vous et vous montre ce qui vous reste vraiment, en euros par mois.</p>
+    <p class="chapeau">Ce que vous versent les plateformes, moins la voiture, le carburant, l’assurance et les cotisations : le simulateur calcule ce qui vous reste vraiment, en euros par mois.</p>
     <p class="meta">Pour les chauffeurs VTC en micro-entreprise, TVA comprise. Hypothèses vérifiées le 28 octobre 2026. Calcul fait dans votre navigateur : rien n’est envoyé.</p>
   </div>
 </header>
   <div class="page corps-page mp-cote">
 
     <div class="deux-col"><div class="col-texte">
-    <section aria-labelledby="mode-emploi">
-      <h2 id="mode-emploi">Comment ça marche</h2>
-      <ol class="etapes">
-        <li><b>Vous décrivez votre activité</b>Ce que les plateformes vous versent par semaine, le nombre de semaines où vous travaillez dans l’année et les kilomètres que vous parcourez.</li>
-        <li><b>Vous décrivez votre voiture et vos frais</b>Louée à la semaine, en location longue durée ou achetée ; essence, gazole ou électrique ; votre assurance et vos autres dépenses (téléphone, lavage, péages…).</li>
-        <li><b>Le simulateur fait le calcul et vous répond</b>Il retire les cotisations, la TVA, le coût de la voiture et les frais obligatoires du métier (carte professionnelle, registre, visite médicale), puis affiche :
-          <ul>
-            <li>votre revenu net, par mois et par an ;</li>
-            <li>ce que vous coûte la voiture à chaque kilomètre ;</li>
-            <li>le montant à faire chaque semaine pour ne pas travailler à perte.</li>
-          </ul></li>
-      </ol>
-      <p>Les cases sont déjà remplies avec un exemple réaliste, dont chaque valeur est sourcée : changez seulement ce que vous connaissez, le résultat se met à jour tout seul.</p>
-      <div class="note">
-        <dl>
-          <dt>Montant versé</dt><dd>Ce que la plateforme vous vire, sa commission déjà retirée. C’est le chiffre de vos relevés Uber, Bolt ou Heetch.</dd>
-          <dt>Coût de revient de la voiture</dt><dd>Tout ce que coûte la voiture sur l’année (loyer ou achat, énergie, assurance, entretien), divisé par les kilomètres parcourus.</dd>
-          <dt>Seuil de rentabilité</dt><dd>Le montant versé par semaine en dessous duquel vos frais dépassent ce que vous gagnez.</dd>
-          <dt>Revenu net</dt><dd>Ce qui vous reste pour vivre, avant l’impôt sur le revenu.</dd>
-        </dl>
-      </div>
-    </section>
-    <section class="en-clair" aria-labelledby="en-bref">
-      <h2 id="en-bref">Un exemple pour commencer</h2>
-      <p>Exemple : un chauffeur à qui les plateformes versent 1 000 € par semaine pendant 47 semaines, avec une hybride louée 280 € par semaine et 60 000 km par an, garde environ 920 € par mois avant impôt si ses cotisations portent sur le prix payé par les clients, et 1 299 € si elles portent sur le montant versé. Sa voiture lui coûte 0,35 € par kilomètre, carburant et assurance compris.</p>
-      <p>La location, le carburant et les cotisations pèsent le plus. Les sommes versées par les plateformes ne sont pas un revenu : elles doivent d’abord couvrir tous ces frais.</p>
-    </section>
     
     <form id="simu" class="simu" novalidate hidden aria-describedby="simu-intro">
       <p class="aide" id="simu-intro">Les valeurs proposées sont des hypothèses sourcées ou des exemples : remplacez-les par vos chiffres. Le résultat se met à jour à chaque saisie ; rien n’est envoyé. <a class="lien-resultat" href="#resultat">Aller au résultat</a></p>
@@ -156,6 +129,34 @@
       <div class="actions"><button type="button" class="bouton second petit" id="simu-lien">Copier le lien de cette simulation</button></div>
       <p class="meta" id="lien-etat" aria-live="polite"></p>
     </section></div>
+    <!-- mode d'emploi et exemple : après le formulaire et le résultat (audit visuel, lot 2) -->
+    <section aria-labelledby="mode-emploi">
+      <h2 id="mode-emploi">Comment ça marche</h2>
+      <ol class="etapes">
+        <li><b>Vous décrivez votre activité</b>Ce que les plateformes vous versent par semaine, le nombre de semaines où vous travaillez dans l’année et les kilomètres que vous parcourez.</li>
+        <li><b>Vous décrivez votre voiture et vos frais</b>Louée à la semaine, en location longue durée ou achetée ; essence, gazole ou électrique ; votre assurance et vos autres dépenses (téléphone, lavage, péages…).</li>
+        <li><b>Le simulateur fait le calcul et vous répond</b>Il retire les cotisations, la TVA, le coût de la voiture et les frais obligatoires du métier (carte professionnelle, registre, visite médicale), puis affiche :
+          <ul>
+            <li>votre revenu net, par mois et par an ;</li>
+            <li>ce que vous coûte la voiture à chaque kilomètre ;</li>
+            <li>le montant à faire chaque semaine pour ne pas travailler à perte.</li>
+          </ul></li>
+      </ol>
+      <p>Les cases sont déjà remplies avec un exemple réaliste, dont chaque valeur est sourcée : changez seulement ce que vous connaissez, le résultat se met à jour tout seul.</p>
+      <div class="note">
+        <dl>
+          <dt>Montant versé</dt><dd>Ce que la plateforme vous vire, sa commission déjà retirée. C’est le chiffre de vos relevés Uber, Bolt ou Heetch.</dd>
+          <dt>Coût de revient de la voiture</dt><dd>Tout ce que coûte la voiture sur l’année (loyer ou achat, énergie, assurance, entretien), divisé par les kilomètres parcourus.</dd>
+          <dt>Seuil de rentabilité</dt><dd>Le montant versé par semaine en dessous duquel vos frais dépassent ce que vous gagnez.</dd>
+          <dt>Revenu net</dt><dd>Ce qui vous reste pour vivre, avant l’impôt sur le revenu.</dd>
+        </dl>
+      </div>
+    </section>
+    <section class="en-clair" aria-labelledby="en-bref">
+      <h2 id="en-bref">Un exemple chiffré</h2>
+      <p>Exemple : un chauffeur à qui les plateformes versent 1 000 € par semaine pendant 47 semaines, avec une hybride louée 280 € par semaine et 60 000 km par an, garde environ 920 € par mois avant impôt si ses cotisations portent sur le prix payé par les clients, et 1 299 € si elles portent sur le montant versé. Sa voiture lui coûte 0,35 € par kilomètre, carburant et assurance compris.</p>
+      <p>La location, le carburant et les cotisations pèsent le plus. Les sommes versées par les plateformes ne sont pas un revenu : elles doivent d’abord couvrir tous ces frais.</p>
+    </section>
     <h2 id="calcul">Comment le simulateur calcule</h2>
     <ol>
       <li>Montant versé sur l’année = montant versé par semaine × semaines travaillées. Prix payé par les clients = montant versé ÷ (1 − commission).</li>

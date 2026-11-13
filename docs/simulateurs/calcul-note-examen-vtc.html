@@ -43,32 +43,13 @@
 <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="../index.html">Accueil</a></li><li><a href="index.html">Simulateurs</a></li></ol></nav>
     <p class="surtitre">Outil gratuit</p>
     <h1>Calcul de la note de l’examen VTC : suis-je admissible ?</h1>
-    <p class="chapeau">Vous venez de faire un examen blanc ? Entrez vos notes : vous saurez si vous auriez été admissible, pourquoi, et quelle épreuve travailler en priorité. Le calcul applique le barème officiel, avec ses coefficients et ses notes éliminatoires.</p>
+    <p class="chapeau">Entrez vos notes d’examen blanc : vous saurez si vous seriez admissible au barème officiel (coefficients et notes éliminatoires), pourquoi, et quelle épreuve travailler en priorité.</p>
     <p class="meta">Barème de l’arrêté du 6 avril 2017, vérifié le 30 octobre 2026 sur Légifrance. Calcul fait dans votre navigateur : rien n’est envoyé.</p>
   </div>
 </header>
   <div class="page corps-page mp-cote">
 
     <div class="deux-col"><div class="col-texte">
-    <section aria-labelledby="mode-emploi">
-      <h2 id="mode-emploi">Comment s’en servir</h2>
-      <ol class="etapes">
-        <li><b>Faites un examen blanc</b>Un des trois examens blancs du livre ou un des deux examens blancs de ce site. Notez votre note sur 20 à chaque épreuve.</li>
-        <li><b>Entrez vos notes</b>Toutes, ou seulement celles que vous avez : une épreuve laissée vide est une épreuve à venir. Le calculateur vous dit alors ce qu’il vous faudra à celles qui restent.</li>
-        <li><b>Lisez le verdict et le conseil</b>Admissible ou non, avec la raison ; la note éliminatoire à rattraper en priorité ; l’épreuve où chaque point compte le plus ; les notes trop proches du seuil, qui peuvent vous faire tomber le jour de l’examen.</li>
-      </ol>
-      <p>Refaites le calcul après chaque examen blanc : vous voyez votre progression épreuve par épreuve, et vous savez où mettre vos heures de révision.</p>
-    </section>
-    <section class="en-clair" aria-labelledby="en-bref">
-      <h2 id="en-bref">La règle en bref</h2>
-      <p>Vous êtes admissible si vous remplissez les trois conditions en même temps :</p>
-      <ul>
-        <li>au moins 10 / 20 de moyenne sur les sept épreuves, chaque note étant multipliée par son coefficient, soit au moins 170 points sur 340 ;</li>
-        <li>au moins 6 / 20 aux épreuves A, B, C, D, F et G ;</li>
-        <li>au moins 4 / 20 à l’épreuve E, l’anglais.</li>
-      </ul>
-      <p>Une seule note sous le seuil suffit à être recalé, même avec 15 de moyenne. Les épreuves A, C, F et G comptent triple : à elles quatre, elles pèsent 12 coefficients sur 17.</p>
-    </section>
     
     <form id="note" class="simu" novalidate hidden aria-describedby="note-intro">
       <p class="aide" id="note-intro">Saisissez les notes que vous avez, ou celles que vous visez, par exemple 12 ou 12,5. Laissez vide une épreuve pas encore passée : le calculateur vous dit ce qu’il vous faut. Rien n’est envoyé. <a class="lien-resultat" href="#resultat">Aller au résultat</a></p>
@@ -95,6 +76,10 @@
       <p class="meta"><a href="#detail-resultat">Le détail par épreuve</a></p>
       <p class="visuellement-cache" id="note-annonce" aria-live="polite"></p>
     </section>
+    <aside class="barre-resultat cachee" id="barre-resultat" aria-label="Résultat en bref" hidden>
+      <p><span class="barre-legende">Votre résultat</span> <b id="barre-res-verdict"></b></p>
+      <a class="bouton clair petit" href="#resultat">Voir le détail</a>
+    </aside>
     </aside>
     <section class="col-detail" id="detail-resultat" aria-labelledby="titre-detail" hidden>
       <h2 id="titre-detail">Le détail de votre résultat</h2>
@@ -103,6 +88,26 @@
         <thead><tr><th scope="col">Épreuve</th><th scope="col" class="nombre">Note</th><th scope="col" class="nombre">Coef.</th><th scope="col" class="nombre">Points</th><th scope="col">Seuil</th></tr></thead>
         <tbody id="res-detail"></tbody></table></div>
     </section></div>
+    <!-- mode d'emploi et exemple : après le formulaire et le résultat (audit visuel, lot 2) -->
+    <section aria-labelledby="mode-emploi">
+      <h2 id="mode-emploi">Comment s’en servir</h2>
+      <ol class="etapes">
+        <li><b>Faites un examen blanc</b>Un des trois examens blancs du livre ou un des deux examens blancs de ce site. Notez votre note sur 20 à chaque épreuve.</li>
+        <li><b>Entrez vos notes</b>Toutes, ou seulement celles que vous avez : une épreuve laissée vide est une épreuve à venir. Le calculateur vous dit alors ce qu’il vous faudra à celles qui restent.</li>
+        <li><b>Lisez le verdict et le conseil</b>Admissible ou non, avec la raison ; la note éliminatoire à rattraper en priorité ; l’épreuve où chaque point compte le plus ; les notes trop proches du seuil, qui peuvent vous faire tomber le jour de l’examen.</li>
+      </ol>
+      <p>Refaites le calcul après chaque examen blanc : vous voyez votre progression épreuve par épreuve, et vous savez où mettre vos heures de révision.</p>
+    </section>
+    <section class="en-clair" aria-labelledby="en-bref">
+      <h2 id="en-bref">La règle en bref</h2>
+      <p>Vous êtes admissible si vous remplissez les trois conditions en même temps :</p>
+      <ul>
+        <li>au moins 10 / 20 de moyenne sur les sept épreuves, chaque note étant multipliée par son coefficient, soit au moins 170 points sur 340 ;</li>
+        <li>au moins 6 / 20 aux épreuves A, B, C, D, F et G ;</li>
+        <li>au moins 4 / 20 à l’épreuve E, l’anglais.</li>
+      </ul>
+      <p>Une seule note sous le seuil suffit à être recalé, même avec 15 de moyenne. Les épreuves A, C, F et G comptent triple : à elles quatre, elles pèsent 12 coefficients sur 17.</p>
+    </section>
     <h2 id="bareme">Le barème officiel des sept épreuves</h2>
     <p>Les épreuves A à E sont communes aux examens de taxi et de VTC ; F et G sont propres au VTC. Toutes sont notées sur 20, avec des questions à choix multiples (QCM) et des questions à réponse courte (QRC).</p>
     <div class="defile" tabindex="0" role="region" aria-labelledby="tableau-19"><table><caption id="tableau-19">Les sept épreuves d’admissibilité de l’examen VTC (arrêté du 6 avril 2017, article 2)</caption><thead><tr><th scope="col">Épreuve</th><th scope="col" class="nombre">Durée</th><th scope="col" class="nombre">Coef.</th><th scope="col" class="nombre">Poids dans la moyenne</th><th scope="col">Composition (sur 20 points)</th><th scope="col" class="nombre">Éliminatoire sous</th></tr></thead><tbody><tr><th scope="row">A · Réglementation du transport public particulier de personnes (T3P) et prévention des discriminations et des violences sexuelles et sexistes</th><td class="nombre">45 min</td><td class="nombre">3</td><td class="nombre">17,6 %</td><td>5 QRC sur 2 points et 10 QCM sur 1 point</td><td class="nombre">6 / 20</td></tr><tr><th scope="row">B · Gestion</th><td class="nombre">45 min</td><td class="nombre">2</td><td class="nombre">11,8 %</td><td>2 QRC sur 2 points et 16 QCM sur 1 point</td><td class="nombre">6 / 20</td></tr><tr><th scope="row">C · Sécurité routière</th><td class="nombre">30 min</td><td class="nombre">3</td><td class="nombre">17,6 %</td><td>20 QCM sur 1 point</td><td class="nombre">6 / 20</td></tr><tr><th scope="row">D · Expression et compréhension en langue française</th><td class="nombre">30 min</td><td class="nombre">2</td><td class="nombre">11,8 %</td><td>3 QRC sur 2 points et 7 QCM sur 2 points ; 1 point retiré au-delà de 5 fautes d’orthographe dans les QRC</td><td class="nombre">6 / 20</td></tr><tr><th scope="row">E · Expression et compréhension en langue anglaise (niveau A2)</th><td class="nombre">30 min</td><td class="nombre">1</td><td class="nombre">5,9 %</td><td>20 QCM sur 1 point</td><td class="nombre">4 / 20</td></tr><tr><th scope="row">F · Développement commercial et gestion propre à l’activité de VTC</th><td class="nombre">30 min</td><td class="nombre">3</td><td class="nombre">17,6 %</td><td>4 QRC sur 2 points et 12 QCM sur 1 point</td><td class="nombre">6 / 20</td></tr><tr><th scope="row">G · Réglementation nationale spécifique de l’activité de VTC</th><td class="nombre">20 min</td><td class="nombre">3</td><td class="nombre">17,6 %</td><td>2 QRC sur 4 points et 6 QCM sur 2 points</td><td class="nombre">6 / 20</td></tr></tbody><tfoot><tr><th scope="row">Total</th><td class="nombre"><strong>3 h 50</strong></td><td class="nombre"><strong>17</strong></td><td class="nombre"><strong>100 % (arrondis)</strong></td><td><strong>Moyenne pondérée : points ÷ 17</strong></td><td class="nombre"></td></tr></tfoot></table></div>
