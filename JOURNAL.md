@@ -6,6 +6,17 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Vendredi 13 novembre 2026, 10 h 32 · Article n° 9 (tâche tous les deux jours)
+
+- Titre : « Le VTC en chiffres : combien de chauffeurs VTC en France, de courses, de candidats à l'examen ? »
+- Page : https://revision-vtc.fr/dossiers/vtc-en-chiffres-nombre-chauffeurs-france.html (2 416 mots, épreuve F, sans photo)
+- En bref : environ 71 300 chauffeurs VTC actifs sur les plateformes en 2024 (+27 %), plus de 100 millions de courses (+16 %), donc environ 9 % de courses en moins par chauffeur (notre calcul) ; près de 63 000 taxis (France entière) ; 74 % des VTC en Île-de-France ; près de 36 000 candidats aux examens taxi et VTC en 2025 (−33 %) ; 45 % des candidats VTC inscrits en 2024 avaient tout réussi en janvier 2026 ; 19 % de voitures VTC hybrides rechargeables, électriques ou à hydrogène, 11 % de diesel.
+- Sources lues le jour même : SDES, rapports 2026 (29 juin 2026) et 2025 (18 juin 2025) de l'Observatoire national des T3P ; « Les chauffeurs des plateformes de VTC en 2024 » (13 novembre 2025) et « … en 2023 » (25 novembre 2024), pages HTML. PDF et fichiers de données non lus (outil refusé).
+- Relecture indépendante : 51 points relevés, 46 confirmés, 0 contredit, 7 calculs refaits exacts ; 1 non trouvé retiré (CMA France comme source des données) ; 5 formulations précisées (date du minimum de 9 € ramenée à « début 2024 » car les deux publications du SDES divergent, période septembre-octobre 2024, taxis « France entière », « plus de 71 000 » pour le rapport 2026, lien de cause hybride nuancé).
+- Écarté faute de certitude : nombre de cartes VTC valides et d'exploitants inscrits au registre (absents des pages lues), taux de réussite par épreuve, régions détaillées (PDF non lu), cartes délivrées en 2024 (texte et infographie du rapport 2025 divergent).
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px (article et index des guides), aucun débordement ; page dans sitemap.xml, llms.txt et l'index des guides.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Vendredi 13 novembre 2026, 9 h 00 · Question VTC du jour
 
 - Question : « TVA VTC : quel taux sur une course ? »

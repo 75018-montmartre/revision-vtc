@@ -1,0 +1,132 @@
+{
+ "numero": 9,
+ "slug": "vtc-en-chiffres-nombre-chauffeurs-france",
+ "domaine": "F",
+ "date": "2026-11-13",
+ "titre": "Le VTC en chiffres : combien de chauffeurs VTC en France, de courses, de candidats à l'examen ?",
+ "titre_page": "Combien de chauffeurs VTC en France ? Les chiffres officiels 2024-2025",
+ "description": "71 300 chauffeurs VTC actifs en 2024 (+27 %), plus de 100 millions de courses, 45 % de réussite à l'examen : les chiffres officiels de l'Observatoire T3P.",
+ "mots_cles": ["nombre de chauffeurs VTC en France", "chiffres VTC", "statistiques VTC", "Observatoire national T3P", "taux de réussite examen VTC", "nombre de taxis en France", "VTC Île-de-France"],
+ "chapeau": "Combien sont-ils, où travaillent-ils, combien de courses font-ils, quelle voiture conduisent-ils ? L'Observatoire national des transports publics particuliers de personnes publie chaque année les chiffres officiels du métier. Voici les derniers, rassemblés et expliqués, avec ce qu'ils changent pour vous qui voulez devenir chauffeur.",
+ "en_bref": [
+  "En 2024, la France métropolitaine comptait environ 71 300 chauffeurs VTC actifs sur les plateformes, soit 27 % de plus qu'en 2023, pour plus de 100 millions de courses (+16 %). On comptait aussi près de 63 000 taxis en France entière, outre-mer compris. Ces chiffres sont ceux de l'Observatoire national des transports publics particuliers de personnes (SDES).",
+  "Les chauffeurs ont augmenté plus vite que les courses : environ 9 % de courses en moins par chauffeur actif en un an (notre calcul). Côté examen, près de 36 000 candidats taxi et VTC se sont inscrits en 2025, 33 % de moins qu'en 2024, et 45 % seulement des candidats VTC inscrits en 2024 avaient réussi tout le parcours en janvier 2026."
+ ],
+ "sections": [
+  {"id": "chiffres-cles", "titre": "Les chiffres clés du VTC en un coup d'œil", "blocs": [
+   "Les chiffres de cet article viennent tous du même organisme : l'**Observatoire national des transports publics particuliers de personnes** (taxis, VTC et deux-roues motorisés). Ses travaux sont publiés par le SDES, le service statistique du ministère chargé des transports. Pour les chauffeurs, il s'appuie sur les données transmises par les plateformes de VTC.",
+   "Deux publications sont utilisées : le **rapport 2026 de l'Observatoire**, publié le 29 juin 2026, et les « premiers résultats » sur les chauffeurs des plateformes de VTC, publiés le 13 novembre 2025 pour l'année 2024 et le 25 novembre 2024 pour l'année 2023.",
+   {"tableau": {"legende": "Le VTC en France : les derniers chiffres officiels (Observatoire national des T3P, SDES)", "colonnes": ["Indicateur", "Valeur", "Année"], "nombres": [], "lignes": [
+    ["Chauffeurs VTC actifs sur les plateformes (France métropolitaine)", "environ 71 300", "2024"],
+    ["Évolution sur un an", "+27 %", "2024 / 2023"],
+    ["Courses réalisées via les plateformes", "plus de 100 millions", "2024"],
+    ["Taxis (France entière, y compris DROM)", "près de 63 000", "2024"],
+    ["Cartes professionnelles délivrées (hors renouvellement), taxis et VTC", "près de 38 500, dont 75 % de VTC", "2025"],
+    ["Candidats inscrits aux examens taxi et VTC", "près de 36 000, dont 80 % pour le VTC", "2025"],
+    ["Candidats VTC inscrits en 2024 ayant réussi tout le parcours", "45 %", "janvier 2026"],
+    ["Voitures VTC hybrides rechargeables, électriques ou à hydrogène", "19 %", "2024"]]}},
+   "Un mot sur la définition, car elle compte. L'Observatoire ne compte pas les cartes VTC en circulation : il compte les **chauffeurs actifs**, c'est-à-dire ceux qui ont réalisé au moins 100 courses dans l'année, sur au moins 20 jours, via une ou plusieurs plateformes. Un chauffeur qui ne travaille qu'avec ses propres clients, ou qui roule très peu, n'est pas dans ce chiffre. Les données de 2024 viennent de 7 plateformes, celles de 2023 de 8."
+  ]},
+  {"id": "nombre-chauffeurs", "titre": "Combien de chauffeurs VTC en France ? 71 300, et 27 % de plus en un an", "blocs": [
+   "La croissance est forte et régulière. Environ 56 000 chauffeurs étaient actifs en 2023, déjà 18 % de plus qu'en 2022. En 2024, ils sont environ 71 300 : **+27 % en un an et +51 % en deux ans**.",
+   {"tableau": {"legende": "Chauffeurs VTC actifs sur les plateformes, France métropolitaine (SDES)", "colonnes": ["Année", "Chauffeurs actifs", "Évolution publiée"], "nombres": [1], "lignes": [
+    ["2022", "environ 47 000 (notre calcul)", "+51 % entre 2022 et 2024"],
+    ["2023", "environ 56 000", "+18 % sur un an"],
+    ["2024", "environ 71 300", "+27 % sur un an"]]}},
+   {"note": "Le chiffre de 2022 n'est pas recopié : nous l'avons recalculé à partir des deux évolutions publiées. 71 300 divisé par 1,51 donne 47 219 ; 56 000 divisé par 1,18 donne 47 458. Les deux calculs concordent : environ 47 000."},
+   "Ce chiffre bouge aussi parce que beaucoup de chauffeurs arrivent chaque année. En 2024, **environ 22 500 chauffeurs actifs n'étaient pas inscrits sur les plateformes en 2023** : ils représentent 31 % des chauffeurs actifs. En 2023, les nouveaux venus étaient environ 15 000, soit 27 %.",
+   "Ceux qui sont là restent, en grande majorité : 87 % des chauffeurs actifs en 2023 ont poursuivi leur activité en 2024 (86 % entre 2022 et 2023). Le nombre de chauffeurs a augmenté tout au long de 2024, sauf pendant l'été."
+  ]},
+  {"id": "courses", "titre": "Plus de 100 millions de courses, mais moins de courses par chauffeur", "blocs": [
+   "En 2024, les chauffeurs VTC ont réalisé **plus de 100 millions de courses** via les plateformes en France métropolitaine, 16 % de plus qu'en 2023. Le mois le plus chargé a été juin, avec 9,1 millions de courses.",
+   "La demande augmente donc, mais moins vite que le nombre de chauffeurs (+27 %). Le calcul est simple : si les courses sont multipliées par 1,16 pendant que les chauffeurs le sont par 1,27, le nombre moyen de courses par chauffeur est multiplié par 1,16 / 1,27 = 0,91. Autrement dit, **environ 9 % de courses en moins par chauffeur actif en un an**.",
+   {"liste": [
+    "**2024 :** plus de 100 millions de courses pour environ 71 300 chauffeurs, soit **environ 1 400 courses par chauffeur actif** dans l'année, en moyenne.",
+    "**2023 :** environ 86 millions de courses (100 millions divisés par 1,16, notre calcul) pour environ 56 000 chauffeurs, soit **environ 1 540 courses** par chauffeur."
+   ]},
+   "Ces moyennes mélangent des chauffeurs à plein temps et d'autres qui roulent quelques jours par mois : elles ne disent pas combien de courses fera un chauffeur donné. Elles montrent une tendance : en 2024, chaque chauffeur a eu en moyenne une part plus petite du gâteau. Nous l'expliquions déjà dans [notre article sur le revenu horaire](combien-gagne-chauffeur-vtc-par-heure.html) : plus de chauffeurs pour se partager la demande, c'est en général plus d'attente pour chacun."
+  ]},
+  {"id": "chiffre-affaires", "titre": "Ce que rapporte une heure de course : 38 € en moyenne", "blocs": [
+   "L'Observatoire mesure aussi le **chiffre d'affaires horaire** des chauffeurs, c'est-à-dire ce que les plateformes leur versent par heure de course, trajet d'approche compris, mais sans le temps d'attente entre deux courses et avant les bonus. En septembre-octobre 2024, il était de **38 € en moyenne**. Un chauffeur sur quatre (24 %) était sous les 30 €.",
+   "Pour la même période de 2023, la publication précédente donnait 40 €, avec 6 % des chauffeurs sous les 30 €. Un jour travaillé comptait en moyenne 3,9 heures de courses en 2023 et 3,6 heures en 2024.",
+   "Le SDES le rappelle lui-même : ces montants ne sont **pas des revenus nets**. Il faut encore retirer la voiture, le carburant, les cotisations et l'assurance. Notre [simulateur de coût de revient et de revenu net](../simulateurs/cout-revient-revenu-net-vtc.html) fait ce calcul à partir de vos propres chiffres.",
+   "Les montants par course ont aussi changé avec le minimum fixé par accord entre plateformes et représentants des chauffeurs : 7,65 € par course à partir du 1er février 2023, puis **9 €** depuis le début de 2024. En septembre-octobre 2024, la part des courses payées au chauffeur entre 9 € et 10 € a triplé pour atteindre 24 %, par rapport à la même période de 2023, et trois courses sur quatre lui ont rapporté plus de 10 €. Un autre accord garantit aux chauffeurs un revenu minimum de 30 € par heure travaillée, bonus compris."
+  ]},
+  {"id": "ou-travaillent-les-vtc", "titre": "Où travaillent les chauffeurs VTC ? L'Île-de-France d'abord", "blocs": [
+   "Le VTC est d'abord un métier de grandes villes. Selon le rapport 2026, **74 % des chauffeurs VTC actifs en 2024 travaillaient en Île-de-France**, et 26 % dans le reste de la France métropolitaine. L'Observatoire résume : les VTC « travaillent presque exclusivement dans les métropoles ».",
+   "Une autre mesure le confirme : le lieu où le chauffeur a reçu sa carte professionnelle. **69 % des chauffeurs actifs en 2024 l'avaient reçue en Île-de-France** (73 % en 2023). Viennent ensuite les Alpes-Maritimes (4 %), le Rhône (3 %) et les Bouches-du-Rhône (2 %). Le SDES précise que ce lieu permet seulement d'« approcher » celui où le chauffeur travaille.",
+   "La part de l'Île-de-France baisse un peu d'une année sur l'autre (80 % des chauffeurs actifs en 2023 selon le rapport 2025), mais Paris reste de loin le premier marché. Les taxis sont répartis tout autrement : 36 % en Île-de-France, 64 % dans le reste de la France.",
+   "Pour vous, la conclusion est pratique : avant de vous lancer hors d'une grande agglomération, regardez la demande locale (gares, aéroports, hôtels, entreprises) plutôt que les chiffres nationaux, qui sont tirés par Paris."
+  ]},
+  {"id": "plusieurs-plateformes", "titre": "Trois chauffeurs sur quatre travaillent avec plusieurs applications", "blocs": [
+   "En 2024, **76 % des chauffeurs actifs ont travaillé avec plusieurs plateformes**, la même proportion qu'en 2023. Pour l'Observatoire, un chauffeur « utilise » une plateforme s'il y a fait au moins 10 courses dans l'année.",
+   "Les chauffeurs répartis sur quatre plateformes ou plus sont en revanche moins nombreux : 6 % en 2024, contre 10 % en 2023.",
+   "Ce chiffre a une conséquence directe sur le calcul de votre activité : les temps d'attente publiés par une seule plateforme ne disent pas tout, puisque la plupart des chauffeurs reçoivent des propositions de plusieurs applications à la fois. C'est aussi une protection : dépendre d'une seule application vous expose davantage, comme nous le rappelions parmi les [erreurs du chauffeur débutant](erreurs-chauffeur-vtc-debutant.html)."
+  ]},
+  {"id": "experience", "titre": "Un métier de plus en plus jeune : 47 % ont leur carte depuis 2022", "blocs": [
+   "L'arrivée massive de nouveaux chauffeurs rajeunit le métier, au sens de l'expérience. Parmi les chauffeurs actifs en 2024 :",
+   {"liste": [
+    "**47 %** ont obtenu leur première carte professionnelle en 2022 ou après ;",
+    "**16 %** l'ont obtenue en 2017 ou avant (21 % un an plus tôt) ;",
+    "**53 %** ont plus de trois ans d'expérience, contre 60 % un an plus tôt."
+   ]},
+   "La carte professionnelle VTC est valable cinq ans : elle se renouvelle ensuite, après une [formation continue](../questions/2026-11-02-formation-continue-vtc-duree.html) et une [visite médicale](../questions/2026-11-02-visite-medicale-vtc-tous-les-combien.html) à jour.",
+   "Le flux d'arrivée reste élevé. En 2025, **près de 38 500 cartes professionnelles** ont été délivrées à des conducteurs de taxi et de VTC, hors renouvellement, dont 75 % à des conducteurs de VTC : environ 28 900 nouvelles cartes VTC en un an (notre calcul : 38 500 × 75 %)."
+  ]},
+  {"id": "examen", "titre": "L'examen VTC : moins de candidats, et 45 % de réussite", "blocs": [
+   "C'est le chiffre qui intéressera le plus les futurs chauffeurs. En 2025, **près de 36 000 candidats** se sont inscrits aux examens de taxi ou de VTC : 33 % de moins qu'en 2024 et 41 % de moins qu'en 2023. L'examen VTC représente 80 % des candidatures, soit environ 28 800 candidats (notre calcul). Les candidats à l'examen VTC sont à 91 % des hommes.",
+   "Le taux de réussite, lui, est mesuré sur l'ensemble du parcours, de l'écrit à l'épreuve pratique. Parmi les candidats inscrits à l'examen VTC en 2024, **45 % avaient tout réussi en janvier 2026**. Le chiffre était de 51 % pour les inscrits de 2023. Pour l'examen de taxi, il est de 73 % (75 % un an plus tôt).",
+   {"tableau": {"legende": "Réussite de l'ensemble du parcours d'examen (Observatoire national des T3P, rapports 2025 et 2026)", "colonnes": ["Candidats inscrits en", "Mesuré en", "VTC", "Taxi"], "nombres": [2, 3], "lignes": [
+    ["2023", "janvier 2025", "51 %", "75 %"],
+    ["2024", "janvier 2026", "45 %", "73 %"]]}},
+   "Plus d'un candidat VTC sur deux n'avait donc pas tout réussi au moins un an après son inscription. Les causes et la méthode pour éviter ce sort sont détaillées dans [Réussir l'examen VTC du premier coup](reussir-examen-vtc-premier-coup.html) et, pour la dernière marche, dans [notre guide de l'épreuve pratique](epreuve-pratique-examen-vtc.html)."
+  ]},
+  {"id": "voitures", "titre": "Les voitures VTC : deux tiers d'hybrides, le diesel divisé par deux", "blocs": [
+   "Le parc des VTC a beaucoup changé en un an. Selon l'Observatoire, les voitures VTC sont en grande partie des **hybrides essence non rechargeables** : environ deux tiers du parc en 2023 comme en 2024. Le diesel recule fortement, et les modèles à faibles émissions progressent.",
+   {"tableau": {"legende": "Énergie et vignette Crit'Air des voitures VTC (Observatoire national des T3P, rapports 2025 et 2026)", "colonnes": ["Indicateur", "2023", "2024"], "nombres": [1, 2], "lignes": [
+    ["Diesel", "21 %", "11 %"],
+    ["Essence (non hybride)", "2 %", "2 %"],
+    ["Hybride rechargeable, électrique ou hydrogène", "12 %", "19 %"],
+    ["Crit'Air E (électrique ou hydrogène)", "7 %", "13 %"],
+    ["Crit'Air 1", "69 %", "74 %"],
+    ["Crit'Air 2", "24 %", "13 %"]]}},
+   "Les VTC sont ainsi bien plus « verts » que les taxis de province, roulant à 72 % au diesel en 2024, et proches des taxis parisiens (16 % de diesel).",
+   "Cette préférence pour l'hybride tient notamment à la réglementation. Une VTC thermique doit respecter des critères de taille, de puissance et d'âge fixés par [l'arrêté du 26 mars 2015](../wiki/arrete-26-mars-2015-vehicules.html) ; les voitures hybrides et électriques en sont dispensées ([article L3120-5 du Code des transports](../wiki/l3120-5.html)). Les modèles accessibles sont présentés dans notre réponse [« Quelles sont les voitures hybrides les moins chères pour faire VTC ? »](../questions/2026-10-31-voitures-hybrides-vtc-moins-cheres.html)."
+  ]},
+  {"id": "taxi-vtc", "titre": "Taxis et VTC : la comparaison en chiffres", "blocs": [
+   "Les deux métiers ont une taille comparable, mais ne se ressemblent pas :",
+   {"tableau": {"legende": "Taxis et VTC comparés (Observatoire national des T3P, rapport 2026)", "colonnes": ["Indicateur", "VTC", "Taxis"], "nombres": [], "lignes": [
+    ["Effectif 2024", "plus de 71 000 chauffeurs actifs sur les plateformes (métropole)", "près de 63 000 taxis (France entière)"],
+    ["Part en Île-de-France (2024)", "74 %", "36 %"],
+    ["Part des cartes professionnelles délivrées en 2025", "75 %", "25 %"],
+    ["Réussite du parcours d'examen (inscrits 2024)", "45 %", "73 %"],
+    ["Candidats hommes (2025)", "91 %", "81 %"]]}},
+   "Attention à la première ligne : les deux chiffres ne mesurent pas la même chose. Celui des VTC compte des chauffeurs actifs sur les plateformes ; celui des taxis vient de recensements. Ils donnent un ordre de grandeur, pas un classement. Pour les différences de métier (licence, prix, maraude, examen), voyez [Taxi ou VTC : quelles différences ?](taxi-ou-vtc-differences.html)."
+  ]},
+  {"id": "lire-les-chiffres", "titre": "Ce que ces chiffres veulent dire si vous voulez devenir chauffeur VTC", "blocs": [
+   {"liste": [
+    "**Le marché grandit, la concurrence aussi.** Plus de courses chaque année, mais environ 9 % de courses en moins par chauffeur actif en 2024. Comptez avec une activité moyenne qui ne suit pas forcément la hausse de la demande.",
+    "**Paris domine.** Trois chauffeurs actifs sur quatre travaillent en Île-de-France. En région, la demande existe, mais elle est plus concentrée : étudiez-la avant d'investir.",
+    "**L'examen est sélectif.** Moins d'un candidat VTC sur deux a tout réussi un an après son inscription. Une préparation sérieuse évite des mois d'attente et des frais de réinscription.",
+    "**La voiture se choisit aussi avec ces chiffres.** L'hybride est la norme du métier, et le diesel recule nettement."
+   ]},
+   "Deux précautions pour finir. D'abord, ce sont des moyennes nationales : elles ne prédisent pas votre propre activité. Ensuite, une partie de ces chiffres sont des « premiers résultats » que l'Observatoire consolide dans son rapport annuel. Nous mettrons cet article à jour à chaque nouvelle publication officielle."
+  ]}
+ ],
+ "a_retenir": [
+  "Environ 71 300 chauffeurs VTC étaient actifs sur les plateformes en France métropolitaine en 2024, 27 % de plus qu'en 2023 (Observatoire national des T3P, SDES).",
+  "Les courses ont augmenté de 16 % (plus de 100 millions en 2024), moins vite que les chauffeurs : environ 9 % de courses en moins par chauffeur actif.",
+  "74 % des chauffeurs VTC actifs en 2024 travaillaient en Île-de-France.",
+  "En 2025, près de 36 000 candidats se sont inscrits aux examens taxi et VTC (−33 %) ; 45 % des candidats VTC inscrits en 2024 avaient réussi tout le parcours en janvier 2026.",
+  "En 2024, 19 % des voitures VTC étaient hybrides rechargeables, électriques ou à hydrogène, et 11 % roulaient au diesel (21 % en 2023)."
+ ],
+ "wiki": ["l3120-5", "arrete-26-mars-2015-vehicules", "r3120-7", "l1326-3"],
+ "fiches": [["F1.1", "Analyser son marché local"], ["F1.3", "Se situer face aux taxis, aux VTC et aux plateformes"], ["F1.6", "Les plateformes : complément ou dépendance ?"], ["G2.3", "Hybrides et électriques ; le verdissement des flottes"], ["A1.2", "Taxi ou VTC : ce qui les sépare"]],
+ "sources": [
+  {"nom": "SDES, Observatoire national des transports publics particuliers de personnes, « Les taxis et VTC : accès à la profession, offre de transport, équipement - Rapport 2026 de l'Observatoire » (publié le 29 juin 2026)", "url": "https://www.statistiques.developpement-durable.gouv.fr/les-taxis-et-vtc-acces-la-profession-offre-de-transport-equipement-rapport-2026-de-lobservatoire", "date": "consulté le 13 novembre 2026"},
+  {"nom": "SDES, Observatoire national des transports publics particuliers de personnes, « Les taxis et VTC : accès à la profession, offre de transport, équipement - Rapport 2025 de l'Observatoire » (publié le 18 juin 2025)", "url": "https://www.statistiques.developpement-durable.gouv.fr/les-taxis-et-vtc-acces-la-profession-offre-de-transport-equipement-rapport-2025-de-lobservatoire", "date": "consulté le 13 novembre 2026"},
+  {"nom": "SDES, « Les chauffeurs des plateformes de VTC en 2024 : premiers résultats » (publié le 13 novembre 2025)", "url": "https://www.statistiques.developpement-durable.gouv.fr/les-chauffeurs-des-plateformes-de-vtc-en-2024-premiers-resultats", "date": "consulté le 13 novembre 2026"},
+  {"nom": "SDES, « Les chauffeurs des plateformes de VTC en 2023 : premiers résultats » (publié le 25 novembre 2024)", "url": "https://www.statistiques.developpement-durable.gouv.fr/les-chauffeurs-des-plateformes-de-vtc-en-2023-premiers-resultats", "date": "consulté le 13 novembre 2026"}
+ ],
+ "verifie": "13 novembre 2026"
+}
