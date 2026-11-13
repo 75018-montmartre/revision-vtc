@@ -6,6 +6,13 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Vendredi 13 novembre 2026, 12 h 40 · Accueil : plus de rythme de publication promis
+
+- Bandeau d'accueil : « tenu à jour chaque semaine » devient « tenu à jour régulièrement ».
+- Bande des preuves : « Mis à jour chaque semaine : actualité le lundi, question-réponse le jeudi » devient « Mis à jour régulièrement : actualité, questions et guides » (la question est désormais quotidienne, et Benjamin ne veut plus de rythme promis sur le site).
+  - https://revision-vtc.fr/
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Vendredi 13 novembre 2026, 12 h 30 · Audit visuel, lot 4 (finitions)
 
 - 4.a Retours à la ligne équilibrés sur les titres et surtitres (`text-wrap:balance`), pas de mot seul en fin de paragraphe (`text-wrap:pretty`) ; jamais sur les pastilles, badges et boutons. Exemple : le titre du simulateur ne se coupe plus après « de ».

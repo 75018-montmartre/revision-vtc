@@ -245,7 +245,7 @@ def accueil(nums, qs=()):
         <div class="hero-texte">
           <p class="surtitre">{ty(f"Examen VTC 2027, règles vérifiées en {verif}")}</p>
           <h1 id="titre-hero">{ty("Réussir l'examen VTC 2027, et savoir ce que vous gagnerez vraiment")}</h1>
-          <p class="chapeau">{ty("Le droit du VTC expliqué à partir des textes officiels, un simulateur de revenu net gratuit, et le livre pour préparer l'examen. Tout est sourcé et tenu à jour chaque semaine.")}</p>
+          <p class="chapeau">{ty("Le droit du VTC expliqué à partir des textes officiels, un simulateur de revenu net gratuit, et le livre pour préparer l'examen. Tout est sourcé et tenu à jour régulièrement.")}</p>
           <div class="actions"><a class="bouton clair" href="le-livre.html">{ty("Préparer l'examen 2027")}</a><a class="bouton contour" href="{simu}">Calculer mon revenu net</a></div>
           <p class="hero-mention">Gratuit, sans inscription, sans publicité.</p>
         </div>
@@ -272,7 +272,7 @@ def accueil(nums, qs=()):
       <ul class="page large">
         <li><b>{n_wiki} articles de loi</b> {ty("recopiés de Légifrance et expliqués en clair")}</li>
         <li><b>{ty("Chaque chiffre sourcé")}</b> {ty("et daté : texte officiel ou deux sources concordantes")}</li>
-        <li><b>{ty("Mis à jour chaque semaine")}</b> {ty(": actualité le lundi, question-réponse le jeudi")}</li>
+        <li><b>{ty("Mis à jour régulièrement")}</b> {ty(": actualité, questions et guides")}</li>
       </ul>
     </section>
     <section class="bloc bloc-blanc" aria-labelledby="titre-commencer">
