@@ -1629,6 +1629,10 @@ Combien sont-ils, où travaillent-ils, combien de courses font-ils, quelle voitu
 En 2024, la France métropolitaine comptait environ 71 300 chauffeurs VTC actifs sur les plateformes, soit 27 % de plus qu'en 2023, pour plus de 100 millions de courses (+16 %). On comptait aussi près de 63 000 taxis en France entière, outre-mer compris. Ces chiffres sont ceux de l'Observatoire national des transports publics particuliers de personnes (SDES).
 Les chauffeurs ont augmenté plus vite que les courses : environ 9 % de courses en moins par chauffeur actif en un an (notre calcul). Côté examen, près de 36 000 candidats taxi et VTC se sont inscrits en 2025, 33 % de moins qu'en 2024, et 45 % seulement des candidats VTC inscrits en 2024 avaient réussi tout le parcours en janvier 2026.
 Les chiffres clés du VTC en un coup d'œil
+71 300 chauffeurs VTC actifs sur les plateformes en 2024 (France métropolitaine)
++27 % de chauffeurs actifs en un an, entre 2023 et 2024
+38 € versés en moyenne par heure de course, avant frais (septembre-octobre 2024)
+45 % des candidats VTC inscrits en 2024 avaient tout réussi en janvier 2026
 Les chiffres de cet article viennent tous du même organisme : l'Observatoire national des transports publics particuliers de personnes (taxis, VTC et deux-roues motorisés). Ses travaux sont publiés par le SDES, le service statistique du ministère chargé des transports. Pour les chauffeurs, il s'appuie sur les données transmises par les plateformes de VTC.
 Deux publications sont utilisées : le rapport 2026 de l'Observatoire, publié le 29 juin 2026, et les « premiers résultats » sur les chauffeurs des plateformes de VTC, publiés le 13 novembre 2025 pour l'année 2024 et le 25 novembre 2024 pour l'année 2023.
 Chauffeurs VTC actifs sur les plateformes (France métropolitaine) environ 71 300 2024
@@ -1642,6 +1646,8 @@ Voitures VTC hybrides rechargeables, électriques ou à hydrogène 19 % 2024
 Un mot sur la définition, car elle compte. L'Observatoire ne compte pas les cartes VTC en circulation : il compte les chauffeurs actifs, c'est-à-dire ceux qui ont réalisé au moins 100 courses dans l'année, sur au moins 20 jours, via une ou plusieurs plateformes. Un chauffeur qui ne travaille qu'avec ses propres clients, ou qui roule très peu, n'est pas dans ce chiffre. Les données de 2024 viennent de 7 plateformes, celles de 2023 de 8.
 Combien de chauffeurs VTC en France ? 71 300, et 27 % de plus en un an
 La croissance est forte et régulière. Environ 56 000 chauffeurs étaient actifs en 2023, déjà 18 % de plus qu'en 2022. En 2024, ils sont environ 71 300 : +27 % en un an et +51 % en deux ans.
+Chauffeurs VTC actifs sur les plateformes, France métropolitaine
+Le nombre de chauffeurs a augmenté de 51 % en deux ans. La colonne hachurée de 2022 est notre calcul, à partir des deux évolutions publiées.
 2022 environ 47 000 (notre calcul) +51 % entre 2022 et 2024
 2023 environ 56 000 +18 % sur un an
 2024 environ 71 300 +27 % sur un an
@@ -1663,6 +1669,8 @@ Où travaillent les chauffeurs VTC ? L'Île-de-France d'abord
 Le VTC est d'abord un métier de grandes villes. Selon le rapport 2026, 74 % des chauffeurs VTC actifs en 2024 travaillaient en Île-de-France, et 26 % dans le reste de la France métropolitaine. L'Observatoire résume : les VTC « travaillent presque exclusivement dans les métropoles ».
 Une autre mesure le confirme : le lieu où le chauffeur a reçu sa carte professionnelle. 69 % des chauffeurs actifs en 2024 l'avaient reçue en Île-de-France (73 % en 2023). Viennent ensuite les Alpes-Maritimes (4 %), le Rhône (3 %) et les Bouches-du-Rhône (2 %). Le SDES précise que ce lieu permet seulement d'« approcher » celui où le chauffeur travaille.
 La part de l'Île-de-France baisse un peu d'une année sur l'autre (80 % des chauffeurs actifs en 2023 selon le rapport 2025), mais Paris reste de loin le premier marché. Les taxis sont répartis tout autrement : 36 % en Île-de-France, 64 % dans le reste de la France.
+Où travaillent les chauffeurs, en 2024
+Trois chauffeurs VTC sur quatre travaillent en Île-de-France ; c'est l'inverse pour les taxis. Pour les VTC, le reste de la France s'entend hors DROM.
 Pour vous, la conclusion est pratique : avant de vous lancer hors d'une grande agglomération, regardez la demande locale (gares, aéroports, hôtels, entreprises) plutôt que les chiffres nationaux, qui sont tirés par Paris.
 Trois chauffeurs sur quatre travaillent avec plusieurs applications
 En 2024, 76 % des chauffeurs actifs ont travaillé avec plusieurs plateformes, la même proportion qu'en 2023. Pour l'Observatoire, un chauffeur « utilise » une plateforme s'il y a fait au moins 10 courses dans l'année.
@@ -1678,6 +1686,8 @@ Le flux d'arrivée reste élevé. En 2025, près de 38 500 cartes professionnell
 L'examen VTC : moins de candidats, et 45 % de réussite
 C'est le chiffre qui intéressera le plus les futurs chauffeurs. En 2025, près de 36 000 candidats se sont inscrits aux examens de taxi ou de VTC : 33 % de moins qu'en 2024 et 41 % de moins qu'en 2023. L'examen VTC représente 80 % des candidatures, soit environ 28 800 candidats (notre calcul). Les candidats à l'examen VTC sont à 91 % des hommes.
 Le taux de réussite, lui, est mesuré sur l'ensemble du parcours, de l'écrit à l'épreuve pratique. Parmi les candidats inscrits à l'examen VTC en 2024, 45 % avaient tout réussi en janvier 2026. Le chiffre était de 51 % pour les inscrits de 2023. Pour l'examen de taxi, il est de 73 % (75 % un an plus tôt).
+Part des candidats qui ont réussi tout le parcours d'examen
+Le taux de réussite de l'examen VTC baisse et reste bien en dessous de celui de l'examen de taxi.
 2023 janvier 2025 51 % 75 %
 2024 janvier 2026 45 % 73 %
 Plus d'un candidat VTC sur deux n'avait donc pas tout réussi au moins un an après son inscription. Les causes et la méthode pour éviter ce sort sont détaillées dans Réussir l'examen VTC du premier coup et, pour la dernière marche, dans notre guide de l'épreuve pratique.
