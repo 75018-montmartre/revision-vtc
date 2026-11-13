@@ -6,6 +6,17 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Vendredi 13 novembre 2026, 12 h 30 · Audit visuel, lot 4 (finitions)
+
+- 4.a Retours à la ligne équilibrés sur les titres et surtitres (`text-wrap:balance`), pas de mot seul en fin de paragraphe (`text-wrap:pretty`) ; jamais sur les pastilles, badges et boutons. Exemple : le titre du simulateur ne se coupe plus après « de ».
+- 4.b Thème sombre : le bandeau d'accueil passe sur `--nuit-2` et se détache du fond de page ; la carte du simulateur du bandeau passe sur `--doux`.
+- 4.c Bloc « Le livre Machine à Réussite » retiré du bandeau d'accueil (quatre propositions en concurrence) ; le livre reste en bas de page, dans le pied de page, dans les colonnes des pages intérieures et via « Préparer l'examen 2027 ». Règles CSS du bloc retirées.
+- 4.d Quadrillage « plan de ville » réservé aux en-têtes de page et un peu plus visible (lignes à .18 au lieu de .12 ; .10 en sombre) ; les bandes grises de l'accueil gardent leur fond, sans quadrillage.
+  - https://revision-vtc.fr/
+- Vérifié : axe sans erreur sur 12 pages à 320, 768 et 1 366 px, en clair et en sombre, aucun débordement.
+- Fin de l'audit visuel du 13 novembre 2026 (lots 1 à 4).
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Vendredi 13 novembre 2026, 10 h 32 · Article n° 9 (tâche tous les deux jours)
 
 - Titre : « Le VTC en chiffres : combien de chauffeurs VTC en France, de courses, de candidats à l'examen ? »

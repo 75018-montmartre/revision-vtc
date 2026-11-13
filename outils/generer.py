@@ -265,14 +265,6 @@ def accueil(nums, qs=()):
             <p class="visuellement-cache" id="cs-annonce" aria-live="polite"></p>
             <a class="carte-lien" id="cs-lien" href="{simu}">Faire ma simulation avec mes chiffres</a>
           </div>
-          <a class="carte-hero carte-livre" href="le-livre.html">
-            <img src="couverture-petite.jpg" width="68" height="88" alt="">
-            <span>
-              <span class="carte-titre">{ty("Le livre Machine à Réussite")}</span>
-              <span class="carte-texte">{ty("213 fiches de cours, 1 191 questions corrigées, 3 examens blancs + 2 sur le site.")}</span>
-              <span class="carte-lien">Voir le livre</span>
-            </span>
-          </a>
         </div>
       </div>
     </section>
