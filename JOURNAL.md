@@ -6,6 +6,17 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Vendredi 13 novembre 2026, 1 h 05 · Audit visuel, lot 1 (défauts visibles)
+
+- 1.a Panneau « Votre résultat » des deux simulateurs : il ne garde plus que l'essentiel et tient en entier à l'écran, sans barre de défilement interne (revenu net : 486 px de haut au lieu de 852 px coupés ; note : 467 px au plus au lieu de 1 395 px avec des notes faibles). Le détail (alertes TVA, seuil, autres frais à 0 €, tableau, impôt, « Copier le lien » ; conseils et tableau par épreuve) passe dans « Le détail de votre résultat », sous le formulaire. Le panneau collant s'arrête désormais sous l'en-tête collé (son titre passait dessous) et cesse d'être collant sous 38rem de hauteur d'écran.
+  - https://revision-vtc.fr/simulateurs/cout-revient-revenu-net-vtc.html
+  - https://revision-vtc.fr/simulateurs/calcul-note-examen-vtc.html
+- 1.b Alignement : sur toutes les pages intérieures, fil d'Ariane, titre et contenu commencent au bord gauche du logo (115 px sur un écran de 1 366 px), et l'encadré de droite finit sur le bord du bouton « Le livre ». Le décalage était de 16 px (wiki, questions, simulateurs, QCM, index) et de 200 px sur les pages à une colonne (Contact, À propos, Le livre, mentions…), point non relevé par l'audit.
+- 1.c Flèches : → pour les liens vers une page du site (boutons, « Le livre » de l'en-tête, tuiles, cartes-liens, « Tous les… »), ↗ seulement vers un autre site (Amazon, Légifrance…), choisi automatiquement selon l'adresse du lien. Nouveau jeton `--fleche-interne`. Annule la règle du 7 novembre 2026 « ↗ sur tous les boutons ».
+- Fichiers : `docs/css/site.css`, `outils/generer.py`, `docs/js/simulateur.js`, `docs/js/calcul-note.js`, README (charte). Aucune page supprimée, aucune adresse changée.
+- Vérifié : axe sans erreur sur 12 pages (accueil, wiki, deux simulateurs, QCM, FAQ, Contact, Le livre, index) à 320, 768 et 1 366 px, en clair et en sombre, aucun débordement horizontal ; tests du simulateur et du calcul de la note passés (401 cas Python / JavaScript identiques) ; focus sur le résultat après « Voir le résultat » ; flèches immobiles si l'appareil demande moins d'animations.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Jeudi 12 novembre 2026, 9 h 05 · Question VTC du jour
 
 - Question : « Casier judiciaire VTC : quelles condamnations empêchent d'être chauffeur ? »

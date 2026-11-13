@@ -133,25 +133,29 @@
       <p class="meta">Revenu net estimé, par mois</p>
       <p class="resultat" id="res-net"></p>
       <p class="meta" id="res-net-an"></p>
-      <div id="res-alertes"></div>
       <div class="repartition" aria-hidden="true"><span id="barre-social" class="part-social"></span><span id="barre-voiture" class="part-voiture"></span><span id="barre-autres" class="part-autres"></span><span id="barre-net" class="part-net"></span></div>
       <p class="meta" id="barre-texte"></p>
-      <table><caption>Le détail, en euros par mois (montants arrondis)</caption><tbody id="res-detail"></tbody></table>
       <dl class="chiffres">
         <div><dt>Coût de revient de la voiture</dt><dd><span id="res-km"></span> par km · <span id="res-voiture-mois"></span> par mois</dd></div>
         <div><dt>Seuil de rentabilité</dt><dd><span id="res-seuil"></span> versés par semaine</dd></div>
         <div id="res-heure-bloc" hidden><dt>Revenu net par heure de travail</dt><dd id="res-heure"></dd></div>
       </dl>
-      <p class="meta" id="res-impot"></p>
-      <div class="actions"><button type="button" class="bouton second petit" id="simu-lien">Copier le lien de cette simulation</button></div>
-      <p class="meta" id="lien-etat" aria-live="polite"></p>
+      <p class="meta"><a href="#detail-resultat">Le détail du calcul</a></p>
       <p class="visuellement-cache" id="simu-annonce" aria-live="polite"></p>
     </section>
     <aside class="barre-resultat cachee" id="barre-resultat" aria-label="Résultat en bref" hidden>
       <p><span class="barre-legende">Revenu net estimé</span> <b id="barre-res-net"></b> <span class="barre-legende">par mois</span></p>
       <a class="bouton clair petit" href="#resultat">Voir le détail</a>
     </aside>
-    </aside></div>
+    </aside>
+    <section class="col-detail" id="detail-resultat" aria-labelledby="titre-detail" hidden>
+      <h2 id="titre-detail">Le détail de votre résultat</h2>
+      <div id="res-alertes"></div>
+      <table><caption>Le détail, en euros par mois (montants arrondis)</caption><tbody id="res-detail"></tbody></table>
+      <p class="meta" id="res-impot"></p>
+      <div class="actions"><button type="button" class="bouton second petit" id="simu-lien">Copier le lien de cette simulation</button></div>
+      <p class="meta" id="lien-etat" aria-live="polite"></p>
+    </section></div>
     <h2 id="calcul">Comment le simulateur calcule</h2>
     <ol>
       <li>Montant versé sur l’année = montant versé par semaine × semaines travaillées. Prix payé par les clients = montant versé ÷ (1 − commission).</li>

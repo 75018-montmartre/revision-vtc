@@ -44,7 +44,10 @@
   --pastille:var(--nuit);                /* pastille ronde fléchée des cartes */
   --pastille-fleche:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23EDB321' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E");
   --chevron-nav:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2311161E' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l6 6-6 6'/%3E%3C/svg%3E"); /* flèche « le menu continue » (téléphone), couleur du texte */
-  --fleche-bouton:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17L17 7M9 7h8v8'/%3E%3C/svg%3E"); /* flèche ↗ des boutons (masque : prend la couleur du texte) */
+  --fleche-bouton:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17L17 7M9 7h8v8'/%3E%3C/svg%3E"); /* flèche ↗ : lien vers un autre site (Amazon, Légifrance…) ; masque, prend la couleur du texte */
+  --fleche-interne:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E"); /* flèche → : lien vers une page du site ; même trait, même masque */
+  --fleche:var(--fleche-interne);          /* flèche en usage : → par défaut, ↗ sur les liens vers un autre site (partie 9) */
+  --fleche-glisse:translateX(3px);        /* mouvement de la flèche au survol : vers la droite pour →, en diagonale pour ↗ */
   /* typographie */
   --sans:"Barlow",Arial,sans-serif;                          /* interface et texte de lecture */
   --serif:"Barlow",Arial,sans-serif;                         /* texte de lecture (même famille) */
@@ -98,13 +101,12 @@ h1[tabindex="-1"]:focus,main:focus{outline:none}
 .page.large{max-width:var(--large)}
 main{padding:0 0 var(--e8)}
 .corps-page{padding-top:var(--e7)}
-/* trois mises en page pour les pages intérieures, toujours centrées dans l'écran :
-   - mp-colonne : une colonne de lecture (46rem) ;
-   - mp-cote    : la colonne de lecture + un encadré à droite (wiki, questions) ;
-   - mp-grille  : pages d'index, texte à gauche et grilles de cartes sur toute la largeur.
-   L'en-tête de page suit exactement la même largeur que le contenu. */
-.mp-colonne.corps-page,.tete-page.mp-colonne .page{max-width:calc(var(--lecture) + 2 * var(--e5))}
-.mp-cote.corps-page,.tete-page.mp-cote .page,.mp-grille.corps-page,.tete-page.mp-grille .page{max-width:calc(var(--lecture) + var(--cote) + var(--e7) + 2 * var(--e5))}
+/* trois mises en page pour les pages intérieures, toutes dans le conteneur du site (--large), comme l'en-tête :
+   le bord gauche du fil d'Ariane, du titre et du contenu tombe sur celui du logo (depuis le 13 novembre 2026 ;
+   avant, ces pages étaient centrées dans un conteneur plus étroit, décalé de 16 à 200 px) :
+   - mp-colonne : une colonne de lecture (46rem), calée à gauche ;
+   - mp-cote    : la colonne de lecture à gauche + un encadré calé à droite, sur le bord du bouton « Le livre » (wiki, questions, simulateurs) ;
+   - mp-grille  : pages d'index, texte et grilles de cartes sur toute la largeur du conteneur. */
 .corps-page > *{max-width:var(--lecture)}
 .corps-page > :is(.deux-col,.wiki-theme,.questions,.numeros,.essentiel-liens,.sommaire,.autres-textes,.bloc-index){max-width:none}
 /* pages d'index (FAQ VTC, Guides VTC) : blocs les uns sous les autres, chacun sur toute la largeur de la grille de cartes ;
@@ -117,7 +119,7 @@ main{padding:0 0 var(--e8)}
 .bloc-index .legende-domaines{grid-template-columns:repeat(auto-fill,minmax(min(14rem,100%),1fr));margin:var(--e4) 0 var(--e5)}
 .tete-page .intro{margin:var(--e3) 0 0;font-size:1.0625rem;line-height:1.6;color:var(--gris)}
 @media (max-width:52rem){.etapes.etapes-ligne{grid-template-columns:minmax(0,1fr)}}
-.deux-col{display:grid;grid-template-columns:minmax(0,var(--lecture)) var(--cote);gap:var(--e7);align-items:start}
+.deux-col{display:grid;grid-template-columns:minmax(0,var(--lecture)) var(--cote);justify-content:space-between;gap:var(--e7);align-items:start}
 .col-texte > :first-child{margin-top:0}
 .col-cote{position:sticky;top:var(--e5);display:grid;gap:var(--e4)}
 .cote-bloc{background:var(--carte);border:1px solid var(--filet);border-radius:var(--rayon);padding:var(--e4) var(--e5) var(--e2);font-size:1.0625rem;line-height:1.5}
@@ -130,8 +132,7 @@ main{padding:0 0 var(--e8)}
 .cote-bloc .voir-aussi a:hover{color:var(--accent);text-decoration:underline}
 .cote-bloc .pied-achat{margin:var(--e3) 0 var(--e3) !important}
 @media (max-width:64rem){
-  .deux-col{grid-template-columns:minmax(0,1fr);gap:var(--e6)}
-  .mp-cote.corps-page,.tete-page.mp-cote .page{max-width:calc(var(--lecture) + 2 * var(--e5))}
+  .deux-col{grid-template-columns:minmax(0,var(--lecture));gap:var(--e6)}
   .col-cote{position:static}
 }
 
@@ -506,13 +507,21 @@ fieldset.question legend + *{clear:both}
 .simu .groupe legend{font-family:var(--sans);font-weight:600;font-size:1rem;padding:0;margin-bottom:var(--e2)}
 .simu .choix label{font-size:1.0625rem;line-height:1.4}
 .simu input[type=text]{font-variant-numeric:tabular-nums}
-.col-cote .resultat-simu{max-height:calc(100vh - 2 * var(--e5));overflow-y:auto}
+/* panneau de résultat collant : seulement l'essentiel (titre, résultat, barre, chiffres clés), pour qu'il tienne
+   en entier à l'écran sans défilement interne ; le détail (alertes, tableau, impôt, lien) va sous le formulaire,
+   dans la colonne principale (.col-detail). Sur un écran peu haut, le panneau n'est plus collant. */
+@media (min-width:64.0625rem){
+  .deux-col > .col-detail{grid-column:1}
+  .deux-col:has(> .col-detail) > .col-cote{grid-column:2;grid-row:1 / span 2}
+}
+.col-detail > h2:first-child{margin-top:0}   /* l'écart avec le formulaire vient déjà de la grille (48 px entre deux blocs) */
+@media (max-height:38rem){.col-cote:has(.resultat-simu){position:static}}
 .resultat-simu .resultat{font-size:2.25rem;line-height:1.1;margin:var(--e1) 0 var(--e2)}
 .resultat-simu p{margin:0 0 var(--e3)}
-.resultat-simu table{font-size:.875rem;margin:var(--e3) 0}
-.resultat-simu caption{font-size:.875rem}
-.resultat-simu td,.resultat-simu th{padding:.4rem .25rem;font-weight:400}
-.resultat-simu td.nombre{white-space:nowrap}
+:is(.resultat-simu,.col-detail) table{font-size:.875rem;margin:var(--e3) 0}
+:is(.resultat-simu,.col-detail) caption{font-size:.875rem}
+:is(.resultat-simu,.col-detail) td,:is(.resultat-simu,.col-detail) th{padding:.4rem .25rem;font-weight:400}
+:is(.resultat-simu,.col-detail) td.nombre{white-space:nowrap}
 /* barre de résultat collante : téléphone et tablette seulement (sur grand écran le résultat est à côté du formulaire).
    Bandeau nuit avec filet jaune, lisible dans les deux thèmes ; cachée (et hors du parcours au clavier) quand un champ
    a le focus, quand le clavier est ouvert ou quand le résultat est visible (docs/js/simulateur.js). */
@@ -531,9 +540,9 @@ html.avec-barre body{padding-bottom:5.5rem}
 @media (min-width:64.0625rem){.barre-resultat{display:none}}
 /* sur grand écran le résultat est à côté du formulaire : le lien « Aller au résultat » ne sert qu'au téléphone et à la tablette */
 @media (min-width:64.0625rem){.lien-resultat{display:none}}
-.resultat-simu tr.sous-total > *,.resultat-simu tr.total > *{font-weight:700}
-.resultat-simu tr.total > *{border-top:2px solid var(--encre);border-bottom:0}
-.resultat-simu .note{font-size:.9375rem;line-height:1.45;font-family:var(--sans)}
+:is(.resultat-simu,.col-detail) tr.sous-total > *,:is(.resultat-simu,.col-detail) tr.total > *{font-weight:700}
+:is(.resultat-simu,.col-detail) tr.total > *{border-top:2px solid var(--encre);border-bottom:0}
+:is(.resultat-simu,.col-detail) .note{font-size:.9375rem;line-height:1.45;font-family:var(--sans)}
 .chiffres{margin:0 0 var(--e3);font-family:var(--sans);font-size:.9375rem}
 .chiffres div{padding:var(--e2) 0;border-top:1px solid var(--filet)}
 .chiffres dt{color:var(--gris)}
@@ -717,6 +726,8 @@ html.defile .entete .page{padding-top:.375rem;padding-bottom:.375rem}
 html.defile .nom-site .sous{display:none}
 html.entete-cachee .entete{transform:translateY(-100%)}
 html{scroll-padding-top:calc(var(--haut-entete,5rem) + 1rem)}
+/* l'encadré latéral collant (sommaire, résultat des simulateurs) s'arrête sous l'en-tête collé en haut, pas dessous */
+.col-cote{top:calc(var(--haut-entete,5rem) + var(--e5))}
 /* menu : un trait jaune s'étire sous la rubrique survolée ; la rubrique en cours garde le trait plein */
 .nav a{position:relative;border-bottom-color:transparent}
 .nav a::after{content:"";position:absolute;left:.75rem;right:.75rem;bottom:-4px;height:4px;background:var(--jaune);transform:scaleX(0);transition:transform .2s ease}
@@ -866,9 +877,9 @@ a.carte-hero:hover .carte-lien{text-decoration-thickness:2px}
 .tete-bloc .surtitre{color:var(--gris)}
 :is(.tete-bloc) .lien-fleche{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;color:var(--encre) !important;border:1.5px solid var(--encre) !important;border-radius:0;padding:0 1rem !important;background:var(--carte);transition:background .15s,color .15s}
 /* « Tous les… » : rectangle sobre, à plat, flèche à droite ; au survol, il se remplit de bleu nuit */
-:is(.tete-bloc) .lien-fleche::after{content:"\2192";font-weight:700;transition:transform .15s}
+:is(.tete-bloc) .lien-fleche::after{content:"";flex:none;width:1rem;height:1rem;background:currentColor;-webkit-mask:var(--fleche) center/contain no-repeat;mask:var(--fleche) center/contain no-repeat;transition:transform .15s}  /* même flèche que les boutons */
 .tete-bloc .lien-fleche:hover{background:var(--encre);color:var(--fond) !important}
-.tete-bloc .lien-fleche:hover::after{transform:translateX(3px)}
+.tete-bloc .lien-fleche:hover::after{transform:var(--fleche-glisse)}
 .actu-une{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:var(--e6);align-items:stretch}
 .actu-precedents{display:flex;flex-direction:column}
 .actu-precedents h3{font-family:var(--cond);font-size:1.25rem;margin:0 0 var(--e3)}
@@ -907,7 +918,7 @@ a.carte-hero:hover .carte-lien{text-decoration-thickness:2px}
 /* 9. Barre de navigation et boutons (depuis le 7 novembre 2026, modèle « propal ») -------------
    Dernière couche, elle aussi à garder en fin de fichier : en-tête blanc (fond des cartes en sombre),
    nom en capitales condensées, liens sobres soulignés de jaune, « Le livre » en bouton à contour ;
-   tous les boutons du site à plat, coins de 6 px, flèche ↗ intégrée (jeton --fleche-bouton). */
+   tous les boutons du site à plat, coins de 6 px, flèche intégrée (→ vers une page du site, ↗ vers un autre site : jetons --fleche-interne et --fleche-bouton). */
 .entete{background:var(--carte);border-bottom:1px solid var(--filet)}
 .entete .page{padding-top:1rem;padding-bottom:1rem}
 .nom-site{gap:.75rem;color:var(--encre)}
@@ -928,12 +939,18 @@ a.carte-hero:hover .carte-lien{text-decoration-thickness:2px}
   .nav a::after{left:.85rem;right:.85rem;bottom:5px}
   .nav::after{background:var(--chevron-nav) right .5rem center/1.1rem no-repeat,linear-gradient(90deg,transparent,var(--carte) 65%)}
 }
-/* boutons : à plat, flèche ↗ ; les couleurs restent celles de la partie 8 (nuit, jaune pour l'achat), le bouton second passe à contour fin */
+/* flèche des liens (depuis le 13 novembre 2026) : → pour une page du site, ↗ seulement pour un autre site.
+   Le choix se fait tout seul selon l'adresse du lien : une adresse complète (http…) qui ne mène pas à revision-vtc.fr
+   est externe. Les flèches des boutons, cartes et cartes-liens lisent toutes --fleche et --fleche-glisse. */
+a[href^="http"]:not([href*="revision-vtc.fr"]),
+li:has(> a[href^="http"]:not([href*="revision-vtc.fr"])){--fleche:var(--fleche-bouton);--fleche-glisse:translate(2px,-2px)}
+@media (prefers-reduced-motion: reduce){*{--fleche-glisse:none !important}}   /* la flèche ne bouge plus au survol */
+/* boutons : à plat, flèche → (↗ vers un autre site) ; les couleurs restent celles de la partie 8 (nuit, jaune pour l'achat), le bouton second passe à contour fin */
 .bouton,.menu-livre{gap:.875rem;min-height:46px;padding:.5rem 1.25rem;border-width:1px;border-radius:6px;font-family:var(--sans);font-weight:600;font-size:.9375rem;line-height:1.25;text-align:center}
 .bouton.petit{min-height:44px;padding:.375rem 1rem}
 .bouton:not(.bientot),.bouton:not(.bientot):hover,.bouton:not(.bientot):active,.menu-livre,.menu-livre:hover,.menu-livre:active,.menu-livre[aria-current="page"]{box-shadow:none;transform:none !important}
-.bouton:not(.bientot)::after,.menu-livre::after{content:"";flex:none;width:1rem;height:1rem;background:currentColor;-webkit-mask:var(--fleche-bouton) center/contain no-repeat;mask:var(--fleche-bouton) center/contain no-repeat;transition:transform .15s ease}
-.bouton:not(.bientot):hover::after,.menu-livre:hover::after{transform:translate(2px,-2px)}
+.bouton:not(.bientot)::after,.menu-livre::after{content:"";flex:none;width:1rem;height:1rem;background:currentColor;-webkit-mask:var(--fleche) center/contain no-repeat;mask:var(--fleche) center/contain no-repeat;transition:transform .15s ease}
+.bouton:not(.bientot):hover::after,.menu-livre:hover::after{transform:var(--fleche-glisse)}
 .bouton.second,.menu-livre{background:var(--carte);color:var(--encre);border-color:var(--filet)}
 .bouton.second:hover,.menu-livre:hover{background:var(--carte);color:var(--encre);border-color:var(--encre)}
 .menu-livre[aria-current="page"]{border-color:var(--encre);background:var(--doux)}
@@ -983,8 +1000,8 @@ a.carte-hero:hover .carte-lien{text-decoration-thickness:2px}
 .questions.trois a::before{content:"";position:absolute;inset:0;border-radius:14px}
 .questions li > p:not(.carte-tete):not(.carte-action):not(.domaine){display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;line-height:1.6}
 .questions .carte-action{margin:auto 0 0;padding-top:var(--e3);display:inline-flex;align-items:center;gap:.6rem;font-family:var(--sans);font-weight:600;font-size:1rem;color:var(--accent)}
-.carte-action::after{content:"";width:1rem;height:1rem;background:currentColor;-webkit-mask:var(--fleche-bouton) center/contain no-repeat;mask:var(--fleche-bouton) center/contain no-repeat;transition:transform .15s ease}
-.questions li:hover .carte-action::after{transform:translate(2px,-2px)}
+.carte-action::after{content:"";width:1rem;height:1rem;background:currentColor;-webkit-mask:var(--fleche) center/contain no-repeat;mask:var(--fleche) center/contain no-repeat;transition:transform .15s ease}
+.questions li:hover .carte-action::after{transform:var(--fleche-glisse)}
 .questions.trois li:hover a{color:var(--encre)}
 /* fiche jouable : même tuile, plus d'air ; choix à plat (pas de relief noir), sur deux colonnes quand la place le permet */
 .fiche-essai{gap:var(--e6);padding:2.5rem;border:1px solid var(--filet);border-radius:14px;box-shadow:var(--ombre-tuile)}
@@ -1007,7 +1024,7 @@ a.carte-hero:hover .carte-lien{text-decoration-thickness:2px}
 .tuile p{margin:0 0 var(--e4)}
 .tuile .voir-aussi{list-style:none;margin:0;padding:0;display:grid;gap:var(--e3)}
 .tuile .voir-aussi li{position:relative;margin:0;padding:.85rem 3rem .85rem 1rem;border:1px solid var(--filet);border-radius:10px;box-shadow:none;font-size:1rem;line-height:1.4}
-.tuile .voir-aussi li::after{content:"";position:absolute;right:1rem;top:50%;width:1rem;height:1rem;margin-top:-.5rem;background:var(--accent);-webkit-mask:var(--fleche-bouton) center/contain no-repeat;mask:var(--fleche-bouton) center/contain no-repeat;border-radius:0;animation:none}
+.tuile .voir-aussi li::after{content:"";position:absolute;right:1rem;top:50%;width:1rem;height:1rem;margin-top:-.5rem;background:var(--accent);-webkit-mask:var(--fleche) center/contain no-repeat;mask:var(--fleche) center/contain no-repeat;border-radius:0;animation:none}
 .tuile .voir-aussi li:hover{border-color:var(--encre);transform:none;box-shadow:none}
 .tuile .voir-aussi a::before{content:"";position:absolute;inset:0;border-radius:10px}
 .tuile .voir-aussi a{text-decoration:none;color:var(--encre)}
@@ -1017,7 +1034,7 @@ a.carte-hero:hover .carte-lien{text-decoration-thickness:2px}
 
 /* 11. Tuiles arrondies sur tout le site (depuis le 8 novembre 2026) --------------------------------
    Plus aucun relief noir : grandes cartes et encadrés en tuiles (coins de 14 px, filet clair, ombre douce --ombre-tuile),
-   petites cartes-liens et choix à plat (coins de 10 px, filet clair, flèche ↗ bleue), survol : la tuile monte de 3 px. */
+   petites cartes-liens et choix à plat (coins de 10 px, filet clair, flèche bleue → ou ↗), survol : la tuile monte de 3 px. */
 :is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.parcours > li,.cote-bloc,.carte-simu,.presentation-livre,.officiel,.breve,.cherche,.impact,.schema){border-radius:14px}
 :is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.parcours > li,.cote-bloc,.carte-simu,.officiel,.breve){border:1px solid var(--filet) !important;box-shadow:var(--ombre-tuile) !important}
 :is(.questions li,.numeros > li,.une-actu,.actu-precedents li){transition:transform .2s ease,box-shadow .2s ease}
@@ -1030,11 +1047,11 @@ a.carte-hero:hover .carte-lien{text-decoration-thickness:2px}
 .actu-precedents li{padding:var(--e4) var(--e5)}
 /* lien étendu à toute la tuile (cartes des questions et des guides, numéros de l'Actualité) */
 :is(.questions li,.numeros > li) a::before{content:"";position:absolute;inset:0;border-radius:14px}
-/* petites cartes-liens, liens de l'encadré latéral, sommaire : à plat, flèche ↗ */
+/* petites cartes-liens, liens de l'encadré latéral, sommaire : à plat, flèche → (↗ vers un autre site) */
 :is(.essentiel-liens li,.wiki-liste li,.voir-aussi li){border:1px solid var(--filet) !important;border-radius:10px;box-shadow:none !important;transform:none !important;transition:border-color .15s ease}
 :is(.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover,:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li):focus-within{border-color:var(--encre) !important}
-:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li)::after{display:block !important;content:"";position:absolute;right:1rem;top:50%;width:1rem;height:1rem;margin-top:-.5rem;border-radius:0;background:var(--accent);-webkit-mask:var(--fleche-bouton) center/contain no-repeat;mask:var(--fleche-bouton) center/contain no-repeat;animation:none !important;transition:transform .15s ease}
-:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover::after{transform:translate(2px,-2px)}
+:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li)::after{display:block !important;content:"";position:absolute;right:1rem;top:50%;width:1rem;height:1rem;margin-top:-.5rem;border-radius:0;background:var(--accent);-webkit-mask:var(--fleche) center/contain no-repeat;mask:var(--fleche) center/contain no-repeat;animation:none !important;transition:transform .15s ease}
+:is(.essentiel-liens li,.wiki-liste li,.voir-aussi li):hover::after{transform:var(--fleche-glisse)}
 .essentiel-liens li,.wiki-liste li{padding:.9rem 3rem .9rem 1.15rem}
 .cote-bloc .voir-aussi li{padding:.7rem 2.75rem .7rem .9rem}
 .sommaire a{border:1px solid var(--filet) !important;border-radius:999px;box-shadow:none !important;transform:none !important}
@@ -1046,7 +1063,7 @@ a.carte-hero:hover .carte-lien{text-decoration-thickness:2px}
 /* carte du livre sur fond nuit (accueil) : arrondie, sans relief */
 a.carte-hero{border-radius:14px;box-shadow:none !important;transform:none !important;transition:transform .2s ease}
 a.carte-hero:hover,a.carte-hero:focus-visible{transform:translateY(-3px) !important}
-.carte-simu .carte-lien::after{background:var(--accent);-webkit-mask:var(--fleche-bouton) center/1.1rem no-repeat;mask:var(--fleche-bouton) center/1.1rem no-repeat;border-radius:0;width:1.1rem;height:1.1rem}
+.carte-simu .carte-lien::after{background:var(--accent);-webkit-mask:var(--fleche) center/1.1rem no-repeat;mask:var(--fleche) center/1.1rem no-repeat;border-radius:0;width:1.1rem;height:1.1rem}
 .en-clair{border-radius:14px}
 @media (prefers-reduced-motion: reduce){:is(.questions li,.numeros > li,.une-actu,.actu-precedents li,a.carte-hero){transition:none}:is(.questions li,.numeros > li,.une-actu,.actu-precedents li,a.carte-hero):hover{transform:none !important}}
 @media print{:is(.questions li,.numeros > li,.une-actu,.actu-precedents li,.parcours > li,.cote-bloc,.carte-simu,.officiel,.breve){box-shadow:none !important}}

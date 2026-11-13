@@ -257,6 +257,7 @@
   });
   form.hidden = false;
   $('resultat').hidden = false;
+  $('detail-resultat').hidden = false;
   $('simu-sans-js').hidden = true;
   calculerEtAfficher(false);
 

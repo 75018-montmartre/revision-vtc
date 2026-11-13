@@ -1765,24 +1765,31 @@ def simulateur(ds, note=None):
       <p class="meta">Revenu net estimé, par mois</p>
       <p class="resultat" id="res-net"></p>
       <p class="meta" id="res-net-an"></p>
-      <div id="res-alertes"></div>
       <div class="repartition" aria-hidden="true"><span id="barre-social" class="part-social"></span><span id="barre-voiture" class="part-voiture"></span><span id="barre-autres" class="part-autres"></span><span id="barre-net" class="part-net"></span></div>
       <p class="meta" id="barre-texte"></p>
-      <table><caption>Le détail, en euros par mois (montants arrondis)</caption><tbody id="res-detail"></tbody></table>
       <dl class="chiffres">
         <div><dt>Coût de revient de la voiture</dt><dd><span id="res-km"></span> par km · <span id="res-voiture-mois"></span> par mois</dd></div>
         <div><dt>Seuil de rentabilité</dt><dd><span id="res-seuil"></span> versés par semaine</dd></div>
         <div id="res-heure-bloc" hidden><dt>Revenu net par heure de travail</dt><dd id="res-heure"></dd></div>
       </dl>
-      <p class="meta" id="res-impot"></p>
-      <div class="actions"><button type="button" class="bouton second petit" id="simu-lien">Copier le lien de cette simulation</button></div>
-      <p class="meta" id="lien-etat" aria-live="polite"></p>
+      <p class="meta"><a href="#detail-resultat">Le détail du calcul</a></p>
       <p class="visuellement-cache" id="simu-annonce" aria-live="polite"></p>
     </section>
     <aside class="barre-resultat cachee" id="barre-resultat" aria-label="Résultat en bref" hidden>
       <p><span class="barre-legende">Revenu net estimé</span> <b id="barre-res-net"></b> <span class="barre-legende">par mois</span></p>
       <a class="bouton clair petit" href="#resultat">Voir le détail</a>
     </aside>'''
+
+    # détail du résultat : sous le formulaire, dans la colonne principale (le panneau collant ne garde que l'essentiel)
+    detail = f'''
+    <section class="col-detail" id="detail-resultat" aria-labelledby="titre-detail" hidden>
+      <h2 id="titre-detail">{ty("Le détail de votre résultat")}</h2>
+      <div id="res-alertes"></div>
+      <table><caption>Le détail, en euros par mois (montants arrondis)</caption><tbody id="res-detail"></tbody></table>
+      <p class="meta" id="res-impot"></p>
+      <div class="actions"><button type="button" class="bouton second petit" id="simu-lien">Copier le lien de cette simulation</button></div>
+      <p class="meta" id="lien-etat" aria-live="polite"></p>
+    </section>'''
 
     # exemple chiffré avec les valeurs par défaut (location à la semaine, hybride essence)
     defaut = defauts_simulateur(s)
@@ -1869,7 +1876,7 @@ def simulateur(ds, note=None):
     {formulaire}
     </div>
     <aside class="col-cote" aria-label="Résultat de la simulation">{resultat}
-    </aside></div>
+    </aside>{detail}</div>
     <h2 id="calcul">Comment le simulateur calcule</h2>
     <ol>
       <li>{ty("Montant versé sur l'année = montant versé par semaine × semaines travaillées. Prix payé par les clients = montant versé ÷ (1 − commission).")}</li>
@@ -2011,11 +2018,18 @@ def calcul_note():
       <p class="resultat" id="res-verdict"></p>
       <p class="meta" id="res-moyenne"></p>
       <p id="res-explication"></p>
+      <p class="meta"><a href="#detail-resultat">{ty("Le détail par épreuve")}</a></p>
+      <p class="visuellement-cache" id="note-annonce" aria-live="polite"></p>
+    </section>'''
+
+    # détail : sous le formulaire, dans la colonne principale (le panneau collant ne garde que l'essentiel)
+    detail = f'''
+    <section class="col-detail" id="detail-resultat" aria-labelledby="titre-detail" hidden>
+      <h2 id="titre-detail">{ty("Le détail de votre résultat")}</h2>
       <div class="note" id="res-conseil" hidden></div>
       <div class="defile" tabindex="0" role="region" aria-labelledby="cap-detail"><table><caption id="cap-detail">Le détail par épreuve (seuil éliminatoire : OK ou raté)</caption>
         <thead><tr><th scope="col">Épreuve</th><th scope="col" class="nombre">Note</th><th scope="col" class="nombre">Coef.</th><th scope="col" class="nombre">Points</th><th scope="col">Seuil</th></tr></thead>
         <tbody id="res-detail"></tbody></table></div>
-      <p class="visuellement-cache" id="note-annonce" aria-live="polite"></p>
     </section>'''
 
     bareme = {"tableau": {"legende": "Les sept épreuves d'admissibilité de l'examen VTC (arrêté du 6 avril 2017, article 2)",
@@ -2071,7 +2085,7 @@ def calcul_note():
     {formulaire}
     </div>
     <aside class="col-cote" aria-label="Résultat du calcul">{resultat}
-    </aside></div>
+    </aside>{detail}</div>
     <h2 id="bareme">{ty("Le barème officiel des sept épreuves")}</h2>
     <p>{ty("Les épreuves A à E sont communes aux examens de taxi et de VTC ; F et G sont propres au VTC. Toutes sont notées sur 20, avec des questions à choix multiples (QCM) et des questions à réponse courte (QRC).")}</p>
     {_bloc_dossier(bareme)}

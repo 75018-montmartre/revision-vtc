@@ -199,6 +199,7 @@
   });
   form.hidden = false;
   $('resultat').hidden = false;
+  $('detail-resultat').hidden = false;
   $('note-sans-js').hidden = true;
   afficher();
 })(typeof window !== 'undefined' ? window : globalThis);
