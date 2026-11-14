@@ -6,6 +6,12 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 14 novembre 2026, 19 h 55 · Images de partage faites à chaque génération
+
+- `outils/generer.py` lance désormais `outils/images_partage.py` à la fin de chaque génération (si Pillow est installé) puis refait une passe : toute nouvelle page (Question VTC du jour, Actualité VTC, guide, page du wiki) a son image de partage dans le même commit que sa publication, sans changer les consignes des tâches planifiées. Sans Pillow ou en cas d'échec d'une image, la génération continue sans erreur et la page garde l'image générique : aucune publication ne peut être bloquée.
+- Vérifié : page d'essai ajoutée puis retirée (image faite et reliée dans la même commande), génération sans Pillow (code de sortie 0, message d'avertissement), aucune image refaite inutilement.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 14 novembre 2026, 19 h 35 · Visuels, étape 4 : une image de partage par page
 
 - Chaque page a désormais sa propre image de partage 1200 × 630 (celle qu'affichent WhatsApp, Facebook, LinkedIn ou X) : fond bleu nuit quadrillé, marque du site, rubrique en jaune, pastille d'article ou pictogramme d'épreuve, titre de la page, couverture du livre, trait jaune. 144 pages ; les guides gardent leur photo. Faites par le nouveau script `outils/images_partage.py` (Pillow, aucune image générée par IA), validé par Benjamin sur 5 exemples.

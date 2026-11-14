@@ -6,12 +6,11 @@ Le script lit les pages déjà générées dans docs/ (rubrique, surtitre, titre
 et dessine l'image avec Pillow : aucune image générée par IA, seulement du texte, les pictogrammes
 d'épreuve du site et la couverture du livre.
 
-    python3 outils/generer.py            # le site
-    python3 outils/images_partage.py     # les images qui manquent ou dont le titre a changé
-    python3 outils/generer.py            # relie chaque page à son image (og:image)
-
-Le générateur du site n'a pas besoin de Pillow : il utilise l'image d'une page si elle existe, l'image
-générique docs/partage.jpg sinon. Les guides gardent leur photo.
+Le générateur du site lance ce script tout seul à la fin de chaque génération, si Pillow est installé,
+puis refait une passe pour relier les nouvelles images (og:image) : « python3 outils/generer.py » suffit.
+Sans Pillow, le générateur continue sans erreur et utilise l'image générique docs/partage.jpg pour les
+pages qui n'ont pas encore la leur. Les guides gardent leur photo.
+Lancé seul (python3 outils/images_partage.py), il fait les images sans régénérer le site.
 Option : --exemples DOSSIER  écrit seulement 5 images d'essai dans DOSSIER, sans toucher au site.
 """
 import glob, hashlib, html, json, os, re, sys
@@ -183,6 +182,7 @@ def main():
     for n in os.listdir(SORTIE):   # images de pages qui n'en ont plus besoin
         if n.endswith(".jpg") and n not in {nom_image(c) for c in gardees if not c.startswith("_")}:
             os.remove(os.path.join(SORTIE, n))
+            faites += 1
     k = cle(GENERIQUE)
     if index.get("_generique") != k:
         dessiner(GENERIQUE).save(os.path.join(DOCS, "partage.jpg"), quality=82, optimize=True, progressive=True, subsampling=2)
@@ -190,7 +190,8 @@ def main():
     gardees["_generique"] = k
     with open(index_f, "w", encoding="utf-8") as h:
         json.dump(gardees, h, ensure_ascii=False, indent=0, sort_keys=True)
-    print(f"Images de partage : {faites} faite(s), {len(gardees)} au total.")
+    print(f"Images de partage : {faites} faite(s) ou retirée(s), {len(gardees)} au total.")
+    return faites
 
 
 if __name__ == "__main__":

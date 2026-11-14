@@ -2553,3 +2553,19 @@ if __name__ == "__main__":
     llms(nums, w, qs, [d for d in ds if not d.get("brouillon")], simu)
     plan(nums, arts, iso_fr(w["verifie"]), qs, [d for d in ds if not d.get("brouillon")], simu, note, fs)
     print(f"Site généré dans docs/ : {len(nums)} numéro(s) de l'Actualité VTC.")
+    # images de partage (outils/images_partage.py) : seulement si Pillow est installé, jamais bloquant pour la publication ;
+    # si des images ont été faites ou retirées, seconde passe pour relier chaque page à son image (og:image)
+    if not APERCU and not os.environ.get("REVISION_VTC_SECONDE_PASSE"):
+        try:
+            import images_partage
+        except ImportError:
+            print("Images de partage : Pillow absent, image générique pour les pages qui n'ont pas la leur (pip install pillow).")
+        else:
+            try:
+                changees = images_partage.main()
+            except Exception as e:   # une image ratée ne doit jamais empêcher une publication
+                print(f"Images de partage : PROBLÈME ({e!r}) ; image générique pour les pages concernées.")
+                changees = 0
+            if changees:
+                os.environ["REVISION_VTC_SECONDE_PASSE"] = "1"
+                os.execv(sys.executable, [sys.executable] + sys.argv)
