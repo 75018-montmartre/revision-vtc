@@ -40,7 +40,7 @@ def _tete_page(corps, actif, racine):
             break
         suite += n.group(0)
         apres = apres[n.end():]
-    if 'class="surtitre"' not in avant:
+    if 'class="surtitre' not in avant:   # « surtitre » ou « surtitre surtitre-theme » (wiki)
         avant += f'\n    <p class="surtitre">{SURTITRES.get(actif, "Révision VTC")}</p>'
     accueil = f'<li><a href="{racine or "./"}index.html">Accueil</a></li>'
     if 'class="fil"' in avant:

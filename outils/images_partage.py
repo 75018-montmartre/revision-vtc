@@ -53,7 +53,9 @@ def lire_page(chemin):
     titre = texte_brut(re.sub(r'<span class="num-art">.*?</span>', "", h1))
     fil = re.findall(r"<li><a [^>]*>(.*?)</a></li>", (re.search(r'<nav class="fil".*?</nav>', p, re.S) or re.search("", "")).group(0))
     rubrique = texte_brut(fil[1]) if len(fil) > 1 else ""
-    sur = re.search(r'<p class="surtitre">(.*?)</p>', p, re.S)
+    # wiki depuis le 14 novembre 2026 : « pictogramme, thème · source » ; l'image garde la source seule
+    sur = (re.search(r'<p class="surtitre surtitre-theme">.*?<span>[^<]*? · (.*?)</span></p>', p, re.S)
+           or re.search(r'<p class="surtitre">(.*?)</p>', p, re.S))
     ep = re.search(r"Épreuve ([A-G])\s*:\s*([^.<]+)", p[m.end():m.end() + 1500])
     return {"rubrique": rubrique, "surtitre": texte_brut(sur.group(1)) if sur else "", "titre": titre,
             "article": texte_brut(art.group(1)) if art else "", "epreuve": (ep.group(1), texte_brut(ep.group(2))) if ep else None}

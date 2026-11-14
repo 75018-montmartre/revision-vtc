@@ -6,6 +6,14 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 14 novembre 2026, soir · Pictogrammes des thèmes du wiki
+
+- Huit pictogrammes en forme de panneau (jaune cerclé de nuit) : sommaire et titres des thèmes de https://revision-vtc.fr/wiki/ (ils remplacent les petites icônes bleues au trait), et en tête des 78 pages du wiki (« pictogramme, thème · source », au lieu de la source seule).
+- Pictogramme « Le véhicule et la vignette » : voiture de profil avec la vignette sur la vitre (proposition A, choisie par Benjamin).
+- Accueil inchangé (essai écarté par Benjamin : trop chargé). Images de partage inchangées (le script lit la source après le thème).
+- Accessibilité (axe) sans erreur en clair et en sombre, 320 px à 1 366 px.
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 14 novembre 2026, après-midi · Infographies automatiques (Questions VTC et brèves)
 
 - Les Questions VTC et les brèves de l'Actualité VTC acceptent maintenant les mêmes visuels que les guides (chiffres clés, graphique, schéma de flux), placés entre deux paragraphes. Même contrôle que pour les guides : un visuel ne peut afficher qu'une valeur déjà écrite dans la page, sinon la génération s'arrête.

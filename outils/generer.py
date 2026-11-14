@@ -64,6 +64,38 @@ _PICTOS = {
 }
 
 
+# Pictogrammes des thèmes du wiki (validés par Benjamin le 14 novembre 2026) : forme de panneau jaune cerclée de nuit
+# (carré : règle ; rond : obligation ; losange : véhicule ; triangle : danger), dessin au trait. Couleurs dans site.css
+# (partie 14), jamais dans le SVG.
+_FORMES_THEME = {
+    "carre": '<rect x="4" y="4" width="40" height="40" rx="7"/>',
+    "rond": '<circle cx="24" cy="24" r="20.5"/>',
+    "triangle": '<path d="M24 4.5 45 41.5H3z"/>',
+    "losange": '<path d="M24 2.5 45.5 24 24 45.5 2.5 24z"/>',
+}
+_PICTOS_THEMES = {
+    "cadre": ("carre", '<path d="M11 30v-4.5l3.5-6.5h15l4.5 6.5h3V30M11 25.5h26"/><circle cx="17" cy="30.5" r="2.6"/><circle cx="31" cy="30.5" r="2.6"/>'),
+    "conducteur": ("rond", '<rect x="13" y="16" width="22" height="16" rx="2"/><circle cx="19.5" cy="22.5" r="2.4"/><path d="M16.5 28.5c.8-2 5.2-2 6 0M26 21.5h5.5M26 25.5h4"/>'),
+    "exploitant": ("carre", '<path d="M16 13h14a2 2 0 0 1 2 2v20H18a2 2 0 0 1-2-2z"/><path d="M16 33a2 2 0 0 1 2-2h14M20.5 18.5h7M20.5 22.5h7M20.5 26.5h4"/>'),
+    "vehicule": ("losange", '<path d="M14 29.5v-3.2l2.6-1 2.8-4.3h8l3.4 4.3 3.2 1v3.2z"/><circle cx="18.5" cy="30" r="2"/><circle cx="29.5" cy="30" r="2"/><rect class="pt-plein" x="25.6" y="21.6" width="2.6" height="2.4" rx=".5"/>'),
+    "reservation": ("rond", '<rect x="17.5" y="12" width="13" height="24" rx="2.5"/><path d="M20.8 24.2l2.4 2.4 4.2-4.6M22.5 32.5h3"/>'),
+    "plateformes": ("carre", '<circle cx="24" cy="15.5" r="3"/><circle cx="15" cy="31" r="3"/><circle cx="33" cy="31" r="3"/><path d="M22.5 18 16.5 28.4M25.5 18l6 10.4M18 31h12"/>'),
+    "sanctions": ("triangle", '<path d="M24 19v9.5"/><circle class="pt-plein" cx="24" cy="34" r=".9"/>'),
+    "autres": ("carre", '<path d="M17 12h10.5l5 5V36H17z"/><path d="M27.5 12v5h5M21 23h7.5M21 27h7.5M21 31h4.5"/>'),
+}
+
+
+def surtitre_theme(th, texte):
+    """En tête d'une page du wiki : pictogramme du thème, thème · source."""
+    return f'<p class="surtitre surtitre-theme">{picto_theme(th["cle"], 28)}<span>{ty(th["titre"])} · {ty(texte)}</span></p>'
+
+
+def picto_theme(cle, taille=40):
+    forme, dessin = _PICTOS_THEMES[cle]
+    return (f'<svg class="picto-theme" viewBox="0 0 48 48" width="{taille}" height="{taille}" aria-hidden="true" focusable="false">'
+            f'<g class="pt-forme">{_FORMES_THEME[forme]}</g><g class="pt-dessin">{dessin}</g></svg>')
+
+
 def _domaines():
     with open(os.path.join(CONTENU, "calcul_note.json"), encoding="utf-8") as h:
         d = {e["code"]: (f'Épreuve {e["code"]}', e["court"]) for e in json.load(h)["epreuves"]}
@@ -1033,12 +1065,12 @@ def wiki():
           {"".join(f"<p>{_liens_articles(ty(x), par_num, a['slug'])}</p>" for x in p["texte"])}
           {f'<p class="meta">{ty(p["vigueur"])}</p>' if p.get("vigueur") else ""}
         </section>''' for p in a["articles"])
-            entete = f'<p class="surtitre">{ty("Arrêté")}</p>\n    <h1>{ty(a["titre"])}</h1>\n    <p class="texte-ref">{ty(a["source"])}</p>'
+            entete = f'{surtitre_theme(themes[a["theme"]], "Arrêté")}\n    <h1>{ty(a["titre"])}</h1>\n    <p class="texte-ref">{ty(a["source"])}</p>'
             renvois = set(re.findall(r"\b[LRD]\.\s?\d{4}(?:-\d+)*", " ".join(x for p in a["articles"] for x in p["texte"])))
         else:
             blocs = "".join(f"<p>{_liens_articles(ty(x), par_num, a['slug'])}</p>" for x in a["texte"])
             blocs += f'\n        <p class="meta">{ty(a["vigueur"])}' + (f' · {ty(a["modif"][0])}' if a.get("modif") else "") + "</p>"
-            entete = f'<p class="surtitre">{ty(a["source"])}</p>\n    <h1><span class="num-art">Article {ty(a["num"])}</span> {ty(a["titre"])}</h1>'
+            entete = f'{surtitre_theme(themes[a["theme"]], a["source"])}\n    <h1><span class="num-art">Article {ty(a["num"])}</span> {ty(a["titre"])}</h1>'
             renvois = set(re.findall(r"\b[LRD]\.\s?\d{4}(?:-\d+)*", " ".join(a["texte"])))
         lies = []
         for r in sorted(renvois):
@@ -1105,12 +1137,12 @@ def wiki():
     sections, sommaire = [], []
     for t in w["themes"]:
         liste = [a for a in arts if a["theme"] == t["cle"]]
-        sommaire.append(f'<li><a href="#{t["cle"]}">{ty(t["titre"])}</a></li>')
+        sommaire.append(f'<li><a href="#{t["cle"]}">{picto_theme(t["cle"], 24)}<span>{ty(t["titre"])}</span></a></li>')
         items = "".join(
             f'''<li data-cherche="{html.escape(_sans_accents(a["num"] + " " + a["titre"] + " " + a["en_clair"] + " " + a["concretement"]))}"><a href="{a["slug"]}.html"><span class="num-art">{ty(a["num"] if not a.get("arrete") else "Arrêté")}</span> {ty(a["titre"])}</a></li>'''
             for a in liste)
         sections.append(f'''<section class="wiki-theme" aria-labelledby="{t["cle"]}">
-      <div class="tete-bloc"><div><h2 id="{t["cle"]}">{ty(t["titre"])}</h2><p class="tete-intro">{ty(t["intro"])}</p></div><span class="meta">{len(liste)} {"textes" if len(liste) > 1 else "texte"}</span></div>
+      <div class="tete-bloc"><div><h2 id="{t["cle"]}" class="titre-theme">{picto_theme(t["cle"])}<span>{ty(t["titre"])}</span></h2><p class="tete-intro">{ty(t["intro"])}</p></div><span class="meta">{len(liste)} {"textes" if len(liste) > 1 else "texte"}</span></div>
       <ul class="wiki-liste">{items}</ul>
     </section>''')
     autres = ""
@@ -1128,7 +1160,7 @@ def wiki():
     <nav class="sommaire" aria-label="Thèmes"><ul>{"".join(sommaire)}</ul></nav>
     {"".join(sections)}
     <section class="autres-textes" aria-labelledby="autres">
-      <h2 id="autres">Les lois d'origine et les autres références</h2>
+      <h2 id="autres" class="titre-theme">{picto_theme("autres")}<span>Les lois d'origine et les autres références</span></h2>
       <p>{ty("Ces textes ont façonné le métier ; leurs règles s'appliquent aujourd'hui à travers les articles ci-dessus. Les liens mènent au site officiel.")}</p>
       {autres}
     </section>
