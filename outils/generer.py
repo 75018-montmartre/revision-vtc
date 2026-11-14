@@ -1473,6 +1473,8 @@ def _graphique(g):
     Le tableau d'origine, s'il y en a un, reste dans la page, replié sous le graphique."""
     _graphique.n = getattr(_graphique, "n", 0) + 1
     ident = f"graphique-{_graphique.n}"
+    if g.get("donnees") == "bareme-examen":   # valeurs lues dans contenu/calcul_note.json, comme le simulateur de note
+        g = {**g, **donnees_bareme()}
     forme = g["type"]
     assert forme in ("colonnes", "barres", "parts") and g.get("titre") and g.get("lecture") and g.get("source"), \
         f"graphique « {g.get('titre')} » : type, titre, phrase de lecture et source obligatoires"
@@ -1490,7 +1492,8 @@ def _graphique(g):
         vmax = g.get("max") or max(x for grp in g["groupes"] for x in grp["valeurs"])
         def un(grp):
             assert len(grp["valeurs"]) == len(series) == len(grp["affiche"]), f"graphique « {g['titre']} » : une valeur par série"
-            return (f'<li><span class="g-libelle">{ty(grp["libelle"])}</span><ul class="g-series">'
+            detail = f' <span class="g-detail">{ty(grp["detail"])}</span>' if grp.get("detail") else ""
+            return (f'<li{" class=\"g-attenue\"" if grp.get("attenue") else ""}><span class="g-libelle">{ty(grp["libelle"])}</span>{detail}<ul class="g-series">'
                     + "".join(f'<li class="s{i + 1}" style="--v:{100 * v / vmax:.1f}"><span class="visuellement-cache">{ty(series[i])} : </span>'
                               f'{barre}<span class="g-valeur">{ty(af)}</span></li>' for i, (v, af) in enumerate(zip(grp["valeurs"], grp["affiche"])))
                     + "</ul></li>")
@@ -1541,6 +1544,17 @@ def _flux(f):
 _MONTANT = re.compile(r"\d[\d\s\u00a0\u202f]*(?:,\d+)?\s?(?:€|%)")
 
 
+def donnees_bareme():
+    """Graphique « poids de chaque épreuve dans la moyenne », lu dans le barème du simulateur de note (une seule source)."""
+    eps = lire_calcul_note()["epreuves"]
+    total = sum(e["coef"] for e in eps)
+    num = lambda x: (f"{x:.1f}".rstrip("0").rstrip(".")).replace(".", ",")
+    poids = [round(e["coef"] * 100 / total, 1) for e in eps]
+    return {"type": "barres", "series": ["Poids dans la moyenne"], "max": max(poids),
+            "groupes": [{"libelle": f'{e["code"]} · {e["court"]}', "detail": f'coefficient {e["coef"]}, éliminatoire sous {e["elim"]} / 20',
+                         "valeurs": [p], "affiche": [num(p) + " %"]} for e, p in zip(eps, poids)]}
+
+
 def _valeurs_affichees(b):
     """Les chiffres qu'un bloc visuel affiche (contrôle : chacun doit être écrit ailleurs dans la page)."""
     if "chiffres" in b:
@@ -1550,6 +1564,8 @@ def _valeurs_affichees(b):
         textes = [f["lecture"], f.get("alerte", "")] + [lib for e in f["etats"] for _, _, lib in e["liens"]]
         return [m.group(0).strip() for t in textes for m in _MONTANT.finditer(t)]
     g = b["graphique"]
+    if g.get("donnees") == "bareme-examen":
+        g = {**g, **donnees_bareme()}
     if g["type"] == "colonnes":
         return [v["affiche"] for v in g["valeurs"]]
     if g["type"] == "barres":
@@ -1635,11 +1651,71 @@ def _controle_visuels(d):
                     assert plat(v) in texte, f"{d['slug']} : « {v} » est affiché dans un visuel mais écrit nulle part ailleurs dans la page"
 
 
+# Exemple chiffré du simulateur de revenu net, repris dans les guides (« Combien gagne-t-on vraiment de l'heure ? » et
+# ceux qui y renvoient). Les montants qui dépendent du prix du carburant (mis à jour automatiquement) ne sont jamais
+# écrits à la main : les guides portent des repères {{simu:…}}, remplacés ici à chaque génération (depuis le 13 novembre 2026).
+EXEMPLE_HEURE_ATTENTE = 35.40   # Uber, attente comprise (guide « Combien gagne… », 2e tableau, notre calcul d'après l'ARPE 2025)
+
+
+def exemple_simulateur():
+    s = lire_simulateur()
+    d = defauts_simulateur(s)
+    assert d["verse_semaine"] == 1000 and d["semaines"] == 47, \
+        "simulateur : les guides écrivent « 1 000 € par semaine, 47 semaines » ; mettre leur texte à jour avec les nouvelles valeurs par défaut"
+    a, b = calcul_simulateur(s), calcul_simulateur(s, base="verse")
+    heures = round(a["verse"] / EXEMPLE_HEURE_ATTENTE)
+    assert heures == 1328, "guide « Combien gagne… » : il écrit 1 328 heures par an ; le recalculer"
+    e10 = s["valeurs"]["prix_e10"]
+    reperes = {"net_mois_clients": _euros(a["net"] / 12), "net_mois_verse": _euros(b["net"] / 12),
+               "heure_clients": _euros(a["net"] / heures, True), "heure_verse": _euros(b["net"] / heures, True),
+               "cout_km": _euros(a["km"], True), "date_carburant": e10["date"], "prix_e10": f'{e10["valeur"]:.3f}'.replace(".", ",") + " €"}
+    m = lambda x: x / 12
+    postes = [("Cotisations sociales", m(a["social"] + a["vl"])), ("TVA reversée, moins celle récupérée", m(a["tva"])),
+              ("Location de la voiture", m(a["loyer"] + a["amortissement"])), ("Carburant", m(a["energie"])),
+              ("Assurance", m(a["assurance"])), ("Entretien", m(a["entretien"])), ("Frais réglementaires et autres frais", m(a["regl"] + a["autres"]))]
+    postes = [(n, v) for n, v in postes if round(v) > 0]
+    assert abs(sum(v for _, v in postes) + m(a["net"]) - m(a["verse"])) < 1, "exemple du simulateur : la répartition doit refaire le montant versé"
+    graphique = {"type": "barres", "series": ["Par mois"], "max": max(m(a["net"]), *(v for _, v in postes)),
+                 "groupes": [{"libelle": n, "valeurs": [v], "affiche": [_euros(v)], "attenue": True} for n, v in postes]
+                            + [{"libelle": "Ce qui vous reste, avant impôt", "valeurs": [m(a["net"])], "affiche": [_euros(m(a["net"]))]}],
+                 "tableau": {"legende": f"Où vont les sommes versées par les plateformes : exemple du simulateur, moyenne par mois (prix du carburant du {e10['date']}, montants arrondis)",
+                             "colonnes": ["Poste", "Par mois"], "nombres": [1],
+                             "lignes": [[n, _euros(v)] for n, v in postes] + [["Ce qui vous reste, avant impôt", _euros(m(a["net"]))]],
+                             "total": [["Montant versé par les plateformes", _euros(m(a["verse"]))]]}}
+    return reperes, graphique
+
+
+def _remplir_reperes(x, reperes):
+    """Remplace les repères {{simu:…}} dans tout un dossier (textes, tableaux, résumés)."""
+    if isinstance(x, str):
+        for k, v in reperes.items():
+            x = x.replace("{{simu:" + k + "}}", v)
+        assert "{{" not in x, f"repère inconnu : {x[x.index('{{'):][:40]}"
+        return x
+    if isinstance(x, list):
+        return [_remplir_reperes(y, reperes) for y in x]
+    if isinstance(x, dict):
+        return {k: _remplir_reperes(v, reperes) for k, v in x.items()}
+    return x
+
+
+def _donnees_graphiques(d, graphique_simu):
+    """Graphiques dont les valeurs viennent d'une autre source du site (« donnees ») : complétés une fois pour toutes."""
+    for s in d["sections"]:
+        for i, b in enumerate(s["blocs"]):
+            if isinstance(b, dict) and "graphique" in b and b["graphique"].get("donnees"):
+                g = b["graphique"]
+                plus = {"bareme-examen": donnees_bareme, "exemple-simulateur": lambda: graphique_simu}[g["donnees"]]()
+                s["blocs"][i] = {"graphique": {**{k: v for k, v in g.items() if k != "donnees"}, **plus}}
+
+
 def lire_dossiers(slugs_wiki):
     ds = []
+    reperes, graphique_simu = exemple_simulateur()
     for f in sorted(glob.glob(os.path.join(CONTENU, "dossiers", "*.json"))):
         with open(f, encoding="utf-8") as h:
-            d = json.load(h)
+            d = _remplir_reperes(json.load(h), reperes)
+        _donnees_graphiques(d, graphique_simu)
         assert os.path.basename(f) == d["slug"] + ".json", f"{f} : le nom du fichier doit être l'adresse de la page"
         assert re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", d["slug"]), f"{f} : adresse invalide"
         assert d["sources"] and all(x["url"].startswith("https://") for x in d["sources"]), f"{f} : source manquante"
@@ -2234,7 +2310,9 @@ def calcul_note():
     </section>
     <h2 id="bareme">{ty("Le barème officiel des sept épreuves")}</h2>
     <p>{ty("Les épreuves A à E sont communes aux examens de taxi et de VTC ; F et G sont propres au VTC. Toutes sont notées sur 20, avec des questions à choix multiples (QCM) et des questions à réponse courte (QRC).")}</p>
-    {_bloc_dossier(bareme)}
+    {_graphique({"donnees": "bareme-examen", "titre": "Le poids de chaque épreuve dans la moyenne",
+                  "lecture": "Un point gagné dans une épreuve de coefficient 3 vaut trois points gagnés en anglais ; une seule note sous le seuil éliminatoire suffit pourtant à échouer.",
+                  "source": "Arrêté du 6 avril 2017, article 2 (Légifrance) ; poids dans la moyenne : notre calcul", "tableau": bareme["tableau"]})}
     <p>{ty("Lecture : un point gagné en réglementation, en sécurité routière, en développement commercial ou en réglementation VTC (coefficient 3) vaut trois points gagnés en anglais (coefficient 1). À elles quatre, ces épreuves font 70,6 % de la moyenne.")}</p>
     <h2 id="exemples">{ty("Deux exemples pour comprendre")}</h2>
     <p>{ty(f"Premier exemple : ce candidat n'a que {num(ex['E'])} / 20 en anglais et {num(ex['F'])} / 20 en développement commercial, mais il totalise {num(a['points'])} points, soit {num(a['moyenne'])} de moyenne, sans aucune note sous le seuil. Il est admissible.")}</p>

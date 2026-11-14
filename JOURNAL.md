@@ -6,6 +6,19 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 14 novembre 2026, 16 h 15 · Visuels, étape 3 : barème de l'examen, où va l'argent, exemple du simulateur calculé
+
+- Barème de l'examen en graphique (poids de chaque épreuve dans la moyenne, coefficient et note éliminatoire), lu dans `contenu/calcul_note.json`, la même source que le simulateur de note : simulateur de note (tableau du barème replié dessous) et guide « Réussir l'examen du premier coup » (tableau gardé visible, le texte y renvoie).
+  - https://revision-vtc.fr/simulateurs/calcul-note-examen-vtc.html
+  - https://revision-vtc.fr/dossiers/reussir-examen-vtc-premier-coup.html
+- Correction de chiffres : les guides écrivaient à la main l'exemple du simulateur (908 € et 1 287 € par mois, 8,20 € et 11,63 € par heure), resté figé alors que le prix du carburant du simulateur est mis à jour automatiquement. Ces montants sont désormais calculés à chaque génération (repères `{{simu:…}}`), avec la date et le prix du carburant écrits dans le guide. Au 13 novembre 2026 (SP95-E10 à 1,991 €) : 926 € et 1 306 € par mois, 8,37 € et 11,80 € par heure, 0,35 € par kilomètre. Choix de Benjamin (calcul automatique plutôt que correction à la main).
+  - https://revision-vtc.fr/dossiers/combien-gagne-chauffeur-vtc-par-heure.html
+  - https://revision-vtc.fr/dossiers/chauffeur-vtc-salarie-ou-independant.html
+  - https://revision-vtc.fr/dossiers/erreurs-chauffeur-vtc-debutant.html (« moins de 12 € par heure » remplacé par les deux montants calculés)
+- Graphique « Où vont les 1 000 € versés chaque semaine » (moyenne par mois : cotisations, TVA, location, carburant, assurance, frais ; ce qui reste en jaune), calculé par le même code que le simulateur, tableau replié dessous.
+- Vérifié : axe sans erreur sur 18 pages à 320, 768 et 1 366 px, en clair et en sombre, aucun débordement ; tests du site passés, calculs Python et JavaScript identiques sur 401 cas ; génération testée avec un carburant à 1,65 € et 2,40 € (aucun blocage des publications automatiques).
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 14 novembre 2026, 9 h 07 · Question VTC du jour
 
 - Question : « Refuser une course VTC : la plateforme peut-elle sanctionner le chauffeur ? »

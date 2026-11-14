@@ -45,6 +45,7 @@
           }
         },
         "Deux chiffres à garder en tête. Les épreuves A, C, F et G, de coefficient 3, font à elles seules **70,6 %** de la moyenne. Et les deux épreuves propres au VTC, F et G, en font **35,3 %** : plus d'un tiers de la note se joue sur 50 minutes d'examen.",
+        {"graphique": {"donnees": "bareme-examen", "titre": "Le poids de chaque épreuve dans la moyenne", "lecture": "Les épreuves A, C, F et G, de coefficient 3, font à elles seules 70,6 % de la moyenne. L'anglais ne pèse que 5,9 %, mais une note sous 4 vous élimine.", "source": "Arrêté du 6 avril 2017, article 2 (Légifrance) ; poids dans la moyenne : notre calcul"}},
         {"note": "Dans l'épreuve de français (D), un point est retiré si vous faites plus de cinq fautes d'orthographe dans l'ensemble de vos réponses courtes. Un point en D, c'est 2 points pondérés, soit 0,12 point de moyenne : peu, mais assez pour faire passer une moyenne de 10,06 (171 points) à 9,94 (169 points)."}
       ]
     },

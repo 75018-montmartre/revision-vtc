@@ -1146,9 +1146,15 @@ li:has(> a[href^="http"]:not([href*="revision-vtc.fr"])){--fleche:var(--fleche-b
 /* barres : un groupe par ligne, une barre par série, valeur au bout */
 .graphique-barres .g-donnees{display:flex;flex-direction:column;gap:var(--e5)}
 .graphique-barres .g-series{display:flex;flex-direction:column;gap:var(--e2);margin-top:var(--e2)}
+.g-detail{font-family:var(--sans);font-size:.875rem;line-height:1.35;color:var(--gris)}   /* précision à la suite du libellé (coefficient, seuil…) */
+.g-detail::before{content:"· "}
+.graphique-barres .g-donnees:has(.g-detail){gap:var(--e4)}
+.graphique-barres li:has(> .g-detail) .g-series{margin-top:var(--e1)}
 .graphique-barres .g-series li{display:flex;align-items:center;gap:var(--e3)}
 .graphique-barres .g-barre{display:block;flex:none;width:calc((100% - 4.5rem) * var(--v) / 100);height:1.5rem;background:var(--jaune);border:1.5px solid var(--encre);border-radius:0 6px 6px 0}
 .graphique-barres .s2 .g-barre{background:var(--doux)}
+.graphique-barres .g-attenue .g-barre{background:var(--doux)}   /* postes en gris, le résultat (dernier groupe) reste en jaune */
+.graphique-barres .g-attenue + li:not(.g-attenue){padding-top:var(--e3);border-top:1px solid var(--filet)}
 /* parts : une barre de 100 % par ligne, découpée en séries, valeur dans chaque morceau */
 .graphique-parts .g-donnees{display:flex;flex-direction:column;gap:var(--e5)}
 .g-parts{display:flex;margin-top:var(--e2);height:2.75rem;border:1.5px solid var(--encre);border-radius:6px;overflow:hidden}
