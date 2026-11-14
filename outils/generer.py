@@ -85,6 +85,38 @@ _PICTOS_THEMES = {
 }
 
 
+def _paragraphes_officiels(a):
+    return [x for p in a["articles"] for x in p["texte"]] if a.get("arrete") else a["texte"]
+
+
+def _phrase_cle(a):
+    """Wiki, « la phrase à retenir » (depuis le 14 novembre 2026) : un extrait mot pour mot du texte officiel, mis en
+    avant au-dessus du texte et surligné dedans. Si le texte officiel change et que l'extrait n'y est plus, la génération
+    s'arrête : mettre à jour `phrase_cle` (nouvel extrait exact) ou la retirer."""
+    pc = a.get("phrase_cle")
+    if not pc:
+        return ""
+    para = [x for x in _paragraphes_officiels(a) if pc in x]
+    assert para, (f"wiki {a['slug']} : la phrase clé « {pc[:60]}… » n'est plus mot pour mot dans le texte officiel ; "
+                  "mettre à jour « phrase_cle » dans contenu/wiki.json ou la retirer")
+    assert ty(pc) in ty(para[0]), f"wiki {a['slug']} : phrase clé impossible à surligner (couper ailleurs, hors ponctuation)"
+    fin = "" if para[0].rstrip().endswith(pc.rstrip()) else " […]"
+    avant = para[0][:para[0].index(pc)]   # « I. - », « II.- », « 1° » en tête d'alinéa : pas de coupure à signaler
+    debut = "" if re.fullmatch(r"\s*(?:[IVX]+\s*\.?\s*-\s*|\d+°\s*)?", avant) else "[…] "
+    ref = a["num"] if a.get("arrete") else f'Article {a["num"]}'
+    return (f'<figure class="phrase-cle"><figcaption>{ty("La phrase à retenir")}</figcaption>'
+            f'<blockquote><p>{ty("« " + debut + pc + fin + " »")}</p></blockquote>'
+            f'<p class="cle-ref">{ty(ref)}, {ty("surligné dans le texte ci-dessous")}</p></figure>')
+
+
+def _marque_cle(t, a):
+    """Surligne la phrase clé dans un paragraphe du texte officiel (déjà passé par ty)."""
+    pc = a.get("phrase_cle")
+    if pc and ty(pc) in t:
+        return t.replace(ty(pc), f'<mark class="cle">{ty(pc)}</mark>', 1)
+    return t
+
+
 def surtitre_theme(th, texte):
     """En tête d'une page du wiki : pictogramme du thème, thème · source."""
     return f'<p class="surtitre surtitre-theme">{picto_theme(th["cle"], 28)}<span>{ty(th["titre"])} · {ty(texte)}</span></p>'
@@ -1062,13 +1094,13 @@ def wiki():
             blocs = "".join(
                 f'''<section class="officiel-art">
           <h3>{ty(p["num"])}</h3>
-          {"".join(f"<p>{_liens_articles(ty(x), par_num, a['slug'])}</p>" for x in p["texte"])}
+          {"".join(f"<p>{_liens_articles(_marque_cle(ty(x), a), par_num, a['slug'])}</p>" for x in p["texte"])}
           {f'<p class="meta">{ty(p["vigueur"])}</p>' if p.get("vigueur") else ""}
         </section>''' for p in a["articles"])
             entete = f'{surtitre_theme(themes[a["theme"]], "Arrêté")}\n    <h1>{ty(a["titre"])}</h1>\n    <p class="texte-ref">{ty(a["source"])}</p>'
             renvois = set(re.findall(r"\b[LRD]\.\s?\d{4}(?:-\d+)*", " ".join(x for p in a["articles"] for x in p["texte"])))
         else:
-            blocs = "".join(f"<p>{_liens_articles(ty(x), par_num, a['slug'])}</p>" for x in a["texte"])
+            blocs = "".join(f"<p>{_liens_articles(_marque_cle(ty(x), a), par_num, a['slug'])}</p>" for x in a["texte"])
             blocs += f'\n        <p class="meta">{ty(a["vigueur"])}' + (f' · {ty(a["modif"][0])}' if a.get("modif") else "") + "</p>"
             entete = f'{surtitre_theme(themes[a["theme"]], a["source"])}\n    <h1><span class="num-art">Article {ty(a["num"])}</span> {ty(a["titre"])}</h1>'
             renvois = set(re.findall(r"\b[LRD]\.\s?\d{4}(?:-\d+)*", " ".join(a["texte"])))
@@ -1101,6 +1133,7 @@ def wiki():
     </section>
     <section aria-labelledby="officiel">
       <h2 id="officiel">Le texte officiel</h2>
+      {_phrase_cle(a)}
       <div class="officiel">
         {blocs}
       </div>
@@ -1625,6 +1658,10 @@ def _bloc_dossier(b):
         return _graphique(b["graphique"])
     if "flux" in b:
         return _flux(b["flux"])
+    if "pour_contre" in b:
+        return _pour_contre(b["pour_contre"])
+    if "idee_recue" in b:
+        return _idee_recue(b["idee_recue"])
     if "liste" in b:
         return "<ul>" + "".join(f"<li>{liens(ty(x))}</li>" for x in b["liste"]) + "</ul>"
     if "note" in b:
@@ -1648,6 +1685,29 @@ def _bloc_dossier(b):
             f'<tbody>{"".join(ligne(l) for l in t["lignes"])}</tbody>{pied}</table></div>')
 
 
+_ICONE_POUR = '<svg class="pc-icone" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>'
+_ICONE_CONTRE = '<svg class="pc-icone" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M6 12h12"/></svg>'
+
+
+def _pour_contre(pc):
+    """Encadré « avantages / limites » (depuis le 14 novembre 2026) : deux listes côte à côte, une sous l'autre sur
+    téléphone. Chaque ligne reprend un point déjà établi dans la page (pas de nouvelle affirmation)."""
+    assert pc.get("titre") and pc.get("pour") and pc.get("contre"), "pour_contre : titre, pour et contre obligatoires"
+    lib_pour, lib_contre = pc.get("libelles", ["Les avantages", "Les limites"])
+    col = lambda cls, icone, lib, items: (f'<div class="pc-col {cls}"><p class="pc-libelle">{icone}<span>{ty(lib)}</span></p>'
+                                          f'<ul>{"".join(f"<li>{liens(ty(x))}</li>" for x in items)}</ul></div>')
+    return (f'<div class="pour-contre"><p class="pc-titre">{ty(pc["titre"])}</p><div class="pc-cols">'
+            f'{col("pc-pour", _ICONE_POUR, lib_pour, pc["pour"])}{col("pc-contre", _ICONE_CONTRE, lib_contre, pc["contre"])}</div></div>')
+
+
+def _idee_recue(ir):
+    """Encadré « idée reçue / en réalité » (depuis le 14 novembre 2026). L'idée reçue est citée entre guillemets ;
+    la réalité reprend ce que la page établit, avec ses sources."""
+    assert ir.get("idee") and ir.get("realite"), "idee_recue : idee et realite obligatoires"
+    return (f'<div class="idee-recue"><p class="ir-idee"><span class="ir-libelle">Idée reçue</span> {ty("« " + ir["idee"] + " »")}</p>'
+            f'<p class="ir-realite"><span class="ir-libelle">En réalité</span> {liens(ty(ir["realite"]))}</p></div>')
+
+
 def _texte_dossier(d, visuels=True):
     """Tout le texte d'un dossier, sans balises (comptage des mots, llms-full) ; sans les visuels pour le contrôle des chiffres."""
     morceaux = [d["chapeau"], *d["en_bref"]]
@@ -1660,6 +1720,11 @@ def _texte_dossier(d, visuels=True):
                 morceaux += b["liste"]
             elif "note" in b:
                 morceaux.append(b["note"])
+            elif "pour_contre" in b:
+                pc = b["pour_contre"]
+                morceaux += [pc["titre"], *pc["pour"], *pc["contre"]]
+            elif "idee_recue" in b:
+                morceaux += [b["idee_recue"]["idee"], b["idee_recue"]["realite"]]
             elif "image" in b:
                 continue
             elif "chiffres" in b:

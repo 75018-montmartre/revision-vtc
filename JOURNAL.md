@@ -6,6 +6,14 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 14 novembre 2026, soir · Phrase à retenir (wiki), avantages / limites et idée reçue (guides)
+
+- Wiki : « La phrase à retenir », un extrait mot pour mot du texte officiel mis en avant au-dessus du texte et surligné dedans, sur 5 articles pilotes : https://revision-vtc.fr/wiki/l3120-2.html, https://revision-vtc.fr/wiki/r3120-6.html, https://revision-vtc.fr/wiki/l3122-3.html, https://revision-vtc.fr/wiki/r3122-8.html, https://revision-vtc.fr/wiki/l3124-12.html. La génération s'arrête si l'extrait disparaît du texte officiel.
+- Guides : encadré « avantages / limites » (https://revision-vtc.fr/dossiers/chauffeur-vtc-salarie-ou-independant.html, reprise du tableau comparatif du guide) et encadré « idée reçue » (https://revision-vtc.fr/dossiers/precompte-cotisations-vtc-plateformes-2027.html, « ce n'est pas l'impôt »). Aucune affirmation nouvelle.
+- README : « Visuels du wiki et des guides » (formats et règles) ; site.css partie 15.
+- Accessibilité (axe) sans erreur en clair et en sombre, 320 px à 1 366 px.
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 14 novembre 2026, soir · Pictogrammes des thèmes du wiki
 
 - Huit pictogrammes en forme de panneau (jaune cerclé de nuit) : sommaire et titres des thèmes de https://revision-vtc.fr/wiki/ (ils remplacent les petites icônes bleues au trait), et en tête des 78 pages du wiki (« pictogramme, thème · source », au lieu de la source seule).

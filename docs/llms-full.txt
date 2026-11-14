@@ -1834,6 +1834,8 @@ La plateforme déclare chaque mois. Elle transmet le chiffre d'affaires réalis�
 Le coût du dispositif est pour la plateforme. Le texte met à la charge des opérateurs les frais liés aux prélèvements, aux déclarations et aux versements.
 Pour vous, la différence se voit surtout sur le virement : le montant reçu de l'application sera déjà diminué des cotisations. Vous n'aurez plus à mettre de côté vous-même la part de l'Urssaf sur ces courses.
 Ce n'est pas le prélèvement à la source de l'impôt
+Avec le précompte, la plateforme prélève mon impôt sur le revenu.
+Elle retient vos cotisations sociales, pas votre impôt. Seule exception : si vous avez choisi le versement libératoire, il fait partie de ce que la plateforme prélève.
 Le mot « prélèvement à la source » prête à confusion. L'administration l'emploie pour ce dispositif (« prélèvement à la source des cotisations sociales par les plateformes »), mais il s'agit des cotisations sociales du micro-entrepreneur, pas de l'impôt sur le revenu.
 Une seule exception touche l'impôt : le versement libératoire. Si vous avez choisi cette option, vous payez votre impôt sur le revenu en même temps que vos cotisations, en pourcentage du chiffre d'affaires. L'article L613-6-1 l'inclut dans ce que la plateforme prélève. Pour une prestation de services BIC, le taux global passe alors de 21,2 % à 22,9 % en 2026, soit 1,7 point de plus.
 Sans versement libératoire, le précompte ne touche pas à votre impôt sur le revenu : l'article L613-6-1 ne vise que les cotisations, les contributions sociales, certaines taxes et ce versement.
@@ -2098,6 +2100,15 @@ Pourquoi le salariat est souvent le bon choix pour commencer
 Pour un débutant sans épargne, sans voiture adaptée et sans clients, être salarié offre un avantage que l'on sous-estime : apprendre le métier sans risquer son argent.
 Pendant quelques mois, vous découvrez à quelles heures la demande est forte dans votre ville, comment fonctionnent les gares et les aéroports, quels clients reviennent, comment gérer un retard ou un client difficile, et surtout si ce rythme de travail vous convient. Un indépendant apprend les mêmes choses, mais il les paie : chaque mauvais choix d'horaire ou de zone se traduit directement par une perte.
 Le salariat permet aussi de mettre de l'argent de côté. Or le site officiel Entreprendre.Service-Public.fr conseille, avant de créer son entreprise de VTC, de « faire une réserve financière pour faire face aux imprévus ». C'est plus facile avec un salaire régulier.
+Commencer salarié : ce que vous gagnez, ce que vous laissez
+Apprendre le métier sans risquer son argent
+Voiture, assurance et carburant en général à la charge de l'employeur (selon le contrat)
+Un revenu minimum : le salaire du contrat, au moins le SMIC
+Congés payés et assurance chômage (sous conditions)
+Peu de paperasse
+Horaires fixés avec l'employeur
+Les clients et les prix de l'employeur
+Un revenu limité au salaire et aux primes
 Quand l'indépendance devient intéressante
 L'indépendance n'est pas un piège en soi : c'est un projet d'entreprise. Elle devient intéressante quand plusieurs conditions sont réunies en même temps.
 Une voiture à coût maîtrisé : déjà payée, ou louée à un prix que votre activité couvre même un mauvais mois.

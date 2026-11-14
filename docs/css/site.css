@@ -1213,3 +1213,30 @@ li:has(> a[href^="http"]:not([href*="revision-vtc.fr"])){--fleche:var(--fleche-b
 h2.titre-theme{display:flex;align-items:center;gap:var(--e3)}
 .sommaire a:has(.picto-theme){gap:.55rem;padding-left:.55rem}
 .surtitre-theme{display:flex;align-items:center;gap:.6rem}
+
+/* 15. Phrase clé du wiki, « avantages / limites » et « idée reçue » des guides (depuis le 14 novembre 2026) ------------ */
+.phrase-cle{margin:0 0 var(--e5);padding:var(--e4) var(--e5);background:var(--jaune-pale);border-left:6px solid var(--jaune);border-radius:var(--rayon)}
+.phrase-cle figcaption{margin:0 0 var(--e2);font-family:var(--sans);font-size:.8125rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--encre)}
+.phrase-cle blockquote{margin:0}
+.phrase-cle blockquote p{margin:0;font-family:var(--cond);font-size:clamp(1.25rem,2.6vw,1.5rem);font-weight:600;line-height:1.3;color:var(--encre)}
+.phrase-cle .cle-ref{margin:var(--e2) 0 0;font-family:var(--sans);font-size:.875rem;color:var(--gris)}
+mark.cle{padding:0 .1em;background:var(--jaune-pale);color:inherit;box-shadow:inset 0 -.2em 0 var(--jaune)}
+.pour-contre{margin:var(--e5) 0 var(--e6)}
+.pc-titre{margin:0 0 var(--e3);font-family:var(--cond);font-size:1.25rem;font-weight:700;line-height:1.2;color:var(--encre)}
+.pc-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--e4)}
+.pc-col{padding:var(--e4) var(--e5);background:var(--carte);border:1px solid var(--filet);border-top:5px solid var(--ok);border-radius:var(--rayon)}
+.pc-contre{border-top-color:var(--ko)}
+.pc-libelle{display:flex;align-items:center;gap:var(--e2);margin:0 0 var(--e2);font-family:var(--sans);font-weight:700}
+.pc-pour .pc-libelle{color:var(--ok)}
+.pc-contre .pc-libelle{color:var(--ko)}
+.pc-icone{flex:none;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.pc-col ul{margin:0;padding-left:1.15rem}
+.pc-col li{margin:0 0 var(--e1)}
+@media (max-width:40rem){.pc-cols{grid-template-columns:minmax(0,1fr)}}
+.idee-recue{margin:var(--e5) 0 var(--e6);border:1px solid var(--filet);border-radius:var(--rayon);overflow:hidden}
+.idee-recue p{margin:0;padding:var(--e4) var(--e5)}
+.ir-idee{background:var(--ko-fond);color:var(--encre);font-style:italic}
+.ir-realite{background:var(--ok-fond);color:var(--encre)}
+.ir-libelle{display:block;margin:0 0 var(--e1);font-family:var(--sans);font-size:.8125rem;font-style:normal;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.ir-idee .ir-libelle{color:var(--ko)}
+.ir-realite .ir-libelle{color:var(--ok)}

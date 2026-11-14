@@ -237,6 +237,7 @@
   },
   {
    "slug": "r3120-6",
+   "phrase_cle": "L'autorité administrative compétente remet la carte professionnelle dans un délai maximum de trois mois suivant la date de la demande.",
    "num": "R3120-6",
    "source": "Code des transports",
    "theme": "conducteur",
@@ -502,6 +503,7 @@
   },
   {
    "slug": "l3122-3",
+   "phrase_cle": "Cette inscription est renouvelable tous les cinq ans.",
    "num": "L3122-3",
    "source": "Code des transports",
    "theme": "exploitant",
@@ -799,6 +801,7 @@
   },
   {
    "slug": "r3122-8",
+   "phrase_cle": "Les voitures de transport avec chauffeur sont munies d'une signalétique distinctive définie par arrêté du ministre chargé des transports et délivrée par l'Imprimerie nationale.",
    "num": "R3122-8",
    "source": "Code des transports",
    "theme": "vehicule",
@@ -846,6 +849,7 @@
   },
   {
    "slug": "l3120-2",
+   "phrase_cle": "Les véhicules qui effectuent les prestations mentionnées à l'article L. 3120-1 ne peuvent pas être loués à la place, sauf s'ils font l'objet d'une réservation préalable",
    "num": "L3120-2",
    "source": "Code des transports",
    "theme": "reservation",
@@ -1601,6 +1605,7 @@
   },
   {
    "slug": "l3124-12",
+   "phrase_cle": "Est puni de trois ans d'emprisonnement et de 45 000 € d'amende le fait de contrevenir au I, au 1° du II ou aux 2° ou 3° du III de l'article L. 3120-2",
    "num": "L3124-12",
    "source": "Code des transports",
    "theme": "sanctions",

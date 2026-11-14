@@ -111,7 +111,8 @@
    "blocs": [
     "Pour un débutant sans épargne, sans voiture adaptée et sans clients, être salarié offre un avantage que l'on sous-estime : apprendre le métier sans risquer son argent.",
     "Pendant quelques mois, vous découvrez à quelles heures la demande est forte dans votre ville, comment fonctionnent les gares et les aéroports, quels clients reviennent, comment gérer un retard ou un client difficile, et surtout si ce rythme de travail vous convient. Un indépendant apprend les mêmes choses, mais il les paie : chaque mauvais choix d'horaire ou de zone se traduit directement par une perte.",
-    "Le salariat permet aussi de mettre de l'argent de côté. Or le site officiel Entreprendre.Service-Public.fr conseille, avant de créer son entreprise de VTC, de « faire une réserve financière pour faire face aux imprévus ». C'est plus facile avec un salaire régulier."
+    "Le salariat permet aussi de mettre de l'argent de côté. Or le site officiel Entreprendre.Service-Public.fr conseille, avant de créer son entreprise de VTC, de « faire une réserve financière pour faire face aux imprévus ». C'est plus facile avec un salaire régulier.",
+    {"pour_contre": {"titre": "Commencer salarié : ce que vous gagnez, ce que vous laissez", "pour": ["Apprendre le métier sans risquer son argent", "Voiture, assurance et carburant en général à la charge de l'employeur (selon le contrat)", "Un revenu minimum : le salaire du contrat, au moins le SMIC", "Congés payés et assurance chômage (sous conditions)", "Peu de paperasse"], "contre": ["Horaires fixés avec l'employeur", "Les clients et les prix de l'employeur", "Un revenu limité au salaire et aux primes"]}}
    ]
   },
   {
