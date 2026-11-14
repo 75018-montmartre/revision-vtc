@@ -124,6 +124,12 @@ def fil(*etapes):
         {"@type": "ListItem", "position": i, "name": n, "item": SITE + c} for i, (n, c) in enumerate(etapes, 1)]}
 
 
+def image_partage(chemin):
+    """Image de partage propre à la page (faite par outils/images_partage.py), sinon l'image générique du site."""
+    nom = chemin[:-5].replace("/", "-") + ".jpg"
+    return SITE + "images/partage/" + nom if os.path.exists(os.path.join(DOCS, "images", "partage", nom)) else SITE + "partage.jpg"
+
+
 def _seo(chemin, contenu):
     """Ajoute l'adresse canonique et les balises de partage (Open Graph) à une page indexable."""
     if "</head>" not in contenu or 'content="noindex"' in contenu or 'http-equiv="refresh"' in contenu:
@@ -140,8 +146,8 @@ def _seo(chemin, contenu):
             f'<meta property="og:type" content="{type_og}">\n<meta property="og:title" content="{a(titre)}">\n'
             f'<meta property="og:description" content="{a(desc)}">\n<meta property="og:url" content="{url}">\n'
             + ("" if 'property="og:image"' in contenu else
-               f'<meta property="og:image" content="{SITE}partage.jpg">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'
-               f'<meta property="og:image:alt" content="Révision VTC, le site du livre Machine à Réussite · Examen VTC 2027">\n') +
+               f'<meta property="og:image" content="{image_partage(chemin)}">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'
+               f'<meta property="og:image:alt" content="{a(titre if image_partage(chemin) != SITE + "partage.jpg" else "Révision VTC, le site du livre Machine à Réussite · Examen VTC 2027")}">\n') +
             f'<meta name="twitter:card" content="summary_large_image">\n')
     return contenu.replace("</head>", tete + "</head>", 1)
 
@@ -372,7 +378,7 @@ def numero(n, precedent, suivant):
     resume = " ".join(n["a_retenir"])
     ld = {"@context": "https://schema.org", "@type": "NewsArticle", "headline": n["titre"][:110], "description": resume[:300],
           "datePublished": n["date"], "dateModified": n["date"], "inLanguage": "fr", "author": AUTEUR, "publisher": AUTEUR,
-          "image": SITE + "partage.jpg", "mainEntityOfPage": SITE + f'actualite/{n["date"]}.html',
+          "image": image_partage(f'actualite/{n["date"]}.html'), "mainEntityOfPage": SITE + f'actualite/{n["date"]}.html',
           "citation": [s["url"] for r in n["rubriques"] for b in r["breves"] for s in b["sources"]][:20]}
     ecrire(f'actualite/{n["date"]}.html', page(html.escape(titre, quote=False), corps, "actualite", "../",
                                                html.escape(resume[:300].rsplit(" ", 1)[0] + "…"),
@@ -1089,7 +1095,7 @@ def wiki():
         desc = a["en_clair"] if len(a["en_clair"]) <= 158 else a["en_clair"][:155].rsplit(" ", 1)[0] + "…"
         ld = {"@context": "https://schema.org", "@type": "Article", "headline": titre_page[:110], "description": a["en_clair"],
               "inLanguage": "fr", "dateModified": iso_fr(source_date), "author": AUTEUR, "publisher": AUTEUR,
-              "image": SITE + "partage.jpg", "mainEntityOfPage": SITE + f'wiki/{a["slug"]}.html', "about": loi,
+              "image": image_partage(f'wiki/{a["slug"]}.html'), "mainEntityOfPage": SITE + f'wiki/{a["slug"]}.html', "about": loi,
               "isBasedOn": a["url"], "license": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/"}
         ecrire(f'wiki/{a["slug"]}.html', page(html.escape(titre_page, quote=False), corps, "textes", "../", html.escape(desc),
                                              jsonld=[ld, fil(("Accueil", ""), ("Réglementation VTC", "wiki/"), (th["titre"], f'wiki/#{a["theme"]}'), (titre_page, f'wiki/{a["slug"]}.html'))]))
@@ -1321,7 +1327,7 @@ def questions(qs, w):
         chemin = f'questions/{q["date"]}-{q["slug"]}.html'
         ld = {"@context": "https://schema.org", "@type": "Article", "headline": q["question"][:110], "description": q["reponse_courte"],
               "datePublished": q["date"], "dateModified": iso_fr(q["verifie"]), "inLanguage": "fr", "author": AUTEUR, "publisher": AUTEUR,
-              "image": SITE + "partage.jpg", "mainEntityOfPage": SITE + chemin, "citation": [x["url"] for x in q["sources"]],
+              "image": image_partage(chemin), "mainEntityOfPage": SITE + chemin, "citation": [x["url"] for x in q["sources"]],
               "mainEntity": {"@type": "Question", "name": q["question"], "acceptedAnswer": {"@type": "Answer", "text": q["reponse_courte"]}}}
         ecrire(chemin, page(html.escape(q["question"] + " · Révision VTC", quote=False), corps, "questions", "../",
                             html.escape(q["reponse_courte"] if len(q["reponse_courte"]) <= 158 else q["reponse_courte"][:155].rsplit(" ", 1)[0] + "…"),

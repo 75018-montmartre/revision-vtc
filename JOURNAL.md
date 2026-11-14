@@ -6,6 +6,14 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 14 novembre 2026, 19 h 35 · Visuels, étape 4 : une image de partage par page
+
+- Chaque page a désormais sa propre image de partage 1200 × 630 (celle qu'affichent WhatsApp, Facebook, LinkedIn ou X) : fond bleu nuit quadrillé, marque du site, rubrique en jaune, pastille d'article ou pictogramme d'épreuve, titre de la page, couverture du livre, trait jaune. 144 pages ; les guides gardent leur photo. Faites par le nouveau script `outils/images_partage.py` (Pillow, aucune image générée par IA), validé par Benjamin sur 5 exemples.
+- Image générique `partage.jpg` refaite au même dessin (l'ancienne reprenait l'ancienne charte rouge et promettait « l'actualité du métier chaque semaine »).
+- Le générateur reste sans Pillow : il relie chaque page à son image si elle existe, à l'image générique sinon. Les tâches planifiées qui publient une page lancent maintenant le script des images (voir README, « Images de partage »).
+- Vérifié : 145 images (environ 75 Ko chacune, jamais chargées par les visiteurs), seconde passe sans rien refaire, balises og:image et données structurées des articles, questions et numéros pointant vers la bonne image ; tests du site passés.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 14 novembre 2026, 16 h 15 · Visuels, étape 3 : barème de l'examen, où va l'argent, exemple du simulateur calculé
 
 - Barème de l'examen en graphique (poids de chaque épreuve dans la moyenne, coefficient et note éliminatoire), lu dans `contenu/calcul_note.json`, la même source que le simulateur de note : simulateur de note (tableau du barème replié dessous) et guide « Réussir l'examen du premier coup » (tableau gardé visible, le texte y renvoie).
