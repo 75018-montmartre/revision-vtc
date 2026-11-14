@@ -6,6 +6,13 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 14 novembre 2026, après-midi · Infographies automatiques (Questions VTC et brèves)
+
+- Les Questions VTC et les brèves de l'Actualité VTC acceptent maintenant les mêmes visuels que les guides (chiffres clés, graphique, schéma de flux), placés entre deux paragraphes. Même contrôle que pour les guides : un visuel ne peut afficher qu'une valeur déjà écrite dans la page, sinon la génération s'arrête.
+- README, « Infographies : quand en faire » : règle de Benjamin, appliquée par les tâches planifiées (Question du jour, Article de fond, Actualité VTC) dès qu'un contenu contient des chiffres qui gagnent à être vus.
+- Aucune page publiée ne change d'aspect aujourd'hui.
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 14 novembre 2026, 21 h 25 · Pages à une colonne recentrées
 
 - Correction d'une erreur de l'audit visuel (lot 1, 13 novembre) signalée par Benjamin : les pages à une seule colonne de lecture (Le livre, Contact, À propos, Mises à jour, Accessibilité, Mentions légales, Examens blancs, numéros de l'Actualité VTC, page 404…) avaient été calées à gauche, avec un grand vide à droite. Leur colonne (46rem), en-tête compris, est de nouveau centrée dans l'écran. Les pages larges (wiki, FAQ, simulateurs, guides, index) restent alignées sur le logo.

@@ -171,6 +171,7 @@ def lire_numeros():
         for r in n["rubriques"]:
             for b in r["breves"]:
                 assert b.get("sources"), f"{f} : brève sans source : {b['titre']}"
+                _visuels_dans_textes(f"{n['date']} · {b['titre']}", b["texte"])
         nums.append(n)
     return nums
 
@@ -354,7 +355,7 @@ def numero(n, precedent, suivant):
     for r in n["rubriques"]:
         rub += f'\n    <h2>{ty(r["titre"])}</h2>'
         for b in r["breves"]:
-            paras = "".join(f"<p>{ty(p)}</p>" for p in b["texte"])
+            paras = "".join(_bloc_dossier(p) if isinstance(p, dict) else f"<p>{ty(p)}</p>" for p in b["texte"])   # blocs visuels admis
             rub += f'\n    <article class="breve"><h3>{ty(b["titre"])}</h3>{paras}{sources_html(b)}</article>'
     impact = "".join(f"<p>{ty(p)}</p>" for p in n["impact_livre"])
     nav = []
@@ -1286,6 +1287,9 @@ def lire_questions(slugs_wiki):
         assert q["question"].endswith("?") and 50 <= len(q["reponse_courte"]) <= 400, f"{f} : question ou réponse courte"
         for w in q.get("wiki", []):
             assert w in slugs_wiki, f"{f} : page du wiki inconnue {w}"
+        tous = [q["reponse_courte"], *q["a_retenir"]] + [p for x in q["sections"] for p in x["texte"] if isinstance(p, str)]
+        for x in q["sections"]:
+            _visuels_dans_textes(f'{q["date"]}-{q["slug"]}', x["texte"], tous)
         q["code_domaine"] = domaine_de(q, f)
         qs.append(q)
     for i, q in enumerate(qs):
@@ -1298,7 +1302,7 @@ def lire_questions(slugs_wiki):
 def questions(qs, w):
     arts = {a["slug"]: a for a in w["articles"]}
     for q in qs:
-        secs = "".join(f'<h2>{ty(x["titre"])}</h2>' + "".join(f"<p>{liens(ty(p))}</p>" for p in x["texte"]) for x in q["sections"])   # [texte](adresse) : maillage vers un article ou une autre question
+        secs = "".join(f'<h2>{ty(x["titre"])}</h2>' + "".join(_bloc_dossier(p) if isinstance(p, dict) else f"<p>{liens(ty(p))}</p>" for p in x["texte"]) for x in q["sections"])   # [texte](adresse) : maillage vers un article ou une autre question
         wiki = "".join(f'<li><a href="../wiki/{s}.html">{ty(arts[s]["num"] if not arts[s].get("arrete") else "Arrêté")} · {ty(arts[s]["titre"])}</a></li>' for s in q.get("wiki", []))
         livre = "".join(f"<li><b>Fiche {ty(c)}</b> · {ty(t)}</li>" for c, t in q.get("fiches", []))
         src = "".join(f'<li><a href="{html.escape(x["url"])}">{ty(x["nom"])}</a>' + (f", {ty(x['date'])}" if x.get("date") else "") + "</li>" for x in q["sources"])
@@ -1643,6 +1647,18 @@ def _texte_dossier(d, visuels=True):
                 morceaux += [" ".join(l) for l in b["tableau"]["lignes"] + b["tableau"].get("total", [])]
     morceaux += d["a_retenir"]
     return re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", "\n".join(morceaux)).replace("**", "")
+
+
+def _visuels_dans_textes(nom, textes, en_plus=()):
+    """Questions VTC et brèves de l'Actualité : leurs listes de paragraphes peuvent aussi contenir les blocs visuels des
+    guides (chiffres, graphique, flux ; depuis le 14 novembre 2026). Graphiques « donnees » complétés, puis même contrôle
+    « aucun chiffre inventé » que pour les guides, sur le texte de la question ou de la brève."""
+    if not any(isinstance(p, dict) for p in textes):
+        return
+    pseudo = {"slug": nom, "chapeau": "", "en_bref": [], "sections": [{"titre": "", "blocs": textes}], "a_retenir": list(en_plus)}
+    _donnees_graphiques(pseudo, exemple_simulateur()[1])
+    textes[:] = pseudo["sections"][0]["blocs"]
+    _controle_visuels(pseudo)
 
 
 def _controle_visuels(d):
