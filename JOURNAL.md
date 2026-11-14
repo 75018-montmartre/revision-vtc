@@ -6,6 +6,13 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 14 novembre 2026, 21 h 25 · Pages à une colonne recentrées
+
+- Correction d'une erreur de l'audit visuel (lot 1, 13 novembre) signalée par Benjamin : les pages à une seule colonne de lecture (Le livre, Contact, À propos, Mises à jour, Accessibilité, Mentions légales, Examens blancs, numéros de l'Actualité VTC, page 404…) avaient été calées à gauche, avec un grand vide à droite. Leur colonne (46rem), en-tête compris, est de nouveau centrée dans l'écran. Les pages larges (wiki, FAQ, simulateurs, guides, index) restent alignées sur le logo.
+  - https://revision-vtc.fr/le-livre.html
+- Vérifié : marges gauche et droite égales à 1 366, 1 024 et 390 px ; axe sans erreur sur 18 pages, en clair et en sombre.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 14 novembre 2026, 19 h 55 · Images de partage faites à chaque génération
 
 - `outils/generer.py` lance désormais `outils/images_partage.py` à la fin de chaque génération (si Pillow est installé) puis refait une passe : toute nouvelle page (Question VTC du jour, Actualité VTC, guide, page du wiki) a son image de partage dans le même commit que sa publication, sans changer les consignes des tâches planifiées. Sans Pillow ou en cas d'échec d'une image, la génération continue sans erreur et la page garde l'image générique : aucune publication ne peut être bloquée.
