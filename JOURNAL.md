@@ -6,6 +6,19 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 14 novembre 2026, 9 h 07 · Question VTC du jour
+
+- Question : « Refuser une course VTC : la plateforme peut-elle sanctionner le chauffeur ? »
+- Page : https://revision-vtc.fr/questions/2026-11-14-refuser-course-vtc-plateforme.html
+- Réponse courte : Non. L'article L1326-2 du Code des transports permet au chauffeur indépendant de refuser une proposition de course « sans faire l'objet d'une quelconque pénalité » : la plateforme ne peut notamment pas suspendre ni rompre leur relation contractuelle parce qu'il a refusé une ou plusieurs propositions.
+- Apport : champ (indépendants de l'article L7341-1 du Code du travail, pas les salariés), ce que la plateforme doit afficher selon D1326-2 et D1326-3 (distance de la prise en charge à la destination, prix minimal garanti commission déduite, TVA précisée, destination inconnue), cas chiffré du trajet d'approche (1,20 € par km affiché, 0,80 € par km réellement roulé), libertés de L1326-4 et réserve « sauf abus ».
+- Sources lues le jour même : Légifrance L1326-2 (version du 8 avril 2022) et D1326-2 (en vigueur au 14 novembre 2026), section D1326 (version du 7 mars 2021) ; recueil des textes T3P du ministère (18 août 2025) ; Code du travail numérique, L7341-1. L1326-1 et L1326-4 : textes du wiki, concordants avec le recueil du ministère.
+- Relecture indépendante : 26 affirmations confirmées, 0 contredite ; 3 formulations précisées (destination inconnue, itinéraire « au regard notamment » de la circulation et du choix du client, commission « lorsque la plateforme en prélève ») ; texte à l'écran du réel précisé.
+- Écarté faute de certitude : la filouterie (client qui ne paie pas) : l'article 313-5 du Code pénal vise « taxi ou voiture de place », sans nommer le VTC ; le montant de l'amende pour information manquante (R1326-10, non lu sur Légifrance).
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px sur la page, aucun débordement ; page dans sitemap.xml, llms.txt, l'index FAQ VTC et l'accueil (alerte axe « landmark-complementary-is-top-level » de l'accueil déjà présente avant).
+- Script du réel : reseaux/reels/2026-11-14-refuser-course-vtc-plateforme.txt
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Vendredi 13 novembre 2026, 18 h 50 · Visuels, étape 2 : schéma du précompte 2027
 
 - Nouveau schéma « qui verse quoi à qui » (bloc `flux` des guides, composant `.schema-flux`), validé par Benjamin sur captures.
