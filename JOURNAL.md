@@ -6,6 +6,13 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 14 novembre 2026, soir · Fond « plan de ville » des en-têtes de page
+
+- Le quadrillage des en-têtes de page est remplacé par un plan de ville stylisé, à droite du texte : rues, rond-point, rivière et parc en gris, un trajet bleu qui fait le tour du rond-point, un repère d'arrivée rouge (choix de Benjamin parmi plusieurs propositions). Masqué sur tablette, téléphone et à l'impression.
+- Le chapeau des en-têtes est limité à la largeur de lecture (lignes plus courtes sur les pages d'index comme la FAQ).
+- Accessibilité (axe) sans erreur en clair et en sombre.
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 14 novembre 2026, soir · En-tête des pages à une colonne aligné à gauche
 
 - Le livre, Contact, À propos, Mises à jour, numéros de l'Actualité : le surtitre, le titre et le chapeau reviennent à gauche, alignés sur le logo comme sur les autres pages ; le corps de la page reste centré (demande de Benjamin).

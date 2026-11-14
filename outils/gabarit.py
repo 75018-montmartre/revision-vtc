@@ -52,6 +52,7 @@ def _tete_page(corps, actif, racine):
     else:
         mp = "mp-colonne"
     tete = f'''<header class="tete-page {mp}">
+  <span class="plan-repere" aria-hidden="true"></span>
   <div class="page">
 {avant.strip()}
     {h1}{suite}
