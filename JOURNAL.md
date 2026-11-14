@@ -6,6 +6,11 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 14 novembre 2026, soir · En-tête des pages à une colonne aligné à gauche
+
+- Le livre, Contact, À propos, Mises à jour, numéros de l'Actualité : le surtitre, le titre et le chapeau reviennent à gauche, alignés sur le logo comme sur les autres pages ; le corps de la page reste centré (demande de Benjamin).
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 14 novembre 2026, soir · Phrase à retenir (wiki), avantages / limites et idée reçue (guides)
 
 - Wiki : « La phrase à retenir », un extrait mot pour mot du texte officiel mis en avant au-dessus du texte et surligné dedans, sur 5 articles pilotes : https://revision-vtc.fr/wiki/l3120-2.html, https://revision-vtc.fr/wiki/r3120-6.html, https://revision-vtc.fr/wiki/l3122-3.html, https://revision-vtc.fr/wiki/r3122-8.html, https://revision-vtc.fr/wiki/l3124-12.html. La génération s'arrête si l'extrait disparaît du texte officiel.

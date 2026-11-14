@@ -106,11 +106,12 @@ main{padding:0 0 var(--e8)}
 /* trois mises en page pour les pages intérieures, toutes dans le conteneur du site (--large), comme l'en-tête :
    le bord gauche du fil d'Ariane, du titre et du contenu tombe sur celui du logo (depuis le 13 novembre 2026 ;
    avant, ces pages étaient centrées dans un conteneur plus étroit, décalé de 16 à 200 px) :
-   - mp-colonne : une colonne de lecture (46rem), CENTRÉE dans l'écran, en-tête compris (Le livre, Contact, À propos,
-     Mises à jour… ; corrigé le 14 novembre 2026 : calée à gauche, elle laissait un grand vide à droite) ;
+   - mp-colonne : une colonne de lecture (46rem), CENTRÉE dans l'écran (Le livre, Contact, À propos, Mises à jour… ;
+     corrigé le 14 novembre 2026 : calée à gauche, elle laissait un grand vide à droite) ; l'en-tête (surtitre, titre,
+     chapeau) reste aligné sur le logo comme sur toutes les pages (demande de Benjamin, 14 novembre 2026, soir) ;
    - mp-cote    : la colonne de lecture à gauche + un encadré calé à droite, sur le bord du bouton « Le livre » (wiki, questions, simulateurs) ;
    - mp-grille  : pages d'index, texte et grilles de cartes sur toute la largeur du conteneur. */
-.mp-colonne.corps-page,.tete-page.mp-colonne .page{max-width:calc(var(--lecture) + 2 * var(--e5))}
+.mp-colonne.corps-page{max-width:calc(var(--lecture) + 2 * var(--e5))}
 .corps-page > *{max-width:var(--lecture)}
 .corps-page > :is(.deux-col,.wiki-theme,.questions,.numeros,.essentiel-liens,.sommaire,.autres-textes,.bloc-index){max-width:none}
 /* pages d'index (FAQ VTC, Guides VTC) : blocs les uns sous les autres, chacun sur toute la largeur de la grille de cartes ;
