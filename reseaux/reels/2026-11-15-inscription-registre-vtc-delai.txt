@@ -1,0 +1,40 @@
+RÉEL · Inscription au registre VTC : quel délai, et quand la renouveler ?
+Page : https://revision-vtc.fr/questions/2026-11-15-inscription-registre-vtc-delai.html
+Durée visée : 35 à 40 secondes
+
+ACCROCHE (0 à 3 s)
+  Texte à l'écran : Registre VTC : combien de temps pour être inscrit ?
+  Voix : Registre VTC : combien de temps pour être inscrit ?
+
+DÉROULÉ
+  Plan 1
+    Texte à l'écran : 2 mois au plus
+    Voix : Deux mois au plus, à compter de l'envoi du dossier complet. C'est l'article R3122-2 du Code des transports.
+  Plan 2
+    Texte à l'écran : Dossier complet + frais payés
+    Voix : Attention : le délai part d'un dossier complet, avec le récépissé de paiement des frais. Les frais sont de 170 euros.
+  Plan 3
+    Texte à l'écran : Carte pro d'abord
+    Voix : Le dossier demande une copie de la carte professionnelle de chaque conducteur. La carte s'obtient donc avant.
+  Plan 4
+    Texte à l'écran : Valable 5 ans
+    Voix : L'inscription se renouvelle tous les cinq ans.
+  Plan 5
+    Texte à l'écran : Renouveler au moins 3 mois avant
+    Voix : Et la demande de renouvellement se fait au moins trois mois avant la fin de validité.
+
+CHUTE
+  Texte à l'écran : 2 mois pour s'inscrire, 5 ans de validité
+  Voix : Deux mois pour être inscrit, cinq ans de validité, renouvellement demandé au moins trois mois avant. Réponse complète et sources sur revision-vtc.fr.
+
+LÉGENDE
+  Combien de temps faut-il pour être inscrit au registre des VTC ? Deux mois au plus après l'envoi du dossier complet, frais payés. L'inscription se renouvelle tous les cinq ans : demandez le renouvellement au moins trois mois avant l'échéance.
+  #examenvtc #chauffeurvtc #vtc #registrevtc #devenirchauffeurvtc #carteVTC #reglementationvtc
+  https://revision-vtc.fr/questions/2026-11-15-inscription-registre-vtc-delai.html
+
+SOURCES
+  - Code des transports, articles R3122-1 à R3122-4 (Légifrance) : https://www.legifrance.gouv.fr/codes/id/LEGISCTA000030048481/
+  - Code des transports, article R3122-2 (Légifrance) : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389532
+  - Service-public.fr, « Devenir chauffeur de VTC » : https://entreprendre.service-public.gouv.fr/vosdroits/F31027
+  - Code des transports, article L3122-3 (wiki du site, vérifié le 25 octobre 2026) : https://revision-vtc.fr/wiki/l3122-3.html
+  (consultées le 15 novembre 2026)

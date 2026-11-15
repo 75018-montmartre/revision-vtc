@@ -6,6 +6,15 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Dimanche 15 novembre 2026, 8 h 55 · Question VTC du jour
+
+- Question : « Inscription au registre VTC : quel délai, et quand la renouveler ? »
+- Page : https://revision-vtc.fr/questions/2026-11-15-inscription-registre-vtc-delai.html
+- Réponse courte : deux mois au plus à compter de l'envoi du dossier complet, frais d'inscription payés (article R3122-2 du Code des transports) ; renouvellement tous les cinq ans, demandé au moins trois mois avant la fin de validité.
+- Infographie : chiffres clés (2 mois, 170 €, 5 ans, 3 mois). Script du réel : `reseaux/reels/2026-11-15-inscription-registre-vtc-delai.txt`.
+- Relecture indépendante : 32 affirmations confirmées, 0 retirée. Écarté : le délai pour signaler un changement au registre (15 jours francs selon l'article R3122-1, 3 mois selon service-public.fr : sources discordantes).
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 14 novembre 2026, soir · Fond « plan de ville » des en-têtes de page
 
 - Le quadrillage des en-têtes de page est remplacé par un plan de ville stylisé, à droite du texte : rues, rond-point, rivière et parc en gris, un trajet bleu qui fait le tour du rond-point, un repère d'arrivée rouge (choix de Benjamin parmi plusieurs propositions). Masqué sur tablette, téléphone et à l'impression.

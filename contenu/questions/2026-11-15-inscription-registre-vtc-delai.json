@@ -1,0 +1,122 @@
+{
+ "date": "2026-11-15",
+ "slug": "inscription-registre-vtc-delai",
+ "question": "Inscription au registre VTC : quel délai, et quand la renouveler ?",
+ "reponse_courte": "Deux mois au plus à compter de l'envoi du dossier complet, frais d'inscription payés (article R3122-2 du Code des transports). L'inscription se renouvelle tous les cinq ans, et la demande de renouvellement doit être faite au moins trois mois avant la fin de sa validité.",
+ "sections": [
+  {
+   "titre": "La règle : deux mois après le dossier complet",
+   "texte": [
+    "L'article [R3122-2](../wiki/r3122-2.html) du Code des transports fixe le délai : l'inscription au registre des VTC « est effectuée dans un délai de deux mois à compter de l'envoi du dossier complet d'inscription par l'exploitant ».",
+    "Deux conditions font partir ce délai de 2 mois. Le dossier doit être complet, et le récépissé de paiement des frais d'inscription doit avoir été transmis au gestionnaire du registre. Un dossier envoyé incomplet ne fait pas courir les deux mois.",
+    "L'inscription donne lieu à l'envoi d'une attestation d'inscription à l'exploitant. C'est elle qui prouve que l'entreprise est inscrite.",
+    {
+     "chiffres": {
+      "items": [
+       {
+        "valeur": "2 mois",
+        "texte": "au plus pour être inscrit, à compter de l'envoi du dossier complet"
+       },
+       {
+        "valeur": "170 €",
+        "texte": "de frais d'inscription, payés en ligne sur le site du registre"
+       },
+       {
+        "valeur": "5 ans",
+        "texte": "de validité : l'inscription se renouvelle tous les cinq ans"
+       },
+       {
+        "valeur": "3 mois",
+        "texte": "au moins avant la fin de validité pour demander le renouvellement"
+       }
+      ],
+      "source": "Code des transports, articles R3122-2 et L3122-3 ; service-public.fr, fiche « Devenir chauffeur de VTC »"
+     }
+    }
+   ]
+  },
+  {
+   "titre": "Ce que contient un dossier complet",
+   "texte": [
+    "La demande est adressée au gestionnaire du registre « par voie électronique » (article [R3122-1](../wiki/r3122-1.html)). Elle est faite par l'exploitant, c'est-à-dire l'entreprise qui exploite les voitures. Elle est accompagnée de l'attestation d'assurance responsabilité civile professionnelle et d'une copie du justificatif d'immatriculation de l'entreprise à jour.",
+    "Le dossier comprend ensuite trois pièces : un justificatif de la capacité financière ; pour chaque voiture, une copie du certificat d'immatriculation (la carte grise) ; pour chaque conducteur, une copie de sa carte professionnelle.",
+    "Conséquence pratique : la carte professionnelle de chauffeur VTC doit être obtenue avant de déposer le dossier du registre, puisqu'une copie en est demandée pour chaque conducteur.",
+    "Les frais d'inscription sont de 170 €, payables en ligne sur le site du registre, selon service-public.fr. Le Code des transports les plafonne à 250 € par exploitant (article [R3122-3](../wiki/r3122-3.html)). Ce montant entre dans le budget de départ détaillé dans notre guide [« Combien coûte vraiment le lancement en VTC ? »](../dossiers/cout-pour-devenir-chauffeur-vtc.html)."
+   ]
+  },
+  {
+   "titre": "Dossier incomplet : une mise en demeure avant tout refus",
+   "texte": [
+    "L'inscription est refusée si le dossier est incomplet ou si les documents ne prouvent pas que l'exploitant remplit ses obligations (article R3122-2).",
+    "Ce refus ne peut pas être immédiat. Il intervient seulement après une mise en demeure invitant l'exploitant à compléter son dossier, restée sans effet. Le refus est motivé, et la mise en demeure comme le refus sont notifiés « par tout moyen permettant d'en accuser réception ».",
+    "En pratique : si vous recevez une mise en demeure, complétez le dossier sans attendre. Tant qu'il n'est pas complet, le délai de deux mois ne court pas."
+   ]
+  },
+  {
+   "titre": "Un calendrier daté, de l'inscription au renouvellement",
+   "texte": [
+    "Premier exemple : un exploitant envoie son dossier complet, frais payés, le 4 janvier 2027. Son inscription doit être effectuée au plus tard le 4 mars 2027.",
+    "L'inscription « est renouvelable tous les cinq ans » (article [L3122-3](../wiki/l3122-3.html)). Service-public.fr le dit aussi : « cette inscription doit être renouvelée tous les 5 ans ».",
+    "Le renouvellement se demande à l'avance. L'article R3122-2 prévoit qu'à la demande du titulaire « formée au moins trois mois avant le terme de la durée de validité », l'inscription est renouvelée avant ce terme, sauf si l'une des conditions de l'inscription n'est plus remplie.",
+    "Second exemple : si la validité d'une inscription prend fin le 15 mars 2032, la demande de renouvellement doit être faite le 15 décembre 2031 au plus tard, soit 3 mois avant l'échéance. Notez la date de fin de validité dès réception de l'attestation."
+   ]
+  },
+  {
+   "titre": "Deux cas de radiation, et une souplesse pour les véhicules",
+   "texte": [
+    "L'exploitant est radié du registre dans deux cas (article [R3122-4](../wiki/r3122-4.html)) : lorsqu'une des conditions de l'inscription cesse d'être remplie, notamment s'il met son inscription à la disposition d'un tiers, à titre gratuit ou onéreux ; et lorsqu'il cesse son activité de VTC, pour quelque motif que ce soit.",
+    "La radiation n'est prononcée qu'après une mise en demeure restée sans effet. Une simple information préalable suffit quand la radiation est demandée par l'exploitant lui-même ou quand le gestionnaire a constaté qu'il a cessé son activité.",
+    "Une souplesse existe pour les véhicules : en cas d'impossibilité matérielle d'utiliser une voiture inscrite, l'exploitant peut recourir à titre exceptionnel à un véhicule supplémentaire, en envoyant au gestionnaire son certificat d'immatriculation et la période concernée, qui ne peut excéder un mois (article R3122-1, III)."
+   ]
+  }
+ ],
+ "a_retenir": [
+  "L'inscription au registre des VTC est effectuée dans un délai de deux mois à compter de l'envoi du dossier complet, frais d'inscription payés.",
+  "Le dossier demande une copie de la carte professionnelle de chaque conducteur : la carte s'obtient avant l'inscription au registre.",
+  "L'inscription se renouvelle tous les cinq ans, sur une demande faite au moins trois mois avant la fin de sa validité."
+ ],
+ "wiki": [
+  "r3122-2",
+  "r3122-1",
+  "r3122-3",
+  "l3122-3",
+  "r3122-4"
+ ],
+ "fiches": [
+  [
+   "G1.2",
+   "S'inscrire au registre des VTC"
+  ],
+  [
+   "G1.3",
+   "La capacité financière de l'exploitant"
+  ],
+  [
+   "G1.5",
+   "Prêter ou louer son inscription"
+  ]
+ ],
+ "sources": [
+  {
+   "nom": "Code des transports, articles R3122-1 à R3122-4 (Légifrance, sous-section « Inscription au registre des voitures de transport avec chauffeur »)",
+   "url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000030048481/",
+   "date": "15 novembre 2026"
+  },
+  {
+   "nom": "Code des transports, article R3122-2 (Légifrance)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389532",
+   "date": "15 novembre 2026"
+  },
+  {
+   "nom": "Service-public.fr (entreprendre), « Devenir chauffeur de VTC », vérifié le 12 août 2026",
+   "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F31027",
+   "date": "15 novembre 2026"
+  },
+  {
+   "nom": "Code des transports, article L3122-3, texte recopié dans le wiki du site (vérifié le 25 octobre 2026)",
+   "url": "https://revision-vtc.fr/wiki/l3122-3.html",
+   "date": "15 novembre 2026"
+  }
+ ],
+ "verifie": "15 novembre 2026"
+}
