@@ -6,6 +6,18 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Dimanche 15 novembre 2026, 10 h 31 · Article n° 10 (tâche tous les deux jours)
+
+- Titre : « Micro-entreprise, EURL ou SASU : quel statut choisir pour être chauffeur VTC ? »
+- Page : https://revision-vtc.fr/dossiers/statut-chauffeur-vtc-micro-entreprise-eurl-sasu.html (2 433 mots, épreuve B, sans photo)
+- En bref : en micro-entreprise, 21,2 % du chiffre d'affaires en cotisations (22,9 % avec le versement libératoire), sans déduction des frais réels : pour 60 000 € de chiffre d'affaires et 36 000 € de frais, les cotisations prennent 53 % du bénéfice réel (notre calcul). EURL : gérant travailleur non salarié, cotisations minimales même sans rémunération, dividendes au-delà de 10 % du capital soumis à cotisations à l'IS. SASU : président assimilé salarié s'il est rémunéré ; payé seulement en dividendes (31,4 % de PFU en 2026), il ne cotise pas et n'a pas de protection sociale. IS : 15 % jusqu'à 42 500 €, sous conditions, puis 25 %.
+- Infographies : 4 (chiffres clés micro-entreprise, graphique en barres de l'exemple de Karim, chiffres clés SASU et dividendes, schéma de flux d'un bénéfice de SASU distribué).
+- Sources lues le jour même : Entreprendre.Service-Public.fr F31027, F36232, F36212, F37777, F37383, F36240, F23575 ; Service-Public.fr F34913 (revenus 2026) ; impots.gouv.fr (4 pages micro-entrepreneur et EURL, modifiées en octobre 2026) ; Justice.fr ; Bpifrance Création.
+- Relecture indépendante : 35 affirmations, 32 confirmées, 0 contredite, tous les calculs refaits exacts ; 3 non trouvées corrigées (petites taxes CFP et chambre de métiers sorties du taux de 21,2 %, précompte renvoyé au guide n° 7 avec une source, règles du métier retirées) ; 4 formulations précisées (IS des EURL sur option, sortie du régime après deux ans de dépassement, capital « entièrement » libéré, cotisations minimales facultatives à 0 €).
+- Écarté faute de certitude : montant des cotisations du gérant d'EURL et du président de SASU (aucun taux global officiel lu) ; frais de création d'une société ; montant exact de la CFP et de la taxe de chambre de métiers (F36232 les dit inclus dans le forfait, d'autres tableaux les ajoutent : à trancher).
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px (article et index des guides), aucun débordement ; page dans sitemap.xml, llms.txt et l'index des guides.
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Dimanche 15 novembre 2026, 8 h 55 · Question VTC du jour
 
 - Question : « Inscription au registre VTC : quel délai, et quand la renouveler ? »
