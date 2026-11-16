@@ -6,6 +6,19 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Lundi 16 novembre 2026, 7 h 55 · Actualité VTC n° 7 (tâche du lundi)
+
+- Page : https://revision-vtc.fr/actualite/2026-11-16.html (période du 10 au 16 novembre 2026)
+- Titre : « Directive plateformes : 30 recommandations, inscription à l'examen VTC de janvier »
+- Textes officiels : aucun nouveau texte VTC repéré au Journal officiel du 10 au 16 novembre 2026 (recherches par mots-clés ; sommaires du JO non lus en entier).
+- Examen : session d'admissibilité du 26 janvier 2027, inscription au plus tard le 18 décembre 2026 à 12 h (CMA Hauts-de-France), un mois avant la session (CMA Pays de la Loire) ; tarifs 2027 inchangés (246 €).
+- Cotisations et statut : affiliation AT-MP des travailleurs des plateformes, toujours un projet ; le rapport de la commission du Sénat dit « au plus tard le 1er janvier 2028 » (sa synthèse disait 2029) ; pas de vote en séance repéré.
+- Europe : rapport de la mission de transposition de la directive plateformes (remis le 2 novembre 2026) : 30 recommandations, présomption réfragable de salariat, ARPE transformée en Autorité de régulation des plateformes ; aucun projet de loi déposé.
+- Infographies : 1 (brève Europe, chiffres clés).
+- Simulateur : prix des carburants à jour (14 novembre 2026, mise à jour automatique).
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px, aucun débordement ; page dans sitemap.xml et llms.txt.
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Dimanche 15 novembre 2026, 10 h 31 · Article n° 10 (tâche tous les deux jours)
 
 - Titre : « Micro-entreprise, EURL ou SASU : quel statut choisir pour être chauffeur VTC ? »
