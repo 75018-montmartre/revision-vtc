@@ -1,0 +1,115 @@
+{
+ "date": "2026-11-16",
+ "slug": "telephone-au-volant-vtc-regles",
+ "question": "Téléphone au volant en VTC : qu'est-ce qui est autorisé ?",
+ "reponse_courte": "Le Code de la route interdit au conducteur d'un véhicule en circulation de tenir son téléphone en main et de porter à l'oreille une oreillette, des écouteurs ou un casque (article R412-6-1). L'amende forfaitaire est de 135 € avec un retrait de 3 points ; un GPS placé dans le champ de vision reste permis.",
+ "sections": [
+  {
+   "titre": "La règle : ni téléphone en main, ni oreillette",
+   "texte": [
+    "L'article R412-6-1 du Code de la route pose deux interdictions. La première : « L'usage d'un téléphone tenu en main par le conducteur d'un véhicule en circulation est interdit. »",
+    "La seconde vise ce qu'on porte à l'oreille. Est interdit « le port à l'oreille, par le conducteur d'un véhicule en circulation, de tout dispositif susceptible d'émettre du son, à l'exception des appareils électroniques correcteurs de surdité ». Une oreillette Bluetooth, des écouteurs ou un casque sont donc interdits, même pour un appel professionnel. Selon service-public.fr, cette interdiction s'applique depuis le 1er juillet 2015.",
+    "Le texte prévoit deux exceptions à l'interdiction du port à l'oreille, qui ne concernent pas les chauffeurs VTC : les conducteurs des véhicules d'intérêt général prioritaire, et l'enseignement de la conduite ou l'examen du permis des cyclomoteurs, motocyclettes, tricycles et quadricycles à moteur.",
+    "Hors ces exceptions, ces règles valent pour tous les conducteurs. Pour un chauffeur VTC, le téléphone est aussi un outil de travail : elles s'appliquent pendant chaque course, comme en dehors."
+   ]
+  },
+  {
+   "titre": "Ce que le texte n'interdit pas : le support, le GPS, le haut-parleur",
+   "texte": [
+    "L'article R412-6-1 vise deux gestes précis : tenir le téléphone en main, et porter un dispositif à l'oreille. Un téléphone posé sur un support, sans être tenu, n'est pas visé par ce texte. Un appel passé par le haut-parleur de la voiture, sans rien porter à l'oreille, non plus.",
+    "Les écrans font l'objet d'un autre article, le R412-6-2. Il interdit de placer dans le champ de vision du conducteur d'un véhicule en circulation « un appareil en fonctionnement doté d'un écran et ne constituant pas une aide à la conduite ou à la navigation ». Un GPS est donc permis ; un écran qui diffuse une vidéo, non. Cette infraction est une contravention de la cinquième classe, avec un retrait de 3 points, et l'appareil est saisi.",
+    "Une règle générale s'ajoute : le conducteur doit rester en état d'exécuter « commodément et sans délai » toutes les manœuvres qui lui incombent (article R412-6 du Code de la route). Un support autorisé ne permet donc pas de manipuler l'écran au détriment de la conduite."
+   ]
+  },
+  {
+   "titre": "Les sanctions : 135 €, 3 points, et le permis",
+   "texte": [
+    "Le téléphone tenu en main et l'oreillette relèvent de la même infraction : une contravention de la quatrième classe (article R412-6-1). Service-public.fr en donne le prix : une amende forfaitaire de 135 € et un retrait de 3 points sur le permis de conduire.",
+    {
+     "chiffres": {
+      "items": [
+       {
+        "valeur": "135 €",
+        "texte": "d'amende forfaitaire pour un téléphone tenu en main ou une oreillette"
+       },
+       {
+        "valeur": "3 points",
+        "texte": "retirés du permis de conduire, de plein droit"
+       },
+       {
+        "valeur": "3 ans",
+        "texte": "de suspension du permis au plus, si un juge la prononce"
+       },
+       {
+        "valeur": "6 mois",
+        "texte": "de suspension au plus, décidée par le préfet, pour un téléphone tenu en main"
+       }
+      ],
+      "source": "Code de la route, article R412-6-1 ; service-public.fr, actualité du 8 octobre 2026"
+     }
+    },
+    "Le juge peut aussi prononcer une suspension du permis « pour une durée de trois ans au plus ». Le texte précise que cette suspension peut être « limitée à la conduite en dehors de l'activité professionnelle ».",
+    "Pour le téléphone tenu en main, le préfet peut aussi suspendre le permis, sans attendre le juge. Selon service-public.fr (actualité du 8 octobre 2026), une instruction ministérielle du 29 septembre 2026 demande aux préfets de recourir à la suspension administrative du permis de tout conducteur qui tient son téléphone en main, « pendant une durée maximale de 6 mois ». Le site précise qu'il n'est pas nécessaire que le conducteur ait commis en même temps un excès de vitesse ou une autre infraction. Dans ce cas, selon service-public.fr, le permis n'est pas retiré directement par les forces de l'ordre au moment du contrôle : la suspension est décidée et notifiée par le préfet, après une procédure contradictoire."
+   ]
+  },
+  {
+   "titre": "Trois situations de chauffeur VTC",
+   "texte": [
+    "**Le client appelle pendant que vous roulez, et vous répondez avec une oreillette.** C'est interdit : port à l'oreille d'un dispositif qui émet du son. Amende forfaitaire de 135 € et 3 points.",
+    "**Vous prenez le téléphone en main pour accepter une course.** C'est interdit : usage d'un téléphone tenu en main par le conducteur d'un véhicule en circulation. Même sanction, et le risque d'une suspension du permis.",
+    "**Le téléphone est sur un support et affiche le GPS.** Le Code de la route ne l'interdit pas : l'écran est une aide à la navigation, et le téléphone n'est pas tenu en main.",
+    "Pour savoir comment les infractions routières pèsent sur l'accès au métier, lisez aussi notre question [« Casier judiciaire VTC : quelles condamnations empêchent d'être chauffeur ? »](../questions/2026-11-12-casier-judiciaire-vtc-condamnations.html). Le téléphone tenu en main est une contravention de la quatrième classe, pas un délit."
+   ]
+  },
+  {
+   "titre": "À ne pas confondre : l'oreillette et le haut-parleur",
+   "texte": [
+    "« Mains libres » ne veut pas dire « autorisé » dans tous les cas. L'article R412-6-1 interdit ce qui est porté à l'oreille : oreillette, écouteurs, casque. Il ne vise pas le haut-parleur de la voiture.",
+    "À l'examen VTC comme sur la route, retenez la formule du texte : pas de téléphone « tenu en main », rien « à l'oreille ». Les points du permis et la suspension sont traités dans la partie sécurité routière du livre."
+   ]
+  }
+ ],
+ "a_retenir": [
+  "Le Code de la route interdit au conducteur d'un véhicule en circulation de tenir son téléphone en main et de porter une oreillette, des écouteurs ou un casque.",
+  "Téléphone en main ou oreillette : amende forfaitaire de 135 € et 3 points ; un juge peut suspendre le permis jusqu'à 3 ans, et, pour le téléphone tenu en main, le préfet jusqu'à 6 mois.",
+  "Un GPS dans le champ de vision et le haut-parleur de la voiture restent permis ; un écran qui n'aide ni à conduire ni à naviguer est interdit."
+ ],
+ "wiki": [],
+ "fiches": [
+  [
+   "C7.3",
+   "Contraventions, délits, suspension, annulation"
+  ],
+  [
+   "C7.1",
+   "Le permis à points"
+  ],
+  [
+   "C5.1",
+   "Avant de partir : vérifications et équipements"
+  ]
+ ],
+ "sources": [
+  {
+   "nom": "Code de la route, article R412-6-1 (Légifrance, version en vigueur depuis le 22 mai 2020)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041910422",
+   "date": "16 novembre 2026"
+  },
+  {
+   "nom": "Code de la route, section « Principes généraux de circulation », articles R412-6 et R412-6-2 (Légifrance)",
+   "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074228/LEGISCTA000006177121/",
+   "date": "16 novembre 2026"
+  },
+  {
+   "nom": "Code de la route, article R412-6 (Légifrance)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000019277061",
+   "date": "16 novembre 2026"
+  },
+  {
+   "nom": "Service-public.fr, « Le téléphone au volant peut entraîner une suspension administrative du permis de conduire », publié le 8 octobre 2026",
+   "url": "https://www.service-public.gouv.fr/particuliers/actualites/A19086",
+   "date": "16 novembre 2026"
+  }
+ ],
+ "verifie": "16 novembre 2026"
+}

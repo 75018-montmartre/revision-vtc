@@ -6,6 +6,17 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Lundi 16 novembre 2026, 8 h 56 · Question VTC du jour
+
+- Question : « Téléphone au volant en VTC : qu'est-ce qui est autorisé ? »
+- Page : https://revision-vtc.fr/questions/2026-11-16-telephone-au-volant-vtc-regles.html
+- Réponse courte : le Code de la route interdit au conducteur d'un véhicule en circulation de tenir son téléphone en main et de porter une oreillette, des écouteurs ou un casque (article R412-6-1) ; amende forfaitaire de 135 € et retrait de 3 points ; un GPS placé dans le champ de vision reste permis (article R412-6-2).
+- Nouveau : suspension administrative du permis jusqu'à 6 mois par le préfet pour le téléphone tenu en main, même sans autre infraction (instruction du 29 septembre 2026, service-public.fr du 8 octobre 2026).
+- Infographie : chiffres clés (135 €, 3 points, 3 ans, 6 mois). Script du réel : `reseaux/reels/2026-11-16-telephone-au-volant-vtc-regles.txt`.
+- Relecture indépendante : 35 affirmations confirmées, 3 non trouvées retirées ou reformulées, 0 contredite ; 5 formulations précisées.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px, aucun débordement ; page dans sitemap.xml, llms.txt, l'index de la FAQ et l'accueil.
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Lundi 16 novembre 2026, 7 h 55 · Actualité VTC n° 7 (tâche du lundi)
 
 - Page : https://revision-vtc.fr/actualite/2026-11-16.html (période du 10 au 16 novembre 2026)

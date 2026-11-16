@@ -1,0 +1,40 @@
+RÉEL · Téléphone au volant en VTC : qu'est-ce qui est autorisé ?
+Page : https://revision-vtc.fr/questions/2026-11-16-telephone-au-volant-vtc-regles.html
+Durée visée : 35 à 40 secondes
+
+ACCROCHE (0 à 3 s)
+  Texte à l'écran : Chauffeur VTC : l'oreillette au volant, c'est autorisé ?
+  Voix : Chauffeur VTC : l'oreillette au volant, c'est autorisé ?
+
+DÉROULÉ
+  Plan 1
+    Texte à l'écran : Oreillette : interdite
+    Voix : Non. Le Code de la route interdit de porter à l'oreille tout dispositif qui émet du son. Oreillette, écouteurs, casque.
+  Plan 2
+    Texte à l'écran : Téléphone en main : interdit
+    Voix : Tenir son téléphone en main au volant, véhicule en circulation, est interdit aussi. Même pour accepter une course.
+  Plan 3
+    Texte à l'écran : 135 € et 3 points
+    Voix : L'amende forfaitaire est de 135 euros, avec un retrait de 3 points.
+  Plan 4
+    Texte à l'écran : Téléphone en main : 6 mois de suspension
+    Voix : Pour le téléphone tenu en main, le préfet peut aussi suspendre le permis jusqu'à 6 mois.
+  Plan 5
+    Texte à l'écran : Support + GPS : permis
+    Voix : Ce qui reste permis : le GPS dans le champ de vision, et le haut-parleur de la voiture.
+
+CHUTE
+  Texte à l'écran : Rien en main, rien à l'oreille
+  Voix : Rien en main, rien à l'oreille. Réponse complète et sources sur revision-vtc.fr.
+
+LÉGENDE
+  Oreillette, téléphone en main, GPS : qu'est-ce qu'un chauffeur VTC a le droit de faire au volant ? Le Code de la route interdit le téléphone tenu en main et tout ce qui se porte à l'oreille : 135 euros et 3 points, et le permis peut être suspendu. Le GPS et le haut-parleur de la voiture restent permis.
+  #examenvtc #chauffeurvtc #vtc #telephoneauvolant #securiteroutiere #permisdeconduire #devenirchauffeurvtc
+  https://revision-vtc.fr/questions/2026-11-16-telephone-au-volant-vtc-regles.html
+
+SOURCES
+  - Code de la route, article R412-6-1 (Légifrance) : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041910422
+  - Code de la route, articles R412-6 et R412-6-2 (Légifrance) : https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074228/LEGISCTA000006177121/
+  - Code de la route, article R412-6 (Légifrance) : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000019277061
+  - Service-public.fr, actualité du 8 octobre 2026 : https://www.service-public.gouv.fr/particuliers/actualites/A19086
+  (consultées le 16 novembre 2026)
