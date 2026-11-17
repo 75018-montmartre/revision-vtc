@@ -6,6 +6,17 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mardi 17 novembre 2026, 10 h 38 · Article n° 11 (tâche tous les deux jours)
+
+- Titre : « Assurance VTC : quelles assurances sont obligatoires pour un chauffeur, et que risque-t-on sans ? »
+- Page : https://revision-vtc.fr/dossiers/assurance-vtc-obligations-chauffeur.html (2 399 mots, épreuve A, sans photo)
+- En bref : deux assurances obligatoires pour un chauffeur VTC indépendant : responsabilité civile professionnelle (article L3120-4, pièce exigée pour l'inscription au registre) et assurance du véhicule, dont le justificatif doit indiquer expressément que le contrat couvre le transport public particulier de personnes (article R211-14-0-1 du Code des assurances, depuis le 1er avril 2024 ; R3120-4). Justificatif absent au contrôle : contravention de 5e classe (1 500 € au plus). Véhicule non assuré : délit puni de 3 750 €, ou amende forfaitaire de 750 € (500 € plus 50 % pour le FGAO ; 600 € minorée, 1 500 € majorée). Plateformes : justificatif avant la première course puis au moins chaque année (R3141-2), sinon plus de courses (R3141-6). Assurance accidents du travail : cotisation prise en charge par la plateforme, dans la limite d'un plafond, au-delà de 13 % du plafond de la sécurité sociale de chiffre d'affaires avec elle (6 247,80 € en 2026).
+- Infographies : 3 (schéma de flux des trois contrôles, graphique en barres des amendes pour conduite sans assurance, chiffres clés de la prise en charge accidents du travail).
+- Relecture indépendante : 33 points vérifiés, montants et calculs exacts ; 1 attribution de source corrigée (amende de 3 750 € de la fiche F31027, qui vise la RC professionnelle : phrase retirée), conditions de l'amende forfaitaire complétées, « hors récidive » ajouté, confiscation reformulée, mention du téléphone retirée.
+- Écarté faute de certitude : prix des contrats (renvoi au guide n° 1), montant du plafond de prise en charge accidents du travail, amende en récidive pour défaut d'assurance (aucune source officielle lue).
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px (article et index des guides), aucun débordement ; page dans sitemap.xml, llms.txt et l'index des guides.
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mardi 17 novembre 2026, 8 h 59 · Question VTC du jour
 
 - Question : « CFE chauffeur VTC : combien et quand la payer en 2026 ? »
