@@ -1,0 +1,99 @@
+{
+ "date": "2026-11-17",
+ "slug": "cfe-chauffeur-vtc-montant",
+ "question": "CFE chauffeur VTC : combien et quand la payer en 2026 ?",
+ "reponse_courte": "Un chauffeur VTC sans local paie la CFE sur une base minimum fixée par sa commune, selon son chiffre d'affaires de 2024 : en 2026, de 250 € à 597 € jusqu'à 10 000 €, à 1 194 € jusqu'à 32 600 €, à 2 509 € jusqu'à 100 000 €, multipliée par le taux local. Paiement au plus tard le 15 décembre ; pas de CFE l'année de création.",
+ "sections": [
+  {
+   "titre": "La règle : une base minimum, même sans local",
+   "texte": [
+    "La cotisation foncière des entreprises (CFE) est due par « tout entrepreneur individuel (dont les micro-entrepreneurs), y compris s'il exerce son activité à domicile ou chez ses clients » (Entreprendre.Service-Public.fr). Un chauffeur VTC qui n'a ni garage ni bureau la paie donc aussi.",
+    "Service-public.fr le dit en toutes lettres : « Si l'entrepreneur ne dispose pas d'un local et exerce son activité à domicile (ou chez ses clients), celui-ci est quand même redevable de la CFE. » Le montant est alors calculé en appliquant un taux, variable selon la commune, à une **base d'imposition minimum**.",
+    "Cette base minimum n'est pas libre. La loi (article 1647 D du Code général des impôts) fixe six tranches selon le chiffre d'affaires hors taxes ; dans chaque tranche, la commune choisit sa base entre un plancher et un plafond."
+   ]
+  },
+  {
+   "titre": "Le barème 2026 : trois tranches pour un chauffeur VTC",
+   "texte": [
+    "Pour la CFE due en 2026, la tranche dépend du chiffre d'affaires hors taxes réalisé en N-2, c'est-à-dire **en 2024**. Les montants ci-dessous sont des bases d'imposition, pas des montants à payer.",
+    {
+     "tableau": {
+      "legende": "Base minimum de CFE due en 2026, selon le chiffre d'affaires hors taxes de 2024 (fourchette dans laquelle la commune choisit)",
+      "colonnes": ["Chiffre d'affaires hors taxes de 2024", "Base minimum en 2026"],
+      "lignes": [
+       ["Jusqu'à 10 000 €", "De 250 € à 597 €"],
+       ["De 10 001 € à 32 600 €", "De 250 € à 1 194 €"],
+       ["De 32 601 € à 100 000 €", "De 250 € à 2 509 €"],
+       ["De 100 001 € à 250 000 €", "De 250 € à 4 183 €"],
+       ["De 250 001 € à 500 000 €", "De 250 € à 5 974 €"],
+       ["À partir de 500 001 €", "De 250 € à 7 769 €"]
+      ]
+     }
+    },
+    "Les trois premières tranches couvrent les chiffres d'affaires jusqu'à 100 000 €, un montant supérieur au [plafond de la micro-entreprise](../questions/2026-11-10-plafond-micro-entreprise-vtc.html).",
+    {
+     "graphique": {
+      "type": "barres",
+      "titre": "Plafond de la base minimum de CFE en 2026, pour les trois premières tranches",
+      "lecture": "Plus le chiffre d'affaires de 2024 est élevé, plus la commune peut fixer une base haute : jusqu'à 597 €, 1 194 € ou 2 509 €, avec un plancher de 250 € partout.",
+      "series": ["Plafond de la base minimum"],
+      "max": 2509,
+      "groupes": [
+       {"libelle": "Jusqu'à 10 000 €", "valeurs": [597], "affiche": ["597 €"]},
+       {"libelle": "De 10 001 € à 32 600 €", "valeurs": [1194], "affiche": ["1 194 €"]},
+       {"libelle": "De 32 601 € à 100 000 €", "valeurs": [2509], "affiche": ["2 509 €"]}
+      ],
+      "source": "Entreprendre.Service-Public.fr (fiche F23547, vérifiée le 2 avril 2026) ; Direction générale des collectivités locales, fiche CET-3-2026"
+     }
+    },
+    "Ces limites sont revalorisées chaque année. Les collectivités locales qui veulent changer leur base minimum doivent délibérer avant le 1er octobre d'une année, pour une application à partir de l'année suivante (fiche CET-3-2026 de la Direction générale des collectivités locales)."
+   ]
+  },
+  {
+   "titre": "Du barème au montant : un exemple chiffré",
+   "texte": [
+    "Le montant de la CFE est égal à la base minimum multipliée par le taux applicable dans la commune. Le BOFiP l'écrit ainsi : « La CFE minimum est égale au produit de la base minimum par le taux global de CFE applicable pour l'année d'imposition, augmenté des frais de gestion de la fiscalité directe locale » (la phrase renvoie ensuite à l'article 1641 du Code général des impôts).",
+    "Exemple, avec deux hypothèses : votre commune a fixé une base minimum de 1 000 € pour votre tranche, et son taux global est de 30 %. La CFE est de 1 000 € × 30 % = **300 €**, avant les frais de gestion qui s'y ajoutent (1 % selon justice.fr).",
+    "La base et le taux varient d'une commune à l'autre : seul votre avis d'imposition donne votre montant exact."
+   ]
+  },
+  {
+   "titre": "Les deux premières années : exonération, puis base réduite de moitié",
+   "texte": [
+    "**L'année de création**, pas de CFE. Selon justice.fr, « le micro-entrepreneur est exonéré du paiement de la CFE la première année d'activité, quelle que soit la date de création ». Il doit envoyer une déclaration initiale 1447-C-SD au plus tard le 31 décembre de cette année-là, par voie postale, au service des impôts des entreprises dont il dépend.",
+    "**L'année suivante**, la CFE est due, mais le micro-entrepreneur bénéficie d'une réduction de 50 % de sa base d'imposition (justice.fr). Dans l'exemple ci-dessus, la base passe de 1 000 € à 500 €, et la CFE de 300 € à **150 €**.",
+    "Exemple daté : une chauffeuse crée sa micro-entreprise le 10 mars 2025. Elle ne paie pas de CFE pour 2025 et envoie sa déclaration 1447-C-SD au plus tard le 31 décembre 2025. En 2026, elle paie la CFE avec une base réduite de moitié, sauf si elle remplit la condition des 5 000 € expliquée plus bas (chiffre d'affaires de 2025 ramené sur 12 mois). À partir de 2027, la base est entière."
+   ]
+  },
+  {
+   "titre": "Exonération sous 5 000 € de chiffre d'affaires",
+   "texte": [
+    "Service-public.fr : « L'entreprise est exonérée de CFE si le CAHT qu'elle a réalisé l'avant-dernière année (N-2) n'a pas dépassé 5 000 € ». Pour la CFE de 2026, c'est donc le chiffre d'affaires hors taxes de 2024 qui compte.",
+    "Le BOFiP précise qu'il s'agit d'une exonération de la cotisation minimum, en vigueur depuis les impositions de 2019. C'est justement celle que paie le chauffeur sans local.",
+    "Pour une entreprise créée l'année précédente (N-1), service-public.fr indique qu'elle bénéficie de cette exonération si le chiffre d'affaires hors taxes de cette première année n'a pas dépassé 5 000 €, et précise que l'application de ce seuil « peut toutefois nécessiter de recalculer ce CAHT sur 12 mois au moyen d'un calcul au prorata temporis ». Exemple : 4 000 € de chiffre d'affaires réalisés en 3 mois correspondent à 16 000 € sur 12 mois, au-dessus du seuil."
+   ]
+  },
+  {
+   "titre": "Quand et comment payer",
+   "texte": [
+    "L'avis d'imposition est dématérialisé : il arrive « sur son compte fiscal en ligne », pas par courrier (justice.fr). Il indique le montant et le délai de paiement.",
+    "Service-public.fr : « En général, le montant de la CFE doit être réglé au plus tard le 15 décembre (inclus). » Un acompte de 50 %, à régler en général entre le 26 mai et le 16 juin, ne concerne que les entreprises dont la CFE dépasse 3 000 €.",
+    "Erreur fréquente : croire que l'exonération des taxis vaut pour les VTC. Service-public.fr la réserve aux chauffeurs de taxis ou d'ambulances qui respectent « les tarifs réglementaires » ; elle ne mentionne pas les VTC. Autre confusion : le précompte des cotisations par les plateformes, au 1er janvier 2027, ne couvre pas la CFE : l'article L613-6-1 du Code de la sécurité sociale exclut l'article 1447 du Code général des impôts, celui de la CFE, qui reste donc à payer par vous (voir [le guide du précompte](../dossiers/precompte-cotisations-vtc-plateformes-2027.html) et [les 10 erreurs du chauffeur débutant](../dossiers/erreurs-chauffeur-vtc-debutant.html))."
+   ]
+  }
+ ],
+ "a_retenir": [
+  "Un chauffeur VTC sans local paie quand même la CFE, calculée sur une base minimum fixée par sa commune et multipliée par le taux local.",
+  "En 2026, la base minimum va de 250 € à 597 € jusqu'à 10 000 € de chiffre d'affaires de 2024, jusqu'à 1 194 € puis 2 509 € dans les deux tranches suivantes.",
+  "Pas de CFE l'année de création, base réduite de moitié l'année suivante, exonération si le chiffre d'affaires de N-2 n'a pas dépassé 5 000 € ; paiement en général au plus tard le 15 décembre."
+ ],
+ "wiki": [],
+ "fiches": [["B4.6", "La cotisation foncière des entreprises (CFE)"]],
+ "sources": [
+  {"nom": "Entreprendre.Service-Public.fr, « Cotisation foncière des entreprises (CFE) », fiche F23547, vérifiée le 2 avril 2026", "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F23547", "date": "17 novembre 2026"},
+  {"nom": "Justice.fr, fiche sur la CFE du micro-entrepreneur, mise à jour le 26 mars 2026 (reprise de la fiche Service-Public F23999)", "url": "https://www.justice.fr/fiche/micro-entrepreneur-payer-cotisation-fonciere-entreprises-cfe", "date": "17 novembre 2026"},
+  {"nom": "Direction générale des collectivités locales, fiche CET-3-2026 sur la base minimum de CFE (catalogue des délibérations fiscales)", "url": "https://www.collectivites-locales.gouv.fr/files/files/2.%20G%C3%A9rer%20les%20finances%20publiques%20locales/3.%20La%20fiscalit%C3%A9%20locale/Fiscalit%C3%A9%20directe%20locale/Catalogue%20des%20d%C3%A9lib%C3%A9rations/CET/CET-3-2026.pdf", "date": "17 novembre 2026"},
+  {"nom": "BOFiP, BOI-IF-CFE-20-20-40-10, « Détermination de la base d'imposition - Cotisation minimum - Règles générales » (version en vigueur depuis le 28 juin 2023)", "url": "https://bofip.impots.gouv.fr/node/346565", "date": "17 novembre 2026"}
+ ],
+ "verifie": "17 novembre 2026"
+}

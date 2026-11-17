@@ -1,0 +1,40 @@
+RÉEL · CFE chauffeur VTC : combien et quand la payer en 2026 ?
+Page : https://revision-vtc.fr/questions/2026-11-17-cfe-chauffeur-vtc-montant.html
+Durée visée : 35 à 40 secondes
+
+ACCROCHE (0 à 3 s)
+  Texte à l'écran : Chauffeur VTC sans local : la CFE, c'est pour vous ?
+  Voix : Chauffeur VTC sans bureau ni garage : la CFE, c'est pour vous ?
+
+DÉROULÉ
+  Plan 1
+    Texte à l'écran : Oui, même sans local
+    Voix : Oui. Même si vous travaillez depuis chez vous, la CFE est due, sauf si votre chiffre d'affaires de 2024 n'a pas dépassé 5 000 euros. Elle est calculée sur une base minimum fixée par votre commune.
+  Plan 2
+    Texte à l'écran : 2026 : selon le chiffre de 2024
+    Voix : En 2026, cette base dépend de votre chiffre d'affaires de 2024. Jusqu'à 10 000 euros, elle va de 250 à 597 euros.
+  Plan 3
+    Texte à l'écran : Base : 1 194 € puis 2 509 € au plus
+    Voix : Jusqu'à 32 600 euros de chiffre d'affaires, la base peut monter à 1 194 euros, puis à 2 509 euros jusqu'à 100 000 euros de chiffre d'affaires. On multiplie ensuite par le taux local.
+  Plan 4
+    Texte à l'écran : Création : 0 €, puis base ÷ 2
+    Voix : L'année de création, pas de CFE, mais une déclaration 1447-C-SD à envoyer avant le 31 décembre. L'année suivante, la base est réduite de moitié.
+  Plan 5
+    Texte à l'écran : Avis en ligne, pas par courrier
+    Voix : L'avis arrive sur votre compte fiscal en ligne, pas par courrier. En général, il faut payer au plus tard le 15 décembre.
+
+CHUTE
+  Texte à l'écran : Vérifiez votre compte fiscal avant le 15 décembre
+  Voix : Allez voir votre compte fiscal avant le 15 décembre. Réponse complète et sources sur revision-vtc.fr.
+
+LÉGENDE
+  La CFE concerne aussi le chauffeur VTC qui n'a pas de local. En 2026, elle se calcule sur une base minimum qui dépend du chiffre d'affaires de 2024, multipliée par le taux de la commune. Pas de CFE l'année de création (déclaration 1447-C-SD à envoyer au plus tard le 31 décembre). L'avis est en ligne, et le paiement est en général à faire au plus tard le 15 décembre.
+  #chauffeurvtc #vtc #cfe #microentreprise #autoentrepreneur #examenvtc #impots
+  https://revision-vtc.fr/questions/2026-11-17-cfe-chauffeur-vtc-montant.html
+
+SOURCES
+  - Entreprendre.Service-Public.fr, fiche F23547 (vérifiée le 2 avril 2026) : https://entreprendre.service-public.gouv.fr/vosdroits/F23547
+  - Justice.fr, CFE du micro-entrepreneur (mise à jour le 26 mars 2026) : https://www.justice.fr/fiche/micro-entrepreneur-payer-cotisation-fonciere-entreprises-cfe
+  - Direction générale des collectivités locales, fiche CET-3-2026 : https://www.collectivites-locales.gouv.fr/files/files/2.%20G%C3%A9rer%20les%20finances%20publiques%20locales/3.%20La%20fiscalit%C3%A9%20locale/Fiscalit%C3%A9%20directe%20locale/Catalogue%20des%20d%C3%A9lib%C3%A9rations/CET/CET-3-2026.pdf
+  - BOFiP, BOI-IF-CFE-20-20-40-10 : https://bofip.impots.gouv.fr/node/346565
+  (consultées le 17 novembre 2026)

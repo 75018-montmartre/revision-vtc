@@ -6,6 +6,17 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mardi 17 novembre 2026, 8 h 59 · Question VTC du jour
+
+- Question : « CFE chauffeur VTC : combien et quand la payer en 2026 ? »
+- Page : https://revision-vtc.fr/questions/2026-11-17-cfe-chauffeur-vtc-montant.html
+- Réponse courte : un chauffeur VTC sans local paie la CFE sur une base minimum fixée par sa commune selon son chiffre d'affaires de 2024 (en 2026 : de 250 € à 597 € jusqu'à 10 000 €, à 1 194 € jusqu'à 32 600 €, à 2 509 € jusqu'à 100 000 €), multipliée par le taux local ; paiement en général au plus tard le 15 décembre ; pas de CFE l'année de création.
+- Nouveau : barème 2026 de la base minimum (6 tranches), calcul base × taux avec exemple, exonération sous 5 000 € (avec le calcul sur 12 mois pour une entreprise créée l'année précédente), exemple daté d'une création en 2025.
+- Infographie : graphique en barres (plafond de la base minimum pour les trois premières tranches). Script du réel : `reseaux/reels/2026-11-17-cfe-chauffeur-vtc-montant.txt`.
+- Relecture indépendante : 33 affirmations confirmées, 2 non trouvées retirées ou sourcées (plafond de 83 600 € appliqué à 2024, précompte), 1 contredite corrigée (taxe additionnelle « sur l'avis » retirée) ; 3 citations rétablies mot pour mot ou complétées.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px, aucun débordement ; page dans sitemap.xml, llms.txt, l'index de la FAQ et l'accueil.
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Lundi 16 novembre 2026, 8 h 56 · Question VTC du jour
 
 - Question : « Téléphone au volant en VTC : qu'est-ce qui est autorisé ? »
