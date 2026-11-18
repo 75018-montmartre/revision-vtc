@@ -6,6 +6,17 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 18 novembre 2026, 9 h 05 · Question VTC du jour
+
+- Question : « Alcool au volant : quel taux pour un chauffeur VTC ? »
+- Page : https://revision-vtc.fr/questions/2026-11-18-alcool-chauffeur-vtc-taux-autorise.html
+- Réponse courte : au volant d'une VTC, le seuil est celui des « autres conducteurs » : 0,5 g/l de sang, soit 0,25 mg/l d'air expiré (article R234-1 du Code de la route) ; 0,2 g/l en permis probatoire ou si le droit de conduire est limité aux véhicules avec éthylotest antidémarrage ; le 0,2 g/l du transport en commun (catégories M2 et M3, article R311-1) ne vise pas une voiture VTC de neuf places au plus (R3122-6).
+- Nouveau : pourquoi le seuil du transport en commun ne s'applique pas (définitions M1 / M2-M3), seuils personnels (probatoire, éthylotest antidémarrage imposé), sanctions de la contravention et du délit, suspension limitable à la conduite hors activité professionnelle pour la contravention seulement, exemple à 0,3 g/l dans trois situations.
+- Infographie : chiffres clés (0,5 g/l, 0,25 mg/l, 6 points, 0,8 g/l). Script du réel : `reseaux/reels/2026-11-18-alcool-chauffeur-vtc-taux-autorise.txt`.
+- Relecture indépendante : 27 affirmations, 0 contredite ; 6 précisions apportées (éthylotest antidémarrage = droit de conduire limité, seuil de 0,8 g/l attribué à service-public.fr, cas du permis redevenu probatoire, « transport en commun » au lieu de « bus », catégorie M2/M3, phrase non sourcée retirée).
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px sur la page et l'index de la FAQ, aucun débordement ; page dans sitemap.xml, llms.txt, l'index de la FAQ et l'accueil. Accueil : une alerte axe « landmark-complementary-is-top-level » (bonne pratique, déjà présente avant cette publication).
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 18 novembre 2026, 8 h 26 · Veille du wiki (tâche du mercredi)
 
 - **PROBLÈME : 75 textes sur 78 confirmés dans leur version en vigueur au 18 novembre 2026 ; 3 non lus** (Légifrance a refusé les pages, client_error répétés). Date « vérifié » laissée au 25 octobre 2026.

@@ -1,0 +1,124 @@
+{
+ "date": "2026-11-18",
+ "slug": "alcool-chauffeur-vtc-taux-autorise",
+ "question": "Alcool au volant : quel taux pour un chauffeur VTC ?",
+ "reponse_courte": "Au volant d'une VTC, le seuil est celui des « autres conducteurs » : 0,5 g/l de sang, soit 0,25 mg/l d'air expiré (article R234-1 du Code de la route). Il descend à 0,2 g/l en permis probatoire ou si le droit de conduire est limité aux véhicules avec éthylotest antidémarrage ; le 0,2 g/l du transport en commun ne vise pas une voiture VTC.",
+ "sections": [
+  {
+   "titre": "Ce que dit le Code de la route : deux seuils",
+   "texte": [
+    "L'article R234-1 du Code de la route fixe deux seuils de contravention. Le premier est de 0,20 gramme d'alcool par litre de sang, soit 0,10 milligramme par litre d'air expiré. Il vise quatre cas : le conducteur d'un véhicule de transport en commun, le conducteur dont le droit de conduire est limité aux véhicules équipés d'un éthylotest antidémarrage, le titulaire d'un permis encore en délai probatoire, et le conducteur en apprentissage.",
+    "Le second seuil est de 0,50 gramme par litre de sang, soit 0,25 milligramme par litre d'air expiré, « chez les autres conducteurs ». Service-public.fr (fiche « Alcool au volant », vérifiée le 27 août 2026) donne les mêmes chiffres : 0,2 g/l pour le permis probatoire, la conduite accompagnée et l'éthylotest antidémarrage, 0,5 g/l dans les autres situations.",
+    "Au-delà, selon service-public.fr, un taux égal ou supérieur à 0,8 g/l de sang, soit 0,40 mg par litre d'air expiré, n'est plus une contravention mais un délit, dans toutes les situations."
+   ]
+  },
+  {
+   "titre": "Pourquoi le seuil de 0,2 g/l du transport en commun ne vise pas une VTC",
+   "texte": [
+    "On pourrait croire qu'un conducteur qui transporte des clients est soumis au seuil de 0,2 g/l. Ce seuil vise le conducteur d'un « véhicule de transport en commun ». L'article R311-1 du Code de la route définit ce véhicule comme un « véhicule de catégorie M2 ou M3 ».",
+    "La catégorie M1, elle, regroupe les véhicules conçus pour le transport de personnes « comportant, outre le siège du conducteur, huit places assises au maximum ». Or une voiture de transport avec chauffeur compte « au moins quatre et au plus neuf places, y compris celle du conducteur » (article R3122-6 du Code des transports) : huit places au plus en plus de celle du conducteur. Une VTC ne peut donc pas être un véhicule de catégorie M2 ou M3, et son chauffeur ne relève pas du seuil du transport en commun.",
+    "Deux cas personnels font en revanche descendre le seuil à 0,2 g/l, pour un chauffeur VTC comme pour tout conducteur. Le permis probatoire d'abord : pour obtenir la carte professionnelle, le délai probatoire doit être expiré lors de l'entrée initiale dans la profession (article R3120-6 du Code des transports), mais le seuil de 0,2 g/l vise tout conducteur dont le permis est soumis au délai probatoire. L'éthylotest antidémarrage ensuite : le seuil de 0,2 g/l vise le conducteur dont le droit de conduire est limité aux véhicules qui en sont équipés, par exemple sur décision d'un juge. Un chauffeur qui installe ce dispositif de lui-même reste au seuil de 0,5 g/l. Sur le permis, lisez aussi [« Peut-on devenir chauffeur VTC avec un permis probatoire ? »](../questions/2026-10-29-vtc-permis-probatoire.html)."
+   ]
+  },
+  {
+   "titre": "Les sanctions : contravention, puis délit à 0,8 g/l",
+   "texte": [
+    "Un taux égal ou supérieur au seuil, mais inférieur au seuil du délit (0,8 g/l selon service-public.fr), est une contravention de la quatrième classe (article R234-1), même sans signe d'ivresse. Selon service-public.fr, l'amende peut aller jusqu'à 750 €, et c'est en général une amende forfaitaire de 135 €. L'article R234-1 prévoit aussi le retrait de 6 points, de plein droit, et la possible immobilisation du véhicule.",
+    {
+     "chiffres": {
+      "items": [
+       {
+        "valeur": "0,5 g/l",
+        "texte": "d'alcool dans le sang : le seuil qui s'applique au chauffeur VTC"
+       },
+       {
+        "valeur": "0,25 mg/l",
+        "texte": "d'air expiré : l'équivalent de 0,5 g/l de sang"
+       },
+       {
+        "valeur": "6 points",
+        "texte": "retirés du permis, dès la contravention"
+       },
+       {
+        "valeur": "0,8 g/l",
+        "texte": "de sang : à partir de ce taux, c'est un délit"
+       }
+      ],
+      "source": "Code de la route, article R234-1 ; service-public.fr, fiche « Alcool au volant », vérifiée le 27 août 2026"
+     }
+    },
+    "Le juge peut suspendre le permis pour trois ans au plus. Pour la contravention, l'article R234-1 précise que cette suspension peut être limitée à la conduite en dehors de l'activité professionnelle.",
+    "À partir de 0,8 g/l, c'est un délit. Selon service-public.fr, il est puni de 3 ans de prison et de 9 000 € d'amende au plus, avec le retrait de 6 points. Parmi les peines complémentaires, la suspension du permis peut aller jusqu'à 5 ans, et elle ne peut pas être limitée à la conduite en dehors de l'activité professionnelle. Le juge peut aussi annuler le permis, ou confisquer le véhicule."
+   ]
+  },
+  {
+   "titre": "Pour un chauffeur VTC, un délit peut fermer le métier",
+   "texte": [
+    "L'article R3120-8 du Code des transports interdit d'exercer comme conducteur de VTC si figure au bulletin n° 2 du casier judiciaire une condamnation définitive « pour un délit sanctionné en vertu du code de la route par une réduction de la moitié du nombre maximal de points du permis de conduire ».",
+    "La conduite avec 0,8 g/l ou plus est un délit, sanctionné par un retrait de 6 points ; une amende pour un taux inférieur est une contravention. Pourquoi l'un ferme l'accès au métier et pas l'autre : c'est expliqué dans notre question [« Casier judiciaire VTC : quelles condamnations empêchent d'être chauffeur ? »](../questions/2026-11-12-casier-judiciaire-vtc-condamnations.html).",
+    "Autre règle du Code de la route à connaître au volant : [« Téléphone au volant en VTC : qu'est-ce qui est autorisé ? »](../questions/2026-11-16-telephone-au-volant-vtc-regles.html)."
+   ]
+  },
+  {
+   "titre": "Exemple : le même taux, trois situations",
+   "texte": [
+    "**Samir, chauffeur VTC**, n'est pas en permis probatoire et son droit de conduire n'est pas limité. Il est contrôlé à 0,3 g/l de sang au volant de sa berline. Il est sous le seuil de 0,5 g/l qui s'applique à lui : pas de contravention au titre de l'article R234-1.",
+    "**Julie, conductrice d'autobus**, est contrôlée au même taux de 0,3 g/l. Elle conduit un véhicule de transport en commun : son seuil est de 0,2 g/l. C'est une contravention de la quatrième classe, avec le retrait de 6 points.",
+    "**Si le droit de conduire de Samir était limité par un juge aux véhicules équipés d'un éthylotest antidémarrage**, son seuil deviendrait 0,2 g/l, et le même contrôle à 0,3 g/l serait une contravention.",
+    "À l'examen VTC, retenez les chiffres du texte : 0,5 g/l de sang ou 0,25 mg/l d'air expiré pour le chauffeur VTC, 0,8 g/l pour le délit, et 6 points dans les deux cas."
+   ]
+  }
+ ],
+ "a_retenir": [
+  "Au volant d'une VTC, le seuil est celui des « autres conducteurs » : 0,5 g/l de sang, soit 0,25 mg/l d'air expiré (article R234-1 du Code de la route).",
+  "Le seuil de 0,2 g/l vise le permis probatoire, l'apprentissage, le droit de conduire limité aux véhicules avec éthylotest antidémarrage et les véhicules de transport en commun (catégories M2 et M3), qu'une VTC de neuf places au plus ne peut pas être.",
+  "Au-dessus du seuil : contravention et 6 points ; à partir de 0,8 g/l : délit et 6 points, et une condamnation définitive pour ce délit, inscrite au bulletin n° 2 du casier, interdit d'exercer (article R3120-8 du Code des transports)."
+ ],
+ "wiki": [
+  "r3122-6",
+  "r3120-6",
+  "r3120-8"
+ ],
+ "fiches": [
+  [
+   "C7.3",
+   "Contraventions, délits, suspension, annulation"
+  ],
+  [
+   "C7.1",
+   "Le permis à points"
+  ],
+  [
+   "C7.2",
+   "Période probatoire et activité VTC"
+  ]
+ ],
+ "sources": [
+  {
+   "nom": "Code de la route, chapitre « Conduite sous l'influence de l'alcool », article R234-1 (Légifrance, en vigueur depuis le 24 août 2019)",
+   "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006841515/2026-08-06",
+   "date": "18 novembre 2026"
+  },
+  {
+   "nom": "Code de la route, article R311-1, définitions des catégories de véhicules (Légifrance, en vigueur depuis le 25 juillet 2026)",
+   "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006841575/2026-08-06",
+   "date": "18 novembre 2026"
+  },
+  {
+   "nom": "Service-public.fr, « Alcool au volant », fiche F2881, vérifiée le 27 août 2026",
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2881",
+   "date": "18 novembre 2026"
+  },
+  {
+   "nom": "Service-public.fr, glossaire, « Véhicule de catégorie M1 »",
+   "url": "https://www.service-public.gouv.fr/particuliers/glossaire/R54916",
+   "date": "18 novembre 2026"
+  },
+  {
+   "nom": "Code des transports, articles R3122-6, R3120-6 et R3120-8 (textes recopiés dans le wiki du site, vérifiés sur Légifrance le 18 novembre 2026)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389552",
+   "date": "18 novembre 2026"
+  }
+ ],
+ "verifie": "18 novembre 2026"
+}

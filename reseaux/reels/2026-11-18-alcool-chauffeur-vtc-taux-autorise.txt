@@ -1,0 +1,39 @@
+RÉEL · Alcool au volant : quel taux pour un chauffeur VTC ?
+Page : https://revision-vtc.fr/questions/2026-11-18-alcool-chauffeur-vtc-taux-autorise.html
+
+ACCROCHE (0 à 3 s)
+  Écran : Chauffeur VTC : 0,2 ou 0,5 g/l ?
+  Voix : Chauffeur VTC : votre seuil d'alcool, c'est 0,2 ou 0,5 ?
+
+DÉROULÉ (30 à 45 s)
+  Plan 1
+    Écran : Réponse : 0,5 g/l de sang
+    Voix : Réponse : 0,5 gramme par litre de sang, soit 0,25 milligramme par litre d'air expiré. Article R234-1 du Code de la route.
+  Plan 2
+    Écran : 0,2 g/l : transport en commun (M2, M3)
+    Voix : Le seuil de 0,2 vise les véhicules de transport en commun, c'est-à-dire les catégories M2 et M3.
+  Plan 3
+    Écran : Une VTC : 9 places au plus
+    Voix : Une VTC compte au plus neuf places, conducteur compris. Elle ne peut pas être de catégorie M2 ou M3.
+  Plan 4
+    Écran : 0,2 g/l aussi : probatoire, éthylotest antidémarrage
+    Voix : Le seuil de 0,2 vise aussi le permis probatoire, l'apprentissage, et le conducteur dont le droit de conduire est limité aux véhicules avec éthylotest antidémarrage.
+  Plan 5
+    Écran : 0,8 g/l : délit, 6 points
+    Voix : À partir de 0,8 gramme, c'est un délit, avec 6 points retirés. Une condamnation définitive pour ce délit, inscrite au bulletin n° 2 du casier, interdit d'exercer.
+
+CHUTE
+  Écran : VTC : 0,5 g/l. Délit dès 0,8 g/l.
+  Voix : À retenir : 0,5 gramme au volant d'une VTC, hors permis probatoire, et délit à partir de 0,8. Réponse complète et sources sur revision-vtc.fr.
+
+LÉGENDE
+  Un chauffeur VTC est-il soumis au seuil de 0,2 g/l du transport en commun ? Non : une VTC ne peut pas être un véhicule de transport en commun, et le seuil est de 0,5 g/l de sang, sauf permis probatoire ou éthylotest antidémarrage imposé. Les sanctions et l'effet d'un délit sur la carte professionnelle sont sur la page.
+  #examenvtc #chauffeurvtc #vtc #codedelaroute #alcoolauvolant #securiteroutiere
+  https://revision-vtc.fr/questions/2026-11-18-alcool-chauffeur-vtc-taux-autorise.html
+
+SOURCES
+  Code de la route, article R234-1 (Légifrance), lu le 18 novembre 2026
+  Code de la route, article R311-1 (Légifrance), lu le 18 novembre 2026
+  Service-public.fr, fiche F2881 « Alcool au volant », vérifiée le 27 août 2026, lue le 18 novembre 2026
+  Service-public.fr, glossaire « Véhicule de catégorie M1 », lu le 18 novembre 2026
+  Code des transports, articles R3122-6, R3120-6, R3120-8 (Légifrance)
