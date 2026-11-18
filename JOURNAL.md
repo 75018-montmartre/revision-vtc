@@ -6,6 +6,20 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 18 novembre 2026, 8 h 26 · Veille du wiki (tâche du mercredi)
+
+- **PROBLÈME : 75 textes sur 78 confirmés dans leur version en vigueur au 18 novembre 2026 ; 3 non lus** (Légifrance a refusé les pages, client_error répétés). Date « vérifié » laissée au 25 octobre 2026.
+- Aucun texte modifié : les 75 textes lus sont identiques à Légifrance (mots, chiffres, ponctuation, alinéas, dates de vigueur). L'outil de lecture ne recopie que 125 caractères à la fois : textes cités par tronçons enchaînés ou comparés alinéa par alinéa (nombre d'alinéas, premiers et derniers mots).
+- Confirmés par lecture directe de la version en vigueur : L3120-1, L3120-2, L3120-2-1, L3120-2-2, L3120-4, L3120-5, L3120-7, L3122-1, L3122-3, L3122-4, L3122-4-1, L3122-9, L1326-1 à L1326-4, R3120-1, R3120-2, D3120-3, R3120-4, D3120-5, R3120-6, R3120-7, R3120-8, R3120-8-1, R3120-8-2, R3120-9, R3120-10, D3120-38, R3122-1 à R3122-4, R*3122-5, R3122-5-1, R3122-6 à R3122-9, R3122-12, L3124-7, L3124-11, L3124-12, L3124-13, R3124-5, L3141-1, L3141-2, R3141-1, L3143-1, L3143-2, L3143-4, arrêtés du 6 avril 2017 (examen, 5 articles ; signalétique, 5 articles), du 11 août 2017 (4 articles) et du 26 mars 2015 (2 articles).
+- Confirmés par lecture d'une version datée dont l'identifiant LEGIARTI est encore celui en vigueur (vu dans le sommaire d'une page en vigueur) : R3122-10, R3124-1, R3124-4, R3124-6, R3124-7, R3124-11, R3124-12, R3124-13, R3141-2 à R3141-7, L3142-1 à L3142-4 (page du 17 juillet 2026), L3143-3, L3143-5 (comparé au texte de la loi n° 2026-534, identifiant inchangé).
+- Non lus : D3120-21 et D3120-32 (texte identique aux versions de 2020 et 2024, version en vigueur non confirmée), arrêté du 6 août 2025 sur le justificatif de réservation (article 1 jamais affiché ; articles 3 et 5 sans modification).
+- Explications améliorées (première phrase reprise par Google) :
+  - https://revision-vtc.fr/wiki/r3120-6.html : « Carte professionnelle VTC : la préfecture la délivre sous trois mois à qui a un permis hors période probatoire, a réussi l'examen et remplit la condition d'honorabilité. » ; renvoi à R3120-8-1 pour les ressortissants européens au lieu de « qualification européenne ».
+  - https://revision-vtc.fr/wiki/l3141-2.html : « Plateforme VTC : elle doit s'assurer que chaque chauffeur a son permis, l'assurance du véhicule, l'assurance RC et, si elle est requise, sa carte professionnelle. » ; ajout de l'assurance RC professionnelle de l'entreprise et des deux registres.
+- Repéré sur Légifrance, hors wiki : R3122-11 abrogé depuis le 12 août 2026 (décret n° 2026-764) ; L3120-6, L3142-5, D3120-39, R3124-14 et R3124-15 en vigueur sans page ; L3141-3, L3141-4 et deux alinéas du II de L3141-2 créés par la loi n° 2026-534, pas encore applicables (date fixée par décret, non paru).
+- Contrôle technique : génération réussie, pages présentes dans le sitemap avec titre, description et données structurées, llms.txt et llms-full.txt à jour, aucun lien interne cassé, axe sans erreur en clair et en sombre à 320 et 1 366 px, aucun débordement.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mardi 17 novembre 2026, 10 h 38 · Article n° 11 (tâche tous les deux jours)
 
 - Titre : « Assurance VTC : quelles assurances sont obligatoires pour un chauffeur, et que risque-t-on sans ? »

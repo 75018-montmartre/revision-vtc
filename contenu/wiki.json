@@ -242,7 +242,7 @@
    "source": "Code des transports",
    "theme": "conducteur",
    "titre": "La carte professionnelle : conditions, délai, affichage",
-   "en_clair": "La carte est délivrée à celui qui a un permis hors période probatoire, a réussi l'examen (ou fait reconnaître une qualification européenne) et remplit la condition d'honorabilité. La préfecture la remet dans un délai maximum de trois mois. Pendant le travail, elle est apposée sur le pare-brise, photo visible de l'extérieur.",
+   "en_clair": "Carte professionnelle VTC : la préfecture la délivre sous trois mois à qui a un permis hors période probatoire, a réussi l'examen et remplit la condition d'honorabilité. Un conducteur ressortissant d'un autre pays européen peut faire reconnaître son aptitude et son honorabilité (article R3120-8-1). Pendant le travail, la carte est apposée sur le pare-brise, photo visible de l'extérieur.",
    "concretement": "Le chauffeur qui arrête définitivement son activité rend sa carte ; s'il ne le fait pas, elle lui est retirée.",
    "fiches": [
     [
@@ -1134,7 +1134,7 @@
    "source": "Code des transports",
    "theme": "plateformes",
    "titre": "Ce que la plateforme doit vérifier",
-   "en_clair": "La plateforme s'assure que chaque conducteur a son permis, l'assurance du véhicule, l'assurance RC et sa carte professionnelle, que l'exploitant est inscrit au registre et assuré, et que le véhicule respecte les conditions techniques.",
+   "en_clair": "Plateforme VTC : elle doit s'assurer que chaque chauffeur a son permis, l'assurance du véhicule, l'assurance RC et, si elle est requise, sa carte professionnelle. Elle vérifie aussi que l'entreprise du chauffeur a son assurance de responsabilité civile professionnelle et, le cas échéant, son inscription au registre (registre VTC ou registre des transporteurs). Pour une course en VTC, elle s'assure enfin que la voiture respecte les conditions techniques et de confort (article L3122-4).",
    "concretement": "Sans ces pièces, la plateforme doit refuser de vous proposer des courses (R3141-6).",
    "fiches": [
     [
