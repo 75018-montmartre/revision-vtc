@@ -6,6 +6,17 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Jeudi 19 novembre 2026, 9 h 05 · Question VTC du jour
+
+- Question : « Maraude VTC : quelle sanction pour un client pris sans réservation ? »
+- Page : https://revision-vtc.fr/questions/2026-11-19-maraude-vtc-sanction.html
+- Réponse courte : prendre un client sur la voie publique sans réservation préalable est un délit : jusqu'à trois ans d'emprisonnement et 45 000 € d'amende (article L3124-12 du Code des transports, version en vigueur depuis le 27 juin 2026), avec des peines complémentaires comme la suspension du permis jusqu'à cinq ans ; circuler en quête de clients, sans prise en charge, est une contravention de cinquième classe (R3124-11, 1 500 € au plus).
+- Nouveau : tableau de cinq situations (prise en charge, démarchage, quête de clients, attente trop longue à l'aéroport, conducteur sans carte) avec l'alinéa de L3120-2 visé et la sanction ; amende forfaitaire délictuelle (500 €, 400 €, 1 000 €) ; anciens chiffres des documents officiels de 2017 et 2020 (un an, 15 000 €) signalés comme dépassés ; avertissement ou retrait de carte (L3124-11).
+- Infographie : chiffres clés (3 ans, 45 000 €, 500 €, 1 500 €). Script du réel : `reseaux/reels/2026-11-19-maraude-vtc-sanction.txt`.
+- Relecture indépendante : 39 affirmations, 38 confirmées, 0 contredite, 1 non trouvée (source code-penal.fr non lue par le relecteur, chiffre confirmé par F32803 et Juritravail) ; ajouts : chevauchement R3124-11 / L3124-12 expliqué, légende du réel précisée (« version en vigueur depuis le 27 juin 2026 », la date du durcissement n'étant pas vérifiée), quête de clients punie d'un an dans la fiche de 2017.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px sur la page et l'index de la FAQ, aucun débordement de page ; page dans sitemap.xml, llms.txt, l'index de la FAQ et l'accueil. Accueil : alerte axe « landmark-complementary-is-top-level » (déjà présente avant).
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 18 novembre 2026, 9 h 05 · Question VTC du jour
 
 - Question : « Alcool au volant : quel taux pour un chauffeur VTC ? »

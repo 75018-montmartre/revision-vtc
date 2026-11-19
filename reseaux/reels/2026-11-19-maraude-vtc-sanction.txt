@@ -1,0 +1,38 @@
+RÉEL · Maraude VTC : quelle sanction pour un client pris sans réservation ?
+Page : https://revision-vtc.fr/questions/2026-11-19-maraude-vtc-sanction.html
+
+ACCROCHE (0 à 3 s)
+  Écran : Client sans réservation : jusqu'à 3 ans de prison ?
+  Voix : Un client vous fait signe dans la rue. Vous le prenez ?
+
+DÉROULÉ (30 à 45 s)
+  Plan 1
+    Écran : Sans réservation : délit
+    Voix : Prendre un client sur la voie publique sans réservation préalable, c'est un délit. Article L3124-12 du Code des transports.
+  Plan 2
+    Écran : 3 ans et 45 000 € au plus
+    Voix : Jusqu'à trois ans d'emprisonnement et 45 000 euros d'amende, dans la version en vigueur depuis le 27 juin 2026.
+  Plan 3
+    Écran : Permis suspendu jusqu'à 5 ans
+    Voix : Le juge peut ajouter la suspension du permis jusqu'à cinq ans, l'immobilisation ou la confiscation du véhicule.
+  Plan 4
+    Écran : Tourner en quête de clients : 1 500 €
+    Voix : Circuler en quête de clients, sans en prendre aucun, c'est une contravention de cinquième classe : 1 500 euros au plus.
+  Plan 5
+    Écran : Et la carte peut être retirée
+    Voix : L'administration peut aussi donner un avertissement ou retirer la carte professionnelle.
+
+CHUTE
+  Écran : Pas de réservation, pas de client.
+  Voix : À retenir : sans réservation préalable, pas de prise en charge. Réponse complète et sources sur revision-vtc.fr.
+
+LÉGENDE
+  Prendre un client qui vous hèle dans la rue sans réservation préalable est un délit pour un chauffeur VTC : jusqu'à trois ans d'emprisonnement et 45 000 € d'amende, dans la version de la loi en vigueur depuis le 27 juin 2026. Circuler en quête de clients est une contravention. Les cinq situations et leurs sanctions sont sur la page.
+  #examenvtc #chauffeurvtc #vtc #maraude #reglementationvtc #codedestransports
+  https://revision-vtc.fr/questions/2026-11-19-maraude-vtc-sanction.html
+
+SOURCES
+  Code des transports, articles L3120-2, L3124-11 et L3124-12 (Légifrance), lus le 19 novembre 2026
+  Code des transports, article R3124-11 (wiki du site, vérifié sur Légifrance le 18 novembre 2026 ; recueil DGITM de janvier 2020, lu le 19 novembre 2026)
+  Service-public.fr, fiches F32803 « Amendes » et F31027 « Exploitant ou conducteur de VTC », lues le 19 novembre 2026
+  Code pénal, article 131-13
