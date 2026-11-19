@@ -1620,6 +1620,86 @@ Dans le livre Machine à Réussite · Examen VTC 2027 : fiche A5.4 (Avertissemen
 
 ## Guides VTC
 
+### Voiture VTC : acheter, louer à la semaine, LLD ou LOA ? Coûts, engagement et règles
+
+Page : https://revision-vtc.fr/dossiers/acheter-louer-loa-voiture-vtc.html
+Publié le 19 novembre 2026, chiffres vérifiés le 19 novembre 2026.
+
+Acheter, louer à la semaine, louer longtemps ou louer avec option d'achat : les quatre formules donnent accès à la même voiture, mais pas aux mêmes obligations ni au même risque. Voici ce que disent les textes en vigueur en novembre 2026, les prix publiés et un calcul sur un an.
+Pour le registre des VTC, l'exploitant doit prouver, pour chaque véhicule utilisé régulièrement, qu'il en est propriétaire, qu'il a un contrat de location d'au moins six mois, ou présenter une garantie financière de 1 500 € par véhicule (article R3122-9 du Code des transports). Une location de moins de six mois ne suffit donc pas seule, sauf si une justification a déjà été produite pour ce véhicule.
+Les fourchettes publiées vont de 400 € à 1 000 € par mois en LOA et de 500 € à 1 200 € par mois en LLD (Legalstart, LegalPlace). En LOA, l'assurance est à votre charge ; en LLD, elle est comprise ou non selon les formules. À environ 450 € par semaine tout inclus (Keobiz), la location à la semaine coûte 21 150 € sur 47 semaines dans notre calcul, mais elle s'arrête quand vous arrêtez de rouler.
+Trois offres sur la table : l'exemple de Nadia
+Nadia a sa carte VTC. Il lui manque la voiture. Elle a trois propositions : une hybride louée à la semaine, tout compris, chez un loueur spécialisé ; une location longue durée de trois ans, moins chère par mois mais sans l'assurance ni l'entretien ; et une location avec option d'achat qui lui permettrait de garder la voiture au bout du contrat. Un ami lui conseille aussi d'acheter une berline d'occasion.
+Ce guide compare les quatre formules : règles du véhicule, registre, contrats, prix publiés et calcul sur un an. Il ne recommande aucune formule : le bon choix dépend de votre activité, de votre trésorerie et de votre statut.
+Avant tout : une voiture conforme, quelle que soit la formule
+4,50 m de long au minimum (1,70 m de large)
+84 kW de puissance nette au minimum
+7 ans la voiture doit avoir moins de 7 ans
+4 portes au minimum, et de 4 à 9 places conducteur compris
+Acheter ou louer ne change rien aux règles du véhicule. Une voiture de transport avec chauffeur compte de 4 à 9 places, conducteur compris (article R3122-6). Elle doit aussi avoir au moins quatre portes (4 portes), mesurer au moins 4,50 m de long et 1,70 m de large, avoir un moteur d'au moins 84 kW de puissance nette, et avoir moins de sept ans (7 ans), sauf véhicule de collection (arrêté du 26 mars 2015).
+Ces critères de portes, de taille, de puissance et d'âge ne s'appliquent pas aux véhicules hybrides et électriques (article L3120-5) : une petite hybride peut donc servir de VTC. Notre question « Quelles sont les voitures hybrides les moins chères pour faire VTC ? » les classe par prix catalogue.
+La règle d'âge pèse surtout sur l'achat d'occasion d'une voiture thermique : l'arrêté exige que les voitures VTC soient « âgées de moins de sept ans », ce qui se lit comme une condition à respecter tant que la voiture sert de VTC. Une berline thermique achetée à cinq ans ne pourra plus servir de VTC que pendant deux ans environ. En location aussi, vérifiez l'âge de la voiture avant de signer.
+Ce que demande le registre : propriété, location de six mois ou garantie de 1 500 €
+Avant de travailler, l'exploitant doit être inscrit au registre des VTC (inscription en ligne, 170 €, renouvelée tous les cinq ans). Parmi les conditions figure la capacité financière, définie véhicule par véhicule. Pour chaque véhicule utilisé de façon régulière, l'exploitant démontre (article R3122-9) :
+soit qu'il en est propriétaire (achat, comptant ou à crédit) ;
+soit qu'il a un contrat de location d'une durée d'au moins six mois (une LLD ou une LOA de plusieurs années entre dans ce cas) ;
+soit qu'il présente une garantie financière de 1 500 € par véhicule, accordée par un organisme financier agréé ou un établissement de crédit qui se porte caution ;
+soit qu'une justification de capacité financière a déjà été produite pour ce véhicule, en application d'autres dispositions.
+Conséquence pratique : une location à la semaine ou au mois, sans contrat d'au moins six mois, ne remplit pas à elle seule la condition. Il faut alors la garantie financière de 1 500 €, sauf si une justification a déjà été produite pour ce véhicule. Demandez au loueur, avant de signer, ce qu'il fournit pour le registre.
+Pour le délai d'inscription, voir notre question « Inscription au registre VTC : quel délai ? ».
+Les quatre formules : qui est propriétaire, combien de temps vous êtes engagé
+La location courte durée se paie à la semaine ou au mois. Selon Keobiz, le loyer comprend en général le véhicule, son entretien, l'assistance et l'assurance, sans engagement de plusieurs années ; une caution est bloquée au départ.
+La location longue durée (LLD) est un contrat de location sans option d'achat : vous rendez la voiture à la fin. Le loueur reste propriétaire pendant toute la location. Le kilométrage autorisé est fixé au contrat et son dépassement se paie selon le barème prévu.
+La location avec option d'achat (LOA) est une location assortie de la faculté d'acheter le véhicule à la fin du contrat, à un prix fixé dès le départ. Pendant toute la durée du contrat, le véhicule reste la propriété du loueur ou de l'établissement financier. En fin de contrat, vous achetez, ou vous rendez la voiture : des frais peuvent alors être réclamés si le contrat les prévoit (kilomètres en plus, dégradations au-delà de l'usure normale, retard de restitution).
+L'achat, comptant ou à crédit, fait de vous le propriétaire : un justificatif de propriété suffit pour la condition du registre. L'entretien, l'assurance et la revente sont à votre charge.
+Location à la semaine ou au mois Le loueur Court, sans engagement de plusieurs années Moins de six mois : garantie de 1 500 €, sauf justification déjà produite pour ce véhicule
+Location longue durée (LLD) Le loueur Plusieurs années, kilométrage fixé au contrat Contrat d'au moins six mois : suffit
+Location avec option d'achat (LOA) Le loueur ou l'établissement financier Plusieurs années, puis achat ou restitution Contrat d'au moins six mois : suffit
+Achat (comptant ou crédit) Vous Remboursement du crédit le cas échéant Propriétaire : suffit
+Les règles de la LOA et de la LLD publiées par Service-Public.fr (fiche F2437, vérifiée le 12 juin 2026) sont écrites pour les particuliers. Un contrat signé pour votre entreprise suit d'abord ses propres conditions : lisez-les, en particulier la sortie anticipée.
+Ce que disent les prix publiés
+Les prix des loueurs sont libres : voici les fourchettes publiées, des ordres de grandeur et non des tarifs.
+Loyer mensuel publié pour une voiture VTC, LOA et LLD
+Les deux formules longues se recoupent largement : de 400 € à 1 000 € par mois en LOA, de 500 € à 1 200 € par mois en LLD, selon le véhicule, la durée et le kilométrage.
+LOA et LLD : Legalstart et LegalPlace donnent les mêmes fourchettes, de 400 € à 1 000 € par mois en LOA et de 500 € à 1 200 € par mois en LLD. Ce que comprend le loyer varie : en LOA, l'entretien, l'assurance et les réparations sont à votre charge (Legalstart) ; en LLD, ils sont compris ou non selon les formules (Legalstart, LegalPlace). Un dépôt de garantie, des frais de dossier, un apport ou un premier loyer majoré peuvent s'ajouter.
+Location à la semaine : les montants publiés divergent. Keobiz (fiche mise à jour le 3 novembre 2026) indique qu'une berline VTC standard se loue « autour de 450 € par semaine, tout inclus », avec une caution de 1 000 € à plus de 2 000 €. Legalstart cite jusqu'à 400 € la semaine ou 800 € à 1 500 € par mois. Comparez toujours ce que le loyer comprend : assurance, entretien, assistance, kilométrage.
+Pour l'assurance elle-même, ses obligations et ses contrôles, voir notre guide « Assurance VTC : quelles assurances sont obligatoires ? ».
+Le calcul sur un an : ce que coûte la souplesse
+Pour comparer, il faut ramener tout à l'année et au même contenu. Hypothèses de notre calcul : location à la semaine à 450 € tout inclus (le montant cité par Keobiz), payée seulement les semaines travaillées, 47 semaines par an (cinq semaines sans rouler) ; LLD à 800 € par mois (dans la fourchette publiée), payée douze mois, dans une formule sans assurance ni entretien. Le carburant est le même dans les deux cas et n'est pas compté.
+Loyers payés sur un an selon la formule (notre calcul)
+Sur 47 semaines, la location à la semaine coûte plus du double d'une LLD à 800 € par mois en loyers ; dans notre hypothèse d'une LLD sans assurance ni entretien, l'écart de 11 550 € doit couvrir ces frais avant qu'elle ne devienne plus chère.
+À la semaine, 52 semaines 450 € × 52 23 400 €
+À la semaine, 47 semaines 450 € × 47 21 150 €
+LLD à 1 200 € par mois 1 200 € × 12 14 400 €
+LLD à 800 € par mois 800 € × 12 9 600 €
+Sur un an, la location à la semaine coûte 21 150 € pour 47 semaines, et 23 400 € sans aucune pause. La LLD coûte 9 600 € de loyers à 800 € par mois, 14 400 € à 1 200 €.
+Dans cette hypothèse, l'écart de 11 550 € (21 150 € moins 9 600 €) est le budget dont vous disposez pour l'assurance, l'entretien et les pneus de la LLD avant qu'elle ne revienne plus cher. Si l'entretien est compris dans le loyer, l'écart sert surtout à l'assurance. Faites le calcul avec les devis réels.
+Le calcul inverse compte autant : la LLD se paie même quand vous ne roulez pas. Deux mois d'arrêt (panne longue, maladie, baisse d'activité) coûtent 1 600 € de loyers à 800 € par mois, sans recette en face. En location à la semaine, vous rendez la voiture et vous ne payez plus, si le contrat le permet. En LLD, Service-Public.fr indique (pour les contrats des particuliers) que le locataire doit en général payer tous les loyers jusqu'à la fin du contrat, avec des pénalités ou indemnités prévues au contrat.
+Le simulateur de revenu net refait ce calcul avec vos chiffres, cotisations et TVA comprises.
+LOA et achat : ce qu'il faut regarder en plus
+En LOA, le vrai prix est la somme de tout ce que vous payez : apport ou premier loyer majoré, loyers, puis prix d'achat final si vous gardez la voiture. Exemple fictif, pour montrer le calcul : 36 loyers de 450 € (16 200 €) et une option d'achat de 14 000 € font 30 200 €, à comparer au prix de la même voiture payée comptant ou à crédit. Selon Service-Public.fr, la majoration du premier loyer ne vous est pas remboursée si vous décidez de ne pas acheter.
+Pour une voiture thermique, pensez à l'âge à la fin du contrat : après trois ans de LOA, une voiture neuve au départ a trois ans, et il lui reste environ quatre ans d'exploitation possible en VTC. Une hybride ou une électrique n'a pas cette limite.
+À l'achat, vous êtes propriétaire dès le premier jour et la condition du registre est remplie. En contrepartie, la panne, l'immobilisation et la revente sont pour vous, et un crédit se rembourse même quand l'activité baisse.
+Micro-entreprise et TVA : ce que la formule change, ou ne change pas
+En micro-entreprise, vous ne déduisez pas vos charges professionnelles pour leur montant réel : l'impôt est calculé sur le chiffre d'affaires, après un abattement forfaitaire, ou par un pourcentage du chiffre d'affaires avec le versement libératoire (impots.gouv.fr). Louée ou achetée, la voiture ne diminue donc pas votre impôt. Les cotisations et les autres statuts sont détaillés dans notre guide « Micro-entreprise, EURL ou SASU ».
+En franchise en base de TVA, vous facturez vos courses hors taxe et vous ne pouvez pas déduire la TVA payée sur vos achats professionnels (Entreprendre.Service-Public.fr, fiche F21746, vérifiée le 1er janvier 2026). La TVA comprise dans le prix ou les loyers de la voiture reste donc un coût. Pour les prestations de services, la franchise s'applique tant que le chiffre d'affaires ne dépasse pas 37 500 € l'année précédente et 41 250 € l'année en cours.
+Si vous êtes redevable de la TVA, la règle générale exclut la déduction de la TVA sur les véhicules conçus pour transporter des personnes. Mais une entreprise de transport public de personnes peut déduire la TVA des véhicules qu'elle affecte exclusivement à cette activité, et la doctrine fiscale vise expressément les voitures de transport avec chauffeur (BOFiP, BOI-TVA-DED-30-30-20, § 120 à 140, version en vigueur depuis le 23 juillet 2025). Le taux de TVA de vos courses est expliqué dans notre question « TVA VTC : quel taux sur une course ? ».
+Pour un cas précis (régime réel, amortissement, crédit-bail, voiture utilisée aussi pour vos trajets personnels), faites valider le montage par un expert-comptable.
+Comment choisir : cinq questions avant de signer
+Aucune formule n'est la meilleure pour tout le monde. Ces questions aident à décider selon votre situation :
+Combien de semaines par an allez-vous rouler ? Plus l'activité est régulière, plus un loyer fixe se rentabilise ; plus elle est incertaine, plus la souplesse compte.
+Que comprend le loyer ? Assurance avec la mention du transport public particulier de personnes, entretien, assistance, kilométrage : comparez à contenu égal.
+Que fournissez-vous au registre ? Justificatif de propriété, contrat de location d'au moins six mois, ou garantie de 1 500 €.
+Que se passe-t-il si vous arrêtez ? La clause de sortie anticipée donne le coût de l'imprévu.
+La voiture restera-t-elle conforme ? Pour une thermique, comptez les années avant ses sept ans.
+Pour le budget complet du lancement (examen, carte, registre, assurance, véhicule), voir notre guide « Combien coûte vraiment le lancement en VTC ? », et pour les pièges du contrat de location, les 10 erreurs du chauffeur VTC débutant.
+Pour le registre des VTC, chaque véhicule utilisé régulièrement doit être à vous, loué par un contrat d'au moins six mois, ou couvert par une garantie financière de 1 500 € (article R3122-9 du Code des transports).
+Une VTC thermique a moins de sept ans, au moins quatre portes, 4,50 m sur 1,70 m et 84 kW ; ces critères ne s'appliquent pas aux hybrides et électriques.
+Fourchettes publiées : 400 € à 1 000 € par mois en LOA, 500 € à 1 200 € par mois en LLD ; l'assurance est à votre charge en LOA, comprise ou non en LLD selon les formules.
+En micro-entreprise, le coût réel de la voiture ne se déduit pas de l'impôt ; en franchise de TVA, la TVA payée ne se récupère pas.
+
+Sources : Code des transports, articles R3122-6, R3122-9 et L3120-5, et arrêté du 26 mars 2015 relatif aux caractéristiques des véhicules VTC : textes en vigueur recopiés de Légifrance dans le wiki du site (versions confirmées le 18 novembre 2026) (https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389540) ; Entreprendre.Service-Public.fr, « Devenir chauffeur de VTC » (fiche F31027, vérifiée le 12 août 2026) : véhicule, registre, garantie financière (https://entreprendre.service-public.gouv.fr/vosdroits/F31027) ; Bpifrance Création, « Voiture de transport avec chauffeur (VTC) : réglementation » (mise à jour le 16 novembre 2026) (https://bpifrance-creation.fr/activites-reglementees/voiture-transport-chauffeur-vtc) ; Service-Public.fr, « Location de voiture : LOA (location avec option d'achat) ou LLD (location longue durée) » (fiche F2437, vérifiée le 12 juin 2026) (https://www.service-public.gouv.fr/particuliers/vosdroits/F2437) ; impots.gouv.fr, « Je suis micro-entrepreneur, puis-je déduire des charges ? » (modifié le 14 octobre 2026) (https://www.impots.gouv.fr/professionnel/questions/je-suis-micro-entrepreneur-puis-je-deduire-des-charges) ; Entreprendre.Service-Public.fr, « Franchise en base de TVA » (fiche F21746, vérifiée le 1er janvier 2026) (https://entreprendre.service-public.gouv.fr/vosdroits/F21746) ; BOFiP, BOI-TVA-DED-30-30-20, « Véhicules ou engins de transport de personnes » (version en vigueur depuis le 23 juillet 2025), § 1 et § 120 à 140 (https://bofip.impots.gouv.fr/bofip/1192-PGP.html/identifiant=BOI-TVA-DED-30-30-20-20250723) ; Legalstart, « Location voiture VTC » (mis à jour le 16 octobre 2025) (https://www.legalstart.fr/fiches-pratiques/chauffeur-vtc-transport/location-voiture-vtc/) ; LegalPlace, « Leasing VTC » (21 avril 2026) (https://www.legalplace.fr/guides/leasing-vtc/) ; Keobiz, « Location courte durée VTC » (mise à jour le 3 novembre 2026) (https://www.keobiz.fr/fiches-pratiques/location-courte-duree-vtc/).
+
 ### Assurance VTC : quelles assurances sont obligatoires pour un chauffeur, et que risque-t-on sans ?
 
 Page : https://revision-vtc.fr/dossiers/assurance-vtc-obligations-chauffeur.html

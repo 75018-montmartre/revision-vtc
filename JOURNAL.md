@@ -6,6 +6,17 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Jeudi 19 novembre 2026, 10 h 31 · Article n° 12 (tâche tous les deux jours)
+
+- Titre : « Voiture VTC : acheter, louer à la semaine, LLD ou LOA ? Coûts, engagement et règles »
+- Page : https://revision-vtc.fr/dossiers/acheter-louer-loa-voiture-vtc.html (2 510 mots, épreuve B, sans photo)
+- En bref : pour le registre des VTC, chaque véhicule utilisé régulièrement doit appartenir à l'exploitant, être loué par un contrat d'au moins six mois, ou être couvert par une garantie financière de 1 500 € (article R3122-9) ; une location de moins de six mois ne suffit donc pas seule. Fourchettes publiées : 400 € à 1 000 € par mois en LOA, 500 € à 1 200 € en LLD (Legalstart, LegalPlace). Calcul : 450 € par semaine tout inclus (Keobiz) sur 47 semaines = 21 150 €, contre 9 600 € de loyers pour une LLD à 800 € par mois sans assurance ni entretien ; mais la LLD se paie aussi sans rouler. Micro-entreprise : coût réel non déductible de l'impôt ; franchise de TVA : TVA non récupérable ; redevable : TVA du véhicule affecté exclusivement au VTC déductible (BOFiP).
+- Infographies : 3 (chiffres clés des critères du véhicule, graphique en barres des loyers publiés LOA et LLD, graphique en barres des loyers sur un an).
+- Relecture indépendante : 9 sources relues, calculs refaits exacts ; 10 corrections (LLD « souvent sans assurance » remplacé par « comprise ou non selon les formules », hypothèse de LLD sans assurance ni entretien précisée, 800 € « dans la fourchette » au lieu de « milieu », « location de moins de six mois », certificat d'immatriculation retiré comme preuve de propriété, phrase sur les cotisations limitée à l'impôt, versement libératoire ajouté, dispense des hybrides étendue aux portes, âge reformulé d'après l'arrêté).
+- À signaler : la source BOFiP du simulateur (`bofip_ded_vehicules`) cite la version du 2 juillet 2025 ; la version en vigueur est celle du 23 juillet 2025 (§ 120 à 140 inchangés à la lecture).
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px (article et index des guides), aucun débordement ; page dans sitemap.xml, llms.txt et l'index des guides.
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Jeudi 19 novembre 2026, 9 h 05 · Question VTC du jour
 
 - Question : « Maraude VTC : quelle sanction pour un client pris sans réservation ? »
