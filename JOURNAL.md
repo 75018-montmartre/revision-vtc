@@ -6,6 +6,18 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Vendredi 20 novembre 2026, 9 h 02 · Question VTC du jour
+
+- Question : « Carte VTC par équivalence : est-ce encore possible ? »
+- Page : https://revision-vtc.fr/questions/2026-11-20-carte-vtc-equivalence-experience.html
+- Réponse courte : non ; depuis le 12 août 2026, l'expérience professionnelle ne permet plus d'obtenir la carte VTC et l'examen est la seule voie d'accès (décret n° 2026-764 du 5 août 2026) ; les demandes déposées avant cette date et les qualifications déjà acquises par équivalence ne sont pas remises en cause.
+- Nouveau : ce qu'était la voie par équivalence (un an d'expérience au cours des dix dernières années, communiqué du ministère), démarche en ligne close, deux exemples datés (demande déposée le 3 août, expérience sans dépôt), procédure à part pour les ressortissants UE/EEE (article R3120-8-1 : titre ou un an d'expérience, épreuve d'aptitude ou stage d'adaptation, niveau de français).
+- Infographie : schéma flux (obtenir la carte avant / après le 12 août 2026). Script du réel : `reseaux/reels/2026-11-20-carte-vtc-equivalence-experience.txt`.
+- Relecture indépendante : 46 points, 41 confirmés, 0 contredit, 5 non trouvés ou confirmés par la seule copie du wiki ; corrections : « à 0 heure » retiré, intitulés du décret et de la démarche rétablis mot pour mot, règle transitoire précisée pour Karim, exemple de Sofia précisé, paraphrase du III de R3120-8-1 resserrée, EEE ajouté et textes à l'écran nuancés dans le réel.
+- Sources non lues : texte du décret n° 2026-764 sur Légifrance (refus client_error) ; titre et dates confirmés par R3120-8-1 et le communiqué.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px sur la page et l'index de la FAQ, aucun débordement ; page dans sitemap.xml, llms.txt, l'index de la FAQ et l'accueil. Accueil : alerte axe « landmark-complementary-is-top-level » (déjà présente avant).
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Jeudi 19 novembre 2026, 10 h 31 · Article n° 12 (tâche tous les deux jours)
 
 - Titre : « Voiture VTC : acheter, louer à la semaine, LLD ou LOA ? Coûts, engagement et règles »
