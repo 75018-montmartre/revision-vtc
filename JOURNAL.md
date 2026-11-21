@@ -6,6 +6,18 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 21 novembre 2026, 11 h 15 · Article n° 13 (tâche tous les deux jours)
+
+- Titre : « Lexique du VTC : 44 mots à connaître pour l'examen et le métier (T3P, REVTC, maraude…) »
+- Page : https://revision-vtc.fr/dossiers/lexique-vtc-mots-du-metier.html (2 525 mots, épreuve A, sans photo)
+- En bref : un VTC fait partie du T3P avec les taxis, les VMDTR et les cycles à pédalage assisté ; il ne travaille que sur réservation préalable, la maraude physique ou électronique étant réservée aux taxis. Le conducteur a une carte professionnelle (examen de la CMA, renouvelée tous les 5 ans) ; l'entreprise, l'exploitant, est inscrite au registre des VTC (170 €, renouvelée tous les 5 ans), avec une vignette rouge.
+- Nouveau : 44 définitions rangées en sept thèmes (cadre, conducteur, entreprise, voiture, course, plateformes, contrôles), chacune reliée au texte du wiki ou à la question VTC qui la détaille ; mots issus de la loi du 25 juin 2026 (contrôle mystère, déclaration des conducteurs, interdiction de prêter l'inscription).
+- Infographies : 2 (chiffres clés du registre : 170 €, 5 ans, 1 500 €, 6 mois ; schéma flux des démarches CMA, préfecture, registre, Imprimerie nationale).
+- Relecture indépendante : 55 points, aucun contredit sur le fond ; 11 corrections (portée du décret limitée aux obligations des plateformes, voie européenne R3120-8-1 ajoutée, renouvellements carte et registre non enchaînés, « moins de 7 ans, sauf collection », vignette temporaire « 30 jours ouvrés », maraude électronique « voiture qui se trouve sur la voie publique », dispense de retour à la base rattachée à L3122-9, permis probatoire, 9 € commission déduite, chapeau nuancé).
+- Sources non lues sur Légifrance le jour même : articles du Code des transports autres que R3122-8 ; cités d'après le wiki (versions confirmées le 18 novembre 2026), concordants avec la fiche F31027 et la page du ministère lues ce jour.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px (article et index des guides), aucun débordement ; page dans sitemap.xml, llms.txt et l'index des guides. Accueil : alerte axe « landmark-complementary-is-top-level » (déjà présente avant).
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 21 novembre 2026, 9 h 02 · Question VTC du jour
 
 - Question : « Changer de voiture VTC : dans quel délai le déclarer au registre ? »

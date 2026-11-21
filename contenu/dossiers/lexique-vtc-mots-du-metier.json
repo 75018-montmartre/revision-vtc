@@ -1,0 +1,292 @@
+{
+ "numero": 13,
+ "slug": "lexique-vtc-mots-du-metier",
+ "domaine": "A",
+ "date": "2026-11-21",
+ "titre": "Lexique du VTC : 44 mots à connaître pour l'examen et le métier (T3P, REVTC, maraude…)",
+ "titre_page": "Lexique VTC : T3P, REVTC, maraude, réservation préalable… les mots du métier expliqués",
+ "description": "Lexique VTC : 44 mots expliqués avec leur texte officiel (T3P, REVTC, vignette, maraude, capacité financière, centrale de réservation), à jour en novembre 2026.",
+ "mots_cles": [
+  "lexique VTC",
+  "vocabulaire VTC",
+  "définition VTC",
+  "T3P définition",
+  "REVTC",
+  "maraude VTC définition",
+  "réservation préalable VTC",
+  "capacité financière VTC",
+  "centrale de réservation VTC",
+  "glossaire examen VTC"
+ ],
+ "chapeau": "T3P, REVTC, ADS, VMDTR, capacité financière, maraude électronique : le VTC a son vocabulaire, et l'examen le suppose connu. Voici 44 mots expliqués simplement, la plupart avec le texte officiel qui les définit, à jour en novembre 2026.",
+ "en_bref": [
+  "Un **VTC** (voiture de transport avec chauffeur) fait partie du **transport public particulier de personnes (T3P)**, avec les taxis, les deux ou trois-roues motorisés (VMDTR) et les cycles à pédalage assisté. Il ne travaille que sur **réservation préalable** : la **maraude**, physique ou électronique, est réservée aux taxis.",
+  "Pour rouler, il faut deux choses distinctes : une **carte professionnelle** pour le conducteur (après l'examen de la chambre de métiers et de l'artisanat, renouvelée tous les 5 ans) et une **inscription au registre des VTC (REVTC)** pour l'entreprise, l'**exploitant** (170 €, renouvelée tous les 5 ans), avec une **vignette** rouge sur la voiture."
+ ],
+ "sections": [
+  {
+   "id": "exemple",
+   "titre": "Un mot mal compris, une erreur qui coûte cher : l'exemple d'Ilyes",
+   "blocs": [
+    "Ilyes vient d'obtenir sa carte professionnelle. Un ami lui propose de rouler « sous son registre » pendant quelques semaines, le temps de faire ses démarches. Ilyes croit que la carte suffit. Il confond deux mots : **conducteur** et **exploitant**.",
+    "La carte autorise une personne à conduire ; l'inscription au registre autorise une entreprise à exploiter des voitures. Et depuis la loi du 25 juin 2026 relative à la lutte contre les fraudes sociales et fiscales, le Code des transports dit en toutes lettres que l'inscription au registre **ne peut être mise à la disposition d'un tiers**, à titre gratuit ou onéreux ([article L3122-3](../wiki/l3122-3.html))."
+   ]
+  },
+  {
+   "id": "cadre",
+   "titre": "Les mots du cadre : T3P, VTC, taxi, ADS, VMDTR",
+   "blocs": [
+    {
+     "liste": [
+      "**T3P (transport public particulier de personnes)** : le transport de personnes à titre onéreux avec des véhicules de moins de dix places, en dehors des transports collectifs et du transport privé ([article L3120-1](../wiki/l3120-1.html)). Le ministère chargé des transports y range les taxis, les VTC, les VMDTR et les cycles à pédalage assisté.",
+      "**VTC (voiture de transport avec chauffeur)** : une voiture mise à la disposition des clients par un exploitant, « dans des conditions fixées à l'avance entre les parties » ([article L3122-1](../wiki/l3122-1.html)). Le VTC intervient uniquement sur réservation préalable.",
+      "**Taxi** : le seul professionnel du T3P qui peut être hélé dans la rue, sur le territoire de son autorisation de stationnement. Ses prix sont réglementés ; ceux des VTC sont libres (fiche F31027 de service-public.fr). Les différences sont détaillées dans le guide [Taxi ou VTC](../dossiers/taxi-ou-vtc-differences.html).",
+      "**ADS (autorisation de stationnement)** : la « licence » du taxi. Le Code des transports réserve le droit de marauder au taxi qui exploite une ADS, sur le territoire de celle-ci.",
+      "**VMDTR (véhicule motorisé à deux ou trois roues)** : la moto ou le trois-roues de transport de personnes. Il travaille, comme le VTC, sur réservation préalable, avec une vignette **bleue** carrée de 8 x 8 cm, un moteur d'au moins 40 kW et moins de 5 ans d'ancienneté (hors hybrides et électriques).",
+      "**CPA (cycle à pédalage assisté)** : le vélo à pédalage assisté qui transporte des passagers, quatrième famille du T3P ; ses conducteurs n'ont pas de carte professionnelle ([article L3120-2-2](../wiki/l3120-2-2.html))."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "conducteur",
+   "titre": "Les mots du conducteur : carte professionnelle, examen, honorabilité",
+   "blocs": [
+    {
+     "liste": [
+      "**Carte professionnelle (carte VTC)** : le document qui vous autorise à conduire un VTC. La demande se fait uniquement en ligne ; elle coûte environ 60 € et doit être renouvelée tous les 5 ans. En course, elle est placée sur le pare-brise, photo visible de l'extérieur ([article R3120-6](../wiki/r3120-6.html)). Voir aussi : [où placer la carte VTC](../questions/2026-11-09-carte-vtc-ou-la-placer.html).",
+      "**Préfecture** : l'autorité qui délivre la carte, celle du département où vous avez élu domicile, ou la préfecture de police si vous habitez Paris ([article R3122-10](../wiki/r3122-10.html)).",
+      "**Aptitude professionnelle** : la condition de compétence, prouvée par la réussite à l'examen ([article R3120-7](../wiki/r3120-7.html)). Depuis le 12 août 2026, l'expérience professionnelle ne permet plus d'accéder au métier : l'examen est la voie d'accès, hors procédure propre aux ressortissants d'un autre pays de l'Union européenne ou de l'EEE ([article R3120-8-1](../wiki/r3120-8-1.html) ; voir [la question sur l'équivalence](../questions/2026-11-20-carte-vtc-equivalence-experience.html)).",
+      "**CMA (chambre de métiers et de l'artisanat)** : l'organisme auprès duquel vous vous inscrivez à l'examen, sur le site de la CMA de votre région ; l'inscription coûte environ 200 €. Après la réussite, la CMA vous remet une attestation.",
+      "**Admissibilité et admission** : les deux temps de l'examen. Les épreuves écrites sont dites « d'admissibilité » ; l'épreuve pratique, un parcours de conduite en situation de chauffeur VTC, est dite « d'admission » ([article R3120-7](../wiki/r3120-7.html)). Barème et notes éliminatoires : guide [Réussir l'examen VTC du premier coup](../dossiers/reussir-examen-vtc-premier-coup.html).",
+      "**Honorabilité professionnelle** : ne pas avoir, au **bulletin n° 2** du casier judiciaire, certaines condamnations, par exemple pour conduite sans permis ou pour vol avec une peine d'au moins six mois d'emprisonnement ([article R3120-8](../wiki/r3120-8.html) ; [la liste en détail](../questions/2026-11-12-casier-judiciaire-vtc-condamnations.html)).",
+      "**Permis probatoire** : la période probatoire qui suit l'obtention du permis. Pour la carte VTC, il faut un permis de conduire depuis 3 ans au moins, ou 2 ans après une conduite accompagnée (voir [la question sur le permis probatoire](../questions/2026-10-29-vtc-permis-probatoire.html)).",
+      "**Visite médicale** : le contrôle fait par un **médecin agréé** (liste sur le site de votre préfecture), jamais votre médecin traitant ; il doit donner un avis favorable ([article D3120-5](../wiki/d3120-5.html) ; [la périodicité](../questions/2026-11-02-visite-medicale-vtc-tous-les-combien.html)).",
+      "**Formation continue** : le stage obligatoire de 14 heures (2 jours) dans un centre agréé, à suivre tous les cinq ans pour renouveler la carte ([article R3120-8-2](../wiki/r3120-8-2.html))."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exploitant",
+   "titre": "Les mots de l'entreprise : exploitant, REVTC, capacité financière",
+   "blocs": [
+    {
+     "chiffres": {
+      "items": [
+       {
+        "valeur": "170 €",
+        "texte": "pour l'inscription au registre des VTC"
+       },
+       {
+        "valeur": "5 ans",
+        "texte": "durée de l'inscription, à renouveler ensuite"
+       },
+       {
+        "valeur": "1 500 €",
+        "texte": "de garantie financière par véhicule, sauf propriété ou location"
+       },
+       {
+        "valeur": "6 mois",
+        "texte": "durée minimale d'un contrat de location qui dispense de la garantie"
+       }
+      ],
+      "source": "Code des transports, articles L3122-3 et R3122-9 ; Entreprendre.Service-Public.fr, fiche F31027"
+     }
+    },
+    {
+     "liste": [
+      "**Exploitant** : l'entreprise (vous-même, si vous êtes à votre compte) qui met une ou plusieurs voitures à la disposition des clients ([article L3122-1](../wiki/l3122-1.html)).",
+      "**REVTC (registre des exploitants de VTC)** : le registre public où chaque exploitant doit être inscrit ([article L3122-3](../wiki/l3122-3.html)). L'inscription se fait en ligne et coûte 170 € ; elle doit être renouvelée tous les 5 ans. Il est géré pour toute la France par le préfet de la région Île-de-France ([article R3122-5](../wiki/r3122-5.html)).",
+      "**Déclaration des conducteurs** : depuis le 27 juin 2026, l'exploitant déclare dans le registre le nom des conducteurs qu'il emploie, avec le numéro de leur carte professionnelle et les numéros d'immatriculation des véhicules qu'il exploite ([article L3122-3](../wiki/l3122-3.html)). Voir aussi : [changer de voiture et le déclarer au registre](../questions/2026-11-21-changer-voiture-vtc-declaration-registre.html).",
+      "**Capacité financière** : la preuve que l'exploitant a les moyens de ses voitures. Pour chaque véhicule utilisé de façon régulière, il démontre en principe qu'il en est propriétaire, ou il a un contrat de location d'une durée d'au moins 6 mois, ou il présente une **garantie financière de 1 500 €** ([article R3122-9](../wiki/r3122-9.html) ; guide [acheter ou louer](../dossiers/acheter-louer-loa-voiture-vtc.html)).",
+      "**RC professionnelle (responsabilité civile professionnelle)** : l'assurance de l'entreprise pour les dommages causés pendant l'activité. Vous devez pouvoir en justifier « à tout moment » ([article L3120-4](../wiki/l3120-4.html)) ; sans elle, l'amende peut aller jusqu'à 3 750 €. Détail : guide [Assurance VTC](../dossiers/assurance-vtc-obligations-chauffeur.html).",
+      "**Mise à disposition de l'inscription** : prêter ou louer son inscription au registre à quelqu'un d'autre. C'est interdit, « à titre gratuit ou onéreux » ([article L3122-3](../wiki/l3122-3.html))."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "voiture",
+   "titre": "Les mots de la voiture : vignette, signalétique, hybride",
+   "blocs": [
+    {
+     "liste": [
+      "**Vignette VTC (signalétique distinctive)** : l'autocollant **rouge** obligatoire, délivré par l'Imprimerie nationale ([article R3122-8](../wiki/r3122-8.html)). Vous la commandez en ligne depuis votre espace du registre, pour environ 35 €. Elle se colle en bas à gauche du pare-brise avant, côté conducteur, et en bas à droite de la lunette arrière ([en images](../questions/2026-11-03-vignette-vtc-ou-la-coller.html)).",
+      "**Vignette temporaire** : une signalétique provisoire prévue après une inscription ou une mise à jour du registre, ou pour un véhicule utilisé exceptionnellement ; elle vaut 30 jours ouvrés au plus.",
+      "**Signalétique de taxi** : tout ce qui fait ressembler la voiture à un taxi. Un VTC ne peut pas porter d'équipement de nature à créer une confusion avec un taxi ([article R3122-7](../wiki/r3122-7.html)), notamment un dispositif extérieur lumineux.",
+      "**Caractéristiques du véhicule** : de 4 à 9 places conducteur compris ([article R3122-6](../wiki/r3122-6.html)), et pour une voiture thermique au moins 4 portes, 4,50 m sur 1,70 m, 84 kW de puissance nette et moins de 7 ans d'ancienneté, sauf véhicule de collection ([arrêté du 26 mars 2015](../wiki/arrete-26-mars-2015-vehicules.html)).",
+      "**Hybride et électrique** : ces véhicules échappent aux critères de taille, de puissance et d'âge ([article L3120-5](../wiki/l3120-5.html)). Voir : [les hybrides les moins chères pour le VTC](../questions/2026-10-31-voitures-hybrides-vtc-moins-cheres.html).",
+      "**Contrôle technique** : pour une voiture VTC, il a lieu une fois par an ([article R3120-10](../wiki/r3120-10.html) ; [la question en détail](../questions/2026-11-07-controle-technique-vtc-tous-les-combien.html))."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "course",
+   "titre": "Les mots de la course : réservation préalable, maraude, retour à la base",
+   "blocs": [
+    {
+     "liste": [
+      "**Réservation préalable** : la commande de la course **avant** la prise en charge. Sans elle, un VTC ne peut pas prendre un client sur la voie publique ([article L3120-2](../wiki/l3120-2.html)).",
+      "**Justificatif de réservation** : la preuve écrite, sur papier ou à l'écran, à présenter à tout contrôle ([article R3120-2](../wiki/r3120-2.html)). Elle indique notamment la date et l'heure de la réservation, le lieu de prise en charge, le numéro d'inscription au registre et le numéro SIREN de l'exploitant ([arrêté du 6 août 2025](../wiki/arrete-6-aout-2025-reservation.html) ; [toutes les mentions](../questions/2026-11-11-justificatif-reservation-vtc-mentions.html)).",
+      "**Maraude** : chercher des clients sur la voie publique, ou en prendre un qui vous hèle. Elle est interdite au VTC et réservée aux taxis.",
+      "**Maraude électronique** : la même chose par écran : informer un client, avant sa réservation, à la fois de la localisation et de la disponibilité d'une voiture qui se trouve sur la voie publique (III de l'[article L3120-2](../wiki/l3120-2.html)). Elle est interdite au VTC, comme la maraude physique.",
+      "**Démarchage** : aller au-devant d'un client pour le prendre en charge sans réservation ; il est interdit (III de l'article L3120-2). Prendre un client sans réservation est un délit puni de 3 ans d'emprisonnement et 45 000 € d'amende pour une personne physique ([article L3124-12](../wiki/l3124-12.html) ; [la question sur la maraude](../questions/2026-11-19-maraude-vtc-sanction.html)).",
+      "**Attente en gare et en aéroport** : le VTC qui attend un client ayant réservé peut stationner aux abords ou dans l'enceinte d'une gare ou d'un aéroport pendant 1 heure au plus avant l'heure de prise en charge ([article D3120-3](../wiki/d3120-3.html)).",
+      "**Retour à la base** : après la course, sans nouvelle réservation, le conducteur retourne au lieu d'établissement de l'exploitant ou dans un lieu hors de la chaussée où le stationnement est autorisé ([article L3122-9](../wiki/l3122-9.html)).",
+      "**Contrat avec le client final** : un contrat écrit avec un client (une entreprise par exemple), qui précise sa durée, sa date d'effet, les prestations et les lieux de prise en charge. Des conditions générales de vente ne suffisent pas ([article R3122-12](../wiki/r3122-12.html)). Un tel contrat dispense du retour à la base ([article L3122-9](../wiki/l3122-9.html)).",
+      "**Prix libre** : le prix d'une course de VTC n'est pas réglementé, contrairement au tarif du taxi."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "parcours",
+   "titre": "Les démarches dans l'ordre : de l'examen à la première course",
+   "blocs": [
+    "Les mots précédents s'enchaînent dans un ordre précis quand vous vous lancez à votre compte. Le schéma ci-dessous reprend les montants de la fiche F31027 de service-public.fr, qui les donne « environ » ; le budget complet, formation et voiture comprises, est dans le guide [Combien coûte le lancement en VTC](../dossiers/cout-pour-devenir-chauffeur-vtc.html).",
+    {
+     "flux": {
+      "titre": "Devenir chauffeur VTC à son compte : qui fait quoi",
+      "lecture": "Le conducteur obtient sa carte grâce à l'examen ; l'entreprise s'inscrit au registre, qui donne accès à la vignette.",
+      "etats": [
+       {
+        "quand": "Pour rouler à votre compte en novembre 2026",
+        "nouveau": true,
+        "liens": [
+         [
+          "Vous",
+          "CMA",
+          "vous vous inscrivez à l'examen (environ 200 €)"
+         ],
+         [
+          "CMA",
+          "Vous",
+          "vous remet une attestation de réussite"
+         ],
+         [
+          "Vous",
+          "Préfecture",
+          "vous demandez en ligne la carte professionnelle (environ 60 €)"
+         ],
+         [
+          "Vous",
+          "Registre des VTC",
+          "vous inscrivez votre entreprise, l'exploitant (170 €)"
+         ],
+         [
+          "Vous",
+          "Imprimerie nationale",
+          "vous commandez la vignette depuis l'espace du registre (environ 35 €)"
+         ]
+        ]
+       }
+      ],
+      "alerte": "L'inscription au registre ne peut pas être mise à la disposition d'un tiers, gratuitement ou contre paiement (article L3122-3).",
+      "source": "Entreprendre.Service-Public.fr, fiche F31027 ; Code des transports, articles L3122-3 et R3122-8"
+     }
+    },
+    "Ensuite, tous les cinq ans, il faut suivre la formation continue et renouveler la carte ; l'inscription au registre se renouvelle elle aussi tous les cinq ans, à sa propre échéance."
+   ]
+  },
+  {
+   "id": "plateformes",
+   "titre": "Les mots des plateformes : centrale de réservation, commission, revenu minimal",
+   "blocs": [
+    {
+     "liste": [
+      "**Plateforme de mise en relation** : le professionnel qui met en relation des conducteurs ou des entreprises de transport avec des passagers, pour des véhicules de huit places assises au maximum en plus du conducteur ([article L3141-1](../wiki/l3141-1.html)).",
+      "**Centrale de réservation** : une telle plateforme quand les conducteurs exercent à titre professionnel, ce qui est le cas du VTC ([article L3142-1](../wiki/l3142-1.html)). Elle doit déclarer son activité en ligne, prouver son assurance responsabilité civile professionnelle et renouveler sa déclaration chaque année ; le ministère publie la liste des centrales déclarées.",
+      "**Commission** : la part du prix de chaque course que vous versez à la plateforme en contrepartie de la mise en relation.",
+      "**Revenu minimal** : pour un chauffeur relié à une plateforme, au moins 9 € par course, commission déduite, 30 € par heure travaillée et 1 € par kilomètre parcouru pendant une course (fiche F31027). Ce que cela donne vraiment, temps d'attente compris : guide [Combien gagne-t-on de l'heure](../dossiers/combien-gagne-chauffeur-vtc-par-heure.html).",
+      "**Précompte** : le prélèvement des cotisations sociales des micro-entrepreneurs par les plateformes, en expérimentation et appelé à entrer pleinement en vigueur en 2027 selon le ministère chargé des transports. Ce n'est pas le prélèvement à la source de l'impôt : guide [le précompte des cotisations](../dossiers/precompte-cotisations-vtc-plateformes-2027.html)."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "controles",
+   "titre": "Les mots des contrôles : contrôle mystère, loi de 2026, Observatoire",
+   "blocs": [
+    {
+     "liste": [
+      "**Contrôle mystère (ou incognito)** : depuis le 27 juin 2026, les agents de contrôle peuvent ne dire qui ils sont qu'au moment où ils annoncent l'infraction, si la preuve d'un délit en dépend ([article L3124-13](../wiki/l3124-13.html)). Le ministère chargé des transports présente cette mesure comme un moyen de constater le racolage et la maraude, notamment dans les gares et les aéroports.",
+      "**Loi relative à la lutte contre les fraudes sociales et fiscales** : promulguée le 25 juin 2026, elle a relevé les peines de la prise en charge illégale à trois ans d'emprisonnement et 45 000 € d'amende, interdit le prêt de l'inscription au registre et créé une obligation de vigilance pour les plateformes ; dont les modalités doivent être précisées par un décret en Conseil d'État ; les nouvelles peines et l'interdiction de prêter l'inscription s'appliquent depuis le 27 juin 2026.",
+      "**Observatoire national du T3P** : l'observatoire public des taxis, VTC et VMDTR, dont le ministère chargé des transports met en ligne les publications. Ses données sont résumées dans le guide [Le VTC en chiffres](../dossiers/vtc-en-chiffres-nombre-chauffeurs-france.html)."
+     ]
+    }
+   ]
+  }
+ ],
+ "a_retenir": [
+  "Le conducteur a une carte professionnelle (examen de la CMA, renouvellement tous les 5 ans) ; l'entreprise, l'exploitant, est inscrite au registre des VTC (170 €, renouvellement tous les 5 ans) : ce sont deux autorisations différentes.",
+  "Un VTC ne travaille que sur réservation préalable : la maraude, physique ou électronique, est réservée aux taxis, et prendre un client sans réservation est puni de 3 ans d'emprisonnement et 45 000 € d'amende.",
+  "Pour chaque voiture utilisée régulièrement, l'exploitant en est propriétaire, la loue pour au moins six mois ou présente une garantie de 1 500 € (article R3122-9 du Code des transports)."
+ ],
+ "wiki": [
+  "l3120-1",
+  "l3122-1",
+  "l3122-3",
+  "r3122-9",
+  "l3120-2",
+  "r3120-6",
+  "r3122-8",
+  "l3142-1",
+  "l3124-13"
+ ],
+ "fiches": [
+  [
+   "A1.1",
+   "Les quatre familles du T3P"
+  ],
+  [
+   "A1.2",
+   "Taxi ou VTC : ce qui les sépare"
+  ],
+  [
+   "A1.4",
+   "Plateformes et centrales de réservation"
+  ],
+  [
+   "A2.6",
+   "La carte professionnelle au quotidien"
+  ],
+  [
+   "A3.1",
+   "La réservation préalable et sa preuve"
+  ],
+  [
+   "A3.2",
+   "La maraude, réservée au taxi"
+  ]
+ ],
+ "sources": [
+  {
+   "nom": "Entreprendre.Service-Public.fr, « Devenir chauffeur de VTC » (fiche F31027, vérifiée le 12 août 2026) : conditions, examen, carte, registre, vignette, véhicule, réservation, plateformes",
+   "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F31027",
+   "date": "consulté le 21 novembre 2026"
+  },
+  {
+   "nom": "Ministère de la Transition écologique, « Taxi, VTC, VMDTR, CPA : réglementation des transports publics particuliers de personnes » (mise à jour le 3 février 2026)",
+   "url": "https://www.ecologie.gouv.fr/politiques-publiques/taxi-vtc-reglementation-transports-publics-particuliers-personnes",
+   "date": "consulté le 21 novembre 2026"
+  },
+  {
+   "nom": "Ministère de la Transition écologique, communiqué sur la loi relative à la lutte contre les fraudes sociales et fiscales (9 juillet 2026)",
+   "url": "https://www.ecologie.gouv.fr/presse/loi-relative-lutte-contre-fraudes-sociales-fiscales-nouvelles-mesures-mieux-lutter-contre",
+   "date": "consulté le 21 novembre 2026"
+  },
+  {
+   "nom": "Légifrance, Code des transports, article R3122-8 (version en vigueur depuis le 1er juillet 2017)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389549",
+   "date": "consulté le 21 novembre 2026"
+  },
+  {
+   "nom": "Code des transports, articles L3120-1, L3120-2, L3120-2-2, L3120-4, L3120-5, L3122-1, L3122-3, L3122-9, L3124-12, L3124-13, L3141-1, L3142-1, R3120-2, R3120-6, R3120-7, R3120-8, R3120-8-1, R3120-8-2, R3120-10, R3122-5, R3122-6, R3122-7, R3122-9, R3122-10, R3122-12, D3120-3 et D3120-5 : textes en vigueur recopiés de Légifrance dans le wiki du site (versions confirmées le 18 novembre 2026)",
+   "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000023086525",
+   "date": "vérifié le 18 novembre 2026"
+  }
+ ],
+ "verifie": "21 novembre 2026"
+}
