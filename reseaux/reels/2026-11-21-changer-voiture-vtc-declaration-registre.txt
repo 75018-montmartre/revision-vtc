@@ -1,0 +1,39 @@
+RÉEL · Changer de voiture VTC : dans quel délai le déclarer au registre ?
+Page : https://revision-vtc.fr/questions/2026-11-21-changer-voiture-vtc-declaration-registre.html
+
+ACCROCHE (0 à 3 s)
+  Écran : Nouvelle voiture VTC ? 15 jours francs.
+  Voix : Vous changez de voiture VTC ? Le registre doit le savoir, et vite.
+
+DÉROULÉ (30 à 45 s)
+  Plan 1
+    Écran : Quinze jours francs au plus
+    Voix : Le Code des transports donne à l'exploitant quinze jours francs au plus pour signaler tout changement au gestionnaire du registre des VTC, par voie électronique.
+  Plan 2
+    Écran : La carte grise de la voiture
+    Voix : Une nouvelle voiture, c'est un changement : le dossier contient la carte grise de chaque voiture.
+  Plan 3
+    Écran : Pas que la voiture
+    Voix : Même règle pour un nouveau conducteur, un nouvel assureur en responsabilité civile professionnelle ou un déménagement.
+  Plan 4
+    Écran : Vignette temporaire : 30 jours ouvrés
+    Voix : Après la mise à jour du registre, une vignette temporaire, valable trente jours ouvrés au plus, sert en attendant les vignettes définitives.
+  Plan 5
+    Écran : Sinon : jusqu'à 750 €
+    Voix : Ne pas déclarer dans les délais, c'est une contravention de quatrième classe : jusqu'à 750 euros d'amende pour une personne physique.
+
+CHUTE
+  Écran : Nouvelle voiture : déclarez-la sans attendre.
+  Voix : À retenir : tout changement se déclare au registre dans les quinze jours francs. Réponse complète et sources sur revision-vtc.fr.
+
+LÉGENDE
+  Nouvelle voiture, nouveau conducteur, déménagement : l'exploitant VTC doit le signaler au registre dans un délai maximum de quinze jours francs (article R3122-1 du Code des transports). Sur la page : un exemple daté, les vignettes de la nouvelle voiture et le cas de la voiture en panne.
+  #examenvtc #chauffeurvtc #vtc #registrevtc #voiturevtc #reglementationvtc #codedestransports
+  https://revision-vtc.fr/questions/2026-11-21-changer-voiture-vtc-declaration-registre.html
+
+SOURCES
+  Code des transports, article R3122-1 (Légifrance), lu le 21 novembre 2026
+  Code des transports, article R3124-7 (Légifrance, version en vigueur depuis le 24 août 2018, lue le 21 novembre 2026 dans une version datée ; en vigueur confirmée par la veille du wiki du 18 novembre 2026)
+  Arrêté du 6 avril 2017 relatif à la signalétique des VTC, articles 2 et 3 (Légifrance), lu le 21 novembre 2026
+  Code pénal, article 131-13 (Légifrance), lu le 21 novembre 2026
+  Service-public.fr, « Jour ouvrable, jour ouvré, jour franc, jour calendaire : quelles sont les différences ? » (repris sur justice.fr), lu le 21 novembre 2026

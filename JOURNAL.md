@@ -6,6 +6,18 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 21 novembre 2026, 9 h 02 · Question VTC du jour
+
+- Question : « Changer de voiture VTC : dans quel délai le déclarer au registre ? »
+- Page : https://revision-vtc.fr/questions/2026-11-21-changer-voiture-vtc-declaration-registre.html
+- Réponse courte : quinze jours francs au plus : l'exploitant inscrit au registre des VTC doit signaler par voie électronique tout changement des informations de son inscription, dont la copie de la carte grise de chaque voiture (article R3122-1 du Code des transports) ; sinon, contravention de quatrième classe, jusqu'à 750 € d'amende pour une personne physique (R3124-7 ; Code pénal, article 131-13).
+- Nouveau : tableau des changements à déclarer (voiture, conducteur, assureur RC professionnelle, adresse, capacité financière), calcul daté des quinze jours francs (4 janvier → 19 janvier 2027, méthode de service-public.fr), vignette temporaire après mise à jour du registre (30 jours ouvrés au plus), différence avec la voiture supplémentaire d'un mois (III de R3122-1).
+- Infographie : chiffres clés (15 jours francs, 30 jours ouvrés, 1 mois, 750 €). Script du réel : `reseaux/reels/2026-11-21-changer-voiture-vtc-declaration-registre.txt`.
+- Relecture indépendante : 28 points, 22 confirmés, 1 contredit (« le tableau les reprend une à une » : corrigé en « les cas les plus courants »), 4 explications du site sans passage du texte (gardées, déductions directes) ; précisions : citation complète de la fiche sur les jours francs, date limite présentée « par prudence », dispense des hybrides et électriques, III de R3122-1 décrit en entier, source R3124-7 harmonisée dans le réel.
+- Sources non lues : version du jour de R3124-7 (Légifrance client_error) ; lue dans la version datée du 26 juin 2025, en vigueur depuis le 24 août 2018, confirmée en vigueur par la veille du wiki du 18 novembre 2026.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px sur la page et l'index de la FAQ, aucun débordement ; page dans sitemap.xml, llms.txt, l'index de la FAQ et l'accueil.
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Vendredi 20 novembre 2026, 9 h 02 · Question VTC du jour
 
 - Question : « Carte VTC par équivalence : est-ce encore possible ? »
