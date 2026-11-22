@@ -6,6 +6,19 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Dimanche 22 novembre 2026, 9 h 00 · Question VTC du jour
+
+- Question : « Taxe sur les véhicules (ex-TVS) : un chauffeur VTC doit-il la payer ? »
+- Page : https://revision-vtc.fr/questions/2026-11-22-taxe-vehicules-tvs-vtc-exoneration.html
+- Réponse courte : non, pour une voiture affectée au transport de clients : les voitures de transport avec chauffeur sont exonérées des deux taxes annuelles sur les véhicules de tourisme, CO2 et polluants (articles L421-130 et L421-142 du CIBS) ; un chauffeur en entreprise individuelle, micro-entreprise comprise, est en plus exonéré parce qu'il est en entreprise individuelle.
+- Nouveau (premier contenu du site sur ces taxes) : tableau micro-entreprise / entreprise individuelle au réel / EURL-SASU avec les deux exonérations (dont la réserve de minimis du BOFiP), exemple officiel de la taxe CO2 d'une voiture WLTP à 100 g/km (173 €, 193 €, 213 €, 232 € de 2024 à 2027), fin de l'exonération hybride au 31 décembre 2024, électrique, usage mixte au prorata, pas de déclaration si rien n'est dû, état récapitulatif.
+- Infographie : graphique en colonnes (taxe CO2 2024 à 2027). Script du réel : `reseaux/reels/2026-11-22-taxe-vehicules-tvs-vtc-exoneration.txt`.
+- Relecture indépendante : 48 points, 45 confirmés, 0 contredit, 3 non trouvés corrigés (« affectée toute l'année » retiré de l'exemple, EURL et SASU rattachées à la personnalité juridique d'une société d'après service-public.fr, article L421-94 pour la taxe polluants confirmé par la première lecture du BOFiP) ; 4 formulations précisées (titre de la règle, « à ce titre » remplacé, minimis dans l'À retenir et le réel, « Société : 213 € évités »).
+- Écarté faute de certitude : sujet « compte bancaire dédié en micro-entreprise » (la règle des commerçants, sans seuil, pourrait viser le chauffeur VTC : qualification non tranchée) ; tarifs de la taxe polluants (service-public.fr et le BOFiP divergent).
+- Sources non lues : articles du CIBS sur Légifrance (cités d'après le BOFiP en vigueur et service-public.fr, concordants).
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px sur la page et l'index de la FAQ, aucun débordement ; page dans sitemap.xml, llms.txt, l'index de la FAQ et l'accueil. Accueil : alerte axe « landmark-complementary-is-top-level » (déjà présente avant).
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Samedi 21 novembre 2026, 11 h 15 · Article n° 13 (tâche tous les deux jours)
 
 - Titre : « Lexique du VTC : 44 mots à connaître pour l'examen et le métier (T3P, REVTC, maraude…) »

@@ -1,0 +1,37 @@
+RÉEL · Taxe sur les véhicules (ex-TVS) : un chauffeur VTC doit-il la payer ?
+Page : https://revision-vtc.fr/questions/2026-11-22-taxe-vehicules-tvs-vtc-exoneration.html
+
+ACCROCHE (0 à 3 s)
+  Écran : Ex-TVS : un VTC doit-il la payer ?
+  Voix : Société de VTC : faut-il payer la taxe sur les véhicules ?
+
+DÉROULÉ (30 à 45 s)
+  Plan 1
+    Écran : Deux taxes : CO2 et polluants
+    Voix : L'ancienne TVS a laissé la place à deux taxes annuelles : une sur le CO2, une sur les polluants atmosphériques.
+  Plan 2
+    Écran : Voiture affectée aux courses : exonérée
+    Voix : Les voitures de transport avec chauffeur affectées au transport de personnes en sont exonérées, comme les taxis.
+  Plan 3
+    Écran : Société : 213 € de taxe CO2 évités
+    Voix : Exemple officiel : pour une voiture à 100 grammes de CO2 par kilomètre, le tarif annuel de la taxe CO2 est de 213 euros en 2026. Une société de VTC n'a pas à le payer pour sa voiture affectée aux courses.
+  Plan 4
+    Écran : Entreprise individuelle : aussi exonérée
+    Voix : En entreprise individuelle, micro-entreprise comprise, vous êtes en plus exonéré parce que vous êtes en entreprise individuelle, sous réserve des règles européennes dites de minimis. Une EURL ou une SASU, non, mais sa voiture VTC reste exonérée.
+  Plan 5
+    Écran : Usage mixte : taxe au prorata
+    Voix : Attention : si la voiture ne sert au transport de personnes qu'une partie de l'année, la taxe est réduite en proportion, pas forcément supprimée.
+
+CHUTE
+  Écran : Voiture VTC : pas de taxe CO2 ni polluants.
+  Voix : À retenir : une voiture affectée au transport de clients en VTC est exonérée des deux taxes. Réponse complète et sources sur revision-vtc.fr.
+
+LÉGENDE
+  Les voitures de transport avec chauffeur sont exonérées des taxes annuelles CO2 et polluants sur les véhicules de tourisme, l'ex-TVS (articles L421-130 et L421-142 du CIBS). Sur la page : entreprise individuelle ou société, l'exemple chiffré de la taxe CO2, hybride, électrique et usage mixte.
+  #examenvtc #chauffeurvtc #vtc #fiscalitevtc #sasu #microentreprise #taxevehicule
+  https://revision-vtc.fr/questions/2026-11-22-taxe-vehicules-tvs-vtc-exoneration.html
+
+SOURCES
+  Service-public.fr, « Taxes sur l'affectation des véhicules de tourisme (ex-TVS) », vérifié le 21 février 2026, lu le 22 novembre 2026
+  BOFiP, BOI-AIS-MOB-10-30-20-20250528, version en vigueur depuis le 28 mai 2025, lu le 22 novembre 2026
+  Service-public.fr, « Micro-entrepreneur : ce qu'il faut savoir », vérifié le 16 octobre 2026, lu le 22 novembre 2026
