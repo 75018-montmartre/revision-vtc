@@ -6,6 +6,18 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Lundi 23 novembre 2026, 10 h 05 · Question VTC du jour
+
+- Question : « Carte VTC oubliée lors d'un contrôle : quelle amende ? »
+- Page : https://revision-vtc.fr/questions/2026-11-23-carte-vtc-oubliee-controle-amende.html
+- Réponse courte : ne pas présenter immédiatement sa carte professionnelle en cours de validité aux agents de contrôle est une contravention de deuxième classe, 150 € d'amende au plus (article R3124-12 du Code des transports) ; invité à la présenter dans un délai de cinq jours, le conducteur qui ne le fait pas commet une contravention de quatrième classe, 750 € au plus.
+- Nouveau (premier contenu du site sur ces amendes) : les quatre cas de l'article R3124-12 (carte non apposée 38 €, non présentée 150 €, délai de cinq jours 750 €, exercice sans carte 1 500 € pour la contravention, en plus du délit), exemple d'une carte oubliée, carte expirée.
+- Infographie : graphique en barres (amende maximum selon le manquement). Script du réel : `reseaux/reels/2026-11-23-carte-vtc-oubliee-controle-amende.txt`.
+- Relecture indépendante : 27 points, 19 confirmés ; corrigés : cumul implicite des 1re et 2e classes dans l'exemple retiré, phrase de lecture de l'infographie, « si l'agent vous invite » remplacé par « si vous êtes invité », délit de L3124-12 signalé à côté du plafond de 1 500 €, « ou, à défaut, sur le véhicule » ajouté, photo sur téléphone et durée de validité de cinq ans retirées.
+- Sources non lues sur Légifrance le jour même (client_error) : R3124-12 et R3120-6, cités d'après le wiki (versions confirmées le 18 novembre 2026), concordants avec le texte du décret n° 2014-1725 (copie du Journal officiel) lu ce jour ; montants des classes d'après justice.fr (mise à jour du 3 septembre 2025).
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px sur la page et l'index de la FAQ, aucun débordement ; page dans sitemap.xml, llms.txt, l'index de la FAQ et l'accueil. Accueil : alerte axe « landmark-complementary-is-top-level » (déjà présente avant).
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Lundi 23 novembre 2026, 7 h 50 · Actualité VTC n° 8 (tâche du lundi)
 
 - Page : https://revision-vtc.fr/actualite/2026-11-23.html (période du 17 au 23 novembre 2026)
