@@ -6,6 +6,20 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Lundi 23 novembre 2026, 7 h 50 · Actualité VTC n° 8 (tâche du lundi)
+
+- Page : https://revision-vtc.fr/actualite/2026-11-23.html (période du 17 au 23 novembre 2026)
+- Titre : « Accidents du travail VTC votés au Sénat, examen VTC 2027 : dates limites »
+- Textes officiels : aucun nouveau texte VTC repéré au Journal officiel du 17 au 23 novembre 2026 (recherches par mots-clés, page Légifrance du titre II du Code des transports ; sommaire du JO du 19 novembre 2026 non lu).
+- Examen : session d'admissibilité du 26 janvier 2027, inscription au plus tard le 8 janvier 2027 à 12 h (CMA Auvergne-Rhône-Alpes et Occitanie), le 18 décembre 2026 à 12 h (Hauts-de-France) ; sessions de janvier à mars 2027 ouvertes en Île-de-France (mise à jour du 17 novembre 2026).
+- Cotisations et statut : PLFSS 2027 adopté par le Sénat le 18 novembre 2026 (201 voix contre 124) ; article 33 bis : couverture AT-MP des chauffeurs VTC et livreurs des plateformes (article L7343-1 du Code du travail), par décret, au plus tard le 1er janvier 2028 ; commission mixte paritaire annoncée le 26 novembre 2026. Pas encore la loi.
+- Cotisations et statut : article 14 ter : précompte expérimenté en 2027 puis obligatoire en 2028 pour les seules plateformes hors article L7342-1 ; rien ne change pour celles des chauffeurs VTC (1er janvier 2027).
+- Infographies : 2 (brève Examen, chiffres clés ; brève accidents du travail, chiffres clés).
+- Simulateur : prix des carburants à jour (21 novembre 2026, mise à jour automatique).
+- À surveiller : si l'article 33 bis est définitivement adopté, la section « accidents du travail » du guide https://revision-vtc.fr/dossiers/assurance-vtc-obligations-chauffeur.html (prise en charge par la plateforme, article L7342-2) devra être revue.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px, aucun débordement ; page dans sitemap.xml et llms.txt.
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Dimanche 22 novembre 2026, 9 h 00 · Question VTC du jour
 
 - Question : « Taxe sur les véhicules (ex-TVS) : un chauffeur VTC doit-il la payer ? »
