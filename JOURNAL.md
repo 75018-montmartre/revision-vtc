@@ -6,6 +6,17 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Lundi 23 novembre 2026, 10 h 35 · Article n° 14 (tâche tous les deux jours)
+
+- Titre : « Impôt sur le revenu du chauffeur VTC en micro-entreprise : versement libératoire ou barème ? Calculs et dates »
+- Page : https://revision-vtc.fr/dossiers/impot-revenu-chauffeur-vtc-versement-liberatoire.html (2 492 mots, épreuve B, sans photo)
+- En bref : sans option, abattement forfaitaire de 50 % du chiffre d'affaires (305 € au minimum) puis barème du foyer ; avec le versement libératoire, 1,7 % du chiffre d'affaires hors taxes payé avec les cotisations (21,2 % en 2026), soit 22,9 %. Pour 2027, option à demander à l'Urssaf au plus tard le 30 septembre 2026 (revenu fiscal de référence de 2025 d'au plus 29 579 € par part) ; un créateur a jusqu'au dernier jour du troisième mois qui suit la création. Calculs au barème des revenus de 2025, personne seule sans autre revenu : 0 € contre 510 € pour 30 000 € de chiffre d'affaires, 445 € contre 680 € pour 40 000 €, 1 883 € contre 986 € pour 58 000 € ; point d'équilibre vers 43 700 € ; en couple à 58 000 €, 0 € au barème.
+- Nouveau : premier guide du site sur l'impôt sur le revenu en micro-entreprise (barème, décote, plafonds de revenu fiscal de référence par foyer, dates d'option et de renonciation, cases 5KP et 5TB à 5VB de la 2042-C-PRO, acomptes du prélèvement à la source).
+- Infographies : 3 (chiffres clés de l'abattement et du barème, chiffres clés du versement libératoire, graphique en barres barème / versement libératoire pour trois chiffres d'affaires).
+- Relecture indépendante : tous les chiffres et calculs confirmés ; corrigés : exemple officiel des 110 € rattaché à une activité de vente à 1 % (187 € à 1,7 %), cas du chauffeur qui avait déjà opté, perte de l'option à deux ans d'écart, 22,9 % « hors petites contributions », phrase de lecture du graphique, décote 727,77 €, acompte à créer l'année de la création, phrase sur le précompte renvoyée au guide dédié.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px (article et index des guides), aucun débordement ; page dans sitemap.xml, llms.txt et l'index des guides.
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Lundi 23 novembre 2026, 10 h 05 · Question VTC du jour
 
 - Question : « Carte VTC oubliée lors d'un contrôle : quelle amende ? »
