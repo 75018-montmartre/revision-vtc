@@ -6,6 +6,18 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mardi 24 novembre 2026, 8 h 58 · Question VTC du jour
+
+- Question : « Retrait définitif de la carte VTC : peut-on repasser l'examen ? »
+- Page : https://revision-vtc.fr/questions/2026-11-24-retrait-carte-vtc-repasser-examen.html
+- Réponse courte : pas avant dix ans : nul ne peut s'inscrire à l'examen VTC s'il a fait l'objet, dans les dix ans qui précèdent sa demande, d'un retrait définitif de sa carte professionnelle (article R3120-7 du Code des transports) ; une exclusion pour fraude à l'un de ces examens interdit aussi l'inscription pendant cinq ans.
+- Nouveau (premier contenu du site sur ce délai de dix ans) : portée du retrait définitif (L3124-11, préfet compétent selon R3124-4), avertissement et retrait temporaire hors de la liste, examens de toutes les professions du T3P visés, deux exemples datés, peines de L3124-12 pour qui transporte des clients pendant un retrait.
+- Infographie : chiffres clés (10 ans, 5 ans). Script du réel : `reseaux/reels/2026-11-24-retrait-carte-vtc-repasser-examen.txt`.
+- Relecture indépendante : 24 points, aucun contredit ; corrigés : liste des professions rattachée à R3120-1, retrait définitif « en application de L3124-11 » précisé, déduction « ne dispose plus de sa carte » reformulée, réserve des demandes déposées avant le 12 août 2026 ajoutée, exemple de fraude placé dans le passé (2025), peines complémentaires complétées, « délai probatoire non expiré », lien R3124-4.
+- Sources lues ce jour : R3120-7 (Légifrance, en vigueur depuis le 25 février 2021), L3124-11 et L3124-12 (Légifrance, section « Dispositions communes »), R3124-4 (page du titre II de Légifrance, instantané d'avril 2024, concordant avec le wiki), règlement général CMA de l'examen (novembre 2021), fiche F31027.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px sur la page et l'index de la FAQ, aucun débordement ; page dans sitemap.xml, llms.txt, l'index de la FAQ et l'accueil.
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Lundi 23 novembre 2026, 10 h 35 · Article n° 14 (tâche tous les deux jours)
 
 - Titre : « Impôt sur le revenu du chauffeur VTC en micro-entreprise : versement libératoire ou barème ? Calculs et dates »

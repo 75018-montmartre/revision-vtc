@@ -1,0 +1,37 @@
+RÉEL · Retrait définitif de la carte VTC : peut-on repasser l'examen ?
+Page : https://revision-vtc.fr/questions/2026-11-24-retrait-carte-vtc-repasser-examen.html
+Durée visée : 35 à 40 secondes
+
+ACCROCHE (0 à 3 s)
+  Texte à l'écran : Carte VTC retirée : repasser l'examen ?
+  Voix : Carte VTC retirée définitivement. Peut-on simplement repasser l'examen ?
+
+DÉROULÉ
+  Plan 1
+    Texte à l'écran : Pas avant 10 ans
+    Voix : Non. Le Code des transports interdit de s'inscrire si un retrait définitif de la carte, prononcé pour violation de la réglementation, date de moins de dix ans.
+  Plan 2
+    Texte à l'écran : Compté à partir de la demande
+    Voix : Les dix ans se comptent en remontant à partir de la demande d'inscription.
+  Plan 3
+    Texte à l'écran : Exclu pour fraude : 5 ans
+    Voix : Même logique pour une exclusion pour fraude à l'un de ces examens : cinq ans sans pouvoir s'inscrire.
+  Plan 4
+    Texte à l'écran : Retrait temporaire : pas de courses
+    Voix : L'avertissement et le retrait temporaire n'empêchent pas l'inscription. Mais pendant un retrait, même temporaire, pas de clients.
+
+CHUTE
+  Texte à l'écran : Retrait définitif = 10 ans sans examen
+  Voix : Retenez : un retrait définitif, c'est dix ans sans pouvoir s'inscrire à l'examen. Réponse complète et sources sur revision-vtc.fr.
+
+LÉGENDE DE PUBLICATION
+  Après un retrait définitif de la carte professionnelle, impossible de s'inscrire à l'examen VTC pendant dix ans ; après une exclusion pour fraude, pendant cinq ans (article R3120-7 du Code des transports). Le détail et les sources sont sur revision-vtc.fr.
+  #examenvtc #chauffeurvtc #vtc #cartevtc #carteprofessionnelle #reglementationvtc #codedestransports
+  https://revision-vtc.fr/questions/2026-11-24-retrait-carte-vtc-repasser-examen.html
+
+SOURCES
+  - Code des transports, article R3120-7 (Légifrance) : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043177694
+  - Code des transports, articles L3124-11 et L3124-12 (Légifrance) : https://www.legifrance.gouv.fr/codes/id/LEGISCTA000029530888
+  - Code des transports, article R3124-4 (Légifrance) : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389628
+  - CMA France, règlement général de l'examen (novembre 2021) : https://artisanat.fr/media/831/download
+  - Entreprendre.Service-Public.fr, fiche F31027 : https://entreprendre.service-public.gouv.fr/vosdroits/F31027?lang=fr

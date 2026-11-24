@@ -1,0 +1,113 @@
+{
+ "date": "2026-11-24",
+ "slug": "retrait-carte-vtc-repasser-examen",
+ "question": "Retrait définitif de la carte VTC : peut-on repasser l'examen ?",
+ "domaine": "X",
+ "reponse_courte": "Pas avant dix ans : nul ne peut s'inscrire à l'examen VTC s'il a fait l'objet, dans les dix ans qui précèdent sa demande, d'un retrait définitif de sa carte professionnelle (article R3120-7 du Code des transports). Une exclusion pour fraude à l'un de ces examens interdit aussi l'inscription pendant cinq ans.",
+ "sections": [
+  {
+   "titre": "La règle : dix ans sans pouvoir s'inscrire",
+   "texte": [
+    "L'article [R3120-7](../wiki/r3120-7.html) du Code des transports fixe l'examen d'accès à « chacune des professions du transport public particulier de personnes » : taxi, VTC et véhicules motorisés à deux ou trois roues ([article R3120-1](../wiki/r3120-1.html)). Il dresse ensuite la liste des candidats qui ne peuvent pas s'y inscrire : « Nul ne peut s'inscrire à ces examens si : ».",
+    "Le premier cas vise la sanction la plus lourde : le candidat qui « a fait l'objet, dans les dix ans qui précèdent sa demande, d'un retrait définitif de sa carte professionnelle en application de l'article L. 3124-11 ».",
+    "Le délai se compte donc à partir de la demande d'inscription, en remontant : tant que le retrait définitif date de moins de 10 ans, l'inscription est refusée.",
+    {
+     "chiffres": {
+      "items": [
+       {
+        "valeur": "10 ans",
+        "texte": "sans inscription possible après un retrait définitif de la carte professionnelle"
+       },
+       {
+        "valeur": "5 ans",
+        "texte": "sans inscription possible après une exclusion pour fraude à l'un des examens du transport public particulier"
+       }
+      ],
+      "source": "Code des transports, article R3120-7 (1° et 2°), en vigueur depuis le 25 février 2021"
+     }
+    },
+    "Le même article prévoit un deuxième cas : une « exclusion pour fraude lors d'une session à l'un des examens des professions du transport public particulier de personnes » dans les 5 ans qui précèdent la demande. Le troisième cas est le délai probatoire du permis non expiré, détaillé dans notre question [« Peut-on devenir chauffeur VTC avec un permis probatoire ? »](2026-10-29-vtc-permis-probatoire.html)."
+   ]
+  },
+  {
+   "titre": "Retrait définitif, retrait temporaire, avertissement : qui est concerné ?",
+   "texte": [
+    "Le retrait de la carte est une sanction administrative, pas une peine prononcée par un juge. L'article [L3124-11](../wiki/l3124-11.html) prévoit qu'en cas de violation de la réglementation applicable à la profession par le conducteur, « l'autorité administrative peut lui donner un avertissement ou procéder au retrait temporaire ou définitif de sa carte professionnelle ».",
+    "Pour un conducteur de VTC, l'autorité compétente est le préfet du département où la violation a été commise, ou le préfet de police si elle a lieu à Paris ([article R3124-4](../wiki/r3124-4.html)).",
+    "L'interdiction de s'inscrire pendant 10 ans ne vise que le **retrait définitif** prononcé en application de l'article L3124-11, c'est-à-dire pour violation de la réglementation de la profession. La liste de l'article R3120-7 ne mentionne ni l'avertissement ni le retrait temporaire : ils n'empêchent pas l'inscription à l'examen, mais un retrait temporaire interdit d'exercer pendant sa durée (voir plus bas).",
+    "Le texte parle de « ces examens », c'est-à-dire des examens de toutes les professions du transport public particulier : l'interdiction ne se limite pas à l'examen VTC."
+   ]
+  },
+  {
+   "titre": "Un exemple daté",
+   "texte": [
+    "Karim, chauffeur VTC, s'est vu retirer définitivement sa carte professionnelle par le préfet en mars 2024, pour violation de la réglementation de la profession. En 2030, il veut repasser l'examen : sa demande d'inscription est refusée, car le retrait définitif date de moins de dix ans.",
+    "Nadia, elle, a été exclue pour fraude lors d'une session d'admissibilité en 2025. Une demande d'inscription déposée en 2028 est refusée : l'exclusion date de moins de cinq ans.",
+    "**Erreur fréquente** : compter sur une autre voie que l'examen pendant ces dix ans. Depuis le 12 août 2026, l'expérience professionnelle ne permet plus d'accéder à la profession de chauffeur VTC : l'examen est la seule voie d'accès ; seules les demandes de carte déposées avant cette date échappent à cette règle (voir [« Carte VTC par équivalence : est-ce encore possible ? »](2026-11-20-carte-vtc-equivalence-experience.html))."
+   ]
+  },
+  {
+   "titre": "Pendant un retrait, ne pas conduire de clients",
+   "texte": [
+    "Pendant un retrait, même temporaire, le conducteur ne doit pas transporter de clients. L'article [L3124-12](../wiki/l3124-12.html) punit de trois ans d'emprisonnement et de 45 000 € d'amende le fait de réaliser ou de faire réaliser des prestations de transport « lorsque le conducteur ne dispose pas de la carte professionnelle mentionnée à l'article L. 3120-2-2 correspondant à l'activité pratiquée ».",
+    "Les personnes physiques reconnues coupables encourent aussi des peines complémentaires : suspension du permis de conduire pour une durée maximale de cinq ans, immobilisation du véhicule pour une durée maximale d'un an, confiscation du véhicule qui a servi à commettre l'infraction, interdiction de paraître dans certains lieux.",
+    "Les règles à respecter le jour de l'examen, et la fraude qui entraîne l'exclusion, sont détaillées dans notre guide [Réussir l'examen VTC du premier coup](../dossiers/reussir-examen-vtc-premier-coup.html)."
+   ]
+  }
+ ],
+ "a_retenir": [
+  "Nul ne peut s'inscrire à l'examen VTC s'il a fait l'objet, dans les dix ans qui précèdent sa demande, d'un retrait définitif de sa carte professionnelle (article R3120-7 du Code des transports).",
+  "Une exclusion pour fraude lors d'une session à l'un des examens du transport public particulier de personnes interdit l'inscription pendant les cinq ans qui suivent.",
+  "L'avertissement et le retrait temporaire de la carte, prévus par l'article L3124-11, ne figurent pas dans la liste des cas qui interdisent l'inscription ; pendant un retrait, même temporaire, le conducteur ne doit pas transporter de clients."
+ ],
+ "wiki": [
+  "r3120-7",
+  "r3120-1",
+  "l3124-11",
+  "r3124-4",
+  "l3124-12",
+  "arrete-6-avril-2017-examen"
+ ],
+ "fiches": [
+  [
+   "A2.4",
+   "L'examen, seule porte d'entrée"
+  ],
+  [
+   "A5.4",
+   "Avertissement, retrait : les sanctions administratives"
+  ],
+  [
+   "A5.6",
+   "Exercer sans carte ou sans inscription"
+  ]
+ ],
+ "sources": [
+  {
+   "nom": "Code des transports, article R3120-7 (Légifrance, version en vigueur depuis le 25 février 2021, modifiée par le décret n° 2021-202 du 23 février 2021)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043177694",
+   "date": "24 novembre 2026"
+  },
+  {
+   "nom": "Code des transports, articles L3124-11 (en vigueur depuis le 1er janvier 2017) et L3124-12 (en vigueur depuis le 27 juin 2026), section « Dispositions communes » (Légifrance)",
+   "url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000029530888",
+   "date": "24 novembre 2026"
+  },
+  {
+   "nom": "Code des transports, article R3124-4 (Légifrance, section « Dispositions relatives aux voitures de transport avec chauffeur », en vigueur depuis le 8 avril 2017 ; lu le 24 novembre 2026 dans la page du titre II, version recopiée dans le wiki du site)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389628",
+   "date": "24 novembre 2026"
+  },
+  {
+   "nom": "CMA France, Règlement général de l'examen de conducteur de taxi, VTC et VMDTR (version de novembre 2021), article III.1 : conditions d'inscription",
+   "url": "https://artisanat.fr/media/831/download",
+   "date": "24 novembre 2026"
+  },
+  {
+   "nom": "Entreprendre.Service-Public.fr, fiche F31027 « Devenir chauffeur de VTC » (vérifiée le 12 août 2026)",
+   "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F31027?lang=fr",
+   "date": "24 novembre 2026"
+  }
+ ],
+ "verifie": "24 novembre 2026"
+}
