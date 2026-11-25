@@ -411,7 +411,7 @@
    "source": "Code des transports",
    "theme": "conducteur",
    "titre": "La visite médicale",
-   "en_clair": "Les règles de la visite médicale périodique des conducteurs de T3P sont celles du Code de la route, aux articles R. 221-10 et R. 221-11.",
+   "en_clair": "Visite médicale du chauffeur VTC ou de taxi : elle est périodique et suit les règles du Code de la route, fixées aux articles R. 221-10 et R. 221-11.",
    "concretement": "Un avis médical en cours de validité est exigé pour obtenir et renouveler la carte.",
    "fiches": [
     [
@@ -457,7 +457,7 @@
    "source": "Code des transports",
    "theme": "exploitant",
    "titre": "L'assurance responsabilité civile professionnelle",
-   "en_clair": "Toute personne qui fournit des prestations de T3P doit pouvoir justifier à tout moment d'une assurance couvrant sa responsabilité civile professionnelle.",
+   "en_clair": "Assurance RC professionnelle obligatoire : qui fournit des courses de taxi, de VTC ou de deux-roues motorisé doit pouvoir justifier à tout moment de ce contrat. L'assurance couvre sa responsabilité civile professionnelle.",
    "concretement": "Cette attestation est jointe à la demande d'inscription au registre (R3122-1).",
    "fiches": [
     [
@@ -480,7 +480,7 @@
    "source": "Code des transports",
    "theme": "exploitant",
    "titre": "Le justificatif d'assurance à bord",
-   "en_clair": "Le conducteur doit pouvoir présenter à tout moment aux agents de contrôle le justificatif d'assurance pour le transport de personnes à titre onéreux.",
+   "en_clair": "Assurance VTC au contrôle : le chauffeur doit pouvoir montrer à tout moment aux agents le justificatif d'assurance pour le transport payant de personnes. C'est celui prévu au III de l'article R. 211-14-0-1 du Code des assurances.",
    "concretement": "Ne pas le présenter est une contravention de 5e classe (R3124-11).",
    "fiches": [
     [

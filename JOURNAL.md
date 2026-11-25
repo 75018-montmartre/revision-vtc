@@ -6,6 +6,22 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Mercredi 25 novembre 2026, 8 h 20 · Veille du wiki (tâche du mercredi)
+
+- **PROBLÈME : 74 textes sur 78 confirmés identiques à Légifrance au 25 novembre 2026 ; 4 non lus** (Légifrance a refusé les pages, client_error répétés, même en seconde passe espacée). Date « vérifié » laissée au 25 octobre 2026.
+- Aucun texte modifié, aucun article abrogé. Textes recopiés par tronçons d'environ 120 caractères puis comparés alinéa par alinéa (mots, chiffres, ponctuation, alinéas, dates de vigueur).
+- Confirmés sur la version en vigueur : L3120-1, L3120-2, L3120-2-1, L3120-2-2, L3120-4, L3120-5, L3120-7, R3120-1, R3120-2, D3120-3, R3120-4, D3120-5, R3120-6, R3120-7, R3120-8, R3120-8-1, R3120-8-2, R3120-9, R3120-10, D3120-38, L3122-1, L3122-3, L3122-4, L3122-4-1, L3122-9, L1326-1 à L1326-4, R3122-1, R3122-2, R3122-3, R*3122-5, R3122-6, R3122-7, R3122-8, R3122-12, L3124-7, L3124-11, L3124-12, L3124-13, R3124-5, L3141-1, L3141-2, L3143-1, L3143-2, L3143-4, arrêté du 26 mars 2015 (2 articles), arrêté du 6 avril 2017 sur la signalétique (4 articles et annexe).
+- Confirmés par lecture d'une version datée dont l'identifiant LEGIARTI est encore celui en vigueur : R3122-4, R3122-9, R3122-10, R3124-1, R3124-4, R3124-6, R3124-7, R3124-11 (le premier tiret finit bien par une virgule), R3124-12, R3124-13, R3141-1 à R3141-7, L3142-1 à L3142-4, L3143-3, D3120-21, D3120-32 (version de 2021, sans date de fin) ; L3143-5 comparé au texte de la loi n° 2026-534 (9 alinéas identiques).
+- Non lus : R3122-5-1 (identifiant LEGIARTI000043152476 toujours en vigueur, texte non recopié) ; arrêté du 6 avril 2017 sur l'examen ; arrêté du 11 août 2017 sur la formation continue ; arrêté du 6 août 2025 sur le justificatif de réservation (article 1 jamais affiché).
+- À vérifier : la date « En vigueur depuis le 30 août 2025 » de l'arrêté du 6 août 2025. Deux sources privées (weblex.fr, un syndicat de taxis) parlent d'une application au 29 octobre 2025, deux mois après la publication ; non confirmé sur Légifrance, donc non modifié.
+- Explications améliorées (première phrase reprise par Google, mot-clé en tête) :
+  - https://revision-vtc.fr/wiki/l3120-4.html : « Assurance RC professionnelle obligatoire : qui fournit des courses de taxi, de VTC ou de deux-roues motorisé doit pouvoir justifier à tout moment de ce contrat. »
+  - https://revision-vtc.fr/wiki/r3120-4.html : « Assurance VTC au contrôle : le chauffeur doit pouvoir montrer à tout moment aux agents le justificatif d'assurance pour le transport payant de personnes. » ; renvoi au III de l'article R. 211-14-0-1 du Code des assurances.
+  - https://revision-vtc.fr/wiki/d3120-5.html : « Visite médicale du chauffeur VTC ou de taxi : elle est périodique et suit les règles du Code de la route, fixées aux articles R. 221-10 et R. 221-11. »
+- Repéré sur Légifrance, hors wiki : L3120-6, L3142-5, R3124-14 et R3124-15 en vigueur sans page ; L3141-3 et L3141-4 (loi n° 2026-534) toujours pas applicables, aucun décret d'application trouvé ; R3122-11 abrogé depuis le 12 août 2026 (déjà connu).
+- Contrôle technique : génération réussie, pages dans le sitemap avec titre, description et données structurées, llms.txt et llms-full.txt à jour, aucun lien interne cassé, axe sans erreur en clair et en sombre à 320 et 1 366 px, aucun débordement.
+- Détail : https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mardi 24 novembre 2026, 8 h 58 · Question VTC du jour
 
 - Question : « Retrait définitif de la carte VTC : peut-on repasser l'examen ? »
