@@ -1,0 +1,37 @@
+RÉEL · Retour à la base VTC : où attendre entre deux courses ?
+Page : https://revision-vtc.fr/questions/2026-11-26-retour-a-la-base-vtc-entre-deux-courses.html
+
+ACCROCHE (0 à 3 s)
+  Écran : Place payante, parcmètre réglé : un VTC peut attendre ?
+  Voix : Vous avez payé le parcmètre. Pour le ministère des transports, ça ne suffit pas.
+
+DÉROULÉ (30 à 45 s)
+  Plan 1
+    Écran : Après la course : la base
+    Voix : Dès la fin d'une course réservée, le chauffeur retourne au lieu d'établissement de son exploitant, ou dans un lieu hors de la chaussée où le stationnement est autorisé. C'est l'article L3122-9 du Code des transports.
+  Plan 2
+    Écran : Sauf nouvelle réservation ou contrat
+    Voix : Deux exceptions : une nouvelle réservation préalable, ou un contrat écrit avec le client final. Des conditions générales de vente ne suffisent pas.
+  Plan 3
+    Écran : Place le long du trottoir : non
+    Voix : Selon la fiche du ministère des transports, sans réservation, un VTC ne peut pas attendre sur une place le long de la voie, ni sur une station de taxi ou une place de livraison.
+  Plan 4
+    Écran : Parking hors voirie, loin des gares
+    Voix : Selon la même fiche, il peut attendre dans un parking hors voirie, de commerce ou de station-service par exemple, avec l'accord du gestionnaire, mais pas dans un parc proche d'une gare ou d'un aéroport.
+  Plan 5
+    Écran : Appli connectée : seulement dans ce parking
+    Voix : Et selon cette même fiche, tant qu'il n'a pas rejoint cette zone de stationnement, il ne peut pas être connecté pour recevoir une réservation.
+
+CHUTE
+  Écran : La base, ou un lieu hors chaussée autorisé
+  Voix : Après la course : la base, ou un lieu hors de la chaussée où le stationnement est autorisé. Réponse complète et sources sur revision-vtc.fr
+
+LÉGENDE
+  Après une course, un chauffeur VTC ne peut pas attendre n'importe où. Le Code des transports impose le retour à la base ou un stationnement hors de la chaussée, sauf nouvelle réservation ou contrat avec le client final. Ce que dit la fiche du ministère, et six situations expliquées :
+  https://revision-vtc.fr/questions/2026-11-26-retour-a-la-base-vtc-entre-deux-courses.html
+  #examenvtc #chauffeurvtc #vtc #carteVTC #réglementationVTC #T3P #formationvtc
+
+SOURCES
+  - Code des transports, articles L3122-9, R3122-12, L3120-2 et R3124-11 (Légifrance)
+  - Ministère chargé des transports (DGITM), fiche thématique « Application des articles L. 3120-2 et L. 3122-9 du code des transports » (juillet 2025) : https://www.ecologie.gouv.fr/sites/default/files/documents/20250825_fiche_th%C3%A9matique_L3120-2_et_L3122-9.pdf
+  - Ministère chargé des transports, page « Taxi, VTC, VMDTR et CPA : réglementation des transports publics particuliers de personnes » : https://www.ecologie.gouv.fr/taxi-vtc-reglementation-des-transports-publics-particuliers-personnes

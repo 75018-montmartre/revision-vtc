@@ -6,6 +6,18 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Jeudi 26 novembre 2026, 9 h 03 · Question VTC du jour
+
+- Question : « Retour à la base VTC : où attendre entre deux courses ? »
+- Page : https://revision-vtc.fr/questions/2026-11-26-retour-a-la-base-vtc-entre-deux-courses.html
+- Réponse courte : dès la fin d'une course réservée, le chauffeur VTC doit retourner au lieu d'établissement de son exploitant ou dans un lieu, hors de la chaussée, où le stationnement est autorisé, sauf s'il justifie d'une nouvelle réservation préalable ou d'un contrat avec le client final (article L3122-9 du Code des transports).
+- Nouveau (premier contenu du site consacré au retour à la base) : lecture de la fiche thématique de la DGITM (juillet 2025) sur « hors de la chaussée » (places le long de la voie, stations de taxi, parcs près des gares et aéroports exclus ; zone hors voirie avec accord du gestionnaire ; pas de connexion à l'application avant de l'avoir rejointe), tableau de six situations, cinq clauses du contrat avec le client final (R3122-12) avec un exemple, sanction de la quête de clients (R3124-11).
+- Infographie : non (aucun chiffre comparable ; tableau de situations à la place). Script du réel : `reseaux/reels/2026-11-26-retour-a-la-base-vtc-entre-deux-courses.txt`.
+- Relecture indépendante : 40 points, 34 confirmés, 1 non trouvé (« centre commercial » remplacé par « commerce »), 2 simplifications fausses dans le script corrigées (parkings près des gares exclus, connexion seulement dans la zone hors voirie) ; précisions : accroche attribuée au ministère, « en attente de clientèle », « au moins » cinq clauses et renvoi à un arrêté (R3122-12), aucune amende propre au retour à la base dans les articles cités, sources D3120-3 et L3124-12 ajoutées.
+- Sources lues ce jour : fiche DGITM, page du ministère (mise à jour du 3 février 2026), recueil DGITM des textes du T3P (7 janvier 2020), fiche F32803. Sources non lues : Légifrance (refus client_error et PROVENANCE_REQUIRED) ; L3122-9, R3122-12, L3120-2, R3124-11, D3120-3 et L3124-12 cités d'après le wiki (confirmés le 25 novembre 2026), concordants avec le recueil et la page du ministère.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px sur la page et l'index de la FAQ, aucun débordement ; page dans sitemap.xml, llms.txt, l'index de la FAQ et l'accueil.
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Mercredi 25 novembre 2026, 8 h 20 · Veille du wiki (tâche du mercredi)
 
 - **PROBLÈME : 74 textes sur 78 confirmés identiques à Légifrance au 25 novembre 2026 ; 4 non lus** (Légifrance a refusé les pages, client_error répétés, même en seconde passe espacée). Date « vérifié » laissée au 25 octobre 2026.

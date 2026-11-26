@@ -1,0 +1,181 @@
+{
+ "date": "2026-11-26",
+ "slug": "retour-a-la-base-vtc-entre-deux-courses",
+ "question": "Retour à la base VTC : où attendre entre deux courses ?",
+ "reponse_courte": "Dès la fin d'une course réservée, le chauffeur VTC doit retourner au lieu d'établissement de son exploitant ou dans un lieu, hors de la chaussée, où le stationnement est autorisé, sauf s'il justifie d'une nouvelle réservation préalable ou d'un contrat avec le client final (article L3122-9 du Code des transports).",
+ "sections": [
+  {
+   "titre": "La règle : la base, ou un stationnement hors de la chaussée",
+   "texte": [
+    "L'article [L3122-9](../wiki/l3122-9.html) du Code des transports est court. « Dès l'achèvement de la prestation commandée au moyen d'une réservation préalable », le conducteur d'une VTC « est tenu de retourner au lieu d'établissement de l'exploitant de cette voiture ou dans un lieu, hors de la chaussée, où le stationnement est autorisé ».",
+    "Il n'y a donc que deux destinations possibles après une course : le lieu d'établissement de l'exploitant de la voiture, ou un lieu qui remplit deux conditions à la fois : être **hors de la chaussée** et être un lieu où le stationnement est **autorisé**.",
+    "Le même article prévoit deux exceptions : le retour n'est pas exigé si le conducteur « justifie d'une réservation préalable ou d'un contrat avec le client final ». Un chauffeur qui enchaîne sur une course déjà réservée n'a donc pas à rentrer.",
+    "Cette règle complète l'interdiction de la maraude : l'article [L3120-2](../wiki/l3120-2.html) interdit au conducteur d'une VTC de « s'arrêter, stationner ou circuler sur la voie ouverte à la circulation publique en quête de clients »."
+   ]
+  },
+  {
+   "titre": "Ce que le ministère entend par « hors de la chaussée »",
+   "texte": [
+    "Le ministère chargé des transports (DGITM) a publié une fiche thématique sur l'application des articles L3120-2 et L3122-9, datée de juillet 2025 en couverture. Elle précise qu'elle explicite ces termes « sous réserve de l'appréciation ultérieure du juge compétent » et qu'elle n'engage pas l'administration dans l'appréciation de situations particulières : c'est une lecture officielle, pas un texte de loi.",
+    "Elle part de la définition de la chaussée donnée par le Code de la route (article R110-2) : la ou les parties de la route normalement utilisées pour la circulation des véhicules.",
+    "Selon cette fiche, un VTC en activité, en attente de clientèle, qui n'a pas de réservation préalable ne peut pas s'arrêter ou stationner :",
+    {
+     "liste": [
+      "dans une rue, sur une voie hors agglomération ou dans un espace ouvert à la circulation publique comme une place ;",
+      "sur une place de stationnement située le long de la voie ou sur un accotement ;",
+      "sur un emplacement interdit ou réservé, par exemple une place de livraison ou une station de taxi ;",
+      "dans un parc de stationnement à proximité d'une gare ou d'un aéroport, ou sur les voies de circulation de ces équipements."
+     ]
+    },
+    "S'il ne retourne pas à sa base, le chauffeur doit, selon la même fiche, rejoindre une zone de stationnement hors voirie, avec l'accord du propriétaire ou du gestionnaire du site et dans le respect de ses règles : un parc de stationnement public ou privé, une zone dédiée à un établissement (station-service, commerce, parc en silo). Les parcs situés à proximité d'une gare ou d'un aéroport restent exclus, comme indiqué plus haut.",
+    "La fiche ajoute un point que beaucoup de chauffeurs ignorent : tant qu'il n'a pas rejoint cette zone, le chauffeur ne peut pas être connecté à une application pour recevoir une réservation."
+   ]
+  },
+  {
+   "titre": "Six situations après une course",
+   "texte": [
+    {
+     "tableau": {
+      "legende": "Où attendre après une course, d'après l'article L3122-9 du Code des transports et la fiche thématique de la DGITM (lecture du ministère, sous réserve de l'appréciation du juge)",
+      "colonnes": [
+       "Situation après la course",
+       "Conforme ?",
+       "Pourquoi"
+      ],
+      "lignes": [
+       [
+        "Le chauffeur rentre au lieu d'établissement de son exploitant",
+        "Oui",
+        "Première destination prévue par L3122-9"
+       ],
+       [
+        "Il a déjà une nouvelle réservation et part la chercher",
+        "Oui",
+        "Exception prévue par L3122-9 : réservation préalable"
+       ],
+       [
+        "Il attend dans le parking d'un commerce, avec l'accord du gestionnaire et dans le respect de ses règles, loin de toute gare ou aéroport",
+        "Oui, selon la fiche",
+        "Zone de stationnement hors voirie"
+       ],
+       [
+        "Il se gare sur une place payante le long d'un trottoir, application ouverte",
+        "Non, selon la fiche",
+        "Place de stationnement le long de la voie"
+       ],
+       [
+        "Il attend sur une station de taxi ou une place de livraison",
+        "Non, selon la fiche",
+        "Emplacement interdit ou réservé"
+       ],
+       [
+        "Il tourne en ville à vide en attendant une course",
+        "Non",
+        "Circuler en quête de clients est interdit (L3120-2)"
+       ]
+      ]
+     }
+    },
+    "**Erreur fréquente** : croire qu'une place de stationnement payante, réglée au parcmètre, suffit. Le stationnement y est autorisé pour tout le monde, mais la place est située le long de la voie : la fiche du ministère la range parmi les lieux où un VTC sans réservation ne peut pas attendre."
+   ]
+  },
+  {
+   "titre": "L'exception du contrat avec le client final",
+   "texte": [
+    "Le contrat avec le client final dispense aussi du retour à la base. L'article [R3122-12](../wiki/r3122-12.html) du Code des transports fixe sa forme : ce client peut être une personne morale (une entreprise, un hôtel), et le contrat se justifie par un document écrit, sur papier ou sur support électronique, qui précise :",
+    {
+     "liste": [
+      "sa durée ;",
+      "sa date d'effet ;",
+      "la nature des prestations couvertes ;",
+      "le ou les lieux de prise en charge ;",
+      "la qualité des bénéficiaires des prestations."
+     ]
+    },
+    "Le texte ajoute que « des conditions générales de vente ne constituent pas un contrat avec le client final », et que le conducteur doit présenter ce justificatif à toute demande des agents chargés des contrôles. Le même article renvoie à un arrêté le soin de préciser les informations figurant sur ce justificatif et ses caractéristiques.",
+    "Exemple : un hôtel signe avec un exploitant de VTC un contrat écrit d'un an, à compter du 1er janvier 2027, pour conduire ses clients entre l'hôtel et l'aéroport. Le contrat précise au moins ces cinq clauses. Le chauffeur peut alors invoquer ce contrat pour ne pas retourner à la base entre deux courses pour l'hôtel, à condition de pouvoir le présenter lors d'un contrôle. Un simple lien vers les conditions générales du site de réservation de l'exploitant ne suffirait pas."
+   ]
+  },
+  {
+   "titre": "Ce que risque le chauffeur",
+   "texte": [
+    "Aucun des articles cités sur cette page ne fixe d'amende propre au défaut de retour à la base. En revanche, s'arrêter, stationner ou circuler sur la voie ouverte à la circulation publique en quête de clients est une contravention de la cinquième classe ([article R3124-11](../wiki/r3124-11.html)), soit 1 500 € d'amende au plus pour une personne physique. La fiche du ministère range l'attente de clientèle sur une place le long de la voie parmi les arrêts et stationnements interdits à un VTC sans réservation : c'est sa lecture, sous réserve de l'appréciation du juge. Prendre en charge un client sans réservation préalable est, lui, un délit : les peines sont détaillées dans notre question [« Maraude VTC : quelle sanction pour un client pris sans réservation ? »](2026-11-19-maraude-vtc-sanction.html).",
+    "Aux abords des gares et des aéroports, une règle de plus s'applique : le stationnement est limité à une heure avant la prise en charge du client qui a réservé. Voir [« Combien de temps un VTC peut-il attendre devant une gare ou un aéroport ? »](2026-10-25-vtc-attente-gare-aeroport.html), et notre [lexique du VTC](../dossiers/lexique-vtc-mots-du-metier.html) pour les autres mots du métier."
+   ]
+  }
+ ],
+ "a_retenir": [
+  "Après une course réservée, le chauffeur VTC retourne au lieu d'établissement de son exploitant ou dans un lieu, hors de la chaussée, où le stationnement est autorisé (article L3122-9 du Code des transports).",
+  "Le retour n'est pas exigé s'il justifie d'une nouvelle réservation préalable ou d'un contrat écrit avec le client final, qui précise durée, date d'effet, prestations, lieux de prise en charge et bénéficiaires (article R3122-12).",
+  "Selon la fiche du ministère chargé des transports, une place de stationnement le long de la voie ne convient pas : il faut une zone de stationnement hors voirie, avec l'accord de son gestionnaire, hors parcs proches des gares et des aéroports."
+ ],
+ "wiki": [
+  "l3122-9",
+  "r3122-12",
+  "l3120-2",
+  "r3124-11",
+  "d3120-3"
+ ],
+ "fiches": [
+  [
+   "A3.5",
+   "Le retour après la course"
+  ],
+  [
+   "A3.3",
+   "Où attendre entre deux courses"
+  ],
+  [
+   "A3.2",
+   "La maraude, réservée au taxi"
+  ]
+ ],
+ "sources": [
+  {
+   "nom": "Code des transports, article L3122-9 (en vigueur depuis le 3 octobre 2014 ; texte recopié dans le wiki du site, confirmé identique à Légifrance le 25 novembre 2026)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000029529985",
+   "date": "26 novembre 2026"
+  },
+  {
+   "nom": "Code des transports, article R3122-12 (en vigueur depuis le 1er janvier 2019 ; texte recopié dans le wiki du site, confirmé identique à Légifrance le 25 novembre 2026)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037653617",
+   "date": "26 novembre 2026"
+  },
+  {
+   "nom": "Ministère chargé des transports (DGITM), fiche thématique « Application des articles L. 3120-2 et L. 3122-9 du code des transports » (juillet 2025)",
+   "url": "https://www.ecologie.gouv.fr/sites/default/files/documents/20250825_fiche_th%C3%A9matique_L3120-2_et_L3122-9.pdf",
+   "date": "26 novembre 2026"
+  },
+  {
+   "nom": "Ministère chargé des transports, « Taxi, VTC, VMDTR et CPA : réglementation des transports publics particuliers de personnes » (mise à jour du 3 février 2026)",
+   "url": "https://www.ecologie.gouv.fr/taxi-vtc-reglementation-des-transports-publics-particuliers-personnes",
+   "date": "26 novembre 2026"
+  },
+  {
+   "nom": "DGITM, Recueil des textes applicables au transport public particulier de personnes (mis à jour le 7 janvier 2020) : articles L3122-9, R3122-12, L3120-2 et R3124-11",
+   "url": "https://www.ecologique-solidaire.gouv.fr/sites/default/files/Recueil%20des%20textes%20applicables%20au%20transport%20public%20particulier%20de%20personnes%20(Mis%20%C3%A0%20jour%20le%20070120).pdf",
+   "date": "26 novembre 2026"
+  },
+  {
+   "nom": "Code des transports, article L3120-2 (en vigueur depuis le 31 décembre 2016 ; texte recopié dans le wiki du site, confirmé identique à Légifrance le 25 novembre 2026)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033745346",
+   "date": "26 novembre 2026"
+  },
+  {
+   "nom": "Code des transports, article R3124-11 (en vigueur depuis le 8 avril 2017 ; texte recopié dans le wiki du site, confirmé le 25 novembre 2026 sur la version datée dont l'identifiant est toujours en vigueur)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389618",
+   "date": "26 novembre 2026"
+  },
+  {
+   "nom": "Code des transports, articles D3120-3 (une heure avant la prise en charge, en vigueur depuis le 1er janvier 2015) et L3124-12 (délit de prise en charge sans réservation, en vigueur depuis le 27 juin 2026) ; textes recopiés dans le wiki du site, confirmés identiques à Légifrance le 25 novembre 2026",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030048397",
+   "date": "26 novembre 2026"
+  },
+  {
+   "nom": "Service-public.fr, fiche F32803 « Amendes » (montant maximum par classe de contravention : 1 500 € pour la cinquième classe)",
+   "url": "https://sites.service-information-publique.fr/carnac/guide-associations/F32803.html",
+   "date": "26 novembre 2026"
+  }
+ ],
+ "verifie": "26 novembre 2026"
+}
