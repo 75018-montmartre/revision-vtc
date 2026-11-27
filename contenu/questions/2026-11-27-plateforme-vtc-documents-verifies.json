@@ -1,0 +1,97 @@
+{
+ "date": "2026-11-27",
+ "slug": "plateforme-vtc-documents-verifies",
+ "question": "Plateforme VTC : quels documents doit-elle vérifier avant la première course ?",
+ "reponse_courte": "Avant la première mise en relation, la plateforme doit demander au chauffeur l'original de son permis et de sa carte professionnelle, les justificatifs de l'assurance du véhicule, et disposer de l'attestation d'inscription de l'exploitant au registre des VTC et de son assurance de responsabilité civile professionnelle (articles R3141-1 à R3141-4 du Code des transports).",
+ "sections": [
+  {
+   "titre": "La règle : la plateforme vérifie avant de vous confier des clients",
+   "texte": [
+    "L'article L3141-2 du Code des transports oblige le professionnel qui met en relation des conducteurs et des passagers à s'assurer que tout conducteur dispose de quatre documents : le permis de conduire requis, un justificatif de l'assurance du véhicule utilisé, un justificatif de l'assurance de responsabilité civile requise pour l'activité et, le cas échéant, la carte professionnelle. Pour un chauffeur VTC, la carte professionnelle fait donc partie des documents vérifiés.",
+    "Le même article vise aussi l'entreprise dont le conducteur relève, l'exploitant : la plateforme s'assure qu'elle dispose d'un justificatif de l'assurance de responsabilité civile professionnelle et du certificat d'inscription au registre des VTC. Pour une course en VTC, elle s'assure enfin que le véhicule répond aux conditions techniques et de confort.",
+    "Les articles R3141-1 à R3141-7, en vigueur depuis le 1er janvier 2019, disent comment faire ces vérifications : quels documents, sous quelle forme, à quel moment."
+   ]
+  },
+  {
+   "titre": "Avant la première course : originaux, justificatifs et attestation",
+   "texte": [
+    "Avant la première mise en relation avec des passagers, la plateforme demande au conducteur de se présenter « muni de l'original du permis de conduire requis, en cours de validité » (article R3141-1) et muni de l'original de sa carte professionnelle, en cours de validité (article R3141-3). Une photocopie ne suffit donc pas pour ces deux documents la première fois.",
+    "Elle s'assure aussi que le conducteur lui a transmis les justificatifs en cours de validité de l'assurance du véhicule utilisé (article R3141-2).",
+    "Pour l'exploitant, elle doit disposer, avant toute mise en relation, de l'attestation d'inscription au registre des VTC en cours de validité et d'un justificatif en cours de validité de son assurance de responsabilité civile professionnelle (article R3141-4). Si vous êtes entrepreneur individuel inscrit au registre, vous êtes à la fois le conducteur et l'exploitant ; si vous exercez par une société (SASU, EURL), l'exploitant est la société.",
+    {"flux": {
+      "titre": "Qui remet quoi à la plateforme",
+      "lecture": "Les originaux du permis et de la carte professionnelle se présentent avant la première course ; ensuite, chaque année : un relevé ou l'original du permis, une copie de la carte et les justificatifs d'assurance.",
+      "etats": [
+       {"quand": "Avant la première mise en relation", "liens": [
+        ["Vous", "La plateforme", "vous présentez l'original du permis de conduire et de la carte professionnelle"],
+        ["Vous", "La plateforme", "vous transmettez les justificatifs de l'assurance du véhicule"],
+        ["L'exploitant", "La plateforme", "transmet l'attestation d'inscription au registre des VTC et la liste des immatriculations déclarées"]
+       ]},
+       {"quand": "Chaque année ensuite", "nouveau": true, "liens": [
+        ["Vous", "La plateforme", "vous adressez le relevé de votre permis ou présentez à nouveau l'original"],
+        ["Vous", "La plateforme", "vous transmettez une copie de votre carte professionnelle"],
+        ["Vous", "La plateforme", "vous transmettez les justificatifs d'assurance du véhicule en cours de validité"]
+       ]}
+      ],
+      "alerte": "Sans ces documents, la plateforme est tenue de s'abstenir de faire appel au conducteur ou à l'entreprise (article R3141-6).",
+      "source": "Code des transports, articles R3141-1 à R3141-6 (Légifrance)"
+    }}
+   ]
+  },
+  {
+   "titre": "Ensuite, chaque année : le tableau des vérifications",
+   "texte": [
+    "Les vérifications ne s'arrêtent pas à l'inscription. Voici, document par document, ce que prévoient les textes.",
+    {"tableau": {
+      "legende": "Ce que la plateforme vérifie, et quand (Code des transports)",
+      "colonnes": ["Document", "Avant la première course", "Par la suite", "Article"],
+      "lignes": [
+       ["Permis de conduire", "Original, en cours de validité", "Chaque année, sauf expiration entre-temps : relevé (existence, catégorie, validité du permis) ou nouvelle présentation de l'original, au choix du conducteur", "R3141-1"],
+       ["Carte professionnelle", "Original, en cours de validité", "Une copie chaque année, sauf expiration entre-temps", "R3141-3"],
+       ["Assurance du véhicule", "Justificatifs en cours de validité", "Au moins chaque année, sauf expiration du contrat entre-temps", "R3141-2"],
+       ["Attestation d'inscription de l'exploitant au registre des VTC", "En cours de validité", "Avant toute mise en relation", "R3141-4"],
+       ["Assurance de responsabilité civile professionnelle de l'exploitant", "Justificatif en cours de validité", "Avant toute mise en relation", "R3141-4"],
+       ["Immatriculation du véhicule", "Parmi celles communiquées au gestionnaire du registre", "Avant toute mise en relation", "R3141-5"]
+      ]
+    }},
+    "Pour le permis, le relevé est celui qui porte les informations relatives à l'existence, à la catégorie et à la validité du permis, établi en application du 1° de l'article L225-5 du Code de la route."
+   ]
+  },
+  {
+   "titre": "La voiture : sa plaque doit figurer sur la liste du registre",
+   "texte": [
+    "Le texte ne demande pas à la plateforme de mesurer la longueur ou la puissance de votre voiture. Selon l'article R3141-5, son obligation de vérifier les conditions techniques et de confort est satisfaite par une vérification plus simple : avant toute mise en relation, elle vérifie que le numéro d'immatriculation du véhicule utilisé fait partie de ceux qui ont été communiqués au gestionnaire du registre des VTC.",
+    "Pour cela, l'exploitant transmet à la plateforme une copie de la liste communiquée au gestionnaire du registre, en même temps que l'attestation d'inscription. Une voiture qui ne figure pas sur cette liste ne passe donc pas la vérification. Quand vous changez de voiture, la déclaration au registre a son propre délai : voir [changer de voiture VTC : dans quel délai le déclarer au registre ?](2026-11-21-changer-voiture-vtc-declaration-registre.html)."
+   ]
+  },
+  {
+   "titre": "Document manquant : la plateforme doit cesser de vous confier des courses",
+   "texte": [
+    "Si la plateforme n'obtient pas du conducteur ou de l'entreprise les documents prévus, elle « est tenue de s'abstenir de faire appel à eux » pour assurer des courses (article R3141-6). Il en va de même si l'administration lui signale la fin anticipée de la validité de l'une des pièces transmises.",
+    "Dans ce cas, l'article R3141-7 l'oblige à informer sans délai l'exploitant et le conducteur des motifs pour lesquels elle s'abstient de toute mise en relation et, le cas échéant, des démarches à entreprendre pour y remédier.",
+    "**Erreur fréquente** : croire qu'un compte validé par la plateforme prouve que vos papiers sont en règle pour un contrôle. Ses vérifications ne remplacent pas vos propres obligations, par exemple présenter votre carte professionnelle aux agents : voir [carte VTC oubliée lors d'un contrôle : quelle amende ?](2026-11-23-carte-vtc-oubliee-controle-amende.html)."
+   ]
+  },
+  {
+   "titre": "Quelles plateformes sont concernées ?",
+   "texte": [
+    "Ces règles visent, selon l'article L3141-1, les professionnels qui mettent en relation des conducteurs ou des entreprises de transport et des passagers, pour des déplacements en véhicule motorisé comptant au plus huit places assises en plus de celle du conducteur. Sont notamment exclus le covoiturage, les services publics de transport organisés par une autorité organisatrice et les déplacements réalisés dans le cadre du conventionnement prévu à l'article L322-5 du Code de la sécurité sociale.",
+    "Elles ne s'appliquent pas à une entreprise qui exploite elle-même des services de transport, lorsque la mise en relation porte sur les courses qu'elle exécute elle-même. Une société de VTC qui prend des réservations pour les courses qu'elle exécute elle-même n'est donc pas visée par ces règles pour ces courses ; si elle confie une course à un autre exploitant, cette mise en relation l'est."
+   ]
+  }
+ ],
+ "a_retenir": [
+  "Avant la première course, la plateforme demande au chauffeur VTC de se présenter avec l'original de son permis de conduire et de sa carte professionnelle, en cours de validité (articles R3141-1 et R3141-3 du Code des transports).",
+  "Elle doit aussi disposer des justificatifs d'assurance du véhicule, de l'attestation d'inscription de l'exploitant au registre des VTC et de son assurance de responsabilité civile professionnelle, et vérifier que la plaque de la voiture figure parmi celles déclarées au registre (R3141-2, R3141-4, R3141-5).",
+  "Sans ces documents, la plateforme est tenue de ne plus faire appel au conducteur et doit lui dire sans délai pourquoi et, le cas échéant, comment y remédier (R3141-6 et R3141-7)."
+ ],
+ "wiki": ["l3141-2", "r3141-1", "r3141-3", "r3141-4", "r3141-5", "r3141-6", "r3141-7", "l3141-1"],
+ "fiches": [["A1.4", "Plateformes et centrales de réservation"], ["G1.4", "Déclarer ses conducteurs et ses véhicules"], ["G1.2", "S'inscrire au registre des VTC"]],
+ "sources": [
+  {"nom": "Code des transports, articles R3141-1 à R3141-7 (en vigueur depuis le 1er janvier 2019, créés par le décret n° 2018-1036 ; R3141-1 lu sur Légifrance le 27 novembre 2026 ; R3141-2 à R3141-7 d'après le texte recopié dans le wiki du site, confirmé le 25 novembre 2026, et le décret d'origine)", "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037661904", "date": "27 novembre 2026"},
+  {"nom": "Code des transports, article L3141-2 (en vigueur depuis le 31 décembre 2016 ; lu sur Légifrance le 27 novembre 2026)", "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033737593", "date": "27 novembre 2026"},
+  {"nom": "Code des transports, article L3141-1 (en vigueur depuis le 1er juin 2023 ; lu sur Légifrance le 27 novembre 2026)", "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043411217", "date": "27 novembre 2026"},
+  {"nom": "DGITM, Recueil des textes applicables au transport public particulier de personnes (mis à jour le 7 janvier 2020) : articles L3141-2 et R3141-1 à R3141-7 (titre IV, pages 42 à 46)", "url": "https://www.ecologique-solidaire.gouv.fr/sites/default/files/Recueil%20des%20textes%20applicables%20au%20transport%20public%20particulier%20de%20personnes%20(Mis%20%C3%A0%20jour%20le%20070120).pdf", "date": "27 novembre 2026"}
+ ],
+ "verifie": "27 novembre 2026"
+}

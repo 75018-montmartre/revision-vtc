@@ -6,6 +6,19 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Vendredi 27 novembre 2026, 8 h 58 · Question VTC du jour
+
+- Question : « Plateforme VTC : quels documents doit-elle vérifier avant la première course ? »
+- Page : https://revision-vtc.fr/questions/2026-11-27-plateforme-vtc-documents-verifies.html
+- Réponse courte : avant la première mise en relation, la plateforme doit demander au chauffeur l'original de son permis et de sa carte professionnelle, les justificatifs de l'assurance du véhicule, et disposer de l'attestation d'inscription de l'exploitant au registre des VTC et de son assurance de responsabilité civile professionnelle (articles R3141-1 à R3141-4 du Code des transports).
+- Nouveau (premier contenu du site consacré à ces vérifications) : tableau document par document (avant la première course / chaque année / article), contrôle de la plaque sur la liste du registre (R3141-5), obligation de s'abstenir et d'informer (R3141-6 et R3141-7), plateformes concernées et exclues (L3141-1).
+- Infographie : schéma flux (qui remet quoi à la plateforme, avant la première course puis chaque année). Script du réel : `reseaux/reels/2026-11-27-plateforme-vtc-documents-verifies.txt`.
+- Relecture indépendante : 42 points, aucun contredit ; corrigés : phrase de lecture du schéma (le permis se renouvelle par relevé ou original, pas par copie), conducteur et exploitant en entreprise individuelle / société, exclusions de L3141-1 « notamment », société de VTC « pour les courses qu'elle exécute elle-même », « le cas échéant » dans À retenir, accroche du réel limitée au permis et à la carte.
+- Sources lues ce jour : L3141-1, L3141-2 et R3141-1 sur Légifrance (relecteur), recueil DGITM des textes du T3P (7 janvier 2020, titre IV). Non lus en ligne : R3141-2 à R3141-7 en version consolidée (Légifrance client_error) ; cités d'après le wiki (confirmés le 25 novembre 2026), concordants avec le recueil et le décret n° 2018-1036.
+- Écarté : articles L3141-3 et L3141-4 (loi n° 2026-534) non mentionnés, texte non lu ce jour ; sanction d'une plateforme qui ne vérifie pas (R3143-x) non lue.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px sur la page et l'index de la FAQ, aucun débordement ; page dans sitemap.xml, llms.txt, l'index de la FAQ et l'accueil. Accueil : alerte axe « landmark-complementary-is-top-level » (déjà présente avant).
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Jeudi 26 novembre 2026, 9 h 03 · Question VTC du jour
 
 - Question : « Retour à la base VTC : où attendre entre deux courses ? »
