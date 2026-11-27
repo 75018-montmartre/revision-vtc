@@ -2664,7 +2664,7 @@ Un test simple avant de s'engager : calculez votre budget dans trois situations.
 Pour les montants : la location à la semaine, la location longue durée et l'achat sont comparés dans notre article « Combien coûte vraiment le lancement en VTC ? », et le simulateur calcule le coût au kilomètre de votre propre voiture.
 2. Confondre ce que l'application affiche et ce qui reste
 Le montant d'une course, ou le total de la semaine, n'est pas un revenu. Il faut en retirer les cotisations sociales (près de 22 % du chiffre d'affaires en micro-entreprise en 2026), tous les frais de la voiture, puis l'impôt. Il faut aussi tenir compte des heures passées à attendre entre deux courses.
-Dans l'exemple de notre simulateur, 1 000 € versés par semaine laissent entre 939 € et 1 319 € par mois avant impôt, TVA comprise. Le calcul complet, de 47,60 € « en course » à 8,49 € ou 11,92 € par heure réellement passée au volant, est expliqué dans l'article « Combien gagne-t-on vraiment de l'heure ? ».
+Dans l'exemple de notre simulateur, 1 000 € versés par semaine laissent entre 940 € et 1 319 € par mois avant impôt, TVA comprise. Le calcul complet, de 47,60 € « en course » à 8,49 € ou 11,92 € par heure réellement passée au volant, est expliqué dans l'article « Combien gagne-t-on vraiment de l'heure ? ».
 3. Choisir la micro-entreprise sans faire le calcul
 La micro-entreprise est simple : on déclare son chiffre d'affaires, on paie un pourcentage, et c'est tout. C'est un très bon statut pour tester l'activité, pour un petit volume ou avec une voiture déjà payée. Le plafond est de 83 600 € de chiffre d'affaires par an en 2026.
 Son point faible est connu, et il pèse lourd en VTC : on ne peut pas déduire ses frais. Les cotisations et l'impôt sont calculés sur le chiffre d'affaires, que la voiture vous coûte 300 € ou 1 500 € par mois. Pour un métier où la voiture absorbe une grande part des recettes, une entreprise individuelle au régime réel ou une société (EURL, SASU) peut devenir plus intéressante, parce qu'elle tient compte des frais réels.
@@ -2741,16 +2741,16 @@ Deuxième étape : retirer les cotisations et la voiture
 Les sommes versées par la plateforme ne sont pas un salaire : c'est le chiffre d'affaires d'une entreprise. Il faut encore en retirer deux grosses dépenses.
 Les cotisations sociales. En micro-entreprise, elles représentent près de 22 % du chiffre d'affaires en 2026 : 21,2 % de cotisations, 0,3 % pour la formation professionnelle et 0,48 % de taxe pour la chambre de métiers (hors Alsace-Moselle). Elles se calculent sur le chiffre d'affaires, pas sur le bénéfice : même un mois à perte, elles sont dues. Le détail est dans notre réponse « Quelles cotisations paie un chauffeur VTC en micro-entreprise ? ».
 La voiture. Location, carburant ou électricité, assurance, entretien, pneus : c'est la plus grosse dépense du métier. Avec une hybride louée 280 € par semaine, roulant 60 000 km par an, notre simulateur arrive à 0,35 € par kilomètre, carburant et assurance compris.
-Prenons l'exemple par défaut du simulateur de coût de revient et de revenu net : 1 000 € versés par les plateformes chaque semaine, pendant 47 semaines (le reste étant pris en congés, sans revenu). Il reste au chauffeur 939 € par mois avant impôt si ses cotisations sont calculées sur le prix payé par les clients, et 1 319 € si elles le sont sur le montant versé après commission. Le carburant y est compté au prix moyen relevé le 25 novembre 2026 (1,929 € le litre de SP95-E10) : ces montants suivent ceux du simulateur et bougent avec ce prix. Ce calcul compte la TVA : avec plus de 41 250 € de chiffre d'affaires par an, le chauffeur n'est plus en franchise et reverse la TVA de 10 % comprise dans le prix des courses, moins celle qu'il récupère sur la location et le carburant. Les deux lectures existent : aucun texte officiel ne tranche clairement la question pour les chauffeurs de plateforme, et le simulateur montre les deux.
+Prenons l'exemple par défaut du simulateur de coût de revient et de revenu net : 1 000 € versés par les plateformes chaque semaine, pendant 47 semaines (le reste étant pris en congés, sans revenu). Il reste au chauffeur 940 € par mois avant impôt si ses cotisations sont calculées sur le prix payé par les clients, et 1 319 € si elles le sont sur le montant versé après commission. Le carburant y est compté au prix moyen relevé le 26 novembre 2026 (1,925 € le litre de SP95-E10) : ces montants suivent ceux du simulateur et bougent avec ce prix. Ce calcul compte la TVA : avec plus de 41 250 € de chiffre d'affaires par an, le chauffeur n'est plus en franchise et reverse la TVA de 10 % comprise dans le prix des courses, moins celle qu'il récupère sur la location et le carburant. Les deux lectures existent : aucun texte officiel ne tranche clairement la question pour les chauffeurs de plateforme, et le simulateur montre les deux.
 Où vont les 1 000 € versés chaque semaine
-Moyenne par mois, réglage par défaut du simulateur (cotisations sur le prix payé par les clients). La voiture et les cotisations prennent la plus grande part ; il reste 939 € avant impôt.
+Moyenne par mois, réglage par défaut du simulateur (cotisations sur le prix payé par les clients). La voiture et les cotisations prennent la plus grande part ; il reste 940 € avant impôt.
 Cotisations sociales 1 043 €
 TVA reversée, moins celle récupérée 194 €
 Location de la voiture 1 213 €
-Carburant 473 €
+Carburant 472 €
 Assurance 50 €
 Frais réglementaires et autres frais 4 €
-Ce qui vous reste, avant impôt 939 €
+Ce qui vous reste, avant impôt 940 €
 Montant versé par les plateformes 3 917 €
 Combien d'heures faut-il pour gagner ces 1 000 € ? Au rythme de 35,40 € par heure calculé plus haut, environ 28 heures par semaine, soit 1 328 heures sur l'année.
 Revenu « en course » publié pour Uber (ARPE 2025) 47,60 €
