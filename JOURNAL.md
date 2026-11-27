@@ -6,6 +6,19 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Vendredi 27 novembre 2026, 10 h 46 · Article n° 15 (tâche tous les deux jours)
+
+- Titre : « Directive européenne sur les plateformes : ce qui va changer pour les chauffeurs VTC (présomption de salariat, algorithmes) »
+- Page : https://revision-vtc.fr/dossiers/directive-europeenne-plateformes-chauffeurs-vtc.html (environ 2 550 mots, épreuve A, sans photo)
+- En bref : la directive (UE) 2024/2831 du 23 octobre 2024 crée une présomption de relation de travail quand des faits montrent une direction et un contrôle de la plateforme (à elle de prouver le contraire), et encadre la gestion par algorithme (données interdites, information écrite, suspension ou fermeture du compte décidée par un humain, réexamen avec réponse motivée dans un délai de deux semaines, exception de l'article 11 § 5 à préciser pour les indépendants). Transposition due au plus tard le 2 décembre 2026 ; le ministre du Travail a annoncé qu'elle ne serait pas tenue ; rapport de la mission (30 recommandations) publié le 3 novembre 2026 ; aucun projet de loi du Gouvernement consacré à cette transposition trouvé au 27 novembre 2026.
+- Nouveau : premier guide du site consacré à la directive, article par article (2, 4, 5, 7, 9 à 13, 16, 17, 23, 29 à 32), tableau des droits indépendant / salarié, recommandations 10, 15 et 24 du rapport, propositions de loi n° 3081 (Assemblée) et n° 919 (Sénat), droits français déjà en vigueur (L1326-2, L1326-4, Arpe, RGPD).
+- Infographies : 3 (chiffres clés des quatre dates, schéma flux suspension et réexamen, chiffres clés du rapport de la mission).
+- Relecture indépendante : 50 affirmations, 48 confirmées, 1 contredite corrigée (déclaration du travail : article 16 et non 17), 1 hors sources (arrêt du 4 mars 2020, déjà publié dans le guide n° 4) ; corrigés : exception « entreprises utilisatrices » de l'article 11 reportée dans l'en bref, le tableau et À retenir, liste du point e de l'article 7 complétée, charge de la preuve de l'article 23, « régulièrement » et modification des conditions générales (article 17), réexamen de la « mise en œuvre » (article 30), RGPD ajouté aux règles applicables.
+- Sources lues ce jour : directive sur EUR-Lex (texte intégral), page DGE et rapport de la mission, question écrite n° 14781, PPL n° 3081 et n° 919, Basta! (5 octobre 2026), dépêche AFP sur Fortuneo. Non lus sur Légifrance : L1326-1, L1326-2, L1326-4, cités d'après le wiki (confirmés le 25 novembre 2026), concordants avec le rapport (p. 53-54).
+- Écarté : projet de loi DDADUE du Conseil des ministres du 25 novembre 2026 (vu par le relecteur seulement, contenu non vérifié par une seconde lecture) ; montants des accords Arpe (application actuelle non vérifiée).
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px (article et index des guides), aucun débordement ; page dans sitemap.xml, llms.txt et l'index des guides. Accueil : alerte axe « landmark-complementary-is-top-level » (déjà présente avant).
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Vendredi 27 novembre 2026, 8 h 58 · Question VTC du jour
 
 - Question : « Plateforme VTC : quels documents doit-elle vérifier avant la première course ? »

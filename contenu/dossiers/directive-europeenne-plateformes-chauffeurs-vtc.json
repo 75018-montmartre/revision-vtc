@@ -1,0 +1,374 @@
+{
+ "numero": 15,
+ "slug": "directive-europeenne-plateformes-chauffeurs-vtc",
+ "date": "2026-11-27",
+ "domaine": "A",
+ "titre": "Directive européenne sur les plateformes : ce qui va changer pour les chauffeurs VTC (présomption de salariat, algorithmes)",
+ "titre_page": "Directive plateformes 2024/2831 : ce qui change pour les chauffeurs VTC",
+ "description": "Directive (UE) 2024/2831, à transposer au 2 décembre 2026 : présomption de salariat, décision humaine, réexamen en deux semaines. Ce qui change en VTC.",
+ "mots_cles": [
+  "directive plateformes VTC",
+  "directive 2024/2831",
+  "présomption de salariat VTC",
+  "transposition directive plateformes France",
+  "compte VTC désactivé",
+  "gestion algorithmique chauffeur VTC",
+  "2 décembre 2026 plateformes"
+ ],
+ "chapeau": "La directive européenne sur le travail via une plateforme devait être transposée au plus tard le 2 décembre 2026. Que contient-elle pour un chauffeur VTC, qui protège-t-elle vraiment, et où en est la France ? Le point, article par article, au 27 novembre 2026.",
+ "en_bref": [
+  "La **directive (UE) 2024/2831** du 23 octobre 2024 crée deux protections pour les personnes qui travaillent via une plateforme, chauffeurs VTC compris : une **présomption de relation de travail** quand des faits montrent une direction et un contrôle de la plateforme (à elle de prouver le contraire), et des règles sur la **gestion par algorithme** : données interdites, information écrite, suspension ou fermeture d'un compte **décidée par un être humain**, réexamen avec réponse motivée **dans un délai de deux semaines** (une exception reste à préciser pour les indépendants).",
+  "Elle s'adresse aux États, qui devaient la transposer au plus tard le **2 décembre 2026**. Le ministre du Travail a annoncé en septembre 2026 que la France ne tiendrait pas cette échéance. En attendant une loi française, les règles actuelles du Code des transports (refuser une course sans pénalité, choisir ses horaires) restent, avec le règlement européen sur la protection des données (RGPD), les règles applicables."
+ ],
+ "sections": [
+  {
+   "id": "exemple",
+   "titre": "Un compte suspendu sans explication : l'exemple de Karim",
+   "blocs": [
+    "Karim est chauffeur VTC indépendant. Un lundi matin, son application affiche « compte suspendu ». Personne ne l'a appelé, aucun motif précis n'est donné : erreur, plainte de client, note trop basse ?",
+    "C'est le genre de situation que vise la **directive (UE) 2024/2831** du 23 octobre 2024 « relative à l'amélioration des conditions de travail dans le cadre du travail via une plateforme ». Une fois transposée, elle impose qu'une décision de suspendre ou de fermer un compte soit **prise par un être humain**, motivée par écrit au plus tard le jour où elle prend effet, et qu'en principe Karim puisse demander un réexamen, avec une réponse motivée **dans un délai de deux semaines**.",
+    "Mais ces règles ne s'appliquent pas toutes seules : la directive s'adresse aux États membres (article 32), qui doivent la transposer dans leur loi (article 29). Voici ce qu'elle contient, qui elle protège et où en est la France."
+   ]
+  },
+  {
+   "id": "dates",
+   "titre": "La directive en quatre dates",
+   "blocs": [
+    {
+     "chiffres": {
+      "items": [
+       {
+        "valeur": "23 octobre 2024",
+        "texte": "adoption de la directive (UE) 2024/2831"
+       },
+       {
+        "valeur": "11 novembre 2024",
+        "texte": "publication au Journal officiel de l'Union européenne"
+       },
+       {
+        "valeur": "2 décembre 2026",
+        "texte": "date limite de transposition par les États"
+       },
+       {
+        "valeur": "2 décembre 2029",
+        "texte": "réexamen de la mise en œuvre de la directive par la Commission européenne"
+       }
+      ],
+      "source": "Directive (UE) 2024/2831, articles 29, 30 et 31 (EUR-Lex)"
+     }
+    },
+    "La directive a été signée à Strasbourg le **23 octobre 2024**, publiée au Journal officiel de l'Union européenne le **11 novembre 2024**, et elle est entrée en vigueur le vingtième jour suivant (article 31), soit le 1er décembre 2024.",
+    "Les États devaient la transposer **au plus tard le 2 décembre 2026** (article 29) ; la Commission européenne réexaminera sa mise en œuvre au plus tard le **2 décembre 2029** (article 30).",
+    "Son objet (article 1er) : **améliorer les conditions de travail et la protection des données à caractère personnel** dans le travail via une plateforme, en facilitant la détermination du « statut professionnel correct » et en encadrant la gestion par algorithme."
+   ]
+  },
+  {
+   "id": "qui",
+   "titre": "Qui est protégé : tous les chauffeurs, mais pas pour tous les droits",
+   "blocs": [
+    "La directive distingue la « personne exécutant un travail via une plateforme », tout individu qui travaille via une plateforme quelle que soit la désignation de son contrat (un chauffeur VTC indépendant en fait partie), et le « travailleur de plateforme », qui a ou est réputé avoir un contrat de travail (article 2).",
+    "Les règles sur les données et les algorithmes (articles 7 à 11) visent toutes ces personnes, **indépendants compris** (article 1er et considérant 54), avec une réserve pour l'article 11, expliquée plus bas. La santé et la sécurité (article 12) et l'information-consultation des représentants (article 13) ne visent que les travailleurs de plateforme.",
+    {
+     "tableau": {
+      "legende": "Les droits de la directive selon votre situation",
+      "colonnes": [
+       "Droit prévu",
+       "Indépendant",
+       "Salarié ou requalifié",
+       "Article"
+      ],
+      "lignes": [
+       [
+        "Certaines données interdites de traitement",
+        "Oui",
+        "Oui",
+        "7"
+       ],
+       [
+        "Information écrite sur les systèmes automatisés",
+        "Oui",
+        "Oui",
+        "9"
+       ],
+       [
+        "Suspension ou fermeture du compte décidée par un humain",
+        "Oui",
+        "Oui",
+        "10"
+       ],
+       [
+        "Explication et réexamen d'une décision",
+        "Oui, sauf exception (article 11, § 5)",
+        "Oui",
+        "11"
+       ],
+       [
+        "Évaluation des risques pour la santé et la sécurité",
+        "Non",
+        "Oui",
+        "12"
+       ],
+       [
+        "Information et consultation des représentants",
+        "Non",
+        "Oui",
+        "13"
+       ]
+      ]
+     }
+    },
+    "La mission chargée de préparer la loi française compte, dans son rapport, environ 70 000 chauffeurs VTC en 2024 parmi les travailleurs des plateformes concernés."
+   ]
+  },
+  {
+   "id": "presomption",
+   "titre": "La présomption de salariat : c'est à la plateforme de prouver",
+   "blocs": [
+    "Premier principe : **les faits comptent plus que le contrat**. La vérification de l'existence d'une relation de travail est guidée « en premier lieu par les faits relatifs à l'exécution effective d'un travail », indépendamment de la façon dont le contrat désigne la relation (article 4).",
+    "Deuxième principe : la **présomption légale** (article 5). La relation est présumée être une relation de travail lorsqu'il est constaté des faits témoignant d'une direction et d'un contrôle, au sens du droit national, des conventions collectives et de la pratique en vigueur. Pour la renverser, il incombe à la plateforme de prouver que ce n'est pas une relation de travail.",
+    "Trois limites sont écrites dans le texte :",
+    {
+     "liste": [
+      "**pas de salariat automatique** : la plateforme peut apporter la preuve contraire ;",
+      "**pas en matière fiscale, pénale ou de sécurité sociale** : la présomption ne s'applique pas à ces procédures, sauf si un État décide de l'y appliquer (article 5, paragraphe 3) ;",
+      "**pas de rétroactivité** : pour les contrats déjà en cours au 2 décembre 2026, elle ne s'applique qu'à la période commençant à cette date (article 5, paragraphe 6)."
+     ]
+    },
+    {
+     "idee_recue": {
+      "idee": "Au 2 décembre 2026, tous les chauffeurs VTC des applications deviennent salariés.",
+      "realite": "La directive ne requalifie personne d'office : elle **facilite la preuve** quand des faits montrent une direction et un contrôle, et la plateforme peut prouver le contraire. En France, il faut d'abord une loi de transposition. En attendant, la requalification reste jugée au cas par cas, comme dans l'arrêt de la Cour de cassation du 4 mars 2020 présenté dans notre guide [salarié ou indépendant](../dossiers/chauffeur-vtc-salarie-ou-independant.html)."
+     }
+    }
+   ]
+  },
+  {
+   "id": "algorithmes",
+   "titre": "Gestion par algorithme : ce que la plateforme ne pourra plus faire",
+   "blocs": [
+    "L'article 7 interdit à la plateforme de traiter certaines données personnelles, pour tous les chauffeurs et dès la procédure de recrutement ou de sélection :",
+    {
+     "liste": [
+      "votre **état émotionnel ou psychologique** ;",
+      "vos **conversations privées**, y compris avec d'autres chauffeurs et leurs représentants ;",
+      "des données collectées **quand vous ne proposez pas et n'exécutez pas de travail** via la plateforme ;",
+      "des données servant à **prévoir l'exercice de droits fondamentaux** (liberté d'association, négociation et actions collectives…) ;",
+      "des données servant à **déduire** notamment votre origine, votre statut migratoire, vos opinions ou convictions, votre santé, un handicap, votre affiliation syndicale ou votre vie ou orientation sexuelle ;",
+      "des **données biométriques** pour établir votre identité en les comparant à celles d'autres personnes dans une base de données."
+     ]
+    },
+    "L'article 9 oblige la plateforme à vous informer, par un document écrit qui peut être électronique, des systèmes automatisés qui surveillent votre travail ou prennent des décisions vous concernant : **au plus tard le premier jour de travail**, avant tout changement qui touche vos conditions de travail, et **à tout moment à votre demande**.",
+    "L'article 10 impose un contrôle humain : la plateforme évalue régulièrement, et en tout état de cause tous les deux ans, l'incidence de ses décisions automatisées ; toute décision de limiter, de suspendre ou de résilier la relation contractuelle ou le compte d'une personne est **prise par un être humain**."
+   ]
+  },
+  {
+   "id": "reexamen",
+   "titre": "Compte suspendu : explication, réexamen, deux semaines",
+   "blocs": [
+    "L'article 11 s'applique après une décision prise ou appuyée par un système automatisé, comme la suspension du compte de Karim.",
+    {
+     "flux": {
+      "titre": "Après une suspension de compte : les étapes prévues par la directive",
+      "lecture": "La décision est prise par un humain et motivée par écrit ; la plateforme répond à une demande de réexamen dans un délai de deux semaines.",
+      "etats": [
+       {
+        "quand": "Une fois la directive transposée (articles 10 et 11)",
+        "nouveau": true,
+        "liens": [
+         [
+          "La plateforme",
+          "Vous",
+          "décision de suspendre le compte, prise par un être humain et motivée par écrit au plus tard le jour où elle prend effet"
+         ],
+         [
+          "Vous",
+          "La plateforme",
+          "demande de réexamen de la décision"
+         ],
+         [
+          "La plateforme",
+          "Vous",
+          "réponse motivée dans un délai de deux semaines ; si la décision viole vos droits, rectification ou réparation"
+         ]
+        ]
+       }
+      ],
+      "alerte": "Ces délais ne s'appliqueront en France qu'avec la loi de transposition.",
+      "source": "Directive (UE) 2024/2831, articles 10 et 11 (EUR-Lex)"
+     }
+    },
+    "Concrètement, le texte prévoit :",
+    {
+     "liste": [
+      "une **explication orale ou écrite, sans retard injustifié**, de toute décision prise ou appuyée par un système automatisé ;",
+      "une **motivation écrite au plus tard à la date où elle prend effet** pour une décision de limitation, de suspension ou de résiliation du compte ;",
+      "le droit de **demander un réexamen** : la plateforme répond de façon motivée **dans un délai de deux semaines** à compter de la réception de la demande ;",
+      "si la décision viole vos droits, sa **rectification** sans tarder et au plus tard dans un délai de deux semaines à compter de son adoption, ou, si c'est impossible, une **réparation adéquate**."
+     ]
+    },
+    "Une réserve importante : l'article 11 ne s'applique pas aux personnes qui sont aussi des « entreprises utilisatrices » au sens du règlement (UE) 2019/1150 sur les services d'intermédiation en ligne, c'est-à-dire des professionnels qui proposent leurs services à des consommateurs par une plateforme. Un chauffeur VTC indépendant pourrait relever de cette catégorie ; la question n'est pas tranchée dans les textes lus pour ce guide, et la loi française de transposition devra être lue sur ce point."
+   ]
+  },
+  {
+   "id": "transparence",
+   "titre": "Transparence : ce que les plateformes devront dire aux autorités",
+   "blocs": [
+    "La directive vise aussi le fonctionnement d'ensemble des plateformes. L'article 16 oblige celles qui emploient des travailleurs de plateforme à déclarer leur travail aux autorités de l'État où il est exécuté. L'article 17 leur impose de fournir aux autorités et aux représentants :",
+    {
+     "liste": [
+      "le **nombre de personnes** qui travaillent via la plateforme, ventilé par niveau d'activité, et leur statut ;",
+      "leurs **conditions générales** ;",
+      "sur demande, pour les personnes qui travaillent régulièrement via la plateforme, le **nombre moyen d'heures travaillées par semaine**, le **revenu moyen** tiré de l'activité et la **durée moyenne d'activité** ;",
+      "les intermédiaires avec lesquels elles travaillent."
+     ]
+    },
+    "Ces informations sont mises à jour **au moins tous les six mois** et à chaque modification substantielle des conditions générales ; un État peut prévoir une mise à jour une fois par an pour les petites et moyennes entreprises.",
+    "Enfin, l'article 23 interdit de licencier ou de résilier le contrat d'une personne parce qu'elle a exercé ses droits ; si elle présente des faits laissant présumer ce motif, c'est à la plateforme de prouver qu'elle en avait un autre."
+   ]
+  },
+  {
+   "id": "france",
+   "titre": "Où en est la France au 27 novembre 2026",
+   "blocs": [
+    {
+     "chiffres": {
+      "items": [
+       {
+        "valeur": "30",
+        "texte": "recommandations de la mission de transposition"
+       },
+       {
+        "valeur": "8",
+        "texte": "orientations qui les regroupent"
+       },
+       {
+        "valeur": "70 000",
+        "texte": "chauffeurs VTC en 2024 selon le rapport"
+       }
+      ],
+      "source": "Rapport « Pour une économie des plateformes innovante et juste », novembre 2026 (mission Marchand-Arvier, Bergeaud, Collin ; publié par la Direction générale des entreprises)"
+     }
+    },
+    "Le 21 juillet 2026, dans une réponse du ministère du Travail publiée au Journal officiel, le Gouvernement se disait « pleinement engagé » dans la transposition et attendait les conclusions d'une mission nommée en février 2026.",
+    "Le 11 septembre 2026, le ministre du Travail, Jean-Pierre Farandou, a déclaré à l'Agence France-Presse que l'échéance du 2 décembre 2026 ne serait pas tenue, et dit craindre qu'un vote soit compliqué avant février (voir notre [Actualité VTC du 26 octobre 2026](../actualite/2026-10-26.html)).",
+    "Le rapport de la mission, publié le 3 novembre 2026 par la Direction générale des entreprises, compte 30 recommandations regroupées en 8 orientations. Il propose notamment :",
+    {
+     "liste": [
+      "de transposer la **présomption réfragable de salariat** par un aménagement de la charge de la preuve, devant le conseil de prud'hommes, plutôt que par une requalification automatique (recommandation 10) ;",
+      "de fixer dans la loi, pour le secteur de la mobilité, le **principe d'une rémunération minimale**, négociée entre partenaires sociaux et fixée par décret à défaut d'accord (recommandation 15) ;",
+      "de transformer l'Autorité des relations sociales des plateformes d'emploi (Arpe) en **Autorité de régulation des plateformes** (recommandation 24)."
+     ]
+    },
+    "Ce ne sont que des propositions. Deux propositions de loi de transposition ont aussi été déposées par des parlementaires, le 23 juillet 2026 à l'Assemblée nationale (n° 3081) et le 24 juillet 2026 au Sénat (n° 919), et renvoyées à la commission des affaires sociales. À la date de vérification de ce guide, nous n'avons trouvé aucun projet de loi du Gouvernement consacré à cette transposition. Notre [Actualité VTC du 16 novembre 2026](../actualite/2026-11-16.html) détaille le rapport."
+   ]
+  },
+  {
+   "id": "deja",
+   "titre": "Ce qui protège déjà les chauffeurs VTC en France",
+   "blocs": [
+    "Sans attendre la directive, le Code des transports donne déjà des droits aux chauffeurs indépendants qui passent par une plateforme ([article L1326-1](../wiki/l1326-1.html)) :",
+    {
+     "liste": [
+      "avant chaque course proposée, la plateforme communique la distance, la destination et le prix minimal garanti, déduction faite de sa commission, et laisse un délai raisonnable pour accepter ou refuser ; le chauffeur peut **refuser sans pénalité**, et la plateforme ne peut pas le suspendre pour ce motif ([article L1326-2](../wiki/l1326-2.html), voir notre question [Refuser une course VTC](../questions/2026-11-14-refuser-course-vtc-plateforme.html)) ;",
+      "le chauffeur **choisit ses plages horaires** et ses périodes d'inactivité, peut travailler avec plusieurs plateformes et choisit son itinéraire ([article L1326-4](../wiki/l1326-4.html))."
+     ]
+    },
+    "Le dialogue social existe aussi : l'ordonnance n° 2021-484 du 21 avril 2021 a créé l'Arpe, où plateformes et représentants des chauffeurs négocient. Selon le rapport, un accord du secteur VTC de septembre 2023 y prévoit le principe d'une intervention humaine dans tout processus de résiliation et une procédure préalable.",
+    "Le rapport rappelle enfin que le RGPD (article 22) donne déjà le droit de ne pas faire l'objet d'une décision fondée exclusivement sur un traitement automatisé, mais que les plateformes ne sont pas, à ce stade, tenues de communiquer les principaux éléments de fonctionnement de leurs algorithmes."
+   ]
+  },
+  {
+   "id": "attendre",
+   "titre": "En attendant la loi française : quatre réflexes",
+   "blocs": [
+    "Rien ne change automatiquement pour vous le 2 décembre 2026. Quelques réflexes restent utiles dès maintenant :",
+    {
+     "liste": [
+      "**gardez une trace** : relevés de courses, messages de l'application, captures d'écran d'une suspension, avec leur date ;",
+      "**demandez par écrit** le motif d'une décision qui vous touche, et conservez la réponse ;",
+      "**connaissez vos droits actuels** : refuser une course ne peut pas, à lui seul, justifier une suspension (article L1326-2) ;",
+      "**suivez la loi de transposition** : quand elle sera adoptée, ses règles, ses dates et ses éventuelles adaptations seront celles qui s'appliqueront en France."
+     ]
+    },
+    "Pour une situation précise (suspension contestée, requalification), la réponse dépend des faits : un avocat ou une organisation de chauffeurs peut vous aider."
+   ]
+  }
+ ],
+ "a_retenir": [
+  "La directive (UE) 2024/2831 du 23 octobre 2024 devait être transposée par les États au plus tard le 2 décembre 2026 ; au 27 novembre 2026, nous n'avons trouvé aucune loi française qui la transpose.",
+  "Elle prévoit une présomption de relation de travail quand des faits montrent une direction et un contrôle de la plateforme, que celle-ci peut renverser en prouvant le contraire (articles 4 et 5).",
+  "Pour tous les chauffeurs, indépendants compris : certaines données interdites, information écrite sur les algorithmes, décision de suspension ou de fermeture du compte prise par un être humain (articles 7 à 10) ; le réexamen avec réponse motivée dans un délai de deux semaines (article 11) connaît une exception encore à préciser pour les indépendants.",
+  "En attendant, les droits du Code des transports s'appliquent, avec le RGPD : refuser une course sans pénalité (L1326-2), choisir ses horaires (L1326-4)."
+ ],
+ "wiki": [
+  "l1326-1",
+  "l1326-2",
+  "l1326-4"
+ ],
+ "fiches": [
+  [
+   "A8.3",
+   "La directive européenne sur le travail de plateforme"
+  ],
+  [
+   "A8.1",
+   "Les droits du chauffeur face à la plateforme"
+  ],
+  [
+   "A8.2",
+   "Revenu minimal et désactivation"
+  ],
+  [
+   "B5.7",
+   "Indépendant ou salarié déguisé ?"
+  ]
+ ],
+ "sources": [
+  {
+   "nom": "EUR-Lex, directive (UE) 2024/2831 du Parlement européen et du Conseil du 23 octobre 2024 relative à l'amélioration des conditions de travail dans le cadre du travail via une plateforme (JO L du 11 novembre 2024), articles 1er, 2, 4, 5, 7, 9 à 13, 16, 17, 20, 23, 29 à 32 et considérant 54",
+   "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32024L2831",
+   "date": "consulté le 27 novembre 2026"
+  },
+  {
+   "nom": "Direction générale des entreprises, « Rapport de la mission sur la transposition de la directive européenne dite « travailleurs de plateformes » » (publié le 3 novembre 2026)",
+   "url": "https://www.entreprises.gouv.fr/la-dge/publications/rapport-de-la-mission-sur-la-transposition-de-la-directive-europeenne-dite",
+   "date": "consulté le 27 novembre 2026"
+  },
+  {
+   "nom": "Rapport « Pour une économie des plateformes innovante et juste » (J. Marchand-Arvier, A. Bergeaud, N. Collin, novembre 2026), texte intégral sur vie-publique.fr",
+   "url": "https://www.vie-publique.fr/files/rapport/pdf/305232.pdf",
+   "date": "consulté le 27 novembre 2026"
+  },
+  {
+   "nom": "Assemblée nationale, question écrite n° 14781 et réponse du ministère du Travail (JO du 21 juillet 2026)",
+   "url": "https://www.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE14781",
+   "date": "consulté le 27 novembre 2026"
+  },
+  {
+   "nom": "Assemblée nationale, proposition de loi n° 3081 visant à transposer la directive européenne relative à l'amélioration des conditions de travail dans le cadre du travail via une plateforme (23 juillet 2026)",
+   "url": "https://www.assemblee-nationale.fr/dyn/opendata/PIONANR5L17B3081.html",
+   "date": "consulté le 27 novembre 2026"
+  },
+  {
+   "nom": "Sénat, proposition de loi n° 919 (2025-2026) visant à transposer la même directive (24 juillet 2026)",
+   "url": "https://www.senat.fr/leg/ppl25-919.pdf",
+   "date": "consulté le 27 novembre 2026"
+  },
+  {
+   "nom": "Basta!, « Le gouvernement refuse d'appliquer la directive européenne sur les travailleurs ubérisés » (5 octobre 2026), propos du ministre du Travail à l'AFP du 11 septembre 2026",
+   "url": "https://basta.media/Gouvernement-refuse-appliquer-directive-europeenne-travailleurs-uberises",
+   "date": "consulté le 27 novembre 2026"
+  },
+  {
+   "nom": "Fortuneo Bourse (dépêche AFP du 11 septembre 2026), « Travailleurs des plateformes : la directive européenne ne pourra être transposée dans les temps (Farandou à l'AFP) »",
+   "url": "https://bourse.fortuneo.fr/actualites/travailleurs-des-plateformes-la-directive-europeenne-ne-pourra-etre-transposee-dans-les-temps-farandou-a-l-afp-3132563",
+   "date": "consulté le 27 novembre 2026"
+  },
+  {
+   "nom": "Légifrance, Code des transports, articles L1326-1, L1326-2 et L1326-4 (textes recopiés dans le wiki du site, versions confirmées en vigueur le 25 novembre 2026)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045525868",
+   "date": "vérifié le 25 novembre 2026"
+  }
+ ],
+ "verifie": "27 novembre 2026"
+}
