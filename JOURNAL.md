@@ -6,6 +6,18 @@ Adresse à garder en favori : https://github.com/75018-montmartre/revision-vtc/b
 
 ---
 
+## Samedi 28 novembre 2026, 8 h 58 · Question VTC du jour
+
+- Question : « Vitres teintées sur une VTC : qu'est-ce qui est autorisé ? »
+- Page : https://revision-vtc.fr/questions/2026-11-28-vitres-teintees-vtc-autorise.html
+- Réponse courte : sur une VTC comme sur toute voiture, le pare-brise et les vitres latérales avant doivent laisser passer au moins 70 % de la lumière (article R316-3 du Code de la route) : un film teinté qui fait descendre sous ce taux y est interdit depuis le 1er janvier 2017. Les vitres arrière ne sont pas visées par cette règle.
+- Nouveau (premier contenu du site sur les vitres, fiche C5.4) : règle des 70 %, vitres arrière (réponses du ministère de l'Intérieur de 2017, condition des deux rétroviseurs extérieurs), aucun texte propre au VTC sur les vitres (R3122-6, arrêté du 26 mars 2015), sanction (4e classe, 135 € en général, jusqu'à 750 €, 3 points, immobilisation), dérogations médicales et véhicules blindés (arrêté du 18 octobre 2016), exemple de deux berlines au même contrôle.
+- Infographie : chiffres clés (70 %, 135 €, 750 €, 3 points). Script du réel : `reseaux/reels/2026-11-28-vitres-teintees-vtc-autorise.txt`.
+- Relecture indépendante : 33 points, 31 confirmés, aucun contredit, 2 simplifications du script corrigées (condition des deux rétroviseurs extérieurs, chute trop absolue) ; ajouts : lien Légifrance de R316-3, lien de l'arrêté du 26 mars 2015, exigences générales du premier alinéa de R316-3 pour les vitres arrière, certificat « ou autorités compétentes d'un État membre de l'UE ».
+- Sources lues ce jour : service-public.fr F19459 (vérifiée le 2 novembre 2026), R316-3 sur Légifrance (relecteur, en vigueur depuis le 1er janvier 2017), R316-3-1 via la page de chapitre Légifrance (version 2017-2020) et la reproduction PréventionBTP, NATINF 32050, questions écrites n° 96879 et n° 1920. Non lu : R316-3-1 en version consolidée (Légifrance client_error) ; arrêté du 26 mars 2015 cité d'après le wiki.
+- Vérifié : axe sans erreur en clair et en sombre à 320 et 1 366 px sur la page et l'index de la FAQ, aucun débordement ; page dans sitemap.xml, llms.txt, l'index de la FAQ et l'accueil.
+- https://github.com/75018-montmartre/revision-vtc/commits/main
+
 ## Vendredi 27 novembre 2026, 10 h 46 · Article n° 15 (tâche tous les deux jours)
 
 - Titre : « Directive européenne sur les plateformes : ce qui va changer pour les chauffeurs VTC (présomption de salariat, algorithmes) »

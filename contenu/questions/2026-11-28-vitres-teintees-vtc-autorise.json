@@ -1,0 +1,75 @@
+{
+ "date": "2026-11-28",
+ "slug": "vitres-teintees-vtc-autorise",
+ "question": "Vitres teintées sur une VTC : qu'est-ce qui est autorisé ?",
+ "reponse_courte": "Sur une VTC comme sur toute voiture, le pare-brise et les vitres latérales avant doivent laisser passer au moins 70 % de la lumière (article R316-3 du Code de la route) : un film teinté qui fait descendre sous ce taux y est interdit depuis le 1er janvier 2017. Les vitres arrière ne sont pas visées par cette règle.",
+ "sections": [
+  {
+   "titre": "La règle : 70 % de lumière à l'avant",
+   "texte": [
+    "L'article R316-3 du Code de la route exige que le pare-brise et les vitres latérales avant, côté conducteur et côté passager, aient une transparence suffisante, tant de l'intérieur que de l'extérieur du véhicule. Il précise que cette transparence est considérée comme suffisante si le facteur de transmission régulière de la lumière est d'au moins 70 %.",
+    "Le même article interdit toute opération susceptible de réduire les caractéristiques de sécurité ou les conditions de transparence des vitres. Service-public.fr (fiche « Équipements obligatoires en voiture », vérifiée le 2 novembre 2026) le dit ainsi : il est interdit de modifier les caractéristiques de sécurité et les conditions de transparence des vitres, sauf exceptions liées à des raisons médicales.",
+    "En pratique, poser un film teinté sur une vitre latérale avant est interdit dès qu'il fait descendre la transmission de la lumière sous 70 %. C'est ce qu'a expliqué le ministère de l'Intérieur dans sa réponse à une question écrite de député publiée au Journal officiel le 28 février 2017."
+   ]
+  },
+  {
+   "titre": "Les vitres arrière ne sont pas concernées",
+   "texte": [
+    "La règle des 70 % vise le pare-brise et les vitres latérales avant, pas les vitres arrière. Dans ses réponses aux questions écrites publiées au Journal officiel le 28 février 2017 et le 28 novembre 2017, le ministère de l'Intérieur indique que le gouvernement n'a pas souhaité interdire le surteintage des vitres arrière.",
+    "La réponse du 28 février 2017 cite les vitres latérales arrière, le hayon et la lunette arrière, pour les véhicules équipés de deux rétroviseurs extérieurs (« pour peu qu'ils soient équipés de deux rétroviseurs extérieurs »). Vérifiez-le sur votre véhicule. Les vitres arrière restent soumises aux exigences générales du premier alinéa de l'article R316-3 : elles doivent être en substance transparente et suffisamment résistantes.",
+    "Les textes propres au VTC n'ajoutent rien sur les vitres. L'[article R3122-6](../wiki/r3122-6.html) du Code des transports fixe le nombre de places (au moins quatre et au plus neuf, conducteur compris) et l'[arrêté du 26 mars 2015](../wiki/arrete-26-mars-2015-vehicules.html) fixe l'âge, les portes, les dimensions et la puissance du véhicule : aucun de ces textes ne parle des vitres. C'est donc le Code de la route, le même que pour tout conducteur, qui s'applique."
+   ]
+  },
+  {
+   "titre": "La sanction : 135 €, 3 points et l'immobilisation possible",
+   "texte": [
+    "Circuler avec un véhicule dont les vitres avant ne respectent pas les conditions de transparence est une contravention de la quatrième classe (article R316-3-1 du Code de la route, infraction n° 32050 de la nomenclature NATINF). L'article prévoit que cette contravention donne lieu de plein droit à la réduction de trois points du permis de conduire.",
+    {"chiffres": {
+      "items": [
+       {"valeur": "70 %", "texte": "de lumière au moins pour le pare-brise et les vitres latérales avant"},
+       {"valeur": "135 €", "texte": "d'amende forfaitaire, en général"},
+       {"valeur": "750 €", "texte": "d'amende au plus"},
+       {"valeur": "3 points", "texte": "retirés du permis, de plein droit"}
+      ],
+      "source": "Code de la route, articles R316-3 et R316-3-1 ; service-public.fr, fiche « Équipements obligatoires en voiture », vérifiée le 2 novembre 2026"
+     }},
+    "Selon service-public.fr, l'amende peut aller jusqu'à 750 €, et il s'agit en général d'une amende forfaitaire de 135 €. L'immobilisation de la voiture peut aussi être ordonnée, dans les conditions des articles L325-1 à L325-3 du Code de la route.",
+    "Pour un chauffeur VTC, la voiture immobilisée ne peut plus servir aux courses. Et les 3 points s'ajoutent à ceux que l'on peut perdre au volant pour d'autres infractions : sur l'usage du téléphone, lisez [« Téléphone au volant en VTC : qu'est-ce qui est autorisé ? »](../questions/2026-11-16-telephone-au-volant-vtc-regles.html)."
+   ]
+  },
+  {
+   "titre": "Les exceptions : raisons médicales et véhicules blindés",
+   "texte": [
+    "L'article R316-3 renvoie à un arrêté du ministre chargé des transports pour les dérogations que justifieraient des raisons médicales ou des conditions d'aménagement de véhicules blindés. Cet arrêté est celui du 18 octobre 2016 relatif à l'homologation des vitrages et à leur installation dans les véhicules, cité par service-public.fr.",
+    "Selon la réponse du ministère de l'Intérieur publiée au Journal officiel le 28 novembre 2017, la dérogation médicale vise des affections précisées en annexe de cet arrêté, et l'affection doit être attestée par un certificat médical délivré par un médecin agréé ou par les autorités compétentes d'un État membre de l'Union européenne. Un chauffeur qui n'est pas dans ce cas ne peut pas teinter ses vitres avant sous 70 %, même pour le confort de ses clients."
+   ]
+  },
+  {
+   "titre": "Exemple : deux berlines au même contrôle",
+   "texte": [
+    "**Karim** a acheté une berline d'occasion pour faire VTC. Le vendeur avait posé un film foncé sur les quatre vitres latérales. Lors d'un contrôle, les vitres latérales avant ne laissent pas passer 70 % de la lumière : c'est une contravention de la quatrième classe, en général 135 € d'amende forfaitaire, et 3 points retirés de plein droit. Pour être en règle, il doit faire retirer le film des vitres avant ; les vitres arrière peuvent rester teintées.",
+    "**Sofia** roule avec une berline dont seules les vitres arrière et la lunette arrière sont teintées, et qui a deux rétroviseurs extérieurs. Ses vitres avant et son pare-brise sont d'origine. Elle est en règle.",
+    "Le conseil : avant d'acheter un véhicule déjà teinté, regardez d'abord les vitres avant. Et si vous changez de voiture, pensez aussi au registre : lisez [« Changer de voiture VTC : dans quel délai le déclarer au registre ? »](../questions/2026-11-21-changer-voiture-vtc-declaration-registre.html)."
+   ]
+  }
+ ],
+ "a_retenir": [
+  "Le pare-brise et les vitres latérales avant doivent laisser passer au moins 70 % de la lumière (article R316-3 du Code de la route), depuis le 1er janvier 2017 pour les films teintés.",
+  "Les vitres arrière ne sont pas visées par la règle des 70 % : le gouvernement n'a pas souhaité interdire leur surteintage, pour les véhicules équipés de deux rétroviseurs extérieurs, selon les réponses du ministère de l'Intérieur de 2017.",
+  "Rouler avec des vitres avant trop teintées est une contravention de la quatrième classe : en général 135 € d'amende forfaitaire, jusqu'à 750 €, 3 points retirés et l'immobilisation possible."
+ ],
+ "wiki": ["r3122-6", "arrete-26-mars-2015-vehicules"],
+ "fiches": [["C5.4", "Pneus et vitres"], ["C7.1", "Le permis à points"], ["G2.2", "Places, portes et âge du véhicule"]],
+ "sources": [
+  {"nom": "Service-public.fr, « Équipements obligatoires en voiture : gilet de sécurité, triangle… », fiche F19459, vérifiée le 2 novembre 2026", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F19459", "date": "28 novembre 2026"},
+  {"nom": "Code de la route, article R316-3 (Légifrance, en vigueur depuis le 1er janvier 2017, modifié par le décret n° 2016-448 du 13 avril 2016)", "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032401379", "date": "28 novembre 2026"},
+  {"nom": "Code de la route, article R316-3 (texte reproduit par PréventionBTP, mise à jour du 15 septembre 2022)", "url": "https://content.preventionbtp.fr/pdf/droit_de_la_prevention/article-r316-3-du-code-de-la-route-manoeuvre-direction-et-visibilite.pdf", "date": "28 novembre 2026"},
+  {"nom": "Code de la route, article R316-3-1 (Légifrance)", "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042266076", "date": "28 novembre 2026"},
+  {"nom": "NATINF, infraction n° 32050 (article R316-3-1 du Code de la route, contravention de 4e classe)", "url": "https://natinfo.app/codes/c-route/r316-3-1/", "date": "28 novembre 2026"},
+  {"nom": "Assemblée nationale, question écrite n° 96879, réponse du ministère de l'Intérieur publiée au JO le 28 février 2017", "url": "https://questions.assemblee-nationale.fr/dyn/14/questions/QANR5L14QE96879.pdf", "date": "28 novembre 2026"},
+  {"nom": "Assemblée nationale, question écrite n° 1920, réponse du ministère de l'Intérieur publiée au JO le 28 novembre 2017", "url": "https://questions.assemblee-nationale.fr/dyn/15/questions/QANR5L15QE1920.pdf", "date": "28 novembre 2026"},
+  {"nom": "Code des transports, article R3122-6 (texte recopié dans le wiki du site, confirmé sur Légifrance le 25 novembre 2026)", "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034389552", "date": "28 novembre 2026"},
+  {"nom": "Arrêté du 26 mars 2015 relatif aux caractéristiques des véhicules utilisés par les exploitants de VTC (texte recopié dans le wiki du site)", "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000030429911", "date": "28 novembre 2026"}
+ ],
+ "verifie": "28 novembre 2026"
+}

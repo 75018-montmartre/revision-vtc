@@ -1,0 +1,39 @@
+RÉEL · Vitres teintées sur une VTC : qu'est-ce qui est autorisé ?
+Page : https://revision-vtc.fr/questions/2026-11-28-vitres-teintees-vtc-autorise.html
+
+ACCROCHE (0 à 3 s)
+  Écran : Vitres teintées sur votre VTC : attention à l'avant
+  Voix : Des vitres teintées sur votre VTC ? À l'avant, c'est 70 % de lumière minimum.
+
+DÉROULÉ (30 à 45 s)
+  Plan 1
+    Écran : Avant : 70 % de lumière minimum
+    Voix : Le pare-brise et les vitres latérales avant doivent laisser passer au moins 70 % de la lumière. Article R316-3 du Code de la route.
+  Plan 2
+    Écran : Film teinté à l'avant : interdit sous 70 %
+    Voix : Un film teinté qui fait descendre sous ce taux est interdit depuis le 1er janvier 2017.
+  Plan 3
+    Écran : Arrière : non visé, avec 2 rétroviseurs
+    Voix : Les vitres arrière ne sont pas visées par cette règle, si la voiture a deux rétroviseurs extérieurs : le gouvernement n'a pas souhaité interdire leur surteintage.
+  Plan 4
+    Écran : 135 € et 3 points
+    Voix : Vitres avant trop teintées : contravention de quatrième classe, en général 135 euros d'amende forfaitaire, et 3 points retirés du permis.
+  Plan 5
+    Écran : Immobilisation possible
+    Voix : L'immobilisation de la voiture peut aussi être ordonnée.
+
+CHUTE
+  Écran : Avant : 70 % de lumière au moins
+  Voix : À l'avant, 70 % de lumière au moins, sauf dérogation prévue par arrêté. Réponse complète et sources sur revision-vtc.fr
+
+LÉGENDE
+  Les règles sur les vitres teintées sont les mêmes pour une VTC que pour toute voiture : 70 % de lumière au moins à l'avant, les vitres arrière ne sont pas visées par cette règle si la voiture a deux rétroviseurs extérieurs. Sanction, exceptions et exemple concret :
+  https://revision-vtc.fr/questions/2026-11-28-vitres-teintees-vtc-autorise.html
+  #examenvtc #chauffeurvtc #vtc #vitresteintees #codedelaroute #securiteroutiere #T3P
+
+SOURCES
+  - Service-public.fr, « Équipements obligatoires en voiture », fiche F19459, vérifiée le 2 novembre 2026 : https://www.service-public.gouv.fr/particuliers/vosdroits/F19459
+  - Code de la route, article R316-3 (Légifrance) : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032401379
+  - Code de la route, article R316-3 (texte reproduit par PréventionBTP) : https://content.preventionbtp.fr/pdf/droit_de_la_prevention/article-r316-3-du-code-de-la-route-manoeuvre-direction-et-visibilite.pdf
+  - Code de la route, article R316-3-1 (Légifrance) : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042266076
+  - Assemblée nationale, questions écrites n° 96879 (réponse du 28 février 2017) et n° 1920 (réponse du 28 novembre 2017) : https://questions.assemblee-nationale.fr/dyn/14/questions/QANR5L14QE96879.pdf ; https://questions.assemblee-nationale.fr/dyn/15/questions/QANR5L15QE1920.pdf
